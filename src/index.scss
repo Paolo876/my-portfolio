@@ -1,0 +1,12 @@
+*,*::before,*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  scroll-behavior: smooth;
+}
+body {
+  height: "100vh";
+  background: #141E30; 
+
+}
