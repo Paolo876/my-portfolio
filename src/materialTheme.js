@@ -1,14 +1,17 @@
 import { createTheme } from '@mui/material';
-
+import bgImage from "./assets/noise.png"
 
 export const theme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          background     : 'radial-gradient(rgba(50, 50, 120, 0.1) 1px, transparent 2px)',
-          backgroundSize : '35px 35px',
-          backgroundColor: "#0d0d10",
+          width: "100vw",
+          height: "100vh",
+          background: 'rgb(38,37,37)',
+          // background     : `radial-gradient(circle, rgba(46,45,45,1) 0%, ${bgImage} 92%)`,
+          background     : `radial-gradient(circle, rgba(46,45,45,1) 0%, rgba(38,37,37,1) 92%)`,
+          // backgroundImage: `url(${bgImage})`,
         },
       },
     },
