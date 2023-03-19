@@ -8,13 +8,8 @@
   scroll-behavior: smooth;
 }
 body {
-  // background-image: url("./assets/bg-pattern.png")
-  // height: "100vh";
-  // background: rgb(28,28,34);
-  // background: linear-gradient(90deg, rgba(38,38,48,1) 0%, rgba(41,43,57,1) 80%, rgba(51,51,74,1) 100%);
-  // background-color: black !important;
-  // background: #141E30; 
-  // background-image: linear-gradient(#243B55, #141E30);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .App{
