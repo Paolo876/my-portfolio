@@ -28,6 +28,23 @@ export const theme = createTheme({
         
       },
     },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          background: "none",
+          boxShadow: "none",
+        }
+      }
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          textTransform: "uppercase",
+          textDecoration: "none",
+          color: "#efebe5"
+        }
+      }
+    }
   },
   palette: {
     mode: 'dark',

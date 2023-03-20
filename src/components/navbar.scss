@@ -1,0 +1,20 @@
+.navbar {
+    .active {
+        // border-bottom: 1px solid #efebe55d;
+        position: relative;
+        p {
+            font-weight: 400;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: -5;
+            left: 50%;
+            height: 1px;
+            width: 75%;
+            border-radius: 10px;
+            background-color: #efebe53d;
+            transform: translateX(-50%);
+        }
+    }
+}
