@@ -6,7 +6,8 @@ import "./navbar.scss"
 
 const Navbar = () => {
   return (
-    <AppBar component="nav" className="navbar">
+    <Box>
+    <AppBar component="nav" className="navbar" position="fixed">
       <Container maxWidth="xl">
         <Toolbar>
           <Typography>LOGO HERE</Typography>
@@ -20,6 +21,9 @@ const Navbar = () => {
         </Toolbar>
       </Container>
     </AppBar>
+    <Toolbar>{/* space filler to shift components under the navbar */}</Toolbar> 
+    </Box>
+
   )
 }
 
