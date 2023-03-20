@@ -11,7 +11,7 @@ const Navbar = () => {
         <Toolbar>
           <Typography>LOGO HERE</Typography>
           <Box sx={{ml: "auto", display: "flex", flexDirection: "row", gap: 2}}>
-            <Link component={NavLink} to="/"><Typography>Home</Typography></Link>
+            <Link component={NavLink} to="/home"><Typography>Home</Typography></Link>
             <Link component={NavLink} to="/projects"><Typography>Projects</Typography></Link>
             <Link component={NavLink} to="/about"><Typography>About</Typography></Link>
             <Link component={NavLink} to="/services"><Typography>Services</Typography></Link>

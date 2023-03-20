@@ -8,6 +8,7 @@ import Projects from "./pages/Projects/Projects";
 import About from "./pages/About/About";
 import Services from "./pages/Services/Services";
 import Contact from "./pages/Contact/Contact";
+import Landing from "./pages/Landing";
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       <div className="noise-overlay"></div>
       <Navbar/>
       <Routes>
-        <Route element={<Home/>} path="/"/>
+        <Route element={<Landing/>} path="/"/>
+        <Route element={<Home/>} path="/home"/>
         <Route element={<Projects/>} path="/projects"/>
         <Route element={<About/>} path="/about"/>
         <Route element={<Services/>} path="/services"/>
