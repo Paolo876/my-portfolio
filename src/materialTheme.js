@@ -65,7 +65,7 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Roboto Condensed',
+    fontFamily: 'Noto Sans Lao',
     h1: {
       fontFamily: 'Manrope',
       fontWeight: 700,
@@ -108,7 +108,7 @@ export const theme = createTheme({
       fontWeight: 300,
     },
     button: {
-      fontFamily: 'Roboto Condensed',
+      fontFamily: 'Noto Sans Lao',
     },
   },
 });
