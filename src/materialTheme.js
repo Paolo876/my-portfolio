@@ -44,6 +44,13 @@ export const theme = createTheme({
           color: "#efebe5"
         }
       }
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 0
+        }
+      }
     }
   },
   palette: {
