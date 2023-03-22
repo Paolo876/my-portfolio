@@ -19,6 +19,7 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: 0,
+          fontWeight: 400,
           // borderWidth: 2,
           ":hover": {
             borderRadius: 0,
