@@ -10,7 +10,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const linkStyles = {
   fontSize: "1.8rem",
-  fontWeight: 100,
+  fontWeight: 200,
   textAlign: "right",
   textTransform: "none",
   letterSpacing: 1,
