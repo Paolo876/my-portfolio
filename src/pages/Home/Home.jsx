@@ -1,5 +1,7 @@
 import React from 'react'
 import PageContainer from '../../components/PageContainer'
+import SkillsShowcase from './SkillsShowcase';
+
 import { Grid, Typography, Box, Button} from '@mui/material'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -30,6 +32,7 @@ const Home = () => {
           <Box>
             <Typography>I mainly develop my projects using ReactJS or NextJS in the Front End, and NodeJS and ExpressJS on the Backend along with related libraries and frameworks.</Typography>
             <Typography>Here are some of my arsenal of expertise: </Typography>
+            <SkillsShowcase/>
 
           </Box>
           <Box>
@@ -37,7 +40,6 @@ const Home = () => {
           </Box>
         </Grid>
         <Grid item xs={12}>
-
         </Grid>
       </Grid>
 
