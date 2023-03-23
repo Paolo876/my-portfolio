@@ -41,7 +41,7 @@ const skillsIcons = {
 
 const SkillsShowcase = () => {
   return (
-    <Box sx={{display: "flex", flexDirection: "column", gap: 2, py: 1.5}}>
+    <Box sx={{display: "flex", flexDirection: "column", gap: 2, py: 1.5, justifyContent: "center", alignItems: "center"}}>
       <Box sx={{display: "flex", flexDirection: "row", gap: 1.5, alignItems:"center"}}>
         {skillsIcons.frontend.map(item => 
           <Box key={item.name} sx={{display: "flex", flexDirection: "column", alignItems: "center", width: "60px"}}>
