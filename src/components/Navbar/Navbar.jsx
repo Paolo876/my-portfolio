@@ -1,13 +1,13 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { NavLink, Link as ReactLink } from 'react-router-dom';
-import { Button, Typography, AppBar, Container, Toolbar, Box, Link } from '@mui/material'
+import { Typography, AppBar, Container, Toolbar, Box, Link } from '@mui/material'
 import "./navbar.scss"
 
 const Navbar = () => {
   const location = useLocation();
   const isLandingPageView = Boolean(location.pathname === "/")
-  console.log(isLandingPageView)
+
   return (
     <Box >
     <AppBar component="nav" className="navbar" position="fixed">

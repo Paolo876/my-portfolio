@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'mui-image'
 
-const SkillIconImageItem = ({ src, height="100%", width="100%", objectFit="cover", duration="1500", bgColor="inherit"}) => {
+const SkillIconImageItem = ({ src, height="100%", width="100%", objectFit="cover", duration=1500, bgColor="inherit"}) => {
   return (
     <Image 
       src={src} 

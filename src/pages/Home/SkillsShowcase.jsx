@@ -33,7 +33,7 @@ const skillsIcons = {
   ],
   styling: [
     {src: sass, name: "Sass/Scss"},
-    {src: bootstrap, name: "Bootstrap / React-Bootstrap"},
+    {src: bootstrap, name: "Bootstrap"},
     {src: materialui, name: "Material-UI"},
 
   ],
@@ -41,26 +41,26 @@ const skillsIcons = {
 
 const SkillsShowcase = () => {
   return (
-    <Box>
-      <Box sx={{display: "flex", flexDirection: "row", gap: 1.5}}>
+    <Box sx={{display: "flex", flexDirection: "column", gap: 2, py: 1.5}}>
+      <Box sx={{display: "flex", flexDirection: "row", gap: 1.5, alignItems:"center"}}>
         {skillsIcons.frontend.map(item => 
-          <Box sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-            <SkillIconImageItem src={item.src} height="30px" width="30px" duration="800" objectFit='scale-down'/>
-            <Typography variant="body2" sx={{mixBlendMode: "difference", fontSize: 12, fontWeight: 200, mt: .5}}>{item.name}</Typography>
+          <Box key={item.name} sx={{display: "flex", flexDirection: "column", alignItems: "center", width: "60px"}}>
+            <SkillIconImageItem src={item.src} height="30px" width="30px" duration={800} objectFit='scale-down'/>
+            <Typography variant="body2" sx={{mixBlendMode: "difference", fontSize: 11.5, fontWeight: 200, mt: .5}}>{item.name}</Typography>
           </Box>
         )}
         {skillsIcons.styling.map(item => 
-          <Box sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-            <SkillIconImageItem src={item.src} height="30px" width="30px" duration="800" objectFit='scale-down'/>
-            <Typography variant="body2" sx={{mixBlendMode: "difference", fontSize: 12, fontWeight: 200, mt: .5}}>{item.name}</Typography>
+          <Box key={item.name}  sx={{display: "flex", flexDirection: "column", alignItems: "center", width: "60px"}}>
+            <SkillIconImageItem src={item.src} height="30px" width="30px" duration={800} objectFit='scale-down'/>
+            <Typography variant="body2" sx={{mixBlendMode: "difference", fontSize: 11.5, fontWeight: 200, mt: .5}}>{item.name}</Typography>
           </Box>
         )}
       </Box>
-      <Box sx={{display: "flex", flexDirection: "row", gap: 1.5}}>
+      <Box sx={{display: "flex", flexDirection: "row", gap: 1.5, alignItems:"center"}}>
         {skillsIcons.backend.map(item => 
-          <Box sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-            <SkillIconImageItem src={item.src} height="30px" width="30px" duration="800" objectFit='scale-down'/>
-            <Typography variant="body2" sx={{mixBlendMode: "difference", fontSize: 12, fontWeight: 200, mt: .5}}>{item.name}</Typography>
+          <Box key={item.name}  sx={{display: "flex", flexDirection: "column", alignItems: "center", width: "60px"}}>
+            <SkillIconImageItem src={item.src} height="30px" width="30px" duration={800} objectFit='scale-down'/>
+            <Typography variant="body2" sx={{mixBlendMode: "difference", fontSize: 11.5, fontWeight: 200, mt: .5}}>{item.name}</Typography>
           </Box>
         )}
       </Box>

@@ -10,7 +10,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 const Home = () => {
   return (
     <PageContainer>
-      <Grid container sx={{height: "100%", px: 5,  justifyContent: "center", pt: "15%"}}>
+      <Grid container sx={{height: "100%", px: 5,  justifyContent: "center", pt: "15%", overflowY: "auto"}}>
         <Grid item xs={12} md={2}>
           <Box sx={{border: 3, borderRadius: "50%", height: 150, width: 150, display: "flex", alignItems: "center", justifyContent: "center", mixBlendMode: "difference", mx: "auto"}}>
             <Typography >image-here</Typography>
@@ -29,13 +29,13 @@ const Home = () => {
           <Box>
             <Button variant="outlined" sx={{mixBlendMode: "difference", fontWeight: 400}} color="inherit" endIcon={<KeyboardArrowRightIcon color="primary"/>}>Read More About Me</Button>
           </Box>
-          <Box>
+          <Box mt={3}>
             <Typography>I mainly develop my projects using ReactJS or NextJS in the Front End, and NodeJS and ExpressJS on the Backend along with related libraries and frameworks.</Typography>
-            <Typography>Here are some of my arsenal of expertise: </Typography>
+            <Typography mt={1} fontWeight={200}>Here are my primary arsenal of expertise: </Typography>
             <SkillsShowcase/>
 
           </Box>
-          <Box>
+          <Box sx={{mt:1}}>
             <Button variant="outlined" sx={{mixBlendMode: "difference", fontWeight: 400}} color="inherit" endIcon={<KeyboardArrowDownIcon color="primary"/>}>See My Works</Button>
           </Box>
         </Grid>
