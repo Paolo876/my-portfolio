@@ -29,8 +29,8 @@ const Home = () => {
         <Grid item xs={12} md={6}>
           <Box>
             <Box>
-              <Typography sx={{display: "inline", fontWeight: 300, fontSize: 18, mixBlendMode: "difference"}}>My name is </Typography>
-              <Typography sx={{display: "inline", fontWeight: 600, fontSize: 40, letterSpacing: 1, ml: 1, lineHeight: 1.25}}>Paolo Bugarin</Typography>
+              <Typography sx={{display: "inline", fontWeight: 300, fontSize: 18, mixBlendMode: "difference"}}>I am</Typography>
+              <Typography sx={{display: "inline", fontWeight: 600, fontSize: 40, ml: 1, lineHeight: 1.25}}>Paolo Bugarin</Typography>
               <Typography sx={{display: "inline", fontWeight: 300, fontSize: 20, ml: .25}}>, </Typography>
             </Box>
             <Box mt={.25}>

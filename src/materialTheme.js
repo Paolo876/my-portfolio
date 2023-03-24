@@ -20,6 +20,7 @@ export const theme = createTheme({
         root: {
           borderRadius: 0,
           fontWeight: 400,
+          letterSpacing: .75,
           // borderWidth: 2,
           ":hover": {
             borderRadius: 0,
