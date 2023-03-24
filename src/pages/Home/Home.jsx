@@ -1,13 +1,19 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import PageContainer from '../../components/PageContainer'
 import SkillsShowcase from './SkillsShowcase';
+import SocialLinks from '../../components/SocialLinks';
 
 import { Grid, Typography, Box, Button} from '@mui/material'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import PlaceIcon from '@mui/icons-material/Place';
 
+
 const Home = () => {
+  const navigate = useNavigate();
+
+
   return (
     <PageContainer>
       <Grid container sx={{px: 5,  justifyContent: "center", pt: "5%", overflowY: "auto"}}>
@@ -19,8 +25,13 @@ const Home = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Box>
-            <Typography fontSize={28} fontWeight={400}>My name is Paolo Bugarin,</Typography>
-            <Typography fontSize={22} mt={1}>I am a Full Stack Web Developer based in Los Angeles, California.<PlaceIcon fontSize="inherit"/></Typography>
+            <Box>
+              <Typography sx={{display: "inline", fontWeight: 300, fontSize: 20}}>Hello! My name is </Typography>
+              <Typography sx={{display: "inline", fontWeight: 600, fontSize: 40, letterSpacing: .75, ml: .25}}>Paolo Bugarin</Typography>
+              <Typography sx={{display: "inline", fontWeight: 300, fontSize: 20, ml: .25}}>, </Typography>
+            </Box>
+            
+            <Typography fontSize={22} mt={.25}>I am a Full Stack Web Developer based in Los Angeles, California.<PlaceIcon fontSize="inherit"/></Typography>
             <Typography fontSize={16} mt={1.5}>I design and develop websites from a simple static page to a complex dynamic web application.</Typography>
 
             <Typography fontSize={15} mt={.5} lineHeight={1.75}>
@@ -28,8 +39,17 @@ const Home = () => {
               A big part of my development knowledge also came from self-studying through varieties of online courses and being a part of coding groups.
             </Typography>
           </Box>
-          <Box sx={{mt:2}} align="right">
-            <Button variant="outlined" sx={{mixBlendMode: "difference", fontWeight: 400}} color="inherit" endIcon={<KeyboardArrowRightIcon color="primary"/>}>Read More About Me</Button>
+          <Box sx={{mt:2, display: "flex", alignItems: "center", justifyContent: "space-between", gap:1}} align="right">
+            <SocialLinks iconSize="small" gap={0} buttonSize="medium"/>
+            <Button 
+              variant="outlined" 
+              sx={{mixBlendMode: "difference", fontWeight: 400}} 
+              color="inherit" 
+              endIcon={<KeyboardArrowRightIcon color="primary"/>}
+              onClick={() => navigate("/about")}
+            >
+              Read More About Me
+            </Button>
           </Box>
           
         </Grid>
@@ -43,7 +63,15 @@ const Home = () => {
             <SkillsShowcase/>
           </Box>
           <Box sx={{mt:1}}>
-            <Button variant="outlined" sx={{mixBlendMode: "difference", fontWeight: 400}} color="inherit" endIcon={<KeyboardArrowDownIcon color="primary"/>}>See My Works</Button>
+            <Button 
+              variant="outlined" 
+              sx={{mixBlendMode: "difference", fontWeight: 400}} 
+              color="inherit" 
+              endIcon={<KeyboardArrowDownIcon color="primary"/>}
+              onClick={() => navigate("/projects")}
+            >
+              See My Works
+            </Button>
           </Box>
         </Grid>
         <Grid item xs={2}></Grid>
