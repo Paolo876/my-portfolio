@@ -3,11 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import PageContainer from '../../components/PageContainer'
 import SkillsShowcase from './SkillsShowcase';
 import SocialLinks from '../../components/SocialLinks';
+import MaterialRoot from '../../components/MaterialRoot';
 
 import { Grid, Typography, Box, Button, Divider} from '@mui/material'
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import PlaceIcon from '@mui/icons-material/Place';
 import DescriptionGridItem from './DescriptionGridItem';
 
 
@@ -23,10 +22,13 @@ const Home = () => {
             <Typography >image-here</Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={6}>
           <DescriptionGridItem/>
         </Grid>
-        <Grid item xs={12} md={2}></Grid>
+        <Divider orientation="vertical" flexItem></Divider>
+        <Grid item xs={12} md={3.99}>
+          <SkillsShowcase/>
+        </Grid>
       </Grid>
 
     </PageContainer>
