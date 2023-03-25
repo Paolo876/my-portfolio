@@ -17,16 +17,16 @@ const Home = () => {
   return (
     <PageContainer maxWidth='xl'>
       <Grid container sx={{px: 5,  justifyContent: "center", pt: "5%", overflowY: "auto", alignItems: "center"}}>
-        <Grid item xs={12} md={2}>
-          <Box sx={{border: 3, borderRadius: "50%", height: 180, width: 180, display: "flex", alignItems: "center", justifyContent: "center", mixBlendMode: "difference", mx: "auto", mt: 2}}>
+        <Grid item xs={12} md={2} >
+          <Box sx={{border: 3, borderRadius: "50%", height: 180, width: 180, display: "flex", alignItems: "center", justifyContent: "center", mixBlendMode: "difference", mt: 2}}>
             <Typography >image-here</Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={5.5}>
           <DescriptionGridItem/>
         </Grid>
         <Divider orientation="vertical" flexItem></Divider>
-        <Grid item xs={12} md={3.99}>
+        <Grid item xs={12} md={4}>
           <SkillsShowcase/>
         </Grid>
       </Grid>
