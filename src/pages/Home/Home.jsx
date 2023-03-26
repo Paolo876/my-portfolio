@@ -25,7 +25,7 @@ const Home = () => {
         <Grid item xs={12} md={5.5}>
           <DescriptionGridItem/>
         </Grid>
-        <Divider orientation="vertical" flexItem></Divider>
+        <Divider orientation="vertical" flexItem><SocialLinks iconSize="small" gap={0} buttonSize="medium" flexDirection="column"/></Divider>
         <Grid item xs={12} md={4}>
           <SkillsShowcase/>
         </Grid>

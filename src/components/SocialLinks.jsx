@@ -5,9 +5,9 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 
-const SocialLinks = ({ buttonSize="large", iconSize="medium", color="primary", gap=1 }) => {
+const SocialLinks = ({ buttonSize="large", iconSize="medium", color="primary", gap=1, flexDirection="row" }) => {
   return (
-    <Box sx={{display: "flex", gap}}>
+    <Box sx={{display: "flex", gap, flexDirection}}>
       <Tooltip title="Github" arrow enterDelay={500}>
         <IconButton size={buttonSize} target="_blank" href="https://github.com/Paolo876" sx={{mixBlendMode: "difference"}}>
           <GitHubIcon fontSize={iconSize} color={color}/>
