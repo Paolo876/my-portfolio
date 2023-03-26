@@ -42,15 +42,11 @@ const skillsIcons = {
 const boxStyles = {
   py: 2.5, 
   my: 1.5, 
-  border: "1px solid rgba(200,200,200,.1)", 
+  border: "1px solid rgba(200,200,200,.05)", 
   borderRadius: 2,
   maxWidth: "90px",
   userSelect: "none",
   opacity: .9,  
-  "&:hover": {
-    border: "1px solid rgba(255, 224, 130,.25)", 
-    opacity: 1,
-  }
 }
 
 const textStyles = {
@@ -66,7 +62,7 @@ const SkillsShowcase = () => {
       {skillsIcons.frontend.map(item => 
         <Grid item xs={4} key={item.name} align="center">
           <Box sx={boxStyles}>
-            <SkillIconImageItem src={item.src} height="30px" width="30px" duration={800} objectFit='scale-down'/>
+            <SkillIconImageItem src={item.src} height="45px" width="45px" duration={800} objectFit='scale-down'/>
             <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
           </Box>
         </Grid>
@@ -74,7 +70,7 @@ const SkillsShowcase = () => {
       {skillsIcons.backend.map(item => 
         <Grid item xs={4} key={item.name} sx={{}} align="center">
           <Box sx={boxStyles}>
-            <SkillIconImageItem src={item.src} height="30px" width="30px" duration={800} objectFit='scale-down'/>
+            <SkillIconImageItem src={item.src} height="45px" width="45px" duration={800} objectFit='scale-down'/>
             <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
           </Box>
         </Grid>
@@ -82,7 +78,7 @@ const SkillsShowcase = () => {
       {skillsIcons.styling.map(item => 
         <Grid item xs={4} key={item.name} sx={{}} align="center">
         <Box sx={boxStyles}>
-          <SkillIconImageItem src={item.src} height="30px" width="30px" duration={800} objectFit='scale-down'/>
+          <SkillIconImageItem src={item.src} height="45px" width="45px" duration={800} objectFit='scale-down'/>
           <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
         </Box>
         </Grid>

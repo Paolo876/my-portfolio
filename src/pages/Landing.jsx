@@ -38,17 +38,18 @@ const Landing = () => {
               sx={{
                 mt:8,
                 fontWeight: 300, 
-                opacity: 1, 
+                opacity: .75, 
                 mixBlendMode: "difference", 
                 letterSpacing: 2
               }}
+              
             >
               {`< `}FULL STACK DEVELOPER{` />`}
             </Typography>
           </Grid>
 
           <Grid item xs={12} sm={6}>
-            <Stack spacing={.75} alignItems="flex-end" justifyContent="center" pt={20} sx={{height: "100%"}}>
+            <Stack spacing={1.5} alignItems="flex-end" justifyContent="center" pt={20} sx={{height: "100%"}}>
               <Box sx={{border: 1, mixBlendMode: "difference"}} my={4}>
                 <IconButton size="large" onClick={() => navigate("/home")} >
                   <ArrowForwardIosIcon fontSize="medium" color="primary"/>

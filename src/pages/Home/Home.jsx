@@ -23,21 +23,12 @@ const Home = () => {
         <Grid item xs={12} md={5.75} pt={4}>
           <DescriptionGridItem/>
         </Grid>
-        <Divider orientation="vertical" flexItem><SocialLinks iconSize="small" gap={0} buttonSize="medium" flexDirection="column"/></Divider>
+        <Divider orientation="vertical" flexItem><SocialLinks iconSize="small" gap={0} buttonSize="medium" flexDirection="column" placement="left"/></Divider>
         <Grid item xs={12} md={3.5}>
           <SkillsShowcase/>
         </Grid>
       </Grid>
 
-      <Grid container>
-        <Grid item xs={12} align="center" mt={5}>
-          <Box sx={{border: 1, mixBlendMode: "difference", width: "fit-content", transform: "rotate(90deg)"}} my={4}>
-            <IconButton size="large" onClick={() => navigate("/home")} >
-              <ArrowForwardIosIcon fontSize="medium" color="primary"/>
-            </IconButton>
-          </Box>
-        </Grid>
-      </Grid>
     </PageContainer>
   )
 }
