@@ -41,21 +41,33 @@ const skillsIcons = {
 
 const boxStyles = {
   py: 2.5, 
-  my: .25, 
+  my: 1.5, 
   border: "1px solid rgba(200,200,200,.1)", 
   borderRadius: 2,
   maxWidth: "90px",
+  userSelect: "none",
+  opacity: .9,  
+  "&:hover": {
+    border: "1px solid rgba(255, 224, 130,.25)", 
+    opacity: 1,
+  }
+}
 
+const textStyles = {
+  mixBlendMode: "difference", 
+  fontSize: 11.5, 
+  fontWeight: 200, 
+  mt: .5,
 }
 
 const SkillsShowcase = () => {
   return (
-    <Grid container px={5} spacing={2} >
+    <Grid container px={5}>
       {skillsIcons.frontend.map(item => 
         <Grid item xs={4} key={item.name} align="center">
           <Box sx={boxStyles}>
             <SkillIconImageItem src={item.src} height="30px" width="30px" duration={800} objectFit='scale-down'/>
-            <Typography variant="body2" sx={{mixBlendMode: "difference", fontSize: 11.5, fontWeight: 200, mt: .5}}>{item.name}</Typography>
+            <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
           </Box>
         </Grid>
       )}
@@ -63,7 +75,7 @@ const SkillsShowcase = () => {
         <Grid item xs={4} key={item.name} sx={{}} align="center">
           <Box sx={boxStyles}>
             <SkillIconImageItem src={item.src} height="30px" width="30px" duration={800} objectFit='scale-down'/>
-            <Typography variant="body2" sx={{mixBlendMode: "difference", fontSize: 11.5, fontWeight: 200, mt: .5}}>{item.name}</Typography>
+            <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
           </Box>
         </Grid>
       )}
@@ -71,7 +83,7 @@ const SkillsShowcase = () => {
         <Grid item xs={4} key={item.name} sx={{}} align="center">
         <Box sx={boxStyles}>
           <SkillIconImageItem src={item.src} height="30px" width="30px" duration={800} objectFit='scale-down'/>
-          <Typography variant="body2" sx={{mixBlendMode: "difference", fontSize: 11.5, fontWeight: 200, mt: .5}}>{item.name}</Typography>
+          <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
         </Box>
         </Grid>
       )}

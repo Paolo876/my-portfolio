@@ -3,12 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import PageContainer from '../../components/PageContainer'
 import SkillsShowcase from './SkillsShowcase';
 import SocialLinks from '../../components/SocialLinks';
-import MaterialRoot from '../../components/MaterialRoot';
 
-import { Grid, Typography, Box, Button, Divider} from '@mui/material'
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { Grid, Typography, Box, Divider, IconButton} from '@mui/material'
 import DescriptionGridItem from './DescriptionGridItem';
-
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -16,21 +14,30 @@ const Home = () => {
 
   return (
     <PageContainer maxWidth='xl'>
-      <Grid container sx={{px: 5,  justifyContent: "center", pt: "5%", overflowY: "auto", alignItems: "center"}}>
-        <Grid item xs={12} md={2} >
+      <Grid container sx={{px: 5,  justifyContent: "center", pt: "5%", overflowY: "auto", alignItems: "flex-start"}}>
+        <Grid item xs={12} md={2} pt={4}>
           <Box sx={{border: 3, borderRadius: "50%", height: 180, width: 180, display: "flex", alignItems: "center", justifyContent: "center", mixBlendMode: "difference", mt: 2}}>
             <Typography >image-here</Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={5.5}>
+        <Grid item xs={12} md={5.75} pt={4}>
           <DescriptionGridItem/>
         </Grid>
         <Divider orientation="vertical" flexItem><SocialLinks iconSize="small" gap={0} buttonSize="medium" flexDirection="column"/></Divider>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={3.5}>
           <SkillsShowcase/>
         </Grid>
       </Grid>
 
+      <Grid container>
+        <Grid item xs={12} align="center" mt={5}>
+          <Box sx={{border: 1, mixBlendMode: "difference", width: "fit-content", transform: "rotate(90deg)"}} my={4}>
+            <IconButton size="large" onClick={() => navigate("/home")} >
+              <ArrowForwardIosIcon fontSize="medium" color="primary"/>
+            </IconButton>
+          </Box>
+        </Grid>
+      </Grid>
     </PageContainer>
   )
 }
