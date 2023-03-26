@@ -15,7 +15,7 @@ const DescriptionGridItem = () => {
         <Typography sx={{display: "inline", fontWeight: 600, fontSize: 42, ml: 1, lineHeight: 1.25}}>Paolo Bugarin</Typography>
         <Typography sx={{display: "inline", fontWeight: 200, fontSize: 20, ml: .25}}>, </Typography>
       </Box>
-      <Box mt={1}>
+      <Box mt={1.5}>
         <Typography sx={{display: "inline", fontWeight: 200, fontSize: 18, mixBlendMode: "difference"}}>a  </Typography>
         <Typography sx={{display: "inline", fontWeight: 400, fontSize: 20, mixBlendMode: "difference"}}>Full Stack Web Developer </Typography>
         <Typography sx={{display: "inline", fontWeight: 200, fontSize: 18, mixBlendMode: "difference"}}>based in </Typography>
@@ -42,6 +42,7 @@ const DescriptionGridItem = () => {
       <Box mt={5}>
         <Button 
           variant="contained" 
+          color="primary"
           // sx={{mixBlendMode: "difference", fontWeight: 400}} 
           // color="inherit" 
           // endIcon={<KeyboardArrowRightIcon color="primary"/>}
