@@ -5,7 +5,7 @@ import SkillsShowcase from './SkillsShowcase';
 import SocialLinks from '../../components/SocialLinks';
 
 import { Grid, Typography, Box, Divider, IconButton} from '@mui/material'
-import DescriptionGridItem from './DescriptionGridItem';
+import DescriptionGridItem from './Introduction/DescriptionGridItem';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const Home = () => {
