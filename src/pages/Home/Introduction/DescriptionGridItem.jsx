@@ -28,18 +28,6 @@ const DescriptionGridItem = () => {
         <Typography sx={{display: "inline", fontWeight: 200, fontSize: 22, mixBlendMode: "difference"}}>to a </Typography>
         <Typography sx={{display: "inline", fontWeight: 400, fontSize: 24, mixBlendMode: "difference"}}>complex dynamic web application.</Typography>
       </Box>
-      {/* <Box mt={1}>
-        <Typography sx={{display: "inline", fontWeight: 200, fontSize: 17, mixBlendMode: "difference"}}>I mainly develop my projects using </Typography>
-        <Typography sx={{display: "inline", fontWeight: 400, fontSize: 17, mixBlendMode: "difference"}}>ReactJS </Typography>
-        <Typography sx={{display: "inline", fontWeight: 200, fontSize: 17, mixBlendMode: "difference"}}>or </Typography>
-        <Typography sx={{display: "inline", fontWeight: 400, fontSize: 17, mixBlendMode: "difference"}}>NextJS </Typography>
-        <Typography sx={{display: "inline", fontWeight: 200, fontSize: 17, mixBlendMode: "difference"}}>in the Client-Side, and </Typography>
-        <Typography sx={{display: "inline", fontWeight: 400, fontSize: 17, mixBlendMode: "difference"}}>NodeJS </Typography>
-        <Typography sx={{display: "inline", fontWeight: 200, fontSize: 17, mixBlendMode: "difference"}}>and </Typography>
-        <Typography sx={{display: "inline", fontWeight: 400, fontSize: 17, mixBlendMode: "difference"}}>ExpressJS </Typography>
-        <Typography sx={{display: "inline", fontWeight: 200, fontSize: 17, mixBlendMode: "difference"}}>in the Server-Side along with related libraries and frameworks.</Typography>
-
-      </Box> */}
       <Box mt={8}>
         <Button 
           variant="outlined" 
