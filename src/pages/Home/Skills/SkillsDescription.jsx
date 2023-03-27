@@ -5,6 +5,9 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 
 const SkillsDescription = () => {
+  const navigate = useNavigate();
+
+
   return (
     <Stack p={1}>
       <Box>
@@ -13,9 +16,9 @@ const SkillsDescription = () => {
         <Typography sx={{display: "inline", fontWeight: 200, fontSize: 18, opacity: .8, lineHeight: 1.75}}>major in </Typography>
         <Typography sx={{display: "inline", fontWeight: 400, fontSize: 18, opacity: .8, lineHeight: 1.75}}>Web Development and Software Development </Typography>
         <Typography sx={{display: "inline", fontWeight: 200, fontSize: 18, opacity: .8, lineHeight: 1.75}}>at Pasadena City College. </Typography>
-        <Typography sx={{display: "inline", fontWeight: 200, fontSize: 18, opacity: .8, lineHeight: 1.75}}>A big part of my development knowledge also came from </Typography>
+        <Typography sx={{display: "inline", fontWeight: 200, fontSize: 18, opacity: .8, lineHeight: 1.75}}>A big part of my development knowledge is also gained from </Typography>
         <Typography sx={{display: "inline", fontWeight: 400, fontSize: 18, opacity: .8, lineHeight: 1.75}}>self-studying </Typography>
-        <Typography sx={{display: "inline", fontWeight: 200, fontSize: 18, opacity: .8, lineHeight: 1.75}}>through varieties of </Typography>
+        <Typography sx={{display: "inline", fontWeight: 200, fontSize: 18, opacity: .8, lineHeight: 1.75}}>through various </Typography>
         <Typography sx={{display: "inline", fontWeight: 400, fontSize: 18, opacity: .8, lineHeight: 1.75}}>online courses </Typography>
         <Typography sx={{display: "inline", fontWeight: 200, fontSize: 18, opacity: .8, lineHeight: 1.75}}>and being a part of </Typography>
         <Typography sx={{display: "inline", fontWeight: 400, fontSize: 18, opacity: .8, lineHeight: 1.75}}>coding groups.</Typography>
@@ -31,7 +34,17 @@ const SkillsDescription = () => {
         <Typography sx={{display: "inline", fontWeight: 400, fontSize: 18, opacity: .8, lineHeight: 1.75}}>ExpressJS </Typography>
         <Typography sx={{display: "inline", fontWeight: 200, fontSize: 18, opacity: .8, lineHeight: 1.75}}>in the Server-Side along with related libraries and frameworks.</Typography>
       </Box>
-
+      <Box mt={8}>
+        <Button 
+          variant="contained" 
+          color="secondary"
+          endIcon={<KeyboardArrowRightIcon color="inherit"/>}
+          onClick={() => navigate("/about")}
+          size="large"
+        >
+          See My Works
+        </Button>
+      </Box>
     </Stack>
   )
 }

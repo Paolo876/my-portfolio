@@ -58,10 +58,21 @@ export const theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: 'rgb(237, 165, 17)',
+      // main: 'rgb(237, 165, 17)',
+      main: '#ea7b00',
     },
     secondary: {
-      main: '#3f4998',
+      main: '#0f5bd7',
+      // main: '#193ab8',
+    },
+    info: {
+      main: '#d4d700',
+    },
+    error: {
+      main: '#ea0800',
+    },
+    success: {
+      main: '#5bd800',
     },
     background: {
       default: '#0d0d10',

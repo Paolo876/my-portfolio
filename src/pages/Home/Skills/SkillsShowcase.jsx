@@ -1,20 +1,20 @@
 import React from 'react'
-import SkillIconImageItem from '../../components/SkillIconImageItem'
+import SkillIconImageItem from '../../../components/SkillIconImageItem'
 
-import { Box, Typography, Grid } from '@mui/material'
-import javascript from "../../assets/icons/javascript.svg"
-import react from "../../assets/icons/react.svg"
-import nextjs from "../../assets/icons/nextjs.svg"
-import redux from "../../assets/icons/redux.svg"
-import nodejs from "../../assets/icons/nodejs.svg"
-import express from "../../assets/icons/express.svg"
-import socketio from "../../assets/icons/socketio.svg"
-import mysql from "../../assets/icons/mysql.svg"
-import mongodb from "../../assets/icons/mongodb.svg"
-import firebase from "../../assets/icons/firebase.svg"
-import sass from "../../assets/icons/sass.svg"
-import bootstrap from "../../assets/icons/bootstrap.svg"
-import materialui from "../../assets/icons/materialui.svg"
+import { Box, Typography, Grid, Paper } from '@mui/material'
+import javascript from "../../../assets/icons/javascript.svg"
+import react from "../../../assets/icons/react.svg"
+import nextjs from "../../../assets/icons/nextjs.svg"
+import redux from "../../../assets/icons/redux.svg"
+import nodejs from "../../../assets/icons/nodejs.svg"
+import express from "../../../assets/icons/express.svg"
+import socketio from "../../../assets/icons/socketio.svg"
+import mysql from "../../../assets/icons/mysql.svg"
+import mongodb from "../../../assets/icons/mongodb.svg"
+import firebase from "../../../assets/icons/firebase.svg"
+import sass from "../../../assets/icons/sass.svg"
+import bootstrap from "../../../assets/icons/bootstrap.svg"
+import materialui from "../../../assets/icons/materialui.svg"
 
 const skillsIcons = {
   frontend: [
@@ -46,7 +46,7 @@ const boxStyles = {
   borderRadius: 2,
   maxWidth: "90px",
   userSelect: "none",
-  opacity: .9,  
+  opacity: .85,  
 }
 
 const textStyles = {
@@ -54,34 +54,40 @@ const textStyles = {
   fontSize: 11.5, 
   fontWeight: 300, 
   mt: 1,
-  // color: "primary.dark"
 }
 
 const SkillsShowcase = () => {
   return (
     <Grid container px={5}>
       {skillsIcons.frontend.map(item => 
-        <Grid item xs={4} key={item.name} align="center">
-          <Box sx={boxStyles}>
-            <SkillIconImageItem src={item.src} height="50px" width="50px" duration={800} objectFit='scale-down'/>
-            <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
-          </Box>
+        <Grid item xs={2.25} key={item.name} align="center">
+          <Paper sx={boxStyles}>
+            <Box>
+              <SkillIconImageItem src={item.src} height="50px" width="50px" duration={800} objectFit='scale-down'/>
+              <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
+            </Box>
+          </Paper>
+
         </Grid>
       )}
       {skillsIcons.backend.map(item => 
-        <Grid item xs={4} key={item.name} sx={{}} align="center">
-          <Box sx={boxStyles}>
-            <SkillIconImageItem src={item.src} height="50px" width="50px" duration={800} objectFit='scale-down'/>
-            <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
-          </Box>
+        <Grid item xs={2.25} key={item.name} sx={{}} align="center">
+          <Paper sx={boxStyles}>
+            <Box>
+              <SkillIconImageItem src={item.src} height="50px" width="50px" duration={800} objectFit='scale-down'/>
+              <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
+            </Box>
+          </Paper>
         </Grid>
       )}
       {skillsIcons.styling.map(item => 
-        <Grid item xs={4} key={item.name} sx={{}} align="center">
-        <Box sx={boxStyles}>
-          <SkillIconImageItem src={item.src} height="50px" width="50px" duration={800} objectFit='scale-down'/>
-          <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
-        </Box>
+        <Grid item xs={2.25} key={item.name} sx={{}} align="center">
+          <Paper sx={boxStyles}>
+            <Box>
+              <SkillIconImageItem src={item.src} height="50px" width="50px" duration={800} objectFit='scale-down'/>
+              <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
+            </Box>
+          </Paper>
         </Grid>
       )}
     </Grid>

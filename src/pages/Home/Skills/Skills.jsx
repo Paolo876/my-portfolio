@@ -1,6 +1,7 @@
 import React from 'react'
 import SkillsDescription from './SkillsDescription';
 import { Grid, Box, Typography, useTheme } from '@mui/material'
+import SkillsShowcase from './SkillsShowcase';
 
 
 const Skills = () => {
@@ -13,21 +14,8 @@ const Skills = () => {
       <Grid item xs={12} md={4} mt={8}>
         <SkillsDescription/>
       </Grid>
-      <Grid item xs={12} md={4} mt={8}>
-        <Box 
-          sx={{
-            border: 3, 
-            borderRadius: "50%", 
-            height: 200, 
-            width: 200, 
-            display: "flex", 
-            alignItems: "center", 
-            justifyContent: "center", 
-            mixBlendMode: "difference", 
-            mt: 2,
-          }}>
-          <Typography >image-here</Typography>
-        </Box>
+      <Grid item xs={12} md={4.5} mt={8}>
+        <SkillsShowcase/>
       </Grid>
 
     </Grid>

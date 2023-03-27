@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import PageContainer from '../../components/PageContainer'
-import SkillsShowcase from './SkillsShowcase';
+import SkillsShowcase from './Skills/SkillsShowcase';
 import SocialLinks from '../../components/SocialLinks';
 
 import { Grid, Typography, Box, Divider, IconButton} from '@mui/material'
