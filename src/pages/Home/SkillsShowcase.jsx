@@ -52,8 +52,9 @@ const boxStyles = {
 const textStyles = {
   mixBlendMode: "difference", 
   fontSize: 11.5, 
-  fontWeight: 200, 
-  mt: .5,
+  fontWeight: 300, 
+  mt: 1,
+  // color: "primary.dark"
 }
 
 const SkillsShowcase = () => {
@@ -62,7 +63,7 @@ const SkillsShowcase = () => {
       {skillsIcons.frontend.map(item => 
         <Grid item xs={4} key={item.name} align="center">
           <Box sx={boxStyles}>
-            <SkillIconImageItem src={item.src} height="45px" width="45px" duration={800} objectFit='scale-down'/>
+            <SkillIconImageItem src={item.src} height="50px" width="50px" duration={800} objectFit='scale-down'/>
             <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
           </Box>
         </Grid>
@@ -70,7 +71,7 @@ const SkillsShowcase = () => {
       {skillsIcons.backend.map(item => 
         <Grid item xs={4} key={item.name} sx={{}} align="center">
           <Box sx={boxStyles}>
-            <SkillIconImageItem src={item.src} height="45px" width="45px" duration={800} objectFit='scale-down'/>
+            <SkillIconImageItem src={item.src} height="50px" width="50px" duration={800} objectFit='scale-down'/>
             <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
           </Box>
         </Grid>
@@ -78,7 +79,7 @@ const SkillsShowcase = () => {
       {skillsIcons.styling.map(item => 
         <Grid item xs={4} key={item.name} sx={{}} align="center">
         <Box sx={boxStyles}>
-          <SkillIconImageItem src={item.src} height="45px" width="45px" duration={800} objectFit='scale-down'/>
+          <SkillIconImageItem src={item.src} height="50px" width="50px" duration={800} objectFit='scale-down'/>
           <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
         </Box>
         </Grid>
