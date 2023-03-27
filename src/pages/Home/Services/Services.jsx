@@ -4,7 +4,7 @@ import { Grid, Typography, Box, useTheme } from "@mui/material"
 const Services = () => {
   const {palette: { background }} = useTheme();
   return (
-    <Grid container sx={{height: "75vh", background: background.lighter}}>
+    <Grid container sx={{height: "75vh"}}>
       <Box>
         <Typography variant="h3">My Services</Typography>
 

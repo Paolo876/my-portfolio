@@ -40,15 +40,15 @@ const DescriptionGridItem = () => {
         <Typography sx={{display: "inline", fontWeight: 200, fontSize: 17, mixBlendMode: "difference"}}>in the Server-Side along with related libraries and frameworks.</Typography>
 
       </Box> */}
-      <Box mt={4}>
+      <Box mt={8}>
         <Button 
-          variant="contained" 
+          variant="outlined" 
           color="primary"
           endIcon={<KeyboardArrowRightIcon color="inherit"/>}
           onClick={() => navigate("/about")}
           size="large"
         >
-          More About Me
+          Read More About Me
         </Button>
       </Box>
     </Stack>

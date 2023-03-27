@@ -65,7 +65,7 @@ export const theme = createTheme({
     },
     background: {
       default: '#0d0d10',
-      lighter: 'rgba(55, 55, 59, .9)',
+      lighter: 'rgba(77, 75, 75, .8)',
       paper: '#24242b',
     },
     text: {
@@ -83,14 +83,15 @@ export const theme = createTheme({
     },
     h2: {
       fontFamily: 'Manrope',
-      fontWeight: 600,
+      fontWeight: 700,
       textTransform: 'uppercase',
 
     },
     h3: {
       fontFamily: 'Manrope',
-      fontWeight: 600,
+      fontWeight: 700,
       textTransform: 'uppercase',
+      letterSpacing: 1
     },
     h4: {
       fontFamily: 'Manrope',
