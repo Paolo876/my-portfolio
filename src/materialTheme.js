@@ -65,6 +65,7 @@ export const theme = createTheme({
     },
     background: {
       default: '#0d0d10',
+      lighter: 'rgba(55, 55, 59, .9)',
       paper: '#24242b',
     },
     text: {
