@@ -6,7 +6,7 @@ import SocialLinks from '../../../components/SocialLinks'
 
 const Introduction = () => {
   return (
-    <Grid container sx={{px: 5, height: "78vh", justifyContent: "center", alignItems: "center"}}>
+    <Grid container sx={{px: 5, minHeight: "70vh", justifyContent: "center", alignItems: "center"}}>
       {/* <Grid item xs={1} sx={{height: "100%"}}>
         <Divider orientation="vertical" flexItem><SocialLinks iconSize="small" gap={0} buttonSize="medium" flexDirection="column" placement="left"/></Divider>
       </Grid> */}
