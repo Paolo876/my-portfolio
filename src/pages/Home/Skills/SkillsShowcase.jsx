@@ -1,8 +1,11 @@
 import React from 'react'
 import SkillIconImageItem from '../../../components/SkillIconImageItem'
 
-import { Box, Typography, Grid, Paper } from '@mui/material'
+import { Box, Typography, Grid, Paper, ButtonBase } from '@mui/material'
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+
 import javascript from "../../../assets/icons/javascript.svg"
+import typescript from "../../../assets/icons/typescript.svg"
 import react from "../../../assets/icons/react.svg"
 import nextjs from "../../../assets/icons/nextjs.svg"
 import redux from "../../../assets/icons/redux.svg"
@@ -19,6 +22,7 @@ import materialui from "../../../assets/icons/materialui.svg"
 const skillsIcons = {
   frontend: [
     {src: javascript, name: "JavaScript"},
+    {src: typescript, name: "TypeScript"},
     {src: react, name: "React"},
     {src: nextjs, name: "NextJs"},
     {src: redux, name: "Redux"},
@@ -71,7 +75,7 @@ const SkillsShowcase = () => {
         </Grid>
       )}
       {skillsIcons.backend.map(item => 
-        <Grid item xs={2.25} key={item.name} sx={{}} align="center">
+        <Grid item xs={2.25} key={item.name} align="center">
           <Paper sx={boxStyles}>
             <Box>
               <SkillIconImageItem src={item.src} height="50px" width="50px" duration={800} objectFit='scale-down'/>
@@ -81,7 +85,7 @@ const SkillsShowcase = () => {
         </Grid>
       )}
       {skillsIcons.styling.map(item => 
-        <Grid item xs={2.25} key={item.name} sx={{}} align="center">
+        <Grid item xs={2.25} key={item.name} align="center">
           <Paper sx={boxStyles}>
             <Box>
               <SkillIconImageItem src={item.src} height="50px" width="50px" duration={800} objectFit='scale-down'/>
@@ -90,6 +94,13 @@ const SkillsShowcase = () => {
           </Paper>
         </Grid>
       )}
+      <Grid item xs={2.25} align="center">
+        <ButtonBase sx={{...boxStyles, width: "90px", height: "auto"}}>
+          <Box>
+            <KeyboardArrowRightIcon sx={{fontSize: 50}}/>
+          </Box>
+        </ButtonBase>
+      </Grid>
     </Grid>
   )
 }

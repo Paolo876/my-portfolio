@@ -9,8 +9,11 @@ const Skills = () => {
 
 
   return (
-    <Grid container sx={{px: 5, py: 6, justifyContent: "center", alignItems: "flex-start", background: background.lighter}}>
-      <Grid item xs={12} ><Typography variant="h4" align="center">My Skills</Typography></Grid>
+    <Grid container sx={{px: 5, py: 7, justifyContent: "center", alignItems: "flex-start", background: background.lighter}}>
+      <Grid item xs={12} >
+        <Typography variant="h4" align="center">My Skills</Typography>
+        <Box sx={{background: "white", height: "3px", width: "55px", mx: "auto", mt: 3.5}} ></Box>
+        </Grid>
       <Grid item xs={12} md={4} mt={8}>
         <SkillsDescription/>
       </Grid>
