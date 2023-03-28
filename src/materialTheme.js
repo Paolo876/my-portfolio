@@ -76,7 +76,7 @@ export const theme = createTheme({
     },
     background: {
       default: 'rgb(38,37,37)',
-      lighter: 'rgba(239,235,229,0.9)',
+      lighter: 'rgba(239,235,229,0.75)',
       paper: '#24242b',
     },
     text: {

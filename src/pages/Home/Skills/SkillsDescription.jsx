@@ -34,10 +34,10 @@ const SkillsDescription = () => {
         <Typography sx={{display: "inline", fontWeight: 500, fontSize: 18, opacity: .8, lineHeight: 1.75}}>ExpressJS </Typography>
         <Typography sx={{display: "inline", fontWeight: 300, fontSize: 18, opacity: .8, lineHeight: 1.75}}>in the Server-Side along with related libraries and frameworks.</Typography>
       </Box>
-      <Box mt={8}>
+      <Box mt={5} spacing={3}>
         <Button 
-          variant="outlined" 
-          color="secondary"
+          variant="contained" 
+          color="primary"
           endIcon={<KeyboardArrowRightIcon color="inherit"/>}
           onClick={() => navigate("/projects")}
           size="large"
