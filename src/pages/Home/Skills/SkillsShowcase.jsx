@@ -1,7 +1,7 @@
 import React from 'react'
 import SkillIconImageItem from '../../../components/SkillIconImageItem'
 
-import { Box, Typography, Grid, Paper, ButtonBase } from '@mui/material'
+import { Box, Typography, Grid, Paper, ButtonBase, IconButton, Button, Tooltip } from '@mui/material'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 import javascript from "../../../assets/icons/javascript.svg"
@@ -46,8 +46,8 @@ const skillsIcons = {
 const boxStyles = {
   py: 2.5, 
   my: 1.5, 
-  border: "1px solid rgba(200,200,200,.05)", 
-  borderRadius: 2,
+  // border: "1px solid rgba(200,200,200,.05)", 
+  borderRadius: 0,
   maxWidth: "90px",
   userSelect: "none",
   opacity: .85,  
@@ -95,11 +95,13 @@ const SkillsShowcase = () => {
         </Grid>
       )}
       <Grid item xs={2.25} align="center">
-        <ButtonBase sx={{...boxStyles, width: "90px", height: "auto"}}>
-          <Box>
-            <KeyboardArrowRightIcon sx={{fontSize: 50}}/>
-          </Box>
-        </ButtonBase>
+        <Box sx={boxStyles}>
+          <Tooltip title="More Related Skills" arrow enterDelay={500}>
+            <IconButton>
+                <KeyboardArrowRightIcon sx={{fontSize: 50}} color="primary"/>
+            </IconButton>
+          </Tooltip>
+        </Box>
       </Grid>
     </Grid>
   )
