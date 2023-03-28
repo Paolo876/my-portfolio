@@ -3,6 +3,7 @@ import SkillIconImageItem from '../../../components/SkillIconImageItem'
 
 import { Box, Typography, Grid, Paper, ButtonBase, IconButton, Button, Tooltip } from '@mui/material'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import RightChevron from "../../../assets/chevron-right.svg"
 
 import javascript from "../../../assets/icons/javascript.svg"
 import typescript from "../../../assets/icons/typescript.svg"
@@ -46,7 +47,8 @@ const skillsIcons = {
 const boxStyles = {
   py: 2.5, 
   my: 1.5, 
-  maxWidth: "90px",
+  width: "90px",
+  height: "120px",
   userSelect: "none",
   opacity: .95,  
 }
@@ -76,13 +78,13 @@ const SkillsShowcase = () => {
         </Grid>
       )}
       <Grid item xs={2.25} align="center">
-        <Box sx={boxStyles}>
-          <Tooltip title="More Related Skills" arrow enterDelay={500}>
-            <IconButton>
-                <KeyboardArrowRightIcon sx={{fontSize: 50}} color="primary"/>
-            </IconButton>
-          </Tooltip>
-        </Box>
+        <Tooltip title="More Related Skills" arrow enterDelay={200}>
+          <Button sx={{ ...boxStyles, border: "1px solid rgba(100, 100, 100, .25)", borderRadius: 1, px: "auto"}}>
+            <Box>
+              <SkillIconImageItem src={RightChevron} height="50px" width="50px" duration={800} objectFit='scale-down'/>
+            </Box>
+          </Button>
+        </Tooltip>
       </Grid>
     </Grid>
   )

@@ -11,7 +11,6 @@ const SkillIconImageItem = ({ src, height="100%", width="100%", objectFit="cover
       duration={duration}
       bgColor={bgColor}
       sx={{filter: "grayscale(10%) contrast(90%)", "&:hover": {filter:"none"}}}
-      // sx={{filter: "grayscale(10%) contrast(90%)", "&:hover": {filter:"none"}}}
     />
   )
 }
