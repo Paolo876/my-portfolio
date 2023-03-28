@@ -19,7 +19,6 @@ const Navbar = () => {
               <Link component={NavLink} to="/home" draggable={false}><Typography>Home</Typography></Link>
               <Link component={NavLink} to="/projects" draggable={false}><Typography>Projects</Typography></Link>
               <Link component={NavLink} to="/about" draggable={false}><Typography>About</Typography></Link>
-              <Link component={NavLink} to="/services" draggable={false}><Typography>Services</Typography></Link>
               <Link component={NavLink} to="/contact" draggable={false}><Typography>Contact</Typography></Link>
             </Box>
           }

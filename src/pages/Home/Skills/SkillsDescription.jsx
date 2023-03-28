@@ -39,7 +39,7 @@ const SkillsDescription = () => {
           variant="contained" 
           color="secondary"
           endIcon={<KeyboardArrowRightIcon color="inherit"/>}
-          onClick={() => navigate("/about")}
+          onClick={() => navigate("/projects")}
           size="large"
         >
           See My Works

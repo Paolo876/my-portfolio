@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import PageContainer from '../components/PageContainer'
-import { Grid, Typography, Link, Stack, IconButton, Box, Tooltip } from '@mui/material'
+import { Grid, Typography, Link, Stack, IconButton, Box } from '@mui/material'
 import { Link as ReactLink } from 'react-router-dom';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import SocialLinks from '../components/SocialLinks';
@@ -57,8 +57,7 @@ const Landing = () => {
               </Box>
               <Link component={ReactLink} to="/home" draggable={false}><Typography sx={linkStyles}>Home</Typography></Link>
               <Link component={ReactLink} to="/projects" draggable={false}><Typography sx={linkStyles}>Projects</Typography></Link>
-              <Link component={ReactLink} to="/about" draggable={false}><Typography sx={linkStyles}>About Me</Typography></Link>
-              {/* <Link component={ReactLink} to="/services" draggable={false}><Typography sx={linkStyles}>Services</Typography></Link> */}
+              <Link component={ReactLink} to="/about" draggable={false}><Typography sx={linkStyles}>About</Typography></Link>
               <Link component={ReactLink} to="/contact" draggable={false}><Typography sx={linkStyles}>Contact</Typography></Link>
             </Stack>
           </Grid>

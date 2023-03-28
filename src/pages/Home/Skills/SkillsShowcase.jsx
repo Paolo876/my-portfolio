@@ -33,7 +33,7 @@ const skillsIcons = {
     {src: socketio, name: "Socket.io"},
     {src: mysql, name: "MySQL"},
     {src: mongodb, name: "MongoDB"},
-    {src: firebase, name: "firebase"},
+    {src: firebase, name: "Firebase"},
   ],
   styling: [
     {src: sass, name: "Sass/Scss"},

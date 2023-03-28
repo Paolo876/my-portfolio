@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box } from '@mui/material'
 import Introduction from './Introduction/Introduction'
-import Services from './Services/Services'
 import Contact from './Contact/Contact'
 import Skills from './Skills/Skills'
 
@@ -12,7 +11,6 @@ const Home = () => {
       <Box>
         <Introduction/>
         <Skills/>
-        <Services/>
         <Contact/>
       </Box>
     </Box>
