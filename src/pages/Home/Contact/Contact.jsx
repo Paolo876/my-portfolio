@@ -5,7 +5,7 @@ import ContactDescription from './ContactDescription'
 
 const Contact = () => {
   return (
-    <Grid container sx={{px: 5, py: 6, justifyContent: "center", alignItems: "flex-start" }}>
+    <Grid container sx={{px: 5, py: 6, mb: 4, justifyContent: "center", alignItems: "flex-start" }}>
       <Grid item xs={12} md={3} mt={8}>
         <ContactDescription/>
       </Grid>

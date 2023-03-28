@@ -22,10 +22,10 @@ const ContactDescription = () => {
           You can also reach me through submitting the inquiry form in my contact page
         </Typography>
       </Box> 
-      <Box mt={5}>
+      <Box mt={6}>
         <Button 
-          variant="outlined" 
-          color="primary"
+          variant="contained" 
+          color="secondary"
           endIcon={<KeyboardArrowRightIcon color="inherit"/>}
           onClick={() => navigate("/about")}
           size="large"
