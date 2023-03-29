@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid } from '@mui/material'
+import { Grid, Divider } from '@mui/material'
 import ContactDescription from './ContactDescription'
 import ContactInformations from './ContactInformations';
 
@@ -10,7 +10,10 @@ const Contact = () => {
       <Grid item xs={12} md={4} mt={8}>
         <ContactDescription/>
       </Grid>
-      <Grid item xs={.5}></Grid>
+      <Grid item xs={.25}></Grid>
+      <Divider orientation="vertical" flexItem></Divider>
+      <Grid item xs={.25}></Grid>
+
       <Grid item xs={12} md={4} mt={8}>
         <ContactInformations/>
       </Grid>

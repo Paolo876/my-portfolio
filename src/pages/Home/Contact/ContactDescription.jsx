@@ -11,7 +11,7 @@ const ContactDescription = () => {
   return (
     <>
       <Box>
-        <Typography variant="h4">Let's Talk!</Typography>
+        <Typography variant="h4">Let's Talk</Typography>
         <Box sx={{background: "white", height: "3px", width: "20px", mt: 3.5}} ></Box>
       </Box>
       <Box mt={8}>
