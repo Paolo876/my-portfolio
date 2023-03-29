@@ -22,7 +22,7 @@ const ContactDescription = () => {
           You can also reach me through submitting the inquiry form in my contact page
         </Typography>
       </Box> 
-      <Box mt={6}>
+      <Box mt={8}>
         <Button 
           variant="contained" 
           color="secondary"
