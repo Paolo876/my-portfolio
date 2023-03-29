@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SkillIconImageItem from '../../../components/SkillIconImageItem'
 
 import { Box, Typography, Grid, Paper, ButtonBase, IconButton, Button, Tooltip } from '@mui/material'
@@ -19,6 +19,10 @@ import firebase from "../../../assets/icons/firebase.svg"
 import sass from "../../../assets/icons/sass.svg"
 import bootstrap from "../../../assets/icons/bootstrap.svg"
 import materialui from "../../../assets/icons/materialui.svg"
+import c from "../../../assets/icons/c.svg"
+import java from "../../../assets/icons/java.svg"
+import oracle from "../../../assets/icons/oracle.svg"
+import python from "../../../assets/icons/python.svg"
 
 const skillsIcons = {
   frontend: [
@@ -40,8 +44,14 @@ const skillsIcons = {
     {src: sass, name: "Sass/Scss"},
     {src: bootstrap, name: "Bootstrap"},
     {src: materialui, name: "Material-UI"},
-
   ],
+  programming: [
+    {src: c, name: "C++"},
+    {src: java, name: "Java"},
+    {src: oracle, name: "Oracle SQL"},
+    {src: python, name: "Python"},
+
+  ]
 }
 
 const boxStyles = {
@@ -60,13 +70,20 @@ const textStyles = {
   mt: 1,
 }
 
+const mainSkills = [ ...skillsIcons.frontend, ...skillsIcons.backend, ...skillsIcons.styling ];
+const otherSkills = [...skillsIcons.programming, ]
+
 const SkillsShowcase = () => {
 
-  const mainSkills = [ ...skillsIcons.frontend, ...skillsIcons.backend, ...skillsIcons.styling ];
 
+  const [skills, setSkills ] = useState(mainSkills);
+
+  const handleClick = () => {
+    
+  }
   return (
     <Grid container px={5}>
-      {mainSkills.map(item => 
+      {skills.map(item => 
         <Grid item xs={2.25} key={item.name} align="center">
           <Paper sx={boxStyles} elevation={2}>
             <Box>

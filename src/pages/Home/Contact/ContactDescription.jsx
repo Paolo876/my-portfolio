@@ -27,7 +27,7 @@ const ContactDescription = () => {
           variant="contained" 
           color="secondary"
           endIcon={<KeyboardArrowRightIcon color="inherit"/>}
-          onClick={() => navigate("/about")}
+          onClick={() => navigate("/contact")}
           size="large"
         >
           Contact Page
