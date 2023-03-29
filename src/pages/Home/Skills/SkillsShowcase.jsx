@@ -74,16 +74,20 @@ const mainSkills = [ ...skillsIcons.frontend, ...skillsIcons.backend, ...skillsI
 const otherSkills = [...skillsIcons.programming, ]
 
 const SkillsShowcase = () => {
-
-
-  const [skills, setSkills ] = useState(mainSkills);
+  const [ skills, setSkills ] = useState({id: 'main', array: mainSkills});
 
   const handleClick = () => {
-    
+    if(skills.id === "main"){
+      setSkills({id: 'other', array: otherSkills})
+    } else {
+      setSkills({id: 'main', array: mainSkills})
+    }
   }
+
+
   return (
     <Grid container px={5}>
-      {skills.map(item => 
+      {skills.array.map(item => 
         <Grid item xs={2.25} key={item.name} align="center">
           <Paper sx={boxStyles} elevation={2}>
             <Box>
@@ -95,9 +99,12 @@ const SkillsShowcase = () => {
         </Grid>
       )}
       <Grid item xs={2.25} align="center">
-        <Tooltip title="More Related Skills" arrow enterDelay={200}>
-          <Button sx={{ ...boxStyles, border: "1px solid rgba(100, 100, 100, .25)", borderRadius: 1, px: "auto"}}>
-            <Box>
+        <Tooltip title={skills.id === "main" ? "My Other Skills": "My Main Skills"} arrow enterDelay={200}>
+          <Button 
+            onClick={handleClick}
+            sx={{ ...boxStyles, border: "1px solid rgba(100, 100, 100, .25)", borderRadius: 1, px: "auto"}}
+            >
+            <Box sx={{transform: skills.id === "main" ? "none": "rotate(180deg)"}}>
               <SkillIconImageItem src={RightChevron} height="50px" width="50px" duration={800} objectFit='scale-down'/>
             </Box>
           </Button>
