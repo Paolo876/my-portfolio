@@ -9,7 +9,7 @@ const SkillsDescription = () => {
 
 
   return (
-    <Stack p={1}>
+    <Stack p={1} mt={2}>
       <Box>
         <Typography sx={{display: "inline", fontWeight: 200, fontSize: 20, opacity: .8, lineHeight: 1.75}}>I studied </Typography>
         <Typography sx={{display: "inline", fontWeight: 400, fontSize: 20, opacity: .8, lineHeight: 1.75}}>Computer Information Systems </Typography>
@@ -34,7 +34,7 @@ const SkillsDescription = () => {
         <Typography sx={{display: "inline", fontWeight: 400, fontSize: 20, opacity: .8, lineHeight: 1.75}}>ExpressJS </Typography>
         <Typography sx={{display: "inline", fontWeight: 200, fontSize: 20, opacity: .8, lineHeight: 1.75}}>in the Server-Side along with related libraries and frameworks.</Typography>
       </Box>
-      <Box mt={10} spacing={3}>
+      <Box mt={8} spacing={3}>
         <Button 
           variant="contained" 
           color="secondary"
