@@ -3,6 +3,7 @@ import { Box } from '@mui/material'
 import Introduction from './Introduction/Introduction'
 import Contact from './Contact/Contact'
 import Skills from './Skills/Skills'
+import Footer from '../../components/Footer'
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
         <Introduction/>
         <Skills/>
         <Contact/>
+        <Footer/>
       </Box>
     </Box>
   )

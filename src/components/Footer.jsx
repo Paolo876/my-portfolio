@@ -1,8 +1,10 @@
 import React from 'react'
-
+import { Typography, Box } from '@mui/material'
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <Box align="center" my={.25} sx={{mixBlendMode: "difference"}}>
+        <Typography>© 2023 Paolo Bugarin, All rights reserved.</Typography>
+    </Box>
   )
 }
 
