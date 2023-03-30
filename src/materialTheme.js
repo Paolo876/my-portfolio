@@ -21,6 +21,7 @@ export const theme = createTheme({
           borderRadius: 0,
           fontWeight: 400,
           letterSpacing: .75,
+          // mixBlendMode: "difference",
           // borderWidth: 2,
           ":hover": {
             borderRadius: 0,
@@ -58,21 +59,21 @@ export const theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      // main: 'rgb(237, 165, 17)',
-      main: '#ea7b00',
+      // main: '#ea7b00',
+      main: '#ecbe18',
     },
     secondary: {
-      main: '#0f5bd7',
-      // main: '#193ab8',
+      // main: '#0017ea',
+      main: '#9da5f7',
     },
     info: {
-      main: '#d4d700',
+      main: '#18ecbe',
     },
     error: {
-      main: '#ea0800',
+      main: '#f8713f',
     },
     success: {
-      main: '#5bd800',
+      main: '#91f574',
     },
     background: {
       default: 'rgb(38,37,37)',

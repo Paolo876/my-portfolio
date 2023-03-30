@@ -24,7 +24,7 @@ const ContactDescription = () => {
       </Box> 
       <Box mt={8}>
         <Button 
-          variant="contained" 
+          variant="outlined" 
           color="primary"
           endIcon={<KeyboardArrowRightIcon color="inherit"/>}
           onClick={() => navigate("/contact")}
