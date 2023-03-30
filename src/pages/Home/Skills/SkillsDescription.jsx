@@ -36,7 +36,7 @@ const SkillsDescription = () => {
       </Box>
       <Box mt={6} mb={4} spacing={3}>
         <Button 
-          variant="outlined" 
+          variant="contained" 
           color="secondary"
           endIcon={<KeyboardArrowRightIcon color="inherit"/>}
           onClick={() => navigate("/projects")}

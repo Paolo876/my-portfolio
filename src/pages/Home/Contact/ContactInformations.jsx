@@ -6,7 +6,7 @@ import PlaceIcon from '@mui/icons-material/Place';
 import SocialLinks from "../../../components/SocialLinks"
 const ContactInformations = () => {
   return (
-    <Stack justifyContent="end" mt={8} ml={5}>
+    <Stack justifyContent="end" mt={2} ml={5}>
       <Box>
         <Typography variant="body1" sx={{letterSpacing: 1, fontSize: 30, fontWeight: 500}} >Paolo Bugarin</Typography>
         <Typography variant="body1" sx={{letterSpacing: .5, fontSize: 22, fontWeight: 200, mt:.5}} >Los Angeles, California <PlaceIcon fontSize="inherit"/></Typography>

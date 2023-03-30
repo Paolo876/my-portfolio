@@ -34,6 +34,7 @@ const DescriptionGridItem = () => {
           endIcon={<KeyboardArrowRightIcon color="inherit"/>}
           onClick={() => navigate("/about")}
           size="large"
+          sx={{mixBlendMode: "difference"}}
         >
           Read More About Me
         </Button>

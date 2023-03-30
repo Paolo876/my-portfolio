@@ -10,11 +10,11 @@ const ContactDescription = () => {
 
   return (
     <>
-      <Box>
+      {/* <Box>
         <Typography variant="h4">Let's Talk</Typography>
         <Box sx={{background: "white", height: "3px", width: "20px", mt: 3.5}} ></Box>
-      </Box>
-      <Box mt={8}>
+      </Box> */}
+      <Box mt={2}>
         <Typography sx={{fontWeight: 200, fontSize: 19, opacity: .8, lineHeight: 1.75}}>
           If you have any questions or inquiries, please feel free to get in touch with me through my contact informations provided.
         </Typography>
