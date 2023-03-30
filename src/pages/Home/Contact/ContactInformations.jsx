@@ -29,7 +29,7 @@ const ContactInformations = () => {
           </Stack>
         </Paper>
         <Paper variant="outlined" sx={{p:2, width:"100%", display: "flex", alignItems: "center"}}>
-          <IconButton size="small" href="mailto: paolopaolobugarin@gmail.com" sx={{mixBlendMode: "difference", mr:2, p: 0}} disableFocusRipple disableRipple disableTouchRipple>
+          <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={{mixBlendMode: "difference", mr:2, p: 0}} disableFocusRipple disableRipple disableTouchRipple>
             <MailOutlineIcon color="primary" fontSize="large"/>
           </IconButton> 
           <Divider orientation="vertical" flexItem></Divider>
@@ -38,37 +38,6 @@ const ContactInformations = () => {
             <Typography variant="body1" sx={{fontSize: 20, mt: .5}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>        
           </Stack>
         </Paper>
-        {/* <Paper align="center" variant="outlined" sx={{p:2, minWidth: "220px"}}>
-          <IconButton size="small" href="tel:3234817852" sx={{mixBlendMode: "difference", mb:3}} disableFocusRipple disableRipple disableTouchRipple>
-            <LocalPhoneIcon color="primary" fontSize="large"/>
-          </IconButton> 
-          <Typography variant="body1" sx={{fontSize: 20, fontWeight: 200}} >Phone</Typography>
-          <Typography variant="body1" sx={{letterSpacing: 1, mt: 1}} fontWeight={400}>(323) 481 - 7852</Typography>        
-        </Paper>
-        <Paper align="center" variant="outlined" sx={{p:2, minWidth: "220px"}}>
-          <IconButton size="small" href="mailto: paolopaolobugarin@gmail.com" sx={{mixBlendMode: "difference", mb:3}} disableFocusRipple disableRipple disableTouchRipple>
-            <MailOutlineIcon color="primary" fontSize="large"/>
-          </IconButton>          
-          <Typography variant="body1" sx={{fontSize: 20, fontWeight: 200}} >E-mail</Typography>
-          <Typography variant="body1" sx={{fontSize: 15, letterSpacing: 1, mt: 1}} fontWeight={300}>contact@paolobugarin.com</Typography>        
-        </Paper> */}
-
-      {/* <Box>
-        <Typography variant="body1" sx={{letterSpacing: 1, fontSize: 30, fontWeight: 500}} >Paolo Bugarin</Typography>
-        <Typography variant="body1" sx={{letterSpacing: .5, fontSize: 22, fontWeight: 200, mt:.5}} >Los Angeles, California <PlaceIcon fontSize="inherit"/></Typography>
-      </Box>
-      <Box sx={{display: "flex", alignItems: "center", gap: 2, mt: 3}}>
-        <IconButton size="small" href="tel:3234817852" sx={{mixBlendMode: "difference"}}><LocalPhoneIcon color="primary"/></IconButton> 
-        <Typography variant="body1" sx={{letterSpacing: 1}} >+1 (323) - 481 - 7852</Typography>
-      </Box>
-      <Box sx={{display: "flex", alignItems: "center", gap: 2, my: 1}}>
-        <IconButton size="small" href="mailto: paolopaolobugarin@gmail.com" sx={{mixBlendMode: "difference"}}><MailOutlineIcon color="primary"/></IconButton> 
-        <Typography variant="body1" sx={{letterSpacing: 1}} >paolopaolobugarin@gmail.com</Typography>
-      </Box>
-      <Box mt={3} gap={2}>
-        <Typography variant="body1" sx={{fontSize: 15, letterSpacing: 1, opacity: .8, mb: 1}} >Social:</Typography>
-        <SocialLinks buttonSize='small'/>
-      </Box> */}
     </Stack>
   )
 }

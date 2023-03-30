@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, Divider, Box, Typography, Button } from '@mui/material'
-import ContactDescription from './ContactDescription'
+import ContactDescription from './ContactDescription';
+import SocialLinks from '../../../components/SocialLinks';
 import ContactInformations from './ContactInformations';
 import DownloadIcon from '@mui/icons-material/Download';
 
@@ -16,7 +17,9 @@ const Contact = () => {
             </Box>
           </Grid>
           <Grid item xs={12} md={4}>
-            <Button endIcon={<DownloadIcon/>} variant="contained" color="secondary">Download CV</Button>
+            <Box sx={{width: "100%", height: "100%", display: "flex", justifyContent: "right", pt: 3}}>
+              <Button endIcon={<DownloadIcon/>} variant="contained" color="secondary">Download My CV</Button>
+            </Box>
           </Grid>
         </Grid>
       </Grid>
@@ -26,14 +29,13 @@ const Contact = () => {
           <Grid item xs={12} md={4.5}>
             <ContactDescription/>
           </Grid>
-          {/* <Divider orientation="vertical" flexItem></Divider> */}
           <Grid item xs={12} md={4.25}>
             <ContactInformations/>
           </Grid>
-          {/* <Grid item xs={12} md={1.5}>
-            <Button endIcon={<DownloadIcon/>} variant="contained" color="secondary">Download CV</Button>
-          </Grid> */}
         </Grid>
+      </Grid>
+      <Grid item xs={12} my={3}>
+        <Divider flexItem><SocialLinks iconSize="medium" gap={2} buttonSize="medium" flexDirection="row"/></Divider>
       </Grid>
     </Grid>
   )
