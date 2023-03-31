@@ -7,10 +7,6 @@ import SocialLinks from '../../../components/SocialLinks'
 const Introduction = () => {
   return (
     <Grid container sx={{px: 5, minHeight: "75vh", justifyContent: "center", alignItems: "center"}}>
-      {/* <Grid item xs={1} sx={{height: "100%"}}>
-        <Divider orientation="vertical" flexItem><SocialLinks iconSize="small" gap={0} buttonSize="medium" flexDirection="column" placement="left"/></Divider>
-      </Grid> */}
-      
       <Grid item xs={12} md={2} pt={4}>
         <Box 
           sx={{
@@ -23,7 +19,6 @@ const Introduction = () => {
             justifyContent: "center", 
             mixBlendMode: "difference", 
             mt: 2,
-            // transform: "translateY(50%)"
           }}>
           <Typography >image-here</Typography>
         </Box>

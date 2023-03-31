@@ -9,12 +9,10 @@ import Footer from '../../components/Footer'
 const Home = () => {
   return (
     <Box sx={{pt: 8, height: "100vh", overflowX: "hidden"}}>
-      <Box>
         <Introduction/>
         <Skills/>
         <Contact/>
         <Footer/>
-      </Box>
     </Box>
   )
 }
