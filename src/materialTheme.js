@@ -120,6 +120,8 @@ export const theme = createTheme({
     },
     h6: {
       fontFamily: 'Manrope',
+      letterSpacing: 2,
+      fontWeight: 600,
       textTransform: 'uppercase',
     },
     subtitle1: {
