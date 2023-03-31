@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import SkillIconImageItem from '../../../components/SkillIconImageItem'
 
-import { Box, Typography, Grid, Paper, ButtonBase, IconButton, Button, Tooltip } from '@mui/material'
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { Box, Typography, Grid, Paper, ButtonBase } from '@mui/material'
 import RightChevron from "../../../assets/chevron-right.svg"
 
 import javascript from "../../../assets/icons/javascript.svg"
@@ -23,6 +22,7 @@ import c from "../../../assets/icons/c.svg"
 import java from "../../../assets/icons/java.svg"
 import oracle from "../../../assets/icons/oracle.svg"
 import python from "../../../assets/icons/python.svg"
+import sequelize from "../../../assets/icons/sequelize.svg"
 
 const skillsIcons = {
   frontend: [
@@ -36,6 +36,7 @@ const skillsIcons = {
     {src: nodejs, name: "NodeJs"},
     {src: express, name: "ExpressJs"},
     {src: socketio, name: "Socket.io"},
+    {src: sequelize, name: "Sequelize"},
     {src: mysql, name: "MySQL"},
     {src: mongodb, name: "MongoDB"},
     {src: firebase, name: "Firebase"},
@@ -86,30 +87,36 @@ const SkillsShowcase = () => {
 
 
   return (
-    <Grid container px={5}>
-      {skills.array.map(item => 
-        <Grid item xs={2.25} key={item.name} align="center">
-          <Paper sx={boxStyles} elevation={2}>
-            <Box>
-              <SkillIconImageItem src={item.src} height="50px" width="50px" duration={800} objectFit='scale-down'/>
-              <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
-            </Box>
-          </Paper>
+    <Grid container px={5} sx={{position: "relative"}}>
+      {skills.id !== "main" && <Grid item xs={1} sx={{my: 1.5}} gridRow="span 2">
+        <ButtonBase sx={{height: "100%", transform: "rotate(180deg)"}} draggable={false} onClick={handleClick}>
+          <Box sx={{opacity: .85}}>
+            <SkillIconImageItem src={RightChevron} height="40px" width="40px" duration={800} objectFit='scale-down'/>
+          </Box>
+        </ButtonBase>
+      </Grid>}
+      <Grid item xs={11}>
+        <Grid container>
+          {skills.array.map(item => 
+            <Grid item xs={2.25} key={item.name} align="center">
+              <Paper sx={boxStyles} elevation={2}>
+                <Box>
+                  <SkillIconImageItem src={item.src} height="50px" width="50px" duration={800} objectFit='scale-down'/>
+                  <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
+                </Box>
+              </Paper>
 
+            </Grid>
+          )}
         </Grid>
-      )}
-      <Grid item xs={2.25} align="center">
-        <Tooltip title={skills.id === "main" ? "My Other Skills": "My Main Skills"} arrow enterDelay={200}>
-          <Button 
-            onClick={handleClick}
-            sx={{ ...boxStyles, border: "1px solid rgba(100, 100, 100, .25)", borderRadius: 1, px: "auto"}}
-            >
-            <Box sx={{transform: skills.id === "main" ? "none": "rotate(180deg)"}}>
-              <SkillIconImageItem src={RightChevron} height="50px" width="50px" duration={800} objectFit='scale-down'/>
-            </Box>
-          </Button>
-        </Tooltip>
       </Grid>
+      {skills.id === "main" && <Grid item xs={1} sx={{my: 1.5}} gridRow="span 2">
+        <ButtonBase sx={{height: "100%"}} draggable={false} onClick={handleClick}>
+          <Box sx={{opacity: .85}}>
+            <SkillIconImageItem src={RightChevron} height="40px" width="40px" duration={800} objectFit='scale-down'/>
+          </Box>
+        </ButtonBase>
+      </Grid>}
     </Grid>
   )
 }

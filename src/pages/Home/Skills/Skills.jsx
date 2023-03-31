@@ -14,11 +14,10 @@ const Skills = () => {
         <Typography variant="h4" align="center">Skills</Typography>
         <Box sx={{background: "rgba(239,235,229,1)", height: "3px", width: "20px", mx: "auto", mt: 3.5}} ></Box>
         </Grid>
-      <Grid item xs={12} md={4.25} mt={8} mb={5}>
+      <Grid item xs={12} md={3.75} mt={8} mb={5}>
         <SkillsDescription/>
       </Grid>
-      {/* <Grid item xs={.5}></Grid> */}
-      <Grid item xs={12} md={4.25} mt={8} mb={5}>
+      <Grid item xs={12} md={4.75} mt={8} mb={5}>
         <SkillsShowcase/>
       </Grid>
 
