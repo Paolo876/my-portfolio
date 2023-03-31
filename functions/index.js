@@ -1,12 +1,15 @@
 const functions = require("firebase-functions");
-const request = require("request-promise");
+// const request = require("request-promise");
 const cors = require("cors")({origin: true});
 
 
-// // Create and deploy your first functions
-// // https://firebase.google.com/docs/functions/get-started
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+exports.getImagekitKeys = functions.https.onRequest((req, res) => {
+  cors(req, res, () => {
+    res.send({
+      data: {
+        urlEndpoint: process.env.IMAGEKIT_URL_ENDPOINT,
+        publicKey: process.env.IMAGEKIT_PUBLIC_KEY,
+      },
+    });
+  });
+});
