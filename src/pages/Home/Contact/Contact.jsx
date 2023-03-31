@@ -7,7 +7,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 
 const Contact = () => {
   return (
-    <Grid container sx={{px: 5, pt: 6, mb: 4, justifyContent: "center", alignItems: "flex-start" }} spacing={1}>
+    <Grid container sx={{px: 5, pt: 6, mb: 4, justifyContent: "center", alignItems: "flex-start", maxWidth: "1900px", mx: "auto"}} spacing={1}>
       <Grid item xs={12}>
         <Grid container  sx={{px: 5, mt:8, justifyContent: "center", alignItems: "flex-start" }} spacing={1}>
           <Grid item xs={12} md={4.75}>

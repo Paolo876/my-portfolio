@@ -6,7 +6,7 @@ import SocialLinks from '../../../components/SocialLinks'
 
 const Introduction = () => {
   return (
-    <Grid container sx={{px: 5, minHeight: "75vh", justifyContent: "center", alignItems: "center"}}>
+    <Grid container sx={{px: 5, minHeight: "75vh", justifyContent: "center", alignItems: "center", maxWidth: "1900px", mx: "auto"}}>
       <Grid item xs={12} md={2} pt={4}>
         <Box 
           sx={{
