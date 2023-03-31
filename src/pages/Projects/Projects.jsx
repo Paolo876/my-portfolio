@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Divider, Grid, Typography } from '@mui/material'
+import { Divider, Grid, Typography, Box } from '@mui/material'
 import PageContainer from "../../components/PageContainer"
 import ProjectNavigation from './ProjectNavigation'
 
@@ -17,16 +17,17 @@ const MOCK_PROJ_LIST = [
   }
 ]
 const Projects = () => {
-  const [ projectsList, setProjectsList ] = useState(MOCK_PROJ_LIST)
+  const [ projects, setProjects ] = useState(MOCK_PROJ_LIST)
 
 
   return (
     <PageContainer>
-      <Grid container>
-        <Grid item xs={2}>
+      <Grid container mt={2}>
+        <Grid item xs={2} sx={{position: "relative"}}>
           <Typography variant="h6">My Projects</Typography>
-          <Divider/>
-          <ProjectNavigation projects={projectsList}/>
+          <Box sx={{background: "white", height: "4px", width: "20px", my: 1}} ></Box>
+
+          <ProjectNavigation projects={projects}/>
         </Grid>
         <Grid item xs={10}>
           {/* list here */}
