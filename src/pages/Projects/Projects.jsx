@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { Grid, Typography, Box, Container } from '@mui/material'
+import { Grid, Typography, Box, Divider } from '@mui/material'
 import ProjectNavigation from './ProjectNavigation'
 import ProjectsList from './ProjectsList'
-import PageContainer from "../../components/PageContainer"
-
+import Footer from '../../components/Footer'
+import SocialLinks from '../../components/SocialLinks'
 
 const MOCK_PROJ_LIST = [
   {
@@ -105,16 +105,43 @@ const Projects = () => {
     <Box sx={{pt: 8, height: "100vh", overflowX: "hidden"}}>
       <Box>
         <Grid container mt={5} sx={{justifyContent: "center", maxWidth: "1920px", mx: "auto"}}>
-          <Grid item xs={2} sx={{position: "relative"}}>
+          <Grid item xs={1.75} sx={{position: "relative"}}>
             <Box sx={{position: "fixed", height: "100%", width: "fit-content"}}>
-              <Typography variant="h6">My Projects</Typography>
+              {/* <Typography variant="h6">My Projects</Typography> */}
               <Box sx={{background: "white", height: "4px", width: "20px", my: 2}}></Box>
               <ProjectNavigation projects={projects}/>
             </Box>
           </Grid>
-          <Grid item xs={7}>
-            <ProjectsList/>
+          <Grid item xs={7.5}>
+            <Box                
+              sx={{
+                opacity: .9, 
+                mixBlendMode: "difference", 
+              }}
+              >
+              <Typography 
+                variant="h1" 
+                sx={{
+                  textTransform: "none",
+                  fontWeight: 800,
+                  fontSize:{ md: "8rem", lg: "9rem", xl:"11rem" },
+                  lineHeight: .95,
+                }}
+                >My<br/> Projects</Typography>
+              {/* <Box sx={{background: "white", height: "25px", width: "25px", mx: 1.25, my: 2.5, opacity: .95}}></Box> */}
+            </Box>
+            <Box sx={{px:2, my: 8, mixBlendMode: "difference"}}>
+            <Box sx={{background: "white", height: "4px", width: "20px", my: 2}}></Box>
+              <Typography variant="body1" mb={3} fontWeight={200} fontSize={18} letterSpacing={.25} lineHeight={1.75}>
+                Listed are my published projects that I still continue to develop and improve over time. 
+                Please feel free to check out the demo or git repository of my projects and let me know if you have any remarks or suggestions.
+              </Typography>
+              <Divider flexItem><SocialLinks iconSize="small" gap={.5} buttonSize="small" flexDirection="row"/></Divider>
+            </Box>
+            
+            <ProjectsList projects={projects}/>
           </Grid>
+          <Grid item xs={12} my={.25}><Footer/></Grid>
         </Grid>
       </Box>
     </Box>
