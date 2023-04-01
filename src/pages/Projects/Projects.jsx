@@ -98,14 +98,13 @@ const Projects = () => {
 
   return (
     <Box sx={{pt: 8, height: "100vh", overflowX: "hidden"}}>
-        <Grid container mt={2} sx={{justifyContent: "center", alignItems: "center"}}>
+        <Grid container mt={2} sx={{justifyContent: "center", maxWidth: "1900px", mx: "auto", height: "100%"}}>
           <Grid item xs={2} sx={{position: "relative"}}>
             <Typography variant="h6">My Projects</Typography>
             <Box sx={{background: "white", height: "4px", width: "20px", my: 2}} ></Box>
-
             <ProjectNavigation projects={projects}/>
           </Grid>
-          <Grid item xs={7}>
+          <Grid item xs={7} sx={{overflowY: "auto", maxHeight: "auto"}}>
             <ProjectsList/>
           </Grid>
         </Grid>
