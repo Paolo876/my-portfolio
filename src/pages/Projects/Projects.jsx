@@ -93,9 +93,6 @@ const MOCK_PROJ_LIST = [
   },
 ]
 
-const gridContainerStyles = {
-
-};
 
 const Projects = () => {
   const [ projects, setProjects ] = useState(MOCK_PROJ_LIST)

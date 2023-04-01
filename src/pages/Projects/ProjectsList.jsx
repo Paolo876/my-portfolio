@@ -10,7 +10,6 @@ const ProjectsList = ({ projects }) => {
       {projects.map(item => <Box key={item.name} sx={{height: "50vh"}}>
         <Grid container>
           <Grid item xs={6} px={1}>
-
             <Typography 
               variant="h3" 
               sx={{
@@ -18,11 +17,20 @@ const ProjectsList = ({ projects }) => {
                 mixBlendMode: "difference",
                 textTransform: "none",
                 letterSpacing: .5,
-                lineHeight: .9
+                lineHeight: 1
               }}
             >{item.title}</Typography>
             <Divider/>
-
+            <Typography 
+              variant="body1" 
+              sx={{
+                mt: 2,
+                px: .5,
+                fontWeight: 300,
+                lineHeight: 1.65,
+                mixBlendMode: "difference"
+              }}  
+            >{item.description}</Typography>
           </Grid>
           <Grid item xs={6} sx={{border: 1}}></Grid>
         </Grid>
