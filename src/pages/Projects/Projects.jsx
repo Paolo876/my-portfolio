@@ -92,22 +92,31 @@ const MOCK_PROJ_LIST = [
     githubUrl: "",
   },
 ]
+
+const gridContainerStyles = {
+
+};
+
 const Projects = () => {
   const [ projects, setProjects ] = useState(MOCK_PROJ_LIST)
 
 
   return (
     <Box sx={{pt: 8, height: "100vh", overflowX: "hidden"}}>
-        <Grid container mt={2} sx={{justifyContent: "center", maxWidth: "1900px", mx: "auto", height: "100%"}}>
+      <Box>
+        <Grid container mt={5} sx={{justifyContent: "center", maxWidth: "1920px", mx: "auto"}}>
           <Grid item xs={2} sx={{position: "relative"}}>
-            <Typography variant="h6">My Projects</Typography>
-            <Box sx={{background: "white", height: "4px", width: "20px", my: 2}} ></Box>
-            <ProjectNavigation projects={projects}/>
+            <Box sx={{position: "fixed", height: "100%", width: "fit-content"}}>
+              <Typography variant="h6">My Projects</Typography>
+              <Box sx={{background: "white", height: "4px", width: "20px", my: 2}}></Box>
+              <ProjectNavigation projects={projects}/>
+            </Box>
           </Grid>
-          <Grid item xs={7} sx={{overflowY: "auto", maxHeight: "auto"}}>
+          <Grid item xs={7}>
             <ProjectsList/>
           </Grid>
         </Grid>
+      </Box>
     </Box>
   )
 }

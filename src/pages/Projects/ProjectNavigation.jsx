@@ -9,9 +9,9 @@ const ProjectNavigation = ({ projects }) => {
         <ListItemText 
           primaryTypographyProps={{
             variant: "body1", 
-            fontSize: 16, 
+            fontSize: 14, 
             fontWeight: 300, 
-            letterSpacing: .5,
+            letterSpacing: .25,
             color: "secondary",
           }}
           sx={{
