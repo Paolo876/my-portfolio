@@ -5,13 +5,13 @@ import { Typography, List, ListItem, ListItemText, ListItemButton  } from '@mui/
 const ProjectNavigation = ({ projects }) => {
   return (
     <List sx={{mt:3}} dense>
-      {projects.map(item => <ListItemButton key={item.name} sx={{mb:.5}}>
+      {projects.map(item => <ListItemButton key={item.name} sx={{mb:.5, px: .5}}>
         <ListItemText 
           primaryTypographyProps={{
             variant: "body1", 
-            fontSize: 14, 
+            fontSize: 13.5, 
             fontWeight: 300, 
-            letterSpacing: .25,
+            letterSpacing: .15,
             color: "secondary",
           }}
           sx={{

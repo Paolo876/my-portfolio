@@ -23,7 +23,7 @@ const ProjectsList = ({ projects, skillsList }) => {
     <Stack>
       {projects.map(item => <Box key={item.name} sx={{minHeight: "50vh", mb: 5}}>
         <Grid container>
-          <Grid item xs={6} p={1}>
+          <Grid item xs={7} p={1}>
             <Typography 
               variant="h3" 
               sx={{
@@ -68,7 +68,7 @@ const ProjectsList = ({ projects, skillsList }) => {
                     mixBlendMode: "difference",
                     textTransform: "none",
                     letterSpacing: .5,
-                  }}>Technologies used: </Typography>
+                  }}>Main Technologies: </Typography>
                   <Box sx={{display: "flex", flexDirection: "row", gap: 1.5, px: 1, mt: 1.5}}>
                     {item.technologies.map(item => {
                       const tech = skillsList.find(_item => _item.name === item)
@@ -84,7 +84,7 @@ const ProjectsList = ({ projects, skillsList }) => {
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={6} sx={{border: 1}}></Grid>
+          <Grid item xs={5} sx={{border: 1}}></Grid>
         </Grid>
       </Box>)}
 
