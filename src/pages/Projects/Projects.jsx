@@ -1,4 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useAppContext } from '../../hooks/useAppContext'
+import useFirestoreActions from '../../hooks/useFirestoreActions'
+
 import { Grid, Typography, Box, Divider } from '@mui/material'
 import ProjectNavigation from './ProjectNavigation'
 import ProjectsList from './ProjectsList'
@@ -10,94 +13,100 @@ const MOCK_PROJ_LIST = [
     name: "moby", 
     title: "Moby",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
-    technologies: [ "javascript", "react", "redux", "socketio", "nodejs", "expressjs", "mysql", ""],
+    technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "personal",
-    images: [],
+    images: ["", ""],
     coverImage: "",
     features: [],
-    url: "",
-    githubUrl: "",
+    url: "http://www.google.com",
+    githubUrl: "http://www.google.com",
   },
   {
     name: "mernshop", 
     title: "MernShop",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
-    technologies: [ "javascript", "react", "redux", "socketio", "nodejs", "expressjs", "mysql", ""],
+    technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "personal",
     images: [],
     coverImage: "",
     features: [],
-    url: "",
-    githubUrl: "",
+    url: "http://www.google.com",
+    githubUrl: "http://www.google.com",
   },
   {
     name: "downtownsuitsdirect", 
     title: "Downtown Suits Direct",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
-    technologies: [ "javascript", "react", "redux", "socketio", "nodejs", "expressjs", "mysql", ""],
+    technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "commissioned",
     images: [],
     coverImage: "",
     features: [],
-    url: "",
-    githubUrl: "",
+    url: "http://www.google.com",
+    githubUrl: "http://www.google.com",
 
   },
   {
     name: "luna", 
     title: "Luna",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
-    technologies: [ "javascript", "react", "redux", "socketio", "nodejs", "expressjs", "mysql", ""],
+    technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "personal",
     images: [],
     coverImage: "",
     features: [],
-    url: "",
-    githubUrl: "",
+    url: "http://www.google.com",
+    githubUrl: "http://www.google.com",
   },
   {
     name: "carlportfolio", 
     title: "Carl Dimabuyu Portfolio",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
-    technologies: [ "javascript", "react", "redux", "socketio", "nodejs", "expressjs", "mysql", ""],
+    technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "commissioned",
     images: [],
     coverImage: "",
     features: [],
-    url: "",
-    githubUrl: "",
+    url: "http://www.google.com",
+    githubUrl: "http://www.google.com",
   },
   {
     name: "aynportfolio", 
     title: "Ayn Laquindanum Portfolio",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
-    technologies: [ "javascript", "react", "redux", "socketio", "nodejs", "expressjs", "mysql", ""],
+    technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "commissioned",
     images: [],
     coverImage: "",
     features: [],
-    url: "",
-    githubUrl: "",
+    url: "http://www.google.com",
+    githubUrl: "http://www.google.com",
   },
   {
     name: "cimt", 
     title: "CERT Incident Management Tool",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
-    technologies: [ "javascript", "react", "redux", "socketio", "nodejs", "expressjs", "mysql", ""],
+    technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "school",
     images: [],
     coverImage: "",
     features: [],
-    url: "",
-    githubUrl: "",
+    url: "http://www.google.com",
+    githubUrl: "http://www.google.com",
   },
 ]
 
 
 const Projects = () => {
   const [ projects, setProjects ] = useState(MOCK_PROJ_LIST)
+  const { skillsList, dispatch } = useAppContext();
+  const { getDocumentFromCollection } = useFirestoreActions();
 
-
+  useEffect(() => {
+    if(skillsList.length === 0){
+      getDocumentFromCollection('user', 'information').then(data => dispatch({ type: 'SET_SKILLS', payload: data.skills }))
+    }
+  }, [])
 
 
   if(projects) return (
@@ -135,7 +144,7 @@ const Projects = () => {
               </Typography>
               <Divider flexItem><SocialLinks iconSize="small" gap={.5} buttonSize="small" flexDirection="row"/></Divider>
             </Box>
-            <ProjectsList projects={projects}/>
+            {skillsList.length !==0 && <ProjectsList projects={projects} skillsList={skillsList}/>}
           </Grid>
           <Grid item xs={12} my={.25}><Footer/></Grid>
         </Grid>
