@@ -5,6 +5,8 @@ export const AppContext = createContext()
 
 export const appContextReducer = (state, action) => {
     switch (action.type) {
+        case 'SET_SKILLS':
+            return { ...state, skillsList: action.payload}
     //   case 'LOGIN':
     //     return { ...state, user: action.payload }
     //   case 'LOGOUT':
@@ -20,9 +22,7 @@ export const appContextReducer = (state, action) => {
 
 export const AppContextProvider = ({ children }) => {
     const [ state, dispatch ] = useReducer(appContextReducer, { 
-      user: null,
-      authIsReady: false,
-      isLoginAllowed: false,
+        skillsList: [],
     })
   
 
