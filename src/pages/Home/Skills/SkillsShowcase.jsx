@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useAppContext } from '../../../hooks/useAppContext'
 import SkillIconImageItem from '../../../components/SkillIconImageItem'
 
-import { Box, Typography, Grid, Paper, ButtonBase } from '@mui/material'
+import { Box, Typography, Grid, Paper, ButtonBase, Button } from '@mui/material'
 import RightChevron from "../../../assets/chevron-right.svg"
 
 const boxStyles = {
@@ -38,15 +38,15 @@ const SkillsShowcase = () => {
   }
 
   if(skills) return (
-    <Grid container px={5} sx={{position: "relative"}}>
-      {skills.id !== "main" && <Grid item xs={1} sx={{my: 1.5}} gridRow="span 2">
+    <Grid container px={5} sx={{position: "relative"}} align="center">
+      {skills.id !== "main" && <Grid item xs={1} sx={{my: 1.5}}>
         <ButtonBase sx={{height: "100%", transform: "rotate(180deg)"}} draggable={false} onClick={handleClick}>
-          <Box sx={{opacity: .85}}>
+          <Box sx={{opacity: .75}}>
             <SkillIconImageItem src={RightChevron} height="40px" width="40px" duration={800} objectFit='scale-down'/>
           </Box>
         </ButtonBase>
       </Grid>}
-      <Grid item xs={11}>
+      <Grid item xs={11} px={.25}>
         <Grid container>
           {skills.array.map(item => 
             <Grid item xs={2.25} key={item.name} align="center">
@@ -61,9 +61,9 @@ const SkillsShowcase = () => {
           )}
         </Grid>
       </Grid>
-      {skills.id === "main" && <Grid item xs={1} sx={{my: 1.5}} gridRow="span 2">
+      {skills.id === "main" && <Grid item xs={1} sx={{my: 1.5}} >
         <ButtonBase sx={{height: "100%"}} draggable={false} onClick={handleClick}>
-          <Box sx={{opacity: .85}}>
+          <Box sx={{opacity: .75}} >
             <SkillIconImageItem src={RightChevron} height="40px" width="40px" duration={800} objectFit='scale-down'/>
           </Box>
         </ButtonBase>
