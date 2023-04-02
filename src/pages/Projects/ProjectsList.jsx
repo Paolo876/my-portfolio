@@ -40,7 +40,7 @@ const ProjectsList = ({ projects, skillsList }) => {
                 variant="body1" 
                 sx={{
                   mt: 2,
-                  fontWeight: 300,
+                  fontWeight: 200,
                   lineHeight: 1.55,
                   mixBlendMode: "difference"
                 }}  
@@ -58,7 +58,7 @@ const ProjectsList = ({ projects, skillsList }) => {
                   <Box sx={{display: "flex", flexDirection: "row", gap: 1.5, px: 1, mt: 1}}>
                     {item.technologies.map(item => {
                       const tech = skillsList.find(_item => _item.name === item)
-                      if(tech) return <Tooltip title={<Typography variant="body2" fontWeight={300} fontSize={13} lineHeight={1.25}>{tech.name}</Typography>}  arrow>
+                      if(tech) return <Tooltip title={<Typography variant="body2" fontWeight={300} fontSize={13} lineHeight={1.25}>{tech.name}</Typography>} arrow>
                         <Paper sx={boxStyles} variant="outlined">
                           <Box>
                             <SkillIconImageItem src={tech.url} height="25px" width="25px" duration={500} objectFit='scale-down'/>
@@ -68,7 +68,6 @@ const ProjectsList = ({ projects, skillsList }) => {
                     })}
                   </Box>
               </Box>
-
             </Box>
           </Grid>
           <Grid item xs={6} sx={{border: 1}}></Grid>
