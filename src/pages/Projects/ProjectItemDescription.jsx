@@ -42,7 +42,7 @@ const ProjectItemDescription = ({ title, description, technologies, features }) 
             mixBlendMode: "difference"
           }}  
         >{description}</Typography>
-        <Box sx={{mt: 2}}>
+        <Box sx={{mt: 3}}>
         <Typography              
             variant="h6" 
             sx={{
@@ -56,7 +56,7 @@ const ProjectItemDescription = ({ title, description, technologies, features }) 
               {features.map(_item => <ListItem key={_item} sx={{py: .5, px: .25, ml: 2.75, display: 'list-item', mixBlendMode:"difference", fontSize: 15, fontWeight: 200}}>{_item}</ListItem>)}
             </List>
         </Box>
-        <Box sx={{mt: 2}}>
+        <Box sx={{mt: 3}}>
           <Typography              
             variant="h6" 
             sx={{
