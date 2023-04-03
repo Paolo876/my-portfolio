@@ -16,7 +16,7 @@ const boxStyles = {
 }
 
 
-const ProjectItemDescription = ({ item }) => {
+const ProjectItemDescription = ({ title, description, technologies, features }) => {
   const { skillsList } = useAppContext();
 
   return (
@@ -30,7 +30,7 @@ const ProjectItemDescription = ({ item }) => {
           letterSpacing: .5,
           lineHeight: 1
         }}
-      >{item.title}</Typography>
+      >{title}</Typography>
       <Divider/>
       <Box sx={{px: .5}}>
         <Typography 
@@ -41,7 +41,7 @@ const ProjectItemDescription = ({ item }) => {
             lineHeight: 1.55,
             mixBlendMode: "difference"
           }}  
-        >{item.description}</Typography>
+        >{description}</Typography>
         <Box sx={{mt: 2}}>
         <Typography              
             variant="h6" 
@@ -53,7 +53,7 @@ const ProjectItemDescription = ({ item }) => {
               letterSpacing: .5,
             }}>Features: </Typography>
             <List component="ul" sx={{listStyle: "circle", py: 0.15, px: .25}}>
-              {item.features.map(_item => <ListItem key={_item} sx={{py: .5, px: .25, ml: 2.75, display: 'list-item', mixBlendMode:"difference", fontSize: 15, fontWeight: 200}}>{_item}</ListItem>)}
+              {features.map(_item => <ListItem key={_item} sx={{py: .5, px: .25, ml: 2.75, display: 'list-item', mixBlendMode:"difference", fontSize: 15, fontWeight: 200}}>{_item}</ListItem>)}
             </List>
         </Box>
         <Box sx={{mt: 2}}>
@@ -67,7 +67,7 @@ const ProjectItemDescription = ({ item }) => {
               letterSpacing: .5,
             }}>Main Technologies: </Typography>
             <Box sx={{display: "flex", flexDirection: "row", gap: 1.5, px: 1, mt: 1.5}}>
-              {item.technologies.map(item => {
+              {technologies.map(item => {
                 const tech = skillsList.find(_item => _item.name === item)
                 if(tech) return <Tooltip title={<Typography variant="body2" fontWeight={300} fontSize={13} lineHeight={1.25}>{tech.name}</Typography>} arrow  key={tech.name}>
                   <Paper sx={boxStyles} variant="outlined">
