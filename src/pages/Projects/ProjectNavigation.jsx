@@ -4,7 +4,7 @@ import { Typography, List, ListItem, ListItemText, ListItemButton  } from '@mui/
 
 const ProjectNavigation = ({ projects }) => {
   return (
-    <List sx={{mt:3}} dense>
+    <List dense>
       {projects.map(item => <ListItemButton key={item.name} sx={{mb:.5, px: .5}}>
         <ListItemText 
           primaryTypographyProps={{

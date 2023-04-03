@@ -126,7 +126,7 @@ const Projects = () => {
         <Grid container mt={5} sx={{justifyContent: "center", maxWidth: "1920px", mx: "auto"}}>
           <Grid item xs={1.5} sx={{position: "relative"}}>
             <Box sx={{position: "fixed", height: "100%", width: "fit-content"}}>
-              <Box sx={{background: "white", height: "4px", width: "20px", my: 2}}></Box>
+              <Box sx={{background: "white", height: "4px", width: "10px", my: 2}}></Box>
               <ProjectNavigation projects={projects}/>
             </Box>
           </Grid>
@@ -155,7 +155,7 @@ const Projects = () => {
               </Typography>
               <Divider flexItem><SocialLinks iconSize="small" gap={.5} buttonSize="small" flexDirection="row"/></Divider>
             </Box>
-            {skillsList.length !==0 && <ProjectsList projects={projects} skillsList={skillsList}/>}
+            {skillsList.length !==0 && <ProjectsList projects={projects}/>}
           </Grid>
           <Grid item xs={12} my={.25}><Footer/></Grid>
         </Grid>
