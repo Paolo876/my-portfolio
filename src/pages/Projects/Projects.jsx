@@ -13,10 +13,10 @@ const MOCK_PROJ_LIST = [
     name: "moby", 
     title: "Moby",
     description: "Moby is a social media web app that incorporates the essential features of a modern social media application. Simply by creating your account and setting up your profile, you can start publishing posts, add friends, and connect with other people through moby.",
-    technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL", "Material-UI", "Sass/Scss"],
+    technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "Sequelize", "MySQL", "Material-UI", "Sass/Scss"],
     type: "personal",
     features: [
-      "A FullStack Project implementing CRUD operations", 
+      "A FullStack Application implementing CRUD operations", 
       "Realtime Database Management System(chat system, friend updates, notification system)", 
       "Sensitive Data Encryption through bcryptJS",
       "Image optimization using imagekit.io api",
