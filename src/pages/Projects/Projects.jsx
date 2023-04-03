@@ -12,7 +12,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "moby", 
     title: "Moby",
-    description: "Moby is a social media web app that incorporates the essential features of a modern social media application. Simply creating your account and setting up your profile, you can start publishing posts, add friends, and connect with other people through moby.",
+    description: "Moby is a social media web app that incorporates the essential features of a modern social media application. Simply by creating your account and setting up your profile, you can start publishing posts, add friends, and connect with other people through moby.",
     technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL", "Material-UI", "Sass/Scss"],
     type: "personal",
     features: [
@@ -157,6 +157,7 @@ const Projects = () => {
             </Box>
             {skillsList.length !==0 && <ProjectsList projects={projects}/>}
           </Grid>
+          
           <Grid item xs={12} my={.25}><Footer/></Grid>
         </Grid>
       </Box>

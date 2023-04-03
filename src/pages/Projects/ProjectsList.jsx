@@ -9,9 +9,10 @@ import ProjectItemPreview from './ProjectItemPreview'
 const ProjectsList = ({ projects }) => {
   return (
     <Stack>
-      {projects.map(item => <Box key={item.name} sx={{minHeight: "50vh", mb: 5}}>
+      {projects.map(item => <Box key={item.name} sx={{minHeight: "60vh", mb: 5, position: "relative", py: 2, px: 2, my: 2}} id={item.name}>
+        {/* <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200, .25)", mixBlendMode: "overlay"}}></Box> */}
         <Grid container>
-          <Grid item xs={7} p={1}>
+          <Grid item xs={6} py={1} pr={2}>
             <ProjectItemDescription 
               title={item.title}
               description={item.description}
@@ -19,7 +20,7 @@ const ProjectsList = ({ projects }) => {
               features={item.features}
             />
           </Grid>
-          <Grid item xs={5}>
+          <Grid item xs={6}>
             <ProjectItemPreview 
               coverImage={item.coverImage}
               images={item.images}
