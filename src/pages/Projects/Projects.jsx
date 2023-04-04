@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useAppContext } from '../../hooks/useAppContext'
 import useFirestoreActions from '../../hooks/useFirestoreActions'
+import DocumentHead from '../../components/DocumentHead'
 
 import { Grid, Typography, Box, Divider } from '@mui/material'
 import ProjectNavigation from './ProjectNavigation'
@@ -120,9 +121,14 @@ const Projects = () => {
   }, [])
 
 
-  if(projects) return (
+  return (
     <Box sx={{pt: 8, height: "100vh", overflowX: "hidden"}}>
-      <Box>
+      <DocumentHead
+        title="Paolo Bugarin | Projects"
+        description="I am a full stack web developer based in Los Angeles, California"
+        keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
+      />
+      {projects && <Box>
         <Grid container mt={5} sx={{justifyContent: "center", maxWidth: "1920px", mx: "auto"}}>
           <Grid item xs={1.5} sx={{position: "relative"}}>
             <Box sx={{position: "fixed", height: "100%", width: "fit-content"}}>
@@ -160,7 +166,7 @@ const Projects = () => {
           
           <Grid item xs={12} my={.25}><Footer/></Grid>
         </Grid>
-      </Box>
+      </Box>}
     </Box>
   )
 }
