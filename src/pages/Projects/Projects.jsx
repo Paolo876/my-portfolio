@@ -9,6 +9,11 @@ import ProjectsList from './ProjectsList'
 import Footer from '../../components/Footer'
 import SocialLinks from '../../components/SocialLinks'
 
+
+const MOCK_PROJ_IMG = {
+  url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Ftest_proj_img.png?alt=media&token=c9d6154f-2bcf-4afb-9a2a-c490320b04c9",
+  name: "test_title"
+}
 const MOCK_PROJ_LIST = [
   {
     name: "moby", 
@@ -25,8 +30,8 @@ const MOCK_PROJ_LIST = [
     ],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
-    images: ["", ""],
-    coverImage: "",
+    images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
+    coverImage: MOCK_PROJ_IMG,
   },
   {
     name: "mernshop", 
@@ -34,8 +39,8 @@ const MOCK_PROJ_LIST = [
     description: "MernShop is an e-commerce web application demo inspired by TraversyMedia's ReactJS Udemy Course. It showcases the system and functionalities of an e-commerce application with extra security and validation features.",
     technologies: [ "Javascript", "React", "Redux", "NodeJs", "ExpressJs", "MongoDB", "Bootstrap"],
     type: "personal",
-    images: [],
-    coverImage: "",
+    images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
+    coverImage: MOCK_PROJ_IMG,
     features: [
       "Created using the MERN stack with redux state management.",
       "Implements account authentication/validation using Google API (Oauth2.0)",
@@ -51,8 +56,8 @@ const MOCK_PROJ_LIST = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
     technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "commissioned",
-    images: [],
-    coverImage: "",
+    images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
+    coverImage: MOCK_PROJ_IMG,
     features: [],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
@@ -64,8 +69,8 @@ const MOCK_PROJ_LIST = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
     technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "personal",
-    images: [],
-    coverImage: "",
+    images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
+    coverImage: MOCK_PROJ_IMG,
     features: [],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
@@ -76,8 +81,8 @@ const MOCK_PROJ_LIST = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
     technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "commissioned",
-    images: [],
-    coverImage: "",
+    images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
+    coverImage: MOCK_PROJ_IMG,
     features: [],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
@@ -88,8 +93,8 @@ const MOCK_PROJ_LIST = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
     technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "commissioned",
-    images: [],
-    coverImage: "",
+    images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
+    coverImage: MOCK_PROJ_IMG,
     features: [],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
@@ -100,8 +105,8 @@ const MOCK_PROJ_LIST = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
     technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "school",
-    images: [],
-    coverImage: "",
+    images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
+    coverImage: MOCK_PROJ_IMG,
     features: [],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
