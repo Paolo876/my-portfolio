@@ -5,6 +5,8 @@ import { Grid, Typography, Link, Stack, IconButton, Box } from '@mui/material'
 import { Link as ReactLink } from 'react-router-dom';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import SocialLinks from '../components/SocialLinks';
+import DocumentHead from '../components/DocumentHead';
+
 
 const linkStyles = {
   fontSize: "1.8rem",
@@ -29,6 +31,11 @@ const Landing = () => {
 
   return (
     <PageContainer>
+          <DocumentHead
+        title="Paolo Bugarin | Developer"
+        description="I am a full stack web developer based in Los Angeles, California"
+        keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
+      />
         <Grid container sx={{height: "100%", px: 5}}>
           <Grid item mt={11} xs={12} sm={6}>
             <Typography variant="h1" sx={nameStyles}>Paolo</Typography>

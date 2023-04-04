@@ -30,7 +30,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "mernshop", 
     title: "MernShop",
-    description: "MernShop is an e-commerce concept web application inspired by TraversyMedia's ReactJS Udemy Course. It showcases the system and functionalities of an e-commerce application with extra security and validation features.",
+    description: "MernShop is an e-commerce web application demo inspired by TraversyMedia's ReactJS Udemy Course. It showcases the system and functionalities of an e-commerce application with extra security and validation features.",
     technologies: [ "Javascript", "React", "Redux", "NodeJs", "ExpressJs", "MongoDB", "Bootstrap"],
     type: "personal",
     images: [],
