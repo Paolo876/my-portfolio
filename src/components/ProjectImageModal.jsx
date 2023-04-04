@@ -7,16 +7,16 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    maxHeight: "80vh",
-    maxWidth: "80vw",
+    maxHeight: "70vh",
+    maxWidth: "70vw",
     bgcolor: 'background.paper',
     border: '0px',
     boxShadow: 24,
-    p: 1,
+    p: .25,
   };
 
 
-const ImageModal = ({ open, handleClose, data }) => {
+const ProjectImageModal = ({ open, handleClose, data }) => {
   return (
     <Modal open={open} onClose={handleClose}>
       <Box sx={style}>
@@ -26,4 +26,4 @@ const ImageModal = ({ open, handleClose, data }) => {
   )
 }
 
-export default ImageModal
+export default ProjectImageModal
