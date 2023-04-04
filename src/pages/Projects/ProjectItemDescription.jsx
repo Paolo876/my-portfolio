@@ -69,7 +69,7 @@ const ProjectItemDescription = ({ title, description, technologies, features }) 
             <Box sx={{display: "flex", flexDirection: "row", gap: 1.5, px: 1, mt: 1.5}}>
               {technologies.map(item => {
                 const tech = skillsList.find(_item => _item.name === item)
-                if(tech) return <Tooltip title={<Typography variant="body2" fontWeight={300} fontSize={13} lineHeight={1.25}>{tech.name}</Typography>} arrow  key={tech.name}>
+                if(tech) return <Tooltip title={<Typography variant="body2" fontWeight={300} fontSize={13} lineHeight={1.25}>{tech.name}</Typography>} arrow key={tech.name}>
                   <Paper sx={boxStyles} variant="outlined">
                     <Box>
                       <SkillIconImageItem src={tech.url} height="25px" width="25px" duration={500} objectFit='scale-down'/>

@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import Image from 'mui-image'
-import Carousel from 'react-material-ui-carousel'
-import ProjectImageModal from '../../components/ProjectImageModal'
+import { useState } from 'react';
+import Image from 'mui-image';
+import Carousel from 'react-material-ui-carousel';
+import ProjectImageModal from '../../components/ProjectImageModal';
 
-import { ButtonBase, Stack, Button, Typography, Box } from '@mui/material'
+import { Stack, Button, Box } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PublicIcon from '@mui/icons-material/Public';
 
@@ -28,9 +28,26 @@ const ProjectItemPreview = ({ coverImage, images, url, githubUrl }) => {
         </Box>)}
       </Carousel>
       <Box mt={5} mb={1}>
-        <Button color="secondary" variant="contained" sx={{mx: 1, letterSpacing: .15}} size="large" startIcon={<PublicIcon/>}>Demo</Button>
-
-        <Button color="secondary" variant="outlined" sx={{mx: 1, letterSpacing: .15}} size="large" startIcon={<GitHubIcon/>}>Git Repo</Button>
+        <Button 
+          color="secondary" 
+          variant="contained" 
+          sx={{mx: 1, letterSpacing: .15}} 
+          size="large" 
+          startIcon={<PublicIcon/>}
+          target="_blank" 
+          href={url}
+        >Demo
+        </Button>
+        <Button 
+          color="secondary" 
+          variant="outlined" 
+          sx={{mx: 1, letterSpacing: .15}} 
+          size="large" 
+          startIcon={<GitHubIcon/>}
+          target="_blank" 
+          href={githubUrl}
+        >Git Repo
+        </Button>
       </Box>
       <ProjectImageModal open={showModal.isVisible} handleClose={() => setShowModal({ isVisible: false, data: null })} data={showModal.data}/>
     </Stack>
