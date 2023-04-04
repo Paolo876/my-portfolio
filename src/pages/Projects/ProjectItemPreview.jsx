@@ -9,7 +9,7 @@ import PublicIcon from '@mui/icons-material/Public';
 
 
 const ProjectItemPreview = ({ coverImage, images, url, githubUrl }) => {
-  const [ showModal, setShowModal ] = useState({ isVisible: false, data: null });
+  const [ showModal, setShowModal ] = useState({ isVisible: false, data: null, currentIndex: 0 });
 
   const imagesList = [coverImage, ...images ]
   return (
@@ -18,7 +18,7 @@ const ProjectItemPreview = ({ coverImage, images, url, githubUrl }) => {
         indicators={true}
         navButtonsAlwaysInvisible={true}
       >
-        {imagesList.map((item, index) => <Box key={index} sx={{height: "auto", cursor: "pointer", position: "relative"}} onClick={() => setShowModal({ isVisible: true, data: item })}>
+        {imagesList.map((item, index) => <Box key={index} sx={{height: "auto", cursor: "pointer", position: "relative"}} onClick={() => setShowModal({ isVisible: true, data: item, currentIndex: index })}>
           <Box sx={{position: "absolute", top: 0, left: 0, zIndex: 2}}>{index}</Box> 
           <Image 
               src={item.url} 
@@ -49,7 +49,12 @@ const ProjectItemPreview = ({ coverImage, images, url, githubUrl }) => {
         >Git Repo
         </Button>
       </Box>
-      <ProjectImageModal open={showModal.isVisible} handleClose={() => setShowModal({ isVisible: false, data: null })} data={showModal.data}/>
+      <ProjectImageModal 
+        open={showModal.isVisible} 
+        handleClose={() => setShowModal({ isVisible: false, data: null, currentIndex: 0 })} 
+        data={showModal.data} 
+        currentIndex={showModal.currentIndex}
+      />
     </Stack>
   )
 }
