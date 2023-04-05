@@ -115,7 +115,8 @@ const MOCK_PROJ_LIST = [
 
 
 const Projects = () => {
-  const [ projects, setProjects ] = useState(MOCK_PROJ_LIST)
+  const [ projects, setProjects ] = useState(MOCK_PROJ_LIST);
+  const [ currentActiveProject, setCurrentActiveProject ] = useState(null);
   const { skillsList, dispatch } = useAppContext();
   const { getDocumentFromCollection } = useFirestoreActions();
 
@@ -125,6 +126,10 @@ const Projects = () => {
     }
   }, [])
 
+  useEffect(() => {
+    console.log(currentActiveProject)
+    console.log("ASD")
+  }, [ currentActiveProject ])
 
   return (
     <Box sx={{pt: 8, height: "100vh", overflowX: "hidden"}}>
@@ -138,7 +143,10 @@ const Projects = () => {
           <Grid item xs={1.5} sx={{position: "relative"}}>
             <Box sx={{position: "fixed", height: "100%", width: "fit-content"}}>
               <Box sx={{background: "white", height: "4px", width: "10px", my: 2}}></Box>
-              <ProjectNavigation projects={projects}/>
+              <ProjectNavigation 
+                projects={projects} 
+                currentActiveProject={currentActiveProject}
+              />
             </Box>
           </Grid>
           <Grid item xs={8}>
@@ -166,7 +174,7 @@ const Projects = () => {
               </Typography>
               <Divider flexItem><SocialLinks iconSize="small" gap={.5} buttonSize="small" flexDirection="row"/></Divider>
             </Box>
-            {skillsList.length !==0 && <ProjectsList projects={projects}/>}
+            {skillsList.length !==0 && <ProjectsList projects={projects} setCurrentActiveProject={setCurrentActiveProject}/>}
           </Grid>
           
           <Grid item xs={12} mb={.25} mt={"30vh"}><Footer/></Grid>

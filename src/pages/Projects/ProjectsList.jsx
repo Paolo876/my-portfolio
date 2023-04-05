@@ -5,10 +5,10 @@ import ProjectItem from './ProjectItem/ProjectItem'
 
 
 
-const ProjectsList = ({ projects }) => {
+const ProjectsList = ({ projects, setCurrentActiveProject }) => {
   return (
     <Stack>
-      {projects.map(item => <ProjectItem key={item.name} item={item}/>)}
+      {projects.map(item => <ProjectItem key={item.name} item={item} setCurrentActiveProject={setCurrentActiveProject}/>)}
     </Stack>
   )
 }

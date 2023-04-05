@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Typography, Box, Divider, Paper, Tooltip, List, ListItem } from '@mui/material'
 import SkillIconImageItem from '../../../components/SkillIconImageItem'
 import { useAppContext } from '../../../hooks/useAppContext'
@@ -18,20 +18,14 @@ const boxStyles = {
 }
 
 
-const ProjectItemDescription = ({ title, description, technologies, features, setIsVisible }) => {
+const ProjectItemDescription = ({ title, description, technologies, features, setCurrentActiveProject, name }) => {
   const { skillsList } = useAppContext();
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
+  const { ref } = useInView({
     threshold: 0,
     rootMargin: '-0% 0% -60% 0%',
-    onChange: (inView, entry) => {
-      setIsVisible(inView)
-    }
+    // triggerOnce: true,
+    // onChange: inView => inView ? setCurrentActiveProject(name) : setCurrentActiveProject(null)
   });
-
-  // useEffect(() => {
-  //   console.log("ASD")
-  // }, [inView])
 
 
   return (
