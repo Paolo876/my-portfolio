@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Typography, Box, Divider, Paper, Tooltip, List, ListItem } from '@mui/material'
 import SkillIconImageItem from '../../../components/SkillIconImageItem'
 import { useAppContext } from '../../../hooks/useAppContext'
+import { useInView } from 'react-intersection-observer';
+
 
 const boxStyles = {
   display: "flex", 
@@ -16,8 +18,21 @@ const boxStyles = {
 }
 
 
-const ProjectItemDescription = ({ title, description, technologies, features }) => {
+const ProjectItemDescription = ({ title, description, technologies, features, setIsVisible }) => {
   const { skillsList } = useAppContext();
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+    rootMargin: '-0% 0% -60% 0%',
+    onChange: (inView, entry) => {
+      setIsVisible(inView)
+    }
+  });
+
+  // useEffect(() => {
+  //   console.log("ASD")
+  // }, [inView])
+
 
   return (
     <>
@@ -30,6 +45,7 @@ const ProjectItemDescription = ({ title, description, technologies, features }) 
           letterSpacing: .5,
           lineHeight: 1
         }}
+        ref={ref}
       >{title}</Typography>
       <Divider/>
       <Box sx={{px: .5}}>

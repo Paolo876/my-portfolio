@@ -169,7 +169,7 @@ const Projects = () => {
             {skillsList.length !==0 && <ProjectsList projects={projects}/>}
           </Grid>
           
-          <Grid item xs={12} my={.25}><Footer/></Grid>
+          <Grid item xs={12} mb={.25} mt={"30vh"}><Footer/></Grid>
         </Grid>
       </Box>}
     </Box>
