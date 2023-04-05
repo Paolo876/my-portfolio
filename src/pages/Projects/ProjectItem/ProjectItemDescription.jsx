@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typography, Box, Divider, Paper, Tooltip, List, ListItem } from '@mui/material'
-import SkillIconImageItem from '../../components/SkillIconImageItem'
-import { useAppContext } from '../../hooks/useAppContext'
+import SkillIconImageItem from '../../../components/SkillIconImageItem'
+import { useAppContext } from '../../../hooks/useAppContext'
 
 const boxStyles = {
   display: "flex", 
