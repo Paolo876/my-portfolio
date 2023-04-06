@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Box, Grid } from '@mui/material'
 import ProjectItemDescription from './ProjectItemDescription'
 import ProjectItemPreview from './ProjectItemPreview'
@@ -10,13 +10,15 @@ const ProjectItem = ({ item }) => {
   const { ref, inView } = useInView({
     threshold: 0,
     rootMargin: '-30% 0% -60% 0%',
-    // triggerOnce: true,
-    // onChange: inView => inView ? setCurrentInView(name) : setCurrentInView(null)
+    onChange: inView => {
+      if(inView) setCurrentInView(item.name)
+    }
   });
-  if(inView) console.log(item.name)
+   
+  
   return (
     <Box sx={{minHeight: "60vh", position: "relative", py: 2, px: 2, my: 3}} id={item.name}>
-        {inView && <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200, .25)", mixBlendMode: "overlay"}}></Box>}
+        {/* {inView && <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200, .25)", mixBlendMode: "overlay"}}></Box>} */}
         <Grid container>
           <Grid item xs={6} py={1} pr={2} ref={ref}>
             <ProjectItemDescription 
