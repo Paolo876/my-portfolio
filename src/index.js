@@ -6,7 +6,9 @@ import { BrowserRouter } from 'react-router-dom';
 import { theme } from "./materialTheme";
 import { ThemeProvider } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
-import { AppContextProvider } from './context/AppContext';
+// import { AppContextProvider } from './context/AppContext';
+import store from "./redux/store";
+import { Provider } from 'react-redux';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,9 +17,12 @@ root.render(
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <AppContextProvider>
+        {/* <AppContextProvider> */}
+        <Provider store={store}>    
+
           <App />
-        </AppContextProvider>
+        </Provider>
+        {/* </AppContextProvider> */}
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>

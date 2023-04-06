@@ -9,13 +9,13 @@ import useFirestoreActions from '../../hooks/useFirestoreActions'
 import { Box } from '@mui/material'
 
 const Home = () => {
-  const { skillsList, dispatch } = useAppContext();
+  // const { skillsList, dispatch } = useAppContext();
   const { getDocumentFromCollection } = useFirestoreActions();
 
   
   useEffect(() => {
     if(skillsList.length === 0){
-      getDocumentFromCollection('user', 'information').then(data => dispatch({ type: 'SET_SKILLS', payload: data.skills }))
+      // getDocumentFromCollection('user', 'information').then(data => dispatch({ type: 'SET_SKILLS', payload: data.skills }))
     }
   }, [])
 
