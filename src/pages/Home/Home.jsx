@@ -4,18 +4,18 @@ import Contact from './Contact/Contact'
 import Skills from './Skills/Skills'
 import Footer from '../../components/Footer'
 import DocumentHead from '../../components/DocumentHead'
-import { useAppContext } from '../../hooks/useAppContext'
 import useFirestoreActions from '../../hooks/useFirestoreActions'
+import useRootRedux from '../../hooks/useRootRedux'
 import { Box } from '@mui/material'
 
 const Home = () => {
-  // const { skillsList, dispatch } = useAppContext();
+  const { skillsList, setSkills } = useRootRedux();
   const { getDocumentFromCollection } = useFirestoreActions();
 
   
   useEffect(() => {
     if(skillsList.length === 0){
-      // getDocumentFromCollection('user', 'information').then(data => dispatch({ type: 'SET_SKILLS', payload: data.skills }))
+      getDocumentFromCollection('user', 'information').then(data => setSkills(data.skills))
     }
   }, [])
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useAppContext } from '../../hooks/useAppContext'
+import useRootRedux from '../../hooks/useRootRedux'
 import useFirestoreActions from '../../hooks/useFirestoreActions'
 import DocumentHead from '../../components/DocumentHead'
 
@@ -117,12 +117,12 @@ const MOCK_PROJ_LIST = [
 const Projects = () => {
   const [ projects, setProjects ] = useState(MOCK_PROJ_LIST);
   const [ currentActiveProject, setCurrentActiveProject ] = useState(null);
-  const { skillsList, dispatch } = useAppContext();
+  const { skillsList, setSkills } = useRootRedux();
   const { getDocumentFromCollection } = useFirestoreActions();
 
   useEffect(() => {
     if(skillsList.length === 0){
-      getDocumentFromCollection('user', 'information').then(data => dispatch({ type: 'SET_SKILLS', payload: data.skills }))
+      getDocumentFromCollection('user', 'information').then(data => setSkills(data.skills))
     }
   }, [])
 

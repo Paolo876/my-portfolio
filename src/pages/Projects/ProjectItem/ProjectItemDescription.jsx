@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typography, Box, Divider, Paper, Tooltip, List, ListItem } from '@mui/material'
 import SkillIconImageItem from '../../../components/SkillIconImageItem'
-import { useAppContext } from '../../../hooks/useAppContext'
+import useRootRedux from '../../../hooks/useRootRedux';
 import { useInView } from 'react-intersection-observer';
 
 
@@ -19,7 +19,7 @@ const boxStyles = {
 
 
 const ProjectItemDescription = ({ title, description, technologies, features, setCurrentActiveProject, name }) => {
-  const { skillsList } = useAppContext();
+  const { skillsList } = useRootRedux();
   const { ref } = useInView({
     threshold: 0,
     rootMargin: '-0% 0% -60% 0%',

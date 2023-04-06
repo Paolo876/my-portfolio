@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { useAppContext } from '../../../hooks/useAppContext'
+// import { useAppContext } from '../../../hooks/useAppContext'
+import useRootRedux from '../../../hooks/useRootRedux'
 import SkillIconImageItem from '../../../components/SkillIconImageItem'
 
 import { Box, Typography, Grid, Paper, ButtonBase, Button } from '@mui/material'
@@ -22,7 +23,7 @@ const textStyles = {
 }
 
 const SkillsShowcase = () => {
-  const { skillsList } = useAppContext();
+  const { skillsList } = useRootRedux();
   const [ skills, setSkills ] = useState(null);
 
 
