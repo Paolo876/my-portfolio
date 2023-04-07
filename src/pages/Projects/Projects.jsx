@@ -18,14 +18,14 @@ const MOCK_PROJ_LIST = [
   {
     name: "moby", 
     title: "Moby",
-    description: "Moby is a social media web app that incorporates the essential features of a modern social media application. Simply by creating your account and setting up your profile, you can start publishing posts, add friends, and connect with other people through moby.",
-    technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "Sequelize", "MySQL", "Material-UI", "Sass/Scss"],
+    description: "Moby is a social media web app that incorporates the essential features of a modern social media application. Simply by creating an account and setting up your profile, you can start publishing posts, add friends, and connect with other people through moby.",
+    technologies: [ "JavaScript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "Sequelize", "MySQL", "Material-UI", "Sass/Scss"],
     type: "personal",
     features: [
       "A FullStack Application implementing CRUD operations", 
       "Realtime Database Management System(chat system, friend updates, notification system)", 
       "Sensitive Data Encryption through bcryptJS",
-      "Image optimization using imagekit.io api",
+      "Image optimization using Imagekit.io api",
       "Deployed on Vercel(Client) and Railway(Server)",
     ],
     url: "http://www.google.com",
@@ -37,7 +37,7 @@ const MOCK_PROJ_LIST = [
     name: "mernshop", 
     title: "MernShop",
     description: "MernShop is an e-commerce web application demo inspired by TraversyMedia's ReactJS Udemy Course. It showcases the system and functionalities of an e-commerce application with extra security and validation features.",
-    technologies: [ "Javascript", "React", "Redux", "NodeJs", "ExpressJs", "MongoDB", "Bootstrap"],
+    technologies: [ "JavaScript", "React", "Redux", "NodeJs", "ExpressJs", "MongoDB", "Bootstrap"],
     type: "personal",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
     coverImage: MOCK_PROJ_IMG,
@@ -53,12 +53,17 @@ const MOCK_PROJ_LIST = [
   {
     name: "downtownsuitsdirect", 
     title: "Downtown Suits Direct",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
-    technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
+    description: "Downtown Suits Direct is a men's suit and tailor shop located in Pico Rivera, California. It is a commissioned project that I designed and developed using React and Firebase.",
+    technologies: [ "JavaScript", "React","Firebase", "Sass/Scss"],
     type: "commissioned",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
     coverImage: MOCK_PROJ_IMG,
-    features: [],
+    features: [
+      "aos animations applied on components",
+      "Implemented Yelp api to display customer reviews and feedbacks",
+      "Image optimization using Imagekit.io api",
+
+    ],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
 
@@ -66,7 +71,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "luna", 
     title: "Luna",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
+    description: "Luna is a beautiful personalizable browser homepage inspired by the google chrome extension 'Momentum'. It features a UI that the user can freely customize through rearranging the components or elements positioning, font properties, and UI colors.",
     technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "personal",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
