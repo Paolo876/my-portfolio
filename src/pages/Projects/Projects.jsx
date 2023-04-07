@@ -138,7 +138,6 @@ const Projects = () => {
         <Grid container mt={5} sx={{justifyContent: "center", maxWidth: "1920px", mx: "auto"}}>
           <Grid item xs={1.5} sx={{position: "relative"}}>
             <Box sx={{position: "fixed", height: "100%", width: "fit-content"}}>
-              <Box sx={{background: "white", height: "4px", width: "10px", my: 2}}></Box>
               <ProjectNavigation 
                 projects={projects} 
                 currentActiveProject={currentActiveProject}

@@ -1,7 +1,7 @@
 import React from 'react'
 import useProjectsRedux from '../../hooks/useProjectsRedux';
 import { Box, List, ListItemText, ListItemButton  } from '@mui/material'
-
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 const ProjectNavigation = ({ projects }) => {
   const { currentInView } = useProjectsRedux();
@@ -12,6 +12,8 @@ const ProjectNavigation = ({ projects }) => {
 
   return (
     <List dense>
+      <Box sx={{background: "white", height: "4px", width: "10px", my: 2}}></Box>
+
       {projects.map(item => <ListItemButton key={item.name} sx={{mb:.5, px: .5, position: "relative"}} onClick={() => handleClick(`#${item.name}`)}>
         {currentInView === item.name && <Box sx={{border: 1, position: "absolute", top: "50%", left: -10, height: "5px", width: "5px", mixBlendMode: "difference", opacity: .5, transform: "translateY(-50%)"}}></Box>}
         <ListItemText 
