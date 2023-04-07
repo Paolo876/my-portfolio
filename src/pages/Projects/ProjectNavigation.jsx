@@ -1,6 +1,6 @@
 import React from 'react'
 import useProjectsRedux from '../../hooks/useProjectsRedux';
-import { Typography, List, ListItem, ListItemText, ListItemButton  } from '@mui/material'
+import { Box, List, ListItemText, ListItemButton  } from '@mui/material'
 
 
 const ProjectNavigation = ({ projects }) => {
@@ -12,7 +12,8 @@ const ProjectNavigation = ({ projects }) => {
 
   return (
     <List dense>
-      {projects.map(item => <ListItemButton key={item.name} sx={{mb:.5, px: .5, background: currentInView === item.name ? "rgba(100,100,100,.15)" : "initial"}} onClick={() => handleClick(`#${item.name}`)}>
+      {projects.map(item => <ListItemButton key={item.name} sx={{mb:.5, px: .5, position: "relative"}} onClick={() => handleClick(`#${item.name}`)}>
+        {currentInView === item.name && <Box sx={{border: 1, position: "absolute", top: "50%", left: -10, height: "5px", width: "5px", mixBlendMode: "difference", opacity: .5, transform: "translateY(-50%)"}}></Box>}
         <ListItemText 
           primaryTypographyProps={{
             variant: "body1", 
