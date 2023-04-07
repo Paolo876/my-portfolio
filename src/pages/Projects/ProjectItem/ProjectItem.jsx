@@ -9,7 +9,7 @@ const ProjectItem = ({ item }) => {
   const { setCurrentInView, currentInView } = useProjectsRedux();
   const { ref, inView } = useInView({
     threshold: 0,
-    rootMargin: '-30% 0% -60% 0%',
+    rootMargin: '-20% 0% -50% 0%',
     trackVisibility: true,
     delay: 800,
   });

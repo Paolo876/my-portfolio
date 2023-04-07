@@ -126,9 +126,6 @@ const Projects = () => {
     }
   }, [])
 
-  // useEffect(() => {
-  //   console.log(currentActiveProject)
-  // }, [ currentActiveProject ])
 
   return (
     <Box sx={{pt: 8, height: "100vh", overflowX: "hidden"}}>
