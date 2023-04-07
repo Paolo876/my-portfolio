@@ -1,11 +1,10 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import useProjectsRedux from '../../hooks/useProjectsRedux';
 import { Typography, List, ListItem, ListItemText, ListItemButton  } from '@mui/material'
 
 
 const ProjectNavigation = ({ projects }) => {
-  const navigate = useNavigate();
-
+  const { currentInView } = useProjectsRedux();
   const handleClick = (id) => {
     const section = document.querySelector(id);
     section.scrollIntoView( { behavior: 'instant', block: 'center' } );
@@ -13,17 +12,17 @@ const ProjectNavigation = ({ projects }) => {
 
   return (
     <List dense>
-      {projects.map(item => <ListItemButton key={item.name} sx={{mb:.5, px: .5}} onClick={() => handleClick(`#${item.name}`)}>
+      {projects.map(item => <ListItemButton key={item.name} sx={{mb:.5, px: .5, background: currentInView === item.name ? "rgba(100,100,100,.15)" : "initial"}} onClick={() => handleClick(`#${item.name}`)}>
         <ListItemText 
           primaryTypographyProps={{
             variant: "body1", 
             fontSize: 13.5, 
-            fontWeight: 300, 
+            fontWeight: currentInView === item.name ? 400 : 300, 
             letterSpacing: .15,
             color: "secondary",
           }}
           sx={{
-            opacity: .95
+            opacity: currentInView === item.name ? 1 : .95,
           }}
           >{item.title}
         </ListItemText>

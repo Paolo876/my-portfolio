@@ -11,26 +11,18 @@ const ProjectItem = ({ item }) => {
     threshold: 0,
     rootMargin: '-30% 0% -60% 0%',
     trackVisibility: true,
-    delay: 1200,
-    // onChange: inView => {
-    //   if(inView && currentInView !== item.name) {
-    //     // console.log(item.name, currentInView)
-    //     setCurrentInView(item.name)}
-    // }
+    delay: 800,
   });
-  //  console.log(inView, item.name)
   
   useEffect(() => {
     if(inView && currentInView !== item.name){
       setCurrentInView(item.name)
-
-      // return () => console.log("OUT", item.name)
     }
   }, [inView])
 
   return (
     <Box sx={{minHeight: "60vh", position: "relative", py: 2, px: 2, my: 3}} id={item.name}>
-        {inView && <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200, .25)", mixBlendMode: "overlay"}}></Box>}
+        {currentInView === item.name && <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200, .25)", mixBlendMode: "overlay"}}></Box>}
         <Grid container>
           <Grid item xs={6} py={1} pr={2} ref={ref}>
             <ProjectItemDescription 
@@ -39,6 +31,7 @@ const ProjectItem = ({ item }) => {
               description={item.description}
               technologies={item.technologies}
               features={item.features}
+              
             />
           </Grid>
           <Grid item xs={6}>

@@ -1,9 +1,6 @@
-import React from 'react'
 import { Typography, Box, Divider, Paper, Tooltip, List, ListItem } from '@mui/material'
 import SkillIconImageItem from '../../../components/SkillIconImageItem'
 import useRootRedux from '../../../hooks/useRootRedux';
-import useProjectsRedux from '../../../hooks/useProjectsRedux';
-import { useInView } from 'react-intersection-observer';
 
 
 const boxStyles = {
@@ -21,14 +18,6 @@ const boxStyles = {
 
 const ProjectItemDescription = ({ title, description, technologies, features, name }) => {
   const { skillsList } = useRootRedux();
-  // const { setCurrentInView } = useProjectsRedux();
-  // const { ref } = useInView({
-  //   threshold: 0,
-  //   rootMargin: '-0% 0% -50% 0%',
-  //   // triggerOnce: true,
-  //   // onChange: inView => inView ? setCurrentInView(name) : setCurrentInView(null)
-  // });
-
 
   return (
     <>
@@ -41,7 +30,6 @@ const ProjectItemDescription = ({ title, description, technologies, features, na
           letterSpacing: .5,
           lineHeight: 1
         }}
-        // ref={ref}
       >{title}</Typography>
       <Divider/>
       <Box sx={{px: .5}}>
