@@ -8,7 +8,7 @@ const ProjectNavigation = ({ projects }) => {
 
   const handleClick = (id) => {
     const section = document.querySelector(id);
-    section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+    section.scrollIntoView( { behavior: 'smooth', block: 'center' } );
   };
 
   return (
