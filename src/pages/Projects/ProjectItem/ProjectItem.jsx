@@ -18,8 +18,16 @@ const ProjectItem = ({ item }) => {
     //     setCurrentInView(item.name)}
     // }
   });
-   console.log(inView, item.name)
+  //  console.log(inView, item.name)
   
+  useEffect(() => {
+    if(inView && currentInView !== item.name){
+      setCurrentInView(item.name)
+
+      // return () => console.log("OUT", item.name)
+    }
+  }, [inView])
+
   return (
     <Box sx={{minHeight: "60vh", position: "relative", py: 2, px: 2, my: 3}} id={item.name}>
         {inView && <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200, .25)", mixBlendMode: "overlay"}}></Box>}
