@@ -16,9 +16,11 @@ const About = () => {
         <Grid container mt={5} sx={{justifyContent: "center", maxWidth: "1920px", mx: "auto"}}>
           <Grid item xs={1.5} sx={{position: "relative"}}>
             <Box sx={{position: "fixed", height: "100%", width: "fit-content"}}>
+            {/* navigation here */}
             </Box>
           </Grid>
           <Grid item xs={8}>
+            {/* content here */}
           </Grid>
           <Grid item xs={12} mb={.25} mt={"30vh"}><Footer/></Grid>
         </Grid>
