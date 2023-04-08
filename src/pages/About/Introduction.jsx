@@ -1,26 +1,11 @@
-import { useEffect } from 'react'
+import React from 'react'
 import { Box, Typography, Divider } from '@mui/material'
 import SocialLinks from '../../components/SocialLinks'
-import useProjectsRedux from '../../hooks/useProjectsRedux'
-import { useInView } from 'react-intersection-observer';
 
 
 const Introduction = () => {
-  const { setCurrentInView, currentInView } = useProjectsRedux();
-  const { ref, inView } = useInView({
-    threshold: 0,
-    rootMargin: '-20% 0% -50% 0%',
-    trackVisibility: true,
-    delay: 600,
-  });
-
-  useEffect(() => {
-    if(inView && currentInView !== null) setCurrentInView(null)
-  }, [inView])
-
-
   return (
-    <Box sx={{minHeight: "55vh" }} ref={ref}>
+    <Box sx={{minHeight: "55vh" }}>
       <Box                
         sx={{
           opacity: .9, 
@@ -35,7 +20,7 @@ const Introduction = () => {
             fontSize: "7.25rem",
             lineHeight: .95,
           }}
-          >My<br/> Projects</Typography>
+          >About Me</Typography>
       </Box>
       <Box sx={{px: 4, my: 8, mixBlendMode: "difference"}}>
         <Box sx={{background: "white", height: "4px", width: "20px", my: 2}}></Box>

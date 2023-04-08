@@ -3,6 +3,7 @@ import DocumentHead from '../../components/DocumentHead'
 import Footer from '../../components/Footer'
 
 import { Grid, Box } from '@mui/material'
+import Introduction from './Introduction'
 
 const About = () => {
   return (
@@ -20,6 +21,7 @@ const About = () => {
             </Box>
           </Grid>
           <Grid item xs={8}>
+            <Introduction/>
             {/* content here */}
           </Grid>
           <Grid item xs={12} mb={.25} mt={"30vh"}><Footer/></Grid>
