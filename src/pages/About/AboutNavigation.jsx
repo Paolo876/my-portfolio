@@ -23,7 +23,7 @@ const AboutNavigation = () => {
             variant: "body1", 
             fontSize: 13.5, 
             fontWeight: 300, 
-            letterSpacing: .15,
+            letterSpacing: .5,
             color: "secondary",
           }}
           sx={{
