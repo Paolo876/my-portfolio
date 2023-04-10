@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, List, ListItemText, ListItemButton  } from '@mui/material'
 
 const MOCK_OPTIONS = [
-  {name: "achievements", title: "Achievements"},
+  {name: "summary", title: "Summary"},
   {name: "education", title: "Education"},
   {name: "background", title: "Background"},
 ]

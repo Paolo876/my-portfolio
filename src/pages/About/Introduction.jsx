@@ -1,7 +1,13 @@
 import React from 'react'
-import { Box, Typography, Divider } from '@mui/material'
+import { Box, Typography, Divider, Grid } from '@mui/material'
 import SocialLinks from '../../components/SocialLinks'
 
+
+const boxTextStyles = {
+  fontWeight: 300,
+  display: "inline",
+  component: "span",
+};
 
 const Introduction = () => {
   return (
@@ -17,19 +23,46 @@ const Introduction = () => {
           sx={{
             textTransform: "none",
             fontWeight: 800,
-            fontSize: "7.25rem",
+            // fontSize: "5rem",
             lineHeight: .95,
           }}
-          >Paolo Bugarin</Typography>
+          >About Me</Typography>
       </Box>
-      <Box sx={{px: 4, my: 8, mixBlendMode: "difference"}}>
-        <Box sx={{background: "white", height: "4px", width: "20px", my: 2}}></Box>
-        <Typography variant="body1" mb={4} fontWeight={200} fontSize={18} letterSpacing={.5} lineHeight={1.75}>
-          I am a <Box fontWeight={400} display='inline'>Full Stack Web Developer</Box> based in <Box fontWeight={400} display='inline'>Los Angeles, California.</Box> I design and develop websites from
-          a <Box fontWeight={400} display='inline'>simple static page</Box> to a <Box fontWeight={400} display='inline'>complex dynamic web application.</Box> 
-        </Typography>
-        <Divider flexItem><SocialLinks iconSize="small" gap={.5} buttonSize="small" flexDirection="row"/></Divider>
-      </Box>
+      <Box sx={{background: "white", height: "4px", width: "25px", my: 5}}></Box>
+
+        <Grid container sx={{justifyContent: "center", alignItems: "flex-start", mx: "auto", mixBlendMode: "difference"}}>
+          <Grid item xs={12} md={6.5} pt={4} px={1}>
+            <Typography variant="body1" mb={4} fontWeight={200} fontSize={19} letterSpacing={.5} lineHeight={1.75}>
+              My name is <Box sx={boxTextStyles}>Paolo Bugarin</Box>. I am a <Box sx={boxTextStyles}>Full Stack Web Developer </Box> 
+              based in <Box sx={boxTextStyles}>Los Angeles, California.</Box> I design and develop websites from
+              a <Box sx={boxTextStyles}>simple static page</Box> to a <Box sx={boxTextStyles}>complex dynamic web application.</Box> 
+            </Typography>
+
+            <Typography variant="body1" mb={4} fontWeight={200} fontSize={19} letterSpacing={.5} lineHeight={1.75}>
+              I mainly develop my projects using <Box sx={boxTextStyles}>ReactJS </Box> 
+              or <Box sx={boxTextStyles}>NextJS</Box> in the Client-Side, and 
+              <Box sx={boxTextStyles}> NodeJS</Box> and <Box sx={boxTextStyles}>ExpressJS </Box>
+              in the Server-Side along with related libraries and frameworks.
+            </Typography>
+          </Grid>
+          <Divider flexItem orientation='vertical'><SocialLinks iconSize="small" gap={.5} buttonSize="small" flexDirection="column"/></Divider>
+          <Grid item xs={12} md={5} pt={4} px={1}>
+            <Box 
+              sx={{
+                border: 3, 
+                borderRadius: "50%", 
+                height: 200, 
+                width: 200, 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                mixBlendMode: "difference", 
+                mt: 2,
+              }}>
+              <Typography >image-here</Typography>
+            </Box>
+          </Grid>
+        </Grid>
     </Box>
   )
 }
