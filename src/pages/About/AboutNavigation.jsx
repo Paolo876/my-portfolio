@@ -3,6 +3,7 @@ import { Box, List, ListItemText, ListItemButton  } from '@mui/material'
 
 const MOCK_OPTIONS = [
   {name: "summary", title: "Summary"},
+  {name: "skills", title: "Skills and Experience"},
   {name: "education", title: "Education"},
   {name: "background", title: "Background"},
 ]
@@ -17,7 +18,7 @@ const AboutNavigation = () => {
       <Box sx={{height: "4px", width: "10px", my: 2}}>
         <Box sx={{background: "white", height: "100%", width: "100%"}}></Box>
       </Box>
-      {MOCK_OPTIONS.map(item => <ListItemButton key={item.name} sx={{mb:.5, px: .5, position: "relative"}} onClick={() => handleClick(`#${item.name}`)}>
+      {MOCK_OPTIONS.map(item => <ListItemButton key={item.name} sx={{mb:.5, pl: 1, pr: 3, position: "relative"}} onClick={() => handleClick(`#${item.name}`)}>
         <ListItemText 
           primaryTypographyProps={{
             variant: "body1", 
