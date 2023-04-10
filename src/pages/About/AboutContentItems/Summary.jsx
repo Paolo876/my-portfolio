@@ -8,7 +8,7 @@ const boxTextStyles = {
 
 const Summary = () => {
   return (
-    <Grid container sx={{alignItems: "flex-start", mx: "auto", mixBlendMode: "difference"}}>
+    <Grid container sx={{alignItems: "flex-start", mx: "auto", mixBlendMode: "difference"}} id="summary">
       <Grid item xs={10.2}>
         <Typography variant="body1" mb={2} fontWeight={100} fontSize={18} letterSpacing={.65} lineHeight={1.7}>
           Before my development journey, I studied <Box component="span" color="primary.light">Architecture</Box> back in Philippines where I learned about 
@@ -20,7 +20,7 @@ const Summary = () => {
         </Typography>
         <Typography variant="body1" mb={2} fontWeight={100} fontSize={18} letterSpacing={.65} lineHeight={1.7}>
           While being a part-time college student, I had also been self-studying through online courses from Udemy and youtube, all 
-          while also being employed full time in a non-related office job. <Box component="span" color="primary.light">As challenging as it got, the burnout was worth it.</Box>
+          while also being employed full time in a non-related office job. <Box component="span" color="primary.light">As challenging as it had gotten, the burnout was worth it.</Box>
         </Typography>
       </Grid>
     </Grid>
