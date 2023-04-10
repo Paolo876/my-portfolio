@@ -28,10 +28,10 @@ const Introduction = () => {
           }}
           >About Me</Typography>
       </Box>
-      <Box sx={{background: "white", height: "4px", width: "25px", my: 5}}></Box>
+      <Box sx={{background: "white", height: "4px", width: "25px", my: 4}}></Box>
 
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", mx: "auto", mixBlendMode: "difference"}}>
-          <Grid item xs={12} md={6.5} pt={4} px={1}>
+          <Grid item xs={12} md={6.5} px={1}>
             <Typography variant="body1" mb={4} fontWeight={200} fontSize={19} letterSpacing={.5} lineHeight={1.75}>
               My name is <Box sx={boxTextStyles}>Paolo Bugarin</Box>. I am a <Box sx={boxTextStyles}>Full Stack Web Developer </Box> 
               based in <Box sx={boxTextStyles}>Los Angeles, California.</Box> I design and develop websites from
@@ -46,7 +46,7 @@ const Introduction = () => {
             </Typography>
           </Grid>
           <Divider flexItem orientation='vertical'><SocialLinks iconSize="small" gap={.5} buttonSize="small" flexDirection="column"/></Divider>
-          <Grid item xs={12} md={5} pt={4} px={1}>
+          <Grid item xs={12} md={5} px={1}>
             <Box 
               sx={{
                 border: 3, 
