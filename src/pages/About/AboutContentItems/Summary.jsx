@@ -8,15 +8,14 @@ const boxTextStyles = {
 
 const Summary = () => {
   return (
-    <Grid container sx={{alignItems: "flex-start", mx: "auto", mixBlendMode: "difference"}} id="summary">
+    <Grid container sx={{alignItems: "flex-start", mx: "auto"}} id="summary">
       <Grid item xs={10.2}>
         <Typography variant="body1" mb={2} fontWeight={100} fontSize={18} letterSpacing={.65} lineHeight={1.7}>
-          Before my development journey, I studied <Box component="span" color="primary.light">Architecture</Box> back in Philippines where I learned about 
-          <Box component="span" color="primary.main"> design planning, elements, and strategies</Box> that I continue to incorporate through my projects. 
-          I started coding back in 2019 through an online course by Colt Steele 
-          on Web Development as a mean to get a feel of what it's about. After finishing the 40-hour course, It caught my interest and got me captivated 
-          which gave me the motivation to enroll back to College in 2020 and work on a degree in 
-          <Box component="span" color="primary.light"> Computer Information Systems Major in Software Development and Web Development.</Box> 
+          Before my development journey, I studied <Box component="span" color="primary.light" fontWeight={200}>Architecture</Box> back in Philippines where I learned about 
+          <Box component="span" color="primary.light" fontWeight={200}> design planning, techniques, and strategies</Box> that I continue to incorporate through my projects. 
+          I started coding back in 2019 through an online course by Colt Steele on Web Development. 
+          After finishing the 40-hour course, I was captivated which then gave me the motivation to enroll back to College in 2020 and work on a degree in 
+          <Box component="span" color="primary.light" fontWeight={200}> Computer Information Systems Major in Software Development and Web Development.</Box> 
         </Typography>
         <Typography variant="body1" mb={2} fontWeight={100} fontSize={18} letterSpacing={.65} lineHeight={1.7}>
           While being a part-time college student, I had also been self-studying through online courses from Udemy and youtube, all 
