@@ -22,7 +22,7 @@ const About = () => {
               <AboutNavigation/>
             </Box>
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={8.75}>
             <Introduction/>
             <AboutContentList/>
           </Grid>
