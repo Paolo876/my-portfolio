@@ -114,8 +114,8 @@ export const theme = createTheme({
     },
     h5: {
       fontFamily: 'Manrope',
-      letterSpacing: 6,
-      fontWeight: 600,
+      letterSpacing: 7,
+      fontWeight: 800,
       textTransform: 'uppercase',
     },
     h6: {
