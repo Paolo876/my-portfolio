@@ -9,8 +9,8 @@ const boxTextStyles = {
 
 const Roadmap = () => {
   return (
-    <Grid container sx={{px: 5, justifyContent: "center", alignItems: "center", maxWidth: "1900px", mx: "auto", mt: 5}}>
-      
+    <Grid container sx={{px: 5, py: 8, justifyContent: "center", alignItems: "center", maxWidth: "1900px", mx: "auto", position: "relative"}}>
+      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200,.5)", mixBlendMode: "overlay", zIndex: -1}}></Box>
       <Grid item xs={7.5}>
         <Typography variant="h5" sx={{mixBlendMode: "difference"}} align='center' fontSize="1.75rem">My Development Roadmap</Typography>
         <Box sx={{background: "white", height: "4px", width: "35px", mb: 10, mt: 3, mx: "auto", mixBlendMode: "difference" }}></Box>
@@ -52,9 +52,8 @@ const Roadmap = () => {
             </Typography>
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary' endItem>
-            <Typography variant="body1" fontWeight={200} fontSize={18} letterSpacing={.5} lineHeight={1.75}>
-              Present time, I still continue to learn more techologies online, further refine my existing projects, and conceptualize new project ideas that
-              I will be starting to work on.
+            <Typography variant="body1" fontWeight={200} fontSize={20} letterSpacing={.5} lineHeight={1.75}>
+              Present time, I still continue to learn more techologies online, further refine my existing projects, and conceptualize new project ideas.
             </Typography>
           </MyTimelineItem>
         </Timeline>

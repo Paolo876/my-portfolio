@@ -11,7 +11,7 @@ const MyTimelineItem = ({children, dotColor="grey", dotIcon, endItem=false}) => 
       </TimelineDot>
       {!endItem && <TimelineConnector />}
       </TimelineSeparator>
-      <TimelineContent sx={{ m: 'auto 0', pb: 10}}>
+      <TimelineContent sx={{ m: 'auto 0', pb: endItem ? 5 : 17}}>
         <Paper sx={{p:2, align: "right", mx:2 }} >
           {children}
         </Paper>
