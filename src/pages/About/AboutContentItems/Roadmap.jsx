@@ -6,7 +6,7 @@ const boxTextStyles = {
   display: "inline",
 };
 
-const Summary = () => {
+const Roadmap = () => {
   return (
     <Grid container sx={{px: 5, justifyContent: "center", alignItems: "center", maxWidth: "1900px", mx: "auto", mt: 5}}>
       
@@ -23,7 +23,7 @@ const Summary = () => {
 
         <Typography variant="body1" mb={2} fontWeight={100} fontSize={18} letterSpacing={.65} lineHeight={1.7}>
           While being a part-time college student, I was also self-studying through online courses and youtube tutorials, all 
-          while being employed full time in a non-related office job. 
+          while aslo being employed full time in a non-related office job. 
           <Box component="span" color="primary.light" fontWeight={200}> As exhausting as it was, the burnout was worth it for the knowledge I gained.</Box>
         </Typography>
       </Grid>
@@ -31,4 +31,4 @@ const Summary = () => {
   )
 }
 
-export default Summary
+export default Roadmap
