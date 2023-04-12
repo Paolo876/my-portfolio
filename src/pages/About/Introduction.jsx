@@ -10,7 +10,7 @@ const boxTextStyles = {
 
 const Introduction = () => {
   return (
-    <Grid container sx={{px: 5, justifyContent: "center", alignItems: "center", maxWidth: "1900px", mx: "auto", my: 10}}>
+    <Grid container sx={{px: 5, justifyContent: "center", alignItems: "center", maxWidth: "1900px", mx: "auto", my: 10, minHeight: "50vh"}}>
       <Grid item xs={12} md={6} my={2}>
         <Box                
           sx={{
