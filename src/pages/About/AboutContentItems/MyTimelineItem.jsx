@@ -4,15 +4,15 @@ import { TimelineItem, TimelineSeparator, TimelineDot, TimelineConnector, Timeli
 
 const MyTimelineItem = ({children, dotColor="grey", dotIcon}) => {
   return (
-    <TimelineItem>
+    <TimelineItem >
       <TimelineSeparator>
-      <TimelineDot color={dotColor}>
+      <TimelineDot color={dotColor} variant="outlined">
         {dotIcon}
       </TimelineDot>
       <TimelineConnector />
       </TimelineSeparator>
-      <TimelineContent sx={{py: 5}}>
-        <Paper sx={{p:2, align: "right", m:2}}>
+      <TimelineContent sx={{ m: 'auto 0', pb: 10}}>
+        <Paper sx={{p:2, align: "right", mx:2 }} >
           {children}
         </Paper>
       </TimelineContent>
