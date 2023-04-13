@@ -1,5 +1,6 @@
 import React from 'react'
 import { Grid, Typography, Box } from '@mui/material'
+import MainSkills from './SkillsGridItems/MainSkills'
 
 
 const Skills = () => {
@@ -10,11 +11,13 @@ const Skills = () => {
         <Box sx={{background: "white", height: "4px", width: "35px", mb: 10, mt: 3, mx: "auto", mixBlendMode: "difference" }}></Box>
       </Box>
 
-      <Grid item xs={10.2}>
-
+      <Grid item xs={10}>
+        <MainSkills/>
       </Grid>
+
     </Grid>
   )
 }
 
 export default Skills
+

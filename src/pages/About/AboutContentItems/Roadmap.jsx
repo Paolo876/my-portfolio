@@ -36,7 +36,7 @@ const Roadmap = () => {
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary'>
             <Typography variant="body1" fontWeight={200} fontSize={19} letterSpacing={.5} lineHeight={1.75}>
-              In college, I was able to learn the concepts of programming, thinking like a developer, analyzing logic and algorithms, and working as a team player.
+              In college, I was able to learn the foundations of programming, how to think like a developer, analyze logic and algorithms, and to work as a team.
             </Typography>
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary'>
