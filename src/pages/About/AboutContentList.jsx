@@ -1,7 +1,8 @@
 import React from 'react'
-import { Stack, Box } from '@mui/material'
+import { Stack } from '@mui/material'
 import Roadmap from './AboutContentItems/Roadmap'
 import Skills from "./AboutContentItems/Skills"
+import Background from './AboutContentItems/Background'
 
 
 const AboutContentList = () => {
@@ -9,6 +10,7 @@ const AboutContentList = () => {
     <Stack sx={{position: "relative"}}>
       <Roadmap/>
       <Skills/>
+      <Background/>
     </Stack>
   )
 }
