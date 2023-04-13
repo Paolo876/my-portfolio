@@ -14,9 +14,9 @@ const ContactDescription = () => {
         <Typography sx={{fontWeight: 300, fontSize: 19, opacity: .95, lineHeight: 1.75}}>
           I am excited to take a leap forward and further hone my development skills with the right company.
         </Typography>
-        <Typography sx={{fontWeight: 200, fontSize: 17.5, opacity: .8, lineHeight: 1.5}} mt={1.5}>
-          For any questions or inquiries, please feel free to get in touch with me through my contact informations provided or 
-          you can also reach me through submitting the inquiry form in my contact page
+        <Typography sx={{fontWeight: 200, fontSize: 17.5, opacity: .8, lineHeight: 1.6}} mt={1.5}>
+          For any questions or inquiries, please feel free to get in touch with me through my contact informations provided. 
+          <br/>You can also reach me through submitting the inquiry form in my contact page.
         </Typography>
 
       </Box> 

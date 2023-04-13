@@ -36,6 +36,11 @@ const Roadmap = () => {
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary'>
             <Typography variant="body1" fontWeight={200} fontSize={19} letterSpacing={.5} lineHeight={1.75}>
+              In college, I was able to learn the concepts of programming, thinking like a developer, analyzing logic and algorithms, and working as a team player.
+            </Typography>
+          </MyTimelineItem>
+          <MyTimelineItem dotColor='secondary'>
+            <Typography variant="body1" fontWeight={200} fontSize={19} letterSpacing={.5} lineHeight={1.75}>
               While being a part-time college student, I was also self-studying through online courses and youtube tutorials, all 
               while also being employed full time at an office job. 
               <Box component="span" color="primary.light" fontWeight={200}> As exhausting as it was, the burnout was worth it for the knowledge I gained.</Box>
@@ -43,18 +48,18 @@ const Roadmap = () => {
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary'>
             <Typography variant="body1" fontWeight={200} fontSize={19} letterSpacing={.5} lineHeight={1.75}>
-              I decided to focus more on Web Development than Software Development as it seems more engaging to me, and started mastering 
-              <Box component="span" color="primary.light" fontWeight={200}> ReactJS</Box> by developing my own personal projects.
+              I decided to focus more developing web-based apps than Software Development as it seems more engaging to me. I chose to master 
+              <Box component="span" color="primary.light" fontWeight={200}> ReactJS</Box> and started developing my own projects.
             </Typography>
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary'>
             <Typography variant="body1" fontWeight={200} fontSize={18} letterSpacing={.5} lineHeight={1.75}>
-              In 2022, I started offering my services and develop commissioned projects mainly with ReactJS and other related libraries and frameworks.
+              In 2022, I started offering my services and develop commissioned projects mainly with ReactJS and related libraries and frameworks.
             </Typography>
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary' endItem>
             <Typography variant="body1" fontWeight={200} fontSize={20} letterSpacing={.5} lineHeight={1.75}>
-              Present time, I still continue to learn more techologies online, further refine my existing projects, and conceptualize new project ideas.
+              Present time, I still continue to learn more techologies online, further refine and improve my existing projects, and conceptualize new project ideas.
             </Typography>
           </MyTimelineItem>
         </Timeline>
