@@ -2,9 +2,8 @@ import React from 'react'
 import DocumentHead from '../../components/DocumentHead'
 import Footer from '../../components/Footer'
 
-import { Grid, Box } from '@mui/material'
+import { Box } from '@mui/material'
 import Introduction from './Introduction'
-import AboutNavigation from './AboutNavigation'
 import AboutContentList from './AboutContentList'
 
 const About = () => {
@@ -17,21 +16,7 @@ const About = () => {
       />
       <Introduction/>
       <AboutContentList/>
-      {/* <Box>
-        <Grid container mt={5} sx={{justifyContent: "center", maxWidth: "1920px", mx: "auto"}}>
-          <Grid item xs={1.5} sx={{position: "relative"}}>
-            <Box sx={{position: "fixed", height: "100%", width: "fit-content"}}>
-              <AboutNavigation/>
-            </Box>
-          </Grid>
-          <Grid item xs={8.75}>
-            <Introduction/>
-            <AboutContentList/>
-            <Skills/>
-          </Grid>
-          <Grid item xs={12} mb={.25} mt={"30vh"}><Footer/></Grid>
-        </Grid>
-      </Box> */}
+      <Footer/>
     </Box>
   )
 }
