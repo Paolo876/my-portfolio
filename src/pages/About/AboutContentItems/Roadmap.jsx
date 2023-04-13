@@ -11,7 +11,7 @@ const Roadmap = () => {
   return (
     <Grid container sx={{px: 5, py: 8, justifyContent: "center", alignItems: "center", maxWidth: "1900px", mx: "auto", position: "relative"}}>
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200,.5)", mixBlendMode: "overlay", zIndex: -1}}></Box>
-      <Grid item xs={7.5}>
+      <Grid item xs={8.5}>
         <Typography variant="h5" sx={{mixBlendMode: "difference"}} align='center' fontSize="1.75rem">My Development Roadmap</Typography>
         <Box sx={{background: "white", height: "4px", width: "35px", mb: 10, mt: 3, mx: "auto", mixBlendMode: "difference" }}></Box>
         <Timeline position="alternate">
@@ -23,8 +23,9 @@ const Roadmap = () => {
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary'>
             <Typography variant="body1" fontWeight={200} fontSize={20} letterSpacing={.5} lineHeight={1.75}>
-              I started coding back in 2019 through an online course by <Box component="span" color="primary.light" fontWeight={200}> Colt Steele </Box> 
-              on Web Development where I learned the fundamentals <Box component="span" color="primary.light" fontWeight={100}>(HTML, CSS and JavaScript)</Box> .
+              I started learning coding back in 2019 through an online course by <Box component="span" color="primary.light" fontWeight={200}> Colt Steele </Box> 
+              on Web Development where I learned the fundamentals of <Box component="span" color="primary.light" fontWeight={200}>HTML, CSS, JavaScript, 
+              NodeJS, MongoDB, and related technologies.</Box>
             </Typography>
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary'>
