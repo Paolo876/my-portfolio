@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Grid, Typography, Box } from '@mui/material'
-import WebDevSkills from './SkillsGridItems/WebDevSkills'
+import TechSkills from './SkillsGridItems/TechSkills'
 import useRootRedux from '../../../hooks/useRootRedux'
 import useFirestoreActions from '../../../hooks/useFirestoreActions'
 
@@ -14,6 +14,8 @@ const Skills = () => {
     }
   }, [])
 
+  const webDevSkillsList = skillsList.filter(item => ["frontend", "backend", "styling"].includes(item.type))
+  const softwareDevSkillsList = skillsList.filter(item => ["programming"].includes(item.type))
 
   return (
     <Grid container sx={{p: 5, justifyContent: "center", alignItems: "center", maxWidth: "1900px", mx: "auto", mt: 5}}>
@@ -23,7 +25,8 @@ const Skills = () => {
       </Box>
 
       <Grid item xs={10}>
-        <WebDevSkills/>
+        <TechSkills skills={webDevSkillsList} title="Web Development"/>
+        <TechSkills skills={softwareDevSkillsList} title="Software Development"/>
       </Grid>
 
     </Grid>
