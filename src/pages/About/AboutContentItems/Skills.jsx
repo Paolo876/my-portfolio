@@ -24,7 +24,7 @@ const Skills = () => {
         <Box sx={{background: "white", height: "4px", width: "35px", mb: 10, mt: 3, mx: "auto", mixBlendMode: "difference" }}></Box>
       </Box>
 
-      <Grid item xs={9}>
+      <Grid item xs={8.75}>
         <TechSkills skills={webDevSkillsList} title="Web Development"/>
         <TechSkills skills={softwareDevSkillsList} title="Software Development"/>
       </Grid>

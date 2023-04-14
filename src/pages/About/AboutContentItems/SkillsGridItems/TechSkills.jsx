@@ -18,9 +18,11 @@ const TechSkills = ({ skills, title}) => {
                   width: "100px",
                   // height: "125px",
                   userSelect: "none",
-                  opacity: .95,  
+                  // opacity: .95,  
                 }} 
                 elevation={4}
+                variant="outlined"
+                
               >
                 <Box>
                   <SkillIconImageItem src={item.url} height="50px" width="50px" duration={800} objectFit='scale-down'/>
