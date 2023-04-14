@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-// import { useAppContext } from '../../../hooks/useAppContext'
 import useRootRedux from '../../../hooks/useRootRedux'
 import SkillIconImageItem from '../../../components/SkillIconImageItem'
 
