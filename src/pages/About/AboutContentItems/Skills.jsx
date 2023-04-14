@@ -3,6 +3,7 @@ import { Grid, Typography, Box } from '@mui/material'
 import TechSkills from './SkillsGridItems/TechSkills'
 import useRootRedux from '../../../hooks/useRootRedux'
 import useFirestoreActions from '../../../hooks/useFirestoreActions'
+import Certifications from './SkillsGridItems/Certifications'
 
 const Skills = () => {
   const { skillsList, setSkills } = useRootRedux();
@@ -24,9 +25,10 @@ const Skills = () => {
         <Box sx={{background: "white", height: "4px", width: "35px", mb: 10, mt: 3, mx: "auto", mixBlendMode: "difference" }}></Box>
       </Box>
 
-      <Grid item xs={8.75}>
+      <Grid item xs={9.25}>
         <TechSkills skills={webDevSkillsList} title="Web Development"/>
         <TechSkills skills={softwareDevSkillsList} title="Software Development"/>
+        <Certifications/>
       </Grid>
 
     </Grid>

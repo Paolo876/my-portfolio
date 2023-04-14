@@ -16,9 +16,7 @@ const TechSkills = ({ skills, title}) => {
                   py: 2.75, 
                   my: 1.5, 
                   width: "110px",
-                  // height: "125px",
                   userSelect: "none",
-                  // opacity: .95,  
                 }} 
                 elevation={4}
                 variant="outlined"
