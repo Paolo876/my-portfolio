@@ -6,7 +6,7 @@ import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 const TechSkills = ({ skills, title}) => {
   return (
     <Box sx={{mb: 10}}>
-      <Typography variant="h5" sx={{mixBlendMode: "difference"}} fontSize="1.25rem">{title}</Typography>
+      <Typography variant="h5" sx={{mixBlendMode: "difference"}} fontSize="1.20rem">{title}</Typography>
       <Box sx={{background: "white", height: "4px", width: "10px", mb: 4, mt: 2, ml: .5, mixBlendMode: "difference" }}></Box>
       <Grid container>
           {skills.map(item => 
