@@ -35,7 +35,7 @@ const Roadmap = () => {
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary' dotIcon={collegeicon}>
             <Typography variant="body1" fontWeight={200} fontSize={19} letterSpacing={.5} lineHeight={1.75}>
-              After finishing the 40-hour course, it caught my interest and gave me the motivation to enroll back to College in 2020 for a degree in 
+              After finishing the 47-hour course, it caught my interest and gave me the motivation to enroll back to College in 2020 for a degree in 
               <Box component="span" color="primary.light" fontWeight={200}> Computer Information Systems Major in Software Development and Web Development.</Box>
             </Typography>
           </MyTimelineItem>
