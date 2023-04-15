@@ -8,8 +8,8 @@ const MyTimelineItem = ({children, dotColor="grey", dotIcon, endItem=false, firs
     <TimelineItem sx={{minHeight: "34vh"}}>
       <TimelineSeparator>
         <TimelineConnector sx={{opacity: firstItem ? .35 : 1}}/>
-        <TimelineDot color={dotColor} variant="filled" sx={{overflow: "hidden", color: "secondary.dark", my: 1.5}}>
-          {dotIcon && <SkillIconImageItem src={dotIcon} height="50px" width="50px" fit="cover"/>}
+        <TimelineDot color={dotColor} variant="filled" sx={{overflow: "hidden", color: "secondary.dark", my: 1.5, p: 1.25}}>
+          {dotIcon && <SkillIconImageItem src={dotIcon} height="45px" width="45px" fit="cover"/>}
         </TimelineDot>
         <TimelineConnector sx={{visibility: endItem ? "hidden" : "initial"}}/>
       </TimelineSeparator>
