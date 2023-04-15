@@ -59,7 +59,7 @@ const Roadmap = () => {
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary' dotIcon={handshakeicon}>
             <Typography variant="body1" fontWeight={200} fontSize={18} letterSpacing={.5} lineHeight={1.75}>
-              In 2022, I started offering my services and develop commissioned projects mainly with ReactJS and related libraries and frameworks.
+              In 2022, I started offering my services, designing and building commissioned projects mainly with ReactJS and Firebase.
             </Typography>
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary' endItem dotIcon={workicon}>

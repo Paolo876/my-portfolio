@@ -5,7 +5,7 @@ import SkillIconImageItem from '../../../components/SkillIconImageItem';
 
 const MyTimelineItem = ({children, dotColor="grey", dotIcon, endItem=false, firstItem=false}) => {
   return (
-    <TimelineItem sx={{minHeight: "34vh"}}>
+    <TimelineItem sx={{minHeight: "40vh"}}>
       <TimelineSeparator>
         <TimelineConnector sx={{opacity: firstItem ? .35 : 1}}/>
         <TimelineDot color={dotColor} variant="filled" sx={{overflow: "hidden", color: "secondary.dark", my: 1.5, p: 1.25}}>
