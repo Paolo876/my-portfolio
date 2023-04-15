@@ -4,6 +4,7 @@ import TechSkills from './SkillsGridItems/TechSkills'
 import useRootRedux from '../../../hooks/useRootRedux'
 import useFirestoreActions from '../../../hooks/useFirestoreActions'
 import Certifications from './SkillsGridItems/Certifications'
+import OtherSkills from './SkillsGridItems/OtherSkills'
 
 const Skills = () => {
   const { skillsList, setSkills } = useRootRedux();
@@ -27,8 +28,9 @@ const Skills = () => {
 
       <Grid item xs={9.25}>
         <TechSkills skills={webDevSkillsList} title="Web Development"/>
-        <TechSkills skills={softwareDevSkillsList} title="Software Development"/>
+        <TechSkills skills={softwareDevSkillsList} title="Software Development / Programming"/>
         <Certifications/>
+        <OtherSkills/>
       </Grid>
 
     </Grid>

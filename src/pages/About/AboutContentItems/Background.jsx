@@ -7,8 +7,8 @@ const Background = () => {
     <Grid container sx={{px: 5, py: 8, justifyContent: "center", alignItems: "center", maxWidth: "1900px", mx: "auto", position: "relative"}}>
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200,.25)", mixBlendMode: "overlay", zIndex: -1}}></Box>
       <Grid item xs={10.2}>
-        <Typography variant="h5" sx={{mixBlendMode: "difference"}} align='center' fontSize="1.75rem">My Background</Typography>
-        <Box sx={{background: "white", height: "4px", width: "35px", mb: 10, mt: 3, mx: "auto", mixBlendMode: "difference" }}></Box>
+        <Typography variant="h5" sx={{mixBlendMode: "difference"}} align='center' fontSize="1.75rem">Bio</Typography>
+        <Box sx={{background: "white", height: "4px", width: "10px", mb: 10, mt: 3, mx: "auto", mixBlendMode: "difference" }}></Box>
 
       </Grid>
     </Grid>  )
