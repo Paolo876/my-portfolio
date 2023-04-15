@@ -3,7 +3,7 @@ import { Typography, Box, Grid, Paper } from '@mui/material'
 import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 
 
-const TechSkills = ({ skills, title}) => {
+const TechSkills = ({ skills, title }) => {
   return (
     <Box sx={{mb: 10}}>
       <Typography variant="h5" sx={{mixBlendMode: "difference"}} fontSize="1.3rem" fontWeight={700} letterSpacing={4}>{title}</Typography>
