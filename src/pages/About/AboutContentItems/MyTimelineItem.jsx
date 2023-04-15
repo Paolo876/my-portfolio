@@ -1,18 +1,20 @@
 import React from 'react'
 import { Paper } from '@mui/material';
 import { TimelineItem, TimelineSeparator, TimelineDot, TimelineConnector, TimelineContent } from '@mui/lab';
+import Image from 'mui-image';
 
 const MyTimelineItem = ({children, dotColor="grey", dotIcon, endItem=false}) => {
   return (
-    <TimelineItem >
+    <TimelineItem sx={{minHeight: "34vh"}}>
       <TimelineSeparator>
-      <TimelineDot color={dotColor} variant="outlined">
-        {dotIcon}
-      </TimelineDot>
-      {!endItem && <TimelineConnector />}
+        <TimelineConnector/>
+        <TimelineDot color={dotColor} variant="filled" sx={{overflow: "hidden", color: "secondary.dark", my: 1.5}}>
+          {dotIcon && <Image src={dotIcon} height="50px" width="50px" fit="cover"/>}
+        </TimelineDot>
+        <TimelineConnector sx={{visibility: endItem ? "hidden" : "initial"}}/>
       </TimelineSeparator>
-      <TimelineContent sx={{ m: 'auto 0', pb: endItem ? 5 : 17}}>
-        <Paper sx={{p:2, align: "right", mx:2 }} >
+      <TimelineContent sx={{ m: 'auto 0', py: "auto"}}>
+        <Paper sx={{p:2.5, align: "right", mx:2 }} elevation={3}>
           {children}
         </Paper>
       </TimelineContent>

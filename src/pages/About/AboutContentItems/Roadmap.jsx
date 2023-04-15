@@ -1,11 +1,9 @@
 import React from 'react'
-import { Grid, Typography, Box, Paper } from '@mui/material'
-import { Timeline, TimelineItem, TimelineSeparator, TimelineDot, TimelineConnector, TimelineContent  } from '@mui/lab';
+import { Grid, Typography, Box } from '@mui/material'
+import { Timeline } from '@mui/lab';
 import MyTimelineItem from './MyTimelineItem';
-const boxTextStyles = {
-  fontWeight: 300,
-  display: "inline",
-};
+import bldgicon from "../../../assets/building.svg"
+
 
 const Roadmap = () => {
   return (
@@ -15,7 +13,7 @@ const Roadmap = () => {
         <Typography variant="h5" sx={{mixBlendMode: "difference"}} align='center' fontSize="1.75rem">My Development Roadmap</Typography>
         <Box sx={{background: "white", height: "4px", width: "35px", mb: 10, mt: 3, mx: "auto", mixBlendMode: "difference" }}></Box>
         <Timeline position="alternate">
-          <MyTimelineItem dotColor='secondary'>
+          <MyTimelineItem dotColor='secondary' dotIcon={bldgicon}>
             <Typography variant="body1" fontWeight={200} fontSize={19} letterSpacing={.5} lineHeight={1.75}>
               Before taking my path in the development field, I studied <Box component="span" fontWeight={200}>Architecture</Box> back in Philippines where I learned about 
               <Box component="span" color="primary.light" fontWeight={200}> design planning, techniques, and strategies</Box> that I continue to incorporate through my projects. 
@@ -48,8 +46,8 @@ const Roadmap = () => {
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary'>
             <Typography variant="body1" fontWeight={200} fontSize={19} letterSpacing={.5} lineHeight={1.75}>
-              I decided to focus more developing web-based apps than Software Development as it seems more engaging to me. I chose to master 
-              <Box component="span" color="primary.light" fontWeight={200}> ReactJS</Box> and started developing my own projects.
+              I decided to focus more on Web Development than Software Development/Programming as it seems more engaging to me. I chose to master 
+              <Box component="span" color="primary.light" fontWeight={200}> ReactJS</Box> and started developing my own projects using it.
             </Typography>
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary'>
