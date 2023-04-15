@@ -13,7 +13,7 @@ const Roadmap = () => {
         <Typography variant="h5" sx={{mixBlendMode: "difference"}} align='center' fontSize="1.75rem">My Development Roadmap</Typography>
         <Box sx={{background: "white", height: "4px", width: "35px", mb: 10, mt: 3, mx: "auto", mixBlendMode: "difference" }}></Box>
         <Timeline position="alternate">
-          <MyTimelineItem dotColor='secondary' dotIcon={bldgicon}>
+          <MyTimelineItem dotColor='secondary' dotIcon={bldgicon} firstItem={true}>
             <Typography variant="body1" fontWeight={200} fontSize={19} letterSpacing={.5} lineHeight={1.75}>
               Before taking my path in the development field, I studied <Box component="span" fontWeight={200}>Architecture</Box> back in Philippines where I learned about 
               <Box component="span" color="primary.light" fontWeight={200}> design planning, techniques, and strategies</Box> that I continue to incorporate through my projects. 
