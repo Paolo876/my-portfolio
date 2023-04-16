@@ -9,7 +9,7 @@ const useRootRedux = () => {
   if(rootRedux) {
     return {
     ...rootRedux,
-    setSkills: (data) => dispatch(rootActions.setSkills(data)),
+    setData: (data) => dispatch(rootActions.setData(data)),
     }
   } else {
     throw Error('Error accessing root reducer.');

@@ -5,8 +5,9 @@ const rootSlice = createSlice({
     name: "root",
     initialState: rootInitialState,
     reducers: {
-        setSkills(state, { payload }){
-            state.skillsList = payload;
+        setData(state, { payload }){
+            state.skillsList = payload.skills;
+            state.certifications = payload.certifications;
         }
     }, 
     // extraReducers: (builder) => {

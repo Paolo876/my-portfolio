@@ -122,12 +122,12 @@ const MOCK_PROJ_LIST = [
 const Projects = () => {
   const [ projects, setProjects ] = useState(MOCK_PROJ_LIST);
   const [ currentActiveProject, setCurrentActiveProject ] = useState(null);
-  const { skillsList, setSkills } = useRootRedux();
+  const { skillsList, setData } = useRootRedux();
   const { getDocumentFromCollection } = useFirestoreActions();
 
   useEffect(() => {
     if(skillsList.length === 0){
-      getDocumentFromCollection('user', 'information').then(data => setSkills(data.skills))
+      getDocumentFromCollection('user', 'information').then(data => setData(data))
     }
   }, [])
 

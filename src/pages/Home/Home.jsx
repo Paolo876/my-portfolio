@@ -9,13 +9,13 @@ import useRootRedux from '../../hooks/useRootRedux'
 import { Box } from '@mui/material'
 
 const Home = () => {
-  const { skillsList, setSkills } = useRootRedux();
+  const { skillsList, setData } = useRootRedux();
   const { getDocumentFromCollection } = useFirestoreActions();
 
   
   useEffect(() => {
     if(skillsList.length === 0){
-      getDocumentFromCollection('user', 'information').then(data => setSkills(data.skills))
+      getDocumentFromCollection('user', 'information').then(data => setData(data))
     }
   }, [])
 

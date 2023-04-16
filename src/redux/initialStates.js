@@ -1,6 +1,7 @@
 export const rootInitialState = {
     skillsList: [],
     contactInformations: [],
+    certifications: [],
     cvUrl: "",
     isLoading: false,
     error: null,
