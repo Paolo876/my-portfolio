@@ -1,6 +1,5 @@
 import React from 'react'
-import { Box, Typography, Divider, Grid } from '@mui/material'
-import SocialLinks from '../../components/SocialLinks'
+import { Box, Typography, Grid } from '@mui/material'
 
 
 const boxTextStyles = {
