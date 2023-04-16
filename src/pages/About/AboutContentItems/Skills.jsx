@@ -1,20 +1,11 @@
-import { useEffect } from 'react'
 import { Grid, Typography, Box } from '@mui/material'
 import TechSkills from './SkillsGridItems/TechSkills'
 import useRootRedux from '../../../hooks/useRootRedux'
-import useFirestoreActions from '../../../hooks/useFirestoreActions'
 import Certifications from './SkillsGridItems/Certifications'
 import OtherSkills from './SkillsGridItems/OtherSkills'
 
 const Skills = () => {
-  const { skillsList, setSkills } = useRootRedux();
-  const { getDocumentFromCollection } = useFirestoreActions();
-
-  useEffect(() => {
-    if(skillsList.length === 0){
-      getDocumentFromCollection('user', 'information').then(data => setSkills(data.skills))
-    }
-  }, [])
+  const { skillsList } = useRootRedux();
 
   const webDevSkillsList = skillsList.filter(item => ["frontend", "backend", "styling"].includes(item.type))
   const softwareDevSkillsList = skillsList.filter(item => ["programming"].includes(item.type))

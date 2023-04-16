@@ -1,12 +1,23 @@
-import React from 'react'
+import { useEffect } from 'react'
 import DocumentHead from '../../components/DocumentHead'
 import Footer from '../../components/Footer'
+import useFirestoreActions from '../../hooks/useFirestoreActions'
+import useRootRedux from '../../hooks/useRootRedux'
 
 import { Box } from '@mui/material'
 import Introduction from './Introduction'
 import AboutContentList from './AboutContentList'
 
 const About = () => {
+  const { getDocumentFromCollection } = useFirestoreActions();
+  const { skillsList, setSkills } = useRootRedux();
+
+  useEffect(() => {
+    if(skillsList.length === 0){
+      getDocumentFromCollection('user', 'information').then(data => setSkills(data.skills))
+    }
+  }, [])
+
   return (
     <Box sx={{pt: 8, height: "100vh", overflowX: "hidden"}}>
       <DocumentHead
