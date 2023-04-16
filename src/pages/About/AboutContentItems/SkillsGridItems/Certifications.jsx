@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, Box, Grid, Paper, ButtonBase, Button } from '@mui/material'
+import { Typography, Box, Grid, Button } from '@mui/material'
 import useRootRedux from '../../../../hooks/useRootRedux'
 
 const Certifications = () => {
