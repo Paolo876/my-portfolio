@@ -17,15 +17,17 @@ const TechSkills = ({ skills, title }) => {
                   my: 1.5, 
                   width: "110px",
                   userSelect: "none",
+                  opacity: .75,
                 }} 
-                elevation={4}               
+                // elevation={5}
+                variant="outlined"    
               >
                 <Box>
                   <SkillIconImageItem src={item.url} height="60px" width="60px" duration={800} objectFit='scale-down'/>
                   <Typography 
                     variant="body2" 
                     sx={{
-                      mixBlendMode: "difference", 
+                      // mixBlendMode: "difference", 
                       fontSize: 13, 
                       fontWeight: 500, 
                       mt: 3,
