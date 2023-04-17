@@ -7,7 +7,7 @@ const rootSlice = createSlice({
     reducers: {
         setData(state, { payload }){
             state.skillsList = payload.skills;
-            state.otherSkillsList = payload.otherSkillsList;
+            state.otherSkillsList = payload.otherSkills;
             state.certifications = payload.certifications;
         }
     }
