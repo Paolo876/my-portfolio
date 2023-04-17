@@ -9,7 +9,6 @@ const Navbar = () => {
   const isLandingPageView = Boolean(location.pathname === "/")
 
   return (
-    <Box >
     <AppBar component="nav" className="navbar" position="fixed">
       <Container maxWidth="xl">
         <Toolbar>
@@ -25,9 +24,6 @@ const Navbar = () => {
         </Toolbar>
       </Container>
     </AppBar>
-    {/* <Toolbar></Toolbar>  */}
-    </Box>
-
   )
 }
 

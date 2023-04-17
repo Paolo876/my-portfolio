@@ -6,7 +6,7 @@ import SocialLinks from '../../../components/SocialLinks'
 
 const Introduction = () => {
   return (
-    <Grid container sx={{px: 5, minHeight: "75vh", justifyContent: "center", alignItems: "center", maxWidth: "1900px", mx: "auto"}}>
+    <Grid container sx={{px: 5, minHeight: "85vh", justifyContent: "center", alignItems: "center", maxWidth: "1900px", mx: "auto"}}>
       <Grid item xs={12} md={2} pt={4}>
         <Box 
           sx={{
@@ -23,7 +23,7 @@ const Introduction = () => {
           <Typography >image-here</Typography>
         </Box>
       </Grid>
-      <Grid item xs={12} md={6} py={4}>
+      <Grid item xs={12} md={6.5} py={4}>
         <DescriptionGridItem/>
       </Grid>
     </Grid>

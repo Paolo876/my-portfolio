@@ -7,8 +7,8 @@ import RightChevron from "../../../assets/chevron-right.svg"
 
 const boxStyles = {
   py: 2.5, 
-  my: 1.5, 
-  width: "90px",
+  my: 1, 
+  width: "110px",
   height: "120px",
   userSelect: "none",
   opacity: .9,  
@@ -16,9 +16,9 @@ const boxStyles = {
 
 const textStyles = {
   opacity: .85,
-  fontSize: 11.5, 
+  fontSize: 12, 
   fontWeight: 500, 
-  mt: 2,
+  mt: 1.5,
 }
 
 const SkillsShowcase = () => {
@@ -29,6 +29,8 @@ const SkillsShowcase = () => {
   useEffect(() => {
     setSkills({id: 'main', array: skillsList.filter(item => ["frontend", "backend", "styling"].includes(item.type))})
   }, [skillsList])
+
+  
   const handleClick = () => {
     if(skills.id === "main"){
       setSkills({id: 'other', array: skillsList.filter(item => item.type === "programming")})
@@ -38,7 +40,7 @@ const SkillsShowcase = () => {
   }
 
   if(skills) return (
-    <Grid container px={5} sx={{position: "relative"}} align="center">
+    <Grid container px={2} sx={{position: "relative"}} align="center">
       {skills.id !== "main" && <Grid item xs={1} sx={{my: 1.5}}>
         <ButtonBase sx={{height: "100%", transform: "rotate(180deg)"}} draggable={false} onClick={handleClick}>
           <Box sx={{opacity: .75}}>

@@ -20,7 +20,7 @@ const Home = () => {
   }, [])
 
   return (
-    <Box sx={{pt: 8, height: "100vh", overflowX: "hidden"}}>
+    <Box sx={{pt: 0, height: "100vh", overflowX: "hidden"}}>
         <DocumentHead
           title="Paolo Bugarin | Home"
           description="I am a full stack web developer based in Los Angeles, California"

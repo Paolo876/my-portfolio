@@ -47,7 +47,7 @@ const Landing = () => {
             variant="h5"
             sx={{
               mt:10 ,
-              fontWeight: 300, 
+              fontWeight: 200, 
               fontSize: "1.5rem",
               opacity: .75, 
               mixBlendMode: "difference", 
@@ -61,8 +61,8 @@ const Landing = () => {
 
         <Grid item xs={12} sm={6} mt="auto">
           <Stack spacing={1.5} alignItems="flex-end" sx={{height: "100%"}}>
-            <Box sx={{border: 0, opacity: .8}} mb={6}>
-              <IconButton size="large" onClick={() => navigate("/home")}>
+            <Box sx={{border: 0, opacity: .9}} mb={6}>
+              <IconButton size="large" onClick={() => navigate("/home")} color="secondary">
                 <ArrowForwardIosIcon fontSize="large"/>
               </IconButton>
             </Box>
