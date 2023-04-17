@@ -1,5 +1,4 @@
 import { createTheme } from '@mui/material';
-import bgImage from "./assets/noise.png"
 
 export const theme = createTheme({
   components: {
@@ -9,9 +8,7 @@ export const theme = createTheme({
           width: "100vw",
           height: "100vh",
           background: 'rgb(38,37,37)',
-          // background     : `radial-gradient(circle, rgba(46,45,45,1) 0%, ${bgImage} 92%)`,
-          background     : `radial-gradient(circle, rgba(46,45,45,1) 0%, rgba(38,37,37,1) 92%)`,
-          // backgroundImage: `url(${bgImage})`,
+          background     : `radial-gradient(circle, rgba(46,45,45,1) 0%, rgba(38,37,37,1) 85%)`,
         },
       },
     },
@@ -21,11 +18,8 @@ export const theme = createTheme({
           borderRadius: 0,
           fontWeight: 400,
           letterSpacing: .75,
-          // mixBlendMode: "difference",
-          // borderWidth: 2,
           ":hover": {
             borderRadius: 0,
-            // borderWidth: 2,
           }
         },
         
