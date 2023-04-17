@@ -9,11 +9,11 @@ const Contact = () => {
   return (
     <Grid container sx={{px: 5, pt: 6, mb: 4, justifyContent: "center", alignItems: "flex-start", maxWidth: "1900px", mx: "auto"}} spacing={1}>
       <Grid item xs={12}>
-        <Grid container  sx={{px: 5, mt:8, justifyContent: "center", alignItems: "flex-start" }} spacing={1}>
-          <Grid item xs={12} md={4.75}>
+        <Grid container  sx={{px: 5, mt:6, justifyContent: "center", alignItems: "flex-start" }} spacing={1}>
+          <Grid item xs={12} md={5.5}>
             <Box>
               <Typography variant="h4">Let's Talk</Typography>
-              <Box sx={{background: "white", height: "3px", width: "20px", mt: 3.5}} ></Box>
+              <Box sx={{background: "white", height: "3px", width: "15px", mt: 3}} ></Box>
             </Box>
           </Grid>
           <Grid item xs={12} md={4}>
@@ -26,16 +26,16 @@ const Contact = () => {
 
       <Grid item xs={12}>
         <Grid container  sx={{px: 5, mb: 4, mt: 5, justifyContent: "center", alignItems: "flex-start" }} spacing={1}>
-          <Grid item xs={12} md={4.5}>
+          <Grid item xs={12} md={5}>
             <ContactDescription/>
           </Grid>
-          <Grid item xs={12} md={4.25}>
+          <Grid item xs={12} md={4.5}>
             <ContactInformations/>
           </Grid>
         </Grid>
       </Grid>
-      <Grid item xs={6} mt={2}>
-        <Divider flexItem><SocialLinks iconSize="medium" gap={2} buttonSize="medium" flexDirection="row"/></Divider>
+      <Grid item xs={7} mt={5}>
+        <Divider flexItem><SocialLinks iconSize="medium" gap={1.5} buttonSize="small" flexDirection="row"/></Divider>
       </Grid>
     </Grid>
   )
