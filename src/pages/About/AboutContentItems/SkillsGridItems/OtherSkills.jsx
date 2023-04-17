@@ -14,20 +14,19 @@ const OtherSkills = () => {
           {otherSkillsList.map(item => <Grid item key={item.name} xs={.8} align="center">
             <Paper
               sx={{
-                py: 1, 
+                py: 1.5, 
                 width: "80px",
                 height: "110px",
                 userSelect: "none",
-                opacity: .75,
+                opacity: .65,
               }} 
               variant="outlined"    
             >
               <Box>
-                <SkillIconImageItem src={item.url} height="50px" width="50px" />
+                <SkillIconImageItem src={item.url} height="45px" width="45px" />
                 <Typography 
                   variant="body2" 
                   sx={{
-                    // mixBlendMode: "difference", 
                     fontSize: 10.5, 
                     fontWeight: 400, 
                     mt: 1,
