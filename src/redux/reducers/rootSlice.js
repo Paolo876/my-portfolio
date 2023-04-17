@@ -7,27 +7,10 @@ const rootSlice = createSlice({
     reducers: {
         setData(state, { payload }){
             state.skillsList = payload.skills;
+            state.otherSkillsList = payload.otherSkillsList;
             state.certifications = payload.certifications;
         }
-    }, 
-    // extraReducers: (builder) => {
-    //     builder
-    //     // login
-    //     .addCase(login.pending, ( state ) => {
-    //         state.isLoading = true;
-    //         state.error = null;
-    //     })
-    //     .addCase(login.fulfilled, ( state, { payload }) => {
-    //         state.isLoading = false;
-    //         state.user = payload;
-    //         state.error = null;
-
-    //     })
-    //     .addCase(login.rejected, ( state , { payload }) => {
-    //         state.isLoading = false;
-    //         state.error = payload.message;
-    //     })
-    // }
+    }
 });
 
 export const rootActions = rootSlice.actions;
