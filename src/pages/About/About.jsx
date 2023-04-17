@@ -1,12 +1,12 @@
 import { useEffect } from 'react'
 import DocumentHead from '../../components/DocumentHead'
 import Footer from '../../components/Footer'
+import Introduction from './Introduction'
+import AboutContentList from './AboutContentList'
 import useFirestoreActions from '../../hooks/useFirestoreActions'
 import useRootRedux from '../../hooks/useRootRedux'
 
 import { Box } from '@mui/material'
-import Introduction from './Introduction'
-import AboutContentList from './AboutContentList'
 
 const About = () => {
   const { getDocumentFromCollection } = useFirestoreActions();
