@@ -11,14 +11,14 @@ const boxStyles = {
   width: "90px",
   height: "120px",
   userSelect: "none",
-  opacity: .95,  
+  opacity: .9,  
 }
 
 const textStyles = {
-  mixBlendMode: "difference", 
+  opacity: .85,
   fontSize: 11.5, 
-  fontWeight: 300, 
-  mt: 1,
+  fontWeight: 500, 
+  mt: 2,
 }
 
 const SkillsShowcase = () => {
@@ -53,7 +53,7 @@ const SkillsShowcase = () => {
               <Paper sx={boxStyles} elevation={2}>
                 <Box>
                   <SkillIconImageItem src={item.url} height="50px" width="50px" duration={800} objectFit='scale-down'/>
-                  <Typography variant="body2" sx={textStyles}>{item.name}</Typography>
+                  <Typography variant="body2" sx={textStyles} color="secondary">{item.name}</Typography>
                 </Box>
               </Paper>
 
@@ -63,7 +63,7 @@ const SkillsShowcase = () => {
       </Grid>
       {skills.id === "main" && <Grid item xs={1} sx={{my: 1.5}} >
         <ButtonBase sx={{height: "100%"}} draggable={false} onClick={handleClick}>
-          <Box sx={{opacity: .75}} >
+          <Box sx={{opacity: .9}} >
             <SkillIconImageItem src={RightChevron} height="40px" width="40px" duration={800} objectFit='scale-down'/>
           </Box>
         </ButtonBase>

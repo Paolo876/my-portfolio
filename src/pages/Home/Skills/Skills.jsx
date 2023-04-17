@@ -9,7 +9,7 @@ const Skills = () => {
 
   return (
     <Box sx={{position: "relative"}}>
-      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "white", mixBlendMode: "overlay", opacity: .75}}></Box>
+      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "white", mixBlendMode: "overlay", opacity: .95}}></Box>
       <Grid container sx={{px: 5, py: 9, justifyContent: "center", alignItems: "flex-start", maxWidth: "1900px", mx: "auto"}}>
         <Grid item xs={12} mb={3} sx={{opacity: .9}}>
           <Typography variant="h4" align="center">Skills</Typography>

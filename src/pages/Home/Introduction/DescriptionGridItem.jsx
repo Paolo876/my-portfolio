@@ -30,11 +30,11 @@ const DescriptionGridItem = () => {
       <Box mt={8}>
         <Button 
           variant="outlined" 
-          color="primary"
+          // color="primary"
           endIcon={<KeyboardArrowRightIcon color="inherit"/>}
           onClick={() => navigate("/about")}
           size="large"
-          sx={{mixBlendMode: "difference"}}
+          // sx={{mixBlendMode: "difference"}}
         >
           Read More About Me
         </Button>
