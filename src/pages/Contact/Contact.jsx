@@ -7,18 +7,17 @@ import ContactContainer from './ContactContainer'
 
 const Contact = () => {
   return (
-    <Box sx={{pt: 8, height: "100vh", overflowX: "hidden"}}>
+    <Box sx={{pt: 5, height: "100vh", overflowX: "hidden"}}>
       <DocumentHead
-        title="Paolo Bugarin | About"
+        title="Paolo Bugarin | Contact"
         description="I am a full stack web developer based in Los Angeles, California"
         keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
       />
       <Stack sx={{height: "100%"}}>
         <Box                
           sx={{
-            opacity: .75, 
             mixBlendMode: "difference", 
-            mt: 4
+            mt: 3
           }}
           >
           <Typography 
@@ -30,7 +29,7 @@ const Contact = () => {
               lineHeight: .95,
             }}
             >Get In Touch</Typography>
-            <Box sx={{background: "white", height: "4px", width: "25px", my: 3, mx: "auto", opacity: .75}}></Box>
+            <Box sx={{background: "white", height: "4px", width: "25px", my: 2.5, mx: "auto", opacity: .85}}></Box>
           </Box>
         <Box flex={1} sx={{my: 2}}>
           <ContactContainer/>
