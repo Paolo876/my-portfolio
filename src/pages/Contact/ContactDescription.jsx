@@ -6,8 +6,8 @@ import SocialLinks from '../../components/SocialLinks';
 
 const ContactDescription = () => {
   return (
-    <Stack sx={{py: 3.5, mx: 2, pr: 6, height: "100%"}} align='left' justifyContent="space-between">
-      <Box>
+    <Stack sx={{py: 5, mx: 2, pr: 6, height: "100%"}} align='left' justifyContent="space-between">
+      <Box pr={2}>
         <Box mb={1.5}>
           <Typography variant="h4" sx={{letterSpacing: 2, textTransform: "initial", fontWeight: 800, fontSize: 40 }}>Let's Talk</Typography>
           <Box sx={{background: "white", height: "2px", width: "15px", my: 1, opacity: .8}} ></Box>
@@ -20,7 +20,7 @@ const ContactDescription = () => {
           I am excited to take a leap forward and further hone my knowledge and skills with the right company.
         </Typography>
       </Box>
-      <Box sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: 1}}>
+      <Box sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: 1, mb: 8}}>
         <Box sx={{width: 60, height: 60, border: 1,}}>
         </Box>
         <Box>
