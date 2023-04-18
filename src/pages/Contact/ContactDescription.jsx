@@ -23,9 +23,9 @@ const ContactDescription = () => {
       <Box sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: 1, mb: 8}}>
         <Box sx={{width: 60, height: 60, border: 1,}}>
         </Box>
-        <Box>
-          <Typography variant="h5" sx={{letterSpacing: 1, textTransform: "none", fontSize: 21 }}>Paolo Bugarin</Typography>
-          <Typography variant="body2" sx={{letterSpacing: .25, textTransform: "none", opacity: .8, fontSize: 15.5, mt: .5, fontWeight: 400}}>Los Angeles, CA <PlaceIcon sx={{fontSize: "inherit"}}/></Typography>
+        <Box sx={{opacity: .9}}>
+          <Typography variant="h5" sx={{letterSpacing: 1, textTransform: "none", fontSize: 22 }}>Paolo Bugarin</Typography>
+          <Typography variant="body2" sx={{letterSpacing: .25, textTransform: "none", opacity: .8, fontSize: 16, mt: .5, fontWeight: 400}}>Los Angeles, CA <PlaceIcon sx={{fontSize: "inherit"}}/></Typography>
         </Box>
       </Box>
       <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 1, justifyContent: "space-between", opacity: .75 }}>
