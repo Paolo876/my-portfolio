@@ -1,10 +1,9 @@
 import React from 'react'
-import { Box, Typography, Stack, Paper, IconButton, Divider } from '@mui/material'
+import { Typography, Stack, Paper, IconButton, Divider } from '@mui/material'
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import PlaceIcon from '@mui/icons-material/Place';
 import PersonPinIcon from '@mui/icons-material/PersonPin';
-import SocialLinks from "../../../components/SocialLinks"
 
 
 const ContactInformations = () => {

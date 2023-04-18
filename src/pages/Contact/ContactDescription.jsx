@@ -1,13 +1,16 @@
 import React from 'react'
-import { Box, Stack, Typography } from '@mui/material'
+import { Box, Stack, Typography, ButtonBase } from '@mui/material'
 import PlaceIcon from '@mui/icons-material/Place';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import SocialLinks from '../../components/SocialLinks';
+
 
 const ContactDescription = () => {
   return (
     <Stack sx={{py: 3.5, mx: 2, pr: 6, height: "100%"}} align='left' justifyContent="space-between">
       <Box>
         <Box mb={3}>
-          <Typography variant="h4" sx={{letterSpacing: 2, textTransform: "initial", fontWeight: 800, fontSize: 35 }}>Hire Me</Typography>
+          <Typography variant="h4" sx={{letterSpacing: 2, textTransform: "initial", fontWeight: 800, fontSize: 38 }}>Hire Me</Typography>
           <Box sx={{background: "white", height: "3px", width: "15px", my: 1.25}} ></Box>
         </Box>
         <Typography sx={{fontWeight: 200, fontSize: 16, opacity: .95, lineHeight: 1.45, letterSpacing: .35}}>
@@ -17,11 +20,32 @@ const ContactDescription = () => {
         </Typography>
       </Box>
       <Box sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: 1}}>
-        <Box sx={{width: 70, height: 70, border: 1,}}>
+        <Box sx={{width: 60, height: 60, border: 1,}}>
         </Box>
         <Box>
-          <Typography variant="h4" sx={{letterSpacing: .8, textTransform: "none", opacity: .8, lineHeight: 1.5}}>Paolo Bugarin</Typography>
-          <Typography variant="body2" sx={{letterSpacing: .8, textTransform: "none", opacity: .7, fontSize: 19}}>Los Angeles, CA <PlaceIcon sx={{fontSize: "inherit"}}/></Typography>
+          <Typography variant="h5" sx={{letterSpacing: 2, textTransform: "none"}}>Paolo Bugarin</Typography>
+          <Typography variant="body2" sx={{letterSpacing: .5, textTransform: "none", opacity: .8, fontSize: 18, mt: .5, fontWeight: 400}}>Los Angeles, CA <PlaceIcon sx={{fontSize: "inherit"}}/></Typography>
+        </Box>
+      </Box>
+      <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 1, justifyContent: "space-between" }}>
+        <Box>
+          <Typography variant="body1" sx={{letterSpacing: .8, textTransform: "none", fontWeight: 600}}>Email</Typography>
+          <Box sx={{background: "white", height: "2px", width: "8px", my: .15, mixBlendMode: "difference"}}></Box>
+          <ButtonBase target="_blank" href="mailto: paolopaolobugarin@gmail.com" >
+            <Typography variant="body1" sx={{textTransform: "none", opacity: 1, fontWeight: 500}} color="primary">paolopaolobugarin@gmail.com</Typography>
+          </ButtonBase>
+        </Box>
+        <Box>
+          <Typography variant="body1" sx={{letterSpacing: .8, textTransform: "none", fontWeight: 600}}>Phone</Typography>
+          <Box sx={{background: "white", height: "2px", width: "8px", my: .15, mixBlendMode: "difference"}}></Box>
+          <ButtonBase href="tel:3234817852">
+            <Typography variant="body1" sx={{textTransform: "none", opacity: 1, fontWeight: 500}} color="primary">+1 (323) 481 7852</Typography>
+          </ButtonBase>
+        </Box>
+        <Box>
+          <Typography variant="body1" sx={{letterSpacing: .8, textTransform: "none", fontWeight: 600}}>Social</Typography>
+          <Box sx={{background: "white", height: "2px", width: "8px", my: .15, mixBlendMode: "difference"}}></Box>
+          <SocialLinks mixBlendMode='none' buttonSize='medium' iconSize='small' gap={.5}/>
         </Box>
       </Box>
     </Stack>
