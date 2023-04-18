@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, TextField } from '@mui/material'
+import { Box, Button, Stack, TextField } from '@mui/material'
 
 const ContactForm = () => {
 
@@ -8,24 +8,28 @@ const ContactForm = () => {
     e.preventDefault();
   }
   return (
-    <Box sx={{my: 3, mx: 2, px: 3, py: 2.5, border: 3}} component="form" autoComplete="off" onSubmit={handleSubmit}>
-      <Box sx={{display: "flex", flexDirection: "row", gap: 3, my: 2}}>
-        <TextField id="firstName" label="First Name" variant="standard" fullWidth type="text"/>
-        <TextField id="lastName" label="Last Name" variant="standard" fullWidth type="text"/>
+    <Stack sx={{py: 4}}>
+      <Box sx={{py: 3, px: 3, border: 3, minHeight: "60vh", display: "flex", flexDirection: "column"}} component="form" autoComplete="off" onSubmit={handleSubmit}>
+        <Box sx={{display: "flex", flexDirection: "row", gap: 3, my: 1.5}}>
+          <TextField id="firstName" label="First Name" variant="standard" fullWidth type="text"/>
+          <TextField id="lastName" label="Last Name" variant="standard" fullWidth type="text"/>
+        </Box>
+        <TextField id="phone" label="Contact Number" variant="standard" fullWidth type="phone" sx={{my:1.5}}/>
+        <TextField id="email" label="Email Address" variant="standard" fullWidth type="email" sx={{my:1.5}}/>
+        <TextField
+          id="message"
+          label="Message"
+          multiline
+          fullWidth
+          rows={5}
+          sx={{my:2}}
+          variant="outlined"
+        />
+        <Box>
+          <Button type="submit" variant="contained" size="large" sx={{my:5, px: 5, fontWeight: 500, letterSpacing: 2.5, fontSize: 16}}>Submit</Button>
+        </Box>
       </Box>
-      <TextField id="phone" label="Contact Number" variant="standard" fullWidth type="phone" sx={{my:2}}/>
-      <TextField id="email" label="Email Address" variant="standard" fullWidth type="email" sx={{my:2}}/>
-      <TextField
-        id="message"
-        label="Message"
-        multiline
-        fullWidth
-        rows={6}
-        sx={{my:2}}
-        variant="outlined"
-      />
-      <Button type="submit" variant="contained" size="large" sx={{my:5, px: 5, fontWeight: 500, letterSpacing: 2.5, fontSize: 16}}>Submit</Button>
-    </Box>
+    </Stack>
   )
 }
 

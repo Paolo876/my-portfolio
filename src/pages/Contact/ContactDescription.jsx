@@ -8,13 +8,15 @@ const ContactDescription = () => {
   return (
     <Stack sx={{py: 3.5, mx: 2, pr: 6, height: "100%"}} align='left' justifyContent="space-between">
       <Box>
-        <Box mb={3}>
-          <Typography variant="h4" sx={{letterSpacing: 2, textTransform: "initial", fontWeight: 800, fontSize: 38 }}>Hire Me</Typography>
-          <Box sx={{background: "white", height: "3px", width: "15px", my: 1.25}} ></Box>
+        <Box mb={1.5}>
+          <Typography variant="h4" sx={{letterSpacing: 2, textTransform: "initial", fontWeight: 800, fontSize: 40 }}>Let's Talk</Typography>
+          <Box sx={{background: "white", height: "2px", width: "15px", my: 1, opacity: .8}} ></Box>
         </Box>
         <Typography sx={{fontWeight: 300, fontSize: 16, opacity: .95, lineHeight: 1.45, letterSpacing: .35}}>
           Let me show you my capabilities and how I can be a great part of your company. 
-          Please fill out the form or use my contact informations provided to get in touch with me. <br/>
+          Please fill out the form or use my contact informations provided to get in touch with me.
+        </Typography>
+        <Typography sx={{fontWeight: 300, fontSize: 16, opacity: .95, lineHeight: 1.45, letterSpacing: .35, mt: 1}}>
           I am excited to take a leap forward and further hone my knowledge and skills with the right company.
         </Typography>
       </Box>
@@ -22,28 +24,28 @@ const ContactDescription = () => {
         <Box sx={{width: 60, height: 60, border: 1,}}>
         </Box>
         <Box>
-          <Typography variant="h5" sx={{letterSpacing: 2, textTransform: "none"}}>Paolo Bugarin</Typography>
-          <Typography variant="body2" sx={{letterSpacing: .5, textTransform: "none", opacity: .8, fontSize: 18, mt: .5, fontWeight: 400}}>Los Angeles, CA <PlaceIcon sx={{fontSize: "inherit"}}/></Typography>
+          <Typography variant="h5" sx={{letterSpacing: 1, textTransform: "none", fontSize: 21 }}>Paolo Bugarin</Typography>
+          <Typography variant="body2" sx={{letterSpacing: .25, textTransform: "none", opacity: .8, fontSize: 15.5, mt: .5, fontWeight: 400}}>Los Angeles, CA <PlaceIcon sx={{fontSize: "inherit"}}/></Typography>
         </Box>
       </Box>
       <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 1, justifyContent: "space-between", opacity: .75 }}>
         <Box>
-          <Typography variant="body1" sx={{letterSpacing: .8, textTransform: "none", fontWeight: 600}}>Email</Typography>
-          <Box sx={{background: "white", height: "2px", width: "8px", my: .15, mixBlendMode: "difference"}}></Box>
+          <Typography variant="body1" sx={{letterSpacing: .5, textTransform: "none", fontWeight: 500, opacity: .9}}>Email</Typography>
+          <Box sx={{background: "white", height: "1px", width: "100%", my: .1, opacity: .15}}></Box>
           <ButtonBase target="_blank" href="mailto: paolopaolobugarin@gmail.com" >
             <Typography variant="body1" sx={{textTransform: "none", opacity: 1, fontWeight: 500}} color="primary">paolopaolobugarin@gmail.com</Typography>
           </ButtonBase>
         </Box>
         <Box>
-          <Typography variant="body1" sx={{letterSpacing: .8, textTransform: "none", fontWeight: 600}}>Phone</Typography>
-          <Box sx={{background: "white", height: "2px", width: "8px", my: .15, mixBlendMode: "difference"}}></Box>
+          <Typography variant="body1" sx={{letterSpacing: .5, textTransform: "none", fontWeight: 500, opacity: .9}}>Phone</Typography>
+          <Box sx={{background: "white", height: "1px", width: "100%", my: .1, opacity: .15}}></Box>
           <ButtonBase href="tel:3234817852">
             <Typography variant="body1" sx={{textTransform: "none", opacity: 1, fontWeight: 500}} color="primary">+1 (323) 481 7852</Typography>
           </ButtonBase>
         </Box>
         <Box>
-          <Typography variant="body1" sx={{letterSpacing: .8, textTransform: "none", fontWeight: 600}}>Social</Typography>
-          <Box sx={{background: "white", height: "2px", width: "8px", my: .15, mixBlendMode: "difference"}}></Box>
+          <Typography variant="body1" sx={{letterSpacing: .5, textTransform: "none", fontWeight: 500, opacity: .9}}>Social</Typography>
+          <Box sx={{background: "white", height: "1px", width: "100%", my: .1, opacity: .15}}></Box>
           <SocialLinks mixBlendMode='none' buttonSize='medium' iconSize='small' gap={.5}/>
         </Box>
       </Box>
