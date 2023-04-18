@@ -28,7 +28,7 @@ const Contact = () => {
               fontWeight: 800,
               lineHeight: .95,
             }}
-            >Get In Touch</Typography>
+            >Contact Me</Typography>
             <Box sx={{background: "white", height: "4px", width: "25px", my: 2.5, mx: "auto", opacity: .85}}></Box>
           </Box>
         <Box flex={1} sx={{my: 2}}>
