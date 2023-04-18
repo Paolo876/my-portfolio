@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box, Stack, Typography, ButtonBase } from '@mui/material'
 import PlaceIcon from '@mui/icons-material/Place';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import SocialLinks from '../../components/SocialLinks';
 
 
@@ -13,7 +12,7 @@ const ContactDescription = () => {
           <Typography variant="h4" sx={{letterSpacing: 2, textTransform: "initial", fontWeight: 800, fontSize: 38 }}>Hire Me</Typography>
           <Box sx={{background: "white", height: "3px", width: "15px", my: 1.25}} ></Box>
         </Box>
-        <Typography sx={{fontWeight: 200, fontSize: 16, opacity: .95, lineHeight: 1.45, letterSpacing: .35}}>
+        <Typography sx={{fontWeight: 300, fontSize: 16, opacity: .95, lineHeight: 1.45, letterSpacing: .35}}>
           Let me show you my capabilities and how I can be a great part of your company. 
           Please fill out the form or use my contact informations provided to get in touch with me. <br/>
           I am excited to take a leap forward and further hone my knowledge and skills with the right company.
@@ -27,7 +26,7 @@ const ContactDescription = () => {
           <Typography variant="body2" sx={{letterSpacing: .5, textTransform: "none", opacity: .8, fontSize: 18, mt: .5, fontWeight: 400}}>Los Angeles, CA <PlaceIcon sx={{fontSize: "inherit"}}/></Typography>
         </Box>
       </Box>
-      <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 1, justifyContent: "space-between" }}>
+      <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 1, justifyContent: "space-between", opacity: .75 }}>
         <Box>
           <Typography variant="body1" sx={{letterSpacing: .8, textTransform: "none", fontWeight: 600}}>Email</Typography>
           <Box sx={{background: "white", height: "2px", width: "8px", my: .15, mixBlendMode: "difference"}}></Box>
