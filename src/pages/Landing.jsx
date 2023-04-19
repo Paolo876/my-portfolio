@@ -9,14 +9,14 @@ import DocumentHead from '../components/DocumentHead';
 
 
 const linkStyles = {
-  fontSize: { md: "1.5rem", lg: "1.6rem", xl:"1.8rem" },
+  fontSize: { sm: "1.3rem", md: "1.5rem", lg: "1.6rem", xl:"1.8rem" },
   fontWeight: 300,
   textAlign: "right",
   textTransform: "none",
   letterSpacing: 1,
   width: "fit-content",
   color: "primary.main",
-  opacity: .75
+  opacity: .7
 }
 
 const nameStyles = {
@@ -24,7 +24,7 @@ const nameStyles = {
   mixBlendMode: "difference", 
   textTransform: "none",
   fontWeight: 800,
-  fontSize: { md: "8rem", lg: "10rem", xl:"11rem" },
+  fontSize: { xs:"5.2rem", sm: "7rem", md: "8rem", lg: "10rem", xl:"11rem" },
   lineHeight: .85,
   letterSpacing: .1
 }
@@ -39,19 +39,19 @@ const Landing = () => {
         description="I am a full stack web developer based in Los Angeles, California"
         keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
       />
-      <Grid container sx={{height: "100%", px: 2}}>
-        <Grid item mt={11} xs={12} sm={6} sx={{minHeight: "70vh"}}>
+      <Grid container sx={{height: "100%", px: {xs: .5, md: 2}}}>
+        <Grid item mt={11} xs={12} sm={8} sx={{minHeight: {xs: "fit-content", sm:"70vh"}}}>
           <Typography variant="h1" sx={nameStyles}>Paolo</Typography>
           <Typography variant="h1" sx={nameStyles}>Bugarin</Typography>
           <Typography 
             variant="h5"
             sx={{
-              mt:{ md: 5, lg: 7, xl:10 } ,
+              mt:{ xs: 4, sm: 5, md: 5, lg: 7, xl:10 } ,
               fontWeight: 200, 
-              fontSize: { md: "1.3rem", lg: "1.4rem", xl:"1.5rem" },
+              fontSize: { xs: "1.05rem", sm: "1.3rem", md: "1.3rem", lg: "1.4rem", xl:"1.5rem" },
               opacity: .75, 
               mixBlendMode: "difference", 
-              letterSpacing: 1.25,
+              letterSpacing: { xs: .5, md: 1.25, lg: 1.25, xl:1.25 },
               textTransform: "none"
             }}
           >
@@ -59,9 +59,9 @@ const Landing = () => {
           </Typography>
         </Grid>
 
-        <Grid item xs={12} sm={6} mt="auto">
+        <Grid item xs={12} sm={4} mt="auto">
           <Stack spacing={1.5} alignItems="flex-end" sx={{height: "100%"}}>
-            <Box sx={{border: 0, opacity: .9}} mb={6}>
+            <Box sx={{border: 0, opacity: .9, display: {xs: "none", md: "initial"}}} mb={6}>
               <IconButton size="large" onClick={() => navigate("/home")} color="secondary">
                 <ArrowForwardIosIcon fontSize="large"/>
               </IconButton>
@@ -72,9 +72,8 @@ const Landing = () => {
             <Link component={ReactLink} to="/contact" draggable={false}><Typography sx={linkStyles}>Contact</Typography></Link>
           </Stack>
         </Grid>
-        <Box>
+        <Box sx={{transform: {xs: "scale(.8)", sm: "scale(.9)", md: "scale(1)"}}}>
           <SocialLinks/>
-
         </Box>
       </Grid>
     </PageContainer>
