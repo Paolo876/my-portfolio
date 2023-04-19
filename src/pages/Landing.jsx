@@ -41,7 +41,7 @@ const Landing = () => {
         description="I am a full stack web developer based in Los Angeles, California"
         keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
       />
-      <Grid container sx={{height: "100%", px: {xs: .5, md: 2}}}>
+      <Grid container sx={{height: "95%", px: {xs: .5, md: 2}}}>
         <Grid item pt={{xs: 5, md:11}} xs={12} sm={8} sx={{minHeight: {xs: "fit-content", sm:"70vh"}}}>
           <Typography variant="h1" sx={nameStyles}>Paolo</Typography>
           <Typography variant="h1" sx={nameStyles}>Bugarin</Typography>
@@ -76,7 +76,7 @@ const Landing = () => {
             <Link component={ReactLink} to="/contact" draggable={false}><Typography sx={linkStyles}>Contact</Typography></Link>
           </Stack>
         </Grid>
-        <Grid xs={12} item sx={{ mt: "auto", mb: {xs:1, md: 4}, align: "left"}}>
+        <Grid xs={12} item sx={{ mt: "auto", align: "left"}}>
           <SocialLinks />
         </Grid>
       </Grid>
