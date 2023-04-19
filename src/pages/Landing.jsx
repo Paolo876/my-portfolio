@@ -9,7 +9,7 @@ import DocumentHead from '../components/DocumentHead';
 
 
 const linkStyles = {
-  fontSize: "1.8rem",
+  fontSize: { md: "1.5rem", lg: "1.6rem", xl:"1.8rem" },
   fontWeight: 300,
   textAlign: "right",
   textTransform: "none",
@@ -24,7 +24,7 @@ const nameStyles = {
   mixBlendMode: "difference", 
   textTransform: "none",
   fontWeight: 800,
-  fontSize:{ md: "8rem", lg: "9rem", xl:"11rem" },
+  fontSize: { md: "8rem", lg: "10rem", xl:"11rem" },
   lineHeight: .85,
   letterSpacing: .1
 }
@@ -46,9 +46,9 @@ const Landing = () => {
           <Typography 
             variant="h5"
             sx={{
-              mt:10 ,
+              mt:{ md: 5, lg: 7, xl:10 } ,
               fontWeight: 200, 
-              fontSize: "1.5rem",
+              fontSize: { md: "1.3rem", lg: "1.4rem", xl:"1.5rem" },
               opacity: .75, 
               mixBlendMode: "difference", 
               letterSpacing: 1.25,
