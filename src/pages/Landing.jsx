@@ -35,7 +35,7 @@ const Landing = () => {
   const navigate = useNavigate();
 
   return (
-    <Container maxWidth="xl" sx={{py: 8, height: "100vh"}}>
+    <Container maxWidth="xl" sx={{pt: 8, height: "90vh"}}>
       <DocumentHead
         title="Paolo Bugarin | Developer"
         description="I am a full stack web developer based in Los Angeles, California"
