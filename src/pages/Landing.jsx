@@ -10,13 +10,14 @@ import DocumentHead from '../components/DocumentHead';
 
 const linkStyles = {
   fontSize: { sm: "1.3rem", md: "1.5rem", lg: "1.6rem", xl:"1.8rem" },
-  fontWeight: 300,
+  fontWeight: 400,
   textAlign: "right",
   textTransform: "none",
-  letterSpacing: 1,
+  // letterSpacing: .5,
   width: "fit-content",
   color: "primary.main",
   opacity: .7
+  // mixBlendMode: "difference"
 }
 
 const nameStyles = {
@@ -24,9 +25,10 @@ const nameStyles = {
   mixBlendMode: "difference", 
   textTransform: "none",
   fontWeight: 800,
-  fontSize: { xs:"5.2rem", sm: "7rem", md: "8rem", lg: "10rem", xl:"11rem" },
+  fontSize: { xs:"5.5rem", sm: "7rem", md: "8rem", lg: "10rem", xl:"11rem" },
   lineHeight: .85,
-  letterSpacing: .1
+  letterSpacing: .1,
+  userSelect: "none"
 }
 
 const Landing = () => {
@@ -48,11 +50,13 @@ const Landing = () => {
             sx={{
               mt:{ xs: 4, sm: 5, md: 5, lg: 7, xl:10 } ,
               fontWeight: 200, 
-              fontSize: { xs: "1.05rem", sm: "1.3rem", md: "1.3rem", lg: "1.4rem", xl:"1.5rem" },
+              fontSize: { xs: "1.1rem", sm: "1.3rem", md: "1.3rem", lg: "1.4rem", xl:"1.5rem" },
               opacity: .75, 
               mixBlendMode: "difference", 
               letterSpacing: { xs: .5, md: 1.25, lg: 1.25, xl:1.25 },
-              textTransform: "none"
+              textTransform: "none",
+              userSelect: "none"
+
             }}
           >
             {`< `}Full Stack Web Developer{` />`}
