@@ -35,14 +35,14 @@ const Landing = () => {
   const navigate = useNavigate();
 
   return (
-    <Container maxWidth="xl" sx={{pt: 8, height: "100%"}}>
+    <Container maxWidth="xl" sx={{py: 8, height: "100vh"}}>
       <DocumentHead
         title="Paolo Bugarin | Developer"
         description="I am a full stack web developer based in Los Angeles, California"
         keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
       />
-      <Grid container sx={{px: {xs: .5, md: 2}, minHeight: "80vh" }}>
-        <Grid item pt={{xs: 5, md:11}} xs={12} sm={8} sx={{minHeight: {xs: "fit-content", md:"70vh"}}}>
+      <Grid container sx={{px: {xs: .5, md: 2}, height: "100%" }}>
+        <Grid item pt={{xs: 7, md:11}} xs={12} sm={8} sx={{minHeight: {xs: "fit-content", md:"70vh"}}}>
           <Typography variant="h1" sx={nameStyles}>Paolo</Typography>
           <Typography variant="h1" sx={nameStyles}>Bugarin</Typography>
           <Typography 
@@ -64,7 +64,7 @@ const Landing = () => {
         </Grid>
 
         <Grid item xs={12} sm={4} mt="auto">
-          <Stack spacing={1.25} alignItems="flex-end">
+          <Stack spacing={1.55} alignItems="flex-end">
             <Box sx={{border: 0, opacity: .8, display: {xs: "none", md: "initial"}}} pb={6}>
               <IconButton size="large" onClick={() => navigate("/home")} color="secondary">
                 <ArrowForwardIosIcon fontSize="large"/>
