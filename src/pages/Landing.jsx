@@ -42,7 +42,7 @@ const Landing = () => {
         keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
       />
       <Grid container sx={{height: "100%", px: {xs: .5, md: 2}}}>
-        <Grid item mt={11} xs={12} sm={8} sx={{minHeight: {xs: "fit-content", sm:"70vh"}}}>
+        <Grid item pt={{xs: 5, md:11}} xs={12} sm={8} sx={{minHeight: {xs: "fit-content", sm:"70vh"}}}>
           <Typography variant="h1" sx={nameStyles}>Paolo</Typography>
           <Typography variant="h1" sx={nameStyles}>Bugarin</Typography>
           <Typography 
