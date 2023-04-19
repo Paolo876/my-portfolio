@@ -9,17 +9,17 @@ const SocialLinks = ({ buttonSize="large", iconSize="medium", color="primary", g
   return (
     <Box sx={{display: "flex", gap, flexDirection}}>
       <Tooltip title="Github" arrow enterDelay={500} placement={placement}>
-        <IconButton size={buttonSize} target="_blank" href="https://github.com/Paolo876" sx={{mixBlendMode}}>
+        <IconButton size={buttonSize} target="_blank" href="https://github.com/Paolo876" sx={{mixBlendMode}} disableTouchRipple>
           <GitHubIcon fontSize={iconSize} color={color}/>
         </IconButton>
       </Tooltip>
       <Tooltip title="LinkedIn" arrow enterDelay={500} placement={placement}>
-        <IconButton size={buttonSize} target="_blank" href="https://www.linkedin.com/in/paolo-bugarin/" sx={{mixBlendMode}}>
+        <IconButton size={buttonSize} target="_blank" href="https://www.linkedin.com/in/paolo-bugarin/" sx={{mixBlendMode}} disableTouchRipple>
           <LinkedInIcon fontSize={iconSize} color={color}/>
         </IconButton>
       </Tooltip>
       <Tooltip title="Facebook" arrow enterDelay={500} placement={placement}>
-        <IconButton size={buttonSize} target="_blank" href="https://www.facebook.com/paolobugarin19/" sx={{mixBlendMode}}>
+        <IconButton size={buttonSize} target="_blank" href="https://www.facebook.com/paolobugarin19/" sx={{mixBlendMode}} disableTouchRipple>
           <FacebookIcon fontSize={iconSize} color={color}/>
         </IconButton>
       </Tooltip>
