@@ -1,0 +1,17 @@
+.navbar .active {
+  position: relative;
+}
+.navbar .active p {
+  font-weight: 400;
+}
+.navbar .active::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  height: 1px;
+  width: 75%;
+  border-radius: 10px;
+  background-color: rgba(239, 235, 229, 0.2392156863);
+  transform: translateX(-50%);
+}/*# sourceMappingURL=navbar.css.map */
