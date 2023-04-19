@@ -76,9 +76,9 @@ const Landing = () => {
             <Link component={ReactLink} to="/contact" draggable={false}><Typography sx={linkStyles}>Contact</Typography></Link>
           </Stack>
         </Grid>
-        <Box sx={{transform: {xs: "scale(.8)", sm: "scale(.9)", md: "scale(1)"}}}>
-          <SocialLinks/>
-        </Box>
+        <Grid xs={12} item sx={{ mt: "auto", mb: {xs:1, md: 4}, align: "left"}}>
+          <SocialLinks />
+        </Grid>
       </Grid>
     </PageContainer>
   )
