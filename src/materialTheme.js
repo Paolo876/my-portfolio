@@ -5,8 +5,8 @@ export const theme = createTheme({
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          width: "100vw",
-          height: "100vh",
+          // width: "100vw",
+          // height: "100vh",
           background: 'rgb(38,37,37)',
           background     : `radial-gradient(circle, rgba(46,45,45,1) 0%, rgba(38,37,37,1) 85%)`,
         },
