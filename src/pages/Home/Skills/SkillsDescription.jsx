@@ -4,39 +4,53 @@ import { Box, Typography, Button, Stack } from '@mui/material'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 
+
+const baseTextStyles = {
+  display: "inline", 
+  fontWeight: 200, 
+  fontSize: {xs: 15, sm: 16, md: 17, lg: 18}, 
+  lineHeight: 1.75
+}
+
+const medTextStyles = {
+  display: "inline", 
+  fontWeight: 400, 
+  fontSize: {xs: 15.5, sm: 16.5, md: 17.5, lg: 18.5}, 
+  lineHeight: 1.75
+}
 const SkillsDescription = () => {
   const navigate = useNavigate();
 
 
   return (
-    <Stack p={1.25} mt={2}>
+    <Stack p={{xs: 1, sm:3, md: 1.25}} mt={{xs:0, md: 3}} >
       <Box>
-        <Typography sx={{display: "inline", fontWeight: 100, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>I studied </Typography>
-        <Typography sx={{display: "inline", fontWeight: 300, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>Computer Information Systems </Typography>
-        <Typography sx={{display: "inline", fontWeight: 100, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>major in </Typography>
-        <Typography sx={{display: "inline", fontWeight: 300, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>Web Development and Software Development </Typography>
-        <Typography sx={{display: "inline", fontWeight: 100, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>at Pasadena City College. </Typography>
+        <Typography sx={baseTextStyles}>I studied </Typography>
+        <Typography sx={medTextStyles}>Computer Information Systems </Typography>
+        <Typography sx={baseTextStyles}>major in </Typography>
+        <Typography sx={medTextStyles}>Web Development and Software Development </Typography>
+        <Typography sx={baseTextStyles}>at Pasadena City College. </Typography>
       </Box>
-      <Box mt={1.5}>
-        <Typography sx={{display: "inline", fontWeight: 100, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>A big part of my development knowledge is also gained from </Typography>
-        <Typography sx={{display: "inline", fontWeight: 300, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>self-studying </Typography>
-        <Typography sx={{display: "inline", fontWeight: 100, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>through various </Typography>
-        <Typography sx={{display: "inline", fontWeight: 300, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>online courses </Typography>
-        <Typography sx={{display: "inline", fontWeight: 100, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>and being a part of </Typography>
-        <Typography sx={{display: "inline", fontWeight: 300, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>coding groups.</Typography>
+      <Box mt={{xs:.5, md: 1.5}}>
+        <Typography sx={baseTextStyles}>A big part of my development knowledge is also gained from </Typography>
+        <Typography sx={medTextStyles}>self-studying </Typography>
+        <Typography sx={baseTextStyles}>through various </Typography>
+        <Typography sx={medTextStyles}>online courses </Typography>
+        <Typography sx={baseTextStyles}>and being a part of </Typography>
+        <Typography sx={medTextStyles}>coding groups.</Typography>
       </Box>
-      <Box mt={1.5}>
-        <Typography sx={{display: "inline", fontWeight: 100, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>I mainly develop my projects using </Typography>
-        <Typography sx={{display: "inline", fontWeight: 300, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>ReactJS </Typography>
-        <Typography sx={{display: "inline", fontWeight: 100, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>or </Typography>
-        <Typography sx={{display: "inline", fontWeight: 300, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>NextJS </Typography>
-        <Typography sx={{display: "inline", fontWeight: 100, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>in the Client-Side, and </Typography>
-        <Typography sx={{display: "inline", fontWeight: 300, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>NodeJS </Typography>
-        <Typography sx={{display: "inline", fontWeight: 100, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>and </Typography>
-        <Typography sx={{display: "inline", fontWeight: 300, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>ExpressJS </Typography>
-        <Typography sx={{display: "inline", fontWeight: 100, fontSize: 18.25, opacity: .95, lineHeight: 1.75}}>in the Server-Side along with related libraries and frameworks.</Typography>
+      <Box mt={{xs:.5, md: 1.5}}>
+        <Typography sx={baseTextStyles}>I mainly develop my projects using </Typography>
+        <Typography sx={medTextStyles}>ReactJS </Typography>
+        <Typography sx={baseTextStyles}>or </Typography>
+        <Typography sx={medTextStyles}>NextJS </Typography>
+        <Typography sx={baseTextStyles}>in the Client-Side, and </Typography>
+        <Typography sx={medTextStyles}>NodeJS </Typography>
+        <Typography sx={baseTextStyles}>and </Typography>
+        <Typography sx={medTextStyles}>ExpressJS </Typography>
+        <Typography sx={baseTextStyles}>in the Server-Side along with related libraries and frameworks.</Typography>
       </Box>
-      <Box mt={8} mb={4} spacing={3}>
+      <Box mt={{xs:4, md: 8}} mb={{xs:0, md: 4}} >
         <Button 
           variant="contained" 
           color="primary"
