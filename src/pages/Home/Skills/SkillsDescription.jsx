@@ -8,14 +8,14 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 const baseTextStyles = {
   display: "inline", 
   fontWeight: 200, 
-  fontSize: {xs: 15, sm: 16, md: 17, lg: 18}, 
+  fontSize: {xs: 15, sm: 16, md: 16, lg: 18}, 
   lineHeight: 1.75
 }
 
 const medTextStyles = {
   display: "inline", 
   fontWeight: 400, 
-  fontSize: {xs: 15.5, sm: 16.5, md: 17.5, lg: 18.5}, 
+  fontSize: {xs: 15.5, sm: 16.5, md: 16.5, lg: 18.5}, 
   lineHeight: 1.75
 }
 const SkillsDescription = () => {
@@ -23,7 +23,7 @@ const SkillsDescription = () => {
 
 
   return (
-    <Stack p={{xs: 1, sm:3, md: 1.25}} mt={{xs:0, md: 3}} >
+    <Stack py={{xs: 1, sm:3, md: 1.25}} px={{xs: .5, md: 1.25}}>
       <Box>
         <Typography sx={baseTextStyles}>I studied </Typography>
         <Typography sx={medTextStyles}>Computer Information Systems </Typography>
