@@ -1,6 +1,5 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import PageContainer from '../components/PageContainer'
 import { Grid, Typography, Link, Stack, IconButton, Box, Container } from '@mui/material'
 import { Link as ReactLink } from 'react-router-dom';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -9,14 +8,14 @@ import DocumentHead from '../components/DocumentHead';
 
 
 const linkStyles = {
-  fontSize: { xs: "1.2rem", sm: "1.3rem", md: "1.5rem", lg: "1.6rem", xl:"1.8rem" },
+  fontSize: { xs: "1.15rem", sm: "1.2rem", md: "1.4rem", lg: "1.5rem", xl:"1.6rem" },
   fontWeight: 400,
   textAlign: "right",
   textTransform: "none",
   // letterSpacing: .5,
   width: "fit-content",
   color: "primary.main",
-  opacity: .7
+  opacity: .6
   // mixBlendMode: "difference"
 }
 
@@ -65,7 +64,7 @@ const Landing = () => {
 
         <Grid item xs={12} sm={4} mt="auto">
           <Stack spacing={1.55} alignItems="flex-end">
-            <Box sx={{border: 0, opacity: .8, display: {xs: "none", md: "initial"}}} pb={6}>
+            <Box sx={{border: 0, opacity: .85, display: {xs: "none", md: "initial"}}} pb={6}>
               <IconButton size="large" onClick={() => navigate("/home")} color="secondary">
                 <ArrowForwardIosIcon fontSize="large"/>
               </IconButton>
@@ -76,7 +75,7 @@ const Landing = () => {
             <Link component={ReactLink} to="/contact" draggable={false}><Typography sx={linkStyles}>Contact</Typography></Link>
           </Stack>
         </Grid>
-        <Grid xs={12} item sx={{ mt: "auto", align: "left"}} pb={2}>
+        <Grid xs={12} item sx={{ mt: "auto", align: "left", opacity: .75}} pb={2}>
           <SocialLinks />
         </Grid>
       </Grid>

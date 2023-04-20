@@ -4,6 +4,7 @@ import ContactDescription from './ContactDescription';
 import SocialLinks from '../../../components/SocialLinks';
 import ContactInformations from './ContactInformations';
 import DownloadIcon from '@mui/icons-material/Download';
+import Footer from '../../../components/Footer';
 
 const Contact = () => {
   return (
@@ -37,6 +38,9 @@ const Contact = () => {
       <Grid item xs={7} mt={5}>
         <Divider flexItem><SocialLinks iconSize="medium" gap={1.5} buttonSize="small" flexDirection="row"/></Divider>
       </Grid>
+      {/* <Grid item xs={12}>
+        <Footer/>
+      </Grid> */}
     </Grid>
   )
 }

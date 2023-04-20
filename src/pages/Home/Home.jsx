@@ -6,7 +6,7 @@ import Footer from '../../components/Footer'
 import DocumentHead from '../../components/DocumentHead'
 import useFirestoreActions from '../../hooks/useFirestoreActions'
 import useRootRedux from '../../hooks/useRootRedux'
-import { Box } from '@mui/material'
+import { Box, Stack } from '@mui/material'
 
 const Home = () => {
   const { skillsList, setData } = useRootRedux();
@@ -20,7 +20,7 @@ const Home = () => {
   }, [])
 
   return (
-    <Box sx={{pt: 0, height: "100vh", overflowX: "hidden"}}>
+    <Stack>
         <DocumentHead
           title="Paolo Bugarin | Home"
           description="I am a full stack web developer based in Los Angeles, California"
@@ -30,7 +30,7 @@ const Home = () => {
         <Skills/>
         <Contact/>
         <Footer/>
-    </Box>
+    </Stack>
   )
 }
 
