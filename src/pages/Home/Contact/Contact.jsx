@@ -38,9 +38,6 @@ const Contact = () => {
       <Grid item xs={7} mt={5}>
         <Divider flexItem><SocialLinks iconSize="medium" gap={1.5} buttonSize="small" flexDirection="row"/></Divider>
       </Grid>
-      {/* <Grid item xs={12}>
-        <Footer/>
-      </Grid> */}
     </Grid>
   )
 }
