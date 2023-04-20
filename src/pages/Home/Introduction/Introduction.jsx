@@ -6,7 +6,7 @@ import DescriptionGridItem from './DescriptionGridItem'
 const Introduction = () => {
   return (
     <Grid container sx={{px: {xs:1.5, md: 3, lg: 4}, minHeight: "88vh", justifyContent: "center", alignItems: "center", maxWidth: "1500px", mx: "auto", pt: 8}}>
-      <Grid item xs={12} md={9} py={{xs:2, lg: 4}} order={{xs: 2, md: 1}}>
+      <Grid item xs={12} md={9} py={{xs:1, lg: 4}} mt={{xs: "auto", lg: 0}} order={{xs: 2, md: 1}}>
         <DescriptionGridItem/>
       </Grid>
       <Grid item xs={12} md={3} mt={{xs: .5, sm:4}} order={{xs: 1, md: 2}}>
