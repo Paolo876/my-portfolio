@@ -16,7 +16,7 @@ const boxStyles = {
 
 const textStyles = {
   opacity: .85,
-  fontSize: 12, 
+  fontSize: {sm: 11, md:12}, 
   fontWeight: 500, 
   mt: 1.5,
 }
@@ -51,12 +51,13 @@ const SkillsShowcase = () => {
       <Grid item xs={11}>
         <Grid container spacing={{ xs: 1.5, md:.5, lg:1.5, xl:1.75}}>
           {skills.array.map(item => 
-            <Grid item xs={2.25} key={item.name} align="center">
+            <Grid item xs={2.25} sm={2.25} key={item.name} align="center">
               <Paper sx={boxStyles} elevation={2}>
-                <Box>
-                  <SkillIconImageItem src={item.url} height="50px" width="50px" duration={800} objectFit='scale-down'/>
-                  <Typography variant="body2" sx={textStyles} color="secondary">{item.name}</Typography>
+                <Box height={{xs: "25px", sm: "35px", md:"40px", lg:"50px"}}>
+                  <SkillIconImageItem src={item.url} duration={800} objectFit='scale-down'/>
                 </Box>
+                <Typography variant="body2" sx={textStyles} color="secondary">{item.name}</Typography>
+
               </Paper>
 
             </Grid>
@@ -65,8 +66,8 @@ const SkillsShowcase = () => {
       </Grid>
       {skills.id === "main" && <Grid item xs={1} sx={{my: 1.5}} >
         <ButtonBase sx={{height: "100%"}} draggable={false} onClick={handleClick}>
-          <Box sx={{opacity: .9}} >
-            <SkillIconImageItem src={RightChevron} height="40px" width="40px" duration={800} objectFit='scale-down'/>
+          <Box sx={{opacity: .9}} height="40px" width="40px">
+            <SkillIconImageItem src={RightChevron}  duration={800} objectFit='scale-down'/>
           </Box>
         </ButtonBase>
       </Grid>}
