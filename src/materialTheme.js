@@ -8,6 +8,7 @@ export const theme = createTheme({
           // width: "100vw",
           // height: "100vh",
           // maxHeight: "-webkit-fill-available",
+          position: "relative",
           background: 'rgb(38,37,37)',
           background     : `radial-gradient(circle, rgba(46,45,45,1) 0%, rgba(38,37,37,1) 85%)`,
         },

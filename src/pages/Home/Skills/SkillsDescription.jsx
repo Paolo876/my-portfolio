@@ -56,8 +56,7 @@ const SkillsDescription = () => {
           color="primary"
           endIcon={<KeyboardArrowRightIcon color="inherit"/>}
           onClick={() => navigate("/projects")}
-          size="large"
-          sx={{fontWeight: 500, letterSpacing: 1.5}}
+          sx={{fontWeight: 500, letterSpacing: 1.5, fontSize: {xs: 11, sm: 13, md: 14, lg: 16}}}
         >
           Explore My Projects
         </Button>

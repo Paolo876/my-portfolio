@@ -26,7 +26,7 @@ const ContactDescription = () => {
           color="primary"
           endIcon={<KeyboardArrowRightIcon color="inherit"/>}
           onClick={() => navigate("/contact")}
-          size="large"
+          sx={{fontSize: {xs: 11, sm: 13, md: 14, lg: 16}}}
         >
           Contact Page
         </Button>

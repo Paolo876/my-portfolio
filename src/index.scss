@@ -14,7 +14,7 @@ body {
 }
 
 .noise-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
@@ -24,9 +24,9 @@ body {
   z-index: -1;
 }
 
-.App{
-  position: relative;
-}
+// .App{
+//   position: relative;
+// }
 
 
 ::-webkit-scrollbar {

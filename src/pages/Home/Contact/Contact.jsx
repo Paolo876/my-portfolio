@@ -19,7 +19,7 @@ const Contact = () => {
           </Grid>
           <Grid item xs={12} md={5.5}>
             <Box sx={{width: "100%", height: "100%", display: "flex", justifyContent: "right", pt: 3}}>
-              <Button endIcon={<DownloadIcon/>} variant="contained" color="secondary">Download My CV</Button>
+              <Button endIcon={<DownloadIcon/>} variant="contained" color="secondary" sx={{fontSize: {xs: 11, sm: 13, md: 14, lg: 16}}}>Download My CV</Button>
             </Box>
           </Grid>
         </Grid>
@@ -36,7 +36,7 @@ const Contact = () => {
         </Grid>
       </Grid>
       <Grid item xs={10} md={7} mt={5}>
-        <Divider flexItem><SocialLinks iconSize="medium" gap={1.5} buttonSize="small" flexDirection="row"/></Divider>
+        <Divider flexItem><SocialLinks gap={1.5} buttonSize="small" flexDirection="row"/></Divider>
       </Grid>
     </Grid>
   )
