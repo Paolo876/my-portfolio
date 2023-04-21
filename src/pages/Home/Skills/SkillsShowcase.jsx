@@ -16,9 +16,10 @@ const boxStyles = {
 
 const textStyles = {
   opacity: .85,
-  fontSize: {sm: 11, md:12}, 
+  fontSize: {xs: 10, sm: 10, md:11, lg: 12}, 
   fontWeight: 500, 
   mt: 1.5,
+  // display: {xs: "none", sm: "initial"}
 }
 
 const SkillsShowcase = () => {
@@ -40,20 +41,20 @@ const SkillsShowcase = () => {
   }
 
   if(skills) return (
-    <Grid container px={{ xs:0, lg:2}} sx={{position: "relative"}} align="center">
-      {skills.id !== "main" && <Grid item xs={1} sx={{my: 1.5}}>
+    <Grid container px={{ xs:0, lg:2}} sx={{position: "relative"}} align="center" justifyContent="space-between">
+      {skills.id !== "main" && <Grid item xs={1.2} sm={1} sx={{my: 1.5}}>
         <ButtonBase sx={{height: "100%", transform: "rotate(180deg)"}} draggable={false} onClick={handleClick}>
-          <Box sx={{opacity: .75}}>
-            <SkillIconImageItem src={RightChevron} height="40px" width="40px" duration={800} objectFit='scale-down'/>
+          <Box sx={{opacity: .75}} height="40px" width="40px" >
+            <SkillIconImageItem src={RightChevron}duration={800} objectFit='scale-down'/>
           </Box>
         </ButtonBase>
       </Grid>}
-      <Grid item xs={11}>
+      <Grid item xs={10.5} sm={11}>
         <Grid container spacing={{ xs: 1.5, md:.5, lg:1.5, xl:1.75}}>
           {skills.array.map(item => 
-            <Grid item xs={2.25} sm={2.25} key={item.name} align="center">
+            <Grid item xs={2.8} sm={2.25} key={item.name} align="center">
               <Paper sx={boxStyles} elevation={2}>
-                <Box height={{xs: "25px", sm: "35px", md:"40px", lg:"50px"}}>
+                <Box height={{xs: "25px", sm: "35px", md:"37px", lg:"45px"}} width={{xs: "25px", sm: "35px", md:"37px", lg:"45px"}}>
                   <SkillIconImageItem src={item.url} duration={800} objectFit='scale-down'/>
                 </Box>
                 <Typography variant="body2" sx={textStyles} color="secondary">{item.name}</Typography>
@@ -64,7 +65,7 @@ const SkillsShowcase = () => {
           )}
         </Grid>
       </Grid>
-      {skills.id === "main" && <Grid item xs={1} sx={{my: 1.5}} >
+      {skills.id === "main" && <Grid item xs={1} sm={1} sx={{my: 1.5}} >
         <ButtonBase sx={{height: "100%"}} draggable={false} onClick={handleClick}>
           <Box sx={{opacity: .9}} height="40px" width="40px">
             <SkillIconImageItem src={RightChevron}  duration={800} objectFit='scale-down'/>
