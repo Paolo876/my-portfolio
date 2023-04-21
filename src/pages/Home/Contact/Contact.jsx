@@ -8,7 +8,7 @@ import Footer from '../../../components/Footer';
 
 const Contact = () => {
   return (
-    <Grid container sx={{px: {xs:3, md: 1.5, lg: 3}, py: {xs:3, sm: 4, md: 5, lg: 10}, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
+    <Grid container sx={{px: {xs:1.5, sm: 3, md: 1.5, lg: 3}, py: {xs:3, sm: 4, md: 5, lg: 10}, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
       <Grid item xs={12}>
         <Grid container  sx={{justifyContent: "space-between", alignItems: "flex-start" }}>
           <Grid item xs={12} md={6.5}>
@@ -35,7 +35,7 @@ const Contact = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item xs={7} mt={5}>
+      <Grid item xs={10} md={7} mt={5}>
         <Divider flexItem><SocialLinks iconSize="medium" gap={1.5} buttonSize="small" flexDirection="row"/></Divider>
       </Grid>
     </Grid>

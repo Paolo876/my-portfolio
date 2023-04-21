@@ -8,14 +8,14 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 const baseTextStyles = {
   display: "inline", 
   fontWeight: 200, 
-  fontSize: {xs: 12, sm: 14, md: 15, lg: 17}, 
+  fontSize: {xs: 13, sm: 14, md: 15, lg: 17}, 
   lineHeight: 1.75
 }
 
 const medTextStyles = {
   display: "inline", 
   fontWeight: 400, 
-  fontSize: {xs: 12.5, sm: 14.5, md: 15.5, lg: 17.5}, 
+  fontSize: {xs: 13.5, sm: 14.5, md: 15.5, lg: 17.5}, 
   lineHeight: 1.75
 }
 const SkillsDescription = () => {

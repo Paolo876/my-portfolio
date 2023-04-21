@@ -10,7 +10,7 @@ const ContactDescription = () => {
 
   return (
     <>
-      <Box mt={6}>
+      <Box mt={{xs:3, sm: 4, md: 5, lg: 6}}>
         <Typography sx={{fontWeight: 300, fontSize: {xs:15, sm: 17, md: 18, lg: 19}, opacity: .95, lineHeight: 1.5}}>
           I am excited to take a leap forward and further hone my knowledge and skills with the right company.
         </Typography>
@@ -20,7 +20,7 @@ const ContactDescription = () => {
         </Typography>
 
       </Box> 
-      <Box mt={8}>
+      <Box mt={{xs:4, md: 6, lg: 8}}>
         <Button 
           variant="outlined" 
           color="primary"
