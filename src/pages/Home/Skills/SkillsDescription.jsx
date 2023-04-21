@@ -50,7 +50,7 @@ const SkillsDescription = () => {
         <Typography sx={medTextStyles}>ExpressJS </Typography>
         <Typography sx={baseTextStyles}>in the Server-Side along with related libraries and frameworks.</Typography>
       </Box>
-      <Box mt={{xs:4, md: 8}} mb={{xs:0, md: 4}} >
+      <Box mt={{xs:4, md: 8}} mb={{xs:2, md: 4}} >
         <Button 
           variant="contained" 
           color="primary"
