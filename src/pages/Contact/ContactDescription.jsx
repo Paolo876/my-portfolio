@@ -46,7 +46,7 @@ const ContactDescription = () => {
         <Box>
           <Typography variant="body1" sx={{letterSpacing: .5, textTransform: "none", fontWeight: 500, opacity: .9}}>Social</Typography>
           <Box sx={{background: "white", height: "1px", width: "100%", my: .1, opacity: .15}}></Box>
-          <SocialLinks mixBlendMode='none' buttonSize='medium' iconSize='small' gap={.5}/>
+          <SocialLinks mixBlendMode='none' buttonSize='medium' iconSize={18} gap={1}/>
         </Box>
       </Box>
     </Stack>

@@ -40,7 +40,7 @@ const Landing = () => {
         description="I am a full stack web developer based in Los Angeles, California"
         keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
       />
-      <Grid container sx={{px: {xs: 1, md: 2}, height: "100%" }}>
+      <Grid container sx={{px: {xs: 1, lg: 2}, height: "100%" }}>
         <Grid item pt={{xs: 7, md:11}} xs={12} sm={8} sx={{minHeight: {xs: "fit-content", md:"70vh"}}}>
           <Typography variant="h1" sx={nameStyles}>Paolo</Typography>
           <Typography variant="h1" sx={nameStyles}>Bugarin</Typography>
