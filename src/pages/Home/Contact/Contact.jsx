@@ -27,10 +27,10 @@ const Contact = () => {
 
       <Grid item xs={12}>
         <Grid container  sx={{my: 4, justifyContent: "center", alignItems: "flex-start" }} spacing={1}>
-          <Grid item xs={12} md={5} lg={6}>
+          <Grid item xs={12} sm={10} md={6} lg={6} order={{xs: 2, md: 1}}>
             <ContactDescription/>
           </Grid>
-          <Grid item xs={12} md={7} lg={6}>
+          <Grid item xs={12} sm={10} md={6} lg={6} order={{xs: 1, md: 2}}>
             <ContactInformations/>
           </Grid>
         </Grid>
