@@ -8,26 +8,44 @@ import DocumentHead from '../components/DocumentHead';
 
 
 const linkStyles = {
-  fontSize: { xs: "1.15rem", sm: "1.2rem", md: "1.4rem", lg: "1.5rem", xl:"1.6rem" },
-  fontWeight: 400,
+  fontSize: { xs: "1.15rem", sm: "1.2rem", md: "1.4rem", lg: "1.5rem", xl:"1.4rem" },
+  fontWeight: 300,
   textAlign: "right",
   textTransform: "none",
-  // letterSpacing: .5,
+  letterSpacing: 1.75,
   width: "fit-content",
-  color: "primary.main",
-  opacity: .6
-  // mixBlendMode: "difference"
+  opacity: .9,
+  mixBlendMode: "difference",
+  transition: "all 200ms linear",
+  "&:hover":{
+    opacity:1,
+    color: "secondary.light",
+    textShadow: "1px 1px 3px rgba(150,150,150,.15)",
+  }
 }
 
 const nameStyles = {
-  opacity: .95, 
+  // opacity: .95, 
   mixBlendMode: "difference", 
   textTransform: "none",
   fontWeight: 800,
   fontSize: { xs:"5.6rem", sm: "7rem", md: "8rem", lg: "10rem", xl:"11rem" },
   lineHeight: .85,
   letterSpacing: .1,
-  userSelect: "none"
+  userSelect: "none",
+}
+
+const boxStyles = {
+  // border: 1,
+  backgroundColor: "rgba(255,255,255,1)",
+  opacity: .0,
+  mixBlendMode: "difference",
+  height: 4,
+  width: 4,
+  position: "absolute",
+  bottom: 1,
+  right: -10,
+  // transform: "translateY(-50%)"
 }
 
 const Landing = () => {
@@ -49,10 +67,10 @@ const Landing = () => {
             sx={{
               mt:{ xs: 4, sm: 5, md: 5, lg: 7, xl:10 } ,
               fontWeight: 200, 
-              fontSize: { xs: "1.2rem", sm: "1.3rem", md: "1.3rem", lg: "1.4rem", xl:"1.5rem" },
-              opacity: .75, 
+              fontSize: { xs: "1.2rem", sm: "1.3rem", md: "1.3rem", lg: "1.4rem", xl:"1.7rem" },
+              opacity: .7, 
               mixBlendMode: "difference", 
-              letterSpacing: { xs: .5, md: 1.25, lg: 1.25, xl:1.25 },
+              letterSpacing: { xs: .5, md: 1.25, lg: 1.25, xl:1.5 },
               textTransform: "none",
               userSelect: "none"
 
@@ -63,16 +81,16 @@ const Landing = () => {
         </Grid>
 
         <Grid item xs={12} sm={4} mt="auto">
-          <Stack spacing={1.55} alignItems="flex-end" pr={{xs:1, sm:2, md:0}}>
-            <Box sx={{border: 0, opacity: .85, display: {xs: "none", md: "initial"}}} pb={6}>
-              <IconButton size="large" onClick={() => navigate("/home")} color="secondary">
+          <Stack spacing={1.8} alignItems="flex-end" pr={{xs:1, sm:2, md:0}}>
+            <Box sx={{border: 1, opacity: .75, display: {xs: "none", md: "initial"}}} mb={6}>
+              <IconButton size="large" onClick={() => navigate("/home")} color="primary">
                 <ArrowForwardIosIcon fontSize="large"/>
               </IconButton>
             </Box>
-            <Link component={ReactLink} to="/home" draggable={false}><Typography sx={linkStyles}>Home</Typography></Link>
-            <Link component={ReactLink} to="/projects" draggable={false}><Typography sx={linkStyles}>Projects</Typography></Link>
-            <Link component={ReactLink} to="/about" draggable={false}><Typography sx={linkStyles}>About</Typography></Link>
-            <Link component={ReactLink} to="/contact" draggable={false}><Typography sx={linkStyles}>Contact</Typography></Link>
+            <Link component={ReactLink} to="/home" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Home</Typography><Box sx={boxStyles}></Box></Link>
+            <Link component={ReactLink} to="/projects" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Projects</Typography><Box sx={boxStyles}></Box></Link>
+            <Link component={ReactLink} to="/about" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>About</Typography><Box sx={boxStyles}></Box></Link>
+            <Link component={ReactLink} to="/contact" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Contact</Typography><Box sx={boxStyles}></Box></Link>
           </Stack>
         </Grid>
         <Grid xs={12} item sx={{ mt: "auto", align: "left", opacity: .75}} pb={2}>
