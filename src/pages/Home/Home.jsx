@@ -1,8 +1,10 @@
 import { useEffect } from 'react'
 import Introduction from './Introduction/Introduction'
+import Purpose from './Purpose/Purpose'
 import Contact from './Contact/Contact'
 import Skills from './Skills/Skills'
 import Footer from '../../components/Footer'
+
 import DocumentHead from '../../components/DocumentHead'
 import useFirestoreActions from '../../hooks/useFirestoreActions'
 import useRootRedux from '../../hooks/useRootRedux'
@@ -27,6 +29,7 @@ const Home = () => {
           keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
         />
         <Introduction/>
+        <Purpose/>
         <Skills/>
         <Contact/>
         <Footer/>

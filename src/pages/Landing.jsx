@@ -60,9 +60,9 @@ const Landing = () => {
       }
     }
   
-    window.ontouchmove = e => {
-      console.log(e)
-    }
+    // window.ontouchmove = e => {
+    //   console.log(e)
+    // }
     return () => {
       window.onwheel = null;
     };
