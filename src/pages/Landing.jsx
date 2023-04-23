@@ -82,7 +82,22 @@ const Landing = () => {
 
         <Grid item xs={12} sm={4} mt="auto">
           <Stack spacing={1.8} alignItems="flex-end" pr={{xs:1, sm:2, md:0}}>
-            <Box sx={{border: 1, opacity: .75, display: {xs: "none", md: "initial"}}} mb={6}>
+            <Box 
+              sx={{
+                border: 1, 
+                opacity: .75, 
+                display: { xs: "none", md: "initial" },
+                borderColor: "rgba(255,255,255,.35)", 
+                transition: "all 200ms linear",
+
+                "&:hover": { 
+                  borderColor: "rgba(255,255,255,.5)",
+                  opacity: 1, 
+
+                }
+              }} 
+              mb={6}
+            >
               <IconButton size="large" onClick={() => navigate("/home")} color="primary">
                 <ArrowForwardIosIcon fontSize="large"/>
               </IconButton>
