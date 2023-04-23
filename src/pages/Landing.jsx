@@ -8,15 +8,16 @@ import DocumentHead from '../components/DocumentHead';
 
 
 const linkStyles = {
-  fontSize: { xs: "1.15rem", sm: "1.2rem", md: "1.4rem", lg: "1.5rem", xl:"1.4rem" },
-  fontWeight: 300,
+  fontSize: { xs: "1.05rem", sm: "1.2rem", md: "1.4rem", lg: "1.5rem", xl:"1.4rem" },
+  fontWeight: 400,
   textAlign: "right",
   textTransform: "none",
-  letterSpacing: 1.75,
+  letterSpacing: {xs: 1, md: 1.75},
   width: "fit-content",
-  opacity: .75,
+  opacity: .7,
   mixBlendMode: "difference",
   transition: "all 200ms linear",
+  fontFamily: "Manrope",
   "&:hover":{
     opacity:1,
     color: "secondary.light",
@@ -31,7 +32,7 @@ const nameStyles = {
   fontWeight: 800,
   fontSize: { xs:"5.6rem", sm: "7rem", md: "8rem", lg: "10rem", xl:"11rem" },
   lineHeight: .85,
-  letterSpacing: .1,
+  // letterSpacing: .001,
   userSelect: "none",
 }
 
@@ -81,7 +82,7 @@ const Landing = () => {
         </Grid>
 
         <Grid item xs={12} sm={4} mt="auto">
-          <Stack spacing={1.8} alignItems="flex-end" pr={{xs:1, sm:2, md:0}}>
+          <Stack spacing={{xs:2.25, md:1.8}} alignItems="flex-end" pr={{xs:1, sm:2, md:0}}>
             <Box 
               sx={{
                 border: 1, 
@@ -108,7 +109,7 @@ const Landing = () => {
             <Link component={ReactLink} to="/contact" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Contact</Typography><Box sx={boxStyles}></Box></Link>
           </Stack>
         </Grid>
-        <Grid xs={12} item sx={{ mt: "auto", align: "left", opacity: .75}} pb={2}>
+        <Grid xs={12} item sx={{ mt: "auto", align: "left", opacity: .75}} pb={1}>
           <SocialLinks />
         </Grid>
       </Grid>
