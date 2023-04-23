@@ -14,7 +14,7 @@ const linkStyles = {
   textTransform: "none",
   letterSpacing: 1.75,
   width: "fit-content",
-  opacity: .9,
+  opacity: .75,
   mixBlendMode: "difference",
   transition: "all 200ms linear",
   "&:hover":{
