@@ -1,5 +1,5 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState, useCallback } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Grid, Typography, Link, Stack, IconButton, Box, Container } from '@mui/material'
 import { Link as ReactLink } from 'react-router-dom';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -8,7 +8,7 @@ import DocumentHead from '../components/DocumentHead';
 
 
 const linkStyles = {
-  fontSize: { xs: "1.05rem", sm: "1.2rem", md: "1.4rem", lg: "1.5rem", xl:"1.4rem" },
+  fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.4rem", lg: "1.5rem", xl:"1.4rem" },
   fontWeight: 400,
   textAlign: "right",
   textTransform: "none",
@@ -51,7 +51,22 @@ const boxStyles = {
 
 const Landing = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
+  useEffect(() => {
+    window.onwheel = e => {
+      if(e.deltaY > 0){
+        navigate("/home")
+      }
+    }
+  
+    window.ontouchmove = e => {
+      console.log(e)
+    }
+    return () => {
+      window.onwheel = null;
+    };
+  }, []);
   return (
     <Container maxWidth="xl" sx={{pt: 8, height: "93vh", px:0}}>
       <DocumentHead
@@ -66,7 +81,7 @@ const Landing = () => {
           <Typography 
             variant="h5"
             sx={{
-              mt:{ xs: 4, sm: 5, md: 5, lg: 7, xl:10 } ,
+              mt:{ xs: 4.5, sm: 5, md: 5, lg: 7, xl:10 } ,
               fontWeight: 200, 
               fontSize: { xs: "1.2rem", sm: "1.3rem", md: "1.3rem", lg: "1.4rem", xl:"1.7rem" },
               opacity: .7, 
@@ -82,7 +97,7 @@ const Landing = () => {
         </Grid>
 
         <Grid item xs={12} sm={4} mt="auto">
-          <Stack spacing={{xs:2.25, md:1.8}} alignItems="flex-end" pr={{xs:1, sm:2, md:0}}>
+          <Stack spacing={{xs:2.5, md:1.8}} alignItems="flex-end" pr={{xs:1, sm:2, md:0}}>
             <Box 
               sx={{
                 border: 1, 
