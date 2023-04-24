@@ -14,7 +14,10 @@ const MissionDescription = () => {
     </Box>
     <Box sx={{backgroundColor: "secondary.dark", height: "3px", width: "12px", mt: .75, mb: {xs:1, md: 2, lg: 3}, opacity: .65, ml: .3, visibility: {xs: "hidden", md: "visible"}}}></Box>
     <Typography variant="body1" fontSize={{xs:15, sm: 17, md: 18}} sx={{mixBlendMode: "difference"}} letterSpacing={.5} lineHeight={1.4} fontWeight={200}>
-      To provide a solution for a 
+      To provide an efficient solution for a company's development needs.<br/>
+      To offer my services and provide a positive representation for the company.<br/>
+      To work as a team player and be a reliable member to ensure a more productive system.<br/>
+      To be a valuable asset and give growth to the company's value.
     </Typography>
   </Box>
   )
