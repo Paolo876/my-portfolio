@@ -13,10 +13,8 @@ const MissionDescription = () => {
       <Typography variant="h4" align="left" fontSize={{xs:25, sm: 28, md: 32, lg: 35}} letterSpacing={{xs:1.5, md: 4}} sx={{opacity: .6}} color="secondary.main">My Mission</Typography>
     </Box>
     <Box sx={{backgroundColor: "secondary.dark", height: "3px", width: "12px", mt: .75, mb: {xs:1, md: 2, lg: 3}, opacity: .65, ml: .3, visibility: {xs: "hidden", md: "visible"}}}></Box>
-    <Typography variant="body1" fontSize={{xs:16, sm: 17, md: 18.5}} sx={{mixBlendMode: "difference"}} letterSpacing={.5} fontWeight={200}>
-      I am seeking for a position in the field of Web Development. 
-      I want to challenge myself and apply the knowledge I gained throughout my learning journey.
-      I am ready to work with the right company that will help me bring out my full potential.
+    <Typography variant="body1" fontSize={{xs:15, sm: 17, md: 18}} sx={{mixBlendMode: "difference"}} letterSpacing={.5} lineHeight={1.4} fontWeight={200}>
+      To provide a solution for a 
     </Typography>
   </Box>
   )
