@@ -31,8 +31,8 @@ const Home = () => {
         />
         <Introduction/>
         <Purpose/>
-        <Skills/>
         <Process/>
+        <Skills/>
         <Contact/>
         <Footer/>
     </Stack>

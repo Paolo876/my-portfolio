@@ -76,19 +76,39 @@ const ProcessStepper = () => {
     <Stepper alternativeLabel connector={<ColorlibConnector />} activeStep={4} >
       <Step>
         <StepLabel StepIconComponent={ColorlibStepIcon}>
+          
           <Typography variant="h6" letterSpacing={1.25} fontWeight={800} fontSize={18}>Idea</Typography>
-          <Typography variant="body1"></Typography>
+          <Typography variant="body1" fontSize={16.5} px={1.25} lineHeight={1.4} mt={3} sx={{mixBlendMode: "difference"}}>
+            A great idea comes when we least expect it. When it does, I take note of it, list down its use and functions, and turn it into a project.
+          </Typography>
         </StepLabel>
       </Step>
       <Step>
-        <StepLabel StepIconComponent={ColorlibStepIcon}>asdasd</StepLabel>
+        <StepLabel StepIconComponent={ColorlibStepIcon}>
+          <Typography variant="h6" letterSpacing={0.25} fontWeight={800} fontSize={17.5}>Conceptualization</Typography>
+          <Typography variant="body1" fontSize={16.5} px={1.25} lineHeight={1.4} mt={3} sx={{mixBlendMode: "difference"}}>
+           This is the process where I decide on the project theme, color scheme, considerations, and utilities of the project.
+          </Typography>
+        </StepLabel>
       </Step>
       <Step>
-        <StepLabel StepIconComponent={ColorlibStepIcon}>asdasd</StepLabel>
+        <StepLabel StepIconComponent={ColorlibStepIcon}>
+          <Typography variant="h6" letterSpacing={1.25} fontWeight={800} fontSize={18}>Planning</Typography>
+          <Typography variant="body1" fontSize={16.5} px={1.25} lineHeight={1.4} mt={3} sx={{mixBlendMode: "difference"}}>
+           This process is where I layout the structure of my app. I write down the web pages needed, the libraries/frameworks to use, 
+           and the initial pseudo-code for the app.
+          </Typography>
+        </StepLabel>
       </Step>
       <Step>
-        <StepLabel StepIconComponent={ColorlibStepIcon}>asdasd</StepLabel>
+        <StepLabel StepIconComponent={ColorlibStepIcon}>
+          <Typography variant="h6" letterSpacing={1.25} fontWeight={800} fontSize={18}>Execution</Typography>
+          <Typography variant="body1" fontSize={16.5} px={1.25} lineHeight={1.4} mt={3} sx={{mixBlendMode: "difference"}}>
+           I always try to make sure that I follow my process and stick to my concept. This way the outcome will be just as how I expect it to be.
+          </Typography>
+        </StepLabel>
       </Step>
+
     </Stepper>
   )
 }
