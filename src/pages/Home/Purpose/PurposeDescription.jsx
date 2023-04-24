@@ -16,7 +16,7 @@ const PurposeDescription = () => {
       </Box>
       <Box sx={{backgroundColor: "secondary.dark", height: "3px", width: "12px", mt: .75, mb: {xs:1, md: 2, lg: 3}, opacity: .65, ml: .3, visibility: {xs: "hidden", md: "visible"}}}></Box>
       <Typography variant="body1" fontSize={{xs:13, sm: 15, md: 16, lg: 18}} sx={{mixBlendMode: "difference"}} letterSpacing={.15} fontWeight={200}>
-        To seek a Frontend/Backend/FullStack Developer position or related.<br/>
+        To seek a Frontend/Backend/FullStack Developer position or related work.<br/>
         To challenge myself and apply the knowledge I gained throughout my learning journey.<br/>
         To learn new technologies that I can add to my arsenal of skills.<br/>
         To work with the right company that will help me bring out my full potential.

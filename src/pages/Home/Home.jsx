@@ -9,6 +9,7 @@ import DocumentHead from '../../components/DocumentHead'
 import useFirestoreActions from '../../hooks/useFirestoreActions'
 import useRootRedux from '../../hooks/useRootRedux'
 import { Box, Stack } from '@mui/material'
+import Process from './Process/Process'
 
 const Home = () => {
   const { skillsList, setData } = useRootRedux();
@@ -31,6 +32,7 @@ const Home = () => {
         <Introduction/>
         <Purpose/>
         <Skills/>
+        <Process/>
         <Contact/>
         <Footer/>
     </Stack>
