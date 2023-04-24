@@ -12,7 +12,7 @@ const boxStyles = {
   height: { md:"110px", lg:"120px"},
   userSelect: "none",
   opacity: .9,  
-  // background: "rgba(25,25,50,0.5)"
+  background: "rgba(60,60,60,0.1)"
 }
 
 const textStyles = {
@@ -54,7 +54,7 @@ const SkillsShowcase = () => {
         <Grid container spacing={{ xs: 1.5, md:.5, lg:1.5, xl:1.75}}>
           {skills.array.map(item => 
             <Grid item xs={2.8} sm={2.25} key={item.name} align="center">
-              <Paper sx={boxStyles} elevation={4} variant="elevation">
+              <Paper sx={boxStyles} elevation={5} variant="elevation">
                 <Box height={{xs: "25px", sm: "35px", md:"37px", lg:"45px"}} width={{xs: "25px", sm: "35px", md:"37px", lg:"45px"}}>
                   <SkillIconImageItem src={item.url} duration={800} objectFit='scale-down'/>
                 </Box>
