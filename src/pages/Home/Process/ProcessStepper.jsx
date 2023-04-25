@@ -74,27 +74,18 @@ function ColorlibStepIcon(props) {
 const ProcessStepper = () => {
   return (
     <Stepper alternativeLabel connector={<ColorlibConnector />} activeStep={4} >
-      {/* <Step>
-        <StepLabel StepIconComponent={ColorlibStepIcon}>
-          
-          <Typography variant="h6" letterSpacing={1.25} fontWeight={800} fontSize={18}>Idea</Typography>
-          <Typography variant="body1" fontSize={16.5} px={1.25} lineHeight={1.4} mt={3} sx={{mixBlendMode: "difference"}}>
-            A great idea comes when we least expect it. When it does, I take note of it, list down its use and functions, and turn it into a project.
-          </Typography>
-        </StepLabel>
-      </Step> */}
       <Step>
         <StepLabel StepIconComponent={ColorlibStepIcon}>
           <Typography variant="h6" letterSpacing={0.25} fontWeight={800} fontSize={17.5}>Conceptualization</Typography>
-          <Typography variant="body1" fontSize={16.5} px={1.25} lineHeight={1.4} mt={3} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word"}}>
-            The idea turns into a concept. This is the process where I construct the main purpose and use of the project. I then decide of the project theme, color scheme, considerations, and utilities of the app.
+          <Typography variant="body1" fontSize={16} px={1.25} lineHeight={1.4} mt={3} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word"}}>
+            The idea turns into a concept. This is the process where I construct the main purpose and functions of the project. I then decide of the project theme, color scheme, considerations, and utilities of the app.
           </Typography>
         </StepLabel>
       </Step>
       <Step>
         <StepLabel StepIconComponent={ColorlibStepIcon}>
           <Typography variant="h6" letterSpacing={1.25} fontWeight={800} fontSize={18}>Planning</Typography>
-          <Typography variant="body1" fontSize={16.5} px={1.25} lineHeight={1.4} mt={3} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word"}}>
+          <Typography variant="body1" fontSize={16} px={1.25} lineHeight={1.4} mt={3} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word"}}>
            This process is where I layout the structure of my app or what I call the blueprint stage. I write down the web pages needed, the libraries or frameworks to use, 
            and the initial pseudo-code for the app.
           </Typography>
@@ -103,7 +94,7 @@ const ProcessStepper = () => {
       <Step>
         <StepLabel StepIconComponent={ColorlibStepIcon}>
           <Typography variant="h6" letterSpacing={1.25} fontWeight={800} fontSize={18}>Execution</Typography>
-          <Typography variant="body1" fontSize={16.5} px={1.25} lineHeight={1.4} mt={3} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word"}}>
+          <Typography variant="body1" fontSize={16} px={1.25} lineHeight={1.4} mt={3} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word"}}>
            When the app's foundations have been set, it is time to start building. I always try to make sure that I follow my plan and stick to my concept. 
            This way the result will be just as I envisioned.
           </Typography>
