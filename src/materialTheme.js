@@ -56,13 +56,12 @@ export const theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: 'rgba(218, 162, 35, 1)',
-      // main: 'rgba(209, 160, 35, 1)',
-      // main: '#ecbe18',
+      // main: 'rgba(218, 162, 35, 1)',
+      main: '#d19119',
     },
     secondary: {
-      // main: '#0017ea',
-      main: '#9da5f7',
+      // main: '#9da5f7',
+      main: '#5b6eb5',
     },
     info: {
       main: '#18ecbe',
