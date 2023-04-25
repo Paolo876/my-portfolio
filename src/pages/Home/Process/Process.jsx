@@ -12,7 +12,9 @@ const Process = () => {
           <Box sx={{background: "rgba(239,235,229,1)", height: "8px", width: "12px", mr: "auto", mt: {xs: 1.5, md:2}, ml: .2}} ></Box>
         </Grid>
         <Grid item xs={12} md={12} lg={10} pl={2}>
-          <ProcessStepper/>
+          <Box sx={{display: {xs: "none", md: "initial"}}}>
+            <ProcessStepper/>
+          </Box>
           {/* create vertical stepper for xs,sm widths */}
         </Grid>
       </Grid>

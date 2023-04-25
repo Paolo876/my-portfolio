@@ -1,14 +1,16 @@
 import React from 'react'
-import { Step, StepLabel, Stepper, Typography } from '@mui/material'
+import { Step, StepLabel, Stepper, Typography, Box } from '@mui/material'
 import { styled } from '@mui/material/styles';
-import SettingsIcon from '@mui/icons-material/Settings';
-import GroupAddIcon from '@mui/icons-material/GroupAdd';
-import VideoLabelIcon from '@mui/icons-material/VideoLabel';
+import conceptIcon from "../../../assets/concept.svg";
+import planningIcon from "../../../assets/planning.svg";
+import executeIcon from "../../../assets/execute.svg";
 import StepConnector, { stepConnectorClasses } from '@mui/material/StepConnector';
+import SkillIconImageItem from "../../../components/SkillIconImageItem"
+
 
 const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
   [`&.${stepConnectorClasses.alternativeLabel}`]: {
-    top: 22,
+    top: 25,
   },
   [`&.${stepConnectorClasses.active}`]: {
     [`& .${stepConnectorClasses.line}`]: {
@@ -23,8 +25,9 @@ const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
     },
   },
   [`& .${stepConnectorClasses.line}`]: {
-    height: 3,
+    height: 2,
     border: 0,
+    opacity:.65, 
     backgroundColor:
       theme.palette.mode === 'dark' ? theme.palette.grey[800] : '#eaeaf0',
     borderRadius: 1,
@@ -33,11 +36,13 @@ const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
 
 
 const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? theme.palette.grey[700] : '#ccc',
+  // backgroundColor: theme.palette.mode === 'dark' ? theme.palette.grey[700] : '#ccc',
+  // backgroundColor: "theme.palette.primary",
   zIndex: 1,
-  color: '#fff',
-  width: 50,
-  height: 50,
+  // color: '#fff',
+  width: 55,
+  height: 55,
+  // padding: 7,
   display: 'flex',
   borderRadius: '50%',
   justifyContent: 'center',
@@ -58,9 +63,9 @@ function ColorlibStepIcon(props) {
   const { active, completed, className } = props;
 
   const icons = {
-    1: <SettingsIcon />,
-    2: <GroupAddIcon />,
-    3: <VideoLabelIcon />,
+    1: <Box sx={{filter: "invert(.95)", p:1.25}}><SkillIconImageItem src={conceptIcon} objectFit='scale-down'/></Box>,
+    2: <Box sx={{filter: "invert(.95)", p:1.5}}><SkillIconImageItem src={planningIcon} objectFit='scale-down'/></Box>,
+    3: <Box sx={{filter: "invert(.95)", p:1.25}}><SkillIconImageItem src={executeIcon} objectFit='scale-down'/></Box>,
   };
 
   return (
@@ -77,7 +82,7 @@ const ProcessStepper = () => {
       <Step>
         <StepLabel StepIconComponent={ColorlibStepIcon}>
           <Typography variant="h6" letterSpacing={0.25} fontWeight={800} fontSize={17.5}>Conceptualization</Typography>
-          <Typography variant="body1" fontSize={16} px={1.25} lineHeight={1.4} mt={3} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word"}}>
+          <Typography variant="body1" fontSize={15.5} fontWeight={400} px={4.25} mt={3.5} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word", opacity: .9}}>
             The idea turns into a concept. This is the process where I construct the main purpose and functions of the project. I then decide of the project theme, color scheme, considerations, and utilities of the app.
           </Typography>
         </StepLabel>
@@ -85,18 +90,18 @@ const ProcessStepper = () => {
       <Step>
         <StepLabel StepIconComponent={ColorlibStepIcon}>
           <Typography variant="h6" letterSpacing={1.25} fontWeight={800} fontSize={18}>Planning</Typography>
-          <Typography variant="body1" fontSize={16} px={1.25} lineHeight={1.4} mt={3} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word"}}>
-           This process is where I layout the structure of my app or what I call the blueprint stage. I write down the web pages needed, the libraries or frameworks to use, 
-           and the initial pseudo-code for the app.
+          <Typography variant="body1" fontSize={15.5} fontWeight={400} px={4.25} mt={3.5} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word", opacity: .9}}>
+            This process is where start the blueprint or layout the structure or UI/UX of my app. I list down the web pages needed, the libraries or frameworks to use, 
+            and the initial pseudo-code draft.
           </Typography>
         </StepLabel>
       </Step>
       <Step>
         <StepLabel StepIconComponent={ColorlibStepIcon}>
           <Typography variant="h6" letterSpacing={1.25} fontWeight={800} fontSize={18}>Execution</Typography>
-          <Typography variant="body1" fontSize={16} px={1.25} lineHeight={1.4} mt={3} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word"}}>
-           When the app's foundations have been set, it is time to start building. I always try to make sure that I follow my plan and stick to my concept. 
-           This way the result will be just as I envisioned.
+          <Typography variant="body1" fontSize={15.5} fontWeight={400} px={4.25} mt={3.5} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word", opacity: .9}}>
+            When the foundations have been set, it's time to start building. I always try to make sure that I follow my plan and stick to my concept. 
+            This way the result will be just as I envisioned.
           </Typography>
         </StepLabel>
       </Step>
