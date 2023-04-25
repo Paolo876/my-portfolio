@@ -6,7 +6,7 @@ import "../../../index.scss"
 
 const Process = () => {
   return (
-    <Box sx={{position: "relative", px: {xs:1, sm: 0, md: 1.25, lg: 2.25, xl: 3}, py: {xs:2, sm: 3, md: 7, lg: 9}}} className="process">
+    <Box sx={{position: "relative", px: {xs:1, sm: 0, md: 1.25, lg: 2.25, xl: 3}, py: {xs:2, sm: 3, md: 7, lg: 9}}}>
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(220,220,220,.15)", mixBlendMode: "overlay", opacity: 1, zIndex: -1}}></Box>
       <Box sx={{display: {xs: "initial", lg: "none"}}}>
         <Typography variant="h4" align="center" fontSize={{xs:22, sm: 25, md: 28}} letterSpacing={{xs:2, sm:3, md:3.5}} lineHeight={{xl:1.3}}>My Work Process</Typography>
@@ -23,7 +23,9 @@ const Process = () => {
           <Box sx={{display: {xs: "none", md: "initial"}}}>
             <ProcessStepper/>
           </Box>
-          {/* create vertical stepper for xs,sm widths */}
+          <Box sx={{display: {xs: "initial", md: "none"}}}>
+            {/* create vertical stepper for xs,sm widths */}
+          </Box>
         </Grid>
       </Grid>
     </Box>
@@ -31,3 +33,4 @@ const Process = () => {
 }
 
 export default Process
+

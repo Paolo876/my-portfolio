@@ -105,7 +105,6 @@ const ProcessStepper = () => {
           </Typography>
         </StepLabel>
       </Step>
-
     </Stepper>
   )
 }
