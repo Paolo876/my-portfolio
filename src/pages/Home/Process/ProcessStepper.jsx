@@ -82,7 +82,7 @@ const ProcessStepper = () => {
       <Step>
         <StepLabel StepIconComponent={ColorlibStepIcon}>
           <Typography variant="h6" letterSpacing={0.25} fontWeight={800} fontSize={17.5}>Conceptualization</Typography>
-          <Typography variant="body1" fontSize={15.5} fontWeight={400} px={4.25} mt={3.5} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word", opacity: .9}}>
+          <Typography variant="body1" fontSize={{md: 13.5, lg:15.5}} fontWeight={400} px={{md: .5, lg:1.5, xl:4}} mt={{md: 2, lg:3.5}} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word", opacity: .9}}>
             The idea turns into a concept. This is the process where I construct the main purpose and functions of the project. I then decide of the project theme, color scheme, considerations, and utilities of the app.
           </Typography>
         </StepLabel>
@@ -90,16 +90,16 @@ const ProcessStepper = () => {
       <Step>
         <StepLabel StepIconComponent={ColorlibStepIcon}>
           <Typography variant="h6" letterSpacing={1.25} fontWeight={800} fontSize={18}>Planning</Typography>
-          <Typography variant="body1" fontSize={15.5} fontWeight={400} px={4.25} mt={3.5} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word", opacity: .9}}>
-            This process is where start the blueprint or layout the structure or UI/UX of my app. I list down the web pages needed, the libraries or frameworks to use, 
-            and the initial pseudo-code draft.
+          <Typography variant="body1" fontSize={{md: 13.5, lg:15.5}} fontWeight={400} px={{md: .5, lg:1.5, xl:4}} mt={{md: 2, lg:3.5}} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word", opacity: .9}}>
+            This process is where I layout the structure and UI/UX of my app. I list down the web pages needed, the libraries or frameworks to use, 
+            the initial pseudo-codes, and other preparations before I start building.
           </Typography>
         </StepLabel>
       </Step>
       <Step>
         <StepLabel StepIconComponent={ColorlibStepIcon}>
           <Typography variant="h6" letterSpacing={1.25} fontWeight={800} fontSize={18}>Execution</Typography>
-          <Typography variant="body1" fontSize={15.5} fontWeight={400} px={4.25} mt={3.5} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word", opacity: .9}}>
+          <Typography variant="body1" fontSize={{md: 13.5, lg:15.5}} fontWeight={400} px={{md: .5, lg:1.5, xl:4}} mt={{md: 2, lg:3.5}} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word", opacity: .9}}>
             When the foundations have been set, it's time to start building. I always try to make sure that I follow my plan and stick to my concept. 
             This way the result will be just as I envisioned.
           </Typography>
