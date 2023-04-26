@@ -1,13 +1,24 @@
 import React from 'react'
 import Carousel from 'react-material-ui-carousel'
-import { Paper, Box, Typography } from '@mui/material'
+import { Step, StepLabel, Stepper, Typography, Box, Paper } from '@mui/material'
+import { ColorlibConnector, ColorlibStepIcon } from './stepperStyles'
 
-const ProcessStepperMobile = () => {
+
+const ProcessStepperMobile = ({ processItems }) => {
   return (
     <Box>
+      <Box>
+        <Stepper alternativeLabel connector={<ColorlibConnector />} activeStep={3}>
+          {processItems.map(item => <Step key={item.title}>
+            <StepLabel StepIconComponent={ColorlibStepIcon}>
+            </StepLabel>
+          </Step>)}
+        </Stepper>
+      </Box>
       <Carousel
         indicators={true}
         autoPlay={false}
+        index={1}
       >
         <Paper sx={{p: 2}}>
           <Typography variant="h6" letterSpacing={0.25} fontWeight={800} fontSize={{md:18, lg:20, xl:23}}>Conceptualization</Typography>

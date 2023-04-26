@@ -39,7 +39,7 @@ const Process = () => {
             <ProcessStepper processItems={processItems}/>
           </Box>
           <Box sx={{display: {xs: "initial", md: "none"}}}>
-            <ProcessStepperMobile/>
+            <ProcessStepperMobile processItems={processItems}/>
           </Box>
         </Grid>
       </Grid>
