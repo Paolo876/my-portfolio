@@ -11,15 +11,17 @@ export const theme = createTheme({
           position: "relative",
           background: 'rgb(38,37,37)',
           // background     : `radial-gradient(circle, rgba(46,45,45,1) 0%, rgba(38,37,37,1) 90%)`,
-          background     : `radial-gradient(circle, rgba(40,39,39,1) 0%, rgba(38,37,37,1) 100%)`,
+          // background     : `radial-gradient(circle, rgba(40,39,39,1) 0%, rgba(38,37,37,1) 100%)`,
+          background     : `radial-gradient(circle, rgba(27,26,26,1) 0%, rgba(24,23,23,1) 180%)`,
         },
       },
     },
     MuiButton: {
       styleOverrides: {
         root: {
+          // fontFamily: 'Manrope',
           borderRadius: 0,
-          fontWeight: 400,
+          fontWeight: 500,
           letterSpacing: .75,
           ":hover": {
             borderRadius: 0,

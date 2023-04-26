@@ -29,12 +29,9 @@ const SkillsDescription = () => {
         <Typography sx={medTextStyles}>Computer Information Systems </Typography>
         <Typography sx={baseTextStyles}>major in </Typography>
         <Typography sx={medTextStyles}>Web Development and Software Development </Typography>
-        <Typography sx={baseTextStyles}>at Pasadena City College. </Typography>
-      </Box>
-      <Box mt={{xs:.5, md: 1.5}}>
-        <Typography sx={baseTextStyles}>A big part of my development knowledge is also gained from </Typography>
+        <Typography sx={baseTextStyles}>at Pasadena City College and a big part of my knowledge is also gained from  </Typography>
         <Typography sx={medTextStyles}>self-studying </Typography>
-        <Typography sx={baseTextStyles}>through various </Typography>
+        <Typography sx={baseTextStyles}>through </Typography>
         <Typography sx={medTextStyles}>online courses </Typography>
         <Typography sx={baseTextStyles}>and being a part of </Typography>
         <Typography sx={medTextStyles}>coding groups.</Typography>

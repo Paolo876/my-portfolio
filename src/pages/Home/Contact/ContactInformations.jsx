@@ -18,7 +18,7 @@ const ContactInformations = () => {
           </Stack>
         </Paper>
         <Paper variant="outlined" sx={{p: {xs:1.5, lg: 2}, width:"100%", display: "flex", alignItems: "center", background: "none"}}>
-          <IconButton size="small" href="tel:3234817852" sx={{mixBlendMode: "difference", mr: {xs: 1.5, lg: 2}, p: 0}} disableFocusRipple disableRipple disableTouchRipple>
+          <IconButton size="small" href="tel:3234817852" sx={{mr: {xs: 1.5, lg: 2}, p: 0}} disableFocusRipple disableRipple disableTouchRipple>
             <LocalPhoneIcon color="primary" sx={{fontSize: { xs:28, sm: 30, md: 30, lg: 35 }}}/>
           </IconButton> 
           <Divider orientation="vertical" flexItem></Divider>
@@ -28,7 +28,7 @@ const ContactInformations = () => {
           </Stack>
         </Paper>
         <Paper variant="outlined" sx={{p: {xs:1.5, lg: 2}, width:"100%", display: "flex", alignItems: "center", background: "none"}}>
-          <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={{mixBlendMode: "difference", mr: {xs: 1.5, lg: 2}, p: 0}} disableFocusRipple disableRipple disableTouchRipple>
+          <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={{mr: {xs: 1.5, lg: 2}, p: 0}} disableFocusRipple disableRipple disableTouchRipple>
             <MailOutlineIcon color="primary" sx={{fontSize: { xs:28, sm: 30, md: 30, lg: 35 }}}/>
           </IconButton> 
           <Divider orientation="vertical" flexItem></Divider>
