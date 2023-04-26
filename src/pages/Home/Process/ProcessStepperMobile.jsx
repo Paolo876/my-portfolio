@@ -1,16 +1,17 @@
-import React from 'react'
+import {useState} from 'react'
 import Carousel from 'react-material-ui-carousel'
 import { Step, StepLabel, Stepper, Typography, Box, Paper } from '@mui/material'
 import { ColorlibConnector, ColorlibStepIcon } from './stepperStyles'
 
 
 const ProcessStepperMobile = ({ processItems }) => {
+  const [ activeIndex, setActiveIndex ] = useState(0)
   return (
     <Box>
-      <Box>
-        <Stepper alternativeLabel connector={<ColorlibConnector />} activeStep={3}>
-          {processItems.map(item => <Step key={item.title}>
-            <StepLabel StepIconComponent={ColorlibStepIcon}>
+      <Box sx={{maxWidth: {xs: 320, sm: 400}, mx: "auto"}}>
+        <Stepper alternativeLabel connector={<ColorlibConnector />} activeStep={activeIndex}>
+          {processItems.map((item, index) => <Step key={item.title}>
+            <StepLabel StepIconComponent={ColorlibStepIcon}  onClick={() => setActiveIndex(index)}>
             </StepLabel>
           </Step>)}
         </Stepper>
@@ -18,17 +19,23 @@ const ProcessStepperMobile = ({ processItems }) => {
       <Carousel
         indicators={true}
         autoPlay={false}
-        index={1}
+        index={activeIndex}
+        onChange={(e) => setActiveIndex(e)}
       >
-        <Paper sx={{p: 2}}>
-          <Typography variant="h6" letterSpacing={0.25} fontWeight={800} fontSize={{md:18, lg:20, xl:23}}>Conceptualization</Typography>
-          <Typography variant="body1" fontSize={{md: 13.5, lg:14, xl: 15.5}} fontWeight={400} px={{md: .5, lg:1, xl:4}} mt={{md: 2, lg:2, xl: 3.5}} sx={{mixBlendMode: "difference", textAlign: "justify", textJustify: "inter-word", opacity: .9}}>
-            The idea turns into a concept. This is the process where I construct the main purpose and functions of the project. I then decide of the project theme, color scheme, considerations, and utilities of the app.
+        {processItems.map(item => <Box 
+          key={item.title} 
+          sx={{
+            px:2,
+            py:4,
+            m:{xs:1.5, sm:2},
+            minHeight: {xs: 260, sm:200},
+          }}
+          >
+          <Typography variant="h6" align="center" letterSpacing={1.25} fontWeight={800} fontSize={{md:18}}>{item.title}</Typography>
+          <Typography variant="body1" align="center" fontSize={{xs: 15, sm: 16}} fontWeight={400} mt={{xs: 2, sm: 3}} sx={{textAlign: "justify", textJustify: "inter-word", opacity: .7}}>
+            {item.body}
           </Typography>
-        </Paper>
-        <Paper>
-          asdasd
-        </Paper>
+        </Box>)}
       </Carousel>
     </Box>
   )

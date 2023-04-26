@@ -28,7 +28,6 @@ export const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
     opacity:.5, 
     backgroundColor:
       theme.palette.secondary.dark,
-      // theme.palette.mode === 'dark' ? theme.palette.grey[600] : '#eaeaf0',
     borderRadius: 1,
   },
 }));
@@ -43,7 +42,7 @@ export const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) =>  ({
   borderRadius: '50%',
   justifyContent: 'center',
   alignItems: 'center',
-  transform: "scale(.85)",
+  transform: "scale(.9)",
   margin: "0 2px",
   ...(ownerState.active && {
     backgroundColor: theme.palette.primary.main,
