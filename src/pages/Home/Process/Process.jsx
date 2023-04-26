@@ -2,11 +2,26 @@ import React from 'react'
 import { Grid, Box, Typography } from '@mui/material'
 import ProcessStepper from './ProcessStepper'
 import "../../../index.scss"
+import ProcessStepperMobile from './ProcessStepperMobile'
 
+const processItems = [
+  {
+    title: "Conceptualization",
+    body: "The idea turns into a concept. This is the process where I construct the main purpose and functions of the project. I then decide of the project theme, color scheme, considerations, and utilities of the app.",
+  },
+  {
+    title: "Planning",
+    body: "This process is where I layout the structure and UI/UX of my app. I list down the web pages needed, the libraries or frameworks to use, the initial pseudo-codes, and other preparations before I start building.",
+  },
+  {
+    title: "Development",
+    body: "When the foundations have been set, it's time to start building. I always try to make sure that I follow my plan and stick to my concept. This way the result will be just as I envisioned.",
+  },
 
+]
 const Process = () => {
   return (
-    <Box sx={{position: "relative", px: {xs:1, sm: 0, md: 1.25, lg: 2.25, xl: 3}, py: {xs:2, sm: 3, md: 7, lg: 9}}}>
+    <Box sx={{position: "relative", px: {xs:1, sm: 1, md: 1.25, lg: 2.25, xl: 3}, py: {xs:2, sm: 3, md: 7, lg: 9}}}>
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(220,220,220,.15)", mixBlendMode: "overlay", opacity: 1, zIndex: -1}}></Box>
       <Box sx={{display: {xs: "initial", lg: "none"}}}>
         <Typography variant="h4" align="center" fontSize={{xs:22, sm: 25, md: 28}} letterSpacing={{xs:2, sm:3, md:3.5}} lineHeight={{xl:1.3}}>My Work Process</Typography>
@@ -21,10 +36,10 @@ const Process = () => {
         </Grid>
         <Grid item xs={12} md={12} lg={10} pl={{md:0, lg:1, xl: 2}}>
           <Box sx={{display: {xs: "none", md: "initial"}}}>
-            <ProcessStepper/>
+            <ProcessStepper processItems={processItems}/>
           </Box>
           <Box sx={{display: {xs: "initial", md: "none"}}}>
-            {/* create vertical stepper for xs,sm widths */}
+            <ProcessStepperMobile/>
           </Box>
         </Grid>
       </Grid>
