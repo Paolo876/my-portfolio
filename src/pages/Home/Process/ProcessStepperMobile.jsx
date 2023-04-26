@@ -8,7 +8,7 @@ const ProcessStepperMobile = ({ processItems }) => {
   const [ activeIndex, setActiveIndex ] = useState(0)
   return (
     <Box>
-      <Box sx={{maxWidth: {xs: 320, sm: 400}, mx: "auto"}}>
+      <Box sx={{maxWidth: {xs: 400, sm: 600}, mx: "auto"}}>
         <Stepper alternativeLabel connector={<ColorlibConnector />} activeStep={activeIndex}>
           {processItems.map((item, index) => <Step key={item.title}>
             <StepLabel StepIconComponent={ColorlibStepIcon}  onClick={() => setActiveIndex(index)}>
@@ -27,8 +27,9 @@ const ProcessStepperMobile = ({ processItems }) => {
           sx={{
             px:2,
             py:4,
-            m:{xs:1.5, sm:2},
-            minHeight: {xs: 260, sm:200},
+            mx:{xs:1.5, sm:2},
+            my:{xs:1, sm:2},
+            minHeight: {xs: 250, sm:200},
           }}
           >
           <Typography variant="h6" align="center" letterSpacing={1.25} fontWeight={800} fontSize={{md:18}}>{item.title}</Typography>

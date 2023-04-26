@@ -14,10 +14,14 @@ const PurposeDescription = () => {
         </Box>
         <Typography variant="h4" align="left" fontSize={{xs:25, sm: 28, md: 32, lg: 35}} letterSpacing={{xs:1.5, md: 4, lg: 5}} sx={{opacity: 1}} color="secondary.main">Purpose</Typography>
       </Box>
-      <Box sx={{backgroundColor: "secondary.light", height: "3px", width: "12px", mt: .75, mb: {xs:1, md: 2, lg: 3}, opacity: .65, ml: .3, visibility: {xs: "hidden", md: "visible"}}}></Box>
-      <Typography variant="body1" fontSize={{xs:13, sm: 15, md: 16, lg: 17}} sx={{opacity: .8}} letterSpacing={.05} fontWeight={300}>
+      <Box sx={{backgroundColor: "secondary.light", height: "3px", width: "12px", mt: .75, mb: {xs:1.5, md: 2, lg: 3}, opacity: .65, ml: .3, visibility: {xs: "hidden", md: "visible"}}}></Box>
+      <Typography variant="body1" fontSize={{xs:15, sm: 15, md: 16, lg: 17}} sx={{opacity: .8}} letterSpacing={.05} fontWeight={300} mt={.6} lineHeight={{xs:1.4, md: 1.5}}>
         To seek a Frontend/Backend/FullStack Developer position or related work.<br/>
+      </Typography>
+      <Typography variant="body1" fontSize={{xs:15, sm: 15, md: 16, lg: 17}} sx={{opacity: .8}} letterSpacing={.05} fontWeight={300} mt={.6} lineHeight={{xs:1.4, md: 1.5}}>
         To apply my knowledge into practice and learn new technologies that would benefit my growth and the company.<br/>
+      </Typography>
+      <Typography variant="body1" fontSize={{xs:15, sm: 15, md: 16, lg: 17}} sx={{opacity: .8}} letterSpacing={.05} fontWeight={300} mt={.6} lineHeight={{xs:1.4, md: 1.5}}>
         To work with the right company that will help me bring out my full potential.
       </Typography>
     </Box>

@@ -12,10 +12,14 @@ const MissionDescription = () => {
       </Box>
       <Typography variant="h4" align="left" fontSize={{xs:25, sm: 28, md: 32, lg: 35}} letterSpacing={{xs:1.5, md: 4, lg: 5}} sx={{opacity: 1}} color="secondary.main">Mission</Typography>
     </Box>
-    <Box sx={{backgroundColor: "secondary.light", height: "3px", width: "12px", mt: .75, mb: {xs:1, md: 2, lg: 3}, opacity: .65, ml: .3, visibility: {xs: "hidden", md: "visible"}}}></Box>
-    <Typography variant="body1" fontSize={{xs:13, sm: 15, md: 16, lg: 17}} sx={{opacity: .8}} letterSpacing={.05} fontWeight={300}>
+    <Box sx={{backgroundColor: "secondary.light", height: "3px", width: "12px", mt: .75, mb: {xs:1.5, md: 2, lg: 3}, opacity: .65, ml: .3, visibility: {xs: "hidden", md: "visible"}}}></Box>
+    <Typography variant="body1" fontSize={{xs:15, sm: 15, md: 16, lg: 17}} sx={{opacity: .8}} letterSpacing={.05} fontWeight={300} mt={.6} lineHeight={{xs:1.4, md: 1.5}}>
       To provide an efficient solution for a company's development needs.<br/>
+    </Typography>
+    <Typography variant="body1" fontSize={{xs:15, sm: 15, md: 16, lg: 17}} sx={{opacity: .8}} letterSpacing={.05} fontWeight={300} mt={.6} lineHeight={{xs:1.4, md: 1.5}}>
       To offer my services and provide a positive representation for the company.<br/>
+    </Typography>
+    <Typography variant="body1" fontSize={{xs:15, sm: 15, md: 16, lg: 17}} sx={{opacity: .8}} letterSpacing={.05} fontWeight={300} mt={.6} lineHeight={{xs:1.4, md: 1.5}}>
       To work as a team player and be a reliable member to ensure a more productive system.<br/>
     </Typography>
   </Box>
