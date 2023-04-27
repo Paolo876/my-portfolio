@@ -118,10 +118,13 @@ const Landing = () => {
                 <ArrowForwardIosIcon fontSize="large"/>
               </IconButton>
             </Box>
-            <Link component={ReactLink} to="/home" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Home</Typography><Box sx={boxStyles}></Box></Link>
-            <Link component={ReactLink} to="/projects" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Projects</Typography><Box sx={boxStyles}></Box></Link>
-            <Link component={ReactLink} to="/about" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>About</Typography><Box sx={boxStyles}></Box></Link>
-            <Link component={ReactLink} to="/contact" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Contact</Typography><Box sx={boxStyles}></Box></Link>
+            <Box sx={{visibility: "visible"}} align="right">
+              <Link component={ReactLink} to="/home" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Home</Typography><Box sx={boxStyles}></Box></Link>
+              <Link component={ReactLink} to="/projects" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Projects</Typography><Box sx={boxStyles}></Box></Link>
+              <Link component={ReactLink} to="/about" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>About</Typography><Box sx={boxStyles}></Box></Link>
+              <Link component={ReactLink} to="/contact" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Contact</Typography><Box sx={boxStyles}></Box></Link>
+
+            </Box>
           </Stack>
         </Grid>
         <Grid xs={12} item sx={{ mt: "auto", align: "left", opacity: .75}} pb={1}>

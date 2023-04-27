@@ -18,7 +18,7 @@ const Navbar = () => {
     <AppBar component="nav" className="navbar" position="fixed">
       <Container maxWidth="xl">
         <Toolbar sx={{display: "flex", flexDirection: {xs: "column", md:"row"}, gap: 1, p:{xs:0, sm:2, md: 3, }, alignItems: isLandingPageView ? "flex-start" : "center"}} >
-          <Link component={ReactLink} to="/"><Typography fontWeight={700}>LOGO_HERE</Typography></Link>
+          <Link component={ReactLink} to="/"><Typography fontWeight={700}>PB</Typography></Link>
           {!isLandingPageView &&
             <Box sx={{ml: {xs:0, md:"auto"}, display: "flex", flexDirection: "row", gap: 3}} >
               <Link component={NavLink} to="/home" draggable={false}><Typography fontSize={{xs: 14, sm: 15, md: 16}}>Home</Typography></Link>

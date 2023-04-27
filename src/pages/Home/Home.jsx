@@ -10,6 +10,7 @@ import useFirestoreActions from '../../hooks/useFirestoreActions'
 import useRootRedux from '../../hooks/useRootRedux'
 import { Box, Stack } from '@mui/material'
 import Process from './Process/Process'
+import SubIntroduction from './SubIntroduction'
 
 const Home = () => {
   const { skillsList, setData } = useRootRedux();
@@ -30,7 +31,8 @@ const Home = () => {
           keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
         />
         <Introduction/>
-        <Purpose/>
+        <SubIntroduction/>
+        {/* <Purpose/> */}
         <Process/>
         <Skills/>
         <Contact/>
