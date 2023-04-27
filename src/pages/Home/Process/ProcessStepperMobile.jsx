@@ -1,6 +1,6 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import Carousel from 'react-material-ui-carousel'
-import { Step, StepLabel, Stepper, Typography, Box, Paper } from '@mui/material'
+import { Step, StepLabel, Stepper, Typography, Box } from '@mui/material'
 import { ColorlibConnector, ColorlibStepIcon } from './stepperStyles'
 
 

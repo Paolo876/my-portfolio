@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import useRootRedux from '../../../hooks/useRootRedux'
 import SkillIconImageItem from '../../../components/SkillIconImageItem'
 
-import { Box, Typography, Grid, Paper, ButtonBase, Button } from '@mui/material'
+import { Box, Typography, Grid, Paper, ButtonBase } from '@mui/material'
 import RightChevron from "../../../assets/chevron-right.svg"
 
 const boxStyles = {

@@ -25,7 +25,7 @@ const Process = () => {
       sx={{
         position: "relative", 
         px: {xs:1, sm: 1, md: 1.25, lg: 2.25, xl: 3}, 
-        py: {xs:2, sm: 3, md: 7, lg: 16}
+        py: {xs:2, sm: 3, md: 7, lg: 14}
       }}
     >
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200,.1)", mixBlendMode: "overlay", opacity: 1, zIndex: -1}}></Box>
