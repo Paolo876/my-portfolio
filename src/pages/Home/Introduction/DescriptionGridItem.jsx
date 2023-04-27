@@ -13,14 +13,14 @@ const DescriptionGridItem = () => {
       <Box sx={{opacity: 1}}>
         {/* <Typography sx={{fontWeight: 700, fontSize: {xs: 32, sm: 40, md: 45, lg:60, xl: 70}, letterSpacing: 3, lineHeight: 1.4}}>Hi!</Typography> */}
         <Typography sx={{display: "inline", fontWeight: 300, fontSize: {xs: 21, sm: 26, md: 25, lg:42, xl: 45}, mixBlendMode: "difference"}}>I am </Typography>
-        <Typography sx={{display: "inline", fontWeight: 800, fontSize: {xs: 39, sm: 55, md: 55, lg:75, xl: 90}, ml: {xs:0, sm:1}, lineHeight: 1.25, letterSpacing: {xs:.1, md: 1}, fontFamily: "Manrope"}} color="primary.main">Paolo Bugarin</Typography>
+        <Typography sx={{display: "inline", fontWeight: 800, fontSize: {xs: 39, sm: 55, md: 55, lg:75, xl: 75}, ml: {xs:0, sm:1}, lineHeight: 1.25, letterSpacing: {xs:.1, md: 1}, fontFamily: "Manrope"}} color="primary.main">Paolo Bugarin</Typography>
         <Typography sx={{display: "inline", fontWeight: 300, fontSize:  {xs: 21, sm: 26, md: 25, lg:42, xl: 45}, mixBlendMode: "difference"}}>,</Typography>
       </Box>
-      <Box sx={{mixBlendMode: "difference", opacity:.9, mt: 2.25}}>
-        <Typography sx={{display: "inline", fontWeight: 200, fontSize: {xs: 17.5, sm: 21, md: 23, lg:21, xl: 23}, lineHeight: 1.2, }}>a  </Typography>
-        <Typography sx={{display: "inline", fontWeight: 400, fontSize: {xs: 22, sm: 23, md: 25, lg:23, xl: 25}, lineHeight: 1.2, fontFamily: "Manrope"}}>Full Stack Web Developer </Typography>
-        <Typography sx={{display: "inline", fontWeight: 200, fontSize: {xs: 17.5, sm: 21, md: 23, lg:21, xl: 23}, lineHeight: 1.2, }}>based in </Typography>
-        <Typography sx={{display: "inline", fontWeight: 400, fontSize: {xs: 22, sm: 23, md: 25, lg:23, xl: 25}, lineHeight: 1.2, fontFamily: "Manrope"}}>Los Angeles, California.</Typography>
+      <Box sx={{mixBlendMode: "difference", opacity:.9, mt: 2}}>
+        <Typography sx={{display: "inline", fontWeight: 100, fontSize: {xs: 17.5, sm: 21, md: 23, lg:21, xl: 21}, lineHeight: 1.2, }}>a  </Typography>
+        <Typography sx={{display: "inline", fontWeight: 400, fontSize: {xs: 22, sm: 23, md: 25, lg:23, xl: 24}, lineHeight: 1.2, fontFamily: "Manrope"}}>Full Stack Web Developer </Typography>
+        <Typography sx={{display: "inline", fontWeight: 100, fontSize: {xs: 17.5, sm: 21, md: 23, lg:21, xl: 21}, lineHeight: 1.2, }}>based in </Typography>
+        <Typography sx={{display: "inline", fontWeight: 400, fontSize: {xs: 22, sm: 23, md: 25, lg:23, xl: 24}, lineHeight: 1.2, fontFamily: "Manrope"}}>Los Angeles, California.</Typography>
       </Box>
       {/* <Box mt={{xs:2, md: 4}}>
         <Typography sx={{display: "inline", fontWeight: 200, fontSize: {xs: 15, sm: 20, md: 22, lg:20, xl: 22}, lineHeight: 1.4, mixBlendMode: "difference"}}>I specialize in designing and developing websites from a </Typography>

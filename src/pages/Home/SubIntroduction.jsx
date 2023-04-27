@@ -10,7 +10,7 @@ const SubIntroduction = () => {
         pb: {xs:2, sm: 3, md: 5, lg: 12}, 
         justifyContent: "center", 
         alignItems: "flex-start", 
-        minHeight: "38vh", 
+        minHeight: "30vh", 
         maxWidth: "1500px", 
         mx: "auto"
       }}
