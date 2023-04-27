@@ -37,13 +37,13 @@ const SkillsCarousel = () => {
   const [ skills, setSkills ] = useState([]);
 
   useEffect(() => {
-    setSkills(chunkArray(skillsList, 8))
+    setSkills(chunkArray(skillsList, 10))
   }, [skillsList])
   return (
     <Box>
       <Carousel
         indicators={true}
-        autoPlay={true}
+        autoPlay={false}
         // index={activeIndex}
         // onChange={(e) => setActiveIndex(e)}
       >
@@ -51,11 +51,10 @@ const SkillsCarousel = () => {
         {item.map(_item => 
             <Grid item xs={2.8} sm={2.25} key={_item.name} align="center">
               <Paper sx={boxStyles} elevation={5} variant="elevation">
-                <Box height={{xs: "25px", sm: "35px", md:"37px", lg:"45px"}} width={{xs: "25px", sm: "35px", md:"37px", lg:"45px"}}>
+                <Box height={{xs: "25px", sm: "35px", md:"37px", lg:"45px", xl: "55px"}} width={{xs: "25px", sm: "35px", md:"37px", lg:"45px", xl: "55px"}}>
                   <SkillIconImageItem src={_item.url} duration={800} objectFit='scale-down'/>
                 </Box>
                 <Typography variant="body2" sx={textStyles} color="secondary">{_item.name}</Typography>
-
               </Paper>
 
             </Grid>

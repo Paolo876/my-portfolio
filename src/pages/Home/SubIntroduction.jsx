@@ -23,9 +23,9 @@ const SubIntroduction = () => {
           <Typography sx={{display: "inline", fontWeight: 400, fontSize: {xs: 15, sm: 20, md: 22, lg:24, xl: 29}, lineHeight: 1.35}}>to a </Typography>
           <Typography sx={{display: "inline", fontWeight: 500, fontSize: {xs: 15, sm: 20, md: 22, lg:24, xl: 29}, lineHeight: 1.35}} >complex dynamic web application </Typography>
           <Typography sx={{display: "inline", fontWeight: 400, fontSize: {xs: 15, sm: 20, md: 22, lg:24, xl: 29}, lineHeight: 1.35}}> using </Typography>
-          <Typography sx={{display: "inline", fontWeight: 500, fontSize: {xs: 15, sm: 20, md: 22, lg:24, xl: 29}, lineHeight: 1.35}} color="primary.light"> ReactJS</Typography>
+          <Typography sx={{display: "inline", fontWeight: 500, fontSize: {xs: 15, sm: 20, md: 22, lg:24, xl: 29}, lineHeight: 1.35}} color="secondary.light"> ReactJS</Typography>
           <Typography sx={{display: "inline", fontWeight: 100, fontSize: {xs: 19, sm: 24, md: 26, lg:28, xl: 29}, lineHeight: 1.35}}>||</Typography>
-          <Typography sx={{display: "inline", fontWeight: 500, fontSize: {xs: 15, sm: 20, md: 22, lg:24, xl: 29}, lineHeight: 1.35}} color="primary.light">NextJS </Typography>
+          <Typography sx={{display: "inline", fontWeight: 500, fontSize: {xs: 15, sm: 20, md: 22, lg:24, xl: 29}, lineHeight: 1.35}} color="secondary.light">NextJS </Typography>
           <Typography sx={{display: "inline", fontWeight: 400, fontSize: {xs: 15, sm: 20, md: 22, lg:24, xl: 29}, lineHeight: 1.35}}>framework.</Typography>
         </Box>
       </Grid>
