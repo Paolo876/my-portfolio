@@ -7,15 +7,15 @@ import ProcessStepperMobile from './ProcessStepperMobile'
 const processItems = [
   {
     title: "Conceptualization",
-    body: "The idea turns into a concept. This is the process where I construct the main purpose and functions of the project. I then decide of the project theme, color scheme, considerations, and utilities of the app.",
+    body: "The idea turns into a concept. This is the process where I define the main purpose and functions of the project. I then decide of the theme, color scheme, elements, and utilities of the app.",
   },
   {
     title: "Planning",
-    body: "This process is where I layout the structure and UI/UX of my app. I list down the web pages needed, the libraries or frameworks to use, the initial pseudo-codes, and other preparations before I start building.",
+    body: "This process is where I draft the structure and UI/UX of my app. I list down the web pages needed, the libraries or frameworks to use, the initial pseudo-codes, and other preparations before actual coding starts.",
   },
   {
     title: "Development",
-    body: "When the foundations have been set, it's time to start building. I always try to make sure that I follow my plan and stick to my concept. This way the result will be just as I envisioned.",
+    body: "When the foundations have been set, it's time to start building. I always try to make sure that I follow my plan and stick to my concept. This way, the result will be just as I envisioned.",
   },
 
 ]
@@ -36,8 +36,8 @@ const Process = () => {
       <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", overflowX:"auto", overflowY: "hidden"}}>
         <Grid item xs={12} md={12} lg={2.5}>
           <Box sx={{display: {xs: "none", lg: "initial"}}}>
-            <Typography variant="h4" align="left" fontSize={{lg: 45, xl: 58}} letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:5}} lineHeight={{lg:1.6, xl:1.2}} >My<br/>Work<br/>Process</Typography>
-            <Box sx={{background: "rgba(239,235,229,1)", height: "12px", width: "12px", mr: "auto", mt: {xs: 1.5, md:3.5}, ml: .2}} ></Box>
+            <Typography variant="h4" align="left" color="primary.main" fontSize={{lg: 45, xl: 58}} letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:5}} lineHeight={{lg:1.6, xl:1.2}}>My<br/>Work<br/>Process</Typography>
+            <Box sx={{background: "rgba(239,235,229,1)", height: "12px", width: "12px", mr: "auto", mt: {xs: 1.5, md:3.5}, ml: .2, mixBlendMode: "difference", opacity: .65}}></Box>
           </Box>
         </Grid>
         <Grid item xs={12} md={12} lg={9.5} pl={{md:0, lg:2, xl: 4}}>

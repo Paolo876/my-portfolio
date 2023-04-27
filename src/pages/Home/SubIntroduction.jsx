@@ -1,8 +1,7 @@
 import React from 'react'
-import { Grid, Box, Typography, useTheme } from '@mui/material'
+import { Grid, Box, Typography } from '@mui/material'
 
 const SubIntroduction = () => {
-  const { palette } = useTheme();
   return (
     <Grid container 
       sx={{
@@ -11,7 +10,7 @@ const SubIntroduction = () => {
         pb: {xs:2, sm: 3, md: 5, lg: 12}, 
         justifyContent: "center", 
         alignItems: "flex-start", 
-        minHeight: "45vh", 
+        minHeight: "38vh", 
         maxWidth: "1500px", 
         mx: "auto"
       }}
