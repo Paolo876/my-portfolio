@@ -3,16 +3,15 @@ import Carousel from 'react-material-ui-carousel'
 import { Typography, Box, Grid, Tooltip } from '@mui/material'
 import useRootRedux from '../../../hooks/useRootRedux'
 import SkillIconImageItem from '../../../components/SkillIconImageItem'
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+
 
 const boxStyles = {
-  // py: {xs: 1.5, md:2.5}, 
   width: "fit-content",
   p: {sm: 1.5, md: 1.5, lg: 2, xl:2.5},
   height: "100%",
-  // height: { md:"110px", lg:"120px"},
   userSelect: "none",
   opacity: .9,  
-  // background: "rgba(60,60,60,0.1)",
   background: "none",
   "&:hover": {
     background: "rgba(150,150,150,0.1)"
@@ -40,9 +39,10 @@ const SkillsCarousel = () => {
     <Box mr={{lg:4, xl:4}}>
       <Carousel
         indicators={true}
-        autoPlay={false}
-        // index={activeIndex}
-        // onChange={(e) => setActiveIndex(e)}
+        interval={5000}
+        duration={800} 
+        navButtonsAlwaysInvisible={true}
+        // IndicatorIcon={<FiberManualRecordIcon size='small' color="secondary"/>}
       >
         {skills.map((item, index) => <Grid container key={index}>
         {item.map(_item => 
@@ -52,7 +52,7 @@ const SkillsCarousel = () => {
                   <Box height={{xs: "25px", sm: 52, md:55, lg:70, xl: 75}} width={{xs: "25px", sm: 52, md:55, lg:70, xl: 75}}>
                     <SkillIconImageItem 
                       src={_item.monoUrl} 
-                      duration={400} 
+                      duration={800} 
                       objectFit='scale-down'
                       sx={{filter: "invert(.95) brightness(.95)"}}
                       />

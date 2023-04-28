@@ -25,7 +25,7 @@ const SkillsDescription = () => {
   return (
     <Stack pl={{xs: .5, sm: 3, md: 2, lg: 3.5, xl: 5}} pr={{sm: 3, md: 2, lg: 3}}>
       <Box sx={{mb: 4, display: {xs: "none", md: "initial"}}}>
-        <Typography variant="h4" fontSize={{md: 28, lg: 30, xl: 35}} letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:3.5}} lineHeight={{lg:1.6, xl:1.2}} color="primary.main">Technologies</Typography>
+        <Typography variant="h4" fontSize={{md: 28, lg: 30, xl: 35}} letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:3.5}} lineHeight={{lg:1.6, xl:1.2}} color="primary.main" align="right">Technologies</Typography>
         <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", ml: "auto", mt: {xs: 1, md:1}, mr: .5, mixBlendMode: "difference", opacity: .75}}></Box>
 
       </Box>
