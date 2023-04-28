@@ -30,8 +30,8 @@ const SkillsDescription = () => {
 
       </Box>
       <Box>
-        <Typography variant="body1" fontSize={{md: 14, lg:15, xl: 16}} fontWeight={300} sx={{textAlign: "right", textJustify: "inter-word", opacity: .8}}>
-          I studied Computer Information Systems major in Web Development and Software Development at Pasadena City College. A part of my knowledge is also gained from self-studying through online courses and tutorials, and being a part of coding groups.
+        <Typography variant="body1" fontSize={{md: 14, lg:15, xl: 16.5}} fontWeight={300} sx={{textAlign: "right", textJustify: "inter-word", opacity: .8}}>
+          I studied Computer Information Systems major in Web Development and Software Development at Pasadena City College. A part of my knowledge is also gained from self-studying through online courses, tutorials, and being a member of different coding groups.
         </Typography>
         {/* <Typography sx={baseTextStyles}>I studied </Typography>
         <Typography sx={medTextStyles}>Computer Information Systems </Typography>

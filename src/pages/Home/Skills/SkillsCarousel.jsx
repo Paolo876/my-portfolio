@@ -52,7 +52,12 @@ const SkillsCarousel = () => {
             <Grid item xs={2.8} sm={2.25} key={_item.name} align="center">
               <Paper sx={boxStyles} elevation={5} variant="elevation">
                 <Box height={{xs: "25px", sm: "35px", md:"37px", lg:"45px", xl: "55px"}} width={{xs: "25px", sm: "35px", md:"37px", lg:"45px", xl: "55px"}}>
-                  <SkillIconImageItem src={_item.url} duration={800} objectFit='scale-down'/>
+                  <SkillIconImageItem 
+                    src={_item.monoUrl} 
+                    duration={400} 
+                    objectFit='scale-down'
+                    sx={{filter: "invert(1) brightness(.75)"}}
+                    />
                 </Box>
                 <Typography variant="body2" sx={textStyles} color="secondary">{_item.name}</Typography>
               </Paper>
