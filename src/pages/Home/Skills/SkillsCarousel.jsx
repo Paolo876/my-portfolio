@@ -39,7 +39,7 @@ const SkillsCarousel = () => {
     <Box mr={{lg:4, xl:4}}>
       <Carousel
         indicators={true}
-        interval={5000}
+        interval={8000}
         duration={800} 
         navButtonsAlwaysInvisible={true}
         // IndicatorIcon={<FiberManualRecordIcon size='small' color="secondary"/>}
@@ -47,7 +47,7 @@ const SkillsCarousel = () => {
         {skills.map((item, index) => <Grid container key={index}>
         {item.map(_item => 
             <Grid item xs={2.8} sm={2.4} key={_item.name} align="center" my={3}>
-              <Tooltip title={_item.name} arrow >
+              <Tooltip title={<Typography variant="body1" fontSize={13.5} color="primary.main" fontWeight={500}>{_item.name}</Typography>} arrow >
                 <Box sx={boxStyles} variant="outlined">
                   <Box height={{xs: "25px", sm: 52, md:55, lg:70, xl: 75}} width={{xs: "25px", sm: 52, md:55, lg:70, xl: 75}}>
                     <SkillIconImageItem 
