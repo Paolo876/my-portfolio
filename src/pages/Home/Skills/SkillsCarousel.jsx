@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 import Carousel from 'react-material-ui-carousel'
-import { Typography, Box, Grid, Paper, Tooltip } from '@mui/material'
+import { Typography, Box, Grid, Tooltip } from '@mui/material'
 import useRootRedux from '../../../hooks/useRootRedux'
 import SkillIconImageItem from '../../../components/SkillIconImageItem'
 
 const boxStyles = {
   // py: {xs: 1.5, md:2.5}, 
   width: "fit-content",
-  p: 2.5,
+  p: {sm: 1.5, md: 1.5, lg: 2, xl:2.5},
   height: "100%",
   // height: { md:"110px", lg:"120px"},
   userSelect: "none",
@@ -17,14 +17,6 @@ const boxStyles = {
   "&:hover": {
     background: "rgba(150,150,150,0.1)"
   }
-}
-
-const textStyles = {
-  opacity: .85,
-  fontSize: {xs: 10, sm: 10, md:11, lg: 11}, 
-  fontWeight: 500, 
-  mt: 1.75,
-  // display: {xs: "none", sm: "initial"}
 }
 
 
@@ -57,15 +49,14 @@ const SkillsCarousel = () => {
             <Grid item xs={2.8} sm={2.4} key={_item.name} align="center" my={3}>
               <Tooltip title={_item.name} arrow >
                 <Box sx={boxStyles} variant="outlined">
-                  <Box height={{xs: "25px", sm: "35px", md:"37px", lg:"45px", xl: "70px"}} width={{xs: "25px", sm: "35px", md:"37px", lg:"45px", xl: "70px"}}>
+                  <Box height={{xs: "25px", sm: 52, md:55, lg:70, xl: 75}} width={{xs: "25px", sm: 52, md:55, lg:70, xl: 75}}>
                     <SkillIconImageItem 
                       src={_item.monoUrl} 
                       duration={400} 
                       objectFit='scale-down'
-                      sx={{filter: "invert(.95) brightness(1)"}}
+                      sx={{filter: "invert(.95) brightness(.95)"}}
                       />
                   </Box>
-                  {/* <Typography variant="body2" sx={textStyles} color="secondary.light">{_item.name}</Typography> */}
                 </Box>
               </Tooltip>
             </Grid>

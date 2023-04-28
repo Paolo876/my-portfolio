@@ -26,6 +26,7 @@ export const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
     height: 2,
     border: 0,
     opacity:.5, 
+    width: "108%",
     backgroundColor:
       theme.palette.secondary.dark,
     borderRadius: 1,

@@ -25,7 +25,7 @@ const DescriptionGridItem = () => {
           variant="outlined" 
           endIcon={<KeyboardArrowRightIcon color="inherit"/>}
           onClick={() => navigate("/about")}
-          sx={{fontSize: {xs: 11, sm: 12, md: 15, lg: 15, xl: 16}, letterSpacing: 1.75}}
+          sx={{fontSize: {xs: 11, sm: 12, md: 14, lg: 15, xl: 16}, letterSpacing: 1.75}}
         >
           About
         </Button>

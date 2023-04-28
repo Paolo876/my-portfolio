@@ -33,7 +33,7 @@ const ProcessStepperMobile = ({ processItems }) => {
           }}
           >
           <Typography variant="h6" align="center" letterSpacing={1.25} fontWeight={800} fontSize={{md:18}}>{item.title}</Typography>
-          <Typography variant="body1" align="center" fontSize={{xs: 15, sm: 16}} fontWeight={400} mt={{xs: 2, sm: 3}} sx={{textAlign: "justify", textJustify: "inter-word", opacity: .7}}>
+          <Typography variant="body1" align="center" fontSize={{xs: 14, sm: 15}} fontWeight={300} mt={{xs: 2, sm: 3}} sx={{textAlign: "justify", textJustify: "inter-word", opacity: .7}}>
             {item.body}
           </Typography>
         </Box>)}
