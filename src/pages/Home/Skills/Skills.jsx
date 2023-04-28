@@ -14,11 +14,11 @@ const Skills = () => {
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200,.1)", mixBlendMode: "overlay", opacity: 1, zIndex: -1}}></Box>
       <Grid container sx={{px: {xs:1, sm: 2, md: 1.5, lg: 3}, py: {xs:2, sm: 3, md: 5, lg: 9}, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
 
-        <Grid item xs={12} md={7} lg={7.75} mt={{xs:2, sm:4, md: "auto"}} mb={{xs:2, md: "auto"}} pl={{xs:0, md: 2}} >
+        <Grid item xs={12} md={7} lg={7.75}>
           {/* <SkillsShowcase/> */}
           <SkillsCarousel/>
         </Grid>
-        <Grid item xs={12} md={5} lg={4.25} mt={{xs:0, md: 2, lg: 6}}>
+        <Grid item xs={12} md={5} lg={4.25}>
           <SkillsDescription/>
         </Grid>
       </Grid>

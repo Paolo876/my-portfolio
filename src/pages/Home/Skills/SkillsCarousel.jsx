@@ -15,7 +15,7 @@ const boxStyles = {
   // background: "rgba(60,60,60,0.1)",
   background: "none",
   "&:hover": {
-    background: "rgba(200,200,200,0.1)"
+    background: "rgba(150,150,150,0.1)"
   }
 }
 
@@ -45,7 +45,7 @@ const SkillsCarousel = () => {
     setSkills(chunkArray(skillsList, 10))
   }, [skillsList])
   return (
-    <Box>
+    <Box mr={{lg:4, xl:4}}>
       <Carousel
         indicators={true}
         autoPlay={false}
@@ -54,15 +54,15 @@ const SkillsCarousel = () => {
       >
         {skills.map((item, index) => <Grid container key={index}>
         {item.map(_item => 
-            <Grid item xs={2.8} sm={2.4} key={_item.name} align="center" my={2}>
+            <Grid item xs={2.8} sm={2.4} key={_item.name} align="center" my={3}>
               <Tooltip title={_item.name} arrow >
                 <Box sx={boxStyles} variant="outlined">
-                  <Box height={{xs: "25px", sm: "35px", md:"37px", lg:"45px", xl: "75px"}} width={{xs: "25px", sm: "35px", md:"37px", lg:"45px", xl: "75px"}}>
+                  <Box height={{xs: "25px", sm: "35px", md:"37px", lg:"45px", xl: "70px"}} width={{xs: "25px", sm: "35px", md:"37px", lg:"45px", xl: "70px"}}>
                     <SkillIconImageItem 
                       src={_item.monoUrl} 
                       duration={400} 
                       objectFit='scale-down'
-                      sx={{filter: "invert(.9) brightness(1)"}}
+                      sx={{filter: "invert(.95) brightness(1)"}}
                       />
                   </Box>
                   {/* <Typography variant="body2" sx={textStyles} color="secondary.light">{_item.name}</Typography> */}
