@@ -32,9 +32,10 @@ const Home = () => {
         />
         <Introduction/>
         <SubIntroduction/>
-        {/* <Purpose/> */}
         <Process/>
         <Skills/>
+        {/* <Purpose/> */}
+
         <Contact/>
         <Footer/>
     </Stack>
