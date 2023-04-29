@@ -28,14 +28,14 @@ const ProcessStepperMobile = ({ processItems }) => {
           key={item.title} 
           sx={{
             px:2,
-            py:4,
-            mx:{xs:1.5, sm:2},
-            my:{xs:1, sm:2},
-            minHeight: {xs: 250, sm:200},
+            py:{xs:3, sm: 4},
+            mx:{xs:1, sm:2},
+            my:{xs:2, sm:2},
+            minHeight: {xs: 190, sm:200},
           }}
           >
-          <Typography variant="h6" align="center" letterSpacing={1.25} fontWeight={800} fontSize={{md:18}}>{item.title}</Typography>
-          <Typography variant="body1" align="center" fontSize={{xs: 14, sm: 15}} fontWeight={300} mt={{xs: 2, sm: 3}} sx={{textAlign: "justify", textJustify: "inter-word", opacity: .7}}>
+          <Typography variant="h6" align="center" letterSpacing={1.25} fontWeight={800} fontSize={{xs: 17, sm: 19}}>{item.title}</Typography>
+          <Typography variant="body1" align="center" fontSize={{xs: 13.5, sm: 15}} fontWeight={300} mt={{xs: 1.25, sm: 3}} sx={{textAlign: "justify", textJustify: "inter-word", opacity: .7}}>
             {item.body}
           </Typography>
         </Box>)}

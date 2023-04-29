@@ -42,14 +42,13 @@ const SkillsCarousel = () => {
         interval={8000}
         duration={800} 
         navButtonsAlwaysInvisible={true}
-        // IndicatorIcon={<FiberManualRecordIcon size='small' color="secondary"/>}
       >
         {skills.map((item, index) => <Grid container key={index}>
         {item.map(_item => 
-            <Grid item xs={2.8} sm={2.4} key={_item.name} align="center" my={3}>
+            <Grid item xs={2.4} sm={2.4} key={_item.name} align="center" my={3}>
               <Tooltip title={<Typography variant="body1" fontSize={13.5} color="primary.main" fontWeight={500}>{_item.name}</Typography>} arrow >
                 <Box sx={boxStyles} variant="outlined">
-                  <Box height={{xs: "25px", sm: 52, md:55, lg:70, xl: 75}} width={{xs: "25px", sm: 52, md:55, lg:70, xl: 75}}>
+                  <Box height={{xs: 45, sm: 52, md:55, lg:70, xl: 75}} width={{xs: 45, sm: 52, md:55, lg:70, xl: 75}}>
                     <SkillIconImageItem 
                       src={_item.monoUrl} 
                       duration={800} 

@@ -5,7 +5,7 @@ const SubIntroduction = () => {
   return (
     <Grid container 
       sx={{
-        px: {xs:1.5, sm: 3, md: 4, lg: 3}, 
+        px: {xs:2.5, sm: 3, md: 4, lg: 3}, 
         pt: {xs:8, sm: 10, md: 14, lg: 16}, 
         pb: {xs:6, sm: 8, md: 10, lg: 12}, 
         justifyContent: "center", 
@@ -15,8 +15,8 @@ const SubIntroduction = () => {
         mx: "auto"
       }}
     >
-      <Grid item xs={1} sm={3} md={5} lg={5}></Grid>
-      <Grid item xs={11} sm={9} md={7} lg={7} mt="auto">
+      <Grid item xs={0} sm={3} md={5} lg={5}></Grid>
+      <Grid item xs={12} sm={9} md={7} lg={7} mt="auto">
         <Box align="right">
           <Typography sx={{display: "inline", fontWeight: 400, fontSize: {xs: 13.5, sm: 16, md: 19, lg:22, xl: 26}, lineHeight: 1.35}}>I design and develop websites from a </Typography>
           <Typography sx={{display: "inline", fontWeight: 500, fontSize: {xs: 13.5, sm: 16, md: 19, lg:22, xl: 26}, lineHeight: 1.35}} >simple static page </Typography>
