@@ -5,11 +5,11 @@ import DescriptionGridItem from './DescriptionGridItem'
 
 const Introduction = () => {
   return (
-    <Grid container sx={{px: {xs:1.5, sm: 2, md: 3, lg: 4}, minHeight: {xs: "94vh", lg: "96vh", xl: "97vh"}, justifyContent: "center", alignItems: "center", maxWidth: "1500px", mx: "auto", pt: 8, pb: 3}}>
+    <Grid container sx={{px: {xs:1.5, sm: 2, md: 3, lg: 4}, minHeight: {xs: "93vh", lg: "96vh", xl: "97vh"}, justifyContent: "center", alignItems: "center", maxWidth: "1500px", mx: "auto", pt: 8, pb: 3}}>
       <Grid item xs={12} md={12} lg={8} py={{xs:1, lg: 4}} mt={{xs: "auto"}} order={{xs: 2, lg: 1}}>
         <DescriptionGridItem/>
       </Grid>
-      <Grid item xs={12} md={12} lg={4} mt={{xs: .5, sm:4}} mb="auto" order={{xs: 1, lg: 2}}>
+      <Grid item xs={12} md={12} lg={4} mt={{xs: 3, sm:4}} mb="auto" order={{xs: 1, lg: 2}}>
         <Box 
           sx={{
             border: 3, 

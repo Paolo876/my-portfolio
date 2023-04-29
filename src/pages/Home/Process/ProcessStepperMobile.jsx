@@ -22,6 +22,7 @@ const ProcessStepperMobile = ({ processItems }) => {
         index={activeIndex}
         onChange={(e) => setActiveIndex(e)}
         navButtonsAlwaysInvisible={true}
+        
       >
         {processItems.map(item => <Box 
           key={item.title} 

@@ -10,9 +10,9 @@ const DescriptionGridItem = () => {
   return (
     <Stack >
       <Box sx={{opacity: 1}}>
-        <Typography sx={{display: "inline", fontWeight: 300, fontSize: {xs: 20, sm: 22, md: 30, lg:36, xl: 45}, mixBlendMode: "difference"}}>I am </Typography>
+        <Typography sx={{display: "inline", fontWeight: 200, fontSize: {xs: 20, sm: 22, md: 30, lg:36, xl: 45}, mixBlendMode: "difference"}}>I am </Typography>
         <Typography sx={{display: "inline", fontWeight: 800, fontSize: {xs: 37, sm: 50, md: 56, lg:62, xl: 75}, ml: {xs:.25, sm:1}, lineHeight: 1.25, letterSpacing: {xs:.5, md: 1}, fontFamily: "Manrope"}} color="primary.main">Paolo Bugarin</Typography>
-        <Typography sx={{display: "inline", fontWeight: 300, fontSize:  {xs: 20, sm: 22, md: 30, lg:36, xl: 45}, mixBlendMode: "difference"}}>,</Typography>
+        <Typography sx={{display: "inline", fontWeight: 200, fontSize:  {xs: 20, sm: 22, md: 30, lg:36, xl: 45}, mixBlendMode: "difference"}}>,</Typography>
       </Box>
       <Box sx={{mixBlendMode: "difference", opacity:.9, mt: {sm:1, md:1.25, lg: 2}}}>
         <Typography sx={{display: "inline", fontWeight: 100, fontSize: {xs: 15, sm: 15.5, md: 17, lg:18, xl: 21}, lineHeight: 1.2, }}>a  </Typography>
