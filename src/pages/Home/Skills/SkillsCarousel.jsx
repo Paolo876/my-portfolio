@@ -46,14 +46,17 @@ const SkillsCarousel = () => {
         {skills.map((item, index) => <Grid container key={index}>
         {item.map(_item => 
             <Grid item xs={2.4} sm={2.4} key={_item.name} align="center" my={3}>
-              <Tooltip title={<Typography variant="body1" fontSize={13.5} color="primary.main" fontWeight={500}>{_item.name}</Typography>} arrow >
+              <Tooltip 
+                title={<Typography variant="body1" fontSize={13.5} color="primary.main" fontWeight={500}>{_item.name}</Typography>} 
+                arrow 
+              >
                 <Box sx={boxStyles} variant="outlined">
                   <Box height={{xs: 45, sm: 52, md:55, lg:70, xl: 75}} width={{xs: 45, sm: 52, md:55, lg:70, xl: 75}}>
                     <SkillIconImageItem 
                       src={_item.monoUrl} 
                       duration={800} 
                       objectFit='scale-down'
-                      sx={{filter: "invert(.95) brightness(.95)"}}
+                      sx={{filter: "invert(1) brightness(1.1)"}}
                       />
                   </Box>
                 </Box>
