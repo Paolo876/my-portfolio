@@ -34,7 +34,7 @@ const Home = () => {
         <SubIntroduction/>
         <Process/>
         <Skills/>
-        {/* <Purpose/> */}
+        <Purpose/>
 
         <Contact/>
         <Footer/>
