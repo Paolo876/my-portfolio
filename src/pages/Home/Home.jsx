@@ -37,7 +37,7 @@ const Home = () => {
         <Purpose/>
 
         <Contact/>
-        <Footer/>
+        {/* <Footer/> */}
     </Stack>
   )
 }
