@@ -11,12 +11,11 @@ const ContactDescription = () => {
   return (
     <>
       <Box mt={{xs:3, sm: 4, md: 5, lg: 1}}>
-        <Typography variant="body1" fontSize={{xs: 15, sm: 15, md: 15.5, lg:16, xl: 17}} fontWeight={400} sx={{textAlign: {xs: "justify"}, textJustify: "inter-word"}} lineHeight={1.4}>
+        <Typography variant="body1" fontSize={{xs: 15, sm: 15, md: 15.5, lg:16, xl: 17}} fontWeight={300} sx={{textAlign: {xs: "justify"}, textJustify: "inter-word"}} lineHeight={1.4}>
           I am excited to take a leap forward and further hone my knowledge and skills with the right company.
         </Typography>
-        <Typography variant="body1" fontSize={{xs: 14, sm: 14, md: 15, lg:16, xl: 16}} fontWeight={300} sx={{textAlign: {xs: "justify"}, textJustify: "inter-word", opacity: .8}} mt={1} lineHeight={1.4}>
-          For any questions or inquiries, please feel free to get in touch with me through my contact informations provided. 
-          <br/>You can also reach me through submitting the inquiry form in my contact page.
+        <Typography variant="body1" fontSize={{xs: 14, sm: 14, md: 15, lg:16, xl: 16}} fontWeight={300} sx={{textAlign: {xs: "justify"}, textJustify: "inter-word", opacity: .75}} mt={2} lineHeight={1.4}>
+          For any questions or inquiries, please feel free to reach me through my contact informations provided or by submitting the form in the contact page.
         </Typography>
 
       </Box> 

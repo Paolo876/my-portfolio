@@ -9,14 +9,14 @@ import Footer from '../../../components/Footer';
 const Contact = () => {
   return (
   <Box sx={{position: "relative"}}>
-    <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(0,0,0,.1)", mixBlendMode: "overlay", opacity: 1, zIndex: -1}}></Box>
+    <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(0,0,0,.15)", mixBlendMode: "overlay", opacity: 1, zIndex: -1}}></Box>
 
     <Grid container sx={{px: {xs:0, sm: 0, md: 1.5, lg: 3}, py: {xs:6, sm: 6, md: 8, lg: 10, xl: 8}, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
       <Grid item xs={12}>
           <Grid container  sx={{justifyContent: "space-between", alignItems: "flex-start" }}>
             <Grid item xs={12} md={6.5}>
               <Box>
-                <Typography variant="h4" fontSize={{xs:25, sm: 28, md: 30}} letterSpacing={{xs:3, sm:4, md:6, lg:8}} color="primary.main">Let's Talk</Typography>
+                <Typography variant="h4" fontSize={{xs:28, sm: 30, md: 32, lg: 35}} letterSpacing={{xs:3, sm:4, md:6, lg:8}} color="primary.main">Let's Talk</Typography>
                 <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", mr: "auto", mt: {xs: 1, md:1}, mr: .5, mixBlendMode: "difference", opacity: .75}}></Box>
               </Box>
             </Grid>
@@ -33,12 +33,12 @@ const Contact = () => {
           <Grid item xs={12} sm={10} md={6} lg={4} order={{xs: 2, md: 1}}>
             <ContactDescription/>
           </Grid>
-          <Grid item xs={12} sm={10} md={6} lg={6} order={{xs: 1, md: 2}}>
+          <Grid item xs={12} sm={10} md={6} lg={5} order={{xs: 1, md: 2}}>
             <ContactInformations/>
           </Grid>
         </Grid>
       </Grid>
-      <Grid item xs={10} md={7} mt={5}>
+      <Grid item xs={10} md={7} mt={3}>
         <Divider flexItem><SocialLinks gap={1.5} buttonSize="small" flexDirection="row"/></Divider>
       </Grid>
     </Grid>
