@@ -3,12 +3,11 @@ import Introduction from './Introduction/Introduction'
 import Purpose from './Purpose/Purpose'
 import Contact from './Contact/Contact'
 import Skills from './Skills/Skills'
-import Footer from '../../components/Footer'
 
 import DocumentHead from '../../components/DocumentHead'
 import useFirestoreActions from '../../hooks/useFirestoreActions'
 import useRootRedux from '../../hooks/useRootRedux'
-import { Box, Stack } from '@mui/material'
+import { Stack } from '@mui/material'
 import Process from './Process/Process'
 import SubIntroduction from './SubIntroduction'
 
