@@ -24,9 +24,9 @@ const Navbar = () => {
 
   console.log(isScrolledDown)
   return (
-    <AppBar component="nav" className={`navbar ${isScrolledDown === "top" ? "page-top" : isScrolledDown ? "scroll-down" : ""}`} position="fixed">
+    <AppBar component="nav" className={`navbar ${isScrolledDown === "top" ? "page-top" : isScrolledDown ? "scroll-down" : "scroll-up"}`} position="fixed">
       <Container maxWidth="xl">
-        <Toolbar sx={{display: "flex", flexDirection: {xs: "column", md:"row"}, gap: 1, p:{xs:0, sm:1.5, md: 1.5 }, alignItems: isLandingPageView ? "flex-start" : "center"}} >
+        <Toolbar sx={{display: "flex", flexDirection: {xs: "column", md:"row"}, gap: 1, p:{xs:0, sm:1.5, md: 0 }, alignItems: isLandingPageView ? "flex-start" : "center"}} >
           <Link component={ReactLink} to="/" sx={{mt: {xs: 1, md: 0}}}>
             {/* <Box sx={{height: {xs: 35, sm:45}, width: "auto"}}>
               <SkillIconImageItem src={logo} sx={{filter: "brightness(1) grayscale(0)"}} />
