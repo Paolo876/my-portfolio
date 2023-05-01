@@ -3,7 +3,7 @@
     transform: translateY(0);
     &.scroll-up{
         background-color: rgba(35,35,35,0.99);
-        animation: scrollUp .1s ease-in 1 normal;
+        animation: scrollUp .2s ease-in 1 normal;
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;    
     }
     &.scroll-down{
@@ -21,8 +21,8 @@
         a{
             position: relative;
             z-index: 0;
-            margin: 0px 10px;
-            padding: 10px 10px;
+            // margin: 0 15px;
+            // padding: 10px 10px;
             opacity:.85;
             transition: all 0.3s;
             // color: #5b6eb5;
@@ -43,19 +43,19 @@
                 opacity: 0;
                 font-size: "inherit";
                 font-weight: 800;
-                top: 25%;
-                transition: all 0.15s ease-in;
+                top: 10%;
+                transition: all 0.2s ease-in;
             }
             &::before{
                 content: '<';
-                left: -.35em;
+                left: -1.1em;
                 transform: translateX(10px);
                 color:#d19119;
 
             }
             &::after{
                 content: '/>';
-                right: -.6em;
+                right: -1.3em;
                 transform: translateX(-10px);
                 color:#d19119;
             }
