@@ -8,7 +8,7 @@ import DocumentHead from '../components/DocumentHead';
 
 
 const linkStyles = {
-  fontSize: { xs: "1rem", sm: "1.4rem", md: "1.4rem", lg: "1.5rem", xl:"1.4rem" },
+  fontSize: { xs: "1rem", sm: "1.25rem", md: "1.3rem", lg: "1.3rem", xl:"1.3rem" },
   my: { xs:1.75, sm: 2 },
   fontWeight: 300,
   textAlign: "right",
@@ -71,7 +71,7 @@ const Landing = () => {
         keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
       />
       <Grid container sx={{px: {xs: 1, lg: 2}, height: "100%" }}>
-        <Grid item pt={{xs: 7, md:11}} xs={12} sm={8} sx={{minHeight: {xs: "fit-content", sm: "60vh",md:"70vh"}}}>
+        <Grid item pt={{xs: 7, md:11}} xs={12} sm={8} sx={{minHeight: {xs: "fit-content", sm: "65vh",md:"70vh"}}}>
           <Typography variant="h1" sx={nameStyles}>Paolo</Typography>
           <Typography variant="h1" sx={nameStyles}>Bugarin</Typography>
           <Typography 

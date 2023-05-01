@@ -1,11 +1,9 @@
 import React from 'react'
 import { Typography, Box } from '@mui/material'
-import SkillIconImageItem from '../../../components/SkillIconImageItem'
-import targetIcon from "../../../assets/target.svg"
 
 const MissionDescription = () => {
   return (
-  <Box mb={{xs: 5, md: 0}}> 
+  <Box> 
     <Box sx={{mb: 3}}>
       <Typography variant="h4" fontSize={{xs:23, sm: 24, md: 25, lg: 26, xl: 28}} letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:3.5}} lineHeight={{lg:1.6, xl:1.2}} color="primary.main">My Mission</Typography>
       <Box sx={{background: "rgba(239,235,229,1)", height: 8, width: 8, mr: "auto", ml: .2, mt: {xs: 1.5, md:1.75}, mixBlendMode: "difference", opacity: .7}}></Box>
