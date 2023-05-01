@@ -11,7 +11,7 @@ const Navbar = () => {
   const location = useLocation();
   const isLandingPageView = Boolean(location.pathname === "/")
   const [ currentOffset, setCurrentOffset ] = useState(window.pageYOffset);
-  const [ isScrolledDown, setIsScrolledDown ] = useState(false);
+  const [ isScrolledDown, setIsScrolledDown ] = useState("top");
   const [ showModal, setShowModal ] = useState(false);
 
   window.onscroll = () => {
@@ -21,6 +21,7 @@ const Navbar = () => {
       setIsScrolledDown(currentOffset < window.pageYOffset);
       setCurrentOffset(window.pageYOffset)
     }
+    console.log(window.pageYOffset)
   }
 
   return (
@@ -39,7 +40,7 @@ const Navbar = () => {
                 <Link component={NavLink} to="/contact" draggable={false}><Typography fontSize={{md: 15, lg: 16, xl: 17}}>Contact</Typography></Link>
               </Box>
               <IconButton sx={{display: {md:"none"}, ml: "auto", opacity: .75}} size="small" color="primary" onClick={() => setShowModal(true)}>
-                <MenuIcon/>
+                <MenuIcon sx={{fontSize: 26}}/>
               </IconButton>
             </>
           }

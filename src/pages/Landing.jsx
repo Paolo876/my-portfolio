@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Grid, Typography, Link, Stack, IconButton, Box, Container } from '@mui/material'
 import { Link as ReactLink } from 'react-router-dom';
@@ -8,11 +8,12 @@ import DocumentHead from '../components/DocumentHead';
 
 
 const linkStyles = {
-  fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.4rem", lg: "1.5rem", xl:"1.4rem" },
-  fontWeight: 400,
+  fontSize: { xs: "1rem", sm: "1.4rem", md: "1.4rem", lg: "1.5rem", xl:"1.4rem" },
+  my: { xs:1.75, sm: 2 },
+  fontWeight: 300,
   textAlign: "right",
   textTransform: "none",
-  letterSpacing: {xs: 1, md: 1.75},
+  letterSpacing: {xs: 1.25, md: 1.75},
   width: "fit-content",
   opacity: .7,
   mixBlendMode: "difference",
@@ -26,18 +27,15 @@ const linkStyles = {
 }
 
 const nameStyles = {
-  // opacity: .95, 
   mixBlendMode: "difference", 
   textTransform: "none",
   fontWeight: 800,
   fontSize: { xs:"5.6rem", sm: "7rem", md: "8rem", lg: "10rem", xl:"11rem" },
   lineHeight: .85,
-  // letterSpacing: .001,
   userSelect: "none",
 }
 
 const boxStyles = {
-  // border: 1,
   backgroundColor: "rgba(255,255,255,1)",
   opacity: .0,
   mixBlendMode: "difference",
@@ -46,7 +44,6 @@ const boxStyles = {
   position: "absolute",
   bottom: 1,
   right: -10,
-  // transform: "translateY(-50%)"
 }
 
 const Landing = () => {
@@ -60,13 +57,12 @@ const Landing = () => {
       }
     }
   
-    // window.ontouchmove = e => {
-    //   console.log(e)
-    // }
     return () => {
       window.onwheel = null;
     };
   }, []);
+
+
   return (
     <Container maxWidth="xl" sx={{pt: 8, height: "93vh", px:0}}>
       <DocumentHead
@@ -75,7 +71,7 @@ const Landing = () => {
         keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
       />
       <Grid container sx={{px: {xs: 1, lg: 2}, height: "100%" }}>
-        <Grid item pt={{xs: 7, md:11}} xs={12} sm={8} sx={{minHeight: {xs: "fit-content", md:"70vh"}}}>
+        <Grid item pt={{xs: 7, md:11}} xs={12} sm={8} sx={{minHeight: {xs: "fit-content", sm: "60vh",md:"70vh"}}}>
           <Typography variant="h1" sx={nameStyles}>Paolo</Typography>
           <Typography variant="h1" sx={nameStyles}>Bugarin</Typography>
           <Typography 
@@ -83,7 +79,7 @@ const Landing = () => {
             sx={{
               mt:{ xs: 4.5, sm: 5, md: 5, lg: 7, xl:10 } ,
               fontWeight: 200, 
-              fontSize: { xs: "1.2rem", sm: "1.3rem", md: "1.3rem", lg: "1.4rem", xl:"1.7rem" },
+              fontSize: { xs: "1.2rem", sm: "1.4rem", md: "1.5rem", lg: "1.6rem", xl:"1.7rem" },
               opacity: .7, 
               mixBlendMode: "difference", 
               letterSpacing: { xs: .5, md: 1.25, lg: 1.25, xl:1.5 },
@@ -102,7 +98,7 @@ const Landing = () => {
               sx={{
                 border: 1, 
                 opacity: .75, 
-                display: { xs: "none", md: "initial" },
+                display: { xs: "none", sm: "initial" },
                 borderColor: "rgba(255,255,255,.35)", 
                 transition: "all 200ms linear",
 
@@ -123,7 +119,6 @@ const Landing = () => {
               <Link component={ReactLink} to="/projects" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Projects</Typography><Box sx={boxStyles}></Box></Link>
               <Link component={ReactLink} to="/about" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>About</Typography><Box sx={boxStyles}></Box></Link>
               <Link component={ReactLink} to="/contact" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Contact</Typography><Box sx={boxStyles}></Box></Link>
-
             </Box>
           </Stack>
         </Grid>
