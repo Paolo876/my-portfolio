@@ -3,13 +3,14 @@
     &.scroll-up{
         background-color: rgba(0,0,0,0.0);
         animation: scrollUp .2s ease-in 1 normal;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;    
-        backdrop-filter: blur(8px) contrast(80%) brightness(30%);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
+        backdrop-filter: blur(30px) contrast(70%) brightness(30%);
     }
     &.scroll-down{
         transform: translateY(-100%);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         animation: scrollDown .25s ease-in 1 normal;
-        backdrop-filter: blur(8px) contrast(80%) brightness(30%);
+        backdrop-filter: blur(30px) contrast(70%) brightness(30%);
     }
     &.page-top{
         transform: translateY(0);
