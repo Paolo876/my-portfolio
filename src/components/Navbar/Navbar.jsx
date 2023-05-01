@@ -34,7 +34,7 @@ const Navbar = () => {
             <Typography fontSize={{xs: 14, sm: 15, md: 16}} variant="h3">PB</Typography>
           </Link>
           {!isLandingPageView &&
-            <Box sx={{ml: {xs:0, md:"auto"}, display: "flex", flexDirection: "row", gap: 3}} className="link-items">
+            <Box sx={{ml: {xs:0, md:"auto"}, display: "flex", flexDirection: "row", gap: .5}} className="link-items">
               <Link component={NavLink} to="/home" draggable={false}><Typography fontSize={{xs: 14, sm: 15, md: 16, lg: 18}}>Home</Typography></Link>
               <Link component={NavLink} to="/projects" draggable={false}><Typography fontSize={{xs: 14, sm: 15, md: 16, lg: 18}}>Projects</Typography></Link>
               <Link component={NavLink} to="/about" draggable={false}><Typography fontSize={{xs: 14, sm: 15, md: 16, lg: 18}}>About</Typography></Link>

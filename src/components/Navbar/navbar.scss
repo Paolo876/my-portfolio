@@ -1,14 +1,17 @@
 .navbar {
-    transition: transform .5s ease;
+    // transition: transform .8s ease;
     transform: translateY(0);
     &.scroll-up{
-        background-color: rgba(25,25,25,0.98);
-        transform: translateY(0);
+        background-color: rgba(35,35,35,0.99);
+        animation: scrollUp .1s ease-in 1 normal;
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;    
     }
     &.scroll-down{
         // background-color: red;
+        // box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;    
         transform: translateY(-100%);
+
+        animation: scrollDown .25s ease-in 1 normal;
     }
     &.page-top{
         transform: translateY(0);
@@ -64,3 +67,12 @@
         }
     }
 }
+
+@keyframes scrollDown {
+    from {transform: translateY(0);}
+    to {transform: translateY(-100%);}
+  }
+@keyframes scrollUp {
+    from {transform: translateY(-100%);}
+    to {transform: translateY(0);}
+  }
