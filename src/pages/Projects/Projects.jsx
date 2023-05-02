@@ -3,7 +3,7 @@ import useRootRedux from '../../hooks/useRootRedux'
 import useFirestoreActions from '../../hooks/useFirestoreActions'
 import DocumentHead from '../../components/DocumentHead'
 
-import { Grid, Box } from '@mui/material'
+import { Grid, Box, Stack } from '@mui/material'
 import ProjectNavigation from './ProjectNavigation'
 import ProjectsList from './ProjectsList'
 import Footer from '../../components/Footer'
@@ -133,13 +133,23 @@ const Projects = () => {
 
 
   return (
-    <Box sx={{pt: 8, height: "100vh", overflowX: "hidden"}}>
+    <Stack sx={{pt: 8, height: "100vh", overflowX: "hidden"}}>
       <DocumentHead
         title="Paolo Bugarin | Projects"
         description="I am a full stack web developer based in Los Angeles, California"
         keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
       />
-      {projects && <Box>
+      
+      <Grid container sx={{px: {xs:3, sm: 3, md: 1.5, lg: 3}, py: {xs:8, sm: 8, md: 8, lg: 8, xl: 8}, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", minHeight: "90vh"}}>
+        <Grid item xs={3}>
+          <Introduction/>
+        </Grid>
+        <Grid item xs={9} sx={{border: 1, height: "100%"}}>
+        </Grid>
+      </Grid>
+      <Box mt="auto" ml="auto" mr={1}><Footer/></Box>
+
+      {/* {projects && <Box>
         <Grid container mt={5} sx={{justifyContent: "center", maxWidth: "1920px", mx: "auto"}}>
           <Grid item xs={1.5} sx={{position: "relative"}}>
             <Box sx={{position: "fixed", height: "100%", width: "fit-content"}}>
@@ -156,8 +166,8 @@ const Projects = () => {
           
           <Grid item xs={12} mb={.25} mt={"30vh"}><Footer/></Grid>
         </Grid>
-      </Box>}
-    </Box>
+      </Box>} */}
+    </Stack>
   )
 }
 

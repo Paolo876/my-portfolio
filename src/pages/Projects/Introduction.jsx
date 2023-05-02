@@ -1,27 +1,44 @@
 import { useEffect } from 'react'
-import { Box, Typography, Divider } from '@mui/material'
+import { Box, Typography, Divider, Grid } from '@mui/material'
 import SocialLinks from '../../components/SocialLinks'
 import useProjectsRedux from '../../hooks/useProjectsRedux'
 import { useInView } from 'react-intersection-observer';
 
 
 const Introduction = () => {
-  const { setCurrentInView, currentInView } = useProjectsRedux();
-  const { ref, inView } = useInView({
-    threshold: 0,
-    rootMargin: '-20% 0% -50% 0%',
-    trackVisibility: true,
-    delay: 600,
-  });
+  // const { setCurrentInView, currentInView } = useProjectsRedux();
+  // const { ref, inView } = useInView({
+  //   threshold: 0,
+  //   rootMargin: '-20% 0% -50% 0%',
+  //   trackVisibility: true,
+  //   delay: 600,
+  // });
 
-  useEffect(() => {
-    if(inView && currentInView !== null) setCurrentInView(null)
-  }, [inView])
+  // useEffect(() => {
+  //   if(inView && currentInView !== null) setCurrentInView(null)
+  // }, [inView])
 
 
   return (
-    <Box sx={{minHeight: "55vh" }} ref={ref}>
-      <Box                
+    <Box sx={{position: "relative"}}>
+      <Box>
+        <Typography variant="h1" align="left" fontSize={{xs:25, sm: 28, md: 40, lg: 53, xl: 65}} letterSpacing={{xs:2, sm:3, md: 2, lg: 2.5, xl:3.5}} lineHeight={{xl:1}} color="primary.main">
+          My<br/>Projects
+        </Typography>
+        <Box sx={{background: "rgba(239,235,229,1)", height: "10px", width: "10px", mr: "auto", mt: {xs: 1.5, md:3}, ml: .2, mixBlendMode: "difference", opacity: .7}}></Box>
+
+      </Box>
+      <Box mt={5}>
+        <Typography variant="body1" fontSize={{xs: 14, sm: 15, md: 15.5, lg:16, xl: 16}} fontWeight={200} sx={{textAlign: {xs: "justify"}, textJustify: "inter-word"}} >
+          Listed are <Box fontWeight={400} display='inline'>my published projects</Box> that I still continue to develop and improve over time. 
+          <br/>Please feel free to check out the demo or git repository of my projects and message me if you have any remarks or suggestions.
+        </Typography>
+      </Box>
+      <Box mt={5} px={3}>
+        <Divider><SocialLinks buttonSize="medium" gap={1.5}/></Divider>
+      </Box>
+      
+      {/* <Box                
         sx={{
           opacity: .9, 
           mixBlendMode: "difference", 
@@ -44,7 +61,7 @@ const Introduction = () => {
           Please feel free to check out the demo or git repository of my projects and message me if you have any remarks or suggestions.
         </Typography>
         <Divider flexItem><SocialLinks iconSize="small" gap={.5} buttonSize="small" flexDirection="row"/></Divider>
-      </Box>
+      </Box> */}
     </Box>
   )
 }

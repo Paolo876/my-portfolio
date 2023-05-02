@@ -14,13 +14,13 @@ const styles = {
 }
 
 const linkStyles = {
-  fontSize: { xs: "1.3rem", sm: "2rem"},
+  fontSize: { xs: "1.2rem", sm: "1.8rem"},
   my: { xs:1.5, sm: 2.75 },
   ml: 2.5,
   fontWeight: 400,
   textAlign: "right",
   textTransform: "none",
-  letterSpacing: {xs: 1.25, sm: 2},
+  letterSpacing: {xs: 1.1, sm: 1.5},
   width: "fit-content",
   opacity: .7,
   mixBlendMode: "difference",
@@ -54,7 +54,7 @@ const LinksModal = ({ open, onClose}) => {
     <Modal open={open} onClose={onClose} closeAfterTransition>
       <Fade in={open} timeout={{enter: 600, exit: 600, appear: 1000}}>
         <Box sx={styles} className="navbar-modal">
-          <Container maxWidth="xl" sx={{height: "92vh"}}>
+          <Container maxWidth="xl" sx={{height: "90vh"}}>
             <Stack sx={{height: "100%"}}>
               <Box sx={{display: "flex", flexDirection: "row", px:{xs:0, sm:1.5, lg: 1.5, xl: 3 }, py:{xs:.65, sm:1.15, md: 1.75, xl: 2 }, alignItems: "center"}}>
                 <Link onClick={() => handleClick("/")}>
@@ -70,7 +70,6 @@ const LinksModal = ({ open, onClose}) => {
               </Box>
               <Box sx={{ml: "auto", mt: {xs:4, sm: 6}, opacity: .65, mr: {xs: 0, sm:1}}}>
                 <SocialLinks buttonSize='small' gap={3}/>
-                
               </Box>
               <Box sx={{mt: "auto"}} className="link-items">
                 <Link onClick={() => handleClick("/home")} className={location.pathname === "/home" ? "active" : ""} draggable={false}><Typography sx={linkStyles}>Home</Typography></Link>
@@ -79,7 +78,6 @@ const LinksModal = ({ open, onClose}) => {
                 <Link onClick={() => handleClick("/contact")} className={location.pathname === "/contact" ? "active" : ""} draggable={false} ><Typography sx={linkStyles}>Contact</Typography></Link>
               </Box>
             </Stack>
-
           </Container>
         </Box>
       </Fade>
