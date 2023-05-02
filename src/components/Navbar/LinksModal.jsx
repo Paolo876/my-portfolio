@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-
-import { Modal, Box, Typography, Link, Container, IconButton, Fade, Stack } from '@mui/material'
+import { Modal, Box, Typography, Link, Container, IconButton, Fade, Stack, Divider } from '@mui/material';
+import SocialLinks from '../SocialLinks';
 import PanoramaFishEyeIcon from '@mui/icons-material/PanoramaFishEye';
 import "./navbar.scss";
 
@@ -13,9 +13,8 @@ const styles = {
   position: "relative",
 }
 
-
 const linkStyles = {
-  fontSize: { xs: "1.35rem", sm: "2rem"},
+  fontSize: { xs: "1.3rem", sm: "2rem"},
   my: { xs:1.5, sm: 2.75 },
   ml: 2.5,
   fontWeight: 400,
@@ -29,11 +28,22 @@ const linkStyles = {
   fontFamily: "Manrope",
 }
 
+const nameStyles = {
+  mixBlendMode: "difference", 
+  opacity: .6,
+  textTransform: "none",
+  fontWeight: 800,
+  fontSize: { xs:"4.5rem", sm: "6rem" },
+  lineHeight: .85,
+  userSelect: "none",
+}
+
 
 const LinksModal = ({ open, onClose}) => {
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location)
+
+
   const handleClick = (url) => {
     onClose();
     navigate(url)
@@ -53,6 +63,14 @@ const LinksModal = ({ open, onClose}) => {
                 <IconButton sx={{display: {md:"none"}, ml: "auto", opacity: .75}} size="small" color="primary" onClick={onClose}>
                   <PanoramaFishEyeIcon/>
                 </IconButton>
+              </Box>
+              <Box sx={{mt: 6}} align="right">
+                <Typography variant="h1" sx={nameStyles}>Paolo</Typography>
+                <Typography variant="h1" sx={nameStyles}>Bugarin</Typography>
+              </Box>
+              <Box sx={{ml: "auto", mt: {xs:4, sm: 6}, opacity: .65, mr: {xs: 0, sm:1}}}>
+                <SocialLinks buttonSize='small' gap={3}/>
+                
               </Box>
               <Box sx={{mt: "auto"}} className="link-items">
                 <Link onClick={() => handleClick("/home")} className={location.pathname === "/home" ? "active" : ""} draggable={false}><Typography sx={linkStyles}>Home</Typography></Link>
