@@ -4,7 +4,7 @@ import { NavLink, Link as ReactLink } from 'react-router-dom';
 import { Typography, AppBar, Container, Box, Link, IconButton } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 
-import "./navbar.scss"
+import "./navbar.scss";
 import LinksModal from './LinksModal';
 
 const Navbar = () => {
@@ -18,7 +18,9 @@ const Navbar = () => {
     if(window.pageYOffset < 50) {
       setIsScrolledDown("top");
     } else {
-      setIsScrolledDown(currentOffset < window.pageYOffset);
+      if((currentOffset + 3) < window.pageYOffset || currentOffset > (window.pageYOffset + 10) ) {
+        setIsScrolledDown(currentOffset < window.pageYOffset);
+      }
       setCurrentOffset(window.pageYOffset)
     }
   }

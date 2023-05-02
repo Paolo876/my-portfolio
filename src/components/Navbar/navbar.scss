@@ -1,7 +1,6 @@
-.navbar {
+.navbar{
     transform: translateY(0);
     &.scroll-up{
-        background-color: rgba(0,0,0,0.0);
         animation: scrollUp .2s ease-in 1 normal;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
         backdrop-filter: blur(30px) contrast(70%) brightness(30%);
@@ -62,6 +61,45 @@
             }
         }
     }
+}
+
+.navbar-modal {
+    .link-items {
+        text-align: center;
+        a{
+            z-index: 0;
+            opacity:.85;
+            transition: all 0.3s;
+            p {
+                font-weight: 400;
+                position: relative;
+
+            }
+            &.active {
+                p {
+                    font-weight: 500;
+                    &::before, &::after{
+                        opacity: .75;
+                        position: absolute;
+                        top: 0;
+                        color:#d19119;
+                        font-weight: 600;
+                        letter-spacing: .01;
+                    }
+                    &::before{
+                        content: '<';
+                        left: -.9em;
+                    }
+                    &::after{
+                        content: '/>';
+                        right: -1.45em;
+                    }
+    
+                }
+            }
+        }
+    }
+
 }
 
 @keyframes scrollDown {

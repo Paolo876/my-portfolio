@@ -114,7 +114,7 @@ const Landing = () => {
                 <ArrowForwardIosIcon fontSize="large"/>
               </IconButton>
             </Box>
-            <Box sx={{visibility: "visible"}} align="right">
+            <Box align="right">
               <Link component={ReactLink} to="/home" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Home</Typography><Box sx={boxStyles}></Box></Link>
               <Link component={ReactLink} to="/projects" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Projects</Typography><Box sx={boxStyles}></Box></Link>
               <Link component={ReactLink} to="/about" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>About</Typography><Box sx={boxStyles}></Box></Link>
