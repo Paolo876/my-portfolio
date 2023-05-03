@@ -41,7 +41,7 @@ const Navbar = () => {
                 <Link component={NavLink} to="/contact" draggable={false}><Typography fontSize={{md: 15, lg: 16, xl: 17}}>Contact</Typography></Link>
               </Box>
               <IconButton sx={{display: {md:"none"}, ml: "auto", opacity: .75}} size="small" color="primary" onClick={() => setShowModal(true)}>
-                <MenuIcon sx={{fontSize: {xs:26, sm: 30}}}/>
+                <MenuIcon sx={{fontSize: 30}}/>
               </IconButton>
             </>
           }
