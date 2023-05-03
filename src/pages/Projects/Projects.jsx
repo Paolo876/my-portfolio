@@ -4,8 +4,8 @@ import useFirestoreActions from '../../hooks/useFirestoreActions'
 import DocumentHead from '../../components/DocumentHead'
 
 import { Grid, Box, Stack } from '@mui/material'
-import ProjectNavigation from './ProjectNavigation'
-import ProjectsList from './ProjectsList'
+// import ProjectNavigation from './ProjectNavigation'
+// import ProjectsList from './ProjectsList'
 import Footer from '../../components/Footer'
 import Introduction from './Introduction'
 
@@ -140,14 +140,14 @@ const Projects = () => {
         keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
       />
       
-      <Grid container sx={{px: {xs:3, sm: 3, md: 1.5, lg: 3}, py: {xs:8, sm: 8, md: 8, lg: 8, xl: 8}, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", minHeight: "90vh"}}>
-        <Grid item xs={3}>
+      <Grid container sx={{px: {xs:3, sm: 3, md: 1.5, lg: 3}, py: {xs:1, sm: 4, md: 8, lg: 8, xl: 8}, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", minHeight: "75vh"}}>
+        <Grid item xs={12} md={3}>
           <Introduction/>
         </Grid>
-        <Grid item xs={9} sx={{border: 1, height: "100%"}}>
+        <Grid item xs={12} md={9} sx={{border: 1, height: "100%"}}>
         </Grid>
       </Grid>
-      <Box mt="auto" ml="auto" mr={1}><Footer/></Box>
+      <Box mt="auto" ml={{md:"auto"}} mr={1}><Footer/></Box>
 
       {/* {projects && <Box>
         <Grid container mt={5} sx={{justifyContent: "center", maxWidth: "1920px", mx: "auto"}}>
