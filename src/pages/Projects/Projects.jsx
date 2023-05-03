@@ -133,14 +133,14 @@ const Projects = () => {
 
 
   return (
-    <Stack sx={{pt: 8, height: "100vh", overflowX: "hidden"}}>
+    <Stack sx={{height: "100%"}}>
       <DocumentHead
         title="Paolo Bugarin | Projects"
         description="I am a full stack web developer based in Los Angeles, California"
         keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
       />
       
-      <Grid container sx={{px: {xs:3, sm: 3, md: 1.5, lg: 3}, py: {xs:1, sm: 4, md: 8, lg: 8, xl: 8}, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", minHeight: "75vh"}}>
+      <Grid container sx={{px: {xs:3, sm: 3, md: 1.5, lg: 3}, pt: 8, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", minHeight: "75vh"}}>
         <Grid item xs={12} md={3}>
           <Introduction/>
         </Grid>

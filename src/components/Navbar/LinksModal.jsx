@@ -8,7 +8,7 @@ import "./navbar.scss";
 const styles = {
   height: "100%",
   width: "100%",
-  backdropFilter: "blur(8px) contrast(20%) brightness(40%)",
+  backdropFilter: "blur(3px) contrast(20%) brightness(40%)",
   border: 0,
   position: "relative",
 }
@@ -30,10 +30,10 @@ const linkStyles = {
 
 const nameStyles = {
   mixBlendMode: "difference", 
-  opacity: .3,
+  opacity: .2,
   textTransform: "none",
   fontWeight: 800,
-  fontSize: { xs:"4.5rem", sm: "6rem" },
+  fontSize: { xs:"5rem", sm: "6rem" },
   lineHeight: .85,
   userSelect: "none",
 }
@@ -61,14 +61,14 @@ const LinksModal = ({ open, onClose}) => {
                   <Typography fontSize={{xs: 14, sm: 15, md: 16}} variant="h3">PB</Typography>
                 </Link>
                 <IconButton sx={{display: {md:"none"}, ml: "auto", opacity: .75}} size="small" color="primary" onClick={onClose}>
-                  <PanoramaFishEyeIcon sx={{fontSize: 30}}/>
+                  <PanoramaFishEyeIcon sx={{fontSize: 35}}/>
                 </IconButton>
               </Box>
               <Box sx={{mt: 6}} align="right">
                 <Typography variant="h1" sx={nameStyles}>Paolo</Typography>
                 <Typography variant="h1" sx={nameStyles}>Bugarin</Typography>
               </Box>
-              <Box sx={{ml: "auto", mt: {xs:5, sm: 6}, opacity: .5, mr: {xs: 0, sm:1}}}>
+              <Box sx={{ml: "auto", mt: {xs:5, sm: 6}, opacity: .75, mr: {xs: 0, sm:1}}}>
                 <SocialLinks buttonSize='small' gap={3}/>
               </Box>
               <Box sx={{mt: "auto"}} className="link-items">
