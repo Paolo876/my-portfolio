@@ -11,7 +11,7 @@ const Introduction = () => {
         </Typography>
         <Box sx={{background: "rgba(239,235,229,1)", height: {xs: 2, sm: 8, md: 10}, width: {xs: 12, sm: 8, md: 10}, mr: "auto", mt: {xs: 1.25, sm: 1.5, md:3}, ml: .2, mixBlendMode: "difference", opacity: .7}}></Box>
       </Grid>
-      <Grid item xs={12} sm={6.5} md={12} mt={{xs: 3, sm: 3, md:5}}>
+      <Grid item xs={12} sm={6.5} md={12} mt={{xs: 3, sm: 3, md:5}} ml={{sm:2, md: 0}}>
         <Typography variant="body1" fontSize={{xs: 12, sm: 12.5, md: 13, lg:14, xl: 15}} fontWeight={200} sx={{textAlign: {xs: "justify"}, textJustify: "inter-word"}}>
           Listed are <Box fontWeight={400} display='inline' component="span">my published projects</Box> that I still continue to develop and improve over time. 
           <br/>Please feel free to check out the demo or git repository of my projects and message me if you have any remarks or suggestions.
