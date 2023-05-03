@@ -1,6 +1,7 @@
 import React from 'react'
-import { Stack } from '@mui/material'
+import { Grid } from '@mui/material'
 import ProjectItem from './ProjectItem/ProjectItem'
+import ProjectGridItem from './ProjectGridItem/ProjectGridItem'
 
 
 
@@ -8,9 +9,23 @@ const ProjectsList = ({ projects }) => {
 
 
   return (
-    <Stack>
-      {projects.map(item => <ProjectItem key={item.name} item={item}/>)}
-    </Stack>
+    <Grid container sx={{pl: {md: 3, lg: 6, xl: 8}}}>
+      {projects.map(item => <Grid item xs={12} md={6} lg={4}>
+        <ProjectGridItem 
+          name={item.name}
+          title={item.title}
+          description={item.description}
+          technologies={item.technologies}
+          type={item.type}
+          features={item.features}
+          url={item.url}
+          githubUrl={item.githubUrl}
+          images={item.images}
+          coverImage={item.coverImage}
+        />
+      </Grid>)}
+      {/* {projects.map(item => <ProjectItem key={item.name} item={item}/>)} */}
+    </Grid>
   )
 }
 
