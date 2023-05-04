@@ -19,6 +19,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "moby", 
     title: "Moby",
+    briefDescription: "A fully functional social media web application implementing the elements of a social media platform.",
     description: "Moby is a social media web app that incorporates the essential features of a modern social media application. Simply by creating an account and setting up your profile, you can start publishing posts, add friends, and connect with other people through moby.",
     technologies: [ "JavaScript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "Sequelize", "MySQL", "Material-UI", "Sass/Scss"],
     type: "personal",
@@ -37,6 +38,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "mernshop", 
     title: "MernShop",
+    briefDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     description: "MernShop is an e-commerce web application demo inspired by TraversyMedia's ReactJS Udemy Course. It showcases the system and functionalities of an e-commerce application with extra security and validation features.",
     technologies: [ "JavaScript", "React", "Redux", "NodeJs", "ExpressJs", "MongoDB", "Bootstrap"],
     type: "personal",
@@ -54,6 +56,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "downtownsuitsdirect", 
     title: "Downtown Suits Direct",
+    briefDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     description: "Downtown Suits Direct is a men's suit and tailor shop located in Pico Rivera, California. It is a commissioned project that I designed and developed using React and Firebase.",
     technologies: [ "JavaScript", "React","Firebase", "Sass/Scss"],
     type: "commissioned",
@@ -72,6 +75,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "luna", 
     title: "Luna",
+    briefDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     description: "Luna is a beautiful personalizable browser homepage inspired by the google chrome extension 'Momentum'. It features a UI that the user can freely customize through rearranging the components or elements positioning, font properties, and UI colors.",
     technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "personal",
@@ -84,6 +88,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "carlportfolio", 
     title: "Carl Dimabuyu Portfolio",
+    briefDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
     technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "commissioned",
@@ -96,6 +101,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "aynportfolio", 
     title: "Ayn Laquindanum Portfolio",
+    briefDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
     technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "commissioned",
@@ -108,6 +114,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "cimt", 
     title: "CERT Incident Management Tool",
+    briefDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
     technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "school",

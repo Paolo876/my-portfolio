@@ -14,6 +14,7 @@ const ProjectsList = ({ projects }) => {
         <ProjectGridItem 
           name={item.name}
           title={item.title}
+          briefDescription={item.briefDescription}
           description={item.description}
           technologies={item.technologies}
           type={item.type}
