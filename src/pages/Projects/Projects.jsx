@@ -149,10 +149,10 @@ const Projects = () => {
       />
       
       <Grid container sx={{px: {xs:3, sm: 3, md: 1.5, lg: 3}, pt: {xs:10, sm: 11, md: 13, lg: 13, xl: 14}, pb: 8, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", minHeight: "100vh"}}>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={12} md={2.25}>
           <Introduction/>
         </Grid>
-        <Grid item xs={12} md={9}>
+        <Grid item xs={12} md={9.75}>
           {projects && <ProjectsList projects={projects}/>}
         </Grid>
       </Grid>

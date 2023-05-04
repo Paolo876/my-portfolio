@@ -10,7 +10,7 @@ const Skills = () => {
   return (
     <Box sx={{position: "relative"}}>
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: {xs: "rgba(250,250,250,.15)", md:"rgba(200,200,200,.1)"}, mixBlendMode: "overlay", opacity: 1, zIndex: -1}}></Box>
-      <Grid container sx={{px: {xs:0, sm: 0, md: 1.5, lg: 3, xl:0}, py: {xs:8, sm: 9, md: 10, lg: 10, xl: 12}, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
+      <Grid container sx={{px: {xs:0, sm: 0, md: 1.5, lg: 3, xl:0}, py: {xs:8, sm: 9, md: 10, lg: 10, xl: 12}, justifyContent: {xs:"center", md: "space-between"}, alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
         <Grid item xs={12} sx={{display: {xs: "initial", md: "none"}, mt: 2}}>
           <Box>
             <Typography variant="h4" align="center" fontSize={{xs:25, sm: 28, md: 30}} letterSpacing={{xs:2, sm:3, md:3.5}} lineHeight={{xl:1.3}} color="primary.main">Technologies</Typography>
@@ -21,7 +21,7 @@ const Skills = () => {
         <Grid item xs={12} md={7} lg={7.75}>
           <SkillsCarousel/>
         </Grid>
-        <Grid item xs={12} md={5} lg={3.5}>
+        <Grid item xs={12} md={5} lg={3.75}>
           <SkillsDescription/>
         </Grid>
       </Grid>

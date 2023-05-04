@@ -10,7 +10,7 @@ const ProjectsList = ({ projects }) => {
 
   return (
     <Grid container sx={{pl: {md: 3, lg: 4, xl: 8}}}>
-      {projects.map(item => <Grid item xs={12} md={6} lg={4}>
+      {projects.map(item => <Grid item xs={12} md={6} lg={4} >
         <ProjectGridItem 
           name={item.name}
           title={item.title}
