@@ -1,12 +1,12 @@
 import React from 'react'
-import { Grid } from '@mui/material'
+import { Grid, useTheme } from '@mui/material'
 import ProjectItem from './ProjectItem/ProjectItem'
 import ProjectGridItem from './ProjectGridItem/ProjectGridItem'
 
 
 
 const ProjectsList = ({ projects }) => {
-
+  const { palette } = useTheme()
 
   return (
     <Grid container sx={{pl: {md: 3, lg: 4, xl: 8}}}>
@@ -23,6 +23,7 @@ const ProjectsList = ({ projects }) => {
           githubUrl={item.githubUrl}
           images={item.images}
           coverImage={item.coverImage}
+          backgroundColor={palette.secondary.dark}
         />
       </Grid>)}
       {/* {projects.map(item => <ProjectItem key={item.name} item={item}/>)} */}
