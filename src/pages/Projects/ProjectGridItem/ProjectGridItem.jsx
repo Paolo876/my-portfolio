@@ -8,7 +8,7 @@ const ProjectGridItem = ({ name, title, briefDescription, description, technolog
 
   return (
     <Paper variant="outlined" sx={{m:2.5, height: 320}} className='project-grid-item'>
-      <Grid container sx={{height: "100%", width: "100%"}}>
+      <Grid container className="grid-container">
         <Grid item>
           <Box sx={{p: 1.1}} className="description">
             <Box sx={{width: "100%", height: "100%", border: 2, p: 1.25}}>
@@ -27,7 +27,9 @@ const ProjectGridItem = ({ name, title, briefDescription, description, technolog
             </Box>
           </Box>
         </Grid>
-
+        <Grid item>
+          {/* carousel here */}
+        </Grid>
       </Grid>
 
 

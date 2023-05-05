@@ -1,14 +1,19 @@
 .project-grid-item {
     position: relative;
-    .description {
-        transition: opacity 300ms linear;
-        opacity: 0;
+
+    .grid-container{
         width: 100%;
         height: 100%;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-        backdrop-filter: blur(4px) brightness(25%) contrast(75%);
+        .description {
+            transition: opacity 300ms linear;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            backdrop-filter: blur(4px) brightness(25%) contrast(75%);
+        }
     }
 
     .cover-image{
@@ -20,7 +25,7 @@
         filter: brightness(95%);
     }
 
-    &:hover .description {
+    &:hover .grid-container .description {
         opacity: 1;
     }
 }
