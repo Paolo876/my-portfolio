@@ -36,7 +36,16 @@ const Process = () => {
       <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", overflowX:"auto", overflowY: "hidden", px: {md: 0,lg:3}}}>
         <Grid item xs={12} md={12} lg={2.5}>
           <Box sx={{display: {xs: "none", lg: "initial"}}}>
-            <Typography variant="h4" align="left" fontSize={{lg: 45, xl: 55}} letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:5}} lineHeight={{lg:1.6, xl:1.15}} color="primary.main">My<br/>Work<br/>Process</Typography>
+            <Typography 
+              variant="h4" 
+              align="left" 
+              fontSize={{lg: 45, xl: 55}} 
+              letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:5}} 
+              lineHeight={{lg:1.6, xl:1.15}} 
+              color="primary.main"
+            >
+              My<br/>Work<br/>Process
+            </Typography>
             <Box sx={{background: "rgba(239,235,229,1)", height: "12px", width: "12px", mr: "auto", mt: {xs: 1.5, md:3.5}, ml: .2, mixBlendMode: "difference", opacity: .7}}></Box>
           </Box>
         </Grid>

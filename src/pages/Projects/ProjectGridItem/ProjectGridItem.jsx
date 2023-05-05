@@ -7,7 +7,7 @@ const ProjectGridItem = ({ name, title, briefDescription, description, technolog
   console.log(briefDescription)
 
   return (
-    <Paper variant="outlined" sx={{m:2, height: 260, position:"relative"}}>
+    <Paper variant="outlined" sx={{m:2.5, height: 320, position:"relative"}}>
       <Box sx={{width: "100%", height: "100%", position: "relative", overflow: "hidden", zIndex: 1, backdropFilter: "blur(4px) brightness(25%) contrast(75%)", p: 1.1}}>
         <Box sx={{width: "100%", height: "100%", border: 2, p: 1.25}}>
           <Box sx={{position: "relative"}}>
