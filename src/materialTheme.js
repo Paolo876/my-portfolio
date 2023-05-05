@@ -20,11 +20,14 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           // fontFamily: 'Manrope',
+          borderWidth: 2,
           borderRadius: 0,
-          fontWeight: 500,
-          letterSpacing: .75,
+          fontWeight: 600,
+          letterSpacing: .95,
           ":hover": {
             borderRadius: 0,
+            borderWidth: 2,
+
           }
         },
         
