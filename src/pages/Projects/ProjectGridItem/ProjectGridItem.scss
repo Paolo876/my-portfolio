@@ -3,42 +3,33 @@
     overflow: hidden;
 
     .project-item-overlay-container{
+        position: absolute;
+        top:0;
+        left:0;
         width: 100%;
         height: 100%;
-        backdrop-filter: blur(4px) brightness(25%) contrast(75%);
-        // background-color: red;
-        
+        backdrop-filter: blur(3px) brightness(20%) contrast(75%);
+        z-index: 2;
+        opacity:0;
+        transition: opacity 300ms linear;
         .grid-container {
             width: 100%;
             height: 100%;
             
         }
     }
-    // .grid-container{
-    //     width: 100%;
-    //     height: 100%;
-    //     .description {
-    //         transition: opacity 300ms linear;
-    //         // opacity: 0;
-    //         width: 100%;
-    //         height: 100%;
-    //         position: relative;
-    //         overflow: hidden;
-    //         z-index: 1;
-    //         backdrop-filter: blur(4px) brightness(25%) contrast(75%);
-    //     }
-    // }
 
-    // .cover-image{
-    //     position: absolute; 
-    //     top: 0; 
-    //     left:0; 
-    //     height: 100%;
-    //     width: 100%;
-    //     filter: brightness(95%);
-    // }
+    .cover-image{
+        position: absolute; 
+        top: 0; 
+        left:0; 
+        height: 100%;
+        width: 100%;
+        filter: brightness(95%);
+        z-index: 1;
+    }
 
-    // &:hover .grid-container .description {
-    //     opacity: 1;
-    // }
+    &:hover .project-item-overlay-container {
+        opacity: 1;
+    }
 }
