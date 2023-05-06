@@ -8,29 +8,32 @@ const ProjectGridItem = ({ name, title, briefDescription, description, technolog
 
   return (
     <Paper variant="outlined" sx={{m:2.5, height: 320}} className='project-grid-item'>
-      <Grid container className="grid-container">
-        <Grid item>
-          <Box sx={{p: 1.1}} className="description">
+      <Box className="project-item-overlay-container" sx={{p: 1.1}}>
+
+        <Grid container className="grid-container" sx={{border: 2, p: 1}}>
+          <Grid item xs={6}>
+              {/* <Box sx={{width: "100%", height: "100%", border: 2, p: 1.25}}> */}
+                <Box sx={{position: "relative"}}>
+                  <Typography variant="h6" color="primary.main" lineHeight={1} fontSize={26} fontWeight={800} mb={2}>{title}</Typography>
+                  <Typography variant="body2" fontSize={{xs: 12, sm: 12.5, md: 13, lg:13, xl: 13}} fontWeight={300} sx={{mixBlendMode: "difference", opacity: .85}}>{briefDescription}..</Typography>
+                </Box>
+                <Box>
+                  <Button 
+                    variant="outlined" 
+                    size="small" 
+                    color="primary"
+                    sx={{fontWeight: 500, fontSize: {xs: 11, sm: 12, md: 12, lg: 13, xl: 13}}}
+                    >More Info</Button>
+                </Box>
+              {/* </Box> */}
+          </Grid>
+          <Grid item xs={6}>
+            {/* carousel here */}
             <Box sx={{width: "100%", height: "100%", border: 2, p: 1.25}}>
-              <Box sx={{position: "relative"}}>
-                <Typography variant="h6" color="primary.main" lineHeight={1} fontSize={26} fontWeight={800} mb={2}>{title}</Typography>
-                <Typography variant="body2" fontSize={{xs: 12, sm: 12.5, md: 13, lg:13, xl: 13}} fontWeight={300} sx={{mixBlendMode: "difference", opacity: .85}}>{briefDescription}..</Typography>
-              </Box>
-              <Box>
-                <Button 
-                  variant="outlined" 
-                  size="small" 
-                  color="primary"
-                  sx={{fontWeight: 500, fontSize: {xs: 11, sm: 12, md: 12, lg: 13, xl: 13}}}
-                  >More Info</Button>
-              </Box>
             </Box>
-          </Box>
+          </Grid>
         </Grid>
-        <Grid item>
-          {/* carousel here */}
-        </Grid>
-      </Grid>
+      </Box>
 
 
       {/* absolute pos */}

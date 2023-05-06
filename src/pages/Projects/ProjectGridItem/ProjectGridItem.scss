@@ -1,31 +1,44 @@
 .project-grid-item {
     position: relative;
+    overflow: hidden;
 
-    .grid-container{
+    .project-item-overlay-container{
         width: 100%;
         height: 100%;
-        .description {
-            transition: opacity 300ms linear;
-            opacity: 0;
+        backdrop-filter: blur(4px) brightness(25%) contrast(75%);
+        // background-color: red;
+        
+        .grid-container {
             width: 100%;
             height: 100%;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            backdrop-filter: blur(4px) brightness(25%) contrast(75%);
+            
         }
     }
+    // .grid-container{
+    //     width: 100%;
+    //     height: 100%;
+    //     .description {
+    //         transition: opacity 300ms linear;
+    //         // opacity: 0;
+    //         width: 100%;
+    //         height: 100%;
+    //         position: relative;
+    //         overflow: hidden;
+    //         z-index: 1;
+    //         backdrop-filter: blur(4px) brightness(25%) contrast(75%);
+    //     }
+    // }
 
-    .cover-image{
-        position: absolute; 
-        top: 0; 
-        left:0; 
-        height: 100%;
-        width: 100%;
-        filter: brightness(95%);
-    }
+    // .cover-image{
+    //     position: absolute; 
+    //     top: 0; 
+    //     left:0; 
+    //     height: 100%;
+    //     width: 100%;
+    //     filter: brightness(95%);
+    // }
 
-    &:hover .grid-container .description {
-        opacity: 1;
-    }
+    // &:hover .grid-container .description {
+    //     opacity: 1;
+    // }
 }
