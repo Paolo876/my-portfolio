@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography, ButtonBase, Paper, Button, Grid } from '@mui/material'
+import { Box, Typography, ButtonBase, Paper, Button, Grid, Stack } from '@mui/material'
 import Image from 'mui-image';
 import "./ProjectGridItem.scss"
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -9,34 +9,37 @@ const ProjectGridItem = ({ name, title, briefDescription, description, technolog
 
   return (
     <Paper variant="outlined" sx={{m:1.25, height: 320}} className='project-grid-item'>
-      <Box className="project-item-overlay-container" sx={{p: 1}}>
-        <Grid container className="grid-container" sx={{border: 2, px: 1.25, py: 2}}>
-          <Grid item xs={5.5} sx={{height: "100%"}}>
-            <Box sx={{position: "relative"}}>
-              <Typography variant="h6" color="primary.main" lineHeight={1} fontSize={{lg:19, xl:25.5}} fontWeight={800}>{title}</Typography>
-              <Box sx={{background: "rgba(239,235,229,1)", height: 2, width: {xs: 12, sm: 8, md: 10}, mr: "auto", mt: 1.5, mb: 2, ml: .2, mixBlendMode: "difference", opacity: .65}}></Box>
-            </Box>
-            <Box sx={{pr:1, pl:.5}}>
-              <Typography 
-                variant="body2" 
-                fontSize={{xs: 12.5, sm: 13, md: 13, lg:12, xl: 14}} 
-                fontWeight={200} 
-                lineHeight={{lg: 1.4, xl:1.55}}
-                sx={{mixBlendMode: "difference", opacity: .8}}
-              >
-                {briefDescription}
-              </Typography>
-            </Box>
-            <Box mt={2}>
-              <Button 
-                variant="outlined" 
-                size="small" 
-                color="primary"
-                sx={{fontWeight: 500, fontSize: {xs: 11, sm: 12, md: 12, lg: 13, xl: 13}}}
-                >More Info
-                <ArrowForwardIosIcon sx={{fontSize: "inherit", ml: 1.25}}/>  
-              </Button>
-            </Box>
+      <Box className="project-item-overlay-container">
+        <Grid container className="grid-container">
+          <Grid item xs={5.5} sx={{px: 1.25, py: 2}}>
+            <Stack sx={{height: "100%"}}>
+              <Box sx={{position: "relative"}}>
+                <Typography variant="h6" color="primary.main" lineHeight={1} fontSize={{lg:21, xl:26}} fontWeight={800}>{title}</Typography>
+                <Box sx={{background: "rgba(239,235,229,1)", height: 2, width: {xs: 12, sm: 8, md: 10}, mr: "auto", mt: 1.5, mb: 2, ml: .2, mixBlendMode: "difference", opacity: .65}}></Box>
+              </Box>
+              <Box sx={{pr:1, pl:.5}}>
+                <Typography 
+                  variant="body2" 
+                  fontSize={{xs: 12.5, sm: 13, md: 13, lg:12, xl: 14}} 
+                  fontWeight={200} 
+                  lineHeight={{lg: 1.4, xl:1.55}}
+                  sx={{mixBlendMode: "difference", opacity: .8}}
+                >
+                  {briefDescription}
+                </Typography>
+              </Box>
+              <Box mt="auto">
+                <Button 
+                  variant="outlined" 
+                  size="small" 
+                  color="primary"
+                  sx={{fontWeight: 500, fontSize: {xs: 11, sm: 12, md: 12, lg: 13, xl: 13}}}
+                  >More Info
+                  <ArrowForwardIosIcon sx={{fontSize: "inherit", ml: 1.25}}/>  
+                </Button>
+              </Box>
+
+            </Stack>
           </Grid>
           <Grid item xs={6.5}>
             {/* carousel here */}
