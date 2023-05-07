@@ -9,8 +9,8 @@ const ProjectsList = ({ projects }) => {
   const { palette } = useTheme()
 
   return (
-    <Grid container sx={{pl: {md: 1, lg: 8, xl: 10}, pr: { md: 1, lg:0}}}>
-      {projects.map(item => <Grid item xs={12} md={6} lg={6} >
+    <Grid container sx={{pl: {md: 1, lg: 8, xl: 9}, pr: { md: 1, lg:0}}}>
+      {projects.map(item => <Grid item xs={12} md={6} lg={6} key={item.name}>
         <ProjectGridItem 
           name={item.name}
           title={item.title}
