@@ -19,7 +19,7 @@ const ProjectGridItem = ({ name, title, briefDescription, description, technolog
             <Box sx={{pr:1, pl:.5}}>
               <Typography 
                 variant="body2" 
-                fontSize={{xs: 12, sm: 12.5, md: 13, lg:13, xl: 14}} 
+                fontSize={{xs: 12.5, sm: 13, md: 13, lg:13, xl: 14}} 
                 fontWeight={200} 
                 lineHeight={1.55}
                 sx={{mixBlendMode: "difference", opacity: .85}}

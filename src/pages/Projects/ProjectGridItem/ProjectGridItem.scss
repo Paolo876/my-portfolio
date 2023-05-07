@@ -10,7 +10,7 @@
         height: 100%;
         backdrop-filter: blur(3px) brightness(20%) contrast(75%);
         z-index: 2;
-        opacity:0;
+        opacity:1; //to zero later
         transition: opacity 300ms linear;
         .grid-container {
             width: 100%;
