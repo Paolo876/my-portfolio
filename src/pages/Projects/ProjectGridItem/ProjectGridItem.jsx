@@ -8,7 +8,7 @@ import ImageCarousel from './ImageCarousel';
 const ProjectGridItem = ({ name, title, briefDescription, description, technologies, type, features, url, githubUrl, images, coverImage, backgroundColor}) => {
 
   return (
-    <Paper variant="outlined" sx={{m:{md: 1.5, lg:1.25}, height: 320}} className='project-grid-item'>
+    <Paper variant="outlined" sx={{m:{xs: 1.5, md: 1.5, lg:1.25}, height: 320}} className='project-grid-item'>
       <Box className="project-item-overlay-container">
         <Grid container className="grid-container">
           <Grid item xs={5.5} sx={{px: 1.25, py: 2}}>
