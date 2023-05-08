@@ -23,14 +23,15 @@ const ProjectItemDescription = ({ title, description, technologies, features, na
     <>
       <Typography 
         variant="h3" 
-        sx={{
-          fontWeight: 800,
-          mixBlendMode: "difference",
-          textTransform: "none",
-          letterSpacing: .5,
-          lineHeight: 1
-        }}
-      >{title}</Typography>
+        align="left" 
+        fontWeight={800} 
+        fontSize={{xs:25, sm: 26, md: 28, lg: 29, xl: 30}} 
+        letterSpacing={{xs:1, sm:1, md: 1.25, lg: 1.5, xl:1.5}} 
+        lineHeight={{xl:1}} 
+        color="primary.main"
+      >
+        {title}
+      </Typography>
       <Divider/>
       <Box sx={{px: .5}}>
         <Typography 
@@ -42,7 +43,7 @@ const ProjectItemDescription = ({ title, description, technologies, features, na
             mixBlendMode: "difference"
           }}  
         >{description}</Typography>
-        <Box sx={{mt: 3}}>
+        {/* <Box sx={{mt: 3}}>
         <Typography              
             variant="h6" 
             sx={{
@@ -55,7 +56,7 @@ const ProjectItemDescription = ({ title, description, technologies, features, na
             <List component="ul" sx={{listStyle: "circle", py: 0.15, px: .25}}>
               {features.map(_item => <ListItem key={_item} sx={{py: .5, px: .25, ml: 2.75, display: 'list-item', mixBlendMode:"difference", fontSize: 15, fontWeight: 200}}>{_item}</ListItem>)}
             </List>
-        </Box>
+        </Box> */}
         <Box sx={{mt: 3}}>
           <Typography              
             variant="h6" 
