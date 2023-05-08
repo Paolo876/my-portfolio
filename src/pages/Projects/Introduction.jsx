@@ -6,7 +6,7 @@ const Introduction = () => {
   return (
     <Grid container sx={{pl: {md: 4, lg: 0}, pr: {md: 4, lg: 0}}}>
       <Grid item xs={12} sm={4.5} md={4} lg={12}>
-        <Typography variant="h1" align="left" fontWeight={800} fontSize={{xs:32, sm: 35, md: 43, lg: 45, xl: 53}} letterSpacing={{xs:2, sm:3, md: 2, lg: 2.5, xl:3.5}} lineHeight={{xl:1}} color="primary.main">
+        <Typography variant="h1" align="left" fontWeight={800} fontSize={{xs:32, sm: 35, md: 43, lg: 45, xl: 50}} letterSpacing={{xs:2, sm:3, md: 2, lg: 2.5, xl:3.5}} lineHeight={{xl:1}} color="primary.main">
           My<br/>Projects
         </Typography>
         <Box sx={{background: "rgba(239,235,229,1)", height: {xs: 2, sm: 8, md: 10}, width: {xs: 12, sm: 8, md: 10}, mr: "auto", mt: {xs: 1.25, sm: 1.5, md:3}, ml: .2, mixBlendMode: "difference", opacity: .7}}></Box>

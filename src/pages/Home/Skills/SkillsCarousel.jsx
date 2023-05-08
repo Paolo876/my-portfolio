@@ -3,7 +3,6 @@ import Carousel from 'react-material-ui-carousel'
 import { Typography, Box, Grid, Tooltip } from '@mui/material'
 import useRootRedux from '../../../hooks/useRootRedux'
 import SkillIconImageItem from '../../../components/SkillIconImageItem'
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
 
 const boxStyles = {

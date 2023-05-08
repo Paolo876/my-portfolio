@@ -25,8 +25,8 @@ const ProjectItem = ({ item }) => {
         {/* {currentInView === item.name && <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200, .25)", mixBlendMode: "overlay"}}></Box>} */}
         <Grid container>
           <Grid 
-            item xs={6} py={1} pr={2} 
-            // ref={ref}
+            item xs={6} xl={5} 
+            py={1} pr={2} 
           >
             <ProjectItemDescription 
               name={item.name}
@@ -37,7 +37,7 @@ const ProjectItem = ({ item }) => {
               briefDescription={item.briefDescription}
             />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={6} xl={7}>
             <ProjectItemPreview 
               coverImage={item.coverImage}
               images={item.images}

@@ -1,48 +1,48 @@
-import { Typography, Box, Divider, Paper, Tooltip, List, ListItem } from '@mui/material'
+import { Typography, Box, Divider, Paper, Tooltip, List, Stack, Grid } from '@mui/material'
 import SkillIconImageItem from '../../../components/SkillIconImageItem'
 import useRootRedux from '../../../hooks/useRootRedux';
 
 
 const boxStyles = {
-  display: "flex", 
-  flexDirection: "row", 
-  alignItems: "center", 
-  justifyContent: "center",
-  p: 1.1,
+  width: "fit-content",
+  p: {sm: 1.5, md: 1.5, lg: 2, xl:1},
+  height: "100%",
   userSelect: "none",
-  borderRadius: "50%",
-  position: "relative",
-  overflow: "hidden"
+  opacity: .9,  
+  background: "none",
+  "&:hover": {
+    background: "rgba(150,150,150,0.1)"
+  }
 }
 
 
-const ProjectItemDescription = ({ title, description, technologies, features, name }) => {
+const ProjectItemDescription = ({ title, briefDescription, technologies, features, name }) => {
   const { skillsList } = useRootRedux();
 
   return (
-    <>
+    <Stack>
       <Typography 
         variant="h3" 
         align="left" 
         fontWeight={800} 
-        fontSize={{xs:25, sm: 26, md: 28, lg: 29, xl: 30}} 
+        fontSize={{xs:28, sm: 28, md: 30, lg: 32, xl: 35}} 
         letterSpacing={{xs:1, sm:1, md: 1.25, lg: 1.5, xl:1.5}} 
         lineHeight={{xl:1}} 
         color="primary.main"
       >
         {title}
       </Typography>
-      <Divider/>
-      <Box sx={{px: .5}}>
-        <Typography 
-          variant="body1" 
-          sx={{
-            mt: 2,
-            fontWeight: 300,
-            lineHeight: 1.55,
-            mixBlendMode: "difference"
-          }}  
-        >{description}</Typography>
+      <Box sx={{background: "rgba(239,235,229,1)", height: {xs: 2, sm: 2, md: 2}, width: {xs: 12, sm: 8, md: 10}, mr: "auto", mt: 1, ml: .2, mixBlendMode: "difference", opacity: .7}}></Box>
+
+      <Box sx={{px: .5, mt: 2}}>
+      <Typography 
+        variant="body1" 
+        fontSize={{xs: 12, sm: 12.5, md: 13, lg:14, xl: 15}} 
+        fontWeight={200} 
+        // sx={{textAlign: {xs: "justify"}, textJustify: "inter-word"}}
+      >
+        {briefDescription}
+      </Typography>
         {/* <Box sx={{mt: 3}}>
         <Typography              
             variant="h6" 
@@ -67,21 +67,31 @@ const ProjectItemDescription = ({ title, description, technologies, features, na
               textTransform: "none",
               letterSpacing: .5,
             }}>Main Technologies: </Typography>
-            <Box sx={{display: "flex", flexDirection: "row", gap: 1.5, px: 1, mt: 1.5}}>
-              {technologies.map(item => {
+            <Grid container>
+              {skillsList && technologies.map(item => {
                 const tech = skillsList.find(_item => _item.name === item)
-                if(tech) return <Tooltip title={<Typography variant="body2" fontWeight={300} fontSize={13} lineHeight={1.25}>{tech.name}</Typography>} arrow key={tech.name}>
-                  <Paper sx={boxStyles} variant="outlined">
-                    <Box>
-                      <SkillIconImageItem src={tech.url} height="25px" width="25px" duration={500} objectFit='scale-down'/>
+                if(tech) return <Grid item xs={2.4} key={tech.name} align="center" my={1}>
+                  <Tooltip 
+                      title={<Typography variant="body1" fontSize={12} color="primary.main" fontWeight={400}>{tech.name}</Typography>} 
+                      arrow 
+                    >
+                  <Box sx={boxStyles} variant="outlined">
+                    <Box height={{xs: 31, sm: 32, md:33, lg:34, xl: 35}} width={{xs: 31, sm: 32, md:33, lg:34, xl: 35}}>
+                      <SkillIconImageItem 
+                        src={tech.monoUrl} 
+                        duration={800} 
+                        objectFit='scale-down'
+                        sx={{filter: "invert(1) brightness(.8)"}}  
+                      />
                     </Box>
-                  </Paper>
+                  </Box>
                 </Tooltip>
+                </Grid>
               })}
-            </Box>
+            </Grid>
         </Box>
       </Box>
-    </>
+    </Stack>
   )
 }
 
