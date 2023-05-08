@@ -19,7 +19,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "moby", 
     title: "Moby",
-    briefDescription: "A fully functional social media web application implementing the elements of a social media platform.",
+    briefDescription: "Moby is a social media web app that incorporates the essential features of a modern social media application. ",
     description: "Moby is a social media web app that incorporates the essential features of a modern social media application. Simply by creating an account and setting up your profile, you can start publishing posts, add friends, and connect with other people through moby.",
     technologies: [ "JavaScript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "Sequelize", "MySQL", "Material-UI", "Sass/Scss"],
     type: "personal",

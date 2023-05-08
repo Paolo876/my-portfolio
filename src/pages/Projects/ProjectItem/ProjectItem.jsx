@@ -21,9 +21,9 @@ const ProjectItem = ({ item }) => {
   // }, [inView])
 
   return (
-    <Box sx={{minHeight: "60vh", position: "relative", py: 2, px: 2, my: 3}} id={item.name}>
+    <Box sx={{minHeight: "60vh", position: "relative", py: 2, px: 2, my: 3, width: "100%"}} id={item.name}>
         {/* {currentInView === item.name && <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200, .25)", mixBlendMode: "overlay"}}></Box>} */}
-        <Grid container>
+        <Grid container sx={{width: "100%", justifyContent: "space-between"}}>
           <Grid 
             item xs={6} xl={5} 
             py={1} pr={2} 

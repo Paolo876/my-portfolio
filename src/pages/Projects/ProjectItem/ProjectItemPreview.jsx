@@ -14,7 +14,7 @@ const ProjectItemPreview = ({ coverImage, images, url, githubUrl }) => {
   const imagesList = [coverImage, ...images ];
 
   return (
-    <Stack sx={{height: "100%"}}>
+    <Stack sx={{height: "100%", width: "100%"}}>
       <Carousel 
         indicators={true}
         navButtonsAlwaysInvisible={true}

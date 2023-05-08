@@ -20,7 +20,7 @@ const ProjectItemDescription = ({ title, briefDescription, technologies, feature
   const { skillsList } = useRootRedux();
 
   return (
-    <Stack>
+    <Stack sx={{height: "100%", width: "100%"}}>
       <Typography 
         variant="h3" 
         align="left" 
@@ -32,14 +32,13 @@ const ProjectItemDescription = ({ title, briefDescription, technologies, feature
       >
         {title}
       </Typography>
-      <Box sx={{background: "rgba(239,235,229,1)", height: {xs: 2, sm: 2, md: 2}, width: {xs: 12, sm: 8, md: 10}, mr: "auto", mt: 1, ml: .2, mixBlendMode: "difference", opacity: .7}}></Box>
+      <Box sx={{background: "rgba(239,235,229,1)", height: 2, width: {xs: 12, sm: 12, md: 12}, mr: "auto", mt: 1, ml: .2, mixBlendMode: "difference", opacity: .7}}></Box>
 
       <Box sx={{px: .5, mt: 2}}>
       <Typography 
         variant="body1" 
-        fontSize={{xs: 12, sm: 12.5, md: 13, lg:14, xl: 15}} 
+        fontSize={{xs: 12, sm: 12.5, md: 13, lg:14, xl: 14}} 
         fontWeight={200} 
-        // sx={{textAlign: {xs: "justify"}, textJustify: "inter-word"}}
       >
         {briefDescription}
       </Typography>
@@ -61,12 +60,14 @@ const ProjectItemDescription = ({ title, briefDescription, technologies, feature
           <Typography              
             variant="h6" 
             sx={{
-              fontWeight: 600,
-              fontSize: 18,
+              fontWeight: 700,
+              fontSize:{xs: 17, sm: 17, md: 17, lg:17, xl: 17},
               mixBlendMode: "difference",
               textTransform: "none",
               letterSpacing: .5,
-            }}>Main Technologies: </Typography>
+            }}>Main Technologies Used: </Typography>
+            <Box sx={{background: "rgba(239,235,229,1)", height: 4, width: 4, mr: "auto", mt: .25, ml: .05, mb: 1, mixBlendMode: "difference", opacity: .5}}></Box>
+
             <Grid container>
               {skillsList && technologies.map(item => {
                 const tech = skillsList.find(_item => _item.name === item)
@@ -76,7 +77,7 @@ const ProjectItemDescription = ({ title, briefDescription, technologies, feature
                       arrow 
                     >
                   <Box sx={boxStyles} variant="outlined">
-                    <Box height={{xs: 31, sm: 32, md:33, lg:34, xl: 35}} width={{xs: 31, sm: 32, md:33, lg:34, xl: 35}}>
+                    <Box height={{xs: 21, sm: 22, md:23, lg:24, xl: 25}} width={{xs: 21, sm: 22, md:23, lg:24, xl: 25}}>
                       <SkillIconImageItem 
                         src={tech.monoUrl} 
                         duration={800} 
