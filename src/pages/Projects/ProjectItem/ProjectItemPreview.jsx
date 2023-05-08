@@ -16,7 +16,7 @@ const ProjectItemPreview = ({ coverImage, images, url, githubUrl }) => {
   return (
     <Stack sx={{height: "100%", width: "100%"}}>
       <Carousel 
-        indicators={true}
+        indicators={false}
         navButtonsAlwaysInvisible={true}
       >
         {imagesList.map((item, index) => <Box key={index} sx={{height: "auto", cursor: "pointer", position: "relative"}} onClick={() => setShowModal({ isVisible: true, data: imagesList, currentIndex: index })}>
@@ -28,7 +28,7 @@ const ProjectItemPreview = ({ coverImage, images, url, githubUrl }) => {
             />
         </Box>)}
       </Carousel>
-      <Box mt={5} mb={1}>
+      {/* <Box mt={5} mb={1}>
         <Button 
           color="secondary" 
           variant="contained" 
@@ -49,13 +49,13 @@ const ProjectItemPreview = ({ coverImage, images, url, githubUrl }) => {
           href={githubUrl}
         >Git Repo
         </Button>
-      </Box>
-      <ProjectImageModal 
+      </Box> */}
+      {/* <ProjectImageModal 
         open={showModal.isVisible} 
         handleClose={() => setShowModal({ isVisible: false, data: null, currentIndex: 0 })} 
         data={showModal.data} 
         currentIndex={showModal.currentIndex}
-      />
+      /> */}
     </Stack>
   )
 }
