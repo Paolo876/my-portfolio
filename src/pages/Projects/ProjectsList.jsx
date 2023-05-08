@@ -1,15 +1,14 @@
 import React from 'react'
-import { Grid, useTheme } from '@mui/material'
+import { Grid } from '@mui/material'
 import ProjectItem from './ProjectItem/ProjectItem'
 import ProjectGridItem from './ProjectGridItem/ProjectGridItem'
 
 
 
 const ProjectsList = ({ projects }) => {
-  const { palette } = useTheme()
 
   return (
-    <Grid container sx={{pl: {md: 1, lg: 8, xl: 15}, pr: { md: 1, lg:0}, pt: {sm: 3, lg:0}}}>
+    <Grid container sx={{pl: {md: 1, lg: 8, xl: 13}, pr: { md: 1, lg:0}, pt: {sm: 3, lg:0}}}>
       {/* {projects.map(item => <Grid item xs={12} md={6} lg={6} key={item.name}>
         <ProjectGridItem 
           name={item.name}
