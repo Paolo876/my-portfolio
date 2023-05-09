@@ -131,7 +131,7 @@ const MOCK_PROJ_LIST = [
 
 const Projects = () => {
   const [ projects, setProjects ] = useState(MOCK_PROJ_LIST);
-  const [ currentActiveProject, setCurrentActiveProject ] = useState(null);
+  // const [ currentActiveProject, setCurrentActiveProject ] = useState(null);
   const { skillsList, setData } = useRootRedux();
   const { getDocumentFromCollection } = useFirestoreActions();
 
@@ -143,28 +143,32 @@ const Projects = () => {
 
 
   return (
-    <Stack>
+    <>
       <DocumentHead
         title="Paolo Bugarin | Projects"
         description="I am a full stack web developer based in Los Angeles, California"
         keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
       />
-      
-      <Grid container sx={{px: {xs:3, sm: 3, md: 1.5, lg: 3}, pt: {xs:10, sm: 11, md: 13, lg: 13, xl: 14}, pb: 8, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", minHeight: "100vh"}}>
-        <Grid item xs={12} lg={2.25}>
-          <Introduction/>
-        </Grid>
-        <Grid item xs={12} lg={9.75}>
-          
-          <Routes>
-            <Route element={projects && <ProjectsList projects={projects}/>} path="/"/>
-            <Route element={<ProjectPage/>} path="/:id"/>
-          </Routes>
-        </Grid>
-      </Grid>
-      <Box mt="auto" ml={{md:"auto"}} sx={{position: "absolute", bottom: 5, right: 5}}><Footer/></Box>
-
-    </Stack>
+      <Routes>
+        <Route 
+          element={
+            <Stack>
+              <Grid container sx={{px: {xs:3, sm: 3, md: 1.5, lg: 3}, pt: {xs:10, sm: 11, md: 13, lg: 13, xl: 14}, pb: 8, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", minHeight: "100vh"}}>
+                <Grid item xs={12} lg={2.25}>
+                  <Introduction/>
+                </Grid>
+                <Grid item xs={12} lg={9.75}>
+                  {projects && <ProjectsList projects={projects}/>}
+                </Grid>
+              </Grid>
+              <Box mt="auto" ml={{md:"auto"}} sx={{position: "absolute", bottom: 5, right: 5}}><Footer/></Box>
+            </Stack>
+          } 
+          path="/"
+        />
+        <Route element={projects && <ProjectPage projects={projects}/>} path="/:id"/>
+      </Routes>
+    </>
   )
 }
 
