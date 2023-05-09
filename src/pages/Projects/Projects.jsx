@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 import useRootRedux from '../../hooks/useRootRedux'
 import useFirestoreActions from '../../hooks/useFirestoreActions'
 import DocumentHead from '../../components/DocumentHead'
@@ -131,7 +132,9 @@ const MOCK_PROJ_LIST = [
 
 const Projects = () => {
   const [ projects, setProjects ] = useState(MOCK_PROJ_LIST);
-  // const [ currentActiveProject, setCurrentActiveProject ] = useState(null);
+  const { state, pathname } = useLocation();
+  const navigate = useNavigate();
+
   const { skillsList, setData } = useRootRedux();
   const { getDocumentFromCollection } = useFirestoreActions();
 
@@ -139,8 +142,14 @@ const Projects = () => {
     if(skillsList.length === 0){
       getDocumentFromCollection('user', 'information').then(data => setData(data))
     }
+    navigate(pathname, {})
   }, [])
 
+  useEffect(() => {
+    if(state && projects.length !== 0) {
+      window.scrollTo(0, state.screenView);
+    }
+  }, [state])
 
   return (
     <>
