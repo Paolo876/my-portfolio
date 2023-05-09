@@ -6,32 +6,49 @@ import ProjectImageModal from './ProjectImageModal';
 import { Stack, Button, Box } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PublicIcon from '@mui/icons-material/Public';
+import "./ProjectItemPreview.scss";
 
-
-const ProjectItemPreview = ({ coverImage, images, url, githubUrl }) => {
+const ProjectItemPreview = ({ coverImage, images, url, githubUrl, title }) => {
   const [ showModal, setShowModal ] = useState({ isVisible: false, data: null, currentIndex: 0 });
 
   const imagesList = [coverImage, ...images ];
 
   return (
+  <Box className="project-item-preview">
+    <Box className="project-item-overlay-container" sx={{p: 2}}>
+      <Stack className="project-item-content" sx={{border: 2, alignItems: "center", justifyContent: "center"}}>
+        <Box>
+          <Button variant="outlined">
+            Read More About {title}
+          </Button>
+        </Box>
+        <Box sx={{background: "rgba(239,235,229,1)", height: 3, width: "30%", mx: "auto", my: 3,  mixBlendMode: "difference", opacity: .5}}></Box>
+
+        <Box sx={{display: "flex", gap: 3}}>
+          <Button variant="outlined" startIcon={<PublicIcon/>}>
+            Web Demo
+          </Button>
+          <Button variant="outlined" startIcon={<GitHubIcon/>}>
+            Git Repo
+          </Button>
+        </Box>
+      </Stack>
+    </Box>
     <Carousel 
       indicators={false}
       navButtonsAlwaysInvisible={true}
+      autoPlay={true}
+      stopAutoPlayOnHover={false}
     >
-      {imagesList.map((item, index) => <Box 
-        key={index} 
-        sx={{height: "100%", width: "auto", cursor: "pointer", position: "relative"}} 
-        onClick={() => setShowModal({ isVisible: true, data: imagesList, currentIndex: index })}
-        >
-          <Box sx={{position: "absolute", top: 0, left: 0, zIndex: 2}}>{index}</Box> 
+      {imagesList.map((item, index) => 
           <Image 
             src={item.url} 
             fit="cover"
             duration={800}
           />
-        </Box>
       )}
     </Carousel>
+  </Box>  
   )
 }
 
