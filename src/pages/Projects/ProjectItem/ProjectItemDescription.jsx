@@ -1,4 +1,6 @@
-import { Typography, Box, Tooltip, Button, Stack, Grid } from '@mui/material'
+import { useNavigate } from 'react-router-dom';
+import { Typography, Box, Tooltip, Button, Stack, Grid } from '@mui/material';
+
 import SkillIconImageItem from '../../../components/SkillIconImageItem'
 import useRootRedux from '../../../hooks/useRootRedux';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -13,6 +15,7 @@ const boxStyles = {
 
 
 const ProjectItemDescription = ({ title, briefDescription, technologies, features, name }) => {
+  const navigate = useNavigate();
   const { skillsList } = useRootRedux();
 
   return (
@@ -45,6 +48,7 @@ const ProjectItemDescription = ({ title, briefDescription, technologies, feature
               size="small" 
               color="primary"
               sx={{fontWeight: 500, fontSize: {xs: 11, sm: 12, md: 12, lg: 13, xl: 13}, px: 2}}
+              onClick={() => navigate(name)}
               >Read More
               <ArrowForwardIosIcon sx={{fontSize: "inherit", ml: 1.25}}/>  
             </Button>

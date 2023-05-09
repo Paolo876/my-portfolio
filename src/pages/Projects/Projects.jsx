@@ -9,6 +9,8 @@ import { Grid, Box, Stack } from '@mui/material'
 import Footer from '../../components/Footer'
 import Introduction from './Introduction'
 import ProjectsList from './ProjectsList'
+import { Route, Routes } from 'react-router-dom'
+import ProjectPage from './ProjectPage/ProjectPage'
 
 
 const MOCK_PROJ_IMG = {
@@ -153,10 +155,15 @@ const Projects = () => {
           <Introduction/>
         </Grid>
         <Grid item xs={12} lg={9.75}>
-          {projects && <ProjectsList projects={projects}/>}
+          
+          <Routes>
+            <Route element={projects && <ProjectsList projects={projects}/>} path="/"/>
+            <Route element={<ProjectPage/>} path="/:id"/>
+          </Routes>
         </Grid>
       </Grid>
       <Box mt="auto" ml={{md:"auto"}} sx={{position: "absolute", bottom: 5, right: 5}}><Footer/></Box>
+
     </Stack>
   )
 }

@@ -44,6 +44,8 @@ const ProjectItem = ({ item }) => {
               url={item.url}  
               githubUrl={item.githubUrl}
               title={item.title}
+              name={item.name}
+
               />
           </Grid>
         </Grid>
