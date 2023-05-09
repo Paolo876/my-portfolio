@@ -8,7 +8,7 @@
         left:0;
         width: 100%;
         height: 100%;
-        backdrop-filter: blur(2px) brightness(10%) contrast(70%);
+        backdrop-filter: blur(2px) brightness(5%) contrast(70%);
         z-index: 2;
         opacity: 0; //to zero later
         transition: opacity 250ms linear;
