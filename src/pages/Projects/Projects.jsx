@@ -22,7 +22,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "moby", 
     title: "Moby",
-    briefDescription: "Moby is a social media web app that incorporates the essential features of a modern social media application. ",
+    briefDescription: "Moby is a social media web app that incorporates the essential features of a modern social media application.",
     description: "Moby is a social media web app that incorporates the essential features of a modern social media application. Simply by creating an account and setting up your profile, you can start publishing posts, add friends, and connect with other people through moby.",
     technologies: [ "JavaScript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "Sequelize", "MySQL", "Material-UI", "Sass/Scss"],
     type: "personal",
@@ -37,6 +37,11 @@ const MOCK_PROJ_LIST = [
     githubUrl: "http://www.google.com",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
     coverImage: MOCK_PROJ_IMG,
+    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_logo_white.png?alt=media&token=5d2083ea-340c-4479-be33-0938373ea91a",
+    palette: {
+      primary: "#237b72",
+      secondary: "#2e779d",
+    }
   },
   {
     name: "mernshop", 
@@ -55,6 +60,11 @@ const MOCK_PROJ_LIST = [
     ],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
+    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_logo_white.png?alt=media&token=5d2083ea-340c-4479-be33-0938373ea91a",
+    palette: {
+      primary: "#237b72",
+      secondary: "#2e779d",
+    }
   },
   {
     name: "downtownsuitsdirect", 
@@ -73,6 +83,11 @@ const MOCK_PROJ_LIST = [
     ],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
+    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_logo_white.png?alt=media&token=5d2083ea-340c-4479-be33-0938373ea91a",
+    palette: {
+      primary: "#237b72",
+      secondary: "#2e779d",
+    }
 
   },
   {
@@ -87,6 +102,11 @@ const MOCK_PROJ_LIST = [
     features: [],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
+    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_logo_white.png?alt=media&token=5d2083ea-340c-4479-be33-0938373ea91a",
+    palette: {
+      primary: "#237b72",
+      secondary: "#2e779d",
+    }
   },
   {
     name: "carlportfolio", 
@@ -100,6 +120,11 @@ const MOCK_PROJ_LIST = [
     features: [],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
+    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_logo_white.png?alt=media&token=5d2083ea-340c-4479-be33-0938373ea91a",
+    palette: {
+      primary: "#237b72",
+      secondary: "#2e779d",
+    }
   },
   {
     name: "aynportfolio", 
@@ -113,6 +138,11 @@ const MOCK_PROJ_LIST = [
     features: [],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
+    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_logo_white.png?alt=media&token=5d2083ea-340c-4479-be33-0938373ea91a",
+    palette: {
+      primary: "#237b72",
+      secondary: "#2e779d",
+    }
   },
   {
     name: "cimt", 
@@ -126,6 +156,11 @@ const MOCK_PROJ_LIST = [
     features: [],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
+    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_logo_white.png?alt=media&token=5d2083ea-340c-4479-be33-0938373ea91a",
+    palette: {
+      primary: "#237b72",
+      secondary: "#2e779d",
+    }
   },
 ]
 
