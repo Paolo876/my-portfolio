@@ -1,28 +1,10 @@
-import { useState, useEffect } from 'react'
 import { Box, Grid } from '@mui/material'
 import ProjectItemDescription from './ProjectItemDescription'
 import ProjectItemPreview from './ProjectItemPreview'
-import useProjectsRedux from '../../../hooks/useProjectsRedux'
-import { useInView } from 'react-intersection-observer';
 
 const ProjectItem = ({ item }) => {
-  // const { setCurrentInView, currentInView } = useProjectsRedux();
-  // const { ref, inView } = useInView({
-  //   threshold: 0,
-  //   rootMargin: '-20% 0% -50% 0%',
-  //   trackVisibility: true,
-  //   delay: 800,
-  // });
-  
-  // useEffect(() => {
-  //   if(inView && currentInView !== item.name){
-  //     setCurrentInView(item.name)
-  //   }
-  // }, [inView])
-
   return (
-    <Box sx={{minHeight: "60vh", position: "relative", py: 2, px: 2, my: 3, width: "100%"}} id={item.name}>
-        {/* {currentInView === item.name && <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200, .25)", mixBlendMode: "overlay"}}></Box>} */}
+    <Box sx={{minHeight: "60vh", position: "relative", pb: 2, px: 2, my: 3, width: "100%"}} id={item.name}>
         <Grid container sx={{width: "100%", justifyContent: "space-between"}}>
           <Grid 
             item xs={6} xl={4.75} 
@@ -45,7 +27,6 @@ const ProjectItem = ({ item }) => {
               githubUrl={item.githubUrl}
               title={item.title}
               name={item.name}
-
               />
           </Grid>
         </Grid>
