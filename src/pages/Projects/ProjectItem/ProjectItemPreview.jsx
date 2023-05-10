@@ -9,7 +9,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import "./ProjectItemPreview.scss";
 
-const ProjectItemPreview = ({ coverImage, images, url, githubUrl, title, name }) => {
+const ProjectItemPreview = ({ coverImage, images, url, githubUrl, title, name, logo, palette }) => {
   const navigate = useNavigate();
   const imagesList = [coverImage, ...images ];
 
@@ -36,23 +36,38 @@ const ProjectItemPreview = ({ coverImage, images, url, githubUrl, title, name })
         </Box>
       </Stack>
     </Box>
-    <Carousel 
-      indicators={false}
-      navButtonsAlwaysInvisible={true}
-      autoPlay={true}
-      stopAutoPlayOnHover={false}
-    >
-      {imagesList.map((item, index) => 
+    {/* <Box sx={{position: "relative", height: "100%", width: "100%"}}> */}
+      <Carousel 
+        indicators={false}
+        navButtonsAlwaysInvisible={true}
+        autoPlay={false}
+        stopAutoPlayOnHover={false}
+        // height={350}
+      >
+        {/* <Box sx={{display: "flex", alignItems: "center", justifyContent: "center", height: "100%", width: "100%", background: palette.primary, }}>
           <Image 
-            src={item.url} 
-            fit="cover"
+            src={logo} 
+            fit="scale-down"
             duration={800}
+            height={150}
+            width={150}
             sx={{filter: "brightness(.95)"}}
-            key={index}
           />
-      )}
-    </Carousel>
-  </Box>  
+        </Box> */}
+
+        {imagesList.map((item, index) => 
+            <Image 
+              src={item.url} 
+              fit="scale-down"
+              duration={800}
+              sx={{filter: "brightness(.95)"}}
+              key={index}
+            />
+        )}
+      </Carousel>
+    {/* </Box> */}
+
+    </Box>
   )
 }
 

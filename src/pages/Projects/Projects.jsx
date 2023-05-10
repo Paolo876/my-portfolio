@@ -15,7 +15,7 @@ import ProjectPage from './ProjectPage/ProjectPage'
 
 
 const MOCK_PROJ_IMG = {
-  url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Ftest_proj_img.png?alt=media&token=c9d6154f-2bcf-4afb-9a2a-c490320b04c9",
+  url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_banner.png?alt=media&token=4f2813bc-7201-4b53-abeb-48a4de04e297",
   name: "test_title"
 }
 const MOCK_PROJ_LIST = [
@@ -36,7 +36,10 @@ const MOCK_PROJ_LIST = [
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
-    coverImage: MOCK_PROJ_IMG,
+    coverImage: {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_banner.png?alt=media&token=4f2813bc-7201-4b53-abeb-48a4de04e297",
+      name: "moby_banner.png"
+    },
     logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_logo_white.png?alt=media&token=5d2083ea-340c-4479-be33-0938373ea91a",
     palette: {
       primary: "#237b72",
@@ -51,7 +54,10 @@ const MOCK_PROJ_LIST = [
     technologies: [ "JavaScript", "React", "Redux", "NodeJs", "ExpressJs", "MongoDB", "Bootstrap"],
     type: "personal",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
-    coverImage: MOCK_PROJ_IMG,
+    coverImage: {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop_banner.png?alt=media&token=f000fecf-4cd1-48a1-959c-845809e8fcbb",
+      name: "mernshop_banner.png"
+    },
     features: [
       "Created using the MERN stack with redux state management.",
       "Implements account authentication/validation using Google API (Oauth2.0)",
