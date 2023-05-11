@@ -4,7 +4,7 @@ import ProjectItemPreview from './ProjectItemPreview'
 
 const ProjectItem = ({ item }) => {
   return (
-    <Box sx={{minHeight: "60vh", position: "relative", pb: 2, px: 2, my: 3, width: "100%"}} id={item.name}>
+    <Box sx={{position: "relative", pb: 25, px: 2, my: 3, width: "100%"}} id={item.name}>
         <Grid container sx={{width: "100%", justifyContent: "space-between"}}>
           <Grid 
             item xs={6} xl={4.75} 

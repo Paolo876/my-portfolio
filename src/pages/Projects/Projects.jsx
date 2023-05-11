@@ -5,8 +5,6 @@ import useFirestoreActions from '../../hooks/useFirestoreActions'
 import DocumentHead from '../../components/DocumentHead'
 
 import { Grid, Box, Stack } from '@mui/material'
-// import ProjectNavigation from './ProjectNavigation'
-// import ProjectsList from './ProjectsList'
 import Footer from '../../components/Footer'
 import Introduction from './Introduction'
 import ProjectsList from './ProjectsList'
@@ -27,14 +25,15 @@ const MOCK_PROJ_LIST = [
     technologies: [ "JavaScript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "Sequelize", "MySQL", "Material-UI", "Sass/Scss"],
     type: "personal",
     features: [
-      "A FullStack Application implementing CRUD operations", 
-      "Realtime Database Management System(chat system, friend updates, notification system)", 
-      "Sensitive Data Encryption through bcryptJS",
+      "Realtime Database System(chat, friend status updates, notifications)", 
+      "Create and personalize your own account",
+      "Edit and upload images", 
       "Image optimization using Imagekit.io api",
+      "Sensitive Data Encryption through bcryptJS",
       "Deployed on Vercel(Client) and Railway(Server)",
     ],
-    url: "http://www.google.com",
-    githubUrl: "http://www.google.com",
+    url: "https://moby.paolobugarin.com/",
+    githubUrl: "https://github.com/Paolo876/moby-social-media-client",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
     coverImage: {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_banner.png?alt=media&token=4f2813bc-7201-4b53-abeb-48a4de04e297",
@@ -49,7 +48,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "mernshop", 
     title: "MernShop",
-    briefDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    briefDescription: "MernShop is an e-commerce web app demo inspired from TraversyMedia's ReactJS Udemy Course.",
     description: "MernShop is an e-commerce web application demo inspired by TraversyMedia's ReactJS Udemy Course. It showcases the system and functionalities of an e-commerce application with extra security and validation features.",
     technologies: [ "JavaScript", "React", "Redux", "NodeJs", "ExpressJs", "MongoDB", "Bootstrap"],
     type: "personal",
@@ -62,11 +61,12 @@ const MOCK_PROJ_LIST = [
       "Created using the MERN stack with redux state management.",
       "Implements account authentication/validation using Google API (Oauth2.0)",
       "Validates entered address using USPS Address Validation API",
-      "Checkout and pay with debit/credit card securely through PayPal API"
+      "Checkout and pay with debit/credit card securely through PayPal API",
+      "Included Admin feature for adding/editing products, viewing list of users, and managing list of orders."
     ],
-    url: "http://www.google.com",
-    githubUrl: "http://www.google.com",
-    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_logo_white.png?alt=media&token=5d2083ea-340c-4479-be33-0938373ea91a",
+    url: "https://mernshop.paolobugarin.com/",
+    githubUrl: "https://github.com/Paolo876/mern-ecommerce-traversy",
+    logo: "",
     palette: {
       primary: "#237b72",
       secondary: "#2e779d",
@@ -75,7 +75,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "downtownsuitsdirect", 
     title: "Downtown Suits Direct",
-    briefDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    briefDescription: "Downtown Suits Direct is a men's suit and tailor shop located in Pico Rivera, California.",
     description: "Downtown Suits Direct is a men's suit and tailor shop located in Pico Rivera, California. It is a commissioned project that I designed and developed using React and Firebase.",
     technologies: [ "JavaScript", "React","Firebase", "Sass/Scss"],
     type: "commissioned",
@@ -88,7 +88,7 @@ const MOCK_PROJ_LIST = [
       "aos animations applied on components",
       "Implemented Yelp api to display customer reviews and feedbacks",
       "Image optimization using Imagekit.io api",
-
+      "Inquiry form forwards data to client's email using EmailJS api"
     ],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
@@ -102,8 +102,8 @@ const MOCK_PROJ_LIST = [
   {
     name: "luna", 
     title: "Luna",
-    briefDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    description: "Luna is a beautiful personalizable browser homepage inspired by the google chrome extension 'Momentum'. It features a UI that the user can freely customize through rearranging the components or elements positioning, font properties, and UI colors.",
+    briefDescription: "Luna is a personalizable browser homepage alternative inspired by the google chrome extension 'Momentum'.",
+    description: "Luna is a personalizable browser homepage alternative inspired by the google chrome extension 'Momentum'. It features a UI that the user can freely customize through rearranging the components, elements positioning, font properties, and UI color scheme.",
     technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "personal",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
