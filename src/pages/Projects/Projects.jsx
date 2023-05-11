@@ -80,7 +80,10 @@ const MOCK_PROJ_LIST = [
     technologies: [ "JavaScript", "React","Firebase", "Sass/Scss"],
     type: "commissioned",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
-    coverImage: MOCK_PROJ_IMG,
+    coverImage: {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fdsd_banner.png?alt=media&token=ac912112-24cd-442e-9489-ef300abfb0d0",
+      name: "dsd_banner.png",
+    },
     features: [
       "aos animations applied on components",
       "Implemented Yelp api to display customer reviews and feedbacks",
