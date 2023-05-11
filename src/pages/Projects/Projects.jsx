@@ -120,8 +120,8 @@ const MOCK_PROJ_LIST = [
   {
     name: "carlportfolio", 
     title: "Carl Dimabuyu Portfolio",
-    briefDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
+    briefDescription: "A web portfolio of an architect based in Doha, Qatar that I designed and developed.",
+    description: "A web portfolio of an architect based in Doha, Qatar that I designed and developed.",
     technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "commissioned",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
@@ -141,8 +141,8 @@ const MOCK_PROJ_LIST = [
   {
     name: "aynportfolio", 
     title: "Ayn Laquindanum Portfolio",
-    briefDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
+    briefDescription: "A web portfolio of a graphic artist/architect based in Philippines that I designed and developed.",
+    description: "A web portfolio of a graphic artist/architect based in Philippines that I designed and developed.",
     technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "commissioned",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
@@ -162,8 +162,8 @@ const MOCK_PROJ_LIST = [
   {
     name: "cimt", 
     title: "CERT Incident Management Tool",
-    briefDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dignissim nunc. Fusce at ipsum dapibus, pulvinar ex et, scelerisque leo. Praesent justo elit, tristique.",
+    briefDescription: "CERT Incident Management Tool is the finals project of my Server-side Development class in Pasadena City College.",
+    description: "CERT Incident Management Tool is the finals project of my Server-side Development class in Pasadena City College. This app is a software solution to manage available resources and their assignments to various emergency incidents that is occurring or may occur. It is developed using React, Node, Express, Sequelize, and MySql stack.",
     technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "school",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
