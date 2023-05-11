@@ -125,7 +125,10 @@ const MOCK_PROJ_LIST = [
     technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "commissioned",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
-    coverImage: MOCK_PROJ_IMG,
+    coverImage: {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fcarl_banner.png?alt=media&token=ebc649fb-fac8-46af-a93a-2c0f11db1f75",
+      name: "carl_banner.png"
+    },
     features: [],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
@@ -143,7 +146,10 @@ const MOCK_PROJ_LIST = [
     technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
     type: "commissioned",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
-    coverImage: MOCK_PROJ_IMG,
+    coverImage: {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fayn_banner.png?alt=media&token=26cb8b13-e460-41ce-aa8d-ba0502bde917",
+      name: "ayn_banner.png"
+    },
     features: [],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
