@@ -16,45 +16,38 @@ const ProjectItemPreview = ({ coverImage, images, url, githubUrl, title, name, l
 
   return (
   <Box className="project-item-preview">
-    <Box className="project-item-overlay-container" sx={{p: 2}}>
-      <Stack className="project-item-content" sx={{border: 2, alignItems: "center", justifyContent: "center", px: "15%", borderColor: "rgba(255,255,255,.25)"}}>
+    <Box className="project-item-overlay-container" sx={{p: {xs:1, md:2}, display: {xs: "none", sm: "initial"}}}>
+      <Stack className="project-item-content" sx={{border: 2, alignItems: "center", justifyContent: "center", px: {xs: "7%", md:"15%"}, borderColor: "rgba(255,255,255,.25)"}}>
         <Box>
-          <Button variant="outlined" color="primary" size="medium" endIcon={<ArrowForwardIosIcon/>} sx={{fontWeight: 500}} onClick={() => navigate(name, { state: {screenView : window.pageYOffset}})}>
+          <Button 
+            variant="outlined" 
+            color="primary" 
+            endIcon={<ArrowForwardIosIcon/>} 
+            sx={{fontWeight: 500, fontSize:{xs: 11, sm: 12, md:14}}} 
+            onClick={() => navigate(name, { state: {screenView : window.pageYOffset}})}
+          >
             Read More About {title}
           </Button>
         </Box>
  
-        <Box sx={{background: "rgba(255,255,255,.2)", height: 3, width: "20%", mx: "auto", my: 4}}></Box>
+        <Box sx={{background: "rgba(255,255,255,.2)", height: 3, width: "20%", mx: "auto", my: {xs: 2, md:4}}}></Box>
 
-        <Box sx={{display: "flex", gap: 5, pt: .5}}>
-          <Button variant="contained" endIcon={<PublicIcon/>} color="secondary" size="small" sx={{fontWeight: 500}} href={url} target='_blank'>
+        <Box sx={{display: "flex", gap: {xs: 3, md:5}, pt: .5}}>
+          <Button variant="contained" endIcon={<PublicIcon/>} color="secondary" size="small" sx={{fontWeight: 500, fontSize:{xs: 11, sm: 12, md:13}}} href={url} target='_blank'>
             Web Demo
           </Button>
-          <Button variant="outlined" endIcon={<GitHubIcon/>} color="secondary" size="small" sx={{fontWeight: 600}} href={githubUrl} target='_blank'>
+          <Button variant="outlined" endIcon={<GitHubIcon/>} color="secondary" size="small" sx={{fontWeight: 600, fontSize:{xs: 11, sm: 12, md:13}}} href={githubUrl} target='_blank'>
             Git Repo
           </Button>
         </Box>
       </Stack>
     </Box>
-    {/* <Box sx={{position: "relative", height: "100%", width: "100%"}}> */}
       <Carousel 
         indicators={false}
         navButtonsAlwaysInvisible={true}
         autoPlay={false}
         stopAutoPlayOnHover={false}
-        // height={350}
       >
-        {/* <Box sx={{display: "flex", alignItems: "center", justifyContent: "center", height: "100%", width: "100%", background: palette.primary, }}>
-          <Image 
-            src={logo} 
-            fit="scale-down"
-            duration={800}
-            height={150}
-            width={150}
-            sx={{filter: "brightness(.95)"}}
-          />
-        </Box> */}
-
         {imagesList.map((item, index) => 
             <Image 
               src={item.url} 
@@ -65,8 +58,14 @@ const ProjectItemPreview = ({ coverImage, images, url, githubUrl, title, name, l
             />
         )}
       </Carousel>
-    {/* </Box> */}
-
+      <Box sx={{display: {xs:"flex", md: "none"}, gap: 3, pt: .75, width: "100%", alignItems: "flex-start", justifyContent: "right", opacity: .9}}>
+        <Button variant="contained" endIcon={<PublicIcon/>} color="secondary" size="small" sx={{fontWeight: 500, fontSize:{xs: 10, sm: 11}}} href={url} target='_blank'>
+          Web Demo
+        </Button>
+        <Button variant="outlined" endIcon={<GitHubIcon/>} color="secondary" size="small" sx={{fontWeight: 600, fontSize:{xs: 10, sm: 11}}} href={githubUrl} target='_blank'>
+          Git Repo
+        </Button>
+      </Box>
     </Box>
   )
 }

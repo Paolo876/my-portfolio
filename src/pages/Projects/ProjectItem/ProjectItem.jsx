@@ -4,11 +4,12 @@ import ProjectItemPreview from './ProjectItemPreview'
 
 const ProjectItem = ({ item }) => {
   return (
-    <Box sx={{position: "relative", pb: 25, px: 2, my: 3, width: "100%"}} id={item.name}>
+    <Box sx={{position: "relative", pb: {xs: 6, sm: 14, md: 22, lg:25}, px: {md:2}, my: 3, width: "100%"}} id={item.name}>
         <Grid container sx={{width: "100%", justifyContent: "space-between"}}>
           <Grid 
-            item xs={6} md={5} lg={4.75}
+            item xs={12} sm={4.75} md={5} lg={4.75}
             py={1} pr={1} 
+            order={{xs: 2, sm: 1}}
           >
             <ProjectItemDescription 
               name={item.name}
@@ -19,7 +20,7 @@ const ProjectItem = ({ item }) => {
               briefDescription={item.briefDescription}
             />
           </Grid>
-          <Grid item xs={6} md={7} lg={7.25} sx={{height: "100%", my: "auto"}}>
+          <Grid item xs={12} sm={7.25} md={7} lg={7.25} sx={{height: "100%", my: "auto"}} order={{xs: 1, sm: 2}}>
             <ProjectItemPreview 
               coverImage={item.coverImage}
               images={item.images}

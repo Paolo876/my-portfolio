@@ -163,8 +163,8 @@ const MOCK_PROJ_LIST = [
   },
   {
     name: "cimt", 
-    title: "CERT Incident Management Tool",
-    briefDescription: "CERT Incident Management Tool is the finals project of my Server-side Development class in Pasadena City College.",
+    title: "C.I.M.T.",
+    briefDescription: "CERT Incident Management Tool (CIMT) is a software solution to manage available resources to various emergency incidents that is occurring or may occur.",
     description: "CERT Incident Management Tool is the finals project of my Server-side Development class in Pasadena City College. This app is a software solution to manage available resources and their assignments to various emergency incidents that is occurring or may occur. It is developed using React, Node, Express, Sequelize, and MySql stack.",
     technologies: [ "JavaScript", "React", "Redux", "NodeJs", "ExpressJs", "MySQL", "Sequelize"],
     type: "school",
