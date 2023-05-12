@@ -214,7 +214,7 @@ const Projects = () => {
         <Route 
           element={
             <Stack>
-              <Grid container sx={{px: {xs:3, sm: 3, md: 1.5, lg: 3}, pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14}, pb: 8, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", minHeight: "100vh"}}>
+              <Grid container sx={{px: {xs:1.5, sm: 3, md: 1.5, lg: 3}, pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14}, pb: 8, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", minHeight: "100vh"}}>
                 <Grid item xs={12} lg={2.25}>
                   <Introduction/>
                 </Grid>
