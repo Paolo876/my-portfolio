@@ -25,7 +25,7 @@ const ProjectItemDescription = ({ title, briefDescription, technologies, feature
           variant="h3" 
           align="left" 
           fontWeight={800} 
-          fontSize={{xs:28, sm: 28, md: 30, lg: 32, xl: 35}} 
+          fontSize={{xs:28, sm: 28, md: 30, lg: 30, xl: 35}} 
           letterSpacing={{xs:1, sm:1, md: 1.25, lg: 1.5, xl:2}} 
           lineHeight={{xl:1}} 
           color="primary.main"
@@ -34,10 +34,10 @@ const ProjectItemDescription = ({ title, briefDescription, technologies, feature
         </Typography>
         <Box sx={{background: "rgba(239,235,229,1)", height: 2, width: {xs: 12, sm: 12, md: 12}, mr: "auto", mt: 1.5, ml: .2, mixBlendMode: "difference", opacity: .5}}></Box>
 
-        <Box sx={{pl: .5, pr: 1, mt: 3}}>
+        <Box sx={{pl: .5, pr: 1, mt: {lg: 2, xl:3}}}>
           <Typography 
             variant="body1" 
-            fontSize={{xs: 12, sm: 12.5, md: 13, lg:14, xl: 14.5}} 
+            fontSize={{xs: 12, sm: 12.5, md: 13, lg:13.5, xl: 14.5}} 
             fontWeight={200} 
           >
             {briefDescription}
@@ -47,26 +47,12 @@ const ProjectItemDescription = ({ title, briefDescription, technologies, feature
               variant="outlined" 
               size="small" 
               color="primary"
-              sx={{fontWeight: 500, fontSize: {xs: 11, sm: 12, md: 12, lg: 13, xl: 13}, px: 2}}
+              sx={{fontWeight: 500, fontSize: {xs: 11, sm: 12, md: 12, lg: 12, xl: 13}, px: 2}}
               onClick={() => navigate(name)}
               >Read More
               <ArrowForwardIosIcon sx={{fontSize: "inherit", ml: 1.25}}/>  
             </Button>
           </Box>
-          {/* <Box sx={{mt: 3}}>
-          <Typography              
-              variant="h6" 
-              sx={{
-                fontWeight: 600,
-                fontSize: 18,
-                mixBlendMode: "difference",
-                textTransform: "none",
-                letterSpacing: .5,
-              }}>Features: </Typography>
-              <List component="ul" sx={{listStyle: "circle", py: 0.15, px: .25}}>
-                {features.map(_item => <ListItem key={_item} sx={{py: .5, px: .25, ml: 2.75, display: 'list-item', mixBlendMode:"difference", fontSize: 15, fontWeight: 200}}>{_item}</ListItem>)}
-              </List>
-          </Box> */}
         </Box>
       </Box>
 
@@ -76,8 +62,7 @@ const ProjectItemDescription = ({ title, briefDescription, technologies, feature
           color="secondary.light"
           sx={{
             fontWeight: 700,
-            fontSize:{xs: 17, sm: 17, md: 17, lg:18, xl: 18},
-            // mixBlendMode: "difference",
+            fontSize:{xs: 17, sm: 17, md: 17, lg:16, xl: 18},
             textTransform: "none",
             opacity: .8,
             letterSpacing: .5,
@@ -85,7 +70,7 @@ const ProjectItemDescription = ({ title, briefDescription, technologies, feature
         >
           Main Technologies Used: 
         </Typography>
-        <Grid container sx={{mt:1.5}}>
+        <Grid container sx={{mt:{lg: .5, xl:1.5}}}>
           {skillsList && technologies.map(item => {
             const tech = skillsList.find(_item => _item.name === item)
             if(tech) return <Grid item xs={2.05} key={tech.name} align="center" my={.25}>
