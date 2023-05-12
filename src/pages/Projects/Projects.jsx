@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import useRootRedux from '../../hooks/useRootRedux'
 import useFirestoreActions from '../../hooks/useFirestoreActions'
 import DocumentHead from '../../components/DocumentHead'
-
+import Contact from "../Home/Contact/Contact"
 import { Grid, Box, Stack } from '@mui/material'
 import Footer from '../../components/Footer'
 import Introduction from './Introduction'
@@ -222,7 +222,7 @@ const Projects = () => {
                   {projects && <ProjectsList projects={projects}/>}
                 </Grid>
               </Grid>
-              <Box mt="auto" ml={{md:"auto"}} sx={{position: "absolute", bottom: 5, right: 5}}><Footer/></Box>
+              <Contact/>
             </Stack>
           } 
           path="/"

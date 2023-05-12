@@ -5,7 +5,7 @@ import Introduction from './Introduction'
 import AboutContentList from './AboutContentList'
 import useFirestoreActions from '../../hooks/useFirestoreActions'
 import useRootRedux from '../../hooks/useRootRedux'
-
+import Contact from "../Home/Contact/Contact"
 import { Box } from '@mui/material'
 
 const About = () => {
@@ -27,7 +27,7 @@ const About = () => {
       />
       <Introduction/>
       <AboutContentList/>
-      <Footer/>
+      <Contact/>
     </Box>
   )
 }

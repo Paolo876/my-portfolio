@@ -24,7 +24,6 @@ const ProjectPage = ({ projects }) => {
 
 
         <Grid item xs={12} lg={3}>
-          {/* <Introduction/> */}
           <Box mb={5}>
             <Button 
               startIcon={<ArrowBackIosIcon/>} 
