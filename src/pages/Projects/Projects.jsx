@@ -104,11 +104,13 @@ const MOCK_PROJ_LIST = [
     title: "Luna",
     briefDescription: "Luna is a personalizable browser homepage alternative inspired by the google chrome extension 'Momentum'.",
     description: "Luna is a personalizable browser homepage alternative inspired by the google chrome extension 'Momentum'. It features a UI that the user can freely customize through rearranging the components, elements positioning, font properties, and UI color scheme.",
-    technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
+    technologies: [ "JavaScript", "React", "Redux", "Firebase", "Material-UI", "Sass/Scss"],
     type: "personal",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
     coverImage: MOCK_PROJ_IMG,
-    features: [],
+    features: [
+      ""
+    ],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
     logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_logo_white.png?alt=media&token=5d2083ea-340c-4479-be33-0938373ea91a",
@@ -122,7 +124,7 @@ const MOCK_PROJ_LIST = [
     title: "Carl Dimabuyu Portfolio",
     briefDescription: "A web portfolio of an architect based in Doha, Qatar that I designed and developed.",
     description: "A web portfolio of an architect based in Doha, Qatar that I designed and developed.",
-    technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
+    technologies: [ "JavaScript", "React", "Material-UI", "Sass/Scss"],
     type: "commissioned",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
     coverImage: {
@@ -143,7 +145,7 @@ const MOCK_PROJ_LIST = [
     title: "Ayn Laquindanum Portfolio",
     briefDescription: "A web portfolio of a graphic artist/architect based in Philippines that I designed and developed.",
     description: "A web portfolio of a graphic artist/architect based in Philippines that I designed and developed.",
-    technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
+    technologies: [ "JavaScript", "React", "Material-UI", "Sass/Scss"],
     type: "commissioned",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
     coverImage: {
@@ -164,7 +166,7 @@ const MOCK_PROJ_LIST = [
     title: "CERT Incident Management Tool",
     briefDescription: "CERT Incident Management Tool is the finals project of my Server-side Development class in Pasadena City College.",
     description: "CERT Incident Management Tool is the finals project of my Server-side Development class in Pasadena City College. This app is a software solution to manage available resources and their assignments to various emergency incidents that is occurring or may occur. It is developed using React, Node, Express, Sequelize, and MySql stack.",
-    technologies: [ "Javascript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "MySQL"],
+    technologies: [ "JavaScript", "React", "Redux", "NodeJs", "ExpressJs", "MySQL", "Sequelize"],
     type: "school",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
     coverImage: MOCK_PROJ_IMG,
