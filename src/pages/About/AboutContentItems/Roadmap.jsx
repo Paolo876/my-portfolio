@@ -17,7 +17,8 @@ const baseTextStyles = {
   fontWeight: 300,
   textAlign: "justify", 
   textJustify: "inter-word", 
-  mixBlendMode: "difference",
+  // mixBlendMode: "difference",
+  opacity: .8,
   lineHeight: 1.75,
   letterSpacing: .5, 
 }
@@ -42,20 +43,20 @@ const Roadmap = () => {
           <MyTimelineItem dotColor='secondary' dotIcon={bldgicon} firstItem={true}>
             <Typography variant="body1" sx={baseTextStyles}>
               Before taking my path in the development field, I studied <Box component="span" fontWeight={200}>Architecture</Box> back in Philippines where I learned about 
-              <Box component="span" color="primary.light" fontWeight={200}> design planning, techniques, and strategies</Box> that I continue to incorporate through my projects. 
+              <Box component="span" color="primary.main" fontWeight={400}> design planning, techniques, and strategies</Box> that I continue to incorporate through my projects. 
             </Typography>
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary' dotIcon={codeicon}>
             <Typography variant="body1" sx={baseTextStyles}>
-              I started learning coding back in 2019 through an online course by <Box component="span" color="primary.light" fontWeight={200}> Colt Steele </Box> 
-              on Web Development where I learned the fundamentals of <Box component="span" color="primary.light" fontWeight={200}>HTML, CSS, JavaScript, 
+              I started learning coding back in 2019 through an online course by <Box component="span" color="primary.main" fontWeight={400}> Colt Steele </Box> 
+              on Web Development where I learned the fundamentals of <Box component="span" color="primary.main" fontWeight={400}>HTML, CSS, JavaScript, 
               NodeJS, and MongoDB.</Box>
             </Typography>
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary' dotIcon={collegeicon}>
             <Typography variant="body1" sx={baseTextStyles}>
               After completing the 47-hour course, it caught my interest and gave me the motivation to enroll back to College in 2020 for a degree in 
-              <Box component="span" color="primary.light" fontWeight={200}> Computer Information Systems Major in Software Development and Web Development.</Box>
+              <Box component="span" color="primary.main" fontWeight={400}> Computer Information Systems Major in Software Development and Web Development.</Box>
             </Typography>
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary' dotIcon={brainicon}>
@@ -67,13 +68,13 @@ const Roadmap = () => {
             <Typography variant="body1" sx={baseTextStyles}>
               While being a part-time college student, I was also self-studying through online courses and youtube tutorials, all 
               while also being employed full time at an office job. 
-              <Box component="span" color="primary.light" fontWeight={200}> As exhausting as it was, the burnout was worth it for the knowledge I gained.</Box>
+              <Box component="span" color="primary.main" fontWeight={400}> As exhausting as it was, the burnout was worth it for the knowledge I gained.</Box>
             </Typography>
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary' dotIcon={websiteicon}>
             <Typography variant="body1" sx={baseTextStyles}>
               I focused more on Web Development than Software Development/Programming as it seems more engaging to me. I started learning 
-              <Box component="span" color="primary.light" fontWeight={200}> ReactJS</Box> and developed my projects using it.
+              <Box component="span" color="primary.main" fontWeight={400}> ReactJS</Box> and developed my projects using it.
             </Typography>
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary' dotIcon={handshakeicon}>
