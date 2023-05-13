@@ -8,8 +8,8 @@ const boxTextStyles = {
 };
 
 const baseTextStyles = {
-  fontSize:{xs: 12, sm: 12, md: 13, lg:14, xl: 15},
-  fontWeight: 200,
+  fontSize:{xs: 12, sm: 12, md: 13, lg:14, xl: 18.5},
+  fontWeight: 300,
   textAlign: "justify", 
   textJustify: "inter-word", 
   mixBlendMode: "difference"
@@ -20,11 +20,10 @@ const Introduction = () => {
     <Grid container 
       sx={{
         px: {xs:2.5, sm: 3, md: 4, lg: 5.5, xl: 4.5}, 
-        pt: {xs:8, sm: 12, md: 14, lg: 16}, 
+        pt: {xs:8, sm: 12, md: 14, lg: 20}, 
         pb: {xs:8, sm: 12, md: 12, lg: 12}, 
         justifyContent: "center", 
         alignItems: "flex-start", 
-        // minHeight: "36vh", 
         maxWidth: "1500px", 
         mx: "auto"
       }}
@@ -35,7 +34,7 @@ const Introduction = () => {
           align="left" 
           fontWeight={800} 
           fontSize={{xs:32, sm: 32, md: 42, lg: 40, xl: 70}} 
-          letterSpacing={{xs:2, sm:2, md: 2, lg: 2, xl:3.5}} 
+          letterSpacing={{xs:2, sm:2, md: 2, lg: 2, xl: 5}} 
           lineHeight={{xl:1}} 
           sx={{mixBlendMode: "difference"}}
         >
@@ -45,7 +44,7 @@ const Introduction = () => {
 
       </Grid>
 
-      <Grid item xs={12} lg={4} xl={3}>
+      <Grid item xs={12} lg={4} xl={3} pr={5} pt={4}>
         <Typography variant="body1" sx={baseTextStyles}>          
           I am a <Box sx={boxTextStyles} component="span" color="primary.light">Full Stack Web Developer </Box> 
           based in <Box sx={boxTextStyles} component="span">Los Angeles, California.</Box> I design and develop websites from
@@ -53,7 +52,7 @@ const Introduction = () => {
         </Typography>
       </Grid>
 
-      <Grid item xs={12} lg={4} xl={3}>
+      <Grid item xs={12} lg={4} xl={3} pr={5} pt={4}>
         <Typography variant="body1" sx={baseTextStyles}>          
           I specialize in developing a web application using <Box sx={boxTextStyles} component="span" color="primary.light">ReactJS </Box> 
           or <Box sx={boxTextStyles} component="span" color="secondary.light">NextJS</Box> in the Client-Side, and 
@@ -62,7 +61,7 @@ const Introduction = () => {
         </Typography>
       </Grid>
 
-      <Grid item xs={12} lg={4} xl={3} sx={{display: "flex", justifyContent: "center",}}>
+      <Grid item xs={12} lg={4} xl={3} sx={{display: "flex", justifyContent: "right"}}>
         <Box 
           sx={{
             border: 3, 
