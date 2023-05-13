@@ -5,11 +5,11 @@ import SkillIconImageItem from '../../../components/SkillIconImageItem';
 
 const MyTimelineItem = ({children, dotColor="grey", dotIcon, endItem=false, firstItem=false}) => {
   return (
-    <TimelineItem sx={{minHeight: "38vh"}}>
+    <TimelineItem sx={{minHeight: 250}}>
       <TimelineSeparator>
         <TimelineConnector sx={{opacity: firstItem ? .35 : 1}}/>
         <TimelineDot color={dotColor} variant="filled" sx={{overflow: "hidden", color: "secondary.dark", my: 1.5, p: 1.25}}>
-          {dotIcon && <SkillIconImageItem src={dotIcon} height="45px" width="45px" fit="cover"/>}
+          {dotIcon && <SkillIconImageItem src={dotIcon} height="35px" width="35px" fit="cover"/>}
         </TimelineDot>
         <TimelineConnector sx={{visibility: endItem ? "hidden" : "initial"}}/>
       </TimelineSeparator>
