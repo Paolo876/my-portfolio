@@ -14,8 +14,8 @@ const Introduction = () => {
           sx={{
             border: 3, 
             borderRadius: "50%", 
-            height: {xs: 275, sm: 325, md:350,lg:350, xl: 450}, 
-            width: {xs: 275, sm: 325, md:350,lg:350, xl: 450}, 
+            height: {xs: 220, sm: 280, md:300,lg:320, xl: 400}, 
+            width: {xs: 220, sm: 280, md:300,lg:320, xl: 400}, 
             display: "flex", 
             alignItems: "center", 
             justifyContent: "center", 
