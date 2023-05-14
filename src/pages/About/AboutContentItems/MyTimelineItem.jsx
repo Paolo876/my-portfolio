@@ -8,13 +8,13 @@ const MyTimelineItem = ({children, dotColor="grey", dotIcon, endItem=false, firs
     <TimelineItem sx={{minHeight: 250}}>
       <TimelineSeparator>
         <TimelineConnector sx={{opacity: firstItem ? .35 : 1}}/>
-        <TimelineDot color={dotColor} variant="filled" sx={{overflow: "hidden", color: "secondary.dark", my: 1.5, p: 1.25}}>
+        <TimelineDot color={dotColor} variant="filled" sx={{overflow: "hidden", color: "secondary.dark", p: .75}}>
           {dotIcon && <SkillIconImageItem src={dotIcon} height="35px" width="35px" fit="cover"/>}
         </TimelineDot>
         <TimelineConnector sx={{visibility: endItem ? "hidden" : "initial"}}/>
       </TimelineSeparator>
       <TimelineContent sx={{ m: 'auto 0', py: "auto"}}>
-        <Paper sx={{p:2.5, align: "right", mx:2 }} elevation={3}>
+        <Paper sx={{p:2.5, align: "right", mx:2, background: "none", border: 2, borderColor: "rgba(200,200,200,0.35)"}} variant='outlined'>
           {children}
         </Paper>
       </TimelineContent>

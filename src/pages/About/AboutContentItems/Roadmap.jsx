@@ -13,13 +13,13 @@ import workicon from "../../../assets/roadmap_icons/work.svg"
 
 
 const baseTextStyles = {
-  fontSize:{ xs: 12, sm: 12, md: 13, lg:14, xl: 16 },
+  fontSize:{ xs: 12, sm: 12, md: 13, lg:14, xl: 14.5 },
   fontWeight: 300,
   textAlign: "justify", 
   textJustify: "inter-word", 
   // mixBlendMode: "difference",
   opacity: .8,
-  lineHeight: 1.75,
+  lineHeight: 1.55,
   letterSpacing: .5, 
 }
 
@@ -33,24 +33,24 @@ const Roadmap = () => {
         justifyContent: "center", 
         alignItems: "flex-start", 
         maxWidth: "1500px", 
-        mx: "auto"
+        mx: "auto",
       }}
-    >        <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200,.5)", mixBlendMode: "overlay", zIndex: -1}}></Box>
-      <Grid item xs={8.5}>
+    >        
+      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200,.1)", mixBlendMode: "overlay", opacity: 1, zIndex: -1}}></Box>
+      <Grid item xs={12}>
         <Typography variant="h5" sx={{mixBlendMode: "difference"}} align='center' fontSize="1.75rem">My Development Roadmap</Typography>
         <Box sx={{background: "white", height: "4px", width: "35px", mb: 10, mt: 3, mx: "auto", mixBlendMode: "difference" }}></Box>
         <Timeline position="alternate">
           <MyTimelineItem dotColor='secondary' dotIcon={bldgicon} firstItem={true}>
             <Typography variant="body1" sx={baseTextStyles}>
-              Before taking my path in the development field, I studied <Box component="span" fontWeight={200}>Architecture</Box> back in Philippines where I learned about 
-              <Box component="span" color="primary.main" fontWeight={400}> design planning, techniques, and strategies</Box> that I continue to incorporate through my projects. 
+              Before my dev journey started, I studied <Box component="span" fontWeight={300}>Bachelor of Science in Architecture</Box> back in Philippines where I learned about the
+              <Box component="span" color="primary.light"> design methods and strategies</Box> that I continue to apply through my projects. 
             </Typography>
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary' dotIcon={codeicon}>
             <Typography variant="body1" sx={baseTextStyles}>
-              I started learning coding back in 2019 through an online course by <Box component="span" color="primary.main" fontWeight={400}> Colt Steele </Box> 
-              on Web Development where I learned the fundamentals of <Box component="span" color="primary.main" fontWeight={400}>HTML, CSS, JavaScript, 
-              NodeJS, and MongoDB.</Box>
+              I started learning coding back in 2019 through an online course called <Box component="span" color="primary.main" fontWeight={400}> The Web Development Bootcamp by Colt Steele </Box> 
+              where I learned all the fundamentals.
             </Typography>
           </MyTimelineItem>
           <MyTimelineItem dotColor='secondary' dotIcon={collegeicon}>
@@ -59,11 +59,11 @@ const Roadmap = () => {
               <Box component="span" color="primary.main" fontWeight={400}> Computer Information Systems Major in Software Development and Web Development.</Box>
             </Typography>
           </MyTimelineItem>
-          <MyTimelineItem dotColor='secondary' dotIcon={brainicon}>
+          {/* <MyTimelineItem dotColor='secondary' dotIcon={brainicon}>
             <Typography variant="body1" sx={baseTextStyles}>
               In college, I was able to learn the foundations of programming, how to think like a developer, analyze logic and algorithms, and how to work as a team.
             </Typography>
-          </MyTimelineItem>
+          </MyTimelineItem> */}
           <MyTimelineItem dotColor='secondary' dotIcon={muscleicon}>
             <Typography variant="body1" sx={baseTextStyles}>
               While being a part-time college student, I was also self-studying through online courses and youtube tutorials, all 
@@ -77,11 +77,11 @@ const Roadmap = () => {
               <Box component="span" color="primary.main" fontWeight={400}> ReactJS</Box> and developed my projects using it.
             </Typography>
           </MyTimelineItem>
-          <MyTimelineItem dotColor='secondary' dotIcon={handshakeicon}>
+          {/* <MyTimelineItem dotColor='secondary' dotIcon={handshakeicon}>
             <Typography variant="body1" sx={baseTextStyles}>
               In 2022, I started offering my services, designing and building commissioned projects.
             </Typography>
-          </MyTimelineItem>
+          </MyTimelineItem> */}
           <MyTimelineItem dotColor='secondary' endItem dotIcon={workicon}>
             <Typography variant="body1" sx={baseTextStyles}>
               Present time, I still continue to learn more techologies online, further refine and improve my existing projects, and conceptualize new project ideas.
