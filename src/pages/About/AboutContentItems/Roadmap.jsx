@@ -61,45 +61,39 @@ const Roadmap = () => {
               flex: 0,
               padding: 0,
             },
-            // mt: 8
+            mt: 8
           }}
           >
           <MyTimelineItem dotColor='primary' dotIcon={bldgicon} firstItem={true}>
-            <Typography variant="h6" letterSpacing={1.25} fontWeight={800} fontSize={{md:18, lg:20, xl:23}} pl={2}>The Beginning</Typography>
-            <Grid container mt={2}>
-              <Grid item xs={4} px={2}>
+            <Box pl={2}>
+              <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:24, lg:25, xl:26}}>The Beginning</Typography>
+              <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "12px", mr: "auto", mt: .5, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
+            </Box>
+            <Grid container mt={3} pl={2}>
+              <Grid item xs={4} pr={7}>
               <Typography variant="body1" sx={baseTextStyles}>
-                Before my dev journey started, I studied <Box component="span" fontWeight={300}>Bachelor of Science in Architecture</Box> back in Philippines where I learned about the
-                <Box component="span" color="primary.light"> design methods and strategies</Box> that I continue to apply through my projects. 
+                Before my development journey started, I studied <Box component="span" fontWeight={400}>Bachelor of Science in Architecture</Box> back in Philippines where I learned about the
+                <Box component="span" fontWeight={400}> design methods and strategies</Box> that I continue to incorporate throughout my projects. 
               </Typography>
 
               </Grid>
-              <Grid item xs={4} px={2}>
+              <Grid item xs={4} pr={7}>
               <Typography variant="body1" sx={baseTextStyles}>
-                I started learning coding back in 2019 through an online course called <Box component="span" color="primary.main" fontWeight={400}> The Web Development Bootcamp by Colt Steele </Box> 
+                I started learning coding back in 2019 through an online course called <Box component="span" fontWeight={400}> The Web Development Bootcamp by Colt Steele </Box> 
                 where I learned all the fundamentals.
               </Typography>
               </Grid>
-              <Grid item xs={4} px={2}>
+              <Grid item xs={4} pr={7}>
                 <Typography variant="body1" sx={baseTextStyles}>
                   After completing the 47-hour course, it caught my interest and gave me the motivation to enroll back to College in 2020 for a degree in 
-                  <Box component="span" color="primary.main" fontWeight={400}> Computer Information Systems Major in Software Development and Web Development.</Box>
+                  <Box component="span" fontWeight={400}> Computer Information Systems Major in Software Development and Web Development.</Box>
                 </Typography>
               </Grid>
             </Grid>
           </MyTimelineItem>
-          {/* <MyTimelineItem dotColor='primary' dotIcon={codeicon}>
-            <Typography variant="body1" sx={baseTextStyles}>
-              I started learning coding back in 2019 through an online course called <Box component="span" color="primary.main" fontWeight={400}> The Web Development Bootcamp by Colt Steele </Box> 
-              where I learned all the fundamentals.
-            </Typography>
-          </MyTimelineItem> */}
-          {/* <MyTimelineItem dotColor='primary' dotIcon={collegeicon}>
-            <Typography variant="body1" sx={baseTextStyles}>
-              After completing the 47-hour course, it caught my interest and gave me the motivation to enroll back to College in 2020 for a degree in 
-              <Box component="span" color="primary.main" fontWeight={400}> Computer Information Systems Major in Software Development and Web Development.</Box>
-            </Typography>
-          </MyTimelineItem> */}
+
+
+
           {/* <MyTimelineItem dotColor='secondary' dotIcon={brainicon}>
             <Typography variant="body1" sx={baseTextStyles}>
               In college, I was able to learn the foundations of programming, how to think like a developer, analyze logic and algorithms, and how to work as a team.
