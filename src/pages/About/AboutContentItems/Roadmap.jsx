@@ -4,14 +4,9 @@ import { Timeline } from '@mui/lab';
 import { timelineItemClasses } from '@mui/lab/TimelineItem';
 
 import MyTimelineItem from './MyTimelineItem';
-import bldgicon from "../../../assets/roadmap_icons/building.svg"
 import walkicon from "../../../assets/roadmap_icons/walk.svg"
 import codeicon from "../../../assets/roadmap_icons/code.svg"
-import collegeicon from "../../../assets/roadmap_icons/college.svg"
-import brainicon from "../../../assets/roadmap_icons/brain.svg"
 import muscleicon from "../../../assets/roadmap_icons/muscle.svg"
-import websiteicon from "../../../assets/roadmap_icons/website.svg"
-import handshakeicon from "../../../assets/roadmap_icons/handshake.svg"
 import workicon from "../../../assets/roadmap_icons/work.svg"
 
 
@@ -65,26 +60,26 @@ const Roadmap = () => {
             mt: 8
           }}
           >
-          <MyTimelineItem dotColor='primary' dotIcon={walkicon} firstItem={true}>
+          <MyTimelineItem dotColor='primary' dotIcon={walkicon}>
             <Box pl={2}>
-              <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:24, lg:25, xl:26}}>The Beginning</Typography>
-              <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "12px", mr: "auto", mt: .5, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
+              <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:22, lg:23, xl:24}} sx={{opacity: .85}}>The Beginning</Typography>
+              <Box sx={{background: "rgba(239,235,229,1)", height: "5px", width: "5px", mr: "auto", mt: .15, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
             </Box>
-            <Grid container mt={3} pl={2}>
-              <Grid item xs={4} pr={7}>
+            <Grid container mt={1.5} pl={2}>
+              <Grid item xs={3.75} pr={6}>
               <Typography variant="body1" sx={baseTextStyles}>
                 Before my development journey started, I studied <Box component="span" fontWeight={400}>Bachelor of Science in Architecture</Box> back in Philippines where I learned about the
                 <Box component="span" fontWeight={400}> design methods and strategies</Box> that I continue to incorporate throughout my projects. 
               </Typography>
 
               </Grid>
-              <Grid item xs={4} pr={7}>
+              <Grid item xs={3.75} pr={6}>
               <Typography variant="body1" sx={baseTextStyles}>
                 I started learning coding back in 2019 through an online course called <Box component="span" fontWeight={400}> The Web Development Bootcamp by Colt Steele </Box> 
                 where I learned all the fundamentals.
               </Typography>
               </Grid>
-              <Grid item xs={4} pr={7}>
+              <Grid item xs={3.75} pr={6}>
                 <Typography variant="body1" sx={baseTextStyles}>
                   After completing the 47-hour course, it caught my interest and gave me the motivation to enroll back to College in 2020 for a degree in 
                   <Box component="span" fontWeight={400}> Computer Information Systems Major in Software Development and Web Development.</Box>
@@ -95,15 +90,10 @@ const Roadmap = () => {
 
           <MyTimelineItem dotColor='primary' dotIcon={muscleicon}>
             <Box pl={2}>
-              <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:24, lg:25, xl:26}}>The Training</Typography>
-              <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "12px", mr: "auto", mt: .5, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
+              <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:22, lg:23, xl:24}} sx={{opacity: .85}}>The Training</Typography>
+              <Box sx={{background: "rgba(239,235,229,1)", height: "5px", width: "5px", mr: "auto", mt: .15, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
             </Box>
-            <Grid container mt={3} pl={2}>
-              <Grid item xs={5} pr={7}>
-                <Typography variant="body1" sx={baseTextStyles}>
-                  In college, I was able to learn the foundations of programming, how to think like a developer, analyze logic and algorithms, and getting the feel of working with a team.
-                </Typography>
-              </Grid>
+            <Grid container mt={1.5} pl={2}>
               <Grid item xs={5} pr={7}>
                 <Typography variant="body1" sx={baseTextStyles}>
                   While being a part-time college student, I was also self-studying through online courses and youtube tutorials, all 
@@ -111,25 +101,45 @@ const Roadmap = () => {
                   <Box component="span" fontWeight={400}> As exhausting as it was, the burnout was worth it for the knowledge I gained.</Box>
                 </Typography>
               </Grid>
+              <Grid item xs={5} pr={7}>
+                <Typography variant="body1" sx={baseTextStyles}>
+                  In college, I was able to learn the foundations of programming, how to think like a developer, analyze logic and algorithms, and getting the feel of working with a team.
+                </Typography>
+              </Grid>
             </Grid>
           </MyTimelineItem>
 
-
-          <MyTimelineItem dotColor='primary' dotIcon={websiteicon}>
-            <Typography variant="body1" sx={baseTextStyles}>
-              I focused more on Web Development than Software Development/Programming as it seems more engaging to me. I started learning 
-              <Box component="span" color="primary.main" fontWeight={400}> ReactJS</Box> and developed my projects using it.
-            </Typography>
+          <MyTimelineItem dotColor='primary' dotIcon={codeicon}>
+            <Box pl={2}>
+              <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:22, lg:23, xl:24}} sx={{opacity: .85}}>The Process</Typography>
+              <Box sx={{background: "rgba(239,235,229,1)", height: "5px", width: "5px", mr: "auto", mt: .15, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
+            </Box>
+            <Grid container mt={1.5} pl={2}>
+              <Grid item xs={5} pr={7}>
+                <Typography variant="body1" sx={baseTextStyles}>
+                  I focused more on Web Development than Software Development or Programming as it seems more engaging to me. I started learning 
+                  <Box component="span" fontWeight={400}> ReactJS</Box> along with related tech stack and developed most of my projects using them.
+                </Typography>
+              </Grid>
+              <Grid item xs={5} pr={7}>
+                <Typography variant="body1" sx={baseTextStyles}>
+                  In 2022, I started offering my services working as a freelance developer on the side, designing and building commissioned projects to improve my skills and build network.
+                </Typography>
+              </Grid>
+            </Grid>
           </MyTimelineItem>
-          {/* <MyTimelineItem dotColor='secondary' dotIcon={handshakeicon}>
-            <Typography variant="body1" sx={baseTextStyles}>
-              In 2022, I started offering my services, designing and building commissioned projects.
-            </Typography>
-          </MyTimelineItem> */}
-          <MyTimelineItem dotColor='primary' endItem dotIcon={workicon}>
-            <Typography variant="body1" sx={baseTextStyles}>
-              Present time, I still continue to learn more techologies online, further refine and improve my existing projects, and conceptualize new project ideas.
-            </Typography>
+          <MyTimelineItem dotColor='primary' dotIcon={workicon} endItem={true}>
+            <Box pl={2}>
+              <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:22, lg:23, xl:24}} sx={{opacity: .85}}>The Present</Typography>
+              <Box sx={{background: "rgba(239,235,229,1)", height: "5px", width: "5px", mr: "auto", mt: .15, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
+            </Box>
+            <Grid container mt={1.5} pl={2}>
+              <Grid item xs={6} pr={7}>
+                <Typography variant="body1" sx={baseTextStyles}>
+                  Present time, I still continue to learn more techologies online, further refine and improve my existing projects, and conceptualize new project ideas.
+                </Typography>
+              </Grid>
+            </Grid>
           </MyTimelineItem>
         </Timeline>
       </Grid>
