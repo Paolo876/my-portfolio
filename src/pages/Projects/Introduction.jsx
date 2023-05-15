@@ -32,7 +32,7 @@ const Introduction = () => {
           <br/>Please feel free to check out the demo or git repository of my projects and message me if you have any remarks or suggestions.
         </Typography>
       </Grid>
-      <Grid item xs={12} sm={12} md={12} mt={{xs: 3, sm: 3, md:4, lg:7, xl: 8}} px={{sm: 15, md:1.75, lg: 2.25, xl:3}} mb={{xs: 3, md: 0}}>
+      <Grid item xs={12} sm={12} md={12} mt={{xs: 3, sm: 3, md:4, lg:10, xl: 12}} px={{sm: 15, md:1.75, lg: 0}} mb={{xs: 3, md: 0}}>
         <Divider><SocialLinks buttonSize="medium" gap={1.5} iconSize={{xs: 16, sm: 17, md: 16, lg: 17}}/></Divider>
       </Grid>
     </Grid>
