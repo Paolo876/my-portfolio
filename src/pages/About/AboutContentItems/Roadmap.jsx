@@ -5,6 +5,7 @@ import { timelineItemClasses } from '@mui/lab/TimelineItem';
 
 import MyTimelineItem from './MyTimelineItem';
 import bldgicon from "../../../assets/roadmap_icons/building.svg"
+import walkicon from "../../../assets/roadmap_icons/walk.svg"
 import codeicon from "../../../assets/roadmap_icons/code.svg"
 import collegeicon from "../../../assets/roadmap_icons/college.svg"
 import brainicon from "../../../assets/roadmap_icons/brain.svg"
@@ -64,7 +65,7 @@ const Roadmap = () => {
             mt: 8
           }}
           >
-          <MyTimelineItem dotColor='primary' dotIcon={bldgicon} firstItem={true}>
+          <MyTimelineItem dotColor='primary' dotIcon={walkicon} firstItem={true}>
             <Box pl={2}>
               <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:24, lg:25, xl:26}}>The Beginning</Typography>
               <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "12px", mr: "auto", mt: .5, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
@@ -92,20 +93,28 @@ const Roadmap = () => {
             </Grid>
           </MyTimelineItem>
 
-
-
-          {/* <MyTimelineItem dotColor='secondary' dotIcon={brainicon}>
-            <Typography variant="body1" sx={baseTextStyles}>
-              In college, I was able to learn the foundations of programming, how to think like a developer, analyze logic and algorithms, and how to work as a team.
-            </Typography>
-          </MyTimelineItem> */}
           <MyTimelineItem dotColor='primary' dotIcon={muscleicon}>
-            <Typography variant="body1" sx={baseTextStyles}>
-              While being a part-time college student, I was also self-studying through online courses and youtube tutorials, all 
-              while also being employed full time at an office job. 
-              <Box component="span" color="primary.main" fontWeight={400}> As exhausting as it was, the burnout was worth it for the knowledge I gained.</Box>
-            </Typography>
+            <Box pl={2}>
+              <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:24, lg:25, xl:26}}>The Training</Typography>
+              <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "12px", mr: "auto", mt: .5, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
+            </Box>
+            <Grid container mt={3} pl={2}>
+              <Grid item xs={5} pr={7}>
+                <Typography variant="body1" sx={baseTextStyles}>
+                  In college, I was able to learn the foundations of programming, how to think like a developer, analyze logic and algorithms, and getting the feel of working with a team.
+                </Typography>
+              </Grid>
+              <Grid item xs={5} pr={7}>
+                <Typography variant="body1" sx={baseTextStyles}>
+                  While being a part-time college student, I was also self-studying through online courses and youtube tutorials, all 
+                  while also being employed full time at an office job. 
+                  <Box component="span" fontWeight={400}> As exhausting as it was, the burnout was worth it for the knowledge I gained.</Box>
+                </Typography>
+              </Grid>
+            </Grid>
           </MyTimelineItem>
+
+
           <MyTimelineItem dotColor='primary' dotIcon={websiteicon}>
             <Typography variant="body1" sx={baseTextStyles}>
               I focused more on Web Development than Software Development/Programming as it seems more engaging to me. I started learning 
