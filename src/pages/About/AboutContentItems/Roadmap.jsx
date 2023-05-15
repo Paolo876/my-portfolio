@@ -40,11 +40,11 @@ const Roadmap = () => {
           <Typography 
             variant="h4" 
             fontWeight={800}
-            fontSize={{md: 28, lg: 30, xl: 35}} 
+            fontSize={{md: 28, lg: 29, xl: 30}} 
             letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:3}} 
             lineHeight={{lg:1.6, xl:1.2}} 
-            sx={{mixBlendMode:"difference"}}
-
+            sx={{opacity: .85}}
+            color="primary.main"
           >
             My Development Roadmap
           </Typography>
@@ -62,7 +62,7 @@ const Roadmap = () => {
           >
           <MyTimelineItem dotColor='primary' dotIcon={walkicon}>
             <Box pl={2}>
-              <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:22, lg:23, xl:24}} sx={{opacity: .85}}>The Beginning</Typography>
+              <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:22, lg:23, xl:24}}>The Beginning</Typography>
               <Box sx={{background: "rgba(239,235,229,1)", height: "5px", width: "5px", mr: "auto", mt: .15, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
             </Box>
             <Grid container mt={1.5} pl={2}>
@@ -90,7 +90,7 @@ const Roadmap = () => {
 
           <MyTimelineItem dotColor='primary' dotIcon={muscleicon}>
             <Box pl={2}>
-              <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:22, lg:23, xl:24}} sx={{opacity: .85}}>The Training</Typography>
+              <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:22, lg:23, xl:24}}>The Training</Typography>
               <Box sx={{background: "rgba(239,235,229,1)", height: "5px", width: "5px", mr: "auto", mt: .15, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
             </Box>
             <Grid container mt={1.5} pl={2}>
@@ -111,7 +111,7 @@ const Roadmap = () => {
 
           <MyTimelineItem dotColor='primary' dotIcon={codeicon}>
             <Box pl={2}>
-              <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:22, lg:23, xl:24}} sx={{opacity: .85}}>The Process</Typography>
+              <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:22, lg:23, xl:24}}>The Process</Typography>
               <Box sx={{background: "rgba(239,235,229,1)", height: "5px", width: "5px", mr: "auto", mt: .15, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
             </Box>
             <Grid container mt={1.5} pl={2}>
@@ -130,7 +130,7 @@ const Roadmap = () => {
           </MyTimelineItem>
           <MyTimelineItem dotColor='primary' dotIcon={workicon} endItem={true}>
             <Box pl={2}>
-              <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:22, lg:23, xl:24}} sx={{opacity: .85}}>The Present</Typography>
+              <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:22, lg:23, xl:24}}>The Present</Typography>
               <Box sx={{background: "rgba(239,235,229,1)", height: "5px", width: "5px", mr: "auto", mt: .15, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
             </Box>
             <Grid container mt={1.5} pl={2}>
