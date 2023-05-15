@@ -12,7 +12,7 @@ const Skills = () => {
 
   return (
     <Grid container sx={{p: 5, justifyContent: "center", alignItems: "center", maxWidth: "1900px", mx: "auto", pt: 5, position: "relative"}}>
-      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200,.15)", mixBlendMode: "overlay", zIndex: -1}}></Box>
+      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(25,25,25,.05)", mixBlendMode: "overlay", zIndex: -1}}></Box>
       <Box>
         <Typography variant="h5" sx={{mixBlendMode: "difference"}} align='center' fontSize="1.75rem">Skills and Certifications</Typography>
         <Box sx={{background: "white", height: "4px", width: "35px", mb: 10, mt: 3, mx: "auto", mixBlendMode: "difference" }}></Box>

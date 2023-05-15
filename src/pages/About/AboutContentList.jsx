@@ -10,7 +10,7 @@ const AboutContentList = () => {
     <Stack sx={{position: "relative"}}>
       <Roadmap/>
       <Skills/>
-      <Bio/>
+      {/* <Bio/> */}
     </Stack>
   )
 }

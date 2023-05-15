@@ -7,34 +7,45 @@ const OtherSkills = () => {
   const { otherSkillsList } = useRootRedux();
 
   return (
-    <Box sx={{mb: 10}}>
-      <Typography variant="h5" sx={{mixBlendMode: "difference", opacity: .8}} fontSize="1.1rem" fontWeight={700} letterSpacing={4}>Other Skills</Typography>
-      <Box sx={{background: "white", height: "2px", width: "6px", mb: 4, mt: 2, ml: .5, mixBlendMode: "difference" }}></Box>
+    <Box sx={{mb: 8}}>
+      <Typography 
+        variant="h4" 
+        fontSize={{xs:18, sm: 19, md: 20, lg: 21, xl: 22}} 
+        letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:2.5}} 
+        lineHeight={{lg:1.6, xl:1.2}} 
+        color="primary.main">Other Skills</Typography>
+      <Box sx={{background: "rgba(239,235,229,1)", height: 8, width: 8, mr: "auto", ml: .2, mt: {xs: 1.5, md:1.75}, mixBlendMode: "difference", opacity: .7}}></Box>
         <Grid container>
-          {otherSkillsList.map(item => <Grid item key={item.name} xs={.8} align="center">
-            <Paper
+          {otherSkillsList.map(item => <Grid item key={item.name} xs={.8} align="center" xs={1}>
+            <Box
               sx={{
                 py: 1.5, 
                 width: "80px",
                 height: "110px",
                 userSelect: "none",
-                opacity: .65,
+                opacity: .75,
               }} 
-              variant="outlined"    
             >
               <Box>
-                <SkillIconImageItem src={item.url} height="45px" width="45px" />
+                <Box height={{xs: 40, sm: 45, md:50, lg:55, xl: 60}} width={{xs: 40, sm: 45, md:50, lg:55, xl: 60}}>
+                  <SkillIconImageItem 
+                    src={item.url} 
+                    duration={800} 
+                    objectFit='scale-down'
+                    />
+                </Box>                  
                 <Typography 
-                  variant="body2" 
-                  sx={{
-                    fontSize: 10.5, 
-                    fontWeight: 400, 
-                    mt: 1,
-                  }}
-                  color="secondary.light"
-                >{item.name}</Typography>
+                    variant="body2" 
+                    sx={{
+                      mixBlendMode: "difference", 
+                      opacity: .8,
+                      fontSize: 11, 
+                      fontWeight: 500, 
+                      mt: 1.5,
+                    }}
+                  >{item.name}</Typography>
               </Box>
-            </Paper>
+            </Box>
           </Grid>)}
         </Grid>
     </Box>

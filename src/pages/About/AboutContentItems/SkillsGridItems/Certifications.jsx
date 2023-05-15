@@ -6,8 +6,8 @@ const Certifications = () => {
   const { certifications } = useRootRedux();
 
   return (
-    <Box sx={{mb: 8}}>
-      <Box mb={4}>
+    <Box sx={{mb: 5}}>
+      <Box mb={3}>
         <Typography 
           variant="h4" 
           fontSize={{xs:23, sm: 24, md: 25, lg: 26, xl: 28}} 
