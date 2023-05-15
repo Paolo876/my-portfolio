@@ -45,7 +45,7 @@ const ProjectItemPreview = ({ coverImage, images, url, githubUrl, title, name, l
       <Carousel 
         indicators={false}
         navButtonsAlwaysInvisible={true}
-        autoPlay={false}
+        // autoPlay={false}
         stopAutoPlayOnHover={false}
       >
         {imagesList.map((item, index) => 

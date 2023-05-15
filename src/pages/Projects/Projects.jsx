@@ -34,7 +34,24 @@ const MOCK_PROJ_LIST = [
     ],
     url: "https://moby.paolobugarin.com/",
     githubUrl: "https://github.com/Paolo876/moby-social-media-client",
-    images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
+    images: [
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_1.webp?alt=media&token=5b04da84-3fb6-4a64-9696-6888062acd40",
+      name: "moby_1.png"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_2.webp?alt=media&token=fcf0ea56-8abd-4ea5-91bb-3ef31c74e4ca",
+      name: "moby_2.png"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_3.webp?alt=media&token=2f0dbef8-bf61-4782-af68-e0b25d77192f",
+      name: "moby_3.png"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_4.webp?alt=media&token=4ed6a274-b170-47a3-9ccb-49e20ea79a6f",
+      name: "moby_4.png"
+      }, 
+    ],
     coverImage: {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_banner.png?alt=media&token=4f2813bc-7201-4b53-abeb-48a4de04e297",
       name: "moby_banner.png"

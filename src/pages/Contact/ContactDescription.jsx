@@ -9,7 +9,7 @@ const ContactDescription = () => {
     <Stack sx={{py: 5, mx: 2, pr: 6, height: "100%"}} align='left' justifyContent="space-between">
       <Box pr={2}>
         <Box mb={1.5}>
-          <Typography variant="h4" sx={{letterSpacing: 2, textTransform: "initial", fontWeight: 800, fontSize: 40 }}>Let's Talk</Typography>
+          <Typography variant="h4" sx={{letterSpacing: 2, textTransform: "initial", fontWeight: 800, fontSize: 40 }} >Let's Talk</Typography>
           <Box sx={{background: "white", height: "2px", width: "15px", my: 1, opacity: .8}} ></Box>
         </Box>
         <Typography sx={{fontWeight: 300, fontSize: 16, opacity: .95, lineHeight: 1.45, letterSpacing: .35}}>
