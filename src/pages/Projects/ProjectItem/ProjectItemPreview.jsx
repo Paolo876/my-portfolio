@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { Stack, Button, Box } from '@mui/material';
+
 import Image from 'mui-image';
 import Carousel from 'react-material-ui-carousel';
 
@@ -9,10 +10,9 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import "./ProjectItemPreview.scss";
 
-const ProjectItemPreview = ({ coverImage, images, url, githubUrl, title, name, logo, palette }) => {
+const ProjectItemPreview = ({ coverImage, images, url, githubUrl, title, name, logo, palette, isInView }) => {
   const navigate = useNavigate();
   const imagesList = [coverImage, ...images ];
-
 
   return (
   <Box className="project-item-preview">
@@ -45,14 +45,14 @@ const ProjectItemPreview = ({ coverImage, images, url, githubUrl, title, name, l
       <Carousel 
         indicators={false}
         navButtonsAlwaysInvisible={true}
-        // autoPlay={false}
+        autoPlay={isInView}
         stopAutoPlayOnHover={false}
       >
         {imagesList.map((item, index) => 
             <Image 
               src={item.url} 
               fit="scale-down"
-              duration={800}
+              duration={400}
               sx={{filter: "brightness(.95)"}}
               key={index}
             />

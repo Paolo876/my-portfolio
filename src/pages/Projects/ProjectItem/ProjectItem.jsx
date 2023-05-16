@@ -1,10 +1,17 @@
 import { Box, Grid } from '@mui/material'
 import ProjectItemDescription from './ProjectItemDescription'
 import ProjectItemPreview from './ProjectItemPreview'
+import { useInView } from 'react-intersection-observer';
 
 const ProjectItem = ({ item }) => {
+  const { ref, inView, entry } = useInView({
+    rootMargin: "-30% 0px -55% 0px",
+    threshold: 0,
+  });
+  if(inView) console.log(item.title)
+
   return (
-    <Box sx={{position: "relative", pb: {xs: 6, sm: 14, md: 22, lg:25}, px: {md:2}, my: 3, width: "100%"}} id={item.name}>
+    <Box sx={{position: "relative", pb: {xs: 6, sm: 14, md: 22, lg:25}, px: {md:2}, my: 3, width: "100%"}} id={item.name}  ref={ref}>
         <Grid container sx={{width: "100%", justifyContent: "space-between"}}>
           <Grid 
             item xs={12} sm={4.75} md={5} lg={4.75}
@@ -30,6 +37,7 @@ const ProjectItem = ({ item }) => {
               name={item.name}
               logo={item.logo}
               palette={item.palette}
+              isInView={inView}
               />
           </Grid>
         </Grid>
