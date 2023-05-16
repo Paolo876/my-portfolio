@@ -11,7 +11,7 @@ import workicon from "../../../assets/roadmap_icons/work.svg"
 
 
 const baseTextStyles = {
-  fontSize:{ xs: 12, sm: 12, md: 13, lg:14, xl: 15 },
+  fontSize:{ xs: 12, sm: 12, md: 13, lg:14, xl: 14 },
   fontWeight: 300,
   textAlign: "justify", 
   textJustify: "inter-word", 
@@ -63,9 +63,18 @@ const Roadmap = () => {
           <MyTimelineItem dotColor='primary' dotIcon={walkicon}>
             <Box pl={2}>
               <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:22, lg:23, xl:24}}>The Beginning</Typography>
-              <Box sx={{background: "rgba(239,235,229,1)", height: "5px", width: "5px", mr: "auto", mt: .15, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
+              <Box sx={{background: "rgba(239,235,229,1)", height: "5px", width: "5px", mr: "auto", mt: .5, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
             </Box>
-            <Grid container mt={1.5} pl={2}>
+            <Box pl={2} pr={5} mt={1.5}>
+
+              <Typography variant="body1" sx={baseTextStyles}>
+                Before my development journey started, I studied <Box component="span" fontWeight={400}>Bachelor of Science in Architecture</Box> back in Philippines where I learned about the
+                <Box component="span" fontWeight={400}> design methods and strategies</Box> that I continue to incorporate throughout my projects. I started learning coding back in 2019 through an online course called <Box component="span" fontWeight={400}> The Web Development Bootcamp by Colt Steele </Box> 
+                where I learned all the fundamentals. After completing the 47-hour course, it caught my interest and gave me the motivation to enroll back to College in 2020 for a degree in 
+                <Box component="span" fontWeight={400}> Computer Information Systems Major in Software Development and Web Development.</Box>
+              </Typography>
+            </Box>
+            {/* <Grid container mt={1.5} pl={2}>
               <Grid item xs={3.75} pr={6}>
               <Typography variant="body1" sx={baseTextStyles}>
                 Before my development journey started, I studied <Box component="span" fontWeight={400}>Bachelor of Science in Architecture</Box> back in Philippines where I learned about the
@@ -85,7 +94,7 @@ const Roadmap = () => {
                   <Box component="span" fontWeight={400}> Computer Information Systems Major in Software Development and Web Development.</Box>
                 </Typography>
               </Grid>
-            </Grid>
+            </Grid> */}
           </MyTimelineItem>
 
           <MyTimelineItem dotColor='primary' dotIcon={muscleicon}>

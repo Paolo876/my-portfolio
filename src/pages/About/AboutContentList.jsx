@@ -8,8 +8,8 @@ import Bio from './AboutContentItems/Bio'
 const AboutContentList = () => {
   return (
     <Stack sx={{position: "relative"}}>
-      <Roadmap/>
       <Skills/>
+      <Roadmap/>
       {/* <Bio/> */}
     </Stack>
   )
