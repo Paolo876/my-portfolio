@@ -20,7 +20,7 @@ const ProjectItemPreview = ({ coverImage, images, url, githubUrl, title, name, l
         navButtonsAlwaysInvisible={true}
         autoPlay={isInView}
         stopAutoPlayOnHover={true}
-        interval={3000}
+        interval={3200}
       >
         {imagesList.map((item, index) => 
           <Box className="project-item-preview">

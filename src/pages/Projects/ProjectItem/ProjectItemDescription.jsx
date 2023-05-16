@@ -85,7 +85,7 @@ const ProjectItemDescription = ({ title, briefDescription, technologies, feature
           })}
         </Grid>
       </Box>
-      <Box mt={4}>
+      <Box mt={{xs: 3, sm: 6}}>
         <Button 
           variant="outlined" 
           size="small" 
