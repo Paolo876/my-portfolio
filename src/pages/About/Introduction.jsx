@@ -31,7 +31,7 @@ const Introduction = () => {
         mx: "auto",
       }}
     >      
-      <Grid item xl={5}>
+      <Grid item xl={5.5}>
         <Box>
           <Typography 
             variant="h1" 
@@ -46,7 +46,7 @@ const Introduction = () => {
           </Typography>
           <Box sx={{background: "rgba(239,235,229,1)", height: {xs: 2, sm: 8, md: 10}, width: {xs: 12, sm: 8, md: 10}, mr: "auto", mt: {xs: 1.25, sm: 1.5, md:3}, ml: .2, mixBlendMode: "difference", opacity: .5}}></Box>
         </Box>
-        <Box mt={15}>
+        <Box mt={10}>
           <Typography variant="body1" sx={baseTextStyles}>          
             I am a <Box sx={boxTextStyles} component="span">Web Developer </Box> 
             based in <Box sx={boxTextStyles} component="span">Los Angeles, California. </Box>
@@ -55,18 +55,18 @@ const Introduction = () => {
             <Box sx={boxTextStyles} component="span"> NodeJS</Box> - <Box sx={boxTextStyles} component="span">ExpressJS </Box>
             for the Server-Side along with related libraries and frameworks.
           </Typography>
-          <Typography variant="body1" sx={baseTextStyles} mt={1}>          
+          <Typography variant="body1" sx={baseTextStyles} mt={1}>         
             I am diligent and eager to learn new technologies that will help me expand my skillset and strengthen my knowledge. I make sure that there is not a 
             day that I don't make any progress no matter how small.
           </Typography>
-          <Typography variant="body1" sx={{...baseTextStyles, fontWeight: 400, opacity: 1}} mt={1.5}>          
+          <Typography variant="body1" sx={{...baseTextStyles, fontWeight: 400, opacity: 1}} mt={1.5}>
+            I am ready to face and overcome the challenges that I will encounter. 
             I may lack enough professional experience but I am confident that I have the necessary knowledge and skills to take my path onto the next level.
           </Typography>
-
         </Box>
       </Grid>
 
-      <Grid item xs={12} lg={4} xl={7} sx={{display: "flex", justifyContent: "right"}}>
+      <Grid item xs={12} lg={4} xl={6.5} sx={{display: "flex", justifyContent: "right"}}>
         <Box 
           sx={{
             border: 3, 
