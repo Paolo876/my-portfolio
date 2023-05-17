@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, Box, Grid, Paper } from '@mui/material'
+import { Typography, Box, Grid } from '@mui/material'
 import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 import useRootRedux from "../../../../hooks/useRootRedux"
 
@@ -38,10 +38,12 @@ const OtherSkills = () => {
                     variant="body2" 
                     sx={{
                       mixBlendMode: "difference", 
-                      opacity: .8,
-                      fontSize: 11, 
-                      fontWeight: 500, 
+                      opacity: .6,
+                      fontSize: 12, 
+                      fontWeight: 400, 
                       mt: 1.5,
+                      textTransform: "uppercase",
+                      letterSpacing: 1.5,
                     }}
                   >{item.name}</Typography>
               </Box>

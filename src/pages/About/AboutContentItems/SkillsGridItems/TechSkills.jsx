@@ -13,15 +13,13 @@ const TechSkills = ({ skills, title }) => {
         lineHeight={{lg:1.6, xl:1.2}} 
         color="primary.main">{title}</Typography>
       <Box sx={{background: "rgba(239,235,229,1)", height: 8, width: 8, mr: "auto", ml: .2, mt: {xs: 1.5, md:1.75}, mixBlendMode: "difference", opacity: .7}}></Box>
-      <Grid container>
+      <Grid container mt={2.5}>
           {skills.map(item => 
             <Grid item xs={1.35} key={item.name} align="center">
               <Box 
                 sx={{
-                  py: 2.75, 
                   my: 1.5, 
                   userSelect: "none",
-                  // opacity: .75,
                 }} 
               >
                 <Box>
@@ -37,10 +35,12 @@ const TechSkills = ({ skills, title }) => {
                     variant="body2" 
                     sx={{
                       mixBlendMode: "difference", 
-                      opacity: .8,
-                      fontSize: 15, 
-                      fontWeight: 500, 
-                      mt: 3,
+                      opacity: .6,
+                      fontSize: 12, 
+                      fontWeight: 400, 
+                      mt: 1.75,
+                      textTransform: "uppercase",
+                      letterSpacing: 2,
                     }}
                   >{item.name}</Typography>
                 </Box>

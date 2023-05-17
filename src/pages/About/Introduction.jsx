@@ -9,7 +9,7 @@ const boxTextStyles = {
 
 
 const baseTextStyles = {
-  fontSize:{xs: 12, sm: 12, md: 13, lg:14, xl: 14.5},
+  fontSize:{xs: 12, sm: 12, md: 13, lg:14, xl: 15},
   fontWeight: 300,
   textAlign: "justify", 
   textJustify: "inter-word", 
