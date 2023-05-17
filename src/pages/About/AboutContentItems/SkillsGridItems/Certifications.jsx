@@ -21,7 +21,7 @@ const Certifications = () => {
           <Button sx={{width: "100%", height: "100%", textAlign: "left", opacity: .8}} variant="outlined" color="inherit" href={item.url} target="_blank">
             <Box 
               sx={{
-                p: 2, 
+                p: 1.25, 
                 width: "100%",
                 height: "100%"
               }} 
@@ -31,21 +31,22 @@ const Certifications = () => {
                 variant="h6" 
                 fontWeight={800} 
                 letterSpacing={1} 
-                // textTransform="none" 
-                fontSize={{xs:16, sm: 17, md: 18, lg: 19, xl: 19}} 
-                >{item.name}</Typography>
+                fontSize={{xs:14, sm: 15, md: 16, lg: 17, xl: 17.5}} 
+              >
+                {item.name}
+              </Typography>
               <Typography 
-              variant="body1" 
-              fontWeight={200} 
-              fontSize={{xs:12, sm: 13, md: 14, lg: 15, xl: 15}} 
-
-              letterSpacing={2} 
-              textTransform="none" 
-              mt={1}
-              sx={{opacity: .8}}
-              >{item.author}</Typography>
+                variant="body1" 
+                fontWeight={200} 
+                fontSize={{xs:11, sm: 12, md: 13, lg: 14, xl: 14}} 
+                letterSpacing={2} 
+                textTransform="none" 
+                mt={1}
+                sx={{opacity: .8}}
+              >
+                {item.author}
+              </Typography>
             </Box>
-
           </Button>
         </Grid>)}
       </Grid>
