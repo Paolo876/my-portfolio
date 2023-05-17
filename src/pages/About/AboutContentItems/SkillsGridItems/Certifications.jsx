@@ -17,7 +17,7 @@ const Certifications = () => {
         <Box sx={{background: "rgba(239,235,229,1)", height: 8, width: 8, mr: "auto", ml: .2, mt: {xs: 1.5, md:1.75}, mixBlendMode: "difference", opacity: .7}}></Box>
       </Box>
       <Grid container>
-        {certifications.map(item => <Grid item key={item.name} xs={5} p={2}>
+        {certifications.map(item => <Grid item key={item.name} xs={4} p={2}>
           <Button sx={{width: "100%", height: "100%", textAlign: "left", opacity: .8}} variant="outlined" color="inherit" href={item.url} target="_blank">
             <Box 
               sx={{
@@ -31,8 +31,8 @@ const Certifications = () => {
                 variant="h6" 
                 fontWeight={800} 
                 letterSpacing={1} 
-                textTransform="none" 
-                fontSize={{xs:16, sm: 17, md: 18, lg: 19, xl: 20}} 
+                // textTransform="none" 
+                fontSize={{xs:16, sm: 17, md: 18, lg: 19, xl: 19}} 
                 >{item.name}</Typography>
               <Typography 
               variant="body1" 

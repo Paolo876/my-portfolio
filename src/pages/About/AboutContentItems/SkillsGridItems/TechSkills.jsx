@@ -5,10 +5,10 @@ import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 
 const TechSkills = ({ skills, title }) => {
   return (
-    <Box sx={{mb: 12}}>
+    <Box sx={{mb: 8}}>
       <Typography 
         variant="h4" 
-        fontSize={{xs:23, sm: 24, md: 25, lg: 26, xl: 28}} 
+        fontSize={{xs:23, sm: 24, md: 25, lg: 26, xl: 26}} 
         letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:2.5}} 
         lineHeight={{lg:1.6, xl:1.2}} 
         color="primary.main">{title}</Typography>
