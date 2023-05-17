@@ -57,8 +57,8 @@ const Introduction = () => {
             for the Server-Side along with related libraries and frameworks.
           </Typography>
 
-          <Typography variant="body1" sx={baseTextStyles} mt={2}>          
-            I always try to incorporate the minimalistic approach. The lesser the pieces the more intuitive and easier to understand. Elegance through minimalism.
+          <Typography variant="body1" sx={baseTextStyles} mt={2}>
+            I always try to incorporate the minimalistic approach. The lesser the pieces the more intuitive and easier to understand. Elegance through simplicity.
           </Typography>
         </Box>
       </Grid>

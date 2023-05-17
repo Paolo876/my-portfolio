@@ -7,7 +7,7 @@ const OtherSkills = () => {
   const { otherSkillsList } = useRootRedux();
 
   return (
-    <Box sx={{mb: 8}}>
+    <Box sx={{mb: 4}}>
       <Typography 
         variant="h4" 
         fontSize={{xs:18, sm: 19, md: 20, lg: 21, xl: 22}} 
