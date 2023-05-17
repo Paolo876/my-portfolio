@@ -112,7 +112,7 @@ const Roadmap = () => {
             <Box pl={2} pr={5} mt={1.5} mb={8}>
               <Typography variant="body1" sx={baseTextStyles}>
                 Present time, I still continue to learn more techologies online, further refine and improve my existing projects, and conceptualize new project ideas.
-                I may lack enough work or professional experience but I am determined
+                I may lack enough work or professional experience but I am determined and always remain consistent with my progress hoping that one day the hard work will pay off.
               </Typography>
             </Box>
           </MyTimelineItem>

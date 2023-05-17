@@ -25,12 +25,10 @@ const ProjectItemDescription = ({ title, briefDescription, technologies, feature
           variant="h3" 
           align="left" 
           fontWeight={800} 
-          fontSize={{ xs:24, sm: 24, md: 30, lg: 30, xl: 35 }} 
+          fontSize={{ xs:24, sm: 24, md: 30, lg: 30, xl: 32 }} 
           letterSpacing={{xs:1, sm:1.25, md: 1.25, lg: 1.5, xl:2}} 
           lineHeight={{xl:1}} 
           sx={{mixBlendMode: "difference"}}
-
-          // color="primary.main"
         >
           {title}
         </Typography>
@@ -39,7 +37,7 @@ const ProjectItemDescription = ({ title, briefDescription, technologies, feature
         <Box sx={{pl: .5, pr: 1, mt: {xs: 1.5, lg: 2, xl:3}}}>
           <Typography 
             variant="body1" 
-            fontSize={{xs: 12, sm: 12, md: 13, lg:13.5, xl: 15}} 
+            fontSize={{xs: 12, sm: 12, md: 13, lg:13.5, xl: 14}} 
             fontWeight={200} 
             sx={{mixBlendMode: "difference", opacity: .9}}
           >
@@ -51,10 +49,9 @@ const ProjectItemDescription = ({ title, briefDescription, technologies, feature
       <Box sx={{mt:"auto", pl: .5, display: {xs: "none", md: "initial"}}}>
         <Typography              
           variant="h6" 
-          // color="secondary.light"
           sx={{
             fontWeight: 700,
-            fontSize:{ md: 17, lg:16, xl: 18 },
+            fontSize:{ md: 17, lg:16, xl: 17 },
             textTransform: "none",
             mixBlendMode: "difference",
             letterSpacing: .5,

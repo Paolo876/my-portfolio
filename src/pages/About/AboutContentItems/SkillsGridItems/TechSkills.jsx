@@ -18,12 +18,12 @@ const TechSkills = ({ skills, title }) => {
             <Grid item xs={1.35} key={item.name} align="center">
               <Box 
                 sx={{
-                  my: 1.5, 
+                  my: 1.75, 
                   userSelect: "none",
                 }} 
               >
                 <Box>
-                  <Box height={{xs: 45, sm: 52, md:55, lg:70, xl: 75}} width={{xs: 45, sm: 52, md:55, lg:70, xl: 75}}>
+                  <Box height={{xs: 45, sm: 52, md:55, lg:70, xl: 70}} width={{xs: 45, sm: 52, md:55, lg:70, xl: 70}}>
                     <SkillIconImageItem 
                       src={item.monoUrl} 
                       duration={800} 
@@ -36,9 +36,9 @@ const TechSkills = ({ skills, title }) => {
                     sx={{
                       mixBlendMode: "difference", 
                       opacity: .6,
-                      fontSize: 12, 
+                      fontSize: 11, 
                       fontWeight: 400, 
-                      mt: 1.75,
+                      mt: 1.5,
                       textTransform: "uppercase",
                       letterSpacing: 2,
                     }}

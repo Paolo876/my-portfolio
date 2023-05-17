@@ -56,10 +56,14 @@ const Introduction = () => {
             <Box sx={boxTextStyles} component="span"> NodeJS</Box> - <Box sx={boxTextStyles} component="span">ExpressJS </Box>
             for the Server-Side along with related libraries and frameworks.
           </Typography>
-
-          <Typography variant="body1" sx={baseTextStyles} mt={2}>
-            I always try to incorporate the minimalistic approach. The lesser the pieces the more intuitive and easier to understand. Elegance through simplicity.
+          <Typography variant="body1" sx={baseTextStyles} mt={2}>          
+            I am diligent and always eager to learn new technologies that will help me expand my skillset and strengthen my knowledge. 
           </Typography>
+
+          {/* <Typography variant="body1" sx={baseTextStyles} mt={2}>
+            I believe that an effective design should be lean and straightforward that is why I always try to incorporate a minimalist approach. 
+            The lesser the pieces the more intuitive and easier to understand. Elegance through simplicity.
+          </Typography> */}
         </Box>
       </Grid>
 
