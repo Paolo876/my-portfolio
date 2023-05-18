@@ -7,14 +7,14 @@ import SkillIconImageItem from '../../../components/SkillIconImageItem'
 
 const boxStyles = {
   width: "fit-content",
-  p: {sm: 1.5, md: 1.5, lg: 2, xl:2.5},
+  pb: {sm: 1.5, md: 1.5, lg: 2, xl:2.5},
   height: "100%",
   userSelect: "none",
   opacity: .9,  
   background: "none",
-  "&:hover": {
-    background: "rgba(150,150,150,0.1)"
-  }
+  // "&:hover": {
+  //   background: "rgba(150,150,150,0.1)"
+  // }
 }
 
 
