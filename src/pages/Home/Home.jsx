@@ -10,6 +10,7 @@ import useRootRedux from '../../hooks/useRootRedux'
 import { Stack } from '@mui/material'
 import Process from './Process/Process'
 import SubIntroduction from './SubIntroduction'
+import Works from './Works/Works'
 
 const Home = () => {
   const { skillsList, setData } = useRootRedux();
@@ -31,6 +32,7 @@ const Home = () => {
         />
         <Introduction/>
         <SubIntroduction/>
+        <Works/>
         <Process/>
         <Skills/>
         <Purpose/>
