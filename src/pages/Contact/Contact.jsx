@@ -14,7 +14,7 @@ const Contact = () => {
         keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
       />
       <Stack sx={{height: "100%"}}>
-        <Box                
+        {/* <Box                
           sx={{
             mixBlendMode: "difference", 
             mt: 3
@@ -30,8 +30,8 @@ const Contact = () => {
             }}
             >Contact Me</Typography>
             <Box sx={{background: "white", height: "4px", width: "25px", my: 2.5, mx: "auto", opacity: .85}}></Box>
-          </Box>
-        <Box flex={1} sx={{my: 2}}>
+          </Box> */}
+        <Box sx={{my: "auto"}}>
           <ContactContainer/>
         </Box>
         <Footer/>
