@@ -8,7 +8,7 @@ const ContactForm = () => {
     e.preventDefault();
   }
   return (
-    <Stack sx={{py: 4}}>
+    <Stack sx={{py: 5}} align="center">
       <Box sx={{py: 3, px: 3, border: 3, minHeight: {md: "60vh"}, display: "flex", flexDirection: "column"}} component="form" autoComplete="off" onSubmit={handleSubmit}>
         <Box sx={{display: "flex", flexDirection: "row", gap: 3, my: 1.5}}>
           <TextField id="firstName" label="First Name" variant="standard" fullWidth type="text"/>

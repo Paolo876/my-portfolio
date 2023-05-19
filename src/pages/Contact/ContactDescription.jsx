@@ -38,8 +38,8 @@ const ContactDescription = () => {
           </Typography>
         </Box>
       </Box>
-      <Box sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: 1, mb: 8}}>
-        <Box sx={{width: 60, height: 60, border: 1,}}>
+      <Box sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: 1, py: 6}}>
+        <Box sx={{width: {xs: 35, sm: 40, md: 50, lg:60}, height: {xs: 35, sm: 40, md: 50, lg:60}, border: 1,}}>
         </Box>
         <Box sx={{opacity: .9}}>
           <Typography 
@@ -51,8 +51,7 @@ const ContactDescription = () => {
           <Typography variant="h5" sx={{letterSpacing: 1, textTransform: "none", opacity: .75, fontSize: {xs:12, sm: 13, md: 14, lg: 15}, mt: .5, fontWeight: 200}}>Los Angeles, CA <PlaceIcon sx={{fontSize: "inherit"}} color="primary"/></Typography>
         </Box>
       </Box>
-      {/* <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 1, justifyContent: "space-between"}}> */}
-      <Grid container sx={{justifyContent: "space-between", gap: 2}}>
+      <Grid container sx={{justifyContent: "space-between", }}>
         <Grid item>
           <Typography variant="h5" sx={{letterSpacing: 1, textTransform: "none", fontWeight: 300, opacity: .75, fontSize: {xs:12, sm: 12, md: 13, lg: 14}}}>Email</Typography>
           <Box sx={{background: "white", height: "1px", width: "100%", my: .1, opacity: .15}}></Box>
