@@ -14,7 +14,6 @@ const Introduction = () => {
           letterSpacing={{xs:2, sm:2, md: 2, lg: 2, xl:3.5}} 
           lineHeight={{xl:1}} 
           sx={{opacity: .9}}
-          
           color="primary.main"
         >
           My<br/>Projects

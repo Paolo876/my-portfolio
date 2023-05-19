@@ -3,22 +3,40 @@ import { Box, Stack, Typography, ButtonBase } from '@mui/material'
 import PlaceIcon from '@mui/icons-material/Place';
 import SocialLinks from '../../components/SocialLinks';
 
+const textStyles = {
+  fontSize:{ xs: 12, sm: 12, md: 13, lg:14, xl: 15.5 },
+  fontWeight: 300,
+  textAlign: "justify", 
+  textJustify: "inter-word", 
+  opacity: .9,
+}
 
 const ContactDescription = () => {
   return (
     <Stack sx={{py: 5, mx: 2, pr: 6, height: "100%"}} align='left' justifyContent="space-between">
       <Box pr={2}>
-        <Box mb={1.5}>
-          <Typography variant="h4" sx={{letterSpacing: 2, textTransform: "initial", fontWeight: 800, fontSize: 40 }} >Let's Talk</Typography>
-          <Box sx={{background: "white", height: "2px", width: "15px", my: 1, opacity: .8}} ></Box>
+        <Box mb={3}>
+          <Typography 
+            variant="h4" 
+            fontSize={{xs:34, sm: 36, md: 38, lg: 40}} 
+            sx={{opacity: .9}}
+            color="primary.main"
+            letterSpacing={{xs:2, sm:2, md:2, lg:2}} 
+            textTransform="none"
+          >
+            Contact Me
+          </Typography>
+          <Box sx={{background: "rgba(239,235,229,1)", height: {xs: 2, sm: 8, md: 8}, width: {xs: 12, sm: 8, md: 8}, mr: "auto", mt: .75, ml: .5, mixBlendMode: "difference", opacity: .5}}></Box>
         </Box>
-        <Typography sx={{fontWeight: 300, fontSize: 16, opacity: .95, lineHeight: 1.45, letterSpacing: .35}}>
-          Let me show you my capabilities and how I can be a great part of your company. 
-          Please fill out the form or use my contact informations provided to get in touch with me.
-        </Typography>
-        <Typography sx={{fontWeight: 300, fontSize: 16, opacity: .95, lineHeight: 1.45, letterSpacing: .35, mt: 1}}>
-          I am excited to take a leap forward and further hone my knowledge and skills with the right company.
-        </Typography>
+        <Box ml={.5}>
+          <Typography sx={textStyles}>
+            Let me show you my capabilities and how I can be a great part of your company. 
+            Please fill out the form or use my contact informations provided to get in touch with me.
+          </Typography>
+          <Typography sx={textStyles} mt={1.5}>
+            I am excited to take a leap forward and further hone my knowledge and skills with the right company.
+          </Typography>
+        </Box>
       </Box>
       <Box sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: 1, mb: 8}}>
         <Box sx={{width: 60, height: 60, border: 1,}}>
