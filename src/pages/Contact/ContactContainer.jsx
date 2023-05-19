@@ -7,7 +7,7 @@ import ContactForm from './ContactForm'
 const ContactContainer = () => {
   return (
     <Box sx={{position: "relative", my: "auto"}}>
-      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "white", mixBlendMode: "overlay", opacity: .75, zIndex: -1}}></Box>
+      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(255,255,255,.75)", mixBlendMode: "overlay", opacity: .75, zIndex: -1}}></Box>
       <Container maxWidth="xl">
         <Grid container align="center">
           <Grid item xs={6.5}>

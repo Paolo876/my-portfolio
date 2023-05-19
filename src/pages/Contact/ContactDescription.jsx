@@ -18,7 +18,7 @@ const ContactDescription = () => {
         <Box mb={3}>
           <Typography 
             variant="h4" 
-            fontSize={{xs:34, sm: 36, md: 38, lg: 40}} 
+            fontSize={{xs:36, sm: 38, md: 40, lg: 42}} 
             sx={{opacity: .9}}
             color="primary.main"
             letterSpacing={{xs:2, sm:2, md:2, lg:2}} 
@@ -42,8 +42,13 @@ const ContactDescription = () => {
         <Box sx={{width: 60, height: 60, border: 1,}}>
         </Box>
         <Box sx={{opacity: .9}}>
-          <Typography variant="h5" sx={{letterSpacing: 1, textTransform: "none", fontSize: 22 }}>Paolo Bugarin</Typography>
-          <Typography variant="body2" sx={{letterSpacing: .25, textTransform: "none", opacity: .8, fontSize: 16, mt: .5, fontWeight: 400}}>Los Angeles, CA <PlaceIcon sx={{fontSize: "inherit"}}/></Typography>
+          <Typography 
+            variant="h5" 
+            sx={{letterSpacing: 1.5, textTransform: "none", fontSize: {xs:18, sm: 19, md: 20, lg: 22}, fontWeight: 800}}
+          >
+            Paolo Bugarin
+          </Typography>
+          <Typography variant="h5" sx={{letterSpacing: 1, textTransform: "none", opacity: .75, fontSize: {xs:12, sm: 13, md: 14, lg: 15}, mt: .5, fontWeight: 200}}>Los Angeles, CA <PlaceIcon sx={{fontSize: "inherit"}} color="primary"/></Typography>
         </Box>
       </Box>
       <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 1, justifyContent: "space-between", opacity: .75 }}>
