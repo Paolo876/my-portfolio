@@ -27,20 +27,20 @@ const ContactForm = () => {
   }
   return (
     <Stack sx={{py: {xs: 1, sm:3,md:5}, mb: {xs: 3, sm: 0}}} align="center">
-      <Box sx={{p: {xs: 2, sm:2.5, md:3}, border: 3, minHeight: {md: "60vh"}, display: "flex", flexDirection: "column"}} component="form" autoComplete="off" onSubmit={handleSubmit}>
-        <Box sx={{display: "flex", flexDirection: {xs: "column", sm: "row"}, gap: {xs: 0, sm: 3}, my: {xs: .5, md: 1.5}}}>
+      <Box sx={{p: {xs: 1.5, sm:2.5, md:3}, border: 3, minHeight: {md: "60vh"}, display: "flex", flexDirection: "column"}} component="form" autoComplete="off" onSubmit={handleSubmit}>
+        <Box sx={{display: "flex", flexDirection: {xs: "column", sm: "row"}, gap: {xs: 0, sm: 3}, my: {xs: 1, md: 1.5}}}>
           <TextField id="firstName" label="First Name" variant="standard" fullWidth type="text" InputProps={inputStyles} InputLabelProps={inputLabelStyles}/>
           <TextField id="lastName" label="Last Name" variant="standard" fullWidth type="text" InputProps={inputStyles} InputLabelProps={inputLabelStyles}/>
         </Box>
-        <TextField id="phone" label="Contact Number" variant="standard" fullWidth type="phone" sx={{my: {xs: .5, md: 1.5}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}/>
-        <TextField id="email" label="Email Address" variant="standard" fullWidth type="email" sx={{my: {xs: .5, md: 1.5}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}/>
+        <TextField id="phone" label="Contact Number" variant="standard" fullWidth type="phone" sx={{my: {xs: 1, md: 1.5}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}/>
+        <TextField id="email" label="Email Address" variant="standard" fullWidth type="email" sx={{my: {xs: 1, md: 1.5}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}/>
         <TextField
           id="message"
           label="Message"
           multiline
           fullWidth
           rows={6}
-          sx={{my:2}}
+          sx={{my:{xs: 3, md:4}}}
           variant="outlined"
           InputProps={inputStyles} InputLabelProps={inputLabelStyles}
         />
@@ -48,13 +48,13 @@ const ContactForm = () => {
           <Button 
             type="submit" 
             variant="contained" 
-            size="large" 
+            // size="large" 
             sx={{
-              my:{xs: 3, md: 5}, 
+              my:{xs: 3, md: 5, lg: 8}, 
               px: 5, 
               fontWeight: 500, 
-              letterSpacing: 2.5, 
-              fontSize: 16
+              letterSpacing: 1.75, 
+              fontSize: {xs: 11, sm: 12, md: 14, lg: 15, xl: 16}
             }}
           >
             Submit

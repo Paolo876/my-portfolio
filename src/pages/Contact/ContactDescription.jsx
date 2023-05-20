@@ -8,7 +8,7 @@ const textStyles = {
   fontWeight: 300,
   textAlign: "justify", 
   textJustify: "inter-word", 
-  opacity: .9,
+  opacity: .7,
 }
 
 const ContactDescription = () => {
@@ -52,21 +52,21 @@ const ContactDescription = () => {
         </Box>
       </Box>
       <Grid container sx={{justifyContent: "space-between", }}>
-        <Grid item sm={"auto"} mb={{xs: 3, sm: 0}}>
+        <Grid item sm={"auto"} mt={3}>
           <Typography variant="h5" sx={{letterSpacing: 1, textTransform: "none", fontWeight: 300, opacity: .75, fontSize: {xs:12, sm: 12, md: 13, lg: 14}}}>Email</Typography>
           <Box sx={{background: "white", height: "1px", width: "100%", my: .1, opacity: .15, display: {xs: "none", sm: "initial"}}}></Box>
           <ButtonBase target="_blank" href="mailto: paolopaolobugarin@gmail.com" >
             <Typography variant="h6" sx={{letterSpacing: .5, textTransform: "none", opacity: 1, fontWeight: 600, fontSize: {xs:13, sm: 14, md: 15, lg: 15, xl: 16}}} color="primary">paolopaolobugarin@gmail.com</Typography>
           </ButtonBase>
         </Grid>
-        <Grid item sm={"auto"} mb={{xs: 3, sm: 0}}>
+        <Grid item sm={"auto"} mt={3}>
           <Typography variant="h5" sx={{letterSpacing: 1, textTransform: "none", fontWeight: 300, opacity: .75, fontSize: {xs:12, sm: 12, md: 13, lg: 14}}}>Phone</Typography>
           <Box sx={{background: "white", height: "1px", width: "100%", my: .1, opacity: .15, display: {xs: "none", sm: "initial"}}}></Box>
           <ButtonBase href="tel:3234817852">
             <Typography variant="body1" sx={{letterSpacing: .5, textTransform: "none", opacity: 1, fontWeight: 500, fontSize: {xs:13, sm: 14, md: 15, lg: 15, xl: 16}}} color="primary">+1 (323) 481 7852</Typography>
           </ButtonBase>
         </Grid>
-        <Grid item sm={"auto"} mb={{xs: 3, sm: 0}}>
+        <Grid item sm={"auto"} mt={3}>
           <Typography variant="h5" sx={{letterSpacing: 1, textTransform: "none", fontWeight: 300, opacity: .75, fontSize: {xs:12, sm: 12, md: 13, lg: 14}}}>Social</Typography>
           <Box sx={{background: "white", height: "1px", width: "100%", my: .1, opacity: .15, display: {xs: "none", sm: "initial"}}}></Box>
           <SocialLinks mixBlendMode='none' buttonSize='small' iconSize={{ xs: 18, sm: 18, md: 19, lg: 19 }} gap={2.5}/>
