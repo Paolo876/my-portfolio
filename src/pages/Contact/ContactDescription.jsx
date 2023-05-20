@@ -29,7 +29,7 @@ const ContactDescription = () => {
           <Box sx={{background: "rgba(239,235,229,1)", height: {xs: 2, sm: 8, md: 8}, width: {xs: 12, sm: 8, md: 8}, mr: "auto", mt: .75, ml: .5, mixBlendMode: "difference", opacity: .5}}></Box>
         </Box>
         <Box ml={.5}>
-          <Typography sx={textStyles}>
+          <Typography sx={{...textStyles, display: {xs: "none", sm: "initial"}}}>
             Let me show you my capabilities and how I can be a great part of your company. 
             Please fill out the form or use my contact informations provided to get in touch with me.
           </Typography>
@@ -38,7 +38,7 @@ const ContactDescription = () => {
           </Typography>
         </Box>
       </Box>
-      <Box sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: 1, py: {xs: 2, sm:6}}}>
+      <Box sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: 1, py: {xs: 3, sm:6}}}>
         <Box sx={{width: {xs: 35, sm: 40, md: 50, lg:60}, height: {xs: 35, sm: 40, md: 50, lg:60}, border: 1,}}>
         </Box>
         <Box sx={{opacity: .9}}>
@@ -56,14 +56,14 @@ const ContactDescription = () => {
           <Typography variant="h5" sx={{letterSpacing: 1, textTransform: "none", fontWeight: 300, opacity: .75, fontSize: {xs:12, sm: 12, md: 13, lg: 14}}}>Email</Typography>
           <Box sx={{background: "white", height: "1px", width: "100%", my: .1, opacity: .15, display: {xs: "none", sm: "initial"}}}></Box>
           <ButtonBase target="_blank" href="mailto: paolopaolobugarin@gmail.com" >
-            <Typography variant="h6" sx={{letterSpacing: .5, textTransform: "none", opacity: 1, fontWeight: 600, fontSize: {xs:14, sm: 14, md: 15, lg: 15, xl: 16}}} color="primary">paolopaolobugarin@gmail.com</Typography>
+            <Typography variant="h6" sx={{letterSpacing: .5, textTransform: "none", opacity: 1, fontWeight: 600, fontSize: {xs:13, sm: 14, md: 15, lg: 15, xl: 16}}} color="primary">paolopaolobugarin@gmail.com</Typography>
           </ButtonBase>
         </Grid>
         <Grid item sm={"auto"} mb={{xs: 3, sm: 0}}>
           <Typography variant="h5" sx={{letterSpacing: 1, textTransform: "none", fontWeight: 300, opacity: .75, fontSize: {xs:12, sm: 12, md: 13, lg: 14}}}>Phone</Typography>
           <Box sx={{background: "white", height: "1px", width: "100%", my: .1, opacity: .15, display: {xs: "none", sm: "initial"}}}></Box>
           <ButtonBase href="tel:3234817852">
-            <Typography variant="body1" sx={{letterSpacing: .5, textTransform: "none", opacity: 1, fontWeight: 500, fontSize: {xs:14, sm: 14, md: 15, lg: 15, xl: 16}}} color="primary">+1 (323) 481 7852</Typography>
+            <Typography variant="body1" sx={{letterSpacing: .5, textTransform: "none", opacity: 1, fontWeight: 500, fontSize: {xs:13, sm: 14, md: 15, lg: 15, xl: 16}}} color="primary">+1 (323) 481 7852</Typography>
           </ButtonBase>
         </Grid>
         <Grid item sm={"auto"} mb={{xs: 3, sm: 0}}>
