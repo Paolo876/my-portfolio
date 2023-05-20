@@ -48,10 +48,9 @@ const ContactForm = () => {
           <Button 
             type="submit" 
             variant="contained" 
-            // size="large" 
             sx={{
               my:{xs: 3, md: 5, lg: 8}, 
-              px: 5, 
+              px: {xs:3, sm:4, md:5}, 
               fontWeight: 500, 
               letterSpacing: 1.75, 
               fontSize: {xs: 11, sm: 12, md: 14, lg: 15, xl: 16}
