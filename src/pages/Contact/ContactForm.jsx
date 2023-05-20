@@ -1,6 +1,20 @@
 import React from 'react'
 import { Box, Button, Stack, TextField } from '@mui/material'
 
+const inputStyles = {
+  sx: {
+    fontSize: 12,
+    "&.MuiTextField-root": {
+      background: "red"
+  
+    }
+  }
+}
+
+const inputLabelStyles = {
+  sx: {fontSize: 16}
+}
+
 const ContactForm = () => {
 
 
@@ -10,8 +24,8 @@ const ContactForm = () => {
   return (
     <Stack sx={{py: 5}} align="center">
       <Box sx={{py: 3, px: 3, border: 3, minHeight: {md: "60vh"}, display: "flex", flexDirection: "column"}} component="form" autoComplete="off" onSubmit={handleSubmit}>
-        <Box sx={{display: "flex", flexDirection: "row", gap: 3, my: 1.5}}>
-          <TextField id="firstName" label="First Name" variant="standard" fullWidth type="text"/>
+        <Box sx={{display: "flex", flexDirection: {xs: "column", sm: "row"}, gap: 3, my: 1.5}}>
+          <TextField id="firstName" label="First Name" variant="standard" fullWidth type="text" InputProps={inputStyles} InputLabelProps={inputLabelStyles}/>
           <TextField id="lastName" label="Last Name" variant="standard" fullWidth type="text"/>
         </Box>
         <TextField id="phone" label="Contact Number" variant="standard" fullWidth type="phone" sx={{my:1.5}}/>
