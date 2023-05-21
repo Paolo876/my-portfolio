@@ -48,20 +48,16 @@ const Introduction = () => {
         </Box>
         <Box mt={10}>
           <Typography variant="body1" sx={baseTextStyles}>          
-            I am a <Box sx={boxTextStyles} component="span">Web Developer </Box> 
+            I am a <Box sx={boxTextStyles} component="span"> Full Stack Web Developer </Box> 
             based in <Box sx={boxTextStyles} component="span">Los Angeles, California. </Box>
-            Most of my projects are built using <Box sx={boxTextStyles} component="span">ReactJS </Box> 
-            or <Box sx={boxTextStyles} component="span">NextJS</Box> for the Client-Side, and 
-            <Box sx={boxTextStyles} component="span"> NodeJS</Box> - <Box sx={boxTextStyles} component="span">ExpressJS </Box>
-            for the Server-Side along with related libraries and frameworks.
           </Typography>
           <Typography variant="body1" sx={baseTextStyles} mt={1}>         
-            I am diligent and eager to learn new technologies that will help me expand my skillset and strengthen my knowledge. I make sure that there is not a 
-            day that I don't make any progress no matter how small.
+            I am diligent and eager to face new challenges and learn new technologies that will help me expand my skillset and strengthen my knowledge. 
+            {/* I make sure that there is not a day that I don't make any progress no matter how small. */}
           </Typography>
           <Typography variant="body1" sx={{...baseTextStyles, fontWeight: 400, opacity: 1}} mt={1.5}>
-            I am ready to face and overcome the challenges that I will encounter. 
-            I may lack enough professional experience but I am confident that I have the necessary knowledge and skills to take my path onto the next level.
+            I am ready to take my skills to the next level. 
+            I may lack enough professional experience but I am confident that I have the necessary knowledge and skills to show my capabilities.
           </Typography>
         </Box>
       </Grid>
