@@ -49,11 +49,11 @@ const Introduction = () => {
         <Box mt={10}>
           <Typography variant="body1" sx={baseTextStyles}>          
             I am a <Box sx={boxTextStyles} component="span"> Full Stack Web Developer </Box> 
-            based in <Box sx={boxTextStyles} component="span">Los Angeles, California. </Box>
+            based in <Box sx={boxTextStyles} component="span">Los Angeles, California. </Box> I have been coding since 2019 and went back to college in 2020 for a degree in
+            <Box sx={boxTextStyles} component="span"> Computer Information Systems </Box> major in Web Development and Software Development.
           </Typography>
           <Typography variant="body1" sx={baseTextStyles} mt={1}>         
-            I am diligent and eager to face new challenges and learn new technologies that will help me expand my skillset and strengthen my knowledge. 
-            {/* I make sure that there is not a day that I don't make any progress no matter how small. */}
+            I am eager to face new challenges and learn new technologies that will help me expand my skillset and strengthen my knowledge. 
           </Typography>
           <Typography variant="body1" sx={{...baseTextStyles, fontWeight: 400, opacity: 1}} mt={1.5}>
             I am ready to take my skills to the next level. 
