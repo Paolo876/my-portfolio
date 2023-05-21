@@ -49,7 +49,7 @@ const ContactForm = () => {
             type="submit" 
             variant="contained" 
             sx={{
-              my:{xs: 3, md: 5, lg: 8}, 
+              my:{xs: .5, md: 5, lg: 8}, 
               px: {xs:3, sm:4, md:5}, 
               fontWeight: 500, 
               letterSpacing: 1.75, 

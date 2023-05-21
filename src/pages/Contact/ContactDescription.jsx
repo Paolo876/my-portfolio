@@ -4,7 +4,7 @@ import PlaceIcon from '@mui/icons-material/Place';
 import SocialLinks from '../../components/SocialLinks';
 
 const textStyles = {
-  fontSize:{ xs: 11.5, sm: 12, md: 13, lg:14, xl: 15.5 },
+  fontSize:{ xs: 11, sm: 12, md: 13, lg:14, xl: 15.5 },
   fontWeight: 300,
   textAlign: "justify", 
   textJustify: "inter-word", 
@@ -29,11 +29,11 @@ const ContactDescription = () => {
           <Box sx={{background: "rgba(239,235,229,1)", height: {xs: 2, sm: 8, md: 8}, width: {xs: 12, sm: 8, md: 8}, mr: "auto", mt: .75, ml: .5, mixBlendMode: "difference", opacity: .5}}></Box>
         </Box>
         <Box ml={.5}>
-          <Typography sx={{...textStyles, display: {xs: "none", sm: "initial"}}}>
+          <Typography sx={{...textStyles}}>
             Let me show you my capabilities and how I can be a great part of your company. 
             Please fill out the form or use my contact informations provided to get in touch with me.
           </Typography>
-          <Typography sx={textStyles} mt={1.5}>
+          <Typography sx={textStyles} mt={{xs: .5, md:1.5}}>
             I am excited to take a leap forward and further hone my knowledge and skills with the right company.
           </Typography>
         </Box>
