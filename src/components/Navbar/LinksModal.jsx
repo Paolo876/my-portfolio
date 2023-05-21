@@ -8,7 +8,7 @@ import "./navbar.scss";
 const styles = {
   height: "100%",
   width: "100%",
-  backdropFilter: "blur(3px) contrast(20%) brightness(40%)",
+  backdropFilter: "blur(3px) contrast(20%) brightness(42%)",
   border: 0,
   position: "relative",
 }
@@ -52,7 +52,7 @@ const LinksModal = ({ open, onClose}) => {
 
   return (
     <Modal open={open} onClose={onClose} closeAfterTransition>
-      <Fade in={open} timeout={{enter: 600, exit: 600, appear: 1000}}>
+      <Fade in={open} timeout={{enter: 350, exit: 350}}>
         <Box sx={styles} className="navbar-modal">
           <Container maxWidth="xl" sx={{height: "90vh"}}>
             <Stack sx={{height: "100%"}}>

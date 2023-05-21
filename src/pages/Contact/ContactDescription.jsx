@@ -69,7 +69,7 @@ const ContactDescription = () => {
         <Grid item sm={"auto"} mt={3}>
           <Typography variant="h5" sx={{letterSpacing: 1, textTransform: "none", fontWeight: 300, opacity: .75, fontSize: {xs:12, sm: 12, md: 13, lg: 14}}}>Social</Typography>
           <Box sx={{background: "white", height: "1px", width: "100%", my: .1, opacity: .15, display: {xs: "none", sm: "initial"}}}></Box>
-          <SocialLinks mixBlendMode='none' buttonSize='small' iconSize={{ xs: 18, sm: 18, md: 19, lg: 19 }} gap={2.5}/>
+          <SocialLinks mixBlendMode='none' buttonSize='small' iconSize={{ xs: 16, sm: 18, md: 19, lg: 19 }} gap={2.5}/>
         </Grid>
       </Grid>
     </Stack>
