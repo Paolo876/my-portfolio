@@ -17,7 +17,7 @@ const Certifications = () => {
 
   return (
     <Grid container sx={{mb: 5, pt: 5}}>
-      <Grid item lg={3} order={{lg:2}}>
+      <Grid item lg={3.5} order={{lg:2}} pl={3}>
         <Box mb={3}>
           <Typography 
             variant="h4" 
@@ -27,16 +27,15 @@ const Certifications = () => {
             align="right"
             color="primary.main">Certifications</Typography>
           <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", ml: "auto", mt: {xs: 1, md:1, lg: 1.5}, mr: .5, mixBlendMode: "difference", opacity: .75}}></Box>
-          <Typography variant="body1" sx={baseTextStyles} mt={1.5}>
-            I am ready to take my skills to the next level. 
-            I may lack enough professional experience but I am confident that I have the necessary knowledge and skills to show my capabilities.
+          <Typography variant="body1" sx={baseTextStyles} mt={1.5} pt={2.5}>
+            Listed are some of the certificates I acquired from online courses and in college.
           </Typography>
         </Box>
       </Grid>
-      <Grid item lg={9} order={{lg:1}}>
+      <Grid item lg={8.5} order={{lg:1}}>
         <Grid container>
-          {certifications.map(item => <Grid item key={item.name} xs={4} pr={2} pb={2}>
-            <Button sx={{width: "100%", height: "100%", textAlign: "left", opacity: .8}} variant="outlined" color="inherit" href={item.url} target="_blank">
+          {certifications.map(item => <Grid item key={item.name} xs={4} pr={3} pb={3}>
+            <Button sx={{width: "100%", height: "100%", textAlign: "left", opacity: 1}} variant="outlined" color="inherit" href={item.url} target="_blank">
               <Box 
                 sx={{
                   p: 1.25, 
