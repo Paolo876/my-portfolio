@@ -12,12 +12,13 @@ const boxTextStyles = {
 
 
 const baseTextStyles = {
-  fontSize:{xs: 12, sm: 12, md: 13, lg:14, xl: 15.5},
-  fontWeight: 300,
+  fontSize:{xs: 12, sm: 12, md: 13, lg:14, xl: 15},
+  fontWeight: 200,
   textAlign: "justify", 
   textJustify: "inter-word", 
   mixBlendMode: "difference",
-  opacity: .8,
+  lineHeight: 1.4,
+  opacity: .9,
 }
 
 
@@ -31,8 +32,8 @@ const Skills = () => {
     <Grid container       
       sx={{
       px: {xs:2.5, sm: 3, md: 4, lg: 5.5, xl: 4.5}, 
-      pt: {xs:8, sm: 12, md: 14, lg: 20}, 
-      pb: {xs:12, sm: 13, md: 14, lg: 15}, 
+      pt: {xs:8, sm: 12, md: 14, lg: 15}, 
+      pb: {xs:3, sm: 4, md: 4, lg: 5}, 
       justifyContent: "center", 
       alignItems: "flex-start", 
       maxWidth: "1500px", 

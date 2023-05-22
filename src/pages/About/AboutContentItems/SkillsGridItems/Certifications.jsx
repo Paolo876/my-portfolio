@@ -38,6 +38,7 @@ const Certifications = () => {
                   fontWeight={800} 
                   letterSpacing={1} 
                   fontSize={{xs:14, sm: 15, md: 16, lg: 17, xl: 17.5}} 
+                  lineHeight={1.25}
                 >
                   {item.name}
                 </Typography>
@@ -47,7 +48,8 @@ const Certifications = () => {
                   fontSize={{xs:11, sm: 12, md: 13, lg: 14, xl: 14}} 
                   letterSpacing={2} 
                   textTransform="none" 
-                  mt={1}
+                  lineHeight={1.15}
+                  mt={3}
                   sx={{opacity: .8}}
                 >
                   {item.author}
