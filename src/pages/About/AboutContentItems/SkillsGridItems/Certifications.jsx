@@ -16,23 +16,23 @@ const Certifications = () => {
   const { certifications } = useRootRedux();
 
   return (
-    <Grid container sx={{mb: 5, pt: 5}}>
-      <Grid item lg={3.5} order={{lg:2}} pl={3}>
+    <Grid container sx={{mb: 13}}>
+      <Grid item lg={3.5} order={{lg:2}}>
         <Box mb={3}>
           <Typography 
             variant="h4" 
-            fontSize={{xs:23, sm: 24, md: 25, lg: 26, xl: 28}} 
+            fontSize={{xs:23, sm: 24, md: 25, lg: 26, xl: 29}} 
             letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:2.5}} 
             lineHeight={{lg:1.6, xl:1.2}} 
             align="right"
             color="primary.main">Certifications</Typography>
-          <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", ml: "auto", mt: {xs: 1, md:1, lg: 1.5}, mr: .5, mixBlendMode: "difference", opacity: .75}}></Box>
-          <Typography variant="body1" sx={baseTextStyles} mt={1.5} pt={2.5}>
+          <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", ml: "auto", mt: {xs: 1, md:1, lg: 1.5}, mr: .5, mixBlendMode: "difference", opacity: .5}}></Box>
+          {/* <Typography variant="body1" sx={baseTextStyles} mt={1.5} pt={2.5}>
             Listed are some of the certificates I acquired from online courses and in college.
-          </Typography>
+          </Typography> */}
         </Box>
       </Grid>
-      <Grid item lg={8.5} order={{lg:1}}>
+      <Grid item lg={8.5} order={{lg:1}} pr={8}>
         <Grid container>
           {certifications.map(item => <Grid item key={item.name} xs={4} pr={3} pb={3}>
             <Button sx={{width: "100%", height: "100%", textAlign: "left", opacity: 1}} variant="outlined" color="inherit" href={item.url} target="_blank">
