@@ -8,7 +8,7 @@ const ProjectItem = ({ item }) => {
     rootMargin: "-30% 0px -55% 0px",
     threshold: 0,
   });
-  if(inView) console.log(item.title)
+  // if(inView) console.log(item.title)
 
   return (
     <Box sx={{position: "relative", pb: {xs: 6, sm: 14, md: 22, lg:25}, px: {md:2}, my: 3, width: "100%"}} id={item.name}  ref={ref}>

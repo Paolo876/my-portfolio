@@ -216,13 +216,14 @@ const Projects = () => {
 
   useEffect(() => {
     if(state && projects.length !== 0) {
+      console.log(state.screenView)
+
       window.scrollTo(0, state.screenView);
     } else {
       window.scrollTo(0, 0);
 
     }
   }, [state])
-
   return (
     <>
       <DocumentHead

@@ -12,7 +12,7 @@ const ProjectPage = ({ projects }) => {
   const { state } = useLocation();
   const { id } = useParams();
   const project = projects.find(item => item.name === id)
-  console.log(project)
+  // console.log(project)
   return (
     <>
       <DocumentHead

@@ -88,7 +88,7 @@ const ProjectItemDescription = ({ title, briefDescription, technologies, feature
           size="small" 
           color="primary"
           sx={{fontWeight: 500, fontSize: {xs: 11, sm: 11, md: 12, lg: 12, xl: 13}, px: 2}}
-          onClick={() => navigate(name)}
+          onClick={() => navigate(name, { state: {screenView : window.pageYOffset}})}
           >Read More
           <ArrowForwardIosIcon sx={{fontSize: "inherit", ml: 1.25}}/>  
         </Button>
