@@ -8,6 +8,7 @@ import useFirestoreActions from '../../hooks/useFirestoreActions'
 import useRootRedux from '../../hooks/useRootRedux'
 import Contact from "../Home/Contact/Contact"
 import { Stack } from '@mui/material'
+import Skills from './AboutContentItems/Skills';
 
 const About = () => {
   const { getDocumentFromCollection } = useFirestoreActions();
@@ -34,6 +35,7 @@ const About = () => {
       <Stack>
         <Introduction/>
         <AboutContentList/>
+        {/* <Skills/> */}
         <Contact/>
       </Stack>
 

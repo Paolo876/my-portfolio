@@ -3,20 +3,11 @@ import { Typography, Box, Grid, Button } from '@mui/material'
 import useRootRedux from '../../../../hooks/useRootRedux'
 
 
-const baseTextStyles = {
-  fontSize:{xs: 12, sm: 12, md: 13, lg:14, xl: 15.5},
-  fontWeight: 300,
-  textAlign: "right", 
-  mixBlendMode: "difference",
-  opacity: .8,
-}
-
-
 const Certifications = () => {
   const { certifications } = useRootRedux();
 
   return (
-    <Grid container sx={{mb: 13}}>
+    <Grid container sx={{mb: { xl: 15}}}>
       <Grid item lg={3.5} order={{lg:2}}>
         <Box mb={3}>
           <Typography 
@@ -27,12 +18,10 @@ const Certifications = () => {
             align="right"
             color="primary.main">Certifications</Typography>
           <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", ml: "auto", mt: {xs: 1, md:1, lg: 1.5}, mr: .5, mixBlendMode: "difference", opacity: .5}}></Box>
-          {/* <Typography variant="body1" sx={baseTextStyles} mt={1.5} pt={2.5}>
-            Listed are some of the certificates I acquired from online courses and in college.
-          </Typography> */}
+
         </Box>
       </Grid>
-      <Grid item lg={8.5} order={{lg:1}} pr={8}>
+      <Grid item lg={8.5} order={{lg:1}} pr={{xl: 4}}>
         <Grid container>
           {certifications.map(item => <Grid item key={item.name} xs={4} pr={3} pb={3}>
             <Button sx={{width: "100%", height: "100%", textAlign: "left", opacity: 1}} variant="outlined" color="inherit" href={item.url} target="_blank">

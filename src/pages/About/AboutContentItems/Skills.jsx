@@ -28,14 +28,23 @@ const Skills = () => {
   const softwareDevSkillsList = skillsList.filter(item => ["programming"].includes(item.type))
 
   return (
-    <Grid container sx={{p: 5, justifyContent: "center", alignItems: "center", maxWidth: "1900px", mx: "auto", pt: 5, position: "relative"}}>
+    <Grid container       
+      sx={{
+      px: {xs:2.5, sm: 3, md: 4, lg: 5.5, xl: 4.5}, 
+      pt: {xs:8, sm: 12, md: 14, lg: 20}, 
+      pb: {xs:12, sm: 13, md: 14, lg: 15}, 
+      justifyContent: "center", 
+      alignItems: "flex-start", 
+      maxWidth: "1500px", 
+      mx: "auto",
+      }}>
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(25,25,25,.05)", mixBlendMode: "overlay", zIndex: -1}}></Box>
       <Box>
         <Typography variant="h5" sx={{mixBlendMode: "difference"}} align='center' fontSize="1.6rem">Skills and Certifications</Typography>
         <Box sx={{background: "white", height: "4px", width: "35px", mb: 10, mt: 3, mx: "auto", mixBlendMode: "difference" }}></Box>
       </Box>
 
-      <Grid item xs={9.25}>
+      <Grid item xs={12}>
         <TechSkills 
           skills={webDevSkillsList} 
           title="Web Development" 

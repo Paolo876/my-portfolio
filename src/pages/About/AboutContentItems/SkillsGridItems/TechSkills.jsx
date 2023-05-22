@@ -5,7 +5,7 @@ import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 
 const TechSkills = ({ skills, title, description, isMain }) => {
   return (
-    <Grid container mt={2.5} mb={12}>
+    <Grid container mb={{xl: 20}}>
       <Grid item xs={2.5} xl={2.75}>
         <Box mb={3} mt={1}>
           <Typography 

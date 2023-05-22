@@ -7,7 +7,7 @@ const OtherSkills = () => {
   const { otherSkillsList } = useRootRedux();
 
   return (
-    <Box sx={{mb: 8}}>
+    <Box sx={{mb: { xl: 12}}}>
       <Grid container>
         <Grid item xs={2.5} xl={2.75}>
           <Box mb={3} mt={1}>
