@@ -5,8 +5,8 @@ import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 
 const TechSkills = ({ skills, title, description, isMain }) => {
   return (
-    <Grid container mt={2.5} mb={11}>
-      <Grid item xs={2.5} xl={2.5}>
+    <Grid container mt={2.5} mb={12}>
+      <Grid item xs={2.5} xl={2.75}>
         <Box mb={3} mt={1}>
           <Typography 
             variant="h4" 
@@ -21,11 +21,11 @@ const TechSkills = ({ skills, title, description, isMain }) => {
         </Box>}
       </Grid>
 
-      <Grid item xs={9.5} xl={9.5}>
+      <Grid item xs={9.5} xl={9.25}>
 
-        <Grid container justifyContent={{xl: "right"}} pl={{xl: 8}}>
+        <Grid container justifyContent={{xl: "right"}} pl={{xl: 15}}>
           {!isMain && 
-            <Grid item xs={6} pr={8} pl={2} mt={2}> 
+            <Grid item xs={6} pr={10} pl={2} mt={2}> 
               <Box>
                 {description}
               </Box>
@@ -40,7 +40,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
                 }} 
               >
                 <Box>
-                  <Box height={{xs: 45, sm: 52, md:55, lg:70, xl: 70}} width={{xs: 45, sm: 52, md:55, lg:70, xl: 70}}>
+                  <Box height={{xs: 45, sm: 52, md:55, lg:60, xl: 62}} width={{xs: 45, sm: 52, md:55, lg:60, xl: 62}}>
                     <SkillIconImageItem 
                       src={item.monoUrl} 
                       duration={800} 
