@@ -19,6 +19,7 @@ const About = () => {
       getDocumentFromCollection('user', 'information').then(data => setData(data))
     }
   }, [])
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);

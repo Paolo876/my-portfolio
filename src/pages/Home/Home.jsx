@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Introduction from './Introduction/Introduction'
 import Purpose from './Purpose/Purpose'
 import Contact from './Contact/Contact'
@@ -15,6 +16,7 @@ import Works from './Works/Works'
 const Home = () => {
   const { skillsList, setData } = useRootRedux();
   const { getDocumentFromCollection } = useFirestoreActions();
+  const { pathname } = useLocation();
 
   
   useEffect(() => {
@@ -23,6 +25,11 @@ const Home = () => {
     }
   }, [])
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  
   return (
     <Stack>
         <DocumentHead
