@@ -28,7 +28,7 @@ const Roadmap = () => {
       <Grid container 
         sx={{
           px: {xs:2.5, sm: 3, md: 4, lg: 5.5, xl: 4.5}, 
-          py: {xs:6, sm: 6, md: 7, lg: 8}, 
+          py: {xs:6, sm: 6, md: 7, lg: 8, xl: 15}, 
           justifyContent: "center", 
           alignItems: "flex-start", 
           maxWidth: "1500px", 

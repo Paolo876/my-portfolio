@@ -9,7 +9,7 @@ const OtherSkills = () => {
   return (
     <Box sx={{mb: { xl: 12}}}>
       <Grid container>
-        <Grid item xs={2.5} xl={2.75}>
+        <Grid item xs={2.5} xl={2}>
           <Box mb={3} mt={1}>
             <Typography 
               variant="h4" 
@@ -20,9 +20,9 @@ const OtherSkills = () => {
             <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", mt: {xs: 1, md:1, lg: 1.5}, ml: .5, mixBlendMode: "difference", opacity: .35}}></Box>
           </Box>
         </Grid>
-        <Grid item xs={9.5} xl={9.25} pl={15}>
+        <Grid item xs={9.5} xl={10} pl={{xl: 8}}>
           <Grid container>
-            {otherSkillsList.map(item => <Grid item key={item.name} xs={1.5} xl={1.6} align="center">
+            {otherSkillsList.map(item => <Grid item key={item.name} xs={1.5} xl={1.25} align="center">
               <Box
                 sx={{
                   py: 1.5, 
@@ -33,7 +33,7 @@ const OtherSkills = () => {
                 }} 
               >
                 <Box>
-                  <Box height={{xs: 40, sm: 45, md:50, lg:55, xl: 60}} width={{xs: 40, sm: 45, md:50, lg:55, xl: 60}}>
+                  <Box height={{xs: 40, sm: 45, md:50, lg:55, xl: 45}} width={{xs: 40, sm: 45, md:50, lg:55, xl: 45}}>
                     <SkillIconImageItem 
                       src={item.url} 
                       duration={800} 
@@ -44,12 +44,12 @@ const OtherSkills = () => {
                       variant="body2" 
                       sx={{
                         mixBlendMode: "difference", 
-                        opacity: .4,
-                        fontSize: 11, 
+                        opacity: .6,
+                        fontSize: 10, 
                         fontWeight: 300, 
-                        mt: 1.5,
+                        mt: 1,
                         textTransform: "uppercase",
-                        letterSpacing: 1.5,
+                        letterSpacing: 1,
                       }}
                     >{item.name}</Typography>
                 </Box>
