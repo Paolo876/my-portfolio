@@ -58,15 +58,14 @@ const Roadmap = () => {
                 flex: 0,
                 padding: 0,
               },
-              mt: 8
+              mt: 10
             }}
             >
             <MyTimelineItem dotColor='primary' dotIcon={walkicon}>
               <Box pl={2}>
                 <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:22, lg:23, xl:24}}>The Beginning</Typography>
-                <Box sx={{background: "rgba(239,235,229,1)", height: "5px", width: "5px", mr: "auto", mt: .5, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
               </Box>
-              <Box pl={2} pr={5} mt={2} mb={10}>
+              <Box pl={2} pr={5} mt={1} mb={6}>
                 <Typography variant="body1" sx={baseTextStyles}>
                   Before my development journey started, I studied <Box component="span" fontWeight={300}>Bachelor of Science in Architecture</Box> back in Philippines where I learned about the
                   <Box component="span" fontWeight={300}> design methods and strategies</Box> that I continue to incorporate throughout my projects. I started learning coding in 2019 through an online course called <Box component="span" fontWeight={300}> The Web Development Bootcamp by Colt Steele </Box> 
@@ -79,9 +78,8 @@ const Roadmap = () => {
             <MyTimelineItem dotColor='primary' dotIcon={muscleicon}>
               <Box pl={2}>
                 <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:22, lg:23, xl:24}}>The Strive</Typography>
-                <Box sx={{background: "rgba(239,235,229,1)", height: "5px", width: "5px", mr: "auto", mt: .15, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
               </Box>
-              <Box pl={2} pr={5} mt={2} mb={10}>
+              <Box pl={2} pr={5} mt={1} mb={6}>
                 <Typography variant="body1" sx={baseTextStyles}>
                   While being a part-time college student, I was also self-studying through online courses and youtube tutorials, all 
                   while being employed full time at an office job. 
@@ -94,9 +92,8 @@ const Roadmap = () => {
             <MyTimelineItem dotColor='primary' dotIcon={codeicon}>
               <Box pl={2}>
                 <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:22, lg:23, xl:24}}>The Process</Typography>
-                <Box sx={{background: "rgba(239,235,229,1)", height: "5px", width: "5px", mr: "auto", mt: .15, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
               </Box>
-              <Box pl={2} pr={5} mt={1.5} mb={8}>
+              <Box pl={2} pr={5} mt={1} mb={6}>
                 <Typography variant="body1" sx={baseTextStyles}>
                   In college, I was able to learn the foundations, how to think like a developer, analyze logic and algorithms, 
                   and being able to work with a team.
@@ -109,9 +106,8 @@ const Roadmap = () => {
             <MyTimelineItem dotColor='primary' dotIcon={workicon} endItem={true}>
               <Box pl={2}>
                 <Typography variant="h6" letterSpacing={2} fontWeight={800} fontSize={{md:22, lg:23, xl:24}}>The Present</Typography>
-                <Box sx={{background: "rgba(239,235,229,1)", height: "5px", width: "5px", mr: "auto", mt: .15, ml: .25, mixBlendMode: "difference", opacity: .25}}></Box>
               </Box>
-              <Box pl={2} pr={5} mt={1.5} mb={8}>
+              <Box pl={2} pr={5} mt={1} mb={6}>
                 <Typography variant="body1" sx={baseTextStyles}>
                   Present time, I still continue to learn more techologies online, further refine and improve my existing projects, and conceptualize new project ideas.
                   I may lack enough work or professional experience but I am determined and always remain consistent with my progress hoping that one day the hard work will pay off.

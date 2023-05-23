@@ -17,7 +17,7 @@ const OtherSkills = () => {
               letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:2.5}} 
               lineHeight={{lg:1.6, xl:1.2}} 
               color="primary.main">Other Skills</Typography>
-            <Box sx={{background: "rgba(239,235,229,1)", height: 8, width: 8, mr: "auto", ml: .2, mt: {xs: 1.5, md:1.75}, mixBlendMode: "difference", opacity: .7}}></Box>
+            <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", mt: {xs: 1, md:1, lg: 1.5}, ml: .5, mixBlendMode: "difference", opacity: .35}}></Box>
           </Box>
         </Grid>
         <Grid item xs={9.5} xl={9.25} pl={15}>

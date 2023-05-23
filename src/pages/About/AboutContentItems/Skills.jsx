@@ -32,18 +32,28 @@ const Skills = () => {
     <Grid container       
       sx={{
       px: {xs:2.5, sm: 3, md: 4, lg: 5.5, xl: 4.5}, 
-      pt: {xs:8, sm: 12, md: 14, lg: 15}, 
+      pt: {xs:8, sm: 12, md: 14, lg: 12}, 
       pb: {xs:3, sm: 4, md: 4, lg: 5}, 
       justifyContent: "center", 
       alignItems: "flex-start", 
       maxWidth: "1500px", 
       mx: "auto",
       }}>
-      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(25,25,25,.05)", mixBlendMode: "overlay", zIndex: -1}}></Box>
-      <Box>
-        <Typography variant="h5" sx={{mixBlendMode: "difference"}} align='center' fontSize="1.6rem">Skills and Certifications</Typography>
-        <Box sx={{background: "white", height: "4px", width: "35px", mb: 10, mt: 3, mx: "auto", mixBlendMode: "difference" }}></Box>
-      </Box>
+      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(25,25,25,.15)", mixBlendMode: "overlay", zIndex: -1}}></Box>
+      <Grid item xs={12} mb={13}>
+        <Typography 
+          variant="h4" 
+          fontSize={{md: 28, lg: 30, xl: 32}} 
+          letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:3.5}} 
+          lineHeight={{lg:1.6, xl:1.2}} 
+          fontWeight={800}
+          sx={{
+            mixBlendMode: "difference",
+            opacity: .9,
+          }}
+        >Skills & Certifications</Typography>
+        <Box sx={{background: "rgba(239,235,229,1)", height: {xs: 3, sm: 5, md: 8}, width: {xs: 3, sm: 5, md: 8}, mr: "auto", mt: {xs: 1.25, sm: 1.25, md:1.5}, mixBlendMode: "difference", opacity: .15}}></Box>
+      </Grid>
 
       <Grid item xs={12}>
         <TechSkills 

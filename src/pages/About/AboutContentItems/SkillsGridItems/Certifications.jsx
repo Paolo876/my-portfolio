@@ -17,7 +17,7 @@ const Certifications = () => {
             lineHeight={{lg:1.6, xl:1.2}} 
             align="right"
             color="primary.main">Certifications</Typography>
-          <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", ml: "auto", mt: {xs: 1, md:1, lg: 1.5}, mr: .5, mixBlendMode: "difference", opacity: .5}}></Box>
+          <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", ml: "auto", mt: {xs: 1, md:1, lg: 1.5}, mr: .5, mixBlendMode: "difference", opacity: .35}}></Box>
 
         </Box>
       </Grid>
