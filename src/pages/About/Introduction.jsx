@@ -49,15 +49,15 @@ const Introduction = () => {
         <Box mt={10}>
           <Typography variant="body1" sx={baseTextStyles}>          
             I am a <Box sx={boxTextStyles} component="span"> Full Stack Web Developer </Box> 
-            based in <Box sx={boxTextStyles} component="span">Los Angeles, California. </Box> I have been coding since 2019 and went back to college in 2020 for a degree in
+            based in <Box sx={boxTextStyles} component="span">Los Angeles, California. </Box> I started coding in 2019 and went back to college in 2020 for a degree in
             <Box sx={boxTextStyles} component="span"> Computer Information Systems </Box> major in Web Development and Software Development.
           </Typography>
           <Typography variant="body1" sx={baseTextStyles} mt={1}>         
-            I am eager to face new challenges and learn new technologies that will help me expand my skillset and strengthen my knowledge. 
+            I can design and develop a fully working website or web application from frontend to backend with amazing features including the use of APIs and creating a database.
           </Typography>
           <Typography variant="body1" sx={{...baseTextStyles, fontWeight: 400, opacity: 1}} mt={1.5}>
             I am ready to take my skills to the next level. 
-            I may lack enough professional experience but I am confident that I have the necessary knowledge and skills to show my capabilities.
+            I may lack professional experience but I am confident that I have the necessary knowledge and skills to prove myself.
           </Typography>
         </Box>
       </Grid>
