@@ -40,6 +40,7 @@ const Introduction = () => {
             fontSize={{xs:32, sm: 32, md: 42, lg: 40, xl: 75}} 
             letterSpacing={{xs:2, sm:2, md: 2, lg: 2, xl: 3}} 
             lineHeight={{xl:1}} 
+            color="primary.main"
           >
             About Me
           </Typography>
@@ -52,7 +53,7 @@ const Introduction = () => {
             <Box sx={boxTextStyles} component="span"> Computer Information Systems </Box> major in Web Development and Software Development.
           </Typography>
           <Typography variant="body1" sx={baseTextStyles} mt={1}>         
-            I can design and develop a fully working website or web application from frontend to backend with amazing features including the use of APIs and creating a database.
+            I can design and develop a fully working website or web application from frontend to backend with amazing features including the use of APIs and database implementation.
           </Typography>
           <Typography variant="body1" sx={{...baseTextStyles, fontWeight: 400, opacity: .9}} mt={1.5}>
             I am ready to take my skills to the next level. 

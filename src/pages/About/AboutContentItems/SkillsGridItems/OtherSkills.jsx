@@ -20,7 +20,7 @@ const OtherSkills = () => {
             <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", mt: {xs: 1, md:1, lg: 1.5}, ml: .5, mixBlendMode: "difference", opacity: .35}}></Box>
           </Box>
         </Grid>
-        <Grid item xs={9.5} xl={10} pl={{xl: 8}}>
+        <Grid item xs={9.5} xl={10} pl={{xl: 6}}>
           <Grid container>
             {otherSkillsList.map(item => <Grid item key={item.name} xs={1.5} xl={1.25} align="center">
               <Box
