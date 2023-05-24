@@ -7,12 +7,12 @@ const Certifications = () => {
   const { certifications } = useRootRedux();
 
   return (
-    <Grid container sx={{mb: { xl: 15}}}>
-      <Grid item lg={3.5} order={{lg:2}}>
+    <Grid container sx={{mb: { lg: 12, xl: 15}}}>
+      <Grid item lg={3} xl={3.5} order={{lg:2}}>
         <Box mb={3}>
           <Typography 
             variant="h4" 
-            fontSize={{xs:23, sm: 24, md: 25, lg: 26, xl: 29}} 
+            fontSize={{xs:23, sm: 24, md: 25, lg: 28, xl: 29}} 
             letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:2.5}} 
             lineHeight={{lg:1.6, xl:1.2}} 
             align="right"
@@ -21,8 +21,8 @@ const Certifications = () => {
 
         </Box>
       </Grid>
-      <Grid item lg={8.5} order={{lg:1}} pr={{xl: 4}}>
-        <Grid container>
+      <Grid item lg={9}  xl={8.5} order={{lg:1}} pr={{lg: 2, xl: 4}}>
+        <Grid container pt={1.5}>
           {certifications.map(item => <Grid item key={item.name} xs={4} pr={3} pb={3}>
             <Button sx={{width: "100%", height: "100%", textAlign: "left", opacity: 1}} variant="outlined" color="inherit" href={item.url} target="_blank">
               <Box 
@@ -37,7 +37,7 @@ const Certifications = () => {
                   variant="h6" 
                   fontWeight={800} 
                   letterSpacing={1} 
-                  fontSize={{xs:14, sm: 15, md: 16, lg: 17, xl: 17.5}} 
+                  fontSize={{xs:14, sm: 15, md: 16, lg: 16, xl: 17.5}} 
                   lineHeight={1.25}
                 >
                   {item.name}
@@ -45,8 +45,8 @@ const Certifications = () => {
                 <Typography 
                   variant="body1" 
                   fontWeight={200} 
-                  fontSize={{xs:11, sm: 12, md: 13, lg: 14, xl: 14}} 
-                  letterSpacing={2} 
+                  fontSize={{xs:11, sm: 12, md: 13, lg: 13, xl: 14}} 
+                  letterSpacing={{lg:1, xl:2}} 
                   textTransform="none" 
                   lineHeight={1.15}
                   mt={3}

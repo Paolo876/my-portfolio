@@ -31,14 +31,14 @@ const Introduction = () => {
         mx: "auto",
       }}
     >      
-      <Grid item xl={5.5}>
+      <Grid item lg={5.5}>
         <Box>
           <Typography 
             variant="h1" 
             align="left" 
             fontWeight={800} 
-            fontSize={{xs:32, sm: 32, md: 42, lg: 40, xl: 75}} 
-            letterSpacing={{xs:2, sm:2, md: 2, lg: 2, xl: 3}} 
+            fontSize={{xs:32, sm: 32, md: 42, lg: 75}} 
+            letterSpacing={{xs:2, sm:2, md: 2, lg: 3}} 
             lineHeight={{xl:1}} 
             color="primary.main"
           >
@@ -46,7 +46,7 @@ const Introduction = () => {
           </Typography>
           <Box sx={{background: "rgba(239,235,229,1)", height: {xs: 2, sm: 8, md: 10}, width: {xs: 12, sm: 8, md: 10}, mr: "auto", mt: {xs: 1.25, sm: 1.25, md:1.5}, mixBlendMode: "difference", opacity: .15}}></Box>
         </Box>
-        <Box mt={{lg: 16, xl: 18}}>
+        <Box mt={{lg: 14, xl: 18}}>
           <Typography variant="body1" sx={baseTextStyles}>          
             I am a <Box sx={boxTextStyles} component="span"> Full Stack Web Developer </Box> 
             based in <Box sx={boxTextStyles} component="span">Los Angeles, California. </Box> I started coding in 2019 and went back to college in 2020 for a degree in
@@ -62,7 +62,7 @@ const Introduction = () => {
         </Box>
       </Grid>
 
-      <Grid item xs={12} lg={4} xl={6.5} sx={{display: "flex", justifyContent: "right"}}>
+      <Grid item xs={12} lg={6.5} sx={{display: "flex", justifyContent: "right"}}>
         <Box 
           sx={{
             border: 3, 

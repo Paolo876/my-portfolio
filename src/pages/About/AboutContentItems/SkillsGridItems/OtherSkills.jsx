@@ -7,9 +7,9 @@ const OtherSkills = () => {
   const { otherSkillsList } = useRootRedux();
 
   return (
-    <Box sx={{mb: { xl: 12}}}>
+    <Box sx={{mb: { lg: 12, xl: 12}}}>
       <Grid container>
-        <Grid item xs={2.5} xl={2}>
+        <Grid item xs={2.5} lg={2} xl={2}>
           <Box mb={3} mt={1}>
             <Typography 
               variant="h4" 
@@ -20,9 +20,9 @@ const OtherSkills = () => {
             <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", mt: {xs: 1, md:1, lg: 1.5}, ml: .5, mixBlendMode: "difference", opacity: .35}}></Box>
           </Box>
         </Grid>
-        <Grid item xs={9.5} xl={10} pl={{xl: 6}}>
+        <Grid item xs={9.5} xl={10} pl={{lg: 11, xl: 6}}>
           <Grid container>
-            {otherSkillsList.map(item => <Grid item key={item.name} xs={1.5} xl={1.25} align="center">
+            {otherSkillsList.map(item => <Grid item key={item.name} xs={1.5} lg={1.4} xl={1.25} align="center">
               <Box
                 sx={{
                   py: 1.5, 
