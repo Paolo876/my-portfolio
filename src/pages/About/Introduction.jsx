@@ -23,7 +23,7 @@ const Introduction = () => {
     <Grid container 
       sx={{
         px: {xs:2.5, sm: 3, md: 4, lg: 5.5, xl: 4.5}, 
-        pt: {xs:8, sm: 12, md: 14, lg: 20}, 
+        pt: {xs:8, sm: 12, md: 14, lg: 16, xl: 20}, 
         pb: {xs:12, sm: 13, md: 14, lg: 15}, 
         justifyContent: "center", 
         alignItems: "flex-start", 
@@ -46,7 +46,7 @@ const Introduction = () => {
           </Typography>
           <Box sx={{background: "rgba(239,235,229,1)", height: {xs: 2, sm: 8, md: 10}, width: {xs: 12, sm: 8, md: 10}, mr: "auto", mt: {xs: 1.25, sm: 1.25, md:1.5}, mixBlendMode: "difference", opacity: .15}}></Box>
         </Box>
-        <Box mt={{lg: 14, xl: 18}}>
+        <Box mt={{lg: 12, xl: 18}}>
           <Typography variant="body1" sx={baseTextStyles}>          
             I am a <Box sx={boxTextStyles} component="span"> Full Stack Web Developer </Box> 
             based in <Box sx={boxTextStyles} component="span">Los Angeles, California. </Box> I started coding in 2019 and went back to college in 2020 for a degree in
