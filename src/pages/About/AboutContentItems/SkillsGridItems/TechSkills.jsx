@@ -5,8 +5,8 @@ import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 
 const TechSkills = ({ skills, title, description, isMain }) => {
   return (
-    <Grid container mb={{lg: 10, xl: 15}}>
-      <Grid item xs={2.5} lg={3} xl={2.75}>
+    <Grid container mb={{md: 10, lg: 10, xl: 15}}>
+      <Grid item xs={2.5} md={2.75} lg={3} xl={2.75}>
         <Box mb={3} mt={1}>
           <Typography 
             variant="h4" 
@@ -24,18 +24,18 @@ const TechSkills = ({ skills, title, description, isMain }) => {
         </Box>}
       </Grid>
 
-      <Grid item xs={9.5} lg={9} xl={9.25}>
+      <Grid item xs={9.5} md={9.25} lg={9} xl={9.25}>
 
-        <Grid container justifyContent={{lg: "right"}} pl={{lg: 10, xl: 15}}>
+        <Grid container justifyContent={{md: "right"}} pl={{md: 8, lg: 10, xl: 15}}>
           {!isMain && 
-            <Grid item xs={6} pr={{lg: 6, xl: 10}} pl={{lg: 1, xl: 2}} mt={2}> 
+            <Grid item xs={6} pr={{md: 5, lg: 6, xl: 10}} pl={{lg: 1, xl: 2}} mt={2}> 
               <Box>
                 {description}
               </Box>
             </Grid>
           }
           {skills.map(item => 
-            <Grid item xs={1.5} key={item.name} align="center">
+            <Grid item xs={1.5} md={1.5} lg={1.5} key={item.name} align="center">
               <Box 
                 sx={{
                   my: 1.75, 
@@ -43,7 +43,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
                 }} 
               >
                 <Box>
-                  <Box height={{xs: 45, sm: 52, md:55, lg:60, xl: 62}} width={{xs: 45, sm: 52, md:55, lg:60, xl: 62}}>
+                  <Box height={{xs: 40, sm: 42, md:45, lg:60, xl: 62}} width={{xs: 40, sm: 42, md:45, lg:60, xl: 62}}>
                     <SkillIconImageItem 
                       src={item.monoUrl} 
                       duration={800} 
@@ -56,11 +56,11 @@ const TechSkills = ({ skills, title, description, isMain }) => {
                     sx={{
                       mixBlendMode: "difference", 
                       opacity: .4,
-                      fontSize: 11, 
+                      fontSize: {md: 11, lg: 11}, 
                       fontWeight: 300, 
                       mt: 1.5,
                       textTransform: "uppercase",
-                      letterSpacing: 2,
+                      letterSpacing: {md: 0.5, lg: 2},
                     }}
                   >{item.name}</Typography>
                 </Box>

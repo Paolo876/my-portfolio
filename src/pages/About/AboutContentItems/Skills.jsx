@@ -12,7 +12,7 @@ const boxTextStyles = {
 
 
 const baseTextStyles = {
-  fontSize:{xs: 12, sm: 12, md: 13, lg:14, xl: 15},
+  fontSize:{xs: 11, sm: 11, md: 11.5, lg:14, xl: 15},
   fontWeight: 200,
   textAlign: "justify", 
   textJustify: "inter-word", 
@@ -40,21 +40,6 @@ const Skills = () => {
       mx: "auto",
       }}>
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(25,25,25,.15)", mixBlendMode: "overlay", zIndex: -1}}></Box>
-      {/* <Grid item xs={12} mb={13}>
-        <Typography 
-          variant="h4" 
-          fontSize={{md: 28, lg: 30, xl: 32}} 
-          letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:3.5}} 
-          lineHeight={{lg:1.6, xl:1.2}} 
-          fontWeight={800}
-          sx={{
-            mixBlendMode: "difference",
-            opacity: .9,
-          }}
-        >Skills & Certifications</Typography>
-        <Box sx={{background: "rgba(239,235,229,1)", height: {xs: 3, sm: 5, md: 8}, width: {xs: 3, sm: 5, md: 8}, mr: "auto", mt: {xs: 1.25, sm: 1.25, md:1.5}, mixBlendMode: "difference", opacity: .15}}></Box>
-      </Grid> */}
-
       <Grid item xs={12}>
         <TechSkills 
           skills={webDevSkillsList} 

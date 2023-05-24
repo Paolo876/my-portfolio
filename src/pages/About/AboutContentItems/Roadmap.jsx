@@ -17,7 +17,7 @@ const titleTextStyles = {
 }
 
 const descriptionTextStyles = {
-  fontSize:{ xs: 12, sm: 12, md: 13, lg:13, xl: 14 },
+  fontSize:{ xs: 12, sm: 12, md: 12, lg:13, xl: 14 },
   fontWeight: 200,
   textAlign: "justify", 
   textJustify: "inter-word", 
@@ -64,7 +64,7 @@ const Roadmap = () => {
                 flex: 0,
                 padding: 0,
               },
-              mt: {lg: 6, xl: 8}
+              mt: {xs: 3, sm: 4, md: 5, lg: 6, xl: 8}
             }}
             >
             <MyTimelineItem dotColor='primary' dotIcon={walkicon}>
