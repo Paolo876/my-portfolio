@@ -5,12 +5,12 @@ import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 
 const TechSkills = ({ skills, title, description, isMain }) => {
   return (
-    <Grid container mb={{md: 10, lg: 10, xl: 15}}>
-      <Grid item xs={2.5} md={2.75} lg={3} xl={2.75}>
+    <Grid container mb={{sm: 8, md: 10, lg: 10, xl: 15}}>
+      <Grid item xs={2.5} sm={12} md={2.75} lg={3} xl={2.75} mb={{sm: 3, md: 0}}>
         <Box mb={3} mt={1}>
           <Typography 
             variant="h4" 
-            fontSize={{xs:23, sm: 24, md: 25, lg: 26, xl: 29}} 
+            fontSize={{xs:23, sm: 25, md: 25, lg: 26, xl: 29}} 
             letterSpacing={{xs:4, sm:6, md:1.5, lg:1.5, xl:2.75}} 
             lineHeight={1.2} 
             color="primary.main"
@@ -24,7 +24,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
         </Box>}
       </Grid>
 
-      <Grid item xs={9.5} md={9.25} lg={9} xl={9.25}>
+      <Grid item xs={9.5} sm={12} md={9.25} lg={9} xl={9.25}>
 
         <Grid container justifyContent={{md: "right"}} pl={{md: 8, lg: 10, xl: 15}}>
           {!isMain && 
@@ -60,7 +60,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
                       fontWeight: 300, 
                       mt: 1.5,
                       textTransform: "uppercase",
-                      letterSpacing: {md: 0.5, lg: 2},
+                      letterSpacing: { md: 0.5, lg: 2 },
                     }}
                   >{item.name}</Typography>
                 </Box>

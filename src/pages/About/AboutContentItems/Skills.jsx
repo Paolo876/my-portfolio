@@ -56,7 +56,7 @@ const Skills = () => {
           skills={softwareDevSkillsList} 
           title="Software Development"
           description={<Typography sx={baseTextStyles}>
-            Although I mainly focused in web development, I also have knowledge in software development, data structures & algorithms, and developing a working program with the GUI
+            Although my niche is in web development, I also have knowledge in software development, data structures & algorithms, and developing a working program with the GUI
             and other features.
           </Typography>}
         />
