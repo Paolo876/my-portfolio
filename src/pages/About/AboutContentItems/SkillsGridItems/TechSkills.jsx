@@ -6,12 +6,12 @@ import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 const TechSkills = ({ skills, title, description, isMain }) => {
   return (
     <Grid container mb={{sm: 8, md: 10, lg: 10, xl: 15}}>
-      <Grid item xs={2.5} sm={12} md={2.75} lg={3} xl={2.75} mb={{sm: 3, md: 0}}>
+      <Grid item xs={2.5} sm={7.75} md={2.75} lg={3} xl={2.75} mb={{sm: 3, md: 0}}>
         <Box mb={3} mt={1}>
           <Typography 
             variant="h4" 
             fontSize={{xs:23, sm: 25, md: 25, lg: 26, xl: 29}} 
-            letterSpacing={{xs:4, sm:6, md:1.5, lg:1.5, xl:2.75}} 
+            letterSpacing={{xs:4, sm:1.2, md:1.5, lg:1.5, xl:2.75}} 
             lineHeight={1.2} 
             color="primary.main"
           >
@@ -26,7 +26,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
 
       <Grid item xs={9.5} sm={12} md={9.25} lg={9} xl={9.25}>
 
-        <Grid container justifyContent={{md: "right"}} pl={{md: 8, lg: 10, xl: 15}}>
+        <Grid container justifyContent={{sm: "center", md: "right"}} pl={{md: 8, lg: 10, xl: 15}}>
           {!isMain && 
             <Grid item xs={6} pr={{md: 5, lg: 6, xl: 10}} pl={{lg: 1, xl: 2}} mt={2}> 
               <Box>
@@ -34,6 +34,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
               </Box>
             </Grid>
           }
+          
           {skills.map(item => 
             <Grid item xs={1.5} md={1.5} lg={1.5} key={item.name} align="center">
               <Box 
