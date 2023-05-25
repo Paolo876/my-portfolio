@@ -31,7 +31,7 @@ const Introduction = () => {
         mx: "auto",
       }}
     >      
-      <Grid item md={6} lg={5.5}>
+      <Grid item md={6} lg={5.5} order={{md:1}}>
         <Box>
           <Typography 
             variant="h1" 
@@ -62,7 +62,7 @@ const Introduction = () => {
         </Box>
       </Grid>
 
-      <Grid item xs={12} md={6} lg={6.5} sx={{display: "flex", justifyContent: "right"}}>
+      <Grid item xs={12} md={6} lg={6.5}  order={{md:2}} sx={{display: "flex", justifyContent: "right"}}>
         <Box 
           sx={{
             border: 3, 

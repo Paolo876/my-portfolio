@@ -88,9 +88,8 @@ const Roadmap = () => {
               <Box pl={2} pr={5} mt={1} mb={{xs: 4, sm: 5, md: 5, lg: 6, xl: 10}}>
                 <Typography variant="body1" sx={descriptionTextStyles}>
                   While being a part-time college student, I was also self-studying through online courses and youtube tutorials, all 
-                  while being employed full time at an office job. 
-                  <Box component="span" fontWeight={300}> As exhausting as it was, the burnout was worth it for the knowledge I gained.</Box>
-
+                  while being employed to a full-time office job. 
+                  <Box component="span" fontWeight={300}> As challenging as it was, the experience was worth it for the knowledge I gained.</Box>
                 </Typography>
               </Box>
             </MyTimelineItem>
