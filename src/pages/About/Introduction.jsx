@@ -56,8 +56,7 @@ const Introduction = () => {
             I can design and develop a fully working website or web application from frontend to backend with amazing features including the use of APIs and database implementation.
           </Typography>
           <Typography variant="body1" sx={{...baseTextStyles, fontWeight: 400, opacity: .9}} mt={1.5}>
-            I am ready to take my skills to the next level. 
-            I may lack professional experience but I am confident that I have the necessary knowledge and skills to prove myself.
+            I am ready to take my skills to the next level and I am confident that I have the necessary knowledge and skills to prove myself.
           </Typography>
         </Box>
       </Grid>
