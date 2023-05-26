@@ -7,27 +7,27 @@ const OtherSkills = () => {
   const { otherSkillsList } = useRootRedux();
 
   return (
-    <Box sx={{mb: { md: 8, lg: 12, xl: 12}}}>
+    <Box sx={{mb: { sm: 6, md: 8, lg: 12, xl: 12}}}>
       <Grid container>
-        <Grid item xs={2.5} lg={2}>
+        <Grid item xs={2.5} sm={4.5} md={2}>
           <Box mb={3} mt={1}>
             <Typography 
               variant="h4" 
-              fontSize={{xs:18, sm: 19, md: 20, lg: 21, xl: 22}} 
-              letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:2.5}} 
+              fontSize={{xs:18, sm: 20, md: 20, lg: 21, xl: 22}} 
+              letterSpacing={{xs:1.25, sm:1.5, md:1.5, lg:2, xl:2.5}} 
               lineHeight={{lg:1.6, xl:1.2}} 
               color="primary.main">Other Skills</Typography>
             <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", mt: {xs: 1, md:1, lg: 1.5}, ml: .5, mixBlendMode: "difference", opacity: .35}}></Box>
           </Box>
         </Grid>
-        <Grid item xs={9.5} xl={10} pl={{md: 0, lg: 11, xl: 6}}>
-          <Grid container sx={{justifyContent: {md:"right", lg: "initial"}}}>
-            {otherSkillsList.map(item => <Grid item key={item.name} xs={1.5} md={1.7} lg={1.4} xl={1.25} align="center">
+        <Grid item xs={9.5} sm={7.5} md={9.5} xl={10} pl={{md: 0, lg: 11, xl: 6}}>
+          <Grid container sx={{justifyContent: {sm:"right", lg: "initial"}}}>
+            {otherSkillsList.map(item => <Grid item key={item.name} xs={1.5} sm={2.7} md={1.7} lg={1.4} xl={1.25} align="center">
               <Box
                 sx={{
-                  py: 1.5, 
-                  width: "80px",
-                  height: "110px",
+                  py: {sm: .75, md:1.5}, 
+                  // width: "80px",
+                  // height: "110px",
                   userSelect: "none",
                   opacity: .75,
                 }} 

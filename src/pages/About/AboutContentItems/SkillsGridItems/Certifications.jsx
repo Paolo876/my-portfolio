@@ -7,26 +7,26 @@ const Certifications = () => {
   const { certifications } = useRootRedux();
 
   return (
-    <Grid container sx={{mb: { md: 8, lg: 10, xl: 15}}} >
-      <Grid item md={12} lg={3} xl={3.5} order={{lg:2}} mt={{md: 3, lg: 0}}>
-        <Box mb={{md: 2, lg:3}}>
+    <Grid container sx={{mb: { sm: 8, md: 8, lg: 10, xl: 15}}} >
+      <Grid item sm={12} lg={3} xl={3.5} order={{lg:2}} mt={{md: 3, lg: 0}}>
+        <Box mb={{sm: 2, lg:3}}>
           <Typography 
             variant="h4" 
-            fontSize={{xs:23, sm: 24, md: 25, lg: 28, xl: 29}} 
-            letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:2.5}} 
+            fontSize={{xs:23, sm: 25, md: 25, lg: 28, xl: 29}} 
+            letterSpacing={{xs:1.5, sm:1.5, md:1.5, lg:2, xl:2.5}} 
             lineHeight={{lg:1.6, xl:1.2}} 
-            textAlign={{md: "center", lg: "right"}}
+            textAlign={{sm: "center", lg: "right"}}
             color="primary.main">Certifications</Typography>
-          <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", ml: "auto", mt: {xs: 1, md:1, lg: 1.5}, mr: {md: "auto", lg:.5}, mixBlendMode: "difference", opacity: .35}}></Box>
+          <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", ml: "auto", mt: {xs: 1, md:1, lg: 1.5}, mr: {sm: "auto", lg:.5}, mixBlendMode: "difference", opacity: .35}}></Box>
         </Box>
       </Grid>
-      <Grid item md={12} lg={9}  xl={8.5} order={{lg:1}} pr={{md: 0, lg: 2, xl: 4}} px={{ md: 2, lg: 0}}>
+      <Grid item sm={12} lg={9}  xl={8.5} order={{lg:1}} pr={{md: 0, lg: 2, xl: 4}} px={{ md: 2, lg: 0}}>
         <Grid container pt={1.5}>
-          {certifications.map(item => <Grid item key={item.name} xs={4} pr={{md: 1.5, lg: 3}} pl={{md: 1.5, lg: 0}} pb={3}>
-            <Button sx={{width: "100%", height: "100%", textAlign: "left", opacity: 1}} variant="outlined" color="inherit" href={item.url} target="_blank">
+          {certifications.map(item => <Grid item key={item.name} sm={6} md={4} pr={{sm: .75, md: 1.5, lg: 3}} pl={{sm: .75, md: 1.5, lg: 0}} pb={{sm: 1.25, md:3}}>
+            <Button sx={{width: "100%", height: "100%", textAlign: "left", opacity: 1, px: {sm: .5, md: .75}}} variant="outlined" color="inherit" href={item.url} target="_blank">
               <Box 
                 sx={{
-                  p: 1.25, 
+                  p: {sm: .75, md:1.25}, 
                   width: "100%",
                   height: "100%"
                 }} 
@@ -36,7 +36,7 @@ const Certifications = () => {
                   variant="h6" 
                   fontWeight={800} 
                   letterSpacing={1} 
-                  fontSize={{xs:13, sm: 13, md: 14, lg: 16, xl: 17.5}} 
+                  fontSize={{xs:13, sm: 14, md: 14, lg: 16, xl: 17.5}} 
                   lineHeight={1.25}
                 >
                   {item.name}
@@ -44,11 +44,11 @@ const Certifications = () => {
                 <Typography 
                   variant="body1" 
                   fontWeight={200} 
-                  fontSize={{xs:11, sm: 12, md: 13, lg: 13, xl: 14}} 
-                  letterSpacing={{md:1, xl:2}} 
+                  fontSize={{xs:11, sm: 11, md: 13, lg: 13, xl: 14}} 
+                  letterSpacing={{sm: .5, md:1, xl:2}} 
                   textTransform="none" 
                   lineHeight={1.15}
-                  mt={3}
+                  mt={{sm: 1.25, md:3}}
                   sx={{opacity: .8}}
                 >
                   {item.author}
