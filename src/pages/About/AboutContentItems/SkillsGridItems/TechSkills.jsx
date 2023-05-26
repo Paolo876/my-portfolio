@@ -6,11 +6,11 @@ import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 const TechSkills = ({ skills, title, description, isMain }) => {
   return (
     <Grid container mb={{sm: 8, md: 10, lg: 10, xl: 15}}>
-      <Grid item xs={2.5} sm={7.75} md={2.75} lg={3} xl={2.75} mb={{sm: 3, md: 0}}>
-        <Box mb={3} mt={1}>
+      <Grid item xs={2.5} sm={5} md={2.75} lg={3} xl={2.75} mb={{sm: 3, md: 0}}>
+        <Box mb={3} mt={{sm: .5, md:1}}>
           <Typography 
             variant="h4" 
-            fontSize={{xs:23, sm: 25, md: 25, lg: 26, xl: 29}} 
+            fontSize={{xs:23, sm: 28, md: 25, lg: 26, xl: 29}} 
             letterSpacing={{xs:4, sm:1.2, md:1.5, lg:1.5, xl:2.75}} 
             lineHeight={1.2} 
             color="primary.main"
@@ -19,14 +19,14 @@ const TechSkills = ({ skills, title, description, isMain }) => {
           </Typography>
           <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", mt: {xs: 1, md:1, lg: 1.5}, ml: .5, mixBlendMode: "difference", opacity: .35}}></Box>
         </Box>
-        {isMain && <Box pr={{lg: 1.5, xl:1.5}}>
+        {isMain && <Box pr={{sm: 0, md: 1.5, xl:1.5}}>
           {description} 
         </Box>}
       </Grid>
 
-      <Grid item xs={9.5} sm={12} md={9.25} lg={9} xl={9.25}>
+      <Grid item xs={12} sm={7} md={9.25} lg={9} xl={9.25}>
 
-        <Grid container justifyContent={{sm: "center", md: "right"}} pl={{md: 8, lg: 10, xl: 15}}>
+        <Grid container justifyContent={{sm: "right", md: "right"}} pl={{md: 8, lg: 10, xl: 15}}>
           {!isMain && 
             <Grid item xs={6} pr={{md: 5, lg: 6, xl: 10}} pl={{lg: 1, xl: 2}} mt={2}> 
               <Box>
@@ -36,15 +36,15 @@ const TechSkills = ({ skills, title, description, isMain }) => {
           }
           
           {skills.map(item => 
-            <Grid item xs={1.5} md={1.5} lg={1.5} key={item.name} align="center">
+            <Grid item xs={1.5} sm={2.7} md={1.5} lg={1.5} key={item.name} align="center">
               <Box 
                 sx={{
-                  my: 1.75, 
+                  my: {sm: 1.15, md:1.75}, 
                   userSelect: "none",
                 }} 
               >
                 <Box>
-                  <Box height={{xs: 40, sm: 42, md:45, lg:60, xl: 62}} width={{xs: 40, sm: 42, md:45, lg:60, xl: 62}}>
+                  <Box height={{xs: 38, sm: 40, md:45, lg:60, xl: 62}} width={{xs: 38, sm: 40, md:45, lg:60, xl: 62}}>
                     <SkillIconImageItem 
                       src={item.monoUrl} 
                       duration={800} 
@@ -57,11 +57,11 @@ const TechSkills = ({ skills, title, description, isMain }) => {
                     sx={{
                       mixBlendMode: "difference", 
                       opacity: .4,
-                      fontSize: {md: 11, lg: 11}, 
+                      fontSize: {sm: 11, md: 11, lg: 11}, 
                       fontWeight: 300, 
                       mt: 1.5,
                       textTransform: "uppercase",
-                      letterSpacing: { md: 0.5, lg: 2 },
+                      letterSpacing: { sm: .2, md: 0.5, lg: 2 },
                     }}
                   >{item.name}</Typography>
                 </Box>
