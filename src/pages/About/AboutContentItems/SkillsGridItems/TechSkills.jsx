@@ -5,12 +5,12 @@ import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 
 const TechSkills = ({ skills, title, description, isMain }) => {
   return (
-    <Grid container mb={{sm: 8, md: 10, lg: 10, xl: 15}}>
+    <Grid container mb={{sm: 10, md: 10, lg: 10, xl: 15}}>
       <Grid item xs={2.5} sm={5} md={2.75} lg={3} xl={2.75} mb={{sm: 3, md: 0}}>
         <Box mb={3} mt={{sm: .5, md:1}}>
           <Typography 
             variant="h4" 
-            fontSize={{xs:23, sm: 28, md: 25, lg: 26, xl: 29}} 
+            fontSize={{xs:23, sm: 30, md: 25, lg: 26, xl: 29}} 
             letterSpacing={{xs:4, sm:1.2, md:1.5, lg:1.5, xl:2.75}} 
             lineHeight={1.2} 
             color="primary.main"
@@ -28,7 +28,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
 
         <Grid container justifyContent={{sm: "right", md: "right"}} pl={{md: 8, lg: 10, xl: 15}}>
           {!isMain && 
-            <Grid item xs={6} pr={{md: 5, lg: 6, xl: 10}} pl={{lg: 1, xl: 2}} mt={2}> 
+            <Grid item xs={12} md={6} pr={{md: 5, lg: 6, xl: 10}} pl={{sm: 6, md: 0, lg: 1, xl: 2}} mt={{sm: 1, md: 2}} mb={{sm: 2.5, md: 0}} > 
               <Box>
                 {description}
               </Box>

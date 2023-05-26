@@ -37,7 +37,7 @@ const Introduction = () => {
             variant="h1" 
             align="left" 
             fontWeight={800} 
-            fontSize={{xs:32, sm: 48, md: 70, lg: 75}} 
+            fontSize={{xs:32, sm: 50, md: 70, lg: 75}} 
             letterSpacing={{xs:2, sm:2, md: 3, lg: 3}} 
             lineHeight={1} 
             color="primary.main"
