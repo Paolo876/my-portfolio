@@ -7,13 +7,13 @@ const OtherSkills = () => {
   const { otherSkillsList } = useRootRedux();
 
   return (
-    <Box sx={{mb: { sm: 6, md: 8, lg: 12, xl: 12}}}>
+    <Box sx={{mb: { sm: 8, md: 8, lg: 12, xl: 12}}}>
       <Grid container>
         <Grid item xs={2.5} sm={4.5} md={2}>
           <Box mb={3} mt={1}>
             <Typography 
               variant="h4" 
-              fontSize={{xs:18, sm: 20, md: 20, lg: 21, xl: 22}} 
+              fontSize={{xs:21, sm: 21, md: 21, lg: 21, xl: 22}} 
               letterSpacing={{xs:1.25, sm:1.5, md:1.5, lg:2, xl:2.5}} 
               lineHeight={{lg:1.6, xl:1.2}} 
               color="primary.main">Other Skills</Typography>
@@ -25,20 +25,20 @@ const OtherSkills = () => {
             {otherSkillsList.map(item => <Grid item key={item.name} xs={1.5} sm={2.7} md={1.7} lg={1.4} xl={1.25} align="center">
               <Box
                 sx={{
-                  py: {sm: .75, md:1.5}, 
-                  // width: "80px",
-                  // height: "110px",
+                  my: {sm: 1.15, md:1.75}, 
                   userSelect: "none",
-                  opacity: .75,
+                  userSelect: "none",
+                  opacity: .8,
                 }} 
               >
                 <Box>
-                  <Box height={{xs: 40, sm: 42, md:45, lg:55, xl: 45}} width={{xs: 40, sm: 42, md:45, lg:55, xl: 45}}>
+                  <Box height={{xs: 40, sm: 42, md:45, lg:50, xl: 50}} width={{xs: 40, sm: 42, md:45, lg:50, xl: 50}}>
                     <SkillIconImageItem 
                       src={item.url} 
                       duration={800} 
                       objectFit='scale-down'
-                      />
+                      sx={{filter: "invert(1) brightness(2)"}}
+                    />
                   </Box>                  
                   <Typography 
                       variant="body2" 
@@ -47,7 +47,7 @@ const OtherSkills = () => {
                         opacity: .6,
                         fontSize: 10, 
                         fontWeight: 300, 
-                        mt: 1,
+                        mt: {sm:1, md: 1.5, lg: 1.75},
                         textTransform: "uppercase",
                         letterSpacing: 1,
                       }}

@@ -13,7 +13,7 @@ import workicon from "../../../assets/roadmap_icons/work.svg"
 const titleTextStyles = {
   letterSpacing: 2,
   fontWeight: 800,
-  fontSize: {xs: 16, sm: 18, md:19, lg:20}
+  fontSize: {xs: 17, sm: 18, md:19, lg:20}
 }
 
 const descriptionTextStyles = {
@@ -64,7 +64,7 @@ const Roadmap = () => {
                 flex: 0,
                 padding: 0,
               },
-              mt: {xs: 3, sm: 4, md: 5, lg: 6, xl: 8}
+              mt: {xs: 3, sm: 5, md: 5, lg: 6, xl: 8}
             }}
             >
             <MyTimelineItem dotColor='primary' dotIcon={walkicon}>
