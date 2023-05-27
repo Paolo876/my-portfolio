@@ -6,7 +6,7 @@ import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 const TechSkills = ({ skills, title, description, isMain }) => {
   return (
     <Grid container mb={{sm: 10, md: 10, lg: 10, xl: 15}}>
-      <Grid item xs={2.5} sm={4.5} md={2.75} lg={3} xl={2.75} mb={{sm: 3, md: 0}}>
+      <Grid item xs={11} sm={4.5} md={2.75} lg={3} xl={2.75} mb={{sm: 3, md: 0}}>
         <Box mb={3} mt={{sm: .5, md:1}}>
           <Typography 
             variant="h4" 
@@ -36,15 +36,15 @@ const TechSkills = ({ skills, title, description, isMain }) => {
           }
           
           {skills.map(item => 
-            <Grid item xs={1.5} sm={2.7} md={1.5} lg={1.5} key={item.name} align="center">
+            <Grid item xs={2.4} sm={2.7} md={1.5} lg={1.5} key={item.name} align="center">
               <Box 
                 sx={{
-                  my: {sm: 1.15, md:1.75}, 
+                  my: {xs: 1.15, md:1.75}, 
                   userSelect: "none",
                 }} 
               >
                 <Box>
-                  <Box height={{xs: 38, sm: 40, md:45, lg:60, xl: 62}} width={{xs: 38, sm: 40, md:45, lg:60, xl: 62}}>
+                  <Box height={{xs: 34, sm: 40, md:45, lg:60, xl: 62}} width={{xs: 34, sm: 40, md:45, lg:60, xl: 62}}>
                     <SkillIconImageItem 
                       src={item.monoUrl} 
                       duration={800} 
@@ -57,7 +57,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
                     sx={{
                       mixBlendMode: "difference", 
                       opacity: .4,
-                      fontSize: {sm: 11, md: 11, lg: 11}, 
+                      fontSize: {xs: 10, sm: 11, md: 11, lg: 11}, 
                       fontWeight: 300, 
                       mt: 1.5,
                       textTransform: "uppercase",
