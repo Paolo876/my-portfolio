@@ -27,7 +27,6 @@ const OtherSkills = () => {
                 sx={{
                   my: {sm: 1.15, md:1.75}, 
                   userSelect: "none",
-                  userSelect: "none",
                   opacity: .8,
                 }} 
               >
