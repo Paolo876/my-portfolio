@@ -7,10 +7,10 @@ const OtherSkills = () => {
   const { otherSkillsList } = useRootRedux();
 
   return (
-    <Box sx={{mb: { sm: 8, md: 8, lg: 12, xl: 12}}}>
+    <Box sx={{mb: { xs: 4, sm: 8, md: 8, lg: 12, xl: 12}}}>
       <Grid container>
-        <Grid item xs={2.5} sm={4.5} md={2}>
-          <Box mb={3} mt={1}>
+        <Grid item xs={12} sm={4.5} md={2}>
+          <Box mb={{xs: 1.5, sm:3}} mt={1}>
             <Typography 
               variant="h4" 
               fontSize={{xs:21, sm: 21, md: 21, lg: 21, xl: 22}} 
@@ -20,18 +20,18 @@ const OtherSkills = () => {
             <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", mt: {xs: 1, md:1, lg: 1.5}, ml: .5, mixBlendMode: "difference", opacity: .35}}></Box>
           </Box>
         </Grid>
-        <Grid item xs={9.5} sm={7.5} md={9.5} xl={10} pl={{md: 0, lg: 11, xl: 6}}>
-          <Grid container sx={{justifyContent: {sm:"right", lg: "initial"}}}>
-            {otherSkillsList.map(item => <Grid item key={item.name} xs={1.5} sm={2.7} md={1.7} lg={1.4} xl={1.25} align="center">
+        <Grid item xs={12} sm={7.5} md={9.5} xl={10} pl={{md: 0, lg: 11, xl: 6}}>
+          <Grid container sx={{justifyContent: {xs:"right", lg: "initial"}}}>
+            {otherSkillsList.map(item => <Grid item key={item.name} xs={2.5} sm={2.7} md={1.7} lg={1.4} xl={1.25} align="center">
               <Box
                 sx={{
-                  my: {sm: 1.15, md:1.75}, 
+                  my: {xs: 1.15, md:1.75}, 
                   userSelect: "none",
                   opacity: .8,
                 }} 
               >
                 <Box>
-                  <Box height={{xs: 40, sm: 42, md:45, lg:50, xl: 50}} width={{xs: 40, sm: 42, md:45, lg:50, xl: 50}}>
+                  <Box height={{xs: 34, sm: 42, md:45, lg:50, xl: 50}} width={{xs: 34, sm: 42, md:45, lg:50, xl: 50}}>
                     <SkillIconImageItem 
                       src={item.url} 
                       duration={800} 
@@ -46,7 +46,7 @@ const OtherSkills = () => {
                         opacity: .6,
                         fontSize: 10, 
                         fontWeight: 300, 
-                        mt: {sm:1, md: 1.5, lg: 1.75},
+                        mt: {xs:1, md: 1.5, lg: 1.75},
                         textTransform: "uppercase",
                         letterSpacing: 1,
                       }}
