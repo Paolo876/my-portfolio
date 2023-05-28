@@ -5,9 +5,9 @@ import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 
 const TechSkills = ({ skills, title, description, isMain }) => {
   return (
-    <Grid container mb={{sm: 10, md: 10, lg: 10, xl: 15}}>
-      <Grid item xs={11} sm={4.5} md={2.75} lg={3} xl={2.75} mb={{sm: 3, md: 0}}>
-        <Box mb={3} mt={{sm: .5, md:1}}>
+    <Grid container mb={{xs: 5, sm: 10, md: 10, lg: 10, xl: 15}}>
+      <Grid item xs={11} sm={4.5} md={2.75} lg={3} xl={2.75} mb={{xs: 2, sm: 3, md: 0}}>
+        <Box mb={2} mt={{sm: .5, md:1}}>
           <Typography 
             variant="h4" 
             fontSize={{xs:23, sm: 28, md: 25, lg: 26, xl: 29}} 
@@ -26,9 +26,9 @@ const TechSkills = ({ skills, title, description, isMain }) => {
 
       <Grid item xs={12} sm={7.5} md={9.25} lg={9} xl={9.25}>
 
-        <Grid container justifyContent={{sm: "right", md: "right"}} pl={{md: 8, lg: 10, xl: 15}}>
+        <Grid container justifyContent={{xs: "right", md: "right"}} pl={{md: 8, lg: 10, xl: 15}}>
           {!isMain && 
-            <Grid item xs={12} md={6} pr={{md: 5, lg: 6, xl: 10}} pl={{sm: 6, md: 0, lg: 1, xl: 2}} mt={{sm: 1, md: 2}} mb={{sm: 3, md: 0}} > 
+            <Grid item xs={12} md={6} pr={{md: 5, lg: 6, xl: 10}} pl={{sm: 6, md: 0, lg: 1, xl: 2}} mt={{sm: 1, md: 2}} mb={{xs: 2, sm: 3, md: 0}} > 
               <Box>
                 {description}
               </Box>
