@@ -46,7 +46,7 @@ const Roadmap = () => {
           <Box>
             <Typography 
               variant="h4" 
-              fontSize={{xs: 26, sm: 27, md: 28, lg: 32, xl: 32}} 
+              fontSize={{xs: 25, sm: 27, md: 28, lg: 32, xl: 32}} 
               letterSpacing={{xs:1.25, sm:1.5, md:1.5, lg:2, xl:3.5}} 
               lineHeight={{lg:1.6, xl:1.2}} 
               fontWeight={800}
