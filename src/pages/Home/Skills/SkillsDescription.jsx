@@ -1,10 +1,7 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import { Box, Typography, Button, Stack } from '@mui/material'
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { Box, Typography, Stack } from '@mui/material'
 
 const SkillsDescription = () => {
-  const navigate = useNavigate();
 
   return (
     <Stack pl={{xs: 3, sm: 3, md: 2, lg: 3.5, xl: 5}} pr={{xs:3, sm: 3, md: 2, lg: 3.5}}>
@@ -18,17 +15,6 @@ const SkillsDescription = () => {
           I studied Computer Information Systems major in Web Development and Software Development at Pasadena City College. A part of my knowledge is also gained from self-studying through online courses, tutorials, and being a member of different coding groups.
         </Typography>
       </Box>
-      {/* <Box mt={{xs:5, md: 6, lg: 8}} mb={{xs:2, md: 4}} ml={{md: "auto"}}>
-        <Button 
-          variant="outlined" 
-          color="primary"
-          endIcon={<KeyboardArrowRightIcon color="inherit"/>}
-          onClick={() => navigate("/projects")}
-          sx={{fontWeight: 500, letterSpacing: 1.5, fontSize: {xs: 11, sm: 12, md: 14, lg: 15, xl: 16}}}
-        >
-          Explore My Works
-        </Button>
-      </Box> */}
     </Stack>
   )
 }
