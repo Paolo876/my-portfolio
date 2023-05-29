@@ -8,6 +8,7 @@ import Skills from './Skills/Skills'
 import DocumentHead from '../../components/DocumentHead'
 import useFirestoreActions from '../../hooks/useFirestoreActions'
 import useRootRedux from '../../hooks/useRootRedux'
+import useProjectsRedux from '../../hooks/useProjectsRedux'
 import { Stack } from '@mui/material'
 import Process from './Process/Process'
 import SubIntroduction from './SubIntroduction'
@@ -15,10 +16,11 @@ import Works from './Works/Works'
 
 const Home = () => {
   const { skillsList, setData } = useRootRedux();
+  const { projectsList } = useProjectsRedux();
   const { getDocumentFromCollection } = useFirestoreActions();
   const { pathname } = useLocation();
 
-  
+  console.log(projectsList)
   useEffect(() => {
     if(skillsList.length === 0){
       getDocumentFromCollection('user', 'information').then(data => setData(data))

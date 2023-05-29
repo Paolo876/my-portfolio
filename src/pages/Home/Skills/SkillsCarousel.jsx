@@ -12,9 +12,6 @@ const boxStyles = {
   userSelect: "none",
   opacity: .9,  
   background: "none",
-  // "&:hover": {
-  //   background: "rgba(150,150,150,0.1)"
-  // }
 }
 
 
