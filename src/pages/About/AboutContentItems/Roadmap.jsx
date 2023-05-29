@@ -13,17 +13,17 @@ import workicon from "../../../assets/roadmap_icons/work.svg"
 const titleTextStyles = {
   letterSpacing: 2,
   fontWeight: 800,
-  fontSize: {xs: 17, sm: 18, md:19, lg:20}
+  fontSize: {xs: 18, sm: 18, md:19, lg:20}
 }
 
 const descriptionTextStyles = {
-  fontSize:{ xs: 12, sm: 12, md: 12, lg:13, xl: 14 },
+  fontSize:{ xs: 11.5, sm: 12, md: 12, lg:13, xl: 14 },
   fontWeight: 200,
   textAlign: "justify", 
   textJustify: "inter-word", 
   mixBlendMode: "difference",
   opacity: .85,
-  lineHeight: 1.353,
+  lineHeight: 1.35,
   letterSpacing: .5, 
 }
 
@@ -60,6 +60,7 @@ const Roadmap = () => {
           <Timeline 
             position="right"
             sx={{
+              padding: {xs:0, sm: 1, md: 1.5},
               [`& .${timelineItemClasses.root}:before`]: {
                 flex: 0,
                 padding: 0,
@@ -68,10 +69,10 @@ const Roadmap = () => {
             }}
             >
             <MyTimelineItem dotColor='primary' dotIcon={walkicon}>
-              <Box pl={2}>
+              <Box pl={{xs:1, sm:2}}>
                 <Typography variant="h6" sx={titleTextStyles}>The Beginning</Typography>
               </Box>
-              <Box pl={2} pr={5} mt={1} mb={{xs: 4, sm: 5, md: 5, lg: 6, xl: 10}}>
+              <Box pl={{xs: 1, sm:2}} pr={{sm:5}} mt={1} mb={{xs: 4, sm: 5, md: 5, lg: 6, xl: 10}}>
                 <Typography variant="body1" sx={descriptionTextStyles}>
                   Before my development journey started, I studied <Box component="span" fontWeight={300}>Bachelor of Science in Architecture</Box> back in Philippines where I learned about the
                   <Box component="span" fontWeight={300}> design methods and strategies</Box> that I continue to incorporate throughout my projects. I started learning coding in 2019 through an online course called <Box component="span" fontWeight={300}> The Web Development Bootcamp by Colt Steele </Box> 
@@ -82,10 +83,10 @@ const Roadmap = () => {
             </MyTimelineItem>
 
             <MyTimelineItem dotColor='primary' dotIcon={muscleicon}>
-              <Box pl={2}>
+              <Box pl={{xs:1, sm:2}}>
                 <Typography variant="h6" sx={titleTextStyles}>The Strive</Typography>
               </Box>
-              <Box pl={2} pr={5} mt={1} mb={{xs: 4, sm: 5, md: 5, lg: 6, xl: 10}}>
+              <Box pl={{xs: 1, sm:2}} pr={{sm:5}} mt={1} mb={{xs: 4, sm: 5, md: 5, lg: 6, xl: 10}}>
                 <Typography variant="body1" sx={descriptionTextStyles}>
                   While being a part-time college student, I was also self-studying through online courses and youtube tutorials, all 
                   while being employed to a full-time office job. 
@@ -95,10 +96,10 @@ const Roadmap = () => {
             </MyTimelineItem>
 
             <MyTimelineItem dotColor='primary' dotIcon={codeicon}>
-              <Box pl={2}>
+              <Box pl={{xs:1, sm:2}}>
                 <Typography variant="h6" sx={titleTextStyles}>The Process</Typography>
               </Box>
-              <Box pl={2} pr={5} mt={1} mb={{xs: 4, sm: 5, md: 5, lg: 6, xl: 10}}>
+              <Box pl={{xs: 1, sm:2}} pr={{sm:5}} mt={1} mb={{xs: 4, sm: 5, md: 5, lg: 6, xl: 10}}>
                 <Typography variant="body1" sx={descriptionTextStyles}>
                   In college, I was able to learn the foundations, how to think like a developer, analyze logic and algorithms, 
                   and being able to work with a team.
@@ -109,10 +110,10 @@ const Roadmap = () => {
               </Box>
             </MyTimelineItem>
             <MyTimelineItem dotColor='primary' dotIcon={workicon} endItem={true}>
-              <Box pl={2}>
+              <Box pl={{xs:1, sm:2}}>
                 <Typography variant="h6" sx={titleTextStyles}>The Present</Typography>
               </Box>
-              <Box pl={2} pr={5} mt={1} mb={3}>
+              <Box pl={{xs: 1, sm:2}} pr={{sm:5}} mt={1} mb={3}>
                 <Typography variant="body1" sx={descriptionTextStyles}>
                   Present time, I still continue to learn more techologies online, further refine and improve my existing projects, and conceptualize new project ideas.
                   I may lack enough work or professional experience but I am determined and always remain consistent with my progress hoping that one day the hard work will pay off.

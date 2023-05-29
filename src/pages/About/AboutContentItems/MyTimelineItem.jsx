@@ -7,7 +7,7 @@ const MyTimelineItem = ({children, dotColor="grey", dotIcon, endItem=false, firs
     <TimelineItem sx={{minHeight: endItem ? 0 : "initial"}}>
       <TimelineSeparator>
         <TimelineDot color={dotColor} variant="filled" sx={{overflow: "hidden", color: "secondary.dark", p: .5}}>
-          {dotIcon && <SkillIconImageItem src={dotIcon} height="32px" width="32px" fit="cover"/>}
+          {dotIcon && <SkillIconImageItem src={dotIcon} height={25} width={25} fit="cover"/>}
         </TimelineDot>
         <TimelineConnector sx={{visibility: endItem ? "hidden" : "initial"}}/>
       </TimelineSeparator>
