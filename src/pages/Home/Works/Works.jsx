@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Grid, Box, Typography, Button, Stack } from '@mui/material'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import ProjectsCarousel from './ProjectsCarousel';
 
 const Works = () => {
   const navigate = useNavigate();
@@ -50,8 +51,8 @@ const Works = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} md={12} lg={9} pl={{md:0, lg:2, xl: 4}}>
-          
+        <Grid item xs={12} md={12} lg={9} pl={{md:0, lg:2, xl: 4}} alignItems="center" justifyContent="center">
+          <ProjectsCarousel/>
         </Grid>
       </Grid>
     </Box>
