@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Modal, Box, Typography, Link, Container, IconButton, Fade, Stack, Divider } from '@mui/material';
+import { Modal, Box, Typography, Link, Container, IconButton, Fade, Stack } from '@mui/material';
 import SocialLinks from '../SocialLinks';
 import PanoramaFishEyeIcon from '@mui/icons-material/PanoramaFishEye';
 import "./navbar.scss";
@@ -30,7 +30,7 @@ const linkStyles = {
 
 const nameStyles = {
   mixBlendMode: "difference", 
-  opacity: .05,
+  opacity: .15,
   textTransform: "none",
   fontWeight: 800,
   fontSize: { xs:"5rem", sm: "6rem" },
