@@ -36,7 +36,7 @@ const Certifications = () => {
                   variant="h6" 
                   fontWeight={800} 
                   letterSpacing={1} 
-                  fontSize={{xs:14, sm: 14, md: 14, lg: 16, xl: 17.5}} 
+                  fontSize={{xs:12.5, sm: 14, md: 14, lg: 16, xl: 17.5}} 
                   lineHeight={1.25}
                 >
                   {item.name}
@@ -44,11 +44,11 @@ const Certifications = () => {
                 <Typography 
                   variant="body1" 
                   fontWeight={200} 
-                  fontSize={{xs:11, sm: 11, md: 13, lg: 13, xl: 14}} 
+                  fontSize={{xs:10, sm: 11, md: 13, lg: 13, xl: 14}} 
                   letterSpacing={{sm: .5, md:1, xl:2}} 
                   textTransform="none" 
                   lineHeight={1.15}
-                  mt={{xs: 1.25, md:3}}
+                  mt={{xs: 1, sm: 1.25, md:3}}
                   sx={{opacity: .8}}
                 >
                   {item.author}

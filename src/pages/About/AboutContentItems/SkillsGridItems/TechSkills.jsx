@@ -5,8 +5,8 @@ import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 
 const TechSkills = ({ skills, title, description, isMain }) => {
   return (
-    <Grid container mb={{xs: 5, sm: 10, md: 10, lg: 10, xl: 15}}>
-      <Grid item xs={11} sm={4.5} md={2.75} lg={3} xl={2.75} mb={{xs: 2, sm: 3, md: 0}}>
+    <Grid container mb={{xs: 4.5, sm: 10, md: 10, lg: 10, xl: 15}}>
+      <Grid item xs={11} sm={4.5} md={2.75} lg={3} xl={2.75} mb={{xs: 1.5, sm: 3, md: 0}}>
         <Box mb={2} mt={{sm: .5, md:1}}>
           <Typography 
             variant="h4" 
@@ -28,7 +28,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
 
         <Grid container justifyContent={{xs: "right", md: "right"}} pl={{md: 8, lg: 10, xl: 15}}>
           {!isMain && 
-            <Grid item xs={12} md={6} pr={{md: 5, lg: 6, xl: 10}} pl={{sm: 6, md: 0, lg: 1, xl: 2}} mt={{sm: 1, md: 2}} mb={{xs: 2, sm: 3, md: 0}} > 
+            <Grid item xs={12} md={6} pr={{md: 5, lg: 6, xl: 10}} pl={{sm: 6, md: 0, lg: 1, xl: 2}} mt={{sm: 1, md: 2}} mb={{xs: 1, sm: 3, md: 0}} > 
               <Box>
                 {description}
               </Box>
@@ -59,7 +59,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
                       opacity: .4,
                       fontSize: {xs: 10, sm: 11, md: 11, lg: 11}, 
                       fontWeight: 300, 
-                      mt: 1.5,
+                      mt: {xs: 1, sm:1.5},
                       textTransform: "uppercase",
                       letterSpacing: { sm: .2, md: 0.5, lg: 2 },
                     }}
