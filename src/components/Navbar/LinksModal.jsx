@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Modal, Box, Typography, Link, Container, IconButton, Fade, Stack, Divider } from '@mui/material';
 import SocialLinks from '../SocialLinks';
@@ -8,7 +8,7 @@ import "./navbar.scss";
 const styles = {
   height: "100%",
   width: "100%",
-  backdropFilter: "blur(3px) contrast(20%) brightness(42%)",
+  backdropFilter: "blur(3px) contrast(38%) brightness(20%)",
   border: 0,
   position: "relative",
 }
@@ -30,7 +30,7 @@ const linkStyles = {
 
 const nameStyles = {
   mixBlendMode: "difference", 
-  opacity: .2,
+  opacity: .05,
   textTransform: "none",
   fontWeight: 800,
   fontSize: { xs:"5rem", sm: "6rem" },
@@ -48,6 +48,10 @@ const LinksModal = ({ open, onClose}) => {
     onClose();
     navigate(url)
   }
+
+  useEffect(() => {
+    onClose();
+  }, [location])
 
 
   return (
