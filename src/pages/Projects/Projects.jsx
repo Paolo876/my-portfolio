@@ -130,7 +130,7 @@ const MOCK_PROJ_LIST = [
     ],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
-    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_logo_white.png?alt=media&token=5d2083ea-340c-4479-be33-0938373ea91a",
+    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_banner.png?alt=media&token=806bcf08-5e0f-4cca-9586-92f6883da1d1&_gl=1*i2a8kw*_ga*MTA2ODgwODE2MS4xNjcxNDE1MTQ5*_ga_CW55HF8NVT*MTY4NTk0OTI1MS4yNC4xLjE2ODU5NDkyOTkuMC4wLjA.",
     palette: {
       primary: "#237b72",
       secondary: "#2e779d",
