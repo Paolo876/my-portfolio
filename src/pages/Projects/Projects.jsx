@@ -124,13 +124,16 @@ const MOCK_PROJ_LIST = [
     technologies: [ "JavaScript", "React", "Redux", "Firebase", "Material-UI", "Sass/Scss"],
     type: "personal",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
-    coverImage: MOCK_PROJ_IMG,
+    coverImage: {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_banner.png?alt=media&token=aca8d0cd-9b7f-40bd-b425-a04e391bc26b",
+      name: "luna_banner.png"
+    },
     features: [
       ""
     ],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
-    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_banner.png?alt=media&token=806bcf08-5e0f-4cca-9586-92f6883da1d1&_gl=1*i2a8kw*_ga*MTA2ODgwODE2MS4xNjcxNDE1MTQ5*_ga_CW55HF8NVT*MTY4NTk0OTI1MS4yNC4xLjE2ODU5NDkyOTkuMC4wLjA.",
+    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_banner.png?alt=media&token=aca8d0cd-9b7f-40bd-b425-a04e391bc26b",
     palette: {
       primary: "#237b72",
       secondary: "#2e779d",
