@@ -37,19 +37,19 @@ const MOCK_PROJ_LIST = [
     images: [
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_1.webp?alt=media&token=5b04da84-3fb6-4a64-9696-6888062acd40",
-      name: "moby_1.png"
+      name: "moby_1.webp"
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_2.webp?alt=media&token=fcf0ea56-8abd-4ea5-91bb-3ef31c74e4ca",
-      name: "moby_2.png"
+      name: "moby_2.webp"
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_3.webp?alt=media&token=2f0dbef8-bf61-4782-af68-e0b25d77192f",
-      name: "moby_3.png"
+      name: "moby_3.webp"
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_4.webp?alt=media&token=4ed6a274-b170-47a3-9ccb-49e20ea79a6f",
-      name: "moby_4.png"
+      name: "moby_4.webp"
       }, 
     ],
     coverImage: {
@@ -94,7 +94,7 @@ const MOCK_PROJ_LIST = [
     title: "Downtown Suits Direct",
     briefDescription: "Downtown Suits Direct is a men's suit and tailor shop located in Pico Rivera, California.",
     description: "Downtown Suits Direct is a men's suit and tailor shop located in Pico Rivera, California. It is a commissioned project that I designed and developed using React and Firebase.",
-    technologies: [ "JavaScript", "React","Firebase", "Sass/Scss"],
+    technologies: [ "JavaScript", "React","Firebase", "Material-UI", "Sass/Scss"],
     type: "commissioned",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
     coverImage: {
@@ -123,8 +123,36 @@ const MOCK_PROJ_LIST = [
     description: "Luna is a personalizable browser homepage alternative inspired by the google chrome extension 'Momentum'. It features a beautiful UI that can be customized by the user through a variety of options.",
     technologies: [ "JavaScript", "React", "Redux", "Firebase", "Material-UI", "Sass/Scss"],
     type: "personal",
-    images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
-    coverImage: {
+    images: [
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_1.webp?alt=media&token=42025a57-7ae5-4ac1-8806-7f3885dd6d8e",
+      name: "luna_1.webp"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_2.webp?alt=media&token=5aa23eaf-7312-45a0-9f30-0930c7b690e5",
+      name: "luna_2.webp"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_3.webp?alt=media&token=e9645459-01d3-4855-ae45-75e6fa3f7a18",
+      name: "luna_3.webp"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_4.webp?alt=media&token=fb69e6dc-0049-4dd3-aa03-01990576fba5",
+      name: "luna_4.webp"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_5.webp?alt=media&token=3d4cd222-cb9f-409e-8d69-e02eaa94f3cf",
+      name: "luna_5.webp"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_6.webp?alt=media&token=b10b51e0-24fc-42d2-a361-7568fa3fc153",
+      name: "luna_6.webp"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_7.webp?alt=media&token=2f974a92-f1f6-4be1-b1af-88ef8c579338",
+      name: "luna_7.webp"
+      }, 
+    ],    coverImage: {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_banner.png?alt=media&token=aca8d0cd-9b7f-40bd-b425-a04e391bc26b",
       name: "luna_banner.png"
     },
@@ -144,7 +172,7 @@ const MOCK_PROJ_LIST = [
     title: "Carl Dimabuyu Portfolio",
     briefDescription: "A web portfolio of an architect based in Doha, Qatar that I designed and developed.",
     description: "A web portfolio of an architect based in Doha, Qatar that I designed and developed.",
-    technologies: [ "JavaScript", "React", "Material-UI", "Sass/Scss"],
+    technologies: [ "JavaScript", "React", "Firebase", "Material-UI", "Sass/Scss"],
     type: "commissioned",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
     coverImage: {
@@ -165,7 +193,7 @@ const MOCK_PROJ_LIST = [
     title: "Ayn Laquindanum Portfolio",
     briefDescription: "A web portfolio of a graphic artist/architect based in Philippines that I designed and developed.",
     description: "A web portfolio of a graphic artist/architect based in Philippines that I designed and developed.",
-    technologies: [ "JavaScript", "React", "Material-UI", "Sass/Scss"],
+    technologies: [ "JavaScript", "React", "Firebase", "Material-UI", "Sass/Scss"],
     type: "commissioned",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
     coverImage: {
