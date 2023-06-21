@@ -107,8 +107,8 @@ const MOCK_PROJ_LIST = [
       "Image optimization using Imagekit.io api",
       "Inquiry form forwards data to client's email using EmailJS api"
     ],
-    url: "http://www.google.com",
-    githubUrl: "http://www.google.com",
+    url: "https://downtownsuitsdirectla.web.app/",
+    githubUrl: "https://github.com/Paolo876/downtownsuitsdirect",
     logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_logo_white.png?alt=media&token=5d2083ea-340c-4479-be33-0938373ea91a",
     palette: {
       primary: "#237b72",
