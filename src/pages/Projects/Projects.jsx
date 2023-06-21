@@ -119,8 +119,8 @@ const MOCK_PROJ_LIST = [
   {
     name: "luna", 
     title: "Luna",
-    briefDescription: "Luna is a personalizable browser homepage alternative inspired by the google chrome extension 'Momentum'.",
-    description: "Luna is a personalizable browser homepage alternative inspired by the google chrome extension 'Momentum'. It features a UI that the user can freely customize through rearranging the components, elements positioning, font properties, and UI color scheme.",
+    briefDescription: "Luna is a beautiful browser homepage alternative that allows the user to customize the UI to their preference with many options and features.",
+    description: "Luna is a personalizable browser homepage alternative inspired by the google chrome extension 'Momentum'. It features a beautiful UI that can be customized by the user through a variety of options.",
     technologies: [ "JavaScript", "React", "Redux", "Firebase", "Material-UI", "Sass/Scss"],
     type: "personal",
     images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
@@ -131,8 +131,8 @@ const MOCK_PROJ_LIST = [
     features: [
       ""
     ],
-    url: "http://www.google.com",
-    githubUrl: "http://www.google.com",
+    url: "http://luna.paolobugarin.com",
+    githubUrl: "https://github.com/Paolo876/luna2.0",
     logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_banner.png?alt=media&token=aca8d0cd-9b7f-40bd-b425-a04e391bc26b",
     palette: {
       primary: "#237b72",
