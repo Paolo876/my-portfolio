@@ -63,6 +63,57 @@ const MOCK_PROJ_LIST = [
     }
   },
   {
+    name: "luna", 
+    title: "Luna",
+    briefDescription: "Luna is a beautiful browser homepage alternative that allows the user to customize the UI to their preference with many options and features.",
+    description: "Luna is a personalizable browser homepage alternative inspired by the google chrome extension 'Momentum'. It features a beautiful UI that can be customized by the user through a variety of options.",
+    technologies: [ "JavaScript", "React", "Redux", "Firebase", "Material-UI", "Sass/Scss"],
+    type: "personal",
+    images: [
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_1.webp?alt=media&token=42025a57-7ae5-4ac1-8806-7f3885dd6d8e",
+      name: "luna_1.webp"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_2.webp?alt=media&token=5aa23eaf-7312-45a0-9f30-0930c7b690e5",
+      name: "luna_2.webp"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_3.webp?alt=media&token=e9645459-01d3-4855-ae45-75e6fa3f7a18",
+      name: "luna_3.webp"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_4.webp?alt=media&token=fb69e6dc-0049-4dd3-aa03-01990576fba5",
+      name: "luna_4.webp"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_5.webp?alt=media&token=3d4cd222-cb9f-409e-8d69-e02eaa94f3cf",
+      name: "luna_5.webp"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_6.webp?alt=media&token=b10b51e0-24fc-42d2-a361-7568fa3fc153",
+      name: "luna_6.webp"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_7.webp?alt=media&token=2f974a92-f1f6-4be1-b1af-88ef8c579338",
+      name: "luna_7.webp"
+      }, 
+    ],    coverImage: {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_banner.png?alt=media&token=aca8d0cd-9b7f-40bd-b425-a04e391bc26b",
+      name: "luna_banner.png"
+    },
+    features: [
+      ""
+    ],
+    url: "http://luna.paolobugarin.com",
+    githubUrl: "https://github.com/Paolo876/luna2.0",
+    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_banner.png?alt=media&token=aca8d0cd-9b7f-40bd-b425-a04e391bc26b",
+    palette: {
+      primary: "#237b72",
+      secondary: "#2e779d",
+    }
+  },
+  {
     name: "mernshop", 
     title: "MernShop",
     briefDescription: "MernShop is an e-commerce web app demo inspired from TraversyMedia's ReactJS Udemy Course.",
@@ -117,66 +168,35 @@ const MOCK_PROJ_LIST = [
 
   },
   {
-    name: "luna", 
-    title: "Luna",
-    briefDescription: "Luna is a beautiful browser homepage alternative that allows the user to customize the UI to their preference with many options and features.",
-    description: "Luna is a personalizable browser homepage alternative inspired by the google chrome extension 'Momentum'. It features a beautiful UI that can be customized by the user through a variety of options.",
-    technologies: [ "JavaScript", "React", "Redux", "Firebase", "Material-UI", "Sass/Scss"],
-    type: "personal",
-    images: [
-      {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_1.webp?alt=media&token=42025a57-7ae5-4ac1-8806-7f3885dd6d8e",
-      name: "luna_1.webp"
-      }, 
-      {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_2.webp?alt=media&token=5aa23eaf-7312-45a0-9f30-0930c7b690e5",
-      name: "luna_2.webp"
-      }, 
-      {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_3.webp?alt=media&token=e9645459-01d3-4855-ae45-75e6fa3f7a18",
-      name: "luna_3.webp"
-      }, 
-      {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_4.webp?alt=media&token=fb69e6dc-0049-4dd3-aa03-01990576fba5",
-      name: "luna_4.webp"
-      }, 
-      {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_5.webp?alt=media&token=3d4cd222-cb9f-409e-8d69-e02eaa94f3cf",
-      name: "luna_5.webp"
-      }, 
-      {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_6.webp?alt=media&token=b10b51e0-24fc-42d2-a361-7568fa3fc153",
-      name: "luna_6.webp"
-      }, 
-      {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_7.webp?alt=media&token=2f974a92-f1f6-4be1-b1af-88ef8c579338",
-      name: "luna_7.webp"
-      }, 
-    ],    coverImage: {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_banner.png?alt=media&token=aca8d0cd-9b7f-40bd-b425-a04e391bc26b",
-      name: "luna_banner.png"
-    },
-    features: [
-      ""
-    ],
-    url: "http://luna.paolobugarin.com",
-    githubUrl: "https://github.com/Paolo876/luna2.0",
-    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_banner.png?alt=media&token=aca8d0cd-9b7f-40bd-b425-a04e391bc26b",
-    palette: {
-      primary: "#237b72",
-      secondary: "#2e779d",
-    }
-  },
-  {
     name: "carlportfolio", 
     title: "Carl Dimabuyu Portfolio",
     briefDescription: "A web portfolio of an architect based in Doha, Qatar that I designed and developed.",
     description: "A web portfolio of an architect based in Doha, Qatar that I designed and developed.",
     technologies: [ "JavaScript", "React", "Firebase", "Material-UI", "Sass/Scss"],
     type: "commissioned",
-    images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
-    coverImage: {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fcarl_banner.png?alt=media&token=ebc649fb-fac8-46af-a93a-2c0f11db1f75",
+    images: [
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fcarl_1.webp?alt=media&token=23c18278-e0fb-4b49-bdd8-79ebb0075099",
+      name: "carl_1.webp"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fcarl_2.webp?alt=media&token=3bd54ca5-770f-4e55-a5c1-4142d83932ea",
+      name: "carl_2.webp"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fcarl_3.webp?alt=media&token=771a7033-e8fb-47f8-be00-ee098671190c",
+      name: "carl_3.webp"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fcarl_4.webp?alt=media&token=2e059571-68e5-4eb2-8963-c0d15b6baa4d",
+      name: "carl_4.webp"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fcarl_5.webp?alt=media&token=5d72b68a-0a12-4810-9029-8d12c989d2fb",
+      name: "carl_5.webp"
+      }, 
+    ],    coverImage: {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fcarl_banner.png?alt=media&token=06a4d3db-9648-4dff-af53-8dbcc0ad0312",
       name: "carl_banner.png"
     },
     features: [],
