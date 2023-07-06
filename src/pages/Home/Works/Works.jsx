@@ -34,7 +34,7 @@ const Works = () => {
           </Box>
           <Box mt={{xs: 2, sm:4, md: 1, lg: 3, xl: 4}}>
             <Typography variant="body1" fontSize={{xs: 13, sm: 14, md: 13.5, lg:15, xl: 15}} fontWeight={300} sx={{textAlign: "justify", textJustify: "inter-word", opacity: .8}}>
-              I studied Computer Information Systems major in Web Development and Software Development at Pasadena City College. A part of my knowledge is also gained from self-studying through online courses, tutorials, and being a member of different coding groups.
+              I studied Computer Information Systems major in Web Development and Software Development at Pasadena City College. A part of my knowledge is also gained from self-studying through online courses, tutorials, and being part of different coding groups.
             </Typography>
             
           </Box>

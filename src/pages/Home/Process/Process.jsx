@@ -7,11 +7,11 @@ import ProcessStepperMobile from './ProcessStepperMobile'
 const processItems = [
   {
     title: "Conceptualization",
-    body: "The idea turns into a concept. This is the process where I define the main purpose and functions of the project. I then decide of the theme, color scheme, elements, and utilities of the app.",
+    body: "This is the initial phase of my work where I define the main purpose and functions of the project. I create a draft of the UI/UX and the necessary diagrams for the project.",
   },
   {
     title: "Planning",
-    body: "This process is where I draft the structure and UI/UX of my app. I list down the web pages needed, the libraries or frameworks to use, the initial pseudo-codes, and other preparations before actual coding starts.",
+    body: "This is the process of refining the initial drafts and having a clear vision of the outcome. I write the initial pseudo-codes, list the needed libraries and frameworks, and other preparations before I start coding",
   },
   {
     title: "Development",
