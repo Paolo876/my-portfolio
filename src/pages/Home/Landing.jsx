@@ -40,13 +40,23 @@ const Landing = () => {
   const navigate = useNavigate();
 
   return (
-    <Container maxWidth="xl" sx={{pt: 8, height: "93vh", px:0}}>
+    <Box
+      sx={{
+        pt: 8, 
+        height: "93vh", 
+        position: "relative", 
+        px: { xs:0, sm: 1, md: 1, lg: 2.25, xl: 3 }, 
+        py: { xs:8, sm: 10, md: 11, lg: 12, xl: 12 },
+      }}
+    >
       <DocumentHead
         title="Paolo Bugarin | Developer"
         description="I am a full stack web developer based in Los Angeles, California"
         keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
       />
-      <Grid container sx={{px: {xs: 1, lg: 2}, height: "100%" }}>
+      {/* <Grid container sx={{px: {xs: 1, lg: 2}, height: "100%" }}> */}
+      <Grid container sx={{maxWidth: "1500px", mx: "auto", height: "100%", px: {md: 0,lg:2}}}>
+
         <Grid item pt={{xs: 7, md:11}} xs={12} sm={8} sx={{minHeight: {xs: "fit-content", sm: "65vh",md:"0vh"}}}>
           <Typography variant="h1" sx={nameStyles}>Paolo</Typography>
           <Typography variant="h1" sx={nameStyles}>Bugarin</Typography>
@@ -61,10 +71,24 @@ const Landing = () => {
               letterSpacing: { xs: .5, md: 1.25, lg: 1.25, xl:1.5 },
               textTransform: "none",
               userSelect: "none"
-
             }}
           >
             {`< `}Full Stack Web Developer{` />`}
+          </Typography>
+          <Typography 
+            variant="h6"
+            sx={{
+              mt:{ xs: 4.5, sm: 5, md: 5, lg: 7, xl:10 } ,
+              fontWeight: 200, 
+              fontSize: { xs: "1.2rem", sm: "1.4rem", md: "1.5rem", lg: "1.6rem", xl:"1.7rem" },
+              opacity: .7, 
+              mixBlendMode: "difference", 
+              letterSpacing: { xs: .5, md: 1.25, lg: 1.25, xl:1.5 },
+              textTransform: "none",
+              userSelect: "none"
+            }}
+          >
+            Los Angeles, CA
           </Typography>
         </Grid>
 
@@ -101,7 +125,7 @@ const Landing = () => {
           <SocialLinks />
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   )
 }
 
