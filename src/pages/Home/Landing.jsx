@@ -5,7 +5,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import SocialLinks from '../../components/SocialLinks';
 
 const linkStyles = {
-  fontSize: { xs: "1.25rem", sm: "1.5rem", md: "1.6rem", lg: "1.8rem", xl:"2rem" },
+  fontSize: { xs: "1.25rem", sm: "1.5rem", md: "1.6rem", lg: "1.8rem", xl:"1.9rem" },
   my: { xs:1.75, sm: 2, md: 2 },
   fontWeight: 500,
   textAlign: "right",
