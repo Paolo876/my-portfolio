@@ -13,6 +13,7 @@ import { Stack } from '@mui/material'
 import Process from './Process/Process'
 import SubIntroduction from './SubIntroduction'
 import Works from './Works/Works'
+import Landing from './Landing'
 
 const Home = () => {
   const { skillsList, setData } = useRootRedux();
@@ -39,7 +40,8 @@ const Home = () => {
           description="I am a full stack web developer based in Los Angeles, California"
           keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
         />
-        <Introduction/>
+        {/* <Introduction/> */}
+        <Landing/>
         <SubIntroduction/>
         <Works/>
         <Process/>

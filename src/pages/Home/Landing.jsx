@@ -1,10 +1,9 @@
-import { useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Grid, Typography, Link, Stack, IconButton, Box, Container } from '@mui/material'
 import { Link as ReactLink } from 'react-router-dom';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import SocialLinks from '../components/SocialLinks';
-import DocumentHead from '../components/DocumentHead';
+import SocialLinks from '../../components/SocialLinks';
+import DocumentHead from '../../components/DocumentHead';
 
 
 const linkStyles = {
@@ -31,7 +30,7 @@ const nameStyles = {
   textTransform: "none",
   fontWeight: 800,
   fontSize: { xs:"5.6rem", sm: "7rem", md: "8rem", lg: "10rem", xl:"11rem" },
-  lineHeight: .85,
+  lineHeight: 1,
   userSelect: "none",
 }
 
@@ -48,20 +47,6 @@ const boxStyles = {
 
 const Landing = () => {
   const navigate = useNavigate();
-  const location = useLocation();
-
-  useEffect(() => {
-    window.onwheel = e => {
-      if(e.deltaY > 0){
-        navigate("/home")
-      }
-    }
-  
-    return () => {
-      window.onwheel = null;
-    };
-  }, []);
-
 
   return (
     <Container maxWidth="xl" sx={{pt: 8, height: "93vh", px:0}}>
