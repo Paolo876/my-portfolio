@@ -26,24 +26,15 @@ const linkStyles = {
 }
 
 const nameStyles = {
-  mixBlendMode: "difference", 
   textTransform: "none",
   fontWeight: 800,
-  fontSize: { xs:"5.6rem", sm: "7rem", md: "8rem", lg: "10rem", xl:"11rem" },
+  fontSize: { xs:"5.6rem", sm: "7rem", md: "8rem", lg: "10rem", xl:"12rem" },
   lineHeight: 1,
+  letterSpacing: -.25,
   userSelect: "none",
+  textShadow: "1px 1px 10px rgba(0,0,0,0.25)"
 }
 
-const boxStyles = {
-  backgroundColor: "rgba(255,255,255,1)",
-  opacity: .0,
-  mixBlendMode: "difference",
-  height: 4,
-  width: 4,
-  position: "absolute",
-  bottom: 1,
-  right: -10,
-}
 
 const Landing = () => {
   const navigate = useNavigate();
@@ -100,10 +91,9 @@ const Landing = () => {
               </IconButton>
             </Box>
             <Box align="right">
-              <Link component={ReactLink} to="/home" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Home</Typography><Box sx={boxStyles}></Box></Link>
-              <Link component={ReactLink} to="/projects" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Projects</Typography><Box sx={boxStyles}></Box></Link>
-              <Link component={ReactLink} to="/about" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>About</Typography><Box sx={boxStyles}></Box></Link>
-              <Link component={ReactLink} to="/contact" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Contact</Typography><Box sx={boxStyles}></Box></Link>
+              <Link component={ReactLink} to="/projects" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Projects</Typography></Link>
+              <Link component={ReactLink} to="/about" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>About</Typography></Link>
+              <Link component={ReactLink} to="/contact" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Contact</Typography></Link>
             </Box>
           </Stack>
         </Grid>
