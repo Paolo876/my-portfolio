@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { Grid, Typography, Link, Stack, IconButton, Box, Container } from '@mui/material'
+import { Grid, Typography, Link, IconButton, Box } from '@mui/material'
 import { Link as ReactLink } from 'react-router-dom';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import SocialLinks from '../../components/SocialLinks';
@@ -32,6 +32,21 @@ const nameStyles = {
   textShadow: "1px 1px 3px rgba(100,100,100,.75)",
 }
 
+const subHeaderStyles = {
+  fontWeight: 200, 
+  fontSize: { xs: "1.2rem", sm: "1.4rem", md: "1.5rem", lg: "1.6rem", xl:"1.8rem" },
+  opacity: .65, 
+  mixBlendMode: "difference", 
+  letterSpacing: .25,
+  textTransform: "none",
+  userSelect: "none"
+}
+
+const subHeaderSymbolStyles = {
+  opacity: .5,
+  fontWeight: 600,
+}
+
 
 const Landing = () => {
   const navigate = useNavigate();
@@ -49,27 +64,18 @@ const Landing = () => {
         justifyContent: "space-between"
       }}
     >
-      <Grid container sx={{maxWidth: "1500px", mx: "auto", height: "85%", px: {md: 0,lg:2}}}>
-        <Grid item xs={12} sm={8}>
+      <Grid container sx={{maxWidth: "1500px", mx: "auto", height: "92%", px: {md: 0,lg:2}}}>
+        <Grid item xs={12} sm={8} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", pb: 6}}>
           <Box>
             <Typography variant="h1" sx={nameStyles}>Paolo</Typography>
             <Typography variant="h1" sx={nameStyles}>Bugarin</Typography>
           </Box>
-          <Box mt={{ xs: 4.5, sm: 5, md: 5, lg: 13, xl:15 }} ml={1}>
-            <Typography 
-              variant="h5"
-              sx={{
-                fontWeight: 200, 
-                fontSize: { xs: "1.2rem", sm: "1.4rem", md: "1.5rem", lg: "1.6rem", xl:"1.8rem" },
-                opacity: .6, 
-                mixBlendMode: "difference", 
-                // letterSpacing: { xs: .5, md: 1, lg: 1, xl:.5 },
-                letterSpacing: .25,
-                textTransform: "none",
-                userSelect: "none"
-              }}
-            >
-              {`< `}Full Stack Web Developer{` />`}
+          <Box mt={{ xs: 4.5, sm: 5, md: 5, lg: 13, xl:15 }} ml={1.5}>
+            <Typography variant="h5" sx={subHeaderStyles}>
+              <Box component="span" sx={subHeaderSymbolStyles}>{`<`}</Box> Full Stack Web Developer <Box component="span" sx={subHeaderSymbolStyles}>{`>`}</Box>
+            </Typography>
+            <Typography variant="h5" sx={subHeaderStyles} mt={1.5}>
+              <Box component="span" sx={subHeaderSymbolStyles}>{`<`}</Box> Los Angeles, CA <Box component="span" sx={subHeaderSymbolStyles}>{`>`}</Box>
             </Typography>
           </Box>
         </Grid>
