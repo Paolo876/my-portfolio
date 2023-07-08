@@ -5,7 +5,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import SocialLinks from '../../components/SocialLinks';
 
 const linkStyles = {
-  fontSize: { xs: "1.25rem", sm: "1.5rem", md: "1.6rem", lg: "1.8rem", xl:"1.9rem" },
+  fontSize: { xs: "1.25rem", sm: "1.5rem", md: "1.6rem", lg: "1.8rem", xl:"1.8rem" },
   my: { xs:1.75, sm: 2, md: 2 },
   fontWeight: 500,
   textAlign: "right",
@@ -29,15 +29,15 @@ const nameStyles = {
   lineHeight: .9,
   letterSpacing: -1,
   userSelect: "none",
-  textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+  textShadow: "1px 1px 3px rgba(100,100,100,.25)",
 }
 
 const subHeaderStyles = {
   fontWeight: 200, 
-  fontSize: { xs: "1.2rem", sm: "1.4rem", md: "1.5rem", lg: "1.6rem", xl:"1.8rem" },
-  opacity: .65, 
+  fontSize: { xs: "1.2rem", sm: "1.4rem", md: "1.5rem", lg: "1.6rem", xl:"1.6rem" },
+  opacity: .55, 
   mixBlendMode: "difference", 
-  letterSpacing: .25,
+  letterSpacing: .5,
   textTransform: "none",
   userSelect: "none"
 }
@@ -55,7 +55,7 @@ const Landing = () => {
     <Box
       sx={{
         pt: 8, 
-        height: "93vh", 
+        height: "95vh", 
         position: "relative", 
         px: { xs:0, sm: 1, md: 1, lg: 2.25, xl: 3 }, 
         pt: { xs:8, sm: 12, md: 13, lg: 15, xl: 15 },
@@ -64,7 +64,7 @@ const Landing = () => {
         justifyContent: "space-between"
       }}
     >
-      <Grid container sx={{maxWidth: "1500px", mx: "auto", height: "92%", px: {md: 0,lg:2}}}>
+      <Grid container sx={{maxWidth: "1500px", mx: "auto", height: "90%", px: {md: 0,lg:2}}}>
         <Grid item xs={12} sm={8} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", pb: 6}}>
           <Box>
             <Typography variant="h1" sx={nameStyles}>Paolo</Typography>
@@ -80,8 +80,24 @@ const Landing = () => {
           </Box>
         </Grid>
         <Grid item xs={12} sm={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", py: 3}}>
-          <Box sx={{width: "fit-content", ml: "auto", opacity: .65}}>
-            <SocialLinks flexDirection='column' color="inherit" gap={.25}/>
+          <Box sx={{width: "fit-content", ml: "auto"}}>
+            <SocialLinks 
+              flexDirection='column' 
+              color="inherit" 
+              gap={.25}
+              placement="left"
+              additionalStyles={{
+                opacity: .65,
+                transition: "all 150ms ease-in-out",
+                // color: "primary.light",
+                "&:hover": {
+                  opacity: 1,
+                  transform: "scale(1.15)",
+                  color: "primary.light",
+                }
+              }}
+
+            />
           </Box>
           <Box align="right">
             <Link component={ReactLink} to="/projects" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Projects</Typography></Link>
