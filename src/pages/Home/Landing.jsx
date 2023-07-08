@@ -54,7 +54,6 @@ const Landing = () => {
   return (
     <Box
       sx={{
-        pt: 8, 
         height: "95vh", 
         position: "relative", 
         px: { xs:0, sm: 1, md: 1, lg: 2.25, xl: 3 }, 
@@ -89,14 +88,12 @@ const Landing = () => {
               additionalStyles={{
                 opacity: .65,
                 transition: "all 150ms ease-in-out",
-                // color: "primary.light",
                 "&:hover": {
                   opacity: 1,
                   transform: "scale(1.15)",
                   color: "primary.light",
                 }
               }}
-
             />
           </Box>
           <Box align="right">

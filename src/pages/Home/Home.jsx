@@ -14,6 +14,7 @@ import Process from './Process/Process'
 import SubIntroduction from './SubIntroduction'
 import Works from './Works/Works'
 import Landing from './Landing'
+import Projects from './Projects/Projects'
 
 const Home = () => {
   const { skillsList, setData } = useRootRedux();
@@ -40,9 +41,9 @@ const Home = () => {
           description="I am a full stack web developer based in Los Angeles, California"
           keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
         />
-        {/* <Introduction/> */}
         <Landing/>
         <SubIntroduction/>
+        <Projects/>
         <Works/>
         <Process/>
         <Skills/>
