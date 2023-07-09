@@ -6,19 +6,25 @@ import SocialLinks from '../../components/SocialLinks';
 
 const linkStyles = {
   fontSize: { xs: "1.25rem", sm: "1.5rem", md: "1.6rem", lg: "1.8rem", xl:"1.8rem" },
-  my: { xs:1.75, sm: 2, md: 2 },
+  my: { xs:1.75, sm: 2, md: 3, lg: 4 },
+  borderRight: 2, 
+  borderColor: "rgba(200, 200, 200, .5)",
+  pr: 2,
+  lineHeight: 1,
   fontWeight: 500,
   textAlign: "right",
   textTransform: "none",
-  letterSpacing: {xs: 1.75, md: 2, lg: 2.5},
+  letterSpacing: .5,
   width: "fit-content",
-  opacity: .65,
+  opacity: .75,
   transition: "all 150ms ease-in-out",
   fontFamily: "Manrope",
   "&:hover":{
     opacity:1,
     textShadow: "1px 1px 3px rgba(100,100,100,.75)",
-    transform: "scale(1.05)"
+    transform: "scale(1.05)",
+    borderColor: "primary.main",
+
   }
 }
 
@@ -112,9 +118,9 @@ const Landing = () => {
           color="primary" 
           sx={{
             transform: "rotate(90deg) scale(1.15)",
-            transition: "all 300ms ease-in-out",
+            transition: "all 200ms ease-in-out",
             "&:hover" : {
-              transform: "rotate(90deg) scale(1.3) translateX(.15em)",
+              transform: "rotate(90deg) scale(1.25) translateX(.1em)",
               filter: "brightness(1.15)"
             },
           }} 
