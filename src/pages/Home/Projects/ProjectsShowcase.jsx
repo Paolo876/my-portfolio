@@ -13,8 +13,11 @@ const ProjectsShowcase = () => {
         top: 0,
         right: -50,
         overflow: "hidden",
-        py: {xs:8, sm: 10, md: 11, lg: 14, xl: 15},
+        py: {xs:8, sm: 10, md: 11, lg: 14, xl: 18},
         pl: 10,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
       }}
     >
       <Grid container gap={10}>
