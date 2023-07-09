@@ -24,6 +24,7 @@ const About = () => {
             opacity: .65,
             transition: "all 500ms ease-in-out",
             letterSpacing: 3,
+            textShadow: "1px 1px 7px rgba(10,10,10,.5)",
             "&:hover": {
               transform: "scale(1.015)",
               opacity: 1,

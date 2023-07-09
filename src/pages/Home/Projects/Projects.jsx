@@ -22,20 +22,20 @@ const Projects = () => {
         <Grid item lg={3}>
           <Box sx={{display: {xs: "none", lg: "initial"}}}>
             <Typography 
-              variant="h3" 
+              variant="h2" 
               align="left" 
-              fontWeight={800}
+              fontWeight={200}
               fontSize={{lg: 75, xl: 85}} 
-              letterSpacing={-.5}
+              letterSpacing={1}
               lineHeight={{lg:1.6, xl:1.1}} 
               textTransform="none"
               sx={{
-                textShadow: "1px 1px 7px rgba(10,10,10,.35)",
+                textShadow: "1px 1px 7px rgba(10,10,10,.5)",
               }}
             >
               My<br/>Projects
             </Typography>
-            <Box sx={{background: "rgba(239,235,229,1)", height: 10, width: 10, mr: "auto", mt: {xs: 1.5, md:2}, ml: .75, opacity: .95, boxShadow: 5}}></Box>
+            <Box sx={{background: "rgba(239,235,229,1)", height: 5, width: 5, mr: "auto", mt: {xs: 1.5, md:1.5}, ml: .75, opacity: 1, boxShadow: 3}}></Box>
           </Box>
           <Box mt={{xs: 2, sm:4, md: 1, lg: 5, xl: 4}} ml={{lg: .5}}>
             <Typography 
