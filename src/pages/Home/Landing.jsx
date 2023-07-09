@@ -54,13 +54,13 @@ const Landing = () => {
   return (
     <Box
       sx={{
-        height: "95vh", 
+        height: "96vh", 
         position: "relative", 
         px: { xs:0, sm: 1, md: 1, lg: 2.25, xl: 3 }, 
         pt: { xs:8, sm: 12, md: 13, lg: 15, xl: 15 },
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
       }}
     >
       <Grid container sx={{maxWidth: "1500px", mx: "auto", height: "90%", px: {md: 0,lg:2}}}>
@@ -106,7 +106,20 @@ const Landing = () => {
       <Box 
         sx={{width: "100%", display: "flex", alignItems: "center", justifyContent: "center"}}
         >
-        <IconButton size="large" onClick={() => navigate("/home")} color="primary" sx={{transform: "rotate(90deg)"}}>
+        <IconButton 
+          size="large" 
+          onClick={() => navigate("/home")} 
+          color="primary" 
+          sx={{
+            transform: "rotate(90deg) scale(1.15)",
+            transition: "all 300ms ease-in-out",
+            "&:hover" : {
+              transform: "rotate(90deg) scale(1.3) translateX(.15em)",
+              filter: "brightness(1.15)"
+            },
+          }} 
+          disableRipple
+        >
           <ArrowForwardIosIcon fontSize="large"/>
         </IconButton>
       </Box>
