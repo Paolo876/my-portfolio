@@ -41,10 +41,12 @@ const Projects = () => {
             <Typography 
               variant="body1" 
               sx={{
+                fontFamily: "Manrope",
                 fontSize: {xs: 13, sm: 14, md: 13.5, lg:15, xl: 15.5},
-                fontWeight: 300,
+                fontWeight: 200,
                 opacity: .65,
-                lineHeight: 1.4,
+                letterSpacing: .25,
+                // lineHeight: 1.4,
               }}
             >
               I mainly develop my projects using ReactJS or NextJS and with the implementation of the MERN stack. I use different JavaScript libraries and frameworks on my works to
