@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Box, Typography, Button, Stack } from '@mui/material'
+import { Grid, Box, Typography, Button, Stack, ButtonBase } from '@mui/material'
 import ProjectsShowcase from './ProjectsShowcase'
 
 
@@ -25,7 +25,7 @@ const Projects = () => {
               variant="h2" 
               align="left" 
               fontWeight={400}
-              fontSize={{lg: 75, xl: 85}} 
+              fontSize={{lg: 85, xl: 88}} 
               letterSpacing={1}
               lineHeight={{lg:1.6, xl:1.1}} 
               textTransform="none"
@@ -37,15 +37,15 @@ const Projects = () => {
             </Typography>
             <Box sx={{background: "rgba(239,235,229,1)", height: 5, width: 5, mr: "auto", mt: { xs: 1.5, md:2.5 }, ml: .75, opacity: 1, boxShadow: 3}}></Box>
           </Box>
-          <Box mt={{xs: 2, sm:4, md: 1, lg: 5, xl: 4}} ml={{lg: .5}}>
+          <Box mt={{xs: 2, sm:4, md: 1, lg: 3, xl: 3}} ml={{lg: .5}}>
             <Typography 
               variant="body1" 
               sx={{
                 fontFamily: "Manrope",
-                fontSize: {xs: 13, sm: 14, md: 13.5, lg:15, xl: 15.5},
-                fontWeight: 200,
-                opacity: .6,
-                letterSpacing: .25,
+                fontSize: {xs: 13, sm: 14, md: 15, lg:16, xl: 16.5},
+                fontWeight: 300,
+                opacity: .55,
+                letterSpacing: .4,
                 textShadow: "1px 1px 5px rgba(10,10,10,.75)",
               }}
             >
@@ -55,7 +55,34 @@ const Projects = () => {
           </Box>
         </Grid>
         <Grid item lg={9}></Grid>
-        <Grid item xs={12} mt={8} ><Button sx={{borderLeft: 2}} size="large">Explore My Projects</Button></Grid>
+        <Grid item xs={12} mt={10} >
+          <ButtonBase
+            sx={{
+              borderLeft: 2, 
+              fontSize: { xs: "1.25rem", sm: "1.3rem", md: "1.4rem", lg: "1.5rem", xl:"1.5rem" },
+              lineHeight: 1.4, 
+              color: "white", 
+              // borderColor: "rgba(200, 200, 200, .5)",
+              borderColor: "primary.dark",
+              px: 1.5,
+              py: .25,
+              fontWeight: 600,
+              letterSpacing: .4,
+              opacity: .85,
+              transition: "all 250ms ease-in-out",
+              fontFamily: "Manrope",
+              "&:hover":{
+                opacity:1,
+                textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+                transform: "scale(1.02)",
+                borderColor: "primary.main",
+
+              }
+            }}
+          >
+          Explore My Projects
+          </ButtonBase>
+        </Grid>
         <ProjectsShowcase/>
       </Grid>
     </Box>

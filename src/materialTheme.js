@@ -19,11 +19,12 @@ export const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          // fontFamily: 'Manrope',
+          fontFamily: 'Manrope',
+          textTransform: "none",
           borderWidth: 2,
           borderRadius: 0,
           fontWeight: 600,
-          letterSpacing: .25,
+          letterSpacing: .4,
           ":hover": {
             borderRadius: 0,
             borderWidth: 2,

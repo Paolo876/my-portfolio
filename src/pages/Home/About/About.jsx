@@ -14,7 +14,7 @@ const About = () => {
         alignItems: "center",
         height: "100%",
         width: "100%",
-        minHeight: "75vh",
+        minHeight: "85vh",
       }}
     >
       <Box align="center" >
