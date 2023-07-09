@@ -18,9 +18,9 @@ const ProjectsShowcase = () => {
       }}
     >
       <Grid container gap={10}>
-        <Grid item sx={{height: 425, width: 350, border: 1, transform: "skewX(-7deg)"}}></Grid>
-        <Grid item sx={{height: 425, width: 350, border: 1, transform: "skewX(-7deg)"}}></Grid>
-        <Grid item sx={{height: 425, width: 350, border: 1, transform: "skewX(-7deg)"}}></Grid>
+        <Grid item sx={{height: 410, width: 350, border: 1, transform: "skewX(-7deg)"}}></Grid>
+        <Grid item sx={{height: 410, width: 350, border: 1, transform: "skewX(-7deg)"}}></Grid>
+        <Grid item sx={{height: 410, width: 350, border: 1, transform: "skewX(-7deg)"}}></Grid>
       </Grid>
     </Box>
   )
