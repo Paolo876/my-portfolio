@@ -13,7 +13,7 @@ const Projects = () => {
         minHeight: "60vh",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between",
+        justifyContent: "center",
         overflow: "hidden",
       }}
     >

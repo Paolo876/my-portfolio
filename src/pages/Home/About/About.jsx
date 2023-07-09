@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Box, Typography } from '@mui/material'
+import { Grid, Box, Typography, ButtonBase } from '@mui/material'
 
 const About = () => {
   return (
@@ -7,11 +7,33 @@ const About = () => {
       sx={{
         position: "relative", 
         px: {xs:0, sm: 1, md: 1, lg: 2.25, xl: 3}, 
-        py: {xs:8, sm: 10, md: 11, lg: 12, xl: 15}
+        py: {xs:8, sm: 10, md: 11, lg: 12, xl: 15},
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100%",
+        width: "100%",
+        minHeight: "75vh",
       }}
     >
-      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200,.1)", mixBlendMode: "overlay", opacity: 1, zIndex: -1}}></Box>
-
+      <Box align="center" >
+        <ButtonBase 
+          disableRipple
+          sx={{
+            opacity: .65,
+            transition: "all 500ms ease-in-out",
+            letterSpacing: 3,
+            "&:hover": {
+              transform: "scale(1.015)",
+              opacity: 1,
+              letterSpacing: 4
+            }
+          }}
+        >
+          <Typography variant="h2" textTransform="none" fontWeight={200} >Who Am I?</Typography>
+        </ButtonBase>
+      </Box>
     </Box>  
   )
 }
