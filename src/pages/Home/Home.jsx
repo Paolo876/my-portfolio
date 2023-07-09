@@ -15,6 +15,7 @@ import SubIntroduction from './SubIntroduction'
 import Works from './Works/Works'
 import Landing from './Landing'
 import Projects from './Projects/Projects'
+import About from './About/About'
 
 const Home = () => {
   const { skillsList, setData } = useRootRedux();
@@ -44,10 +45,11 @@ const Home = () => {
         <Landing/>
         <SubIntroduction/>
         <Projects/>
+        <About/>
         {/* <Works/> */}
-        <Process/>
+        {/* <Process/>
         <Skills/>
-        <Purpose/>
+        <Purpose/> */}
 
         <Contact/>
         {/* <Footer/> */}

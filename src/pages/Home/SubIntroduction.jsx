@@ -6,8 +6,8 @@ const SubIntroduction = () => {
     <Grid container 
       sx={{
         px: {xs:2.5, sm: 3, md: 4, lg: 5.5, xl: 2}, 
-        pt: {xs:8, sm: 12, md: 14, lg: 16}, 
-        pb: {xs:8, sm: 12, md: 12, lg: 12}, 
+        pt: {xs:8, sm: 12, md: 14, lg: 30}, 
+        pb: {xs:8, sm: 12, md: 12, lg: 8}, 
         justifyContent: "center", 
         alignItems: "flex-start", 
         // minHeight: "36vh", 
