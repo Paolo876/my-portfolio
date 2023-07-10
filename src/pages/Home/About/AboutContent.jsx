@@ -23,11 +23,11 @@ const AboutContent = ({ isVisible }) => {
 								}}
 							>I am Paolo Bugarin, <br/>a Full Stack Web Developer based in Los Angeles, California.</Typography>
 						</Box>
-						<Box pb={3} sx={{maxWidth: "98%"}}>
+						<Box pb={3} sx={{maxWidth: "100%"}}>
 							<Typography
 								variant="body1" 
 								sx={{
-									fontSize: {xs: 14, sm: 15, md: 16, lg:17, xl: 18},
+									fontSize: {xs: 14, sm: 15, md: 16, lg:17, xl: 17},
 									fontWeight: 300,
 									opacity: .55,
 									letterSpacing: .4,
@@ -35,7 +35,7 @@ const AboutContent = ({ isVisible }) => {
 								}}
 							>
               	I studied Computer Information Systems major in Web Development and Software Development at Pasadena City College. 
-								A big part of my knowledge is also gained from self-studying through online courses, tutorials, and being part of different coding groups.
+								A big part of my knowledge is also gained from self-studying through online courses, tutorials, and participating in different coding groups.
 							</Typography>
 						</Box>
 						<Box mb={1.5}>

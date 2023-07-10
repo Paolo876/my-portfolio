@@ -27,7 +27,7 @@ const SkillsDescription = () => {
           sx={{
             textAlign: { xs: "justify", md:"right" }, 
             textJustify: "inter-word", 
-            fontSize: {xs: 13, sm: 14, md: 15, lg:16, xl: 17},
+            fontSize: {xs: 13, sm: 14, md: 15, lg:16, xl: 16.5},
             fontWeight: 300,
             opacity: .55,
             letterSpacing: .4,
@@ -42,7 +42,7 @@ const SkillsDescription = () => {
       <ButtonBase
 								sx={{
 									borderRight: 2, 
-									fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.2rem", lg: "1.25rem", xl:"1.3rem" },
+									fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.2rem", lg: "1.3rem", xl:"1.35rem" },
 									lineHeight: 1.4, 
 									color: "white", 
 									borderColor: "primary.dark",
@@ -61,7 +61,7 @@ const SkillsDescription = () => {
 									}
 								}}
 							>
-								Read More About My Skills
+								See All My Skills
 							</ButtonBase>
       </Box>
     </Stack>

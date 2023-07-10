@@ -5,7 +5,7 @@ import SkillsCarousel from './SkillsCarousel';
 import { Grid, Box, Typography } from '@mui/material'
 
 
-const Skills = () => {
+const Skills = ({ isVisible }) => {
 
   return (
     <Grid container sx={{justifyContent: {xs:"center", md: "space-between"}, alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
@@ -27,7 +27,7 @@ const Skills = () => {
       </Grid>
 
       <Grid item xs={12} md={7} lg={7}>
-        <SkillsCarousel/>
+        {isVisible && <SkillsCarousel/>}
       </Grid>
       <Grid item xs={12} md={5} lg={5}>
         <SkillsDescription/>
