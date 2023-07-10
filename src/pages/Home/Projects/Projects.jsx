@@ -41,7 +41,6 @@ const Projects = () => {
             <Typography 
               variant="body1" 
               sx={{
-                fontFamily: "Manrope",
                 fontSize: {xs: 13, sm: 14, md: 15, lg:16, xl: 16.5},
                 fontWeight: 300,
                 opacity: .55,
@@ -76,7 +75,6 @@ const Projects = () => {
                 textShadow: "1px 1px 3px rgba(100,100,100,.75)",
                 transform: "scale(1.02)",
                 borderColor: "primary.main",
-
               }
             }}
           >

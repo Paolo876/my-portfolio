@@ -142,7 +142,7 @@ export const theme = createTheme({
       letterSpacing: .3,
     },
     button: {
-      fontFamily: 'Noto Sans Lao',
+      // fontFamily: 'Noto Sans Lao',
     },
   },
 });
