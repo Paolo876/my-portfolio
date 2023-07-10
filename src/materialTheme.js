@@ -90,7 +90,7 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Noto Sans Lao',
+    fontFamily: 'Manrope',
     h1: {
       fontFamily: 'Manrope',
       fontWeight: 700,
@@ -135,9 +135,11 @@ export const theme = createTheme({
     },
     body1: {
       fontWeight: 300,
+      letterSpacing: .45,
     },
     body2: {
       fontWeight: 300,
+      letterSpacing: .3,
     },
     button: {
       fontFamily: 'Noto Sans Lao',
