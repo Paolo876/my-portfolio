@@ -1,7 +1,11 @@
-import React from 'react'
+import { useState } from 'react'
 import { Grid, Box, Typography, ButtonBase } from '@mui/material'
+import AboutContent from './AboutContent';
 
 const About = () => {
+  const [ showContent, setShowContent ] = useState(false);
+
+
   return (
     <Box 
       sx={{
@@ -17,24 +21,32 @@ const About = () => {
         minHeight: "85vh",
       }}
     >
-      <Box align="center" >
+      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(0,0,0,1)", mixBlendMode: "overlay", opacity: .15, zIndex: -1}}></Box>
+
+      {!showContent && <Box align="center" >
         <ButtonBase 
           disableRipple
+          onClick={() => setShowContent(true)}
           sx={{
             opacity: .65,
             transition: "all 500ms ease-in-out",
             letterSpacing: 3,
             textShadow: "1px 1px 7px rgba(10,10,10,.5)",
+            borderBottom: 2,
+            pb: .5,
+            borderColor: "primary.dark",
             "&:hover": {
               transform: "scale(1.015)",
               opacity: 1,
-              letterSpacing: 4
+              letterSpacing: 4,
+              borderColor: "primary.main",
             }
           }}
         >
           <Typography variant="h2" textTransform="none" fontWeight={200} >Who Am I?</Typography>
         </ButtonBase>
-      </Box>
+      </Box>}
+      {showContent && <AboutContent/>}
     </Box>  
   )
 }

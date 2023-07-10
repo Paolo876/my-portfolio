@@ -17,7 +17,7 @@ const Projects = () => {
         overflow: "hidden",
       }}
     >
-      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(255,255,255,1)", mixBlendMode: "overlay", opacity: .15, zIndex: -1}}></Box>
+      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(255,255,255,1)", mixBlendMode: "overlay", opacity: .2, zIndex: -1}}></Box>
       <Grid container sx={{maxWidth: "1500px", height: "100%", mx: "auto", overflowX:"auto", overflowY: "hidden", px: {md: 0,lg:3}}}>
         <Grid item lg={3}>
           <Box sx={{display: {xs: "none", lg: "initial"}}}>
