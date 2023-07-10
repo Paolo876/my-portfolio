@@ -7,7 +7,7 @@ import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 
 const boxStyles = {
   width: "fit-content",
-  py: {sm: .75, md: .75, lg: 1, xl:1.25},
+  py: {sm: .75, md: .75, lg: 1, xl:1},
   height: "100%",
   userSelect: "none",
   opacity: .45,  

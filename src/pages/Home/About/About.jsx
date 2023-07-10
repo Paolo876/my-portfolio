@@ -22,10 +22,9 @@ const About = () => {
     >
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(0,0,0,1)", mixBlendMode: "overlay", opacity: .15, zIndex: -1}}></Box>
 
-      <Box 
+      {!showContent && <Box 
         align="center" 
         sx={{
-          opacity: showContent ? 0 : 1, 
           position: "absolute", 
           top: 0, 
           left: 0, 
@@ -56,7 +55,7 @@ const About = () => {
         >
           <Typography variant="h2" textTransform="none" fontWeight={200} >Who Am I?</Typography>
         </ButtonBase>
-      </Box>
+      </Box>}
       <Box sx={{opacity: showContent ? 1 : 0}}>
         <AboutContent isVisible={showContent}/>
       </Box>

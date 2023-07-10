@@ -38,7 +38,7 @@ const AboutContent = ({ isVisible }) => {
 								A big part of my knowledge is also gained from self-studying through online courses, tutorials, and being part of different coding groups.
 							</Typography>
 						</Box>
-						<Box>
+						<Box mb={1.5}>
 							<ButtonBase
 								sx={{
 									borderLeft: 2, 
@@ -68,7 +68,7 @@ const AboutContent = ({ isVisible }) => {
 				</Grid>
 			</Grid>
 			<Grid item xs={12} mt={12}>
-				<Skills/>
+				<Skills isVisible={isVisible}/>
 			</Grid>
 		</Grid>
     )
