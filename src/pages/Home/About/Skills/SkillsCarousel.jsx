@@ -7,7 +7,7 @@ import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 
 const boxStyles = {
   width: "fit-content",
-  pt: {sm: 1.5, md: 1.5, lg: 2, xl:2.5},
+  py: {sm: .75, md: .75, lg: 1, xl:1.25},
   height: "100%",
   userSelect: "none",
   opacity: .45,  
@@ -49,7 +49,7 @@ const SkillsCarousel = () => {
       >
         {skills.map((item, index) => <Grid container key={index}>
         {item.map(_item => 
-            <Grid item xs={2.4} sm={2.4} md={2.4} key={_item.name} align="left" my={3}>
+            <Grid item xs={2.4} sm={2.4} md={2.4} key={_item.name} align="left" my={2}>
               <Tooltip 
                 title={<Typography variant="body1" fontSize={13} fontWeight={300} letterSpacing={.4} px={.5}>{_item.name}</Typography>} 
                 arrow

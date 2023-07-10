@@ -5,7 +5,7 @@ const SkillsDescription = () => {
 
   return (
     <Stack pl={{xs: 3, sm: 3, md: 2, lg: 3.5, xl: 5}}>
-      <Box sx={{mb: 6, display: {xs: "none", md: "initial"}}}>
+      <Box sx={{mb: 5, display: {xs: "none", md: "initial"}}}>
         <Typography 
           variant="h2" 
           fontWeight={400}
@@ -20,10 +20,9 @@ const SkillsDescription = () => {
         >
           My Expertise
         </Typography>
-        <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", ml: "auto", mt: {xs: 1, md:1, lg: 1.5}, mr: .5, mixBlendMode: "difference", opacity: .85, boxShadow: 5}}></Box>
-
+        {/* <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", ml: "auto", mt: {xs: 1, md:1, lg: 1.5}, mr: .5, mixBlendMode: "difference", opacity: .85, boxShadow: 5}}></Box> */}
       </Box>
-      <Box ml="auto" sx={{maxWidth: "90%"}}>
+      <Box ml="auto" sx={{maxWidth: "95%"}}>
         <Typography 
           variant="body1" 
           sx={{

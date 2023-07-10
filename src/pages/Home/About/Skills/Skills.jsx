@@ -8,7 +8,7 @@ import { Grid, Box, Typography } from '@mui/material'
 const Skills = () => {
 
   return (
-    <Grid container sx={{py: {xs:8, sm: 9, md: 10, lg: 10, xl: 12}, justifyContent: {xs:"center", md: "space-between"}, alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
+    <Grid container sx={{justifyContent: {xs:"center", md: "space-between"}, alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
       <Grid item xs={12} sx={{display: {xs: "initial", md: "none"}, mt: 2}}>
         <Box>
           <Typography 
