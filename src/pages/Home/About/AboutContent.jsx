@@ -7,14 +7,14 @@ const AboutContent = () => {
   return (
     <Grid container sx={{maxWidth: "1500px", mx: "auto", height: "90%", px: {md: 0,lg:2, xl: 4}}}>
 			<Grid item xs={12}>
-				<Grid container columnSpacing={5}>
+				<Grid container columnSpacing={10}>
 					<Grid item><Box sx={{height: 200, width: 200, border: 1}}></Box></Grid>
-					<Grid item xs={9}>
-						<Box>
+					<Grid item xs={9.5}>
+						{/* <Box>
 							<Typography 
 								variant="h2" 
 								fontWeight={400}
-								fontSize={{lg: 85, xl: 40}} 
+								fontSize={{lg: 45, xl: 50}} 
 								letterSpacing={1}
 								lineHeight={{lg:1.6, xl:1.1}} 
 								textTransform="none"
@@ -25,14 +25,31 @@ const AboutContent = () => {
 								Who am I
 							</Typography>
 							<Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", mr: "auto", mt: {xs: 1, md:1, lg: 1.5}, mr: .5, mixBlendMode: "difference", opacity: .85, boxShadow: 5}}></Box>
-
-						</Box>
+						</Box> */}
 						<Box>
-							<Typography>I am Paolo Bugarin, a Full Stack Web Developer based in Los Angeles, California <LocationOnIcon/></Typography>
+							<Typography
+								variant="body1" 
+								sx={{
+									fontSize: {xs: 15, sm: 16, md: 17, lg:18, xl: 28},
+									fontWeight: 300,
+									opacity: .8,
+									letterSpacing: 1,
+									textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+								}}
+							>I am Paolo Bugarin, <br/>a Full Stack Web Developer based in Los Angeles, California.</Typography>
 							{/* <Typography>a Full Stack Web Developer based in Los Angeles, California <LocationOnIcon/></Typography> */}
 						</Box>
-						<Box>
-							<Typography>
+						<Box mt={2} sx={{maxWidth: "95%"}}>
+							<Typography
+								variant="body1" 
+								sx={{
+									fontSize: {xs: 13, sm: 14, md: 15, lg:16, xl: 17},
+									fontWeight: 300,
+									opacity: .55,
+									letterSpacing: .4,
+									textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+								}}
+							>
               	I studied Computer Information Systems major in Web Development and Software Development at Pasadena City College. 
 								A big part of my knowledge is also gained from self-studying through online courses, tutorials, and being part of different coding groups.
 							</Typography>
@@ -43,7 +60,7 @@ const AboutContent = () => {
 			<Grid item xs={12}>
 				<Skills/>
 			</Grid>
-			<Grid item xs={12} mt={2}>
+			<Grid item xs={12} mt={3}>
 				<ButtonBase
 					sx={{
 						borderLeft: 2, 

@@ -4,13 +4,13 @@ import { Box, Typography, Stack } from '@mui/material'
 const SkillsDescription = () => {
 
   return (
-    <Stack pl={{xs: 3, sm: 3, md: 2, lg: 3.5, xl: 5}} pr={{xs:3, sm: 3, md: 2, lg: 3.5}}>
-      <Box sx={{mb: 4, display: {xs: "none", md: "initial"}}}>
+    <Stack pl={{xs: 3, sm: 3, md: 2, lg: 3.5, xl: 5}}>
+      <Box sx={{mb: 6, display: {xs: "none", md: "initial"}}}>
         <Typography 
           variant="h2" 
           fontWeight={400}
-          fontSize={{lg: 85, xl: 40}} 
-          letterSpacing={1}
+          fontSize={{lg: 38, xl: 40}} 
+          letterSpacing={.5}
           lineHeight={{lg:1.6, xl:1.1}} 
           textTransform="none"
           align="right"
@@ -23,13 +23,13 @@ const SkillsDescription = () => {
         <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", ml: "auto", mt: {xs: 1, md:1, lg: 1.5}, mr: .5, mixBlendMode: "difference", opacity: .85, boxShadow: 5}}></Box>
 
       </Box>
-      <Box mt={{xs: 2, sm:4, md: 1}}>
+      <Box>
         <Typography 
           variant="body1" 
           sx={{
             textAlign: { xs: "justify", md:"right" }, 
             textJustify: "inter-word", 
-            fontSize: {xs: 13, sm: 14, md: 15, lg:16, xl: 16.5},
+            fontSize: {xs: 13, sm: 14, md: 15, lg:16, xl: 17},
             fontWeight: 300,
             opacity: .55,
             letterSpacing: .4,

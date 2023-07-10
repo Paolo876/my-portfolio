@@ -7,10 +7,10 @@ import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 
 const boxStyles = {
   width: "fit-content",
-  pb: {sm: 1.5, md: 1.5, lg: 2, xl:2.5},
+  pt: {sm: 1.5, md: 1.5, lg: 2, xl:2.5},
   height: "100%",
   userSelect: "none",
-  opacity: .6,  
+  opacity: .45,  
   background: "none",
   transition: "all 250ms ease-in-out",
   fontFamily: "Manrope",
@@ -49,7 +49,7 @@ const SkillsCarousel = () => {
       >
         {skills.map((item, index) => <Grid container key={index}>
         {item.map(_item => 
-            <Grid item xs={2.4} sm={2.4} md={2.2} key={_item.name} align="left" my={3}>
+            <Grid item xs={2.4} sm={2.4} md={2.4} key={_item.name} align="left" my={3}>
               <Tooltip 
                 title={<Typography variant="body1" fontSize={13} fontWeight={300} letterSpacing={.4} px={.5}>{_item.name}</Typography>} 
                 arrow
@@ -58,7 +58,7 @@ const SkillsCarousel = () => {
                 enterNextDelay={250}
               >
                 <Box sx={boxStyles} variant="outlined">
-                  <Box height={{xs: 45, sm: 52, md:55, lg:60, xl: 60}} width="auto">
+                  <Box height={{xs: 45, sm: 52, md:55, lg:55, xl: 55}} width="auto">
                     <SkillIconImageItem 
                       src={_item.monoUrl} 
                       duration={500} 
