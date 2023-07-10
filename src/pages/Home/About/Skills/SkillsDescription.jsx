@@ -23,7 +23,7 @@ const SkillsDescription = () => {
         <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", ml: "auto", mt: {xs: 1, md:1, lg: 1.5}, mr: .5, mixBlendMode: "difference", opacity: .85, boxShadow: 5}}></Box>
 
       </Box>
-      <Box>
+      <Box ml="auto" sx={{maxWidth: "90%"}}>
         <Typography 
           variant="body1" 
           sx={{

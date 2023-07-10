@@ -7,9 +7,9 @@ const AboutContent = () => {
   return (
     <Grid container sx={{maxWidth: "1500px", mx: "auto", height: "90%", px: {md: 0,lg:2, xl: 4}}}>
 			<Grid item xs={12}>
-				<Grid container columnSpacing={10}>
-					<Grid item><Box sx={{height: 200, width: 200, border: 1}}></Box></Grid>
-					<Grid item xs={9.5}>
+				<Grid container columnSpacing={12}>
+					<Grid item xs={3}><Box sx={{height: 325, width: 275, border: 1}}></Box></Grid>
+					<Grid item xs={9}>
 						{/* <Box>
 							<Typography 
 								variant="h2" 
@@ -28,18 +28,19 @@ const AboutContent = () => {
 						</Box> */}
 						<Box>
 							<Typography
-								variant="body1" 
+								variant="h2" 
+								fontWeight={400}
+								fontSize={{lg: 34, xl: 36}} 
+								letterSpacing={1}
+								lineHeight={{lg:1.6, xl:1.4}} 
+								textTransform="none"
 								sx={{
-									fontSize: {xs: 15, sm: 16, md: 17, lg:18, xl: 28},
-									fontWeight: 300,
-									opacity: .8,
-									letterSpacing: 1,
-									textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+									textShadow: "1px 1px 7px rgba(10,10,10,.75)",
 								}}
 							>I am Paolo Bugarin, <br/>a Full Stack Web Developer based in Los Angeles, California.</Typography>
 							{/* <Typography>a Full Stack Web Developer based in Los Angeles, California <LocationOnIcon/></Typography> */}
 						</Box>
-						<Box mt={2} sx={{maxWidth: "95%"}}>
+						<Box mt={2} sx={{maxWidth: "90%"}}>
 							<Typography
 								variant="body1" 
 								sx={{
