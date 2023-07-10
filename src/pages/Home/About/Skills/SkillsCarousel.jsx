@@ -22,7 +22,6 @@ const boxStyles = {
   }
 }
 
-
 const chunkArray = (arr, chunkSize) => {
   return arr.reduce((all,one,i) => {
     const ch = Math.floor(i/chunkSize); 
@@ -39,6 +38,8 @@ const SkillsCarousel = () => {
   useEffect(() => {
     setSkills(chunkArray(skillsList, 10))
   }, [skillsList])
+  
+
   return (
     <Box mr={{lg:4, xl:4}}>
       <Carousel
@@ -49,16 +50,16 @@ const SkillsCarousel = () => {
       >
         {skills.map((item, index) => <Grid container key={index}>
         {item.map(_item => 
-            <Grid item xs={2.4} sm={2.4} md={2.4} key={_item.name} align="left" my={2}>
+            <Grid item xs={2.4} sm={2.4} md={2.4} key={_item.name} align="left" my={1.75}>
               <Tooltip 
-                title={<Typography variant="body1" fontSize={13} fontWeight={300} letterSpacing={.4} px={.5}>{_item.name}</Typography>} 
+                title={<Typography variant="body1" fontSize={12} fontWeight={300} letterSpacing={.4} px={.25}>{_item.name}</Typography>} 
                 arrow
                 placement="right"
                 enterDelay={500}
                 enterNextDelay={250}
               >
                 <Box sx={boxStyles} variant="outlined">
-                  <Box height={{xs: 45, sm: 52, md:55, lg:55, xl: 55}} width="auto">
+                  <Box height={{xs: 40, sm: 45, md:48, lg:50, xl: 50}} width="auto">
                     <SkillIconImageItem 
                       src={_item.monoUrl} 
                       duration={500} 
