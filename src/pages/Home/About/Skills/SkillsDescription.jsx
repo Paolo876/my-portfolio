@@ -35,34 +35,34 @@ const SkillsDescription = () => {
           }}
         >
           My skillset is heavily focused on designing and developing web based applications. 
-          However, I do have ample knowledge in common coding languages, software development, and other related technologies.
+          However, I do have ample knowledge in software development, database management, and other related technologies.
         </Typography>
       </Box>
       <Box align="right">
       <ButtonBase
-								sx={{
-									borderRight: 2, 
-									fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.2rem", lg: "1.3rem", xl:"1.35rem" },
-									lineHeight: 1.4, 
-									color: "white", 
-									borderColor: "primary.dark",
-									px: 1.5,
-									py: .25,
-									fontWeight: 600,
-									letterSpacing: .4,
-									opacity: .85,
-									transition: "all 250ms ease-in-out",
-									fontFamily: "Manrope",
-									"&:hover":{
-										opacity:1,
-										textShadow: "1px 1px 3px rgba(100,100,100,.75)",
-										transform: "scale(1.02)",
-										borderColor: "primary.main",
-									}
-								}}
-							>
-								See All My Skills
-							</ButtonBase>
+        sx={{
+          borderRight: 2, 
+          fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.2rem", lg: "1.3rem", xl:"1.35rem" },
+          lineHeight: 1.4, 
+          color: "white", 
+          borderColor: "primary.dark",
+          px: 1.5,
+          py: .25,
+          fontWeight: 600,
+          letterSpacing: .4,
+          opacity: .85,
+          transition: "all 250ms ease-in-out",
+          fontFamily: "Manrope",
+          "&:hover":{
+            opacity:1,
+            textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+            transform: "scale(1.02)",
+            borderColor: "primary.main",
+          }
+        }}
+      >
+        See All My Skills
+      </ButtonBase>
       </Box>
     </Stack>
   )
