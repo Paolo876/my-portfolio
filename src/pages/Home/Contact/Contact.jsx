@@ -1,8 +1,8 @@
 import React from 'react'
-import { Grid, Divider, Box, Typography, ButtonBase, IconButton } from '@mui/material'
-import ContactDescription from './ContactDescription';
+import { Grid, Box, Typography, ButtonBase, IconButton } from '@mui/material'
+// import ContactDescription from './ContactDescription';
 import SocialLinks from '../../../components/SocialLinks';
-import ContactInformations from './ContactInformations';
+// import ContactInformations from './ContactInformations';
 import DownloadIcon from '@mui/icons-material/Download';
 import Footer from '../../../components/Footer';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
@@ -67,7 +67,6 @@ const Contact = () => {
       <Grid item xs={12} lg={4}>
         <Box mt={3}>
           <Typography 
-            variant="body1" 
             sx={{
               fontSize: {xs: 13, sm: 14, md: 15, lg:16, xl: 16.5},
               fontWeight: 400,
@@ -81,7 +80,6 @@ const Contact = () => {
         </Box>
         <Box mt={1.5}>
           <Typography 
-            variant="body1" 
             sx={{
               fontSize: {xs: 13, sm: 14, md: 15, lg:15, xl: 15},
               fontWeight: 300,
@@ -120,14 +118,33 @@ const Contact = () => {
           </ButtonBase>
         </Box>
       </Grid>
-      <Grid item xs={12} lg={8} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%"}}>
-        <Box>
-          <Typography>Paolo Bugarin</Typography>
-          <Typography>Los Angeles, CA</Typography>
+      
+      <Grid item xs={12} lg={8} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", height: "100%"}}>
+        <Box align="center">
+          <Typography 
+            variant="h2" 
+            fontWeight={400}
+            fontSize={{lg: 42, xl: 42}} 
+            letterSpacing={1}
+            lineHeight={{lg:1.6, xl:1.1}} 
+            textTransform="none"
+            sx={{
+              textShadow: "1px 1px 7px rgba(10,10,10,.75)",
+            }}
+          >Paolo Bugarin</Typography>
+          <Typography
+            sx={{
+              fontSize: { xs: 15, sm: 16, md: 18, lg:20, xl: 22 },
+              fontWeight: 200,
+              opacity: .7,
+              letterSpacing: 1,
+              textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+            }}
+          >Los Angeles, CA</Typography>
         </Box>
-        <Box>
+        <Box mt={2}>
           <Box>
-            <IconButton size="small" href="tel:3234817852" sx={{mr: {xs: .75, sm: 1.5, lg: 2}, p: 0, ml:{lg: .75}}} disableFocusRipple disableRipple disableTouchRipple>
+            <IconButton size="small" href="tel:3234817852" sx={{width: "100%", textAlign: "left"}}>
               <LocalPhoneIcon color="inherit" sx={{fontSize: { xs:26, sm: 28, md: 30, lg: 40 }}}/>
               <Typography sx={{fontSize: {xs:14, sm: 16, md: 18, lg: 20}, letterSpacing: 1, mt: {xs: 0, sm:.5}}} fontWeight={400}>(323) 481 - 7852</Typography>
             </IconButton> 
@@ -138,7 +155,7 @@ const Contact = () => {
               <Typography sx={{fontSize: {xs:14, sm: 14, md: 16, lg: 20}, mt: {xs: 0, sm:.5}}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
             </IconButton>
           </Box>
-          <Box sx={{width: "fit-content"}}>
+          <Box mt={2} sx={{width: "fit-content"}}>
             <SocialLinks 
               flexDirection='row' 
               color="inherit" 
