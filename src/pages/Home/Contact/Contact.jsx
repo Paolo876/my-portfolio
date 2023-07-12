@@ -1,10 +1,12 @@
 import React from 'react'
-import { Grid, Divider, Box, Typography, ButtonBase, Button } from '@mui/material'
+import { Grid, Divider, Box, Typography, ButtonBase, IconButton } from '@mui/material'
 import ContactDescription from './ContactDescription';
 import SocialLinks from '../../../components/SocialLinks';
 import ContactInformations from './ContactInformations';
 import DownloadIcon from '@mui/icons-material/Download';
 import Footer from '../../../components/Footer';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 
 const Contact = () => {
@@ -34,17 +36,17 @@ const Contact = () => {
           <Grid item xs={12} md={6}>
             <Box sx={{width: "100%", height: "100%", display: "flex", justifyContent: "right"}}>
               <ButtonBase 
-                // variant="outlined" 
                 color="inherit"
                 sx={{
+                  boxShadow: 5,
                   border: 2, 
-                  fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.2rem", lg: "1.1" },
+                  fontSize: { xs: "1rem", sm: "1rem", md: "1rem", lg: "1rem" },
                   lineHeight: 1.4, 
                   borderColor: "rgba(100,100,100,.75)",
                   px: 2,
                   py: 1,
                   fontWeight: 600,
-                  letterSpacing: .4,
+                  letterSpacing: .5,
                   opacity: .75,
                   transition: "all 250ms ease-in-out",
                   fontFamily: "Manrope",
@@ -52,7 +54,7 @@ const Contact = () => {
                     opacity:1,
                     textShadow: "1px 1px 3px rgba(100,100,100,.75)",
                     transform: "scale(1.02)",
-                    borderColor: "primary.main",
+                    borderColor: "primary.dark",
                   }
                 }}
               >
@@ -62,9 +64,7 @@ const Contact = () => {
           </Grid>
         </Grid>
       </Grid>
-
       <Grid item xs={12} lg={4}>
-
         <Box mt={3}>
           <Typography 
             variant="body1" 
@@ -121,7 +121,41 @@ const Contact = () => {
         </Box>
       </Grid>
       <Grid item xs={12} lg={8}>
-
+        <Box>
+          <Typography>Paolo Bugarin</Typography>
+          <Typography>Los Angeles, CA</Typography>
+        </Box>
+        <Box>
+          <Box>
+            <IconButton size="small" href="tel:3234817852" sx={{mr: {xs: .75, sm: 1.5, lg: 2}, p: 0, ml:{lg: .75}}} disableFocusRipple disableRipple disableTouchRipple>
+              <LocalPhoneIcon color="inherit" sx={{fontSize: { xs:26, sm: 28, md: 30, lg: 40 }}}/>
+              <Typography sx={{fontSize: {xs:14, sm: 16, md: 18, lg: 20}, letterSpacing: 1, mt: {xs: 0, sm:.5}}} fontWeight={400}>(323) 481 - 7852</Typography>
+            </IconButton> 
+          </Box>
+          <Box>
+            <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={{mr: {xs: .75, sm: 1.5, lg: 2}, p: 0, ml:{lg: .75}}} disableFocusRipple disableRipple disableTouchRipple>
+              <MailOutlineIcon color="inherit" sx={{fontSize: { xs:26, sm: 28, md: 30, lg: 40 }}}/>
+              <Typography sx={{fontSize: {xs:14, sm: 14, md: 16, lg: 20}, mt: {xs: 0, sm:.5}}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
+            </IconButton>
+          </Box>
+          <Box sx={{width: "fit-content"}}>
+            <SocialLinks 
+              flexDirection='row' 
+              color="inherit" 
+              gap={.25}
+              placement="left"
+              additionalStyles={{
+                opacity: .65,
+                transition: "all 150ms ease-in-out",
+                "&:hover": {
+                  opacity: 1,
+                  transform: "scale(1.15)",
+                  color: "primary.light",
+                }
+              }}
+            />
+          </Box>
+        </Box>
       </Grid>
       {/* <Grid item xs={12}>
           <Grid container  sx={{justifyContent: "space-between", alignItems: "flex-start" }}>
