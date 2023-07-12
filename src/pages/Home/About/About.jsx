@@ -30,8 +30,11 @@ const About = () => {
           left: 0, 
           height: "100%", 
           width: "100%",
-          transform: "translateY(50%)",
+          // transform: "translateY(50%)",
           zIndex: 5,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <ButtonBase 
