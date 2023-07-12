@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Divider, Box, Typography, ButtonBase } from '@mui/material'
+import { Grid, Divider, Box, Typography, ButtonBase, Button } from '@mui/material'
 import ContactDescription from './ContactDescription';
 import SocialLinks from '../../../components/SocialLinks';
 import ContactInformations from './ContactInformations';
@@ -12,29 +12,66 @@ const Contact = () => {
   <Box sx={{position: "relative"}}>
     <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(0,0,0,1)", mixBlendMode: "overlay", opacity: .5, zIndex: -1}}></Box>
     <Grid container sx={{px: {xs:3, sm: 3, md: 4, lg: 3}, pt: {xs:3, sm: 4, md: 5, lg: 6, xl: 6}, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
+      <Grid item xs={12}>
+        <Grid container  sx={{justifyContent: "space-between", alignItems: "center" }}>
+          <Grid item xs={12} md={6}>
+            <Box>
+              <Typography 
+                variant="h2" 
+                fontWeight={400}
+                fontSize={{lg: 42, xl: 45}} 
+                letterSpacing={.5}
+                lineHeight={{lg:1.6, xl:1.1}} 
+                textTransform="none"
+                sx={{
+                  textShadow: "1px 1px 7px rgba(10,10,10,.75)",
+                }}
+              >
+                Let's Talk
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Box sx={{width: "100%", height: "100%", display: "flex", justifyContent: "right"}}>
+              <ButtonBase 
+                // variant="outlined" 
+                color="inherit"
+                sx={{
+                  border: 2, 
+                  fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.2rem", lg: "1.1" },
+                  lineHeight: 1.4, 
+                  borderColor: "rgba(100,100,100,.75)",
+                  px: 2,
+                  py: 1,
+                  fontWeight: 600,
+                  letterSpacing: .4,
+                  opacity: .75,
+                  transition: "all 250ms ease-in-out",
+                  fontFamily: "Manrope",
+                  "&:hover":{
+                    opacity:1,
+                    textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+                    transform: "scale(1.02)",
+                    borderColor: "primary.main",
+                  }
+                }}
+              >
+                Download My CV <DownloadIcon sx={{ml: 1.5}}/>
+              </ButtonBase>
+            </Box>
+          </Grid>
+        </Grid>
+      </Grid>
+
       <Grid item xs={12} lg={4}>
-        <Box>
-          <Typography 
-            variant="h2" 
-            fontWeight={400}
-            fontSize={{lg: 38, xl: 40}} 
-            letterSpacing={.5}
-            lineHeight={{lg:1.6, xl:1.1}} 
-            textTransform="none"
-            sx={{
-              textShadow: "1px 1px 7px rgba(10,10,10,.75)",
-            }}
-          >
-            Let's Talk
-          </Typography>
-        </Box>
-        <Box>
+
+        <Box mt={3}>
           <Typography 
             variant="body1" 
             sx={{
               fontSize: {xs: 13, sm: 14, md: 15, lg:16, xl: 16.5},
-              fontWeight: 300,
-              opacity: .55,
+              fontWeight: 400,
+              opacity: .7,
               letterSpacing: .3,
               textShadow: "1px 1px 5px rgba(10,10,10,.75)",
             }}
@@ -42,13 +79,13 @@ const Contact = () => {
             I am excited to take a leap forward and further hone my knowledge and skills with the right company.
           </Typography>
         </Box>
-        <Box>
+        <Box mt={1.5}>
           <Typography 
             variant="body1" 
             sx={{
-              fontSize: {xs: 13, sm: 14, md: 15, lg:16, xl: 15},
+              fontSize: {xs: 13, sm: 14, md: 15, lg:15, xl: 15},
               fontWeight: 300,
-              opacity: .55,
+              opacity: .5,
               letterSpacing: .3,
               textShadow: "1px 1px 5px rgba(10,10,10,.75)",
             }}
@@ -56,14 +93,14 @@ const Contact = () => {
             For any questions or inquiries, please feel free to reach me through my contact informations provided or by submitting the form in the contact page.
           </Typography>
         </Box>
-        <Box>
+        <Box mt={5}>
           <ButtonBase
             sx={{
               borderLeft: 2, 
-              fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.2rem", lg: "1.3rem", xl:"1.35rem" },
+              fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.2rem", lg: "1.3rem", xl:"1.3rem" },
               lineHeight: 1.4, 
-              color: "white", 
-              borderColor: "primary.dark",
+              color: "primary.main", 
+              borderColor: "rgba(100,100,100,.75)",
               px: 1.5,
               py: .25,
               fontWeight: 600,
