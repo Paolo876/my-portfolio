@@ -48,7 +48,7 @@ const Projects = () => {
                 textShadow: "1px 1px 5px rgba(10,10,10,.75)",
               }}
             >
-              I mainly develop my projects using ReactJS or NextJS and with the implementation of the MERN stack. I use different JavaScript libraries and frameworks on my works to
+              I mainly develop my projects using ReactJS or NextJS, and with the implementation of the MERN stack. I use different JavaScript libraries and frameworks on my works to
               increase development efficiency and easier scalability.
             </Typography>
           </Box>

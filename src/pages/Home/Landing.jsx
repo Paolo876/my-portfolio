@@ -17,14 +17,14 @@ const linkStyles = {
   letterSpacing: .5,
   width: "fit-content",
   opacity: .75,
-  transition: "all 150ms ease-in-out",
+  transition: "all 200ms ease-in-out",
   fontFamily: "Manrope",
   "&:hover":{
     opacity:1,
     textShadow: "1px 1px 3px rgba(100,100,100,.75)",
     transform: "scale(1.05)",
     borderColor: "primary.main",
-
+    letterSpacing: 1,
   }
 }
 

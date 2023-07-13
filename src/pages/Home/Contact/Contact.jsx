@@ -4,7 +4,6 @@ import { Grid, Box, Typography, ButtonBase, IconButton } from '@mui/material'
 import SocialLinks from '../../../components/SocialLinks';
 // import ContactInformations from './ContactInformations';
 import DownloadIcon from '@mui/icons-material/Download';
-import Footer from '../../../components/Footer';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
@@ -36,7 +35,7 @@ const Contact = () => {
   return (
   <Box sx={{position: "relative"}}>
     <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(0,0,0,1)", mixBlendMode: "overlay", opacity: .5, zIndex: -1}}></Box>
-    <Grid container sx={{px: {xs:3, sm: 3, md: 4, lg: 3}, pt: {xs:3, sm: 4, md: 5, lg: 6, xl: 6}, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
+    <Grid container sx={{px: {xs:3, sm: 3, md: 4, lg: 3}, py: {xs:3, sm: 4, md: 5, lg: 6, xl: 6}, maxWidth: "1500px", mx: "auto", height: "100%"}}>
       <Grid item xs={12} lg={4.5} pr={{lg: 4, xl: 5}}>
         <Box>
           <Typography 
@@ -146,7 +145,7 @@ const Contact = () => {
           </Box>
         </Box>
       </Grid>
-      <Grid item xs={12} lg={3} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", height: "100%"}}>
+      <Grid item xs={12} lg={3} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%"}}>
         <Box sx={{width: "100%", height: "100%", display: "flex", justifyContent: "right"}}>
           <ButtonBase 
             color="inherit"
@@ -191,11 +190,14 @@ const Contact = () => {
             }}
           />
         </Box>
-      </Grid>
-    </Grid>
+        <Box sx={{width: "100%"}} mt={5}>
+          <Typography sx={{fontSize: {xs: 11, sm:12, md: 13, lg:14}, opacity: .5, mixBlendMode: "difference", textAlign: "right"}}>
+            © 2023 Paolo Bugarin, All rights reserved.
+          </Typography>
 
-    <Grid item xs={12} mt={3} sx={{display: "flex", justifyContent: "right", pr: 2}}><Footer/></Grid>
-    
+        </Box>
+      </Grid>
+    </Grid>    
   </Box>
   )
 }
