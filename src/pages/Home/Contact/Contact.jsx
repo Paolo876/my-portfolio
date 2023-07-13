@@ -9,12 +9,35 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 
+const contactButtonStyles = {
+  width: "100%", 
+  textAlign: "left",
+  display: "flex", 
+  alignItems: "center", 
+  gap: 1.5, 
+  justifyContent: "left",
+  borderLeft: 2, 
+  borderColor: "rgba(100,100,100,.75)",
+  py: .25,
+  transition: "all 250ms ease-in-out",
+  fontFamily: "Manrope",
+  letterSpacing: .4,
+  opacity: .75,
+
+  "&:hover":{
+    opacity:1,
+    textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+    transform: "scale(1.02)",
+    borderColor: "primary.main",
+  }
+}
+
 const Contact = () => {
   return (
   <Box sx={{position: "relative"}}>
     <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(0,0,0,1)", mixBlendMode: "overlay", opacity: .5, zIndex: -1}}></Box>
     <Grid container sx={{px: {xs:3, sm: 3, md: 4, lg: 3}, pt: {xs:3, sm: 4, md: 5, lg: 6, xl: 6}, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
-      <Grid item xs={12} lg={4} >
+      <Grid item xs={12} lg={4.5} pr={{lg: 4, xl: 5}}>
         <Box>
           <Typography 
             variant="h2" 
@@ -33,7 +56,7 @@ const Contact = () => {
         <Box mt={2}>
           <Typography 
             sx={{
-              fontSize: {xs: 12, sm: 13, md: 13, lg:14, xl: 14},
+              fontSize: {xs: 12, sm: 13, md: 13, lg:14.5, xl: 14.5},
               fontWeight: 400,
               opacity: .7,
               letterSpacing: .3,
@@ -84,8 +107,8 @@ const Contact = () => {
         </Box>
       </Grid>
       
-      <Grid item xs={12} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", height: "100%"}}>
-        <Box align="center">
+      <Grid item xs={12} lg={4.5} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "left", height: "100%"}}>
+        <Box align="left">
           <Typography 
             variant="h2" 
             fontWeight={400}
@@ -99,30 +122,31 @@ const Contact = () => {
           >Paolo Bugarin</Typography>
           <Typography
             sx={{
-              fontSize: { xs: 15, sm: 16, md: 18, lg:18, xl: 18 },
+              fontSize: { xs: 13, sm: 14, md: 15, lg:16, xl: 16 },
               fontWeight: 200,
               opacity: .7,
               letterSpacing: 1,
               textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+              mt: 1.5,
             }}
           >Los Angeles, CA</Typography>
         </Box>
-        <Box mt={2}>
+        <Box mt={4}>
           <Box>
-            <IconButton size="small" href="tel:3234817852" sx={{width: "100%", textAlign: "left", display: "flex", alignItems: "center", gap: 1}} disableRipple>
-              <LocalPhoneIcon color="inherit" sx={{fontSize: { xs:20, sm: 23, md: 24, lg: 25}}} />
+            <IconButton size="small" href="tel:3234817852" sx={contactButtonStyles} disableRipple>
+              <LocalPhoneIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 24, lg: 25}}} />
               <Typography sx={{fontSize: {xs:14, sm: 16, md: 17, lg: 18}, letterSpacing: 1}} fontWeight={300}>(323) 481 - 7852</Typography>
             </IconButton> 
           </Box>
-          <Box>
-            <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={{width: "100%", textAlign: "left", display: "flex", alignItems: "center", gap: 1}} disableRipple>
-              <MailOutlineIcon color="inherit" sx={{fontSize: { xs:20, sm: 23, md: 24, lg: 25}}}/>
+          <Box mt={2}>
+            <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={contactButtonStyles} disableRipple>
+              <MailOutlineIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 24, lg: 25}}}/>
               <Typography sx={{fontSize: {xs:14, sm: 16, md: 17, lg: 18}, letterSpacing: 1}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
             </IconButton>
           </Box>
         </Box>
       </Grid>
-      <Grid item xs={12} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", height: "100%"}}>
+      <Grid item xs={12} lg={3} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", height: "100%"}}>
         <Box sx={{width: "100%", height: "100%", display: "flex", justifyContent: "right"}}>
           <ButtonBase 
             color="inherit"
