@@ -14,7 +14,7 @@ const Contact = () => {
   <Box sx={{position: "relative"}}>
     <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(0,0,0,1)", mixBlendMode: "overlay", opacity: .5, zIndex: -1}}></Box>
     <Grid container sx={{px: {xs:3, sm: 3, md: 4, lg: 3}, pt: {xs:3, sm: 4, md: 5, lg: 6, xl: 6}, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
-      <Grid item xs={12} lg={4}>
+      <Grid item xs={12} lg={4} >
         <Box>
           <Typography 
             variant="h2" 
@@ -89,7 +89,7 @@ const Contact = () => {
           <Typography 
             variant="h2" 
             fontWeight={400}
-            fontSize={{lg: 42, xl: 42}} 
+            fontSize={{lg: 28, xl: 28}} 
             letterSpacing={1}
             lineHeight={{lg:1.6, xl:1.1}} 
             textTransform="none"
@@ -99,7 +99,7 @@ const Contact = () => {
           >Paolo Bugarin</Typography>
           <Typography
             sx={{
-              fontSize: { xs: 15, sm: 16, md: 18, lg:20, xl: 22 },
+              fontSize: { xs: 15, sm: 16, md: 18, lg:18, xl: 18 },
               fontWeight: 200,
               opacity: .7,
               letterSpacing: 1,
@@ -109,15 +109,15 @@ const Contact = () => {
         </Box>
         <Box mt={2}>
           <Box>
-            <IconButton size="small" href="tel:3234817852" sx={{width: "100%", textAlign: "left"}}>
-              <LocalPhoneIcon color="inherit" sx={{fontSize: { xs:26, sm: 28, md: 30, lg: 40 }}}/>
-              <Typography sx={{fontSize: {xs:14, sm: 16, md: 18, lg: 20}, letterSpacing: 1, mt: {xs: 0, sm:.5}}} fontWeight={400}>(323) 481 - 7852</Typography>
+            <IconButton size="small" href="tel:3234817852" sx={{width: "100%", textAlign: "left", display: "flex", alignItems: "center", gap: 1}} disableRipple>
+              <LocalPhoneIcon color="inherit" sx={{fontSize: { xs:20, sm: 23, md: 24, lg: 25}}} />
+              <Typography sx={{fontSize: {xs:14, sm: 16, md: 17, lg: 18}, letterSpacing: 1}} fontWeight={300}>(323) 481 - 7852</Typography>
             </IconButton> 
           </Box>
           <Box>
-            <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={{mr: {xs: .75, sm: 1.5, lg: 2}, p: 0, ml:{lg: .75}}} disableFocusRipple disableRipple disableTouchRipple>
-              <MailOutlineIcon color="inherit" sx={{fontSize: { xs:26, sm: 28, md: 30, lg: 40 }}}/>
-              <Typography sx={{fontSize: {xs:14, sm: 14, md: 16, lg: 20}, mt: {xs: 0, sm:.5}}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
+            <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={{width: "100%", textAlign: "left", display: "flex", alignItems: "center", gap: 1}} disableRipple>
+              <MailOutlineIcon color="inherit" sx={{fontSize: { xs:20, sm: 23, md: 24, lg: 25}}}/>
+              <Typography sx={{fontSize: {xs:14, sm: 16, md: 17, lg: 18}, letterSpacing: 1}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
             </IconButton>
           </Box>
         </Box>
