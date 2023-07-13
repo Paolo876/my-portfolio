@@ -9,7 +9,7 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 
 const contactButtonStyles = {
-  width: "100%", 
+  width: "fit-content", 
   textAlign: "left",
   display: "flex", 
   alignItems: "center", 
@@ -18,6 +18,7 @@ const contactButtonStyles = {
   borderLeft: 2, 
   borderColor: "rgba(100,100,100,.75)",
   py: .25,
+  px: 2,
   transition: "all 250ms ease-in-out",
   fontFamily: "Manrope",
   letterSpacing: .4,
