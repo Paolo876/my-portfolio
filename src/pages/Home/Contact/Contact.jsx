@@ -14,12 +14,12 @@ const Contact = () => {
   <Box sx={{position: "relative"}}>
     <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(0,0,0,1)", mixBlendMode: "overlay", opacity: .5, zIndex: -1}}></Box>
     <Grid container sx={{px: {xs:3, sm: 3, md: 4, lg: 3}, pt: {xs:3, sm: 4, md: 5, lg: 6, xl: 6}, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
-      <Grid item xs={12} lg={4.5}>
+      <Grid item xs={12} lg={4}>
         <Box>
           <Typography 
             variant="h2" 
             fontWeight={400}
-            fontSize={{lg: 42, xl: 45}} 
+            fontSize={{lg: 28, xl: 30}} 
             letterSpacing={.5}
             lineHeight={{lg:1.6, xl:1.1}} 
             textTransform="none"
@@ -30,10 +30,10 @@ const Contact = () => {
             Let's Talk
           </Typography>
         </Box>
-        <Box mt={3}>
+        <Box mt={2}>
           <Typography 
             sx={{
-              fontSize: {xs: 13, sm: 14, md: 15, lg:16, xl: 16.5},
+              fontSize: {xs: 12, sm: 13, md: 13, lg:14, xl: 14},
               fontWeight: 400,
               opacity: .7,
               letterSpacing: .3,
@@ -43,10 +43,10 @@ const Contact = () => {
             I am excited to take a leap forward and further hone my knowledge and skills with the right company.
           </Typography>
         </Box>
-        <Box mt={1.5}>
+        <Box mt={1}>
           <Typography 
             sx={{
-              fontSize: {xs: 13, sm: 14, md: 15, lg:15, xl: 15},
+              fontSize: {xs: 11, sm: 12, md: 12, lg:13, xl: 13},
               fontWeight: 300,
               opacity: .5,
               letterSpacing: .3,
@@ -56,7 +56,7 @@ const Contact = () => {
             For any questions or inquiries, please feel free to reach me through my contact informations provided or by submitting the form in the contact page.
           </Typography>
         </Box>
-        <Box mt={5}>
+        <Box mt={4}>
           <ButtonBase
             sx={{
               borderLeft: 2, 
@@ -84,7 +84,7 @@ const Contact = () => {
         </Box>
       </Grid>
       
-      <Grid item xs={12} lg={4.5} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", height: "100%"}}>
+      <Grid item xs={12} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", height: "100%"}}>
         <Box align="center">
           <Typography 
             variant="h2" 
@@ -122,7 +122,7 @@ const Contact = () => {
           </Box>
         </Box>
       </Grid>
-      <Grid item xs={12} lg={3} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", height: "100%"}}>
+      <Grid item xs={12} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", height: "100%"}}>
         <Box sx={{width: "100%", height: "100%", display: "flex", justifyContent: "right"}}>
           <ButtonBase 
             color="inherit"
@@ -170,7 +170,7 @@ const Contact = () => {
       </Grid>
     </Grid>
 
-    <Grid item xs={12} mt={3}><Footer/></Grid>
+    <Grid item xs={12} mt={3} sx={{display: "flex", justifyContent: "right", pr: 2}}><Footer/></Grid>
     
   </Box>
   )
