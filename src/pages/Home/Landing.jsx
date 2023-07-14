@@ -31,7 +31,7 @@ const linkStyles = {
 const nameStyles = {
   textTransform: "none",
   fontWeight: 800,
-  fontSize: { xs:"5.6rem", sm: "7rem", md: "8rem", lg: "10rem", xl:"12rem" },
+  fontSize: { xs:"5.6rem", sm: "7rem", md: "10rem", lg: "12rem", xl:"12rem" },
   lineHeight: .9,
   letterSpacing: -1,
   userSelect: "none",
@@ -69,8 +69,8 @@ const Landing = () => {
         justifyContent: "space-between",
       }}
     >
-      <Grid container sx={{maxWidth: "1500px", mx: "auto", height: "90%", px: {md: 0,lg:2}}}>
-        <Grid item xs={12} sm={8} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", pb: 6}}>
+      <Grid container sx={{maxWidth: "1500px", mx: "auto", height: "90%" }}>
+        <Grid item xs={12} lg={8} sx={{display: "flex", flexDirection: "column", justifyContent: {lg:"space-between"}, pb: 6}}>
           <Box>
             <Typography variant="h1" sx={nameStyles}>Paolo</Typography>
             <Typography variant="h1" sx={nameStyles}>Bugarin</Typography>
@@ -83,9 +83,26 @@ const Landing = () => {
               <Box component="span" sx={subHeaderSymbolStyles}>{`<`}</Box> Los Angeles, CA <Box component="span" sx={subHeaderSymbolStyles}>{`>`}</Box>
             </Typography>
           </Box>
+          <Box sx={{width: "fit-content", display: {xs: "initial", lg: "none"}}}>
+            <SocialLinks 
+              flexDirection='row' 
+              color="inherit" 
+              gap={.25}
+              placement="left"
+              additionalStyles={{
+                opacity: .65,
+                transition: "all 150ms ease-in-out",
+                "&:hover": {
+                  opacity: 1,
+                  transform: "scale(1.15)",
+                  color: "primary.light",
+                }
+              }}
+            />
+          </Box>
         </Grid>
-        <Grid item xs={12} sm={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", py: 3}}>
-          <Box sx={{width: "fit-content", ml: "auto"}}>
+        <Grid item xs={12} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", py: 3}}>
+          <Box sx={{width: "fit-content", ml: "auto", display: {xs: "none", lg: "initial"}}}>
             <SocialLinks 
               flexDirection='column' 
               color="inherit" 
