@@ -84,11 +84,11 @@ const Landing = () => {
               <Box component="span" sx={subHeaderSymbolStyles}>{`<`}</Box> Los Angeles, CA <Box component="span" sx={subHeaderSymbolStyles}>{`>`}</Box>
             </Typography>
           </Box>
-          <Box sx={{width: "fit-content", display: {xs: "initial", lg: "none"}}} mt={5} ml={.5}>
+          <Box sx={{width: "fit-content", display: {xs: "initial", lg: "none"}}} mt={9} ml={.5}>
             <SocialLinks 
               flexDirection='row' 
               color="inherit" 
-              gap={{md:1, lg:.25}}
+              gap={{md:1.5, lg:.25}}
               placement="left"
               additionalStyles={{
                 opacity: .65,
