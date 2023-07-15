@@ -61,9 +61,9 @@ const Landing = () => {
   return (
     <Box
       sx={{
-        height: {xs: "93vh", md:"96vh"}, 
+        height: {xs: "95vh", md:"96vh"}, 
         position: "relative", 
-        px: { xs:1.75, sm: 3, md: 3 }, 
+        px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
         pt: { xs:8, sm: 12, md: 13, lg: 15, xl: 15 },
         display: "flex",
         flexDirection: "column",
