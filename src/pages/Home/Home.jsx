@@ -45,14 +45,14 @@ const Home = () => {
         <Landing/>
         <SubIntroduction/>
         <Projects/>
-        <About/>
+        {/* <About/> */}
+
         {/* <Works/> */}
         {/* <Process/>
         <Skills/>
         <Purpose/> */}
 
         <Contact/>
-        {/* <Footer/> */}
     </Stack>
   )
 }
