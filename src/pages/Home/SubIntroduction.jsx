@@ -26,7 +26,7 @@ const SubIntroduction = () => {
               variant="h6" 
               sx={{
                 fontWeight: 300, 
-                fontSize: {xs: 12.5, sm: 19, md: 20, lg:23, xl: 25}, 
+                fontSize: {xs: 12.5, sm: 19, md: 22, lg:23, xl: 25}, 
                 lineHeight: 1.4, 
                 opacity: .9,
                 textTransform: "none",

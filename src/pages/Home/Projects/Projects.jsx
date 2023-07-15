@@ -8,9 +8,9 @@ const Projects = () => {
     <Box 
       sx={{
         position: "relative", 
-        px: {xs:0, sm: 1, md: 1, lg: 2.25, xl: 3}, 
-        py: {xs:8, sm: 10, md: 11, lg: 12, xl: 18},
-        minHeight: "60vh",
+        px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
+        py: {xs:8, sm: 10, md: 8, lg: 12, xl: 18},
+        // minHeight: {xl: "60vh"},
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -18,15 +18,15 @@ const Projects = () => {
       }}
     >
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(255,255,255,1)", mixBlendMode: "overlay", opacity: .2, zIndex: -1}}></Box>
-      <Grid container sx={{maxWidth: "1500px", height: "100%", mx: "auto", overflowX:"auto", overflowY: "hidden", px: {md: 0,lg:3}}}>
-        <Grid item lg={3}>
-          <Box sx={{display: {xs: "none", lg: "initial"}}}>
+      <Grid container sx={{maxWidth: "1500px", height: "100%", mx: "auto", overflowX:"auto", overflowY: "hidden"}}>
+        <Grid item lg={3.5} xl={3}>
+          <Box sx={{display: {xs: "none", md: "initial"}}}>
             <Typography 
               variant="h2" 
               align="left" 
               fontWeight={400}
-              fontSize={{lg: 85, xl: 88}} 
-              letterSpacing={1}
+              fontSize={{lg: 80, xl: 88}} 
+              letterSpacing={{lg: .5, xL:1}}
               lineHeight={{xs:1}} 
               textTransform="none"
               sx={{
@@ -55,8 +55,9 @@ const Projects = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid item lg={9}></Grid>
-        <Grid item xs={12} mt={10} >
+        {/* <Grid item lg={8.5} xl={9}></Grid> */}
+        
+        <Grid item xs={12} mt={{lg: 6, xl:10}} >
           <ButtonBase
             sx={{
               borderLeft: 2, 
