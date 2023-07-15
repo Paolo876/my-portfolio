@@ -11,8 +11,9 @@ const ProjectsShowcase = () => {
         height: "100%",
         position: "absolute",
         top: 0,
-        right: -50,
-        overflow: "hidden",
+        // left: 0,
+        transform: "translateX(25em)",
+        // overflow: "hidden",
         py: {xs:8, sm: 10, md: 11, lg: 14, xl: 18},
         pl: 10,
         display: "flex",
@@ -20,10 +21,10 @@ const ProjectsShowcase = () => {
         justifyContent: "center",
       }}
     >
-      <Grid container gap={10}>
-        <Grid item sx={{height: 410, width: 350, border: 1, transform: "skewX(-7deg)"}}></Grid>
-        <Grid item sx={{height: 410, width: 350, border: 1, transform: "skewX(-7deg)"}}></Grid>
-        <Grid item sx={{height: 410, width: 350, border: 1, transform: "skewX(-7deg)"}}></Grid>
+      <Grid container gap={{xl:7}}>
+        <Grid item sx={{height: 410, width: 360, border: 1, transform: "skewX(-7deg)"}}></Grid>
+        <Grid item sx={{height: 410, width: 360, border: 1, transform: "skewX(-7deg)"}}></Grid>
+        <Grid item sx={{height: 410, width: 360, border: 1, transform: "skewX(-7deg)"}}></Grid>
       </Grid>
     </Box>
   )

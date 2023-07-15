@@ -27,7 +27,7 @@ const Projects = () => {
               fontWeight={400}
               fontSize={{lg: 85, xl: 88}} 
               letterSpacing={1}
-              lineHeight={{lg:1.6, xl:1.1}} 
+              lineHeight={{xs:1}} 
               textTransform="none"
               sx={{
                 textShadow: "1px 1px 7px rgba(10,10,10,.75)",
@@ -48,10 +48,10 @@ const Projects = () => {
                 textShadow: "1px 1px 5px rgba(10,10,10,.75)",
               }}
             >
-              {/* I mainly develop my projects using ReactJS or NextJS, and with the implementation of the MERN stack. I use different JavaScript libraries and frameworks on my works to
-              increase development efficiency and easier scalability. */}
-              I mainly develop my projects using ReactJS or NextJS on the frontend, NodeJS and ExpressJS on the backend, MongoDB or MySQL for database implementations, and different libraries
-              and frameworks to increase development efficiency and easier scalability.
+              I mainly develop my projects using ReactJS or NextJS for the frontend, ExpressJS and NodeJS for the backend, MongoDB or MySQL for db implementations. I use different libraries on my works to
+              increase development efficiency and easier scalability.
+              {/* I mainly develop my projects using ReactJS or NextJS on the frontend, NodeJS and ExpressJS on the backend, MongoDB or MySQL for database implementations, and different libraries
+              and frameworks to increase development efficiency and easier scalability. */}
             </Typography>
           </Box>
         </Grid>
