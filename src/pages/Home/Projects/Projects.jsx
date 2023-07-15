@@ -41,15 +41,17 @@ const Projects = () => {
             <Typography 
               variant="body1" 
               sx={{
-                fontSize: {xs: 13, sm: 14, md: 15, lg:16, xl: 16.5},
+                fontSize: {xs: 13, sm: 14, md: 15, lg:16, xl: 16},
                 fontWeight: 300,
                 opacity: .55,
-                letterSpacing: .4,
+                letterSpacing: .3,
                 textShadow: "1px 1px 5px rgba(10,10,10,.75)",
               }}
             >
-              I mainly develop my projects using ReactJS or NextJS, and with the implementation of the MERN stack. I use different JavaScript libraries and frameworks on my works to
-              increase development efficiency and easier scalability.
+              {/* I mainly develop my projects using ReactJS or NextJS, and with the implementation of the MERN stack. I use different JavaScript libraries and frameworks on my works to
+              increase development efficiency and easier scalability. */}
+              I mainly develop my projects using ReactJS or NextJS on the frontend, NodeJS and ExpressJS on the backend, MongoDB or MySQL for database implementations, and different libraries
+              and frameworks to increase development efficiency and easier scalability.
             </Typography>
           </Box>
         </Grid>

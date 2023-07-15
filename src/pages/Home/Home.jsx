@@ -37,7 +37,6 @@ const Home = () => {
   
   return (
     <Stack>
-    {/* <Stack px={{md: 2, lg: 2}}> */}
         <DocumentHead
           title="Paolo Bugarin | Home"
           description="I am a full stack web developer based in Los Angeles, California"

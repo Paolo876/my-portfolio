@@ -5,11 +5,11 @@ const SubIntroduction = () => {
   return (
     <Grid container 
       sx={{
-        px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
+        px: { xs:1.75, sm: 3, md: 4, lg: 5, xl: 0 }, 
         pt: {xs:8, sm: 12, md: 14, lg: 30}, 
         pb: {xs:8, sm: 12, md: 12, lg: 8}, 
-        justifyContent: "center", 
-        alignItems: "flex-start", 
+        // justifyContent: "right", 
+        // alignItems: "flex-start", 
         maxWidth: "1500px", 
         mx: "auto"
       }}
