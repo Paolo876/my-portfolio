@@ -50,7 +50,7 @@ const SkillsCarousel = () => {
       >
         {skills.map((item, index) => <Grid container key={index}>
         {item.map(_item => 
-            <Grid item xs={2.4} sm={2.4} md={2.4} key={_item.name} align="left" my={1.75}>
+            <Grid item xs={2.4} sm={2.1} md={2.4} key={_item.name} align="left" my={1.75}>
               <Tooltip 
                 title={<Typography variant="body1" fontSize={12} fontWeight={300} letterSpacing={.4} px={.25}>{_item.name}</Typography>} 
                 arrow
@@ -59,7 +59,7 @@ const SkillsCarousel = () => {
                 enterNextDelay={250}
               >
                 <Box sx={boxStyles} variant="outlined">
-                  <Box height={{xs: 40, sm: 45, md:45, lg:50, xl: 50}} width="auto">
+                  <Box height={{xs: 40, sm: 40, md:45, lg:50, xl: 50}} width="auto">
                     <SkillIconImageItem 
                       src={_item.monoUrl} 
                       duration={500} 
