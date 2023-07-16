@@ -9,8 +9,7 @@ const Projects = () => {
       sx={{
         position: "relative", 
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
-        py: {xs:8, sm: 10, md: 8, lg: 12, xl: 18},
-        // minHeight: {xl: "60vh"},
+        py: {xs:5, sm: 6, md: 8, lg: 12, xl: 18},
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -19,29 +18,29 @@ const Projects = () => {
     >
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(255,255,255,1)", mixBlendMode: "overlay", opacity: .2, zIndex: -1}}></Box>
       <Grid container sx={{maxWidth: "1500px", height: "100%", mx: "auto", overflowX:"auto", overflowY: "hidden"}}>
-        <Grid item lg={3.5} xl={3}>
-          <Box sx={{display: {xs: "none", md: "initial"}}}>
+        <Grid item xs={12} sm={10.5} md={3.75} lg={3.5} xl={3}>
+          <Box>
             <Typography 
               variant="h2" 
               align="left" 
               fontWeight={400}
-              fontSize={{lg: 80, xl: 88}} 
-              letterSpacing={{lg: .5, xL:1}}
+              fontSize={{sm: 45, md: 60, lg: 80, xl: 88}} 
+              letterSpacing={{xs: .5, xL:1}}
               lineHeight={{xs:1}} 
               textTransform="none"
               sx={{
                 textShadow: "1px 1px 7px rgba(10,10,10,.75)",
               }}
             >
-              My<br/>Projects
+              My <Box component="br" sx={{display: {xs: "none", md: "initial"}}}></Box>Projects
             </Typography>
-            <Box sx={{background: "rgba(239,235,229,1)", height: 5, width: 5, mr: "auto", mt: { xs: 1.5, md:2.5 }, ml: .75, opacity: 1, boxShadow: 3}}></Box>
+            <Box sx={{background: "rgba(239,235,229,1)", height: 5, width: 5, mr: "auto", mt: { xs: 1.5, md:2, lg: 2.5 }, ml: {md: .75}, opacity: 1, boxShadow: 3, display: {xs: "none", md: "initial"}}}></Box>
           </Box>
-          <Box mt={{xs: 2, sm:4, md: 1, lg: 3, xl: 3}} ml={{lg: .5}}>
+          <Box mt={{xs: 2, sm:2, md: 2, lg: 3, xl: 3}} ml={{md: .5}}>
             <Typography 
               variant="body1" 
               sx={{
-                fontSize: {xs: 13, sm: 14, md: 15, lg:16, xl: 16},
+                fontSize: {xs: 13, sm: 14.5, md: 14.5, lg:16, xl: 16},
                 fontWeight: 300,
                 opacity: .55,
                 letterSpacing: .3,
@@ -57,14 +56,13 @@ const Projects = () => {
         </Grid>
         {/* <Grid item lg={8.5} xl={9}></Grid> */}
         
-        <Grid item xs={12} mt={{lg: 6, xl:10}} >
+        <Grid item xs={12} mt={{sm: 40, md: 4, lg: 6, xl:10}} >
           <ButtonBase
             sx={{
               borderLeft: 2, 
-              fontSize: { xs: "1.25rem", sm: "1.3rem", md: "1.4rem", lg: "1.5rem", xl:"1.5rem" },
+              fontSize: { xs: "1.25rem", sm: "1.35rem", md: "1.35rem", lg: "1.5rem", xl:"1.5rem" },
               lineHeight: 1.4, 
               color: "white", 
-              // borderColor: "rgba(200, 200, 200, .5)",
               borderColor: "primary.dark",
               px: 1.5,
               py: .25,
