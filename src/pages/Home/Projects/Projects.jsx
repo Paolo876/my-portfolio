@@ -24,7 +24,7 @@ const Projects = () => {
               variant="h2" 
               align="left" 
               fontWeight={400}
-              fontSize={{sm: 45, md: 60, lg: 80, xl: 88}} 
+              fontSize={{xs: 35, sm: 45, md: 60, lg: 80, xl: 88}} 
               letterSpacing={{xs: .5, xL:1}}
               lineHeight={{xs:1}} 
               textTransform="none"
@@ -40,7 +40,7 @@ const Projects = () => {
             <Typography 
               variant="body1" 
               sx={{
-                fontSize: {xs: 13, sm: 14.5, md: 14.5, lg:16, xl: 16},
+                fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 16},
                 fontWeight: 300,
                 opacity: .55,
                 letterSpacing: .3,
@@ -56,11 +56,11 @@ const Projects = () => {
         </Grid>
         {/* <Grid item lg={8.5} xl={9}></Grid> */}
         
-        <Grid item xs={12} mt={{sm: 40, md: 4, lg: 6, xl:10}} >
+        <Grid item xs={12} mt={{xs: 26, sm: 40, md: 4, lg: 6, xl:10}} >
           <ButtonBase
             sx={{
               borderLeft: 2, 
-              fontSize: { xs: "1.25rem", sm: "1.35rem", md: "1.35rem", lg: "1.5rem", xl:"1.5rem" },
+              fontSize: { xs: "1.2rem", sm: "1.35rem", md: "1.35rem", lg: "1.5rem", xl:"1.5rem" },
               lineHeight: 1.4, 
               color: "white", 
               borderColor: "primary.dark",
