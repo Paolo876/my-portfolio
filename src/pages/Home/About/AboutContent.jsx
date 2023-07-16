@@ -68,7 +68,7 @@ const AboutContent = ({ isVisible }) => {
 					</Grid>
 				</Grid>
 			</Grid>
-			<Grid item xs={12} mt={{md: 6, lg: 8, xl: 12}}>
+			<Grid item xs={12} mt={{md: 8, lg: 8, xl: 12}}>
 				<Skills isVisible={isVisible}/>
 			</Grid>
 		</Grid>

@@ -5,11 +5,11 @@ const SkillsDescription = () => {
 
   return (
     <Stack pl={{xs: 3, sm: 3, md: 2, lg: 3.5, xl: 5}}>
-      <Box sx={{display: {xs: "none", md: "initial"}}} mb={{lg: 3, xl: 4}}>
+      <Box sx={{display: {xs: "none", md: "initial"}}} mb={{md: 2, lg: 3, xl: 4}}>
         <Typography 
           variant="h2" 
           fontWeight={400}
-          fontSize={{md: 28, lg: 35, xl: 40}} 
+          fontSize={{md: 30, lg: 35, xl: 40}} 
           letterSpacing={.5}
           lineHeight={{lg:1.6, xl:1.1}} 
           textTransform="none"
@@ -21,13 +21,13 @@ const SkillsDescription = () => {
           My Expertise
         </Typography>
       </Box>
-      <Box ml="auto" sx={{maxWidth: "100%"}} mb={{lg: 5, xl:7}}>
+      <Box ml="auto" sx={{maxWidth: "100%"}} mb={{md: 3, lg: 5, xl:7}}>
         <Typography 
           variant="body1" 
           sx={{
             textAlign: { xs: "justify", md:"right" }, 
             textJustify: "inter-word", 
-            fontSize: {xs: 13, sm: 14, md: 15, lg:16, xl: 16.5},
+            fontSize: {xs: 13, sm: 14, md: 14, lg:16, xl: 16.5},
             fontWeight: 300,
             opacity: .55,
             letterSpacing: .4,
