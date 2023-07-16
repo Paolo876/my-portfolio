@@ -9,7 +9,7 @@ const Skills = ({ isVisible }) => {
 
   return (
     <Grid container sx={{justifyContent: {xs:"center", md: "space-between"}, alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
-      <Grid item xs={8} mt={6} mb={4}><Divider/></Grid>
+      <Grid item xs={8} mt={6} mb={4} sx={{display: {xs: "initial", md: "none"}}}><Divider/></Grid>
       <Grid item xs={12} sx={{display: {xs: "initial", md: "none"}}}>
         <Box mb={1.5}>
           <Typography 

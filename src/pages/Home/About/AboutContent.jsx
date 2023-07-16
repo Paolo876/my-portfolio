@@ -99,7 +99,7 @@ const AboutContent = ({ isVisible }) => {
 			<Grid item xs={12} mt={{md: 8, lg: 8, xl: 12}}>
 				<Skills isVisible={isVisible}/>
 			</Grid>
-      <Grid item xs={12} mt={3}>
+      <Grid item xs={12} mt={3} sx={{display: {xs: "initial", md: "none"}}}>
         <Box>
           <ButtonBase
             sx={{
