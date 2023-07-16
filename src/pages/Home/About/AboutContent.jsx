@@ -5,44 +5,45 @@ import Skills from './Skills/Skills';
 
 const AboutContent = ({ isVisible }) => {
   return (
-    <Grid container sx={{maxWidth: "1500px", mx: "auto", height: "90%", px: {md: 0,lg:2, xl: 4}}}>
+    <Grid container sx={{maxWidth: "1500px", mx: "auto", height: "90%"}}>
 			<Grid item xs={12}>
-				<Grid container columnSpacing={12}>
-					<Grid item xs={3}><Box sx={{height: 300, width: 250, border: 1}}></Box></Grid>
+				<Grid container columnSpacing={{md: 6, lg: 6, xl:12}}>
+					<Grid item xs={3}><Box sx={{height: {md: 240, lg: 280, xl: 300 }, width: {md: 190, lg: 230, xl: 250}, border: 1}}></Box></Grid>
 					<Grid item xs={9} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
 						<Box>
 							<Typography
 								variant="h2" 
 								fontWeight={400}
-								fontSize={{lg: 34, xl: 36}} 
-								letterSpacing={1}
-								lineHeight={{lg:1.6, xl:1.4}} 
+								fontSize={{md: 26, lg: 32, xl: 36}} 
+								letterSpacing={{xs: .5, lg: 1}}
+								lineHeight={1.4} 
 								textTransform="none"
 								sx={{
 									textShadow: "1px 1px 7px rgba(10,10,10,.75)",
 								}}
 							>I am Paolo Bugarin, <br/>a Full Stack Web Developer based in Los Angeles, California.</Typography>
 						</Box>
-						<Box pb={3} sx={{maxWidth: "100%"}}>
+						<Box pb={{md: 1.5, lg:3}} sx={{maxWidth: "100%"}}>
 							<Typography
 								variant="body1" 
 								sx={{
-									fontSize: {xs: 14, sm: 15, md: 16, lg:17, xl: 17},
+									fontSize: {xs: 14, sm: 14, md: 14, lg:16, xl: 17},
 									fontWeight: 300,
 									opacity: .55,
 									letterSpacing: .4,
 									textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+									pr: {xl: 2}
 								}}
 							>
               	I studied Computer Information Systems major in Web Development and Software Development at Pasadena City College. 
 								A big part of my knowledge is also gained from self-studying through online courses, tutorials, and participating in different coding groups.
 							</Typography>
 						</Box>
-						<Box mb={1.5}>
+						<Box mb={{lg: 1.5}}>
 							<ButtonBase
 								sx={{
 									borderLeft: 2, 
-									fontSize: { xs: "1.25rem", sm: "1.3rem", md: "1.4rem", lg: "1.5rem", xl:"1.5rem" },
+									fontSize: { xs: "1.25rem", sm: "1.3rem", md: "1.3rem", lg: "1.45rem", xl:"1.5rem" },
 									lineHeight: 1.4, 
 									color: "white", 
 									borderColor: "primary.dark",
@@ -67,7 +68,7 @@ const AboutContent = ({ isVisible }) => {
 					</Grid>
 				</Grid>
 			</Grid>
-			<Grid item xs={12} mt={12}>
+			<Grid item xs={12} mt={{md: 6, lg: 8, xl: 12}}>
 				<Skills isVisible={isVisible}/>
 			</Grid>
 		</Grid>

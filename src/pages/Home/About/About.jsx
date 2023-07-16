@@ -10,7 +10,7 @@ const About = () => {
     <Box 
       sx={{
         position: "relative", 
-        px: {xs:0, sm: 1, md: 1, lg: 2.25, xl: 3}, 
+        px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
         py: {xs:8, sm: 10, md: 11, lg: 12, xl: 15},
         display: "flex",
         flexDirection: "column",
@@ -56,7 +56,7 @@ const About = () => {
             }
           }}
         >
-          <Typography variant="h2" textTransform="none" fontWeight={200} >Who Am I?</Typography>
+          <Typography variant="h2" textTransform="none" fontWeight={200} fontSize={{xs: 40, sm: 50, md: 55, lg:60}}>Who Am I?</Typography>
         </ButtonBase>
       </Box>}
       <Box sx={{opacity: showContent ? 1 : 0}}>

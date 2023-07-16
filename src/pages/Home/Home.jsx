@@ -45,7 +45,7 @@ const Home = () => {
         <Landing/>
         <SubIntroduction/>
         <Projects/>
-        {/* <About/> */}
+        <About/>
 
         {/* <Works/> */}
         {/* <Process/>
