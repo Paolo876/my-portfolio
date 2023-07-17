@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Grid, Box, Typography, ButtonBase } from '@mui/material'
+import { Box, Typography, ButtonBase } from '@mui/material'
 import AboutContent from './AboutContent';
 
 const About = () => {
