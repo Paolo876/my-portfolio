@@ -59,7 +59,7 @@ const SkillsCarousel = () => {
                 enterNextDelay={250}
               >
                 <Box sx={boxStyles} variant="outlined">
-                  <Box height={{xs: 40, sm: 40, md:45, lg:50, xl: 50}} width="auto">
+                  <Box height={{xs: 25, sm: 40, md:45, lg:50, xl: 50}} width="auto">
                     <SkillIconImageItem 
                       src={_item.monoUrl} 
                       duration={500} 

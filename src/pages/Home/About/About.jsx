@@ -11,13 +11,12 @@ const About = () => {
       sx={{
         position: "relative", 
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
-        py: {xs:8, sm: 10, md: 11, lg: 12, xl: 15},
+        py: {xs:6, sm: 10, md: 11, lg: 12, xl: 15},
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
-        // height: "88vh",
       }}
     >
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(0,0,0,1)", mixBlendMode: "overlay", opacity: .15, zIndex: -1}}></Box>

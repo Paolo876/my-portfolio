@@ -9,13 +9,13 @@ const Skills = ({ isVisible }) => {
 
   return (
     <Grid container sx={{justifyContent: {xs:"center", md: "space-between"}, alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
-      <Grid item xs={8} mt={6} mb={4} sx={{display: {xs: "initial", md: "none"}}}><Divider/></Grid>
+      <Grid item xs={8} mt={{xs: 5, sm:6}} mb={{xs: 3, sm:4}} sx={{display: {xs: "initial", md: "none"}}}><Divider/></Grid>
       <Grid item xs={12} sx={{display: {xs: "initial", md: "none"}}}>
         <Box mb={1.5}>
           <Typography 
             variant="h2" 
             fontWeight={400}
-            fontSize={{sm: 30}} 
+            fontSize={{xs: 25, sm: 30}} 
             letterSpacing={.5}
             lineHeight={{lg:1.6, xl:1.1}} 
             textTransform="none"
@@ -30,7 +30,7 @@ const Skills = ({ isVisible }) => {
           <Typography 
             variant="body1" 
             sx={{
-              fontSize: {xs: 12, sm: 13},
+              fontSize: {xs: 11, sm: 13},
               fontWeight: 300,
               opacity: .55,
               letterSpacing: .4,
