@@ -159,7 +159,7 @@ const Contact = () => {
         </Box>
       </Grid>
       
-      <Grid item xs={12} sm={12} md={3} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%"}} mt={{xs:2, sm: 4, md: 0}}>
+      <Grid item xs={12} sm={12} md={3} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%"}} mt={{xs:2, sm: 3, md: 0}}>
         <Box sx={{width: "100%", height: "100%", display: "flex", justifyContent: {xs: "space-between", md:"right"}}}>
           <Box mt={{md: 2,xl:4}} sx={{display: {xs:"initial", md: "none"}}}>
             <ButtonBase
@@ -213,7 +213,7 @@ const Contact = () => {
             Download My CV <DownloadIcon sx={{ml: 1.5}}/>
           </ButtonBase>
         </Box>
-        <Box mt={{md:4}} sx={{width: "fit-content"}} ml="auto">
+        <Box mt={{md:4}} sx={{width: "fit-content", display: {xs: "none", md: "initial"}}} ml="auto">
           <SocialLinks 
             flexDirection='row' 
             color="inherit" 
@@ -230,7 +230,32 @@ const Contact = () => {
             }}
           />
         </Box>
-        <Box sx={{width: "100%"}} mt={{md: 3, lg: 4, xl:4}}>
+        <Box sx={{width: "100%", display: {xs: "none", md: "initial"}}} mt={{md: 3, lg: 4.25, xl:5}}>
+          <Typography sx={{fontSize: {xs: 11, sm:11, md: 11.5, lg:13, xl: 14}, opacity: .5, mixBlendMode: "difference", textAlign: "right"}}>
+            © 2023 Paolo Bugarin, All rights reserved.
+          </Typography>
+        </Box>
+      </Grid>
+
+      <Grid item xs={12} sm={12} mt={1.5} sx={{display: {xs:"flex", md: "none"}, flexDirection: "row", justifyContent: "space-between", height: "100%", alignItems: "center"}}>
+        <Box mt={{md:4}} sx={{width: "fit-content", display: {xs: "initial", md: "none"}}} ml="auto">
+          <SocialLinks 
+            flexDirection='row' 
+            color="inherit" 
+            gap={.5}
+            placement="bottom"
+            additionalStyles={{
+              opacity: .65,
+              transition: "all 150ms ease-in-out",
+              "&:hover": {
+                opacity: 1,
+                transform: "scale(1.15)",
+                color: "primary.light",
+              }
+            }}
+          />
+        </Box>
+        <Box sx={{width: "100%", display: {xs: "initial", md: "none"}}}>
           <Typography sx={{fontSize: {xs: 11, sm:11, md: 11.5, lg:13, xl: 14}, opacity: .5, mixBlendMode: "difference", textAlign: "right"}}>
             © 2023 Paolo Bugarin, All rights reserved.
           </Typography>
