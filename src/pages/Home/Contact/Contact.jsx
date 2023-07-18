@@ -13,12 +13,12 @@ const contactButtonStyles = {
   textAlign: "left",
   display: "flex", 
   alignItems: "center", 
-  gap: {sm: .75, lg: 1.5}, 
+  gap: {xs: .75, sm: .75, lg: 1.5}, 
   justifyContent: "left",
   borderLeft: 2, 
   borderColor: "rgba(100,100,100,.75)",
   py: .5,
-  px: {sm: 1, lg:2},
+  px: {xs: 1, lg:2},
   transition: "all 250ms ease-in-out",
   letterSpacing: .4,
   opacity: .75,
@@ -53,7 +53,7 @@ const Contact = () => {
           <Typography 
             variant="h2" 
             fontWeight={400}
-            fontSize={{sm: 23, md: 24, lg: 26, xl: 30}} 
+            fontSize={{xs: 24, sm: 23, md: 24, lg: 26, xl: 30}} 
             letterSpacing={.5}
             lineHeight={1.1} 
             textTransform="none"
@@ -67,7 +67,7 @@ const Contact = () => {
         <Box mt={2}>
           <Typography 
             sx={{
-              fontSize: {xs: 12, sm: 12, md: 12.5, lg:13, xl: 14.5},
+              fontSize: {xs: 11.5, sm: 12, md: 12.5, lg:13, xl: 14.5},
               fontWeight: 400,
               opacity: .7,
               letterSpacing: .3,
@@ -91,15 +91,15 @@ const Contact = () => {
           </Typography>
         </Box>
         
-        <Box mt={{md: 2, xl:3}} sx={{display: {xs:"none", md: "flex"}}}>
+        <Box mt={{xs: 1.25, md: 2, xl:3}} sx={{display: {sm:"none", md: "flex"}}}>
           <ButtonBase
             sx={{
               borderLeft: 2, 
-              fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.1rem", lg: "1.2rem", xl:"1.3rem" },
+              fontSize: { xs: "1.05rem", sm: "1.2rem", md: "1.1rem", lg: "1.2rem", xl:"1.3rem" },
               lineHeight: 1.4, 
               color: "primary.main", 
               borderColor: "rgba(100,100,100,.75)",
-              px: 1.5,
+              px: {xs: 1, md:1.5},
               py: .25,
               fontWeight: 600,
               letterSpacing: .4,
@@ -119,12 +119,12 @@ const Contact = () => {
         </Box>
       </Grid>
       
-      <Grid item xs={12} sm={6} md={4} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "left", height: "100%"}}>
+      <Grid item xs={12} sm={6} md={4} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "left", height: "100%"}} mt={{xs: 4, sm: 0}}>
         <Box align="left">
           <Typography 
             variant="h2" 
             fontWeight={400}
-            fontSize={{sm: 23, md: 24, lg: 26, xl: 30}} 
+            fontSize={{xs: 21, sm: 23, md: 24, lg: 26, xl: 30}} 
             letterSpacing={.5}
             lineHeight={1.1} 
             textTransform="none"
@@ -134,23 +134,23 @@ const Contact = () => {
           >Paolo Bugarin</Typography>
           <Typography
             sx={{
-              fontSize: { xs: 13, sm: 13, md: 14, lg:15, xl: 16 },
+              fontSize: { xs: 12, sm: 13, md: 14, lg:15, xl: 16 },
               fontWeight: 200,
               opacity: .7,
               letterSpacing: 1,
               textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-              mt: 1.5,
+              mt: {xs: 1, sm:1.5},
             }}
           >Los Angeles, CA</Typography>
         </Box>
-        <Box mt={{sm: 3, md: 4, xl:4}}>
+        <Box mt={{xs: 1.5, sm: 3, md: 4, xl:4}}>
           <Box>
             <IconButton size="small" href="tel:3234817852" sx={contactButtonStyles} disableRipple>
               <LocalPhoneIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 25}}} />
               <Typography sx={{fontSize: {xs:14, sm: 14, md: 15, lg: 18}, letterSpacing: 1}} fontWeight={300}>(323) 481 - 7852</Typography>
             </IconButton> 
           </Box>
-          <Box mt={2}>
+          <Box mt={{xs:1, sm: 2}}>
             <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={contactButtonStyles} disableRipple>
               <MailOutlineIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 25}}}/>
               <Typography sx={{fontSize: {xs:14, sm: 14, md: 15, lg: 18}, letterSpacing: 1}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
@@ -159,9 +159,9 @@ const Contact = () => {
         </Box>
       </Grid>
       
-      <Grid item xs={12} sm={12} md={3} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%"}} mt={{xs:2, sm: 3, md: 0}}>
+      <Grid item xs={12} sm={12} md={3} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%"}} mt={{xs:3, sm: 3, md: 0}}>
         <Box sx={{width: "100%", height: "100%", display: "flex", justifyContent: {xs: "space-between", md:"right"}}}>
-          <Box mt={{md: 2,xl:4}} sx={{display: {xs:"initial", md: "none"}}}>
+          <Box mt={{md: 2,xl:4}} sx={{display: {xs: "none", sm:"initial", md: "none"}}}>
             <ButtonBase
               sx={{
                 borderLeft: 2, 
@@ -192,10 +192,10 @@ const Contact = () => {
             sx={{
               boxShadow: 5,
               border: 2, 
-              fontSize: { xs: "1rem", sm: "1rem", md: "1rem", lg: "1rem" },
+              fontSize: { xs: ".9rem", sm: "1rem", md: "1rem", lg: "1rem" },
               lineHeight: 1.4, 
-              borderColor: "rgba(100,100,100,.75)",
-              px: {sm: 1.5, lg: 2},
+              borderColor: {xs: "primary.dark", sm:"rgba(100,100,100,.75)"},
+              px: {xs: 1, sm: 1.5, lg: 2},
               py: 1,
               fontWeight: 600,
               letterSpacing: .5,
@@ -237,8 +237,8 @@ const Contact = () => {
         </Box>
       </Grid>
 
-      <Grid item xs={12} sm={12} mt={1.5} sx={{display: {xs:"flex", md: "none"}, flexDirection: "row", justifyContent: "space-between", height: "100%", alignItems: "center"}}>
-        <Box mt={{md:4}} sx={{width: "fit-content", display: {xs: "initial", md: "none"}}} ml="auto">
+      <Grid item xs={12} sm={12} mt={2} sx={{display: {xs:"flex", md: "none"}, flexDirection: {xs: "column", sm:"row"}, justifyContent: "space-between", height: "100%", alignItems: "center"}}>
+        <Box mt={{md:4}} sx={{width: "fit-content", display: {xs: "initial", md: "none"}}} ml={{sm:"auto"}}>
           <SocialLinks 
             flexDirection='row' 
             color="inherit" 
@@ -256,7 +256,7 @@ const Contact = () => {
           />
         </Box>
         <Box sx={{width: "100%", display: {xs: "initial", md: "none"}}}>
-          <Typography sx={{fontSize: {xs: 11, sm:11, md: 11.5, lg:13, xl: 14}, opacity: .5, mixBlendMode: "difference", textAlign: "right"}}>
+          <Typography sx={{fontSize: {xs: 11, sm:11, md: 11.5, lg:13, xl: 14}, opacity: .5, mixBlendMode: "difference", textAlign: {xs: "center", sm:"right"}}}>
             © 2023 Paolo Bugarin, All rights reserved.
           </Typography>
         </Box>
