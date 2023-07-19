@@ -4,7 +4,7 @@ import useRootRedux from '../../hooks/useRootRedux'
 import useFirestoreActions from '../../hooks/useFirestoreActions'
 import DocumentHead from '../../components/DocumentHead'
 import Contact from "../Home/Contact/Contact"
-import { Grid, Box, Stack } from '@mui/material'
+import { Grid, Box, Stack, List, ListItem, ListItemButton, Typography } from '@mui/material'
 import Footer from '../../components/Footer'
 import Introduction from './Introduction'
 import ProjectsList from './ProjectsList'
@@ -283,7 +283,36 @@ const Projects = () => {
         <Grid item xl={3.5}>
           <Introduction/>
         </Grid>
-        <Grid item xl={5}></Grid>
+        <Grid item xl={5} sx={{height: "100%"}}>
+          <List>
+            {projects && projects.map(item => <ListItem key={item.name}>
+              <ListItemButton 
+                sx={{
+                  width: "100%", 
+                  alignItems: "center", 
+                  display: "flex", 
+                  justifyContent: "center",
+                  textTransform: "none",
+                  fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 30},
+                  fontWeight: 300,
+                  letterSpacing: 1,
+                  textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+                  transition: "all 250ms ease-in-out",
+                  opacity: .55, 
+                  "&:hover": {
+                    opacity: 1,
+                    letterSpacing: 1.65,
+                    fontWeight: 500,
+                    transform: "scale(1.025)",
+                    // color: "primary.main"
+                  }
+                  }}>
+                {item.title}
+              </ListItemButton>
+            </ListItem>)}
+
+          </List>
+        </Grid>
         <Grid item xl={3.5}></Grid>
       </Grid>
 
