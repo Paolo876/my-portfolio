@@ -279,11 +279,19 @@ const Projects = () => {
         description="I am a full stack web developer based in Los Angeles, California"
         keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
       />
-      <Routes>
+      <Grid container sx={{px: { xs:1.75, sm: 3, md: 4, lg: 5 }, pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14}, pb: 8, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", minHeight: "100vh"}}>
+        <Grid item xl={4}>
+          <Introduction/>
+        </Grid>
+        <Grid item xl={4}></Grid>
+        <Grid item xl={4}></Grid>
+      </Grid>
+
+      {/* <Routes>
         <Route 
           element={
             <Stack>
-              <Grid container sx={{px: {xs:1.5, sm: 3, md: 1.5, lg: 3}, pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14}, pb: 8, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", minHeight: "100vh"}}>
+              <Grid container sx={{px: { xs:1.75, sm: 3, md: 4, lg: 5 }, pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14}, pb: 8, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", minHeight: "100vh"}}>
                 <Grid item xs={12} lg={2.25}>
                   <Introduction/>
                 </Grid>
@@ -297,7 +305,7 @@ const Projects = () => {
           path="/"
         />
         <Route element={projects && <ProjectPage projects={projects}/>} path="/:id"/>
-      </Routes>
+      </Routes> */}
     </>
   )
 }
