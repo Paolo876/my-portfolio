@@ -4,13 +4,13 @@ import SocialLinks from '../../components/SocialLinks'
 const Introduction = () => {
 
   return (
-    <Grid container sx={{pl: {md: 4, lg: 0}, pr: {md: 4, lg: 2}}}>
+    <Grid container sx={{pl: {md: 4, lg: 0}, pr: {md: 4, lg: 4, xl: 9}}}>
       <Grid item xs={12} sm={4.5} md={4} lg={12}>
         <Typography 
           variant="h2" 
           align="left" 
           fontWeight={400}
-          fontSize={{xs: 35, sm: 45, md: 60, lg: 80, xl: 80}} 
+          fontSize={{xs: 35, sm: 45, md: 60, lg: 80, xl: 70}} 
           letterSpacing={{xs: .5, xL:1}}
           lineHeight={{xs:1}} 
           textTransform="none"
@@ -25,7 +25,7 @@ const Introduction = () => {
         <Typography 
           variant="body1" 
           sx={{
-            fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 16},
+            fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:15, xl: 15},
             fontWeight: 300,
             opacity: .55,
             letterSpacing: .3,
