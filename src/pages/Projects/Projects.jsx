@@ -297,14 +297,14 @@ const Projects = () => {
                   textTransform: "none",
                   fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 35},
                   fontWeight: 300,
-                  letterSpacing: 1,
+                  // letterSpacing: 1,
                   textShadow: "1px 1px 5px rgba(10,10,10,.75)",
                   transition: "all 250ms ease-in-out",
                   opacity: .55, 
                   my: 1, 
                   "&:hover, &.active": {
                     opacity: 1,
-                    letterSpacing: 1.65,
+                    letterSpacing: .5,
                     fontWeight: 500,
                     transform: "scale(1.025)",
                     background: "rgba(100,100,100,.2)"

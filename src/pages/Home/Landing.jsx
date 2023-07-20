@@ -8,7 +8,7 @@ const linkStyles = {
   fontSize: { xs: "1.3rem", sm: "1.75rem", md: "1.8rem", lg: "1.8rem", xl:"1.8rem" },
   my: { xs:2.5, sm: 3.5, md: 4, lg: 4 },
   borderRight: 2, 
-  borderColor: "rgba(200, 200, 200, .5)",
+  borderColor: "primary.dark",
   width: "fit-content",
   pr: 2,
   lineHeight: 1,
