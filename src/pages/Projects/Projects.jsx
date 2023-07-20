@@ -309,17 +309,33 @@ const Projects = () => {
                   textTransform: "none",
                   fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 35},
                   fontWeight: 300,
-                  // letterSpacing: 1,
                   textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-                  transition: "all 250ms ease-in-out",
+                  transition: "all 400ms ease",
                   opacity: .55, 
                   my: 1, 
+                  position: "relative",
+                  "&::before": {
+                    content: '""',
+                    position: "absolute",
+                    height: 3,
+                    width: 0,
+                    backgroundColor: "primary.main",
+                    bottom: 0,
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    transition: "all 200ms ease"
+                  },
                   "&:hover, &.active": {
                     opacity: 1,
-                    letterSpacing: .5,
+                    // letterSpacing: .25,
                     fontWeight: 500,
-                    transform: "scale(1.025)",
-                    background: "rgba(100,100,100,.2)"
+                    transform: "scale(1.015)",
+                    background: "none",
+                    "&::before": {
+                      width: 40,
+                      backgroundColor: "primary.main",
+
+                    }
                   }
                   }}>
                 {item.title}
@@ -331,7 +347,12 @@ const Projects = () => {
         <Grid item xl={3.5}></Grid>
       </Grid>
       <Box sx={{position: "absolute", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1}}>
+        <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
+        <Grid item xl={3}></Grid>
+        <Grid item xl={6} sx={{background: "rgba(75,75,75,.1)", height: "100vh", width: "100%", transform: "skewX(-7deg)", boxShadow: 1}}></Grid>
+        <Grid item xl={3}></Grid>
 
+        </Grid>
       </Box>
     </Box>
       {/* <Routes>
