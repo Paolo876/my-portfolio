@@ -25,7 +25,7 @@ const Introduction = () => {
         <Typography 
           variant="body1" 
           sx={{
-            fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:15, xl: 14},
+            fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:15, xl: 14.5},
             fontWeight: 300,
             opacity: .55,
             letterSpacing: .3,

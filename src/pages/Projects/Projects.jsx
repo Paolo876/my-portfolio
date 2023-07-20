@@ -279,7 +279,19 @@ const Projects = () => {
         description="I am a full stack web developer based in Los Angeles, California"
         keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
       />
-      <Grid container sx={{px: { xs:1.75, sm: 3, md: 4, lg: 5 }, pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14}, pb: 8, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", minHeight: "100vh"}}>
+    <Box
+      sx={{
+        // height: {xs: "95vh", md:"96vh"}, 
+        minHeight: "100vh",
+        position: "relative", 
+        px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
+        pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14},        
+        // display: "flex",
+        // flexDirection: "column",
+        // justifyContent: "center",
+      }}
+    >
+      <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
         <Grid item xl={3.5}>
           <Introduction/>
         </Grid>
@@ -318,7 +330,10 @@ const Projects = () => {
         </Grid>
         <Grid item xl={3.5}></Grid>
       </Grid>
+      <Box sx={{position: "absolute", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1}}>
 
+      </Box>
+    </Box>
       {/* <Routes>
         <Route 
           element={
