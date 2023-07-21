@@ -10,7 +10,7 @@ const Introduction = () => {
           variant="h2" 
           align="left" 
           fontWeight={400}
-          fontSize={{xs: 35, sm: 45, md: 60, lg: 80, xl: 50}} 
+          fontSize={{xs: 35, sm: 45, md: 60, lg: 80, xl: 56}} 
           letterSpacing={{xs: .5, xL:1}}
           lineHeight={{xs:1}} 
           textTransform="none"
@@ -25,10 +25,10 @@ const Introduction = () => {
         <Typography 
           variant="body1" 
           sx={{
-            fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:15, xl: 14.5},
+            fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:15, xl: 15},
             fontWeight: 300,
             opacity: .55,
-            letterSpacing: .3,
+            letterSpacing: .25,
             textShadow: "1px 1px 5px rgba(10,10,10,.75)",
           }}        
         >

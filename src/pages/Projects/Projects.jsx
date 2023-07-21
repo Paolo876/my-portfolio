@@ -281,14 +281,10 @@ const Projects = () => {
       />
     <Box
       sx={{
-        // height: {xs: "95vh", md:"96vh"}, 
         minHeight: "100vh",
         position: "relative", 
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
         pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14},        
-        // display: "flex",
-        // flexDirection: "column",
-        // justifyContent: "center",
       }}
     >
       <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
@@ -327,14 +323,12 @@ const Projects = () => {
                   },
                   "&:hover, &.active": {
                     opacity: 1,
-                    // letterSpacing: .25,
                     fontWeight: 500,
                     transform: "scale(1.015)",
                     background: "none",
                     "&::before": {
                       width: 40,
                       backgroundColor: "primary.main",
-
                     }
                   }
                   }}>
