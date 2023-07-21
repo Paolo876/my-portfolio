@@ -10,7 +10,7 @@ import Introduction from './Introduction'
 import ProjectsList from './ProjectsList'
 import { Route, Routes } from 'react-router-dom'
 import ProjectPage from './ProjectPage/ProjectPage'
-
+import Image from 'mui-image'
 
 const MOCK_PROJ_IMG = {
   url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_banner.png?alt=media&token=4f2813bc-7201-4b53-abeb-48a4de04e297",
@@ -356,16 +356,21 @@ const Projects = () => {
 
           </List>
         </Grid>
-        <Grid item xl={3.5} align="right">
-          <Typography>{projects[activeProject].name}</Typography>
+        <Grid item xl={3.5}></Grid>
 
-        </Grid>
       </Grid>
+
+      {/* background  */}
       <Box sx={{position: "absolute", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1}}>
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
         <Grid item xl={3}></Grid>
-        <Grid item xl={6} sx={{background: "rgba(75,75,75,.1)", height: "100vh", width: "100%", transform: "skewX(-7deg)", boxShadow: 1}}></Grid>
-        <Grid item xl={3}></Grid>
+        <Grid item xl={6} sx={{background: "rgba(38,38,38,1)", height: "100vh", width: "100%", transform: "skewX(-7deg)", boxShadow: 1}}></Grid>
+        <Grid item xl={3} align="right" sx={{background: "", height: "50vh", display: "flex", alignItems: "flex-end", justifyContent: "flex-end", zIndex: -2}}>
+          {/* <Typography>{projects[activeProject].name}</Typography> */}
+          <Box>
+            <Image src={projects[activeProject].coverImage.url}/>
+          </Box>
+        </Grid>
         </Grid>
       </Box>
     </Box>
