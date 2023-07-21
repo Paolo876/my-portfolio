@@ -252,26 +252,38 @@ const MOCK_PROJ_LIST = [
 
 const Projects = () => {
   const [ projects, setProjects ] = useState(MOCK_PROJ_LIST);
+  const [ activeProject, setActiveProject ] = useState(0);
   const { state, pathname } = useLocation();
   const navigate = useNavigate();
 
   const { skillsList, setData } = useRootRedux();
-  const { getDocumentFromCollection } = useFirestoreActions();
+  // const { getDocumentFromCollection } = useFirestoreActions();
 
+  // useEffect(() => {
+  //   if(skillsList.length === 0){
+  //     getDocumentFromCollection('user', 'information').then(data => setData(data))
+  //   }
+  //   navigate(pathname, {})
+  // }, [])
+
+  // useEffect(() => {
+  //   if(state && projects.length !== 0) {
+  //     window.scrollTo(0, state.screenView);
+  //   } else {
+  //     window.scrollTo(0, 0);
+  //   }
+  // }, [state])
   useEffect(() => {
-    if(skillsList.length === 0){
-      getDocumentFromCollection('user', 'information').then(data => setData(data))
-    }
-    navigate(pathname, {})
+    const interval = setInterval(
+      () => setActiveProject(prevState => {
+        if(prevState === projects.length - 1) {
+          return 0
+        } else {
+          return prevState + 1
+        }
+      }), 5000)
+    return () => clearInterval(interval)  
   }, [])
-
-  useEffect(() => {
-    if(state && projects.length !== 0) {
-      window.scrollTo(0, state.screenView);
-    } else {
-      window.scrollTo(0, 0);
-    }
-  }, [state])
   return (
     <>
       <DocumentHead
@@ -293,10 +305,12 @@ const Projects = () => {
         </Grid>
         <Grid item xl={5} sx={{height: "100%", my: "auto"}}>
           <List>
-            {projects && projects.map(item => <ListItem key={item.name} >
+            {projects && projects.map((item, index) => <ListItem key={item.name} >
               <ListItemButton 
+                className={index === activeProject ? "active" : ""}
                 disableRipple
                 disableGutters
+                onMouseOver={() => setActiveProject(index)}
                 sx={{
                   width: "100%", 
                   alignItems: "center", 
