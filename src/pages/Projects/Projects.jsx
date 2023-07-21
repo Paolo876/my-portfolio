@@ -11,6 +11,7 @@ import ProjectsList from './ProjectsList'
 import { Route, Routes } from 'react-router-dom'
 import ProjectPage from './ProjectPage/ProjectPage'
 import Image from 'mui-image'
+import ProjectSelection from './ProjectPage/ProjectSelection'
 
 const MOCK_PROJ_IMG = {
   url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_banner.png?alt=media&token=4f2813bc-7201-4b53-abeb-48a4de04e297",
@@ -307,66 +308,17 @@ const Projects = () => {
           <Introduction/>
         </Grid>
         <Grid item xl={5} sx={{height: "100%", my: "auto"}}>
-          <List>
-            {projects && projects.map((item, index) => <ListItem key={item.name} >
-              <ListItemButton 
-                className={index === activeProject ? "active" : ""}
-                disableRipple
-                disableGutters
-                onMouseOver={() => { setActiveProject(index); setIsHovered(true) }}
-                onMouseLeave={() => setIsHovered(false)}
-                sx={{
-                  width: "100%", 
-                  alignItems: "center", 
-                  display: "flex", 
-                  justifyContent: "center",
-                  textTransform: "none",
-                  fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 35},
-                  fontWeight: 300,
-                  textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-                  transition: "all 400ms ease",
-                  opacity: .55, 
-                  my: 1, 
-                  position: "relative",
-                  "&::before": {
-                    content: '""',
-                    position: "absolute",
-                    height: 3,
-                    width: 0,
-                    backgroundColor: "primary.main",
-                    bottom: 0,
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    transition: "all 200ms ease"
-                  },
-                  "&:hover, &.active": {
-                    opacity: 1,
-                    fontWeight: 500,
-                    transform: "scale(1.015)",
-                    background: "none",
-                    "&::before": {
-                      width: 40,
-                      backgroundColor: "primary.main",
-                    }
-                  }
-                  }}>
-                {item.title}
-              </ListItemButton>
-            </ListItem>)}
-
-          </List>
+          <ProjectSelection projects={projects} setActiveProject={setActiveProject} setIsHovered={setIsHovered} activeProject={activeProject}/>
         </Grid>
         <Grid item xl={3.5}></Grid>
-
       </Grid>
 
       {/* background  */}
       <Box sx={{position: "absolute", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1}}>
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
         <Grid item xl={3}></Grid>
-        <Grid item xl={6} sx={{background: "rgba(38,38,38,1)", height: "100vh", width: "100%", transform: "skewX(-7deg)", boxShadow: 1}}></Grid>
+        <Grid item xl={6} sx={{background: "rgba(38,38,38,1)", height: "100vh", width: "100%", transform: "skewX(-7deg)"}}></Grid>
         <Grid item xl={3} align="right" sx={{background: "", height: "50vh", display: "flex", alignItems: "flex-end", justifyContent: "flex-end", zIndex: -2}}>
-          {/* <Typography>{projects[activeProject].name}</Typography> */}
           <Box>
             <Image src={projects[activeProject].coverImage.url}/>
           </Box>
