@@ -1,6 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { List, ListItem, ListItemButton } from '@mui/material';
+
+
 const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProject }) => {
+  const navigate = useNavigate();
+
 
   return (
     <List>
@@ -11,6 +16,7 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
         disableGutters
         onMouseOver={() => { setActiveProject(index); setIsHovered(true) }}
         onMouseLeave={() => setIsHovered(false)}
+        onClick={() => navigate(`${item.name}`)}
         sx={{
           width: "100%", 
           alignItems: "center", 

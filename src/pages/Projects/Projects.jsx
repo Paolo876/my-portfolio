@@ -12,6 +12,7 @@ import { Route, Routes } from 'react-router-dom'
 import ProjectPage from './ProjectPage/ProjectPage'
 import Image from 'mui-image'
 import ProjectSelection from './ProjectSelection'
+import ProjectItem from './ProjectItem/ProjectItem'
 
 const MOCK_PROJ_IMG = {
   url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_banner.png?alt=media&token=4f2813bc-7201-4b53-abeb-48a4de04e297",
@@ -252,6 +253,8 @@ const MOCK_PROJ_LIST = [
 
 
 const Projects = () => {
+  const [ projects, setProjects ] = useState(MOCK_PROJ_LIST);
+
   const { state, pathname } = useLocation();
   const navigate = useNavigate();
 
@@ -289,15 +292,14 @@ const Projects = () => {
       keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
     />
     <Routes>
-      <Route path="/" element={<MainPage/>}/>
-      {/* <Route path="/:id" element={<><NewMessageFeed/></>}/> */}
+      <Route path="/" element={<MainPage projects={projects}/>}/>
+      <Route path="/:id" element={<ProjectItem projects={projects}/>}/>
     </Routes>
   </Box>
   )
 }
 
-const MainPage = () => {
-  const [ projects, setProjects ] = useState(MOCK_PROJ_LIST);
+const MainPage = ({ projects }) => {
   const [ activeProject, setActiveProject ] = useState(0);
   const [ isHovered, setIsHovered ] = useState(false)
 
