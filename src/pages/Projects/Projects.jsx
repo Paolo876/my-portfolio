@@ -252,9 +252,6 @@ const MOCK_PROJ_LIST = [
 
 
 const Projects = () => {
-  const [ projects, setProjects ] = useState(MOCK_PROJ_LIST);
-  const [ activeProject, setActiveProject ] = useState(0);
-  const [ isHovered, setIsHovered ] = useState(false)
   const { state, pathname } = useLocation();
   const navigate = useNavigate();
 
@@ -275,6 +272,35 @@ const Projects = () => {
   //     window.scrollTo(0, 0);
   //   }
   // }, [state])
+
+  
+  return (
+    <Box
+      sx={{
+        minHeight: "100vh",
+        position: "relative", 
+        px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
+        pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14},        
+      }}
+    >
+    <DocumentHead
+      title="Paolo Bugarin | Projects"
+      description="I am a full stack web developer based in Los Angeles, California"
+      keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
+    />
+    <Routes>
+      <Route path="/" element={<MainPage/>}/>
+      {/* <Route path="/:id" element={<><NewMessageFeed/></>}/> */}
+    </Routes>
+  </Box>
+  )
+}
+
+const MainPage = () => {
+  const [ projects, setProjects ] = useState(MOCK_PROJ_LIST);
+  const [ activeProject, setActiveProject ] = useState(0);
+  const [ isHovered, setIsHovered ] = useState(false)
+
   useEffect(() => {
     const interval = setInterval(
       () => setActiveProject(prevState => {
@@ -287,22 +313,10 @@ const Projects = () => {
     if(isHovered) clearInterval(interval) 
     return () => clearInterval(interval)  
   }, [isHovered])
-  
+
+
   return (
     <>
-      <DocumentHead
-        title="Paolo Bugarin | Projects"
-        description="I am a full stack web developer based in Los Angeles, California"
-        keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
-      />
-    <Box
-      sx={{
-        minHeight: "100vh",
-        position: "relative", 
-        px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
-        pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14},        
-      }}
-    >
       <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
         <Grid item xl={3.5}>
           <Introduction/>
@@ -316,35 +330,15 @@ const Projects = () => {
       {/* background  */}
       <Box sx={{position: "absolute", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1}}>
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
-        <Grid item xl={3}></Grid>
-        <Grid item xl={6} sx={{background: "rgba(38,38,38,1)", height: "100vh", width: "100%", transform: "skewX(-7deg)"}}></Grid>
-        <Grid item xl={3} align="right" sx={{background: "", height: "75vh", display: "flex", alignItems: "flex-end", justifyContent: "flex-end", zIndex: -2}}>
-          <Box>
-            <Image src={projects[activeProject].coverImage.url} />
-          </Box>
-        </Grid>
+          <Grid item xl={3}></Grid>
+          <Grid item xl={6} sx={{background: "rgba(38,38,38,1)", height: "100vh", width: "100%", transform: "skewX(-7deg)"}}></Grid>
+          <Grid item xl={3} align="right" sx={{background: "", height: "75vh", display: "flex", alignItems: "flex-end", justifyContent: "flex-end", zIndex: -2}}>
+            <Box>
+              <Image src={projects[activeProject].coverImage.url} />
+            </Box>
+          </Grid>
         </Grid>
       </Box>
-    </Box>
-      {/* <Routes>
-        <Route 
-          element={
-            <Stack>
-              <Grid container sx={{px: { xs:1.75, sm: 3, md: 4, lg: 5 }, pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14}, pb: 8, justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", minHeight: "100vh"}}>
-                <Grid item xs={12} lg={2.25}>
-                  <Introduction/>
-                </Grid>
-                <Grid item xs={12} lg={9.75}>
-                  {projects && <ProjectsList projects={projects}/>}
-                </Grid>
-              </Grid>
-              <Contact/>
-            </Stack>
-          } 
-          path="/"
-        />
-        <Route element={projects && <ProjectPage projects={projects}/>} path="/:id"/>
-      </Routes> */}
     </>
   )
 }
