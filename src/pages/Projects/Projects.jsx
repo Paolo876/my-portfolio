@@ -253,6 +253,7 @@ const MOCK_PROJ_LIST = [
 const Projects = () => {
   const [ projects, setProjects ] = useState(MOCK_PROJ_LIST);
   const [ activeProject, setActiveProject ] = useState(0);
+  const [ isHovered, setIsHovered ] = useState(false)
   const { state, pathname } = useLocation();
   const navigate = useNavigate();
 
@@ -282,8 +283,10 @@ const Projects = () => {
           return prevState + 1
         }
       }), 5000)
+    if(isHovered) clearInterval(interval) 
     return () => clearInterval(interval)  
-  }, [])
+  }, [isHovered])
+  
   return (
     <>
       <DocumentHead
@@ -310,7 +313,8 @@ const Projects = () => {
                 className={index === activeProject ? "active" : ""}
                 disableRipple
                 disableGutters
-                onMouseOver={() => setActiveProject(index)}
+                onMouseOver={() => { setActiveProject(index); setIsHovered(true) }}
+                onMouseLeave={() => setIsHovered(false)}
                 sx={{
                   width: "100%", 
                   alignItems: "center", 
@@ -352,14 +356,16 @@ const Projects = () => {
 
           </List>
         </Grid>
-        <Grid item xl={3.5}></Grid>
+        <Grid item xl={3.5} align="right">
+          <Typography>{projects[activeProject].name}</Typography>
+
+        </Grid>
       </Grid>
       <Box sx={{position: "absolute", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1}}>
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
         <Grid item xl={3}></Grid>
         <Grid item xl={6} sx={{background: "rgba(75,75,75,.1)", height: "100vh", width: "100%", transform: "skewX(-7deg)", boxShadow: 1}}></Grid>
         <Grid item xl={3}></Grid>
-
         </Grid>
       </Box>
     </Box>
