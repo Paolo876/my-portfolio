@@ -1,4 +1,8 @@
+import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import useFirestoreActions from "./hooks/useFirestoreActions";
+import useRootRedux from "./hooks/useRootRedux";
+
 import Navbar from "./components/Navbar/Navbar";
 import "./index.scss";
 
@@ -11,6 +15,16 @@ import Contact from "./pages/Contact/Contact";
 
 
 function App() {
+  const { skillsList, setData } = useRootRedux();
+  const { getDocumentFromCollection } = useFirestoreActions();
+
+  useEffect(() => {
+    if(skillsList.length === 0){
+      getDocumentFromCollection('user', 'information').then(data => setData(data))
+    }
+  }, [])
+
+  
   return (
     <div className="App">
       <div className="noise-overlay"></div>
