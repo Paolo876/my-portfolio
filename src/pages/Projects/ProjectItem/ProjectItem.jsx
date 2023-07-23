@@ -1,15 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Grid, Box, Typography, ListItem, ListItemButton, List } from '@mui/material';
 import ProjectSelection from '../ProjectSelection';
+import DocumentHead from '../../../components/DocumentHead'
 
 
 const ProjectItem = ({ projects }) => {
   const navigate = useNavigate();
   const { id } = useParams();
 
+  const project = projects.find(item => item.name === id)
+  
+  useEffect(() => {
+    if(!project) navigate('/projects')
+
+  }, [id])
   return (
     <>
+    <DocumentHead
+      title={`Paolo Bugarin | ${project && project.title}`}
+      description="I am a full stack web developer based in Los Angeles, California"
+      keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
+    />
     <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
       <Grid item xs={3}>
         <List>
@@ -66,8 +78,8 @@ const ProjectItem = ({ projects }) => {
           </ListItem>)}
         </List>
       </Grid>
+      
       <Grid item xs={9}>
-        
       </Grid>     
     </Grid>
 
