@@ -278,14 +278,7 @@ const Projects = () => {
 
   
   return (
-    <Box
-      sx={{
-        minHeight: "100vh",
-        position: "relative", 
-        px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
-        pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14},        
-      }}
-    >
+    <>
     <DocumentHead
       title="Paolo Bugarin | Projects"
       description="I am a full stack web developer based in Los Angeles, California"
@@ -295,7 +288,7 @@ const Projects = () => {
       <Route path="/" element={<MainPage projects={projects}/>}/>
       <Route path="/:id" element={<ProjectItem projects={projects}/>}/>
     </Routes>
-  </Box>
+  </>
   )
 }
 
@@ -318,7 +311,14 @@ const MainPage = ({ projects }) => {
 
 
   return (
-    <>
+    <Box
+      sx={{
+        maxHeight: "100vh",
+        position: "relative", 
+        px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
+        pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14},        
+      }}
+    >      
       <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
         <Grid item xl={3.5}>
           <Introduction/>
@@ -336,12 +336,12 @@ const MainPage = ({ projects }) => {
           <Grid item xl={6} sx={{background: "rgba(38,38,38,1)", height: "100vh", width: "100%", transform: "skewX(-7deg)"}}></Grid>
           <Grid item xl={3} align="right" sx={{background: "", height: "75vh", display: "flex", alignItems: "flex-end", justifyContent: "flex-end", zIndex: -2}}>
             <Box>
-              <Image src={projects[activeProject].coverImage.url} />
+              <Image src={projects[activeProject].coverImage.url} duration={200}/>
             </Box>
           </Grid>
         </Grid>
       </Box>
-    </>
+    </Box>
   )
 }
 

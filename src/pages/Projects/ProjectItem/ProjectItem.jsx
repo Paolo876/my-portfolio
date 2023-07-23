@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { Grid, Box, Typography, ListItem, ListItemButton, List } from '@mui/material';
 import ProjectSelection from '../ProjectSelection';
 import DocumentHead from '../../../components/DocumentHead'
+import ProjectItemContent from './ProjectItemContent';
 
 
 const ProjectItem = ({ projects }) => {
@@ -22,10 +23,25 @@ const ProjectItem = ({ projects }) => {
       description="I am a full stack web developer based in Los Angeles, California"
       keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
     />
-    <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
+    <Grid 
+      container 
+      sx={{
+        justifyContent: "center", 
+        alignItems: "flex-start", 
+        maxWidth: "1500px", 
+        mx: "auto", 
+        maxHeight: "100vh", 
+        position: "fixed",
+        top: 0,
+        left: "50%",
+        transform:"translateX(-50%)",
+        px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
+        pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14}
+      }}
+    >
       <Grid item xs={3}>
         <List>
-          {projects.map(item => <ListItem key={item.name}>
+          {projects.map(item => <ListItem key={item.name} dense disablePadding disableGutters>
             <ListItemButton 
               className={id === item.name ? "active" : ""}
               disableRipple
@@ -42,7 +58,7 @@ const ProjectItem = ({ projects }) => {
                 textShadow: "1px 1px 5px rgba(10,10,10,.75)",
                 transition: "all 150ms ease",
                 opacity: .55, 
-                my: 1, 
+                my: 2, 
                 position: "relative",
                 "&::before": {
                   content: '""',
@@ -78,14 +94,32 @@ const ProjectItem = ({ projects }) => {
           </ListItem>)}
         </List>
       </Grid>
-      
-      <Grid item xs={9}>
+
+      <Grid item xs={9}></Grid>     
+    </Grid>
+
+    {/* content */}
+    <Grid 
+      container 
+      sx={{
+        justifyContent: "center", 
+        alignItems: "flex-start", 
+        maxWidth: "1500px", 
+        mx: "auto", 
+        maxHeight: "100vh", 
+        px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
+        pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14}
+      }}
+    >
+      <Grid item xs={3}></Grid>
+      <Grid item xs={9} sx={{display: "flex", flexDirection: "row", height: 1500, width: "100%"}}>
+        {project && <ProjectItemContent project={project}/>}
       </Grid>     
     </Grid>
 
 
       {/* background  */}
-      <Box sx={{position: "absolute", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1}}>
+      <Box sx={{position: "fixed", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1}}>
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
           <Grid item xl={3}></Grid>
           <Grid item xl={6} sx={{background: "rgba(38,38,38,1)", height: "100vh", width: "100%", transform: "skewX(-7deg) translateX(-100%)"}}></Grid>
