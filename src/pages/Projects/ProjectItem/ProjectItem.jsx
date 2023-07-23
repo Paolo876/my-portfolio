@@ -66,7 +66,9 @@ const ProjectItem = ({ projects }) => {
           </ListItem>)}
         </List>
       </Grid>
-      <Grid item xs={9}></Grid>     
+      <Grid item xs={9}>
+        
+      </Grid>     
     </Grid>
 
 
