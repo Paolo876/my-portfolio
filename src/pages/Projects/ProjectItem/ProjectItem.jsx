@@ -25,7 +25,7 @@ const ProjectItem = ({ projects }) => {
                 display: "flex", 
                 justifyContent: "left",
                 textTransform: "none",
-                fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 20},
+                fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 22},
                 fontWeight: 300,
                 textShadow: "1px 1px 5px rgba(10,10,10,.75)",
                 transition: "all 150ms ease",
@@ -52,7 +52,7 @@ const ProjectItem = ({ projects }) => {
                 "&.active": {
                   opacity: 1,
                   fontWeight: 600,
-                  fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 21},
+                  fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 23},
                   transform: "scale(1.015)",
 
                   "&::before": {
@@ -74,7 +74,7 @@ const ProjectItem = ({ projects }) => {
       <Box sx={{position: "absolute", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1}}>
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
           <Grid item xl={3}></Grid>
-          <Grid item xl={6} sx={{background: "rgba(38,38,38,1)", height: "100vh", width: "100%", transform: "skewX(-7deg) translateX(-105%)"}}></Grid>
+          <Grid item xl={6} sx={{background: "rgba(38,38,38,1)", height: "100vh", width: "100%", transform: "skewX(-7deg) translateX(-100%)"}}></Grid>
           <Grid item xl={3} align="right" sx={{background: "", height: "75vh", display: "flex", alignItems: "flex-end", justifyContent: "flex-end", zIndex: -2}}>
           </Grid>
         </Grid>
