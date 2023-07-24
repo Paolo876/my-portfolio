@@ -25,11 +25,11 @@ const skillIconStyles = {
 const urlButtonStyles = {
   boxShadow: 5,
   border: 2, 
-  fontSize: { xs: ".9rem", sm: "1rem", md: "1rem", lg: "1rem" },
+  fontSize: { xs: ".9rem", sm: "1rem", md: "1rem", lg: "1.15rem" },
   lineHeight: 1.4, 
   borderColor: {xs: "primary.dark", sm:"rgba(100,100,100,.75)"},
-  px: {xs: 1, sm: 1.5, lg: 2},
-  py: 1,
+  px: {xs: 1, sm: 1.5, lg: 3, xl: 4},
+  py: {xs:1, xl: 1.25},
   fontWeight: 600,
   letterSpacing: .5,
   opacity: .75,
@@ -53,7 +53,7 @@ const ProjectUrlAndTechStack = ({ technologies }) => {
 
   return (
     <Grid container>
-      <Grid item xl={3} sx={{display: "flex", gap: 3, flexDirection: "column", mt: 10, }}>
+      <Grid item xl={5.5} sx={{display: "flex", gap: 4, flexDirection: "column", mt: 9, }}>
         <Box>
           <ButtonBase color="inherit" sx={urlButtonStyles}>
             Web Demo <PublicIcon sx={{ml: 1.5}}/>
@@ -65,7 +65,8 @@ const ProjectUrlAndTechStack = ({ technologies }) => {
           </ButtonBase>
         </Box>
     </Grid>
-    <Grid item xl={9} align="right">
+
+    <Grid item xl={6.5} align="right">
       <Typography 
         variant="h4" 
         align="right" 
@@ -81,7 +82,7 @@ const ProjectUrlAndTechStack = ({ technologies }) => {
         Main Tech Stack
       </Typography>
       
-      <Grid container sx={{pl: {xl: 12}, mt: {xl: 4}}}>
+      <Grid container sx={{mt: {xl: 4}}}>
         {projectTechnologies.map(item => <Grid item xs={2.4} sm={2.1} md={2.4} key={item.name} align="right">
           <Tooltip 
             title={<Typography variant="body1" fontSize={12} fontWeight={300} letterSpacing={.4} px={.25}>{item.name}</Typography>} 
