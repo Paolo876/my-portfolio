@@ -60,8 +60,11 @@ const ProjectFeatures = ({ coverImage, features }) => {
             </Box>
           </Grid>
           <Grid item xs={6}>
-            <Box sx={{p: 0, transition: "all 100ms linear", borderColor: "rgba(200, 200, 200, .25)", "&:hover": {transform: "scale(1.015)"}}}>
-              <Image src={coverImage.url}/>
+            <Box sx={{py: 1.5, px: 2.5, transition: "all 250ms linear", background: "rgba(0,0,0,0.75)", filter: "brightness(.95) contrast(.85)", "&:hover": {p: 0, filter: "none"}, overflow: "hidden", }}>
+              <Box sx={{boxShadow: 20}}>
+                <Image src={coverImage.url}/>
+
+              </Box>
             </Box>
           </Grid>
         </Grid>
