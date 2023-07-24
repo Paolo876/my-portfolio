@@ -5,7 +5,7 @@ import ProjectUrlAndTechStack from './ProjectUrlAndTechStack';
 
 
 const ProjectItemContent = ( { project }) => {
-
+  
   return (
     <Grid container>
       <Grid item xs={12}>
@@ -43,7 +43,7 @@ const ProjectItemContent = ( { project }) => {
 
       {/* url & tech stack */}
       <Grid item xl={12} sx={{mt: {xl: 10}}}>
-        <ProjectUrlAndTechStack technologies={project.technologies}/>
+        <ProjectUrlAndTechStack technologies={project.technologies} url={project.url} githubUrl={project.githubUrl}/>
       </Grid>
 
     </Grid>

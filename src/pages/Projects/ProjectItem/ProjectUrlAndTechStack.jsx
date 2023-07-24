@@ -44,7 +44,7 @@ const urlButtonStyles = {
 }
 
 
-const ProjectUrlAndTechStack = ({ technologies }) => {
+const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
   const { skillsList } = useRootRedux();
 
   const projectTechnologies = skillsList.filter(item => technologies.includes(item.name))
@@ -55,12 +55,12 @@ const ProjectUrlAndTechStack = ({ technologies }) => {
     <Grid container>
       <Grid item xl={5.5} sx={{display: "flex", gap: 4, flexDirection: "column", mt: 9, }}>
         <Box>
-          <ButtonBase color="inherit" sx={urlButtonStyles}>
+          <ButtonBase color="inherit" sx={urlButtonStyles} href={url} target='_blank'>
             Web Demo <PublicIcon sx={{ml: 1.5}}/>
           </ButtonBase>  
         </Box>
         <Box>
-          <ButtonBase color="inherit" sx={urlButtonStyles}>
+          <ButtonBase color="inherit" sx={urlButtonStyles} href={githubUrl} target='_blank'>
             Git Repo <GitHubIcon sx={{ml: 1.5}}/>
           </ButtonBase>
         </Box>
@@ -71,7 +71,7 @@ const ProjectUrlAndTechStack = ({ technologies }) => {
         variant="h4" 
         align="right" 
         fontWeight={400}
-        fontSize={{xs: 35, sm: 45, md: 60, lg: 65, xl: 30}} 
+        fontSize={{xs: 35, sm: 45, md: 60, lg: 65, xl: 25}} 
         letterSpacing={{xs: .5, xL:1}}
         lineHeight={{xs:1}} 
         textTransform="none"
@@ -82,7 +82,7 @@ const ProjectUrlAndTechStack = ({ technologies }) => {
         Main Tech Stack
       </Typography>
       
-      <Grid container sx={{mt: {xl: 4}}}>
+      <Grid container sx={{mt: {xl: 4}, justifyContent: "end"}}>
         {projectTechnologies.map(item => <Grid item xs={2.4} sm={2.1} md={2.4} key={item.name} align="right">
           <Tooltip 
             title={<Typography variant="body1" fontSize={12} fontWeight={300} letterSpacing={.4} px={.25}>{item.name}</Typography>} 
