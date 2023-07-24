@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Box, ButtonBase, Typography, Tooltip } from '@mui/material'
+import { Grid, Box, ButtonBase, Typography, Tooltip, IconButton } from '@mui/material'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PublicIcon from '@mui/icons-material/Public';
 import SkillIconImageItem from "../../../components/SkillIconImageItem"
@@ -23,23 +23,26 @@ const skillIconStyles = {
 }
 
 const urlButtonStyles = {
-  boxShadow: 5,
-  border: 2, 
-  fontSize: { xs: ".9rem", sm: "1rem", md: "1rem", lg: "1.15rem" },
-  lineHeight: 1.4, 
-  borderColor: {xs: "primary.dark", sm:"rgba(100,100,100,.75)"},
-  px: {xs: 1, sm: 1.5, lg: 3, xl: 4},
-  py: {xs:1, xl: 1.25},
-  fontWeight: 600,
-  letterSpacing: .5,
-  opacity: .75,
+  width: "fit-content", 
+  textAlign: "left",
+  display: "flex", 
+  alignItems: "center", 
+  gap: {xs: .75, sm: .75, lg: 1.5}, 
+  justifyContent: "left",
+  borderLeft: 2, 
+  borderColor: "rgba(100,100,100,.75)",
+  py: .5,
+  px: {xs: 1, lg:2},
   transition: "all 250ms ease-in-out",
-  fontFamily: "Manrope",
+  letterSpacing: .5,
+  opacity: .7,
+  fontSize: {xs: 16, sm: 17, md: 18, lg: 20, xl: 21},
+  fontWeight: 400,
   "&:hover":{
     opacity:1,
     textShadow: "1px 1px 3px rgba(100,100,100,.75)",
-    transform: "scale(1.02)",
-    borderColor: "primary.dark",
+    transform: "scale(1.025)",
+    borderColor: "primary.main",
   }
 }
 
@@ -53,16 +56,18 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
 
   return (
     <Grid container>
-      <Grid item xl={5.5} sx={{display: "flex", gap: 4, flexDirection: "column", mt: 9, }}>
+      <Grid item xl={5.5} sx={{display: "flex", gap: 5, flexDirection: "column", mt: 9, }}>
         <Box>
-          <ButtonBase color="inherit" sx={urlButtonStyles} href={url} target='_blank'>
-            Web Demo <PublicIcon sx={{ml: 1.5}}/>
-          </ButtonBase>  
+          <IconButton size="small" href={url} target='_blank'sx={urlButtonStyles} disableRipple>
+            <PublicIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 25}}} />
+            <Box component="span">Web Demo</Box>
+          </IconButton> 
         </Box>
         <Box>
-          <ButtonBase color="inherit" sx={urlButtonStyles} href={githubUrl} target='_blank'>
-            Git Repo <GitHubIcon sx={{ml: 1.5}}/>
-          </ButtonBase>
+          <IconButton size="small" href={githubUrl} target='_blank' sx={urlButtonStyles} disableRipple>
+            <GitHubIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 25}}} />
+            <Box component="span">Git Repo</Box>
+          </IconButton> 
         </Box>
     </Grid>
 
