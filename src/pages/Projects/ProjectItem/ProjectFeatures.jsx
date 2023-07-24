@@ -27,12 +27,12 @@ const ProjectFeatures = ({ coverImage, features }) => {
 
       <Grid item xs={12}>
         <Grid container>
-          <Grid item xs={6} pr={5}>
+          <Grid item xs={6.5} pr={4}>
             <Typography 
               variant="h4" 
               align="left" 
-              fontWeight={400}
-              fontSize={{xs: 35, sm: 45, md: 60, lg: 65, xl: 25}} 
+              fontWeight={300}
+              fontSize={{xs: 35, sm: 45, md: 60, lg: 65, xl: 28}} 
               letterSpacing={{xs: .5, xL:1}}
               lineHeight={{xs:1}} 
               textTransform="none"
@@ -40,7 +40,7 @@ const ProjectFeatures = ({ coverImage, features }) => {
                 textShadow: "1px 1px 7px rgba(10,10,10,.75)",
               }}
             >
-              Features
+              Features:
             </Typography>
             <Box component="ul" sx={{mt: 3}}>
               {features.map(item => <Box component="li" ml={2.5} pb={1}>
@@ -59,11 +59,10 @@ const ProjectFeatures = ({ coverImage, features }) => {
               </Box>)}
             </Box>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={5.5} mt={2}>
             <Box sx={{py: 1.5, px: 2.5, transition: "all 250ms linear", background: "rgba(0,0,0,0.75)", filter: "brightness(.95) contrast(.85)", "&:hover": {p: 0, filter: "none"}, overflow: "hidden", }}>
               <Box sx={{boxShadow: 20}}>
-                <Image src={coverImage.url}/>
-
+                <Image src={coverImage.url} duration={500}/>
               </Box>
             </Box>
           </Grid>

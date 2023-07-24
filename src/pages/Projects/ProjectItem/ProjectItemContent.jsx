@@ -42,12 +42,12 @@ const ProjectItemContent = ( { project }) => {
       </Grid>
 
       {/* url & tech stack */}
-      <Grid item xl={12} sx={{mt: {xl: 12}}}>
+      <Grid item xl={12} sx={{mt: {xl: 10}}}>
         <ProjectUrlAndTechStack technologies={project.technologies} url={project.url} githubUrl={project.githubUrl}/>
       </Grid>
 
       {/* Features */}
-      <Grid item xl={12} sx={{mt: {xl: 15}}}>
+      <Grid item xl={12} sx={{mt: {xl: 16}}}>
         <ProjectFeatures coverImage={project.coverImage} features={project.features}/>
       </Grid>
 
