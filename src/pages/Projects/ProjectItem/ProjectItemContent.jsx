@@ -1,7 +1,7 @@
 import React from 'react'
-import { Box, Typography, Grid, Button, ButtonBase } from '@mui/material'
-import Image from 'mui-image'
+import { Typography, Grid } from '@mui/material'
 import ProjectUrlAndTechStack from './ProjectUrlAndTechStack';
+import ProjectFeatures from './ProjectFeatures';
 
 
 const ProjectItemContent = ( { project }) => {
@@ -26,7 +26,7 @@ const ProjectItemContent = ( { project }) => {
       </Grid>
 
       {/* description */}
-      <Grid item xs={12} sx={{mt: {xl: 5}}}>
+      <Grid item xs={12} sx={{mt: {xl: 6}}}>
         <Typography 
           variant="body1" 
           sx={{
@@ -42,8 +42,13 @@ const ProjectItemContent = ( { project }) => {
       </Grid>
 
       {/* url & tech stack */}
-      <Grid item xl={12} sx={{mt: {xl: 10}}}>
+      <Grid item xl={12} sx={{mt: {xl: 12}}}>
         <ProjectUrlAndTechStack technologies={project.technologies} url={project.url} githubUrl={project.githubUrl}/>
+      </Grid>
+
+      {/* Features */}
+      <Grid item xl={12} sx={{mt: {xl: 15}}}>
+        <ProjectFeatures coverImage={project.coverImage} features={project.features}/>
       </Grid>
 
     </Grid>

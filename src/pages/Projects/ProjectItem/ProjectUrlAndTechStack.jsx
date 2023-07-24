@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Box, ButtonBase, Typography, Tooltip, IconButton } from '@mui/material'
+import { Grid, Box, Typography, Tooltip, IconButton } from '@mui/material'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PublicIcon from '@mui/icons-material/Public';
 import SkillIconImageItem from "../../../components/SkillIconImageItem"
@@ -56,7 +56,23 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
 
   return (
     <Grid container>
-      <Grid item xl={5.5} sx={{display: "flex", gap: 5, flexDirection: "column", mt: 9, }}>
+      <Grid item xs={12}>
+        <Typography 
+          variant="h4" 
+          align="right" 
+          fontWeight={400}
+          fontSize={{xs: 35, sm: 45, md: 60, lg: 65, xl: 25}} 
+          letterSpacing={{xs: .5, xL:1}}
+          lineHeight={{xs:1}} 
+          textTransform="none"
+          sx={{
+            textShadow: "1px 1px 7px rgba(10,10,10,.75)",
+          }}
+        >
+          Main Tech Stack
+        </Typography>
+      </Grid>
+      <Grid item xl={5.5} sx={{display: "flex", gap: 5, flexDirection: "column", mt: 4.5, }}>
         <Box>
           <IconButton size="small" href={url} target='_blank'sx={urlButtonStyles} disableRipple>
             <PublicIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 25}}} />
@@ -71,23 +87,8 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
         </Box>
     </Grid>
 
-    <Grid item xl={6.5} align="right">
-      <Typography 
-        variant="h4" 
-        align="right" 
-        fontWeight={400}
-        fontSize={{xs: 35, sm: 45, md: 60, lg: 65, xl: 25}} 
-        letterSpacing={{xs: .5, xL:1}}
-        lineHeight={{xs:1}} 
-        textTransform="none"
-        sx={{
-          textShadow: "1px 1px 7px rgba(10,10,10,.75)",
-        }}
-      >
-        Main Tech Stack
-      </Typography>
-      
-      <Grid container sx={{mt: {xl: 4}, justifyContent: "end"}}>
+    <Grid item xl={6.5} align="right">    
+      <Grid container sx={{mt: {xl: 3}, justifyContent: "end"}}>
         {projectTechnologies.map(item => <Grid item xs={2.4} sm={2.1} md={2.4} key={item.name} align="right">
           <Tooltip 
             title={<Typography variant="body1" fontSize={12} fontWeight={300} letterSpacing={.4} px={.25}>{item.name}</Typography>} 
