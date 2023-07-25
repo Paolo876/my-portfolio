@@ -1,12 +1,17 @@
-import React from 'react'
-import { Typography, Grid } from '@mui/material'
+import { useState } from 'react'
+import { Typography, Grid, Modal, Box } from '@mui/material'
 import ProjectUrlAndTechStack from './ProjectUrlAndTechStack';
 import ProjectFeatures from './ProjectFeatures';
 import ProjectImages from './ProjectImages';
 
 
 const ProjectItemContent = ( { project }) => {
-  
+  const [ showModal, setShowModal ] = useState(false);
+
+  const handleImageClick = (image) => {
+    console.log(image)
+  }
+
   return (
     <Grid container>
       <Grid item xs={12}>
@@ -49,14 +54,20 @@ const ProjectItemContent = ( { project }) => {
 
       {/* Features */}
       <Grid item xl={12} sx={{mt: {xl: 16}}}>
-        <ProjectFeatures coverImage={project.coverImage} features={project.features}/>
+        <ProjectFeatures coverImage={project.coverImage} features={project.features} handleImageClick={handleImageClick}/>
       </Grid>
 
       {/* Images */}
       <Grid item xl={12} sx={{mt: {xl: 5}}}>
-        <ProjectImages images={project.images}/>
+        <ProjectImages images={project.images} handleImageClick={handleImageClick}/>
       </Grid>
 
+      {/* image Modal */}
+      <Modal open={showModal}>
+        <Box>
+
+        </Box>
+      </Modal>
     </Grid>
   )
 }

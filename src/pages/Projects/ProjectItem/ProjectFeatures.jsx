@@ -3,7 +3,7 @@ import { Grid, Box, Typography, ButtonBase } from '@mui/material'
 import Image from 'mui-image'
 
 
-const ProjectFeatures = ({ coverImage, features }) => {
+const ProjectFeatures = ({ coverImage, features, handleImageClick }) => {
 
   return (
     <Grid container>
@@ -26,7 +26,7 @@ const ProjectFeatures = ({ coverImage, features }) => {
 
       <Grid item xs={12}>
         <Grid container>
-          <Grid item xs={6.5} pr={4}>
+          <Grid item xs={6} pr={4}>
             {/* <Typography 
               variant="h4" 
               align="left" 
@@ -58,9 +58,9 @@ const ProjectFeatures = ({ coverImage, features }) => {
               </Box>)}
             </Box>
           </Grid>
-          <Grid item xs={5.5} mt={2}>
+          <Grid item xs={6} mt={2}>
             <Box sx={{py: 1.5, px: 2.5, transition: "all 200ms linear", background: "rgba(0,0,0,0.75)", filter: "brightness(.95) contrast(.85)", "&:hover": {p: 0, filter: "none"}, overflow: "hidden", }}>
-              <ButtonBase sx={{boxShadow: 20}}>
+              <ButtonBase sx={{boxShadow: 20}} onClick={() => handleImageClick(coverImage.name)}>
                 <Image src={coverImage.url} duration={500}/>
               </ButtonBase>
             </Box>
