@@ -52,8 +52,7 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
 
   const projectTechnologies = skillsList.filter(item => technologies.includes(item.name))
 
-  console.log(projectTechnologies[0])
-
+  
   return (
     <Grid container>
       <Grid item xs={12}>

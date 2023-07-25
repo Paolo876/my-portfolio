@@ -2,6 +2,7 @@ import React from 'react'
 import { Typography, Grid } from '@mui/material'
 import ProjectUrlAndTechStack from './ProjectUrlAndTechStack';
 import ProjectFeatures from './ProjectFeatures';
+import ProjectImages from './ProjectImages';
 
 
 const ProjectItemContent = ( { project }) => {
@@ -49,6 +50,11 @@ const ProjectItemContent = ( { project }) => {
       {/* Features */}
       <Grid item xl={12} sx={{mt: {xl: 16}}}>
         <ProjectFeatures coverImage={project.coverImage} features={project.features}/>
+      </Grid>
+
+      {/* Images */}
+      <Grid item xl={12} sx={{mt: {xl: 5}}}>
+        <ProjectImages images={project.images}/>
       </Grid>
 
     </Grid>

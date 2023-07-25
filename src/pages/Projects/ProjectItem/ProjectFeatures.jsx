@@ -1,14 +1,13 @@
 import React from 'react'
-import { Grid, Box, Typography, Tooltip, IconButton, ButtonBase } from '@mui/material'
+import { Grid, Box, Typography, ButtonBase } from '@mui/material'
 import Image from 'mui-image'
 
 
 const ProjectFeatures = ({ coverImage, features }) => {
 
-
   return (
     <Grid container>
-      {/* <Grid item xs={12}>
+      <Grid item xs={12}>
         <Typography 
           variant="h4" 
           align="left" 
@@ -23,12 +22,12 @@ const ProjectFeatures = ({ coverImage, features }) => {
         >
           Features
         </Typography>
-      </Grid> */}
+      </Grid>
 
       <Grid item xs={12}>
         <Grid container>
           <Grid item xs={6.5} pr={4}>
-            <Typography 
+            {/* <Typography 
               variant="h4" 
               align="left" 
               fontWeight={300}
@@ -41,9 +40,9 @@ const ProjectFeatures = ({ coverImage, features }) => {
               }}
             >
               Features:
-            </Typography>
-            <Box component="ul" sx={{mt: 3}}>
-              {features.map(item => <Box component="li" ml={2.5} pb={1}>
+            </Typography> */}
+            <Box component="ul" sx={{mt: 4}}>
+              {features.map(item => <Box component="li" ml={2.5} pb={1} key={item}>
                 <Typography 
                   variant="body1" 
                   sx={{
@@ -60,7 +59,7 @@ const ProjectFeatures = ({ coverImage, features }) => {
             </Box>
           </Grid>
           <Grid item xs={5.5} mt={2}>
-            <Box sx={{py: 1.5, px: 2.5, transition: "all 125ms linear", background: "rgba(0,0,0,0.75)", filter: "brightness(.95) contrast(.85)", "&:hover": {p: 0, filter: "none"}, overflow: "hidden", }}>
+            <Box sx={{py: 1.5, px: 2.5, transition: "all 200ms linear", background: "rgba(0,0,0,0.75)", filter: "brightness(.95) contrast(.85)", "&:hover": {p: 0, filter: "none"}, overflow: "hidden", }}>
               <ButtonBase sx={{boxShadow: 20}}>
                 <Image src={coverImage.url} duration={500}/>
               </ButtonBase>
