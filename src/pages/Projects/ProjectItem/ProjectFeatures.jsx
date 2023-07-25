@@ -25,7 +25,7 @@ const ProjectFeatures = ({ coverImage, features, handleImageClick }) => {
       </Grid>
 
       <Grid item xs={12}>
-        <Grid container>
+        <Grid container columnSpacing={{xl: 2.5}} >
           <Grid item xs={6} pr={4}>
             {/* <Typography 
               variant="h4" 

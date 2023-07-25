@@ -3,14 +3,16 @@ import { Typography, Grid, Modal, Box } from '@mui/material'
 import ProjectUrlAndTechStack from './ProjectUrlAndTechStack';
 import ProjectFeatures from './ProjectFeatures';
 import ProjectImages from './ProjectImages';
+import ImageModal from './ImageModal';
 
 
 const ProjectItemContent = ( { project }) => {
-  const [ showModal, setShowModal ] = useState(false);
+  const [ showModal, setShowModal ] = useState({isVisible: false, imageName: null});
 
-  const handleImageClick = (image) => {
-    console.log(image)
+  const handleImageClick = (imageName) => {
+    setShowModal({ isVisible: false, imageName })
   }
+  
 
   return (
     <Grid container>
@@ -58,14 +60,14 @@ const ProjectItemContent = ( { project }) => {
       </Grid>
 
       {/* Images */}
-      <Grid item xl={12} sx={{mt: {xl: 5}}}>
+      <Grid item xl={12} sx={{mt: {xl: 10}}}>
         <ProjectImages images={project.images} handleImageClick={handleImageClick}/>
       </Grid>
 
       {/* image Modal */}
-      <Modal open={showModal}>
+      <Modal open={showModal.isVisible} onClose={() => setShowModal({isVisible: false, imageName: null})}>
         <Box>
-
+          <ImageModal imageName={showModal.imageName} imagesList={[ project.coverImage, ...project.images ]}/>
         </Box>
       </Modal>
     </Grid>
