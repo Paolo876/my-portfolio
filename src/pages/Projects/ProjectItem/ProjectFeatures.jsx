@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Box, Typography, Tooltip, IconButton } from '@mui/material'
+import { Grid, Box, Typography, Tooltip, IconButton, ButtonBase } from '@mui/material'
 import Image from 'mui-image'
 
 
@@ -60,10 +60,10 @@ const ProjectFeatures = ({ coverImage, features }) => {
             </Box>
           </Grid>
           <Grid item xs={5.5} mt={2}>
-            <Box sx={{py: 1.5, px: 2.5, transition: "all 250ms linear", background: "rgba(0,0,0,0.75)", filter: "brightness(.95) contrast(.85)", "&:hover": {p: 0, filter: "none"}, overflow: "hidden", }}>
-              <Box sx={{boxShadow: 20}}>
+            <Box sx={{py: 1.5, px: 2.5, transition: "all 125ms linear", background: "rgba(0,0,0,0.75)", filter: "brightness(.95) contrast(.85)", "&:hover": {p: 0, filter: "none"}, overflow: "hidden", }}>
+              <ButtonBase sx={{boxShadow: 20}}>
                 <Image src={coverImage.url} duration={500}/>
-              </Box>
+              </ButtonBase>
             </Box>
           </Grid>
         </Grid>
