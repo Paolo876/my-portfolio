@@ -10,7 +10,7 @@ const ProjectItemContent = ( { project }) => {
   const [ showModal, setShowModal ] = useState({isVisible: false, imageName: null});
 
   const handleImageClick = (imageName) => {
-    setShowModal({ isVisible: false, imageName })
+    setShowModal({ isVisible: true, imageName })
   }
   
 
@@ -67,7 +67,7 @@ const ProjectItemContent = ( { project }) => {
       {/* image Modal */}
       <Modal open={showModal.isVisible} onClose={() => setShowModal({isVisible: false, imageName: null})}>
         <Box>
-          <ImageModal imageName={showModal.imageName} imagesList={[ project.coverImage, ...project.images ]}/>
+          <ImageModal imageName={showModal.imageName} imagesList={[ project.coverImage, ...project.images ]} handleClose={() => setShowModal({isVisible: false, imageName: null})}/>
         </Box>
       </Modal>
     </Grid>
