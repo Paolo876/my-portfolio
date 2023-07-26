@@ -57,7 +57,8 @@ const ProjectItem = ({ projects }) => {
                 fontWeight: 300,
                 textShadow: "1px 1px 5px rgba(10,10,10,.75)",
                 transition: "all 150ms ease",
-                opacity: .55, 
+                opacity: .4, 
+                mixBlendMode: "difference",
                 my: 2, 
                 position: "relative",
                 "&::before": {
@@ -72,7 +73,7 @@ const ProjectItem = ({ projects }) => {
                   transition: "all 200ms ease"
                 },
                 "&:hover": {
-                  opacity: 1,
+                  opacity: .9,
                   fontWeight: 500,
                   transform: "scale(1.015)",
                   background: "none",
@@ -82,7 +83,7 @@ const ProjectItem = ({ projects }) => {
                   fontWeight: 600,
                   fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 23},
                   transform: "scale(1.015)",
-
+                  mixBlendMode: "initial",
                   "&::before": {
                     width: 13,
                     backgroundColor: "primary.main",
