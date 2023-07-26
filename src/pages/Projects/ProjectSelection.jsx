@@ -27,7 +27,8 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
           fontWeight: 300,
           textShadow: "1px 1px 5px rgba(10,10,10,.75)",
           transition: "all 400ms ease",
-          opacity: .55, 
+          opacity: .4,
+          mixBlendMode: "difference", 
           my: 1, 
           position: "relative",
           "&::before": {
@@ -46,6 +47,8 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
             fontWeight: 500,
             transform: "scale(1.015)",
             background: "none",
+            mixBlendMode: "initial", 
+
             "&::before": {
               width: 40,
               backgroundColor: "primary.main",
