@@ -3,13 +3,14 @@ import { Box,  } from '@mui/material';
 import Image from 'mui-image';
 
 const containerStyles = {
-  height: "100vh",
-  width: "100vw",
-  position: "absolute",
-  zIndex: 1,
-  // top: "50%",
-  // left: "50%",
-  // transform: "translate(-50%, -50%)"
+  zIndex:5, 
+  height: "100vh", 
+  width: "100vw", 
+  position: "relative", 
+  display: "flex", 
+  alignItems: "center", 
+  justifyContent: "center",
+  backdropFilter: "blur(2px) contrast(80%) brightness(50%)",
 }
 
 
@@ -23,8 +24,10 @@ const ImageModal = ({ imageName, imagesList, handleClose }) => {
 
 
   return (
-    <Box sx={containerStyles} onClick={handleCloseClick}>
-      <Box sx={{height: "auto", width: "auto", zIndex:2}}>
+    <Box sx={containerStyles}>
+      <Box sx={{zIndex: 2, height: "100vh", width: "100vw", position: "absolute"}} onClick={handleCloseClick}></Box>
+
+      <Box sx={{zIndex: 3, boxShadow:10, }}>
         <Image src={image.url} duration={300} fit="scale-down"/>
       </Box>
     </Box>

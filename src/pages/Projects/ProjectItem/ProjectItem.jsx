@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Grid, Box, Typography, ListItem, ListItemButton, List } from '@mui/material';
 import ProjectSelection from '../ProjectSelection';
@@ -7,13 +7,17 @@ import ProjectItemContent from './ProjectItemContent';
 
 
 const ProjectItem = ({ projects }) => {
-  const navigate = useNavigate();
   const { id } = useParams();
 
-  const project = projects.find(item => item.name === id)
+  const [ project, setProject ] = useState(projects.find(item => item.name === id))
+  const navigate = useNavigate();
   
   useEffect(() => {
-    if(!project) navigate('/projects')
+    if(!project){
+       navigate('/projects')
+    } else {
+      setProject(projects.find(item => item.name === id))
+    }
 
   }, [id])
   return (
