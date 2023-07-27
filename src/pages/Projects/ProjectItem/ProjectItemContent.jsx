@@ -67,7 +67,7 @@ const ProjectItemContent = ( { project }) => {
       {/* image Modal */}
       <Modal open={showModal.isVisible} onClose={() => setShowModal({isVisible: false, imageName: null})}>
         <Box>
-          <ImageModal imageName={showModal.imageName} imagesList={[ project.coverImage, ...project.images ]} handleClose={() => setShowModal({isVisible: false, imageName: null})}/>
+          <ImageModal imageName={showModal.imageName} imagesList={[ project.coverImage, ...project.images ]} handleClose={() => setShowModal({isVisible: false, imageName: null})} setShowModal={setShowModal}/>
         </Box>
       </Modal>
     </Grid>

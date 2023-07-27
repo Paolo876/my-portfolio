@@ -44,7 +44,7 @@ const imageItemStyles = {
 }
 
 
-const ImageModal = ({ imageName, imagesList, handleClose }) => {
+const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
   const image = imagesList.find(item => item.name === imageName)
   
   const handleCloseClick = (e) => {
@@ -70,6 +70,7 @@ const ImageModal = ({ imageName, imagesList, handleClose }) => {
             <ButtonBase 
               sx={imageItemStyles} 
               className={item.name === imageName ? "active" : ""}
+              onClick={() => setShowModal({isVisible: true, imageName: item.name})}
             >
               <Image src={item.url} duration={200} />
             </ButtonBase>
