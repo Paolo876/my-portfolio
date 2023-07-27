@@ -22,7 +22,7 @@ const actionsContainer = {
   zIndex: 2, 
   width: "100%", 
   background: "rgba(120, 120, 120, .85)", 
-  height: { xl: 150 },
+  // height: { xl: 150 },
   display: "flex",
   ".active": {
     border: 2,
@@ -64,9 +64,9 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
       {/* actions */}
       <Box sx={actionsContainer}>
         <IconButton color="primary" size="large"><ArrowBackIosNewIcon fontSize='large'/></IconButton>
-        <Box sx={{flex: 1, display: "flex", gap: 2, alignItems: "center", justifyContent: "center"}} >
+        <Box sx={{flex: 1, display: "flex", gap: 2, alignItems: "center", justifyContent: "center", overflowX: "auto"}} >
           {/* images list here */}
-          {imagesList.map(item => <Box key={item.name}>
+          {imagesList.map(item => <Box key={item.name} sx={{width: {xl: 180}, display: "inline-block"}}>
             <ButtonBase 
               sx={imageItemStyles} 
               className={item.name === imageName ? "active" : ""}
