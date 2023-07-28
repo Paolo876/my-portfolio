@@ -4,6 +4,7 @@ import ProjectUrlAndTechStack from './ProjectUrlAndTechStack';
 import ProjectFeatures from './ProjectFeatures';
 import ProjectImages from './ProjectImages';
 import ImageModal from './ImageModal';
+import Footer from './Footer';
 
 
 const ProjectItemContent = ( { project }) => {
@@ -63,6 +64,12 @@ const ProjectItemContent = ( { project }) => {
       <Grid item xl={12} sx={{mt: {xl: 10}}}>
         <ProjectImages images={project.images} handleImageClick={handleImageClick}/>
       </Grid>
+
+      {/* Footer */}
+      <Grid item xl={12} sx={{mt: {xl: 10}}}>
+        <Footer/>
+      </Grid>
+
 
       {/* image Modal */}
       <Modal open={showModal.isVisible} onClose={() => setShowModal({isVisible: false, imageName: null})}>
