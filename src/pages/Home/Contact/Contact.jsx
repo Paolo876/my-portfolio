@@ -1,8 +1,6 @@
 import React from 'react'
 import { Grid, Box, Typography, ButtonBase, IconButton } from '@mui/material'
-// import ContactDescription from './ContactDescription';
 import SocialLinks from '../../../components/SocialLinks';
-// import ContactInformations from './ContactInformations';
 import DownloadIcon from '@mui/icons-material/Download';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
