@@ -39,19 +39,23 @@ const MOCK_PROJ_LIST = [
     images: [
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_1.webp?alt=media&token=5b04da84-3fb6-4a64-9696-6888062acd40",
-      name: "moby_1.webp"
+      name: "moby_1.webp",
+      title: "Welcome/Login Page"
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_2.webp?alt=media&token=fcf0ea56-8abd-4ea5-91bb-3ef31c74e4ca",
-      name: "moby_2.webp"
+      name: "moby_2.webp",
+      title: "Home Page"
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_3.webp?alt=media&token=2f0dbef8-bf61-4782-af68-e0b25d77192f",
-      name: "moby_3.webp"
+      name: "moby_3.webp",
+      title: "Profile Page"
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_4.webp?alt=media&token=4ed6a274-b170-47a3-9ccb-49e20ea79a6f",
-      name: "moby_4.webp"
+      name: "moby_4.webp",
+      title: "Settings Page"
       }, 
     ],
     coverImage: {
