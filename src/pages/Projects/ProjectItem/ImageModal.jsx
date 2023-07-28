@@ -24,6 +24,7 @@ const actionsContainer = {
   background: "rgba(120, 120, 120, .85)", 
   // height: { xl: 150 },
   display: "flex",
+  py: 1,
   ".active": {
     border: 2,
     opacity: 1,
