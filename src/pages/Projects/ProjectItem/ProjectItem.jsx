@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Grid, Box, Typography, ListItem, ListItemButton, List } from '@mui/material';
-import ProjectSelection from '../ProjectSelection';
+import { Grid, Box, ListItem, ListItemButton, List } from '@mui/material';
 import DocumentHead from '../../../components/DocumentHead'
 import ProjectItemContent from './ProjectItemContent';
-import Footer from './Footer';
 
 
 const ProjectItem = ({ projects }) => {
@@ -118,10 +116,9 @@ const ProjectItem = ({ projects }) => {
       }}
     >
       <Grid item xs={3}></Grid>
-      <Grid item xs={9} sx={{pl: {lg: 5, xl: 10}, pb: 10}}>
+      <Grid item xs={9} sx={{pl: {lg: 5, xl: 10} }}>
         {project && <ProjectItemContent project={project}/>}
       </Grid>   
- 
     </Grid>
     
 
