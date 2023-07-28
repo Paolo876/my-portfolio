@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { Grid, Box, Typography, ButtonBase, IconButton } from '@mui/material'
 import SocialLinks from '../../../components/SocialLinks';
 import DownloadIcon from '@mui/icons-material/Download';
@@ -29,28 +30,29 @@ const contactButtonStyles = {
 
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+
   return (
     <Box 
       sx={{
         position: "relative", 
-        // px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
         pt: {xs:3, sm: 4, md: 5, lg: 5, xl: 6}, 
         pb: {xs:1.5, sm: 2, md: 2.5, lg: 3, xl: 4}, 
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        // width: "100vw",
         left: 0,
       }}
     >
       <Grid container>
-        <Grid item xs={12} sm={6} md={5} lg={5} pr={{sm: 2, md: 4, xl: 6}}>
+        <Grid item xs={12} sm={6} md={5} lg={5} pr={{sm: 2, md: 4, xl: 5}}>
           <Box>
             <Typography 
               variant="h2" 
               fontWeight={400}
-              fontSize={{xs: 24, sm: 23, md: 24, lg: 26, xl: 30}} 
+              fontSize={{xs: 21, sm: 22, md: 23, lg: 24, xl: 25}} 
               letterSpacing={.5}
               lineHeight={1.1} 
               textTransform="none"
@@ -64,7 +66,7 @@ const Footer = () => {
           <Box mt={2}>
             <Typography 
               sx={{
-                fontSize: {xs: 11.5, sm: 12, md: 12.5, lg:13, xl: 14.5},
+                fontSize: {xs: 11.5, sm: 12, md: 12.5, lg:13, xl: 13},
                 fontWeight: 400,
                 opacity: .7,
                 letterSpacing: .3,
@@ -77,7 +79,7 @@ const Footer = () => {
           <Box mt={1}>
             <Typography 
               sx={{
-                fontSize: {xs: 11, sm: 11.5, md: 12, lg:12.5, xl: 13},
+                fontSize: {xs: 11, sm: 11.5, md: 12, lg:12.5, xl: 12.5},
                 fontWeight: 300,
                 opacity: .5,
                 letterSpacing: .3,
@@ -90,14 +92,15 @@ const Footer = () => {
           
           <Box mt={{xs: 1.25, md: 2, xl:3}} sx={{display: {sm:"none", md: "flex"}}}>
             <ButtonBase
+              onClick={() => navigate("/contact")}
               sx={{
                 borderLeft: 2, 
-                fontSize: { xs: "1.05rem", sm: "1.2rem", md: "1.1rem", lg: "1.2rem", xl:"1.3rem" },
+                fontSize: {xs:14, sm: 16, md: 17, lg: 18},                
                 lineHeight: 1.4, 
                 color: "primary.main", 
                 borderColor: "rgba(100,100,100,.75)",
                 px: {xs: 1, md:1.5},
-                py: .25,
+                py: .1,
                 fontWeight: 600,
                 letterSpacing: .4,
                 opacity: .85,
@@ -121,7 +124,7 @@ const Footer = () => {
             <Typography 
               variant="h2" 
               fontWeight={400}
-              fontSize={{xs: 21, sm: 23, md: 24, lg: 26, xl: 30}} 
+              fontSize={{xs: 21, sm: 22, md: 23, lg: 24, xl: 25}} 
               letterSpacing={.5}
               lineHeight={1.1} 
               textTransform="none"
@@ -131,7 +134,7 @@ const Footer = () => {
             >Paolo Bugarin</Typography>
             <Typography
               sx={{
-                fontSize: { xs: 12, sm: 13, md: 14, lg:15, xl: 16 },
+                fontSize: { xs: 12, sm: 12, md: 13, lg:14, xl: 14 },
                 fontWeight: 200,
                 opacity: .7,
                 letterSpacing: 1,
@@ -143,14 +146,14 @@ const Footer = () => {
           <Box mt={{xs: 1.5, sm: 3, md: 4, xl:4}}>
             <Box>
               <IconButton size="small" href="tel:3234817852" sx={contactButtonStyles} disableRipple>
-                <LocalPhoneIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 25}}} />
-                <Typography sx={{fontSize: {xs:14, sm: 14, md: 15, lg: 18}, letterSpacing: 1}} fontWeight={300}>(323) 481 - 7852</Typography>
+                <LocalPhoneIcon color="primary" sx={{fontSize: { xs:20, sm: 21, md: 22, lg: 23 }}} />
+                <Typography sx={{fontSize: {xs:12, sm: 13, md: 14, lg: 15}, letterSpacing: 1}} fontWeight={300}>(323) 481 - 7852</Typography>
               </IconButton> 
             </Box>
             <Box mt={{xs:1, sm: 2}}>
               <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={contactButtonStyles} disableRipple>
-                <MailOutlineIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 25}}}/>
-                <Typography sx={{fontSize: {xs:14, sm: 14, md: 15, lg: 18}, letterSpacing: 1}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
+                <MailOutlineIcon color="primary" sx={{fontSize: { xs:20, sm: 21, md: 22, lg: 23 }}}/>
+                <Typography sx={{fontSize: {xs:12, sm: 13, md: 14, lg: 15}, letterSpacing: 1}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
               </IconButton>
             </Box>
           </Box>
@@ -160,9 +163,10 @@ const Footer = () => {
           <Box sx={{width: "100%", height: "100%", display: "flex", justifyContent: {xs: "space-between", md:"right"}}}>
             <Box mt={{md: 2,xl:4}} sx={{display: {xs: "none", sm:"initial", md: "none"}}}>
               <ButtonBase
+                onClick={() => navigate("/contact")}
                 sx={{
                   borderLeft: 2, 
-                  fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.1rem", lg: "1.2rem", xl:"1.3rem" },
+                  fontSize: {xs:14, sm: 16, md: 17, lg: 18},                
                   lineHeight: 1.4, 
                   color: "primary.main", 
                   borderColor: "rgba(100,100,100,.75)",
@@ -227,8 +231,8 @@ const Footer = () => {
               }}
             />
           </Box>
-          <Box sx={{width: "100%", display: {xs: "none", md: "initial"}}} mt={{md: 3, lg: 4.25, xl:5}}>
-            <Typography sx={{fontSize: {xs: 11, sm:11, md: 11.5, lg:13, xl: 14}, opacity: .5, mixBlendMode: "difference", textAlign: "right"}}>
+          <Box sx={{width: "100%", display: {xs: "none", md: "initial"}}} mt={{ md: 3, lg: 3, xl:3 }}>
+            <Typography sx={{fontSize: {xs: 11, sm:11, md: 11.5, lg:13, xl: 13}, opacity: .5, mixBlendMode: "difference", textAlign: "right"}}>
               © 2023 Paolo Bugarin, All rights reserved.
             </Typography>
           </Box>
