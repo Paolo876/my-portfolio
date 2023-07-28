@@ -20,9 +20,8 @@ const containerStyles = {
 
 const actionsContainer = {
   zIndex: 2, 
-  width: "100%", 
-  background: "rgba(120, 120, 120, .85)", 
-  // height: { xl: 150 },
+  maxWidth: "1500px",
+  mx: "auto",
   display: "flex",
   py: 1,
   ".active": {
@@ -37,7 +36,7 @@ const imageItemStyles = {
   borderColor: "transparent", 
   p: .5, 
   opacity: .5, 
-  transition: "all 250ms ease", 
+  transition: "all 250ms ease",
   "&:hover": { 
     opacity: 1, 
     borderColor: "rgba(50,50,50, .5)",  
@@ -63,21 +62,23 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
       </Box>
 
       {/* actions */}
-      <Box sx={actionsContainer}>
-        <IconButton color="primary" size="large"><ArrowBackIosNewIcon fontSize='large'/></IconButton>
-        <Box sx={{flex: 1, display: "flex", gap: 2, alignItems: "center", justifyContent: "center", overflowX: "auto"}} >
-          {/* images list here */}
-          {imagesList.map(item => <Box key={item.name} sx={{width: {xl: 180}, display: "inline-block"}}>
-            <ButtonBase 
-              sx={imageItemStyles} 
-              className={item.name === imageName ? "active" : ""}
-              onClick={() => setShowModal({isVisible: true, imageName: item.name})}
-            >
-              <Image src={item.url} duration={200} />
-            </ButtonBase>
-          </Box>)}
+      <Box sx={{zIndex: 2, width: "100%", background: "rgba(100, 100, 100, .85)", boxShadow: 10, }}>
+        <Box sx={actionsContainer}>
+          <IconButton color="primary" size="large"><ArrowBackIosNewIcon fontSize='large'/></IconButton>
+          <Box sx={{flex: 1, display: "flex", gap: 2, alignItems: "center", justifyContent: "center", overflowX: "auto"}} >
+            {/* images list here */}
+            {imagesList.map(item => <Box key={item.name} sx={{width: {xl: 180}, display: "inline-block"}}>
+              <ButtonBase 
+                sx={imageItemStyles} 
+                className={item.name === imageName ? "active" : ""}
+                onClick={() => setShowModal({isVisible: true, imageName: item.name})}
+              >
+                <Image src={item.url} duration={200} />
+              </ButtonBase>
+            </Box>)}
+          </Box>
+          <IconButton color="primary" size="large"><ArrowForwardIosIcon fontSize='large'/></IconButton>
         </Box>
-        <IconButton color="primary" size="large"><ArrowForwardIosIcon fontSize='large'/></IconButton>
       </Box>
     </Box>
   )
