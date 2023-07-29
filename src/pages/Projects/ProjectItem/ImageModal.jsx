@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, ButtonBase, IconButton,  } from '@mui/material';
+import { Box, ButtonBase, IconButton, Typography,  } from '@mui/material';
 import Image from 'mui-image';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -77,8 +77,27 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
     <Box sx={containerStyles}>
       <Box sx={{zIndex: 2, height: "100vh", width: "100vw", position: "absolute"}} onClick={handleCloseClick}></Box>
 
-      <Box sx={{zIndex: 3, boxShadow:10, maxHeight: "70vh", position: "relative"}}>
+      <Box sx={{zIndex: 3, boxShadow:10, maxHeight: "70vh", position: "relative", overflow: "hidden"}}>
         <Image src={image.url} duration={300} fit="scale-down"/>
+        {image.title && <Box sx={{position: "absolute", top: 0, left: -10, backgroundColor: "rgba(25, 25, 25, 0.75)", transform: "skewX(-7deg)", boxShadow: 10}}>
+          <Typography
+            variant="h5" 
+            fontWeight={300}
+            letterSpacing={.5}
+            fontSize={{xs: 25, sm: 27, md: 28, lg: 29, xl: 30}} 
+            pl={3}
+            pr={5}
+            py={1.5}
+            sx={{
+              textShadow: "1px 1px 3px rgba(100,100,100,.1)",
+              transform: "skewX(7deg)",
+              textTransform: "none",
+              
+            }}
+          >
+            {image.title}
+          </Typography>
+        </Box>}
       </Box>
 
       {/* actions */}

@@ -9,7 +9,6 @@ const ProjectImages = ({ images, handleImageClick }) => {
       {images.map(item => <Grid item xl={6} key={item.name}>
         <Box 
           sx={{
-
             boxShadow: 5,
             transition: "all 200ms linear", 
             background: "rgba(0,0,0,0.75)", 
@@ -42,9 +41,7 @@ const ProjectImages = ({ images, handleImageClick }) => {
               }}
               className="title-overlay"
             >
-              <Box sx={{position : "absolute", height: "100%", width: 2, backgroundColor: "primary.dark", transform: "skewX(-7deg)", left: 1}}>
-
-              </Box>
+              <Box sx={{position : "absolute", height: "100%", width: 2, backgroundColor: "primary.dark", transform: "skewX(-7deg)", left: 1}}></Box>
               <Box sx={{transform: "skewX(-7deg)"}}>
                 <Typography 
                   variant="body2" 
