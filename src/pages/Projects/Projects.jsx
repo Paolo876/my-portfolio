@@ -1,15 +1,9 @@
 import { useState, useEffect } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
-import useRootRedux from '../../hooks/useRootRedux'
-import useFirestoreActions from '../../hooks/useFirestoreActions'
+import { useLocation } from 'react-router-dom'
 import DocumentHead from '../../components/DocumentHead'
-import Contact from "../Home/Contact/Contact"
-import { Grid, Box, Stack, List, ListItem, ListItemButton, Typography } from '@mui/material'
-import Footer from '../../components/Footer'
+import { Grid, Box } from '@mui/material'
 import Introduction from './Introduction'
-import ProjectsList from './ProjectsList'
 import { Route, Routes } from 'react-router-dom'
-import ProjectPage from './ProjectPage/ProjectPage'
 import Image from 'mui-image'
 import ProjectSelection from './ProjectSelection'
 import ProjectItem from './ProjectItem/ProjectItem'
@@ -260,9 +254,7 @@ const Projects = () => {
   const [ projects, setProjects ] = useState(MOCK_PROJ_LIST);
 
   const { state, pathname } = useLocation();
-  const navigate = useNavigate();
 
-  const { skillsList, setData } = useRootRedux();
   // const { getDocumentFromCollection } = useFirestoreActions();
 
   // useEffect(() => {
