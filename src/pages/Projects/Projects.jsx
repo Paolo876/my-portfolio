@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import DocumentHead from '../../components/DocumentHead'
-import { Grid, Box } from '@mui/material'
+import { Grid, Box, Typography } from '@mui/material'
 import Introduction from './Introduction'
 import { Route, Routes } from 'react-router-dom'
 import Image from 'mui-image'
@@ -312,7 +312,7 @@ const MainPage = ({ projects }) => {
         maxHeight: "100vh",
         position: "relative", 
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
-        pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14},        
+        pt: {xs:10, sm: 11, md: 11, lg: 12, xl: 12},        
       }}
     >      
       <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
@@ -330,9 +330,36 @@ const MainPage = ({ projects }) => {
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
           <Grid item xl={3}></Grid>
           <Grid item xl={6} sx={{background: "rgba(38,38,38,1)", height: "100vh", width: "100%", transform: "skewX(-7deg)"}}></Grid>
-          <Grid item xl={3} align="right" sx={{background: "", height: "75vh", display: "flex", alignItems: "flex-end", justifyContent: "flex-end", zIndex: -2}}>
-            <Box>
-              <Image src={projects[activeProject].coverImage.url} duration={200}/>
+          <Grid 
+            item 
+            xl={3} 
+            align="right" 
+            sx={{
+              height: "98vh", 
+              display: "flex", 
+              flexDirection: "column",
+              alignItems: "flex-end", 
+              justifyContent: "flex-end", 
+              zIndex: -2,
+              pb: {xs:10, sm: 11, md: 11, lg: 12, xl: 12},        
+
+              }}
+            >
+            <Box sx={{opacity: .75}}>
+              <Image src={projects[activeProject].logo} duration={200}/>
+            </Box>
+            <Box sx={{mt: 5, borderRight: 2, borderColor: "primary.dark", pr: 1}}>
+              <Typography 
+                variant="body2"
+                sx={{
+                  fontSize: {xs: 12.5, sm: 13, md: 13.5, lg:14, xl: 14},
+                  fontWeight: 200,
+                  opacity: .75,
+                  letterSpacing: .4,
+                  lineHeight: 1.4,
+                  textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+                }} 
+              >{projects[activeProject].briefDescription}</Typography>
             </Box>
           </Grid>
         </Grid>
