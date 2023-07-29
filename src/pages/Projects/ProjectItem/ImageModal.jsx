@@ -89,10 +89,9 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
             pr={5}
             py={1.5}
             sx={{
-              textShadow: "1px 1px 3px rgba(100,100,100,.1)",
+              textShadow: "1px 1px 7px rgba(10,10,10,.75)",
               transform: "skewX(7deg)",
               textTransform: "none",
-              
             }}
           >
             {image.title}
