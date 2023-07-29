@@ -13,7 +13,7 @@ const ProjectImages = ({ images, handleImageClick }) => {
             boxShadow: 5,
             transition: "all 200ms linear", 
             background: "rgba(0,0,0,0.75)", 
-            filter: "brightness(.95) contrast(.85)", 
+            filter: "brightness(.9) contrast(.85)", 
             overflow: "hidden", 
             "&:hover": {
               p: 0, 

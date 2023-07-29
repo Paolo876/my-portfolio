@@ -31,7 +31,7 @@ const actionsContainer = {
   }
 }
 
-const imageItemStyles = {
+const imageListItemStyles = {
   height: 130, 
   border: 2, 
   borderColor: "transparent", 
@@ -77,7 +77,7 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
     <Box sx={containerStyles}>
       <Box sx={{zIndex: 2, height: "100vh", width: "100vw", position: "absolute"}} onClick={handleCloseClick}></Box>
 
-      <Box sx={{zIndex: 3, boxShadow:10, maxHeight: "70vh"}}>
+      <Box sx={{zIndex: 3, boxShadow:10, maxHeight: "70vh", position: "relative"}}>
         <Image src={image.url} duration={300} fit="scale-down"/>
       </Box>
 
@@ -89,7 +89,7 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
             {/* images list here */}
             {imagesList.map(item => <Box key={item.name} sx={{width: {xl: 180}, display: "inline-block"}}>
               <ButtonBase 
-                sx={imageItemStyles} 
+                sx={imageListItemStyles} 
                 className={item.name === imageName ? "active" : ""}
                 onClick={() => setShowModal({isVisible: true, imageName: item.name})}
               >

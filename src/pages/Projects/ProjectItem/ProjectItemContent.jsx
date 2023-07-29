@@ -67,7 +67,7 @@ const ProjectItemContent = ( { project }) => {
 
 
       {/* Footer */}
-      <Grid item xl={12} sx={{mt: {xl: 18}}}>
+      <Grid item xl={12} sx={{mt: {xl: 20}}}>
         <Divider/>
         <Footer/>
       </Grid>
