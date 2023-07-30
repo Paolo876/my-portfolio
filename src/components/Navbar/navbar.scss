@@ -23,6 +23,7 @@
             transition: all 0.2s;
             p {
                 font-weight: 400;
+                text-shadow: 1px 1px 3px rgba(100,100,100,.75);
             }
             &.active {
                 opacity: 1;

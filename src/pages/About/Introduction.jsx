@@ -9,12 +9,11 @@ const boxTextStyles = {
 
 
 const baseTextStyles = {
-  fontSize:{xs: 11.5, sm: 13, md: 13.5, lg:14, xl: 15.5},
+  fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 16},
   fontWeight: 300,
-  textAlign: "justify", 
-  textJustify: "inter-word", 
-  mixBlendMode: "difference",
-  opacity: .8,
+  opacity: .55,
+  letterSpacing: .3,
+  textShadow: "1px 1px 5px rgba(10,10,10,.75)",
 }
 
 
@@ -34,28 +33,30 @@ const Introduction = () => {
       <Grid item md={6} lg={5.5} order={{xs: 2, md:1}} mt={{xs: 6, sm: 6, md: 0}}>
         <Box>
           <Typography 
-            variant="h1" 
-            align="left" 
-            fontWeight={800} 
-            fontSize={{xs:40, sm: 50, md: 70, lg: 75}} 
-            letterSpacing={{xs:1, sm:2, md: 3, lg: 3}} 
-            lineHeight={1} 
-            color="primary.main"
+              variant="h2" 
+              align="left" 
+              fontWeight={400}
+              fontSize={{xs: 35, sm: 45, md: 60, lg: 80, xl: 88}} 
+              letterSpacing={{xs: .5, xL:1}}
+              lineHeight={{xs:1}} 
+              textTransform="none"
+              sx={{
+                textShadow: "1px 1px 7px rgba(10,10,10,.75)",
+              }}
           >
             About Me
           </Typography>
-          <Box sx={{background: "rgba(239,235,229,1)", height: {xs: 2, sm: 8, md: 10}, width: {xs: 12, sm: 8, md: 10}, mr: "auto", mt: {xs: 1.25, sm: 1.25, md:1.5}, mixBlendMode: "difference", opacity: .15}}></Box>
         </Box>
-        <Box mt={{xs: 3, sm: 4, md: 10, lg: 12, xl: 18}}>
+        <Box mt={{xs: 3, sm: 4, md: 10, lg: 12, xl: 13}}>
           <Typography variant="body1" sx={baseTextStyles}>          
             I am a <Box sx={boxTextStyles} component="span"> Full Stack Web Developer </Box> 
             based in <Box sx={boxTextStyles} component="span">Los Angeles, California. </Box> I started coding in 2019 and went back to college in 2020 for a degree in
             <Box sx={boxTextStyles} component="span"> Computer Information Systems </Box> major in Web Development and Software Development.
           </Typography>
-          <Typography variant="body1" sx={baseTextStyles} mt={1}>         
+          <Typography variant="body1" sx={baseTextStyles} mt={.5}>         
             I can design and develop a fully working website or web application from frontend to backend with amazing features including the use of APIs and database implementation.
           </Typography>
-          <Typography variant="body1" sx={{...baseTextStyles, fontWeight: 400, opacity: .9}} mt={1.5}>
+          <Typography variant="body1" sx={{...baseTextStyles, opacity: .8}} mt={6}>
             I am ready to take my skills to the next level and I am confident that I have the necessary knowledge and skills to prove myself.
           </Typography>
         </Box>
