@@ -60,7 +60,7 @@ const Projects = () => {
             onClick={() => navigate("/projects")}
             sx={{
               borderLeft: 2, 
-              fontSize: { xs: "1.2rem", sm: "1.35rem", md: "1.35rem", lg: "1.5rem", xl:"1.5rem" },
+              fontSize: { xs: "1.2rem", sm: "1.35rem", md: "1.35rem", lg: "1.4rem", xl:"1.4rem" },
               lineHeight: 1.4, 
               color: "white", 
               borderColor: "primary.dark",
@@ -69,11 +69,11 @@ const Projects = () => {
               fontWeight: 600,
               letterSpacing: .4,
               opacity: .85,
-              transition: "all 250ms ease-in-out",
+              transition: "all 200ms ease-in-out",
               fontFamily: "Manrope",
+              textShadow: "1px 1px 3px rgba(100,100,100,.75)",
               "&:hover":{
                 opacity:1,
-                textShadow: "1px 1px 3px rgba(100,100,100,.75)",
                 transform: "scale(1.02)",
                 borderColor: "primary.main",
               }
