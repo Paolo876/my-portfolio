@@ -27,33 +27,39 @@ const Navbar = () => {
 
   // console.log(isNavbarHidden)
   return (
-    <AppBar component="nav" className={`navbar ${isScrolledDown === "top" ? "page-top" : isScrolledDown ? "scroll-down" : "scroll-up"}`} position="fixed" sx={{minHeight: 0}}>
+    <AppBar 
+      component="nav" 
+      className={`navbar ${isScrolledDown === "top" ? "page-top" : isScrolledDown ? "scroll-down" : "scroll-up"}`} 
+      position="fixed" 
+      sx={{
+        minHeight: 0,
+        px: { xs:1.75, sm: 3, md: 4, lg: 5}, 
+
+      }}
+    >
       <Grid 
         container
         sx={{
           position: "relative", 
-          px: { xs:1.75, sm: 3, md: 4, lg: 5, xl: 0 }, 
           py:{xs:.5, sm:1.15, md: 1.75, xl: 2 },
           maxWidth: "1500px",
           mx: "auto",
-          overflow: "hidden",
+          // overflow: "hidden",
           opacity: isScrolledDown === "top" && location.pathname === "/" ? 0 : 1,
-          zIndex: 20
         }}
       >
-        <Grid item xs={1}>
+        <Grid item xs={1} sx={{display: "flex", alignitems: "center"}}>
           <Link component={ReactLink} to="/">
             <Typography fontSize={{xs: 14, sm: 15, md: 16}} variant="h3">PB</Typography>
           </Link>
         </Grid>
         <Grid 
           item 
-          xs={11}  
+          md={11}  
           sx={{
             ml: {xs:0, md:"auto"}, 
             display:{xs: "none", md: "flex"}, 
             flexDirection: "row", 
-            // alignItems: "flex-end",
             justifyContent: "right",
             gap: {md:4, lg: 5,xl: 7.5},
           }} 
@@ -64,7 +70,21 @@ const Navbar = () => {
           <Link component={NavLink} to="/about" draggable={false}><Typography fontSize={{md: 15, lg: 16,xl: 17}}>About</Typography></Link>
           <Link component={NavLink} to="/contact" draggable={false}><Typography fontSize={{md: 15, lg: 16, xl: 17}}>Contact</Typography></Link>
         </Grid>
+        <Grid 
+          item 
+          xs={11}
+          sx={{
+            ml: {xs:0, md:"auto"}, 
+            display:{xs: "flex", md: "none"}, 
+            justifyContent: "right",
+          }} 
+        >
+          <IconButton sx={{display: {md:"none"}, ml: "auto", opacity: .75}} size="small" color="primary" onClick={() => setShowModal(true)} disableFocusRipple disableRipple disableTouchRipple>
+            <MenuIcon sx={{fontSize: 35}}/>
+          </IconButton>
+        </Grid>
       </Grid>
+
       {/* <Container maxWidth="xl">
         <Box 
           sx={{

@@ -33,7 +33,8 @@ const nameStyles = {
   opacity: .15,
   textTransform: "none",
   fontWeight: 800,
-  fontSize: { xs:"5rem", sm: "6rem" },
+  fontSize: { xs:"5rem", sm: "8rem" },
+  letterSpacing: -2,
   lineHeight: .85,
   userSelect: "none",
 }
