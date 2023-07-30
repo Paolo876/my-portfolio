@@ -37,11 +37,6 @@ const SubIntroduction = () => {
               I design and develop websites from a 
               <Box component="span" fontWeight={500}> simple static page </Box> to a<br/>
               <Box component="span" fontWeight={500}> complex dynamic web application</Box>.
-              {/* I design and develop websites from a 
-              <Box component="span" fontWeight={500}> simple static page </Box> to a 
-              <Box component="span" fontWeight={500}> complex dynamic web application </Box> with 
-              <Box component="span" fontWeight={500} color="primary.light"> ReactJS </Box> <Box component="span" fontWeight={100} fontFamily="Noto Sans Lao"> | </Box> 
-              <Box component="span" fontWeight={500} color="primary.light"> NextJS </Box> framework. */}
             </Typography>
           </Box>
         </Grid>

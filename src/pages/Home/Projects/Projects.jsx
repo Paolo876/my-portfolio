@@ -1,9 +1,12 @@
 import React from 'react'
-import { Grid, Box, Typography, Button, Stack, ButtonBase } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
+import { Grid, Box, Typography, ButtonBase } from '@mui/material'
 import ProjectsShowcase from './ProjectsShowcase'
 
 
 const Projects = () => {
+  const navigate = useNavigate();
+
   return (
     <Box 
       sx={{
@@ -49,15 +52,12 @@ const Projects = () => {
             >
               I mainly develop my projects using ReactJS or NextJS for the frontend, ExpressJS and NodeJS for the backend, MongoDB or MySQL for db implementations. I use different libraries on my works to
               increase development efficiency and easier scalability.
-              {/* I mainly develop my projects using ReactJS or NextJS on the frontend, NodeJS and ExpressJS on the backend, MongoDB or MySQL for database implementations, and different libraries
-              and frameworks to increase development efficiency and easier scalability. */}
             </Typography>
           </Box>
-        </Grid>
-        {/* <Grid item lg={8.5} xl={9}></Grid> */}
-        
+        </Grid>        
         <Grid item xs={12} mt={{xs: 26, sm: 40, md: 4, lg: 6, xl:10}} >
           <ButtonBase
+            onClick={() => navigate("/projects")}
             sx={{
               borderLeft: 2, 
               fontSize: { xs: "1.2rem", sm: "1.35rem", md: "1.35rem", lg: "1.5rem", xl:"1.5rem" },

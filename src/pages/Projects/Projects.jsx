@@ -352,10 +352,10 @@ const MainPage = ({ projects }) => {
               <Typography 
                 variant="body2"
                 sx={{
-                  fontSize: {xs: 12.5, sm: 13, md: 13.5, lg:14, xl: 14},
-                  fontWeight: 200,
+                  fontSize: {xs: 13, sm: 13.5, md: 14, lg:15, xl: 15.5},
+                  fontWeight: 300,
                   opacity: .75,
-                  letterSpacing: .4,
+                  letterSpacing: .3,
                   lineHeight: 1.4,
                   textShadow: "1px 1px 5px rgba(10,10,10,.75)",
                 }} 

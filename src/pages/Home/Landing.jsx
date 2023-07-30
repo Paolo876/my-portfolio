@@ -36,7 +36,8 @@ const nameStyles = {
   lineHeight: .9,
   letterSpacing: -2,
   userSelect: "none",
-  textShadow: "1px 1px 3px rgba(100,100,100,.25)",
+  opacity: .9,
+  textShadow: "1px 1px 3px rgba(100,100,100,.5)",
 }
 
 const subHeaderStyles = {
