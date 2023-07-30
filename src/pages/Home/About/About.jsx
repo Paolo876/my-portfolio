@@ -19,7 +19,7 @@ const About = () => {
         width: "100%",
       }}
     >
-      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(0,0,0,1)", mixBlendMode: "overlay", opacity: .15, zIndex: -1}}></Box>
+      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(0,0,0,.1)", zIndex: -1}}></Box>
 
       {!showContent && <ButtonBase 
         align="center" 
@@ -35,6 +35,10 @@ const About = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          transition: "all 800ms ease-in-out",
+          "&:hover": {
+            background: "rgba(0,0,0,.25)",
+          },
           "&:hover .content": {
               transform: "scale(1.015)",
               opacity: 1,

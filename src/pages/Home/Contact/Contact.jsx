@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { Grid, Box, Typography, ButtonBase, IconButton } from '@mui/material'
 import SocialLinks from '../../../components/SocialLinks';
 import DownloadIcon from '@mui/icons-material/Download';
@@ -30,6 +31,9 @@ const contactButtonStyles = {
 }
 
 const Contact = () => {
+  const navigate = useNavigate();
+
+
   return (
     <Box 
     sx={{
@@ -91,6 +95,7 @@ const Contact = () => {
         
         <Box mt={{xs: 1.25, md: 2, xl:3}} sx={{display: {sm:"none", md: "flex"}}}>
           <ButtonBase
+            onClick={() => navigate("/contact")}
             sx={{
               borderLeft: 2, 
               fontSize: { xs: "1.05rem", sm: "1.2rem", md: "1.1rem", lg: "1.2rem", xl:"1.3rem" },
@@ -161,6 +166,7 @@ const Contact = () => {
         <Box sx={{width: "100%", height: "100%", display: "flex", justifyContent: {xs: "space-between", md:"right"}}}>
           <Box mt={{md: 2,xl:4}} sx={{display: {xs: "none", sm:"initial", md: "none"}}}>
             <ButtonBase
+              onClick={() => navigate("/contact")}
               sx={{
                 borderLeft: 2, 
                 fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.1rem", lg: "1.2rem", xl:"1.3rem" },
