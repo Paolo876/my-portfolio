@@ -1,9 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { Grid, Box, Typography, ButtonBase } from '@mui/material'
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 import Skills from './Skills/Skills';
 
+
 const AboutContent = ({ isVisible }) => {
+  const navigate = useNavigate();
+
+  
   return (
     <Grid container sx={{maxWidth: "1500px", mx: "auto", height: "90%"}}>
 			<Grid item xs={12}>
@@ -43,9 +47,10 @@ const AboutContent = ({ isVisible }) => {
 						</Box>
 						<Box mb={{lg: 1.5}} sx={{display: {xs: "none", md: "initial"}}}>
 							<ButtonBase
+                onClick={() => navigate("/about")}
 								sx={{
 									borderLeft: 2, 
-									fontSize: { xs: "1.25rem", sm: "1.3rem", md: "1.3rem", lg: "1.45rem", xl:"1.5rem" },
+									fontSize: { xs: "1.25rem", sm: "1.3rem", md: "1.3rem", lg: "1.4rem", xl:"1.4rem" },
 									lineHeight: 1.4, 
 									color: "white", 
 									borderColor: "primary.dark",
@@ -87,9 +92,10 @@ const AboutContent = ({ isVisible }) => {
             </Box>
             <Box mt={{xs: 2, sm: 0}}>
               <ButtonBase
+                onClick={() => navigate("/about")}
                 sx={{
                   borderLeft: 2, 
-                  fontSize: { xs: "1rem", sm: "1.2rem", md: "1.3rem", lg: "1.45rem", xl:"1.5rem" },
+                  fontSize: { xs: "1rem", sm: "1.2rem", md: "1.3rem", lg: "1.4rem", xl:"1.4rem" },
                   lineHeight: 1.4, 
                   color: "white", 
                   borderColor: "primary.dark",
@@ -120,6 +126,8 @@ const AboutContent = ({ isVisible }) => {
       <Grid item xs={12} mt={{xs: 1.5, sm:3}} sx={{display: {xs: "initial", md: "none"}}}>
         <Box>
           <ButtonBase
+            onClick={() => navigate("/about")}
+
             sx={{
               borderLeft: 2, 
               fontSize: { xs: "1rem", sm: "1.2rem" },

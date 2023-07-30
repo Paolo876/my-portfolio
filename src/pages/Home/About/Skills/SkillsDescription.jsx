@@ -1,7 +1,10 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { Box, Typography, Stack, ButtonBase } from '@mui/material'
 
+
 const SkillsDescription = () => {
+  const navigate = useNavigate();
 
   return (
     <Stack pl={{xs: 3, sm: 3, md: 2, lg: 3.5, xl: 5}}>
@@ -40,6 +43,7 @@ const SkillsDescription = () => {
       </Box>
       <Box align="right">
         <ButtonBase
+          onClick={() => navigate("/about")}
           sx={{
             borderRight: 2, 
             fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.2rem", lg: "1.35rem", xl:"1.35rem" },
