@@ -69,6 +69,7 @@ const Landing = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
+        zIndex: 30,
       }}
     >
       <Grid container sx={{maxWidth: "1500px", mx: "auto", height: {md: "fit-content", lg:"90%"}, my: "auto"}}>
