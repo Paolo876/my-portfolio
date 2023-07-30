@@ -23,6 +23,7 @@ const linkStyles = {
   letterSpacing: {xs: 1.1, sm: 1.5},
   width: "fit-content",
   opacity: .9,
+  textShadow: "1px 1px 3px rgba(100,100,100,.75)",
   mixBlendMode: "difference",
   transition: "all 200ms linear",
   fontFamily: "Manrope",
@@ -31,9 +32,10 @@ const linkStyles = {
 const nameStyles = {
   mixBlendMode: "difference", 
   opacity: .15,
+  textShadow: "1px 1px 3px rgba(100,100,100,.75)",
   textTransform: "none",
   fontWeight: 800,
-  fontSize: { xs:"5rem", sm: "8rem" },
+  fontSize: { xs:"5.5rem", sm: "8rem" },
   letterSpacing: -2,
   lineHeight: .85,
   userSelect: "none",
@@ -74,8 +76,22 @@ const LinksModal = ({ open, onClose}) => {
                 <Typography variant="h1" sx={nameStyles}>Bugarin</Typography>
               </Box>
               <Box sx={{ml: "auto", mt: {xs:5, sm: 6}, opacity: .75, mr: {xs: 0, sm:1}}}>
-                <SocialLinks buttonSize='small' gap={3}/>
-              </Box>
+              <SocialLinks 
+                flexDirection='row' 
+                color="inherit" 
+                gap={.25}
+                placement="left"
+                additionalStyles={{
+                  opacity: .65,
+                  transition: "all 150ms ease-in-out",
+                  "&:hover": {
+                    opacity: 1,
+                    transform: "scale(1.15)",
+                    color: "primary.light",
+                  }
+                }}
+              />              
+            </Box>
               <Box sx={{mt: "auto"}} className="link-items">
                 <Link onClick={() => handleClick("/")} className={location.pathname === "/home" ? "active" : ""} draggable={false}><Typography sx={linkStyles}>Home</Typography></Link>
                 <Link onClick={() => handleClick("/projects")} className={location.pathname === "/projects" ? "active" : ""} draggable={false} ><Typography sx={linkStyles}>Projects</Typography></Link>
