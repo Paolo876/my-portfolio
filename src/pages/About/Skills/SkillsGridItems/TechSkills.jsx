@@ -44,23 +44,23 @@ const TechSkills = ({ skills, title, description, isMain }) => {
     }
   }, [isHovered])
 
-  console.log(activeSkill, skills.length)
+
   return (
-    <Grid container mb={{xs: 4.5, sm: 10, md: 10, lg: 10, xl: 15}} columnSpacing={{xl: 5}}>
+    <Grid container mb={{xs: 14, sm: 15, md: 16, lg: 18, xl: 20}} columnSpacing={{xl: 5}}>
       <Grid item xs={11} sm={4.5} md={2.75} lg={3} xl={4} mb={{xs: 1.5, sm: 3, md: 0}}>
         <Box mb={8}>
           <Typography 
-              variant="h2" 
-              align="left" 
-              fontWeight={400}
-              fontSize={{xs: 26, sm: 27, md: 28, lg: 30, xl: 30}} 
-              letterSpacing={{xs: .5, xl:1}}
-              lineHeight={{xs:1}} 
-              textTransform="none"
-              sx={{
-                textShadow: "1px 1px 7px rgba(25,25,25,.75)",
-              }}
-            >
+            variant="h2" 
+            align="left" 
+            fontWeight={400}
+            fontSize={{xs: 26, sm: 27, md: 28, lg: 30, xl: 30}} 
+            letterSpacing={{xs: .5, xl:1}}
+            lineHeight={{xs:1}} 
+            textTransform="none"
+            sx={{
+              textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+            }}
+          >
             {title}
           </Typography>
         </Box>
@@ -73,7 +73,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
 
         <Grid container justifyContent={{xs: "right", md: "right"}}>
           {!isMain && 
-            <Grid item xs={12} md={6} pr={{md: 5, lg: 6, xl: 10}} pl={{sm: 6, md: 0, lg: 1, xl: 2}} mt={{sm: 1, md: 2}} mb={{xs: 1, sm: 3, md: 0}} > 
+            <Grid item xs={12} md={6} pr={{md: 5, lg: 6, xl: 10}} mt={{sm: 1, md: 2}} mb={{xs: 1, sm: 3, md: 0}} > 
               <Box sx={{borderLeft: 2, pl: 1.5, borderColor: "primary.dark"}}>
                 {description}
               </Box>

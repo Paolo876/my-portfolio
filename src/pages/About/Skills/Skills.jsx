@@ -22,17 +22,18 @@ const Skills = () => {
 
   return (
     <Box
-    sx={{
-      position: "relative", 
-      px: {xs:2.5, sm: 3, md: 4, lg: 5.5, xl: 4.5}, 
-      pt: {xs:8, sm: 12, md: 14, lg: 15}, 
-      pb: {xs:3, sm: 4, md: 4, lg: 5}, 
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-between",
-    }}
-  >
-    <Grid container       
+      sx={{
+        position: "relative", 
+        px: {xs:2.5, sm: 3, md: 4, lg: 5.5, xl: 4.5}, 
+        pt: {xs:8, sm: 12, md: 14, lg: 15}, 
+        pb: {xs:3, sm: 4, md: 4, lg: 6}, 
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}
+    >
+    <Grid 
+      container       
       sx={{
         justifyContent: "center", 
         alignItems: "flex-start", 

@@ -205,7 +205,6 @@ const Contact = () => {
               letterSpacing: .5,
               opacity: .75,
               transition: "all 250ms ease-in-out",
-              fontFamily: "Manrope",
               "&:hover":{
                 opacity:1,
                 textShadow: "1px 1px 3px rgba(100,100,100,.75)",
