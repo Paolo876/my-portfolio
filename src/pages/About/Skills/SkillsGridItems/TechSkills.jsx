@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import { Typography, Box, Grid } from '@mui/material'
 import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 
@@ -11,11 +11,11 @@ const boxStyles = {
   background: "none",
   transition: "all 250ms ease-in-out",
   fontFamily: "Manrope",
-  "&:hover":{
+  "&:hover, &.active":{
     opacity:1,
-    transform: "scale(1.025)",
+    transform: "scale(1.05)",
   },
-  "&:hover p": {
+  "&:hover p, &.active p": {
     color: "primary.main",
     opacity:1,
     letterSpacing: 1.1,
@@ -26,6 +26,25 @@ const boxStyles = {
 
 
 const TechSkills = ({ skills, title, description, isMain }) => {
+  const [ activeSkill, setActiveSkill ] = useState(0);
+  const [ isHovered, setIsHovered ] = useState(false)
+
+  useEffect(() => {
+    if(isMain){
+      const interval = setInterval(
+        () => setActiveSkill(prevState => {
+          if(prevState === skills.length - 1) {
+            return 0
+          } else {
+            return prevState + 1
+          }
+        }), 5000)
+      if(isHovered) clearInterval(interval) 
+      return () => clearInterval(interval)    
+    }
+  }, [isHovered])
+
+  console.log(activeSkill, skills.length)
   return (
     <Grid container mb={{xs: 4.5, sm: 10, md: 10, lg: 10, xl: 15}} columnSpacing={{xl: 5}}>
       <Grid item xs={11} sm={4.5} md={2.75} lg={3} xl={4} mb={{xs: 1.5, sm: 3, md: 0}}>
@@ -61,7 +80,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
             </Grid>
           }
           
-          {skills.map(item => 
+          {skills.map((item, index) => 
             <Grid item xs={2.4} sm={2.7} md={1.5} lg={1.5} key={item.name} align="center">
               <Box 
                 sx={{
@@ -69,7 +88,12 @@ const TechSkills = ({ skills, title, description, isMain }) => {
                   userSelect: "none",
                 }} 
               >
-                <Box sx={boxStyles}>
+                <Box 
+                  sx={boxStyles} 
+                  className={isMain && index === activeSkill ? "active" : ""} 
+                  onMouseOver={() => { setActiveSkill(index); setIsHovered(true) }} 
+                  onMouseLeave={() => setIsHovered(false)}
+                >
                   <Box height={{xs: 25, sm: 40, md:45, lg:50, xl: 50}} width="auto">
                     <SkillIconImageItem 
                       src={item.monoUrl} 

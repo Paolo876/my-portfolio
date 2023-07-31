@@ -43,7 +43,7 @@ const Skills = () => {
     >
         <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(15,15,15,.5)", zIndex: -1}}></Box>
         <Grid item xs={12}>
-          <TechSkills 
+          {webDevSkillsList.length !== 0 && <TechSkills 
             skills={webDevSkillsList} 
             title="Web Development" 
             description={<Typography sx={baseTextStyles}>
@@ -51,15 +51,15 @@ const Skills = () => {
               along with related libraries and frameworks.
             </Typography>}
             isMain={true}
-          />
-          <TechSkills 
+          />}
+          {softwareDevSkillsList.length !== 0 && <TechSkills 
             skills={softwareDevSkillsList} 
             title="Software Development"
             description={<Typography sx={baseTextStyles}>
               Although my niche is in web development, I also have knowledge in software development, data structures & algorithms, and developing a working program with the GUI
               and other features.
             </Typography>}
-          />
+          />}
           <Certifications/>
           <OtherSkills/>
         </Grid>
