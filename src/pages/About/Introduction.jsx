@@ -27,7 +27,6 @@ const Introduction = () => {
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
         pt: {xs:8, sm: 12, md: 14, lg: 16, xl: 20}, 
         pb: {xs:12, sm: 13, md: 12, lg: 15}, 
-
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -44,16 +43,16 @@ const Introduction = () => {
         <Grid item md={6} lg={5.5} order={{xs: 2, md:1}} mt={{xs: 6, sm: 6, md: 0}}>
           <Box>
             <Typography 
-                variant="h2" 
-                align="left" 
-                fontWeight={400}
-                fontSize={{xs: 35, sm: 45, md: 60, lg: 80, xl: 88}} 
-                letterSpacing={{xs: .5, xL:1}}
-                lineHeight={{xs:1}} 
-                textTransform="none"
-                sx={{
-                  textShadow: "1px 1px 7px rgba(25,25,25,.75)",
-                }}
+              variant="h2" 
+              align="left" 
+              fontWeight={400}
+              fontSize={{xs: 35, sm: 45, md: 60, lg: 80, xl: 88}} 
+              letterSpacing={{xs: .5, xL:1}}
+              lineHeight={{xs:1}} 
+              textTransform="none"
+              sx={{
+                textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+              }}
             >
               About Me
             </Typography>
