@@ -11,7 +11,6 @@ const baseTextStyles = {
   opacity: .55,
   letterSpacing: .4,
   textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-
 }
 
 

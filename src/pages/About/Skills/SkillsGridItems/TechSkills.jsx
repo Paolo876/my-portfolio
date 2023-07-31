@@ -74,7 +74,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
         <Grid container justifyContent={{xs: "right", md: "right"}}>
           {!isMain && 
             <Grid item xs={12} md={6} pr={{md: 5, lg: 6, xl: 10}} pl={{sm: 6, md: 0, lg: 1, xl: 2}} mt={{sm: 1, md: 2}} mb={{xs: 1, sm: 3, md: 0}} > 
-              <Box>
+              <Box sx={{borderLeft: 2, pl: 1.5, borderColor: "primary.dark"}}>
                 {description}
               </Box>
             </Grid>
