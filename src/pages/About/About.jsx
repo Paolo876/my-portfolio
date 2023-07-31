@@ -3,13 +3,12 @@ import { useLocation } from "react-router-dom";
 
 import DocumentHead from '../../components/DocumentHead'
 import Introduction from './Introduction'
-import AboutContentList from './AboutContentList'
 import useFirestoreActions from '../../hooks/useFirestoreActions'
 import useRootRedux from '../../hooks/useRootRedux'
 import Contact from "../Home/Contact/Contact"
 import { Stack } from '@mui/material'
-import Skills from './AboutContentItems/Skills';
-import Roadmap from './AboutContentItems/Roadmap';
+import Skills from './Skills/Skills';
+import Roadmap from './Roadmap/Roadmap';
 
 
 const About = () => {
@@ -38,7 +37,6 @@ const About = () => {
         <Introduction/>
         <Skills/>
         <Roadmap/>
-        {/* <AboutContentList/> */}
         <Contact/>
       </Stack>
 
