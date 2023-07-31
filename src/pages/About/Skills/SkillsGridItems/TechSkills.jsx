@@ -13,7 +13,7 @@ const boxStyles = {
   fontFamily: "Manrope",
   "&:hover, &.active":{
     opacity:1,
-    transform: "scale(1.05)",
+    transform: "scale(1.075)",
   },
   "&:hover p, &.active p": {
     color: "primary.main",
@@ -38,7 +38,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
           } else {
             return prevState + 1
           }
-        }), 5000)
+        }), 2000)
       if(isHovered) clearInterval(interval) 
       return () => clearInterval(interval)    
     }
