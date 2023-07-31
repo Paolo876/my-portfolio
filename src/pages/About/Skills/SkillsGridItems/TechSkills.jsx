@@ -13,15 +13,21 @@ const boxStyles = {
   fontFamily: "Manrope",
   "&:hover":{
     opacity:1,
-    textShadow: "1px 1px 3px rgba(100,100,100,.75)",
     transform: "scale(1.025)",
+  },
+  "&:hover p": {
+    color: "primary.main",
+    opacity:1,
+    letterSpacing: 1.1,
+    fontWeight: 600, 
+    textShadow: "1px 1px 3px rgba(100,100,100,.5)",
   }
 }
 
 
 const TechSkills = ({ skills, title, description, isMain }) => {
   return (
-    <Grid container mb={{xs: 4.5, sm: 10, md: 10, lg: 10, xl: 15}}>
+    <Grid container mb={{xs: 4.5, sm: 10, md: 10, lg: 10, xl: 15}} columnSpacing={{xl: 5}}>
       <Grid item xs={11} sm={4.5} md={2.75} lg={3} xl={4} mb={{xs: 1.5, sm: 3, md: 0}}>
         <Box mb={8}>
           <Typography 
@@ -46,7 +52,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
 
       <Grid item xs={12} sm={7.5} md={9.25} lg={9} xl={8}>
 
-        <Grid container justifyContent={{xs: "right", md: "right"}} pl={{md: 8, lg: 10, xl: 15}}>
+        <Grid container justifyContent={{xs: "right", md: "right"}}>
           {!isMain && 
             <Grid item xs={12} md={6} pr={{md: 5, lg: 6, xl: 10}} pl={{sm: 6, md: 0, lg: 1, xl: 2}} mt={{sm: 1, md: 2}} mb={{xs: 1, sm: 3, md: 0}} > 
               <Box>
@@ -75,14 +81,14 @@ const TechSkills = ({ skills, title, description, isMain }) => {
                   <Typography 
                     variant="body2" 
                     sx={{
-                      mixBlendMode: "difference", 
                       opacity: .4,
                       fontSize: {xs: 10, sm: 11, md: 11, lg: 11}, 
                       fontWeight: 300, 
                       mt: {xs: 1, sm:1.5, md: 2},
                       textTransform: "uppercase",
-                      // letterSpacing: { sm: .2, md: 0.5, lg: 2 },
-                      letterSpacing: 1
+                      letterSpacing: 1,
+                      transition: "all 400ms ease-in-out",
+
                     }}
                   >{item.name}</Typography>
                 </Box>
