@@ -45,13 +45,13 @@ const Process = () => {
           overflowY: "hidden"
         }}
       >
-        <Grid item xs={12} md={12} lg={2.5}>
+        <Grid item xs={12} md={12} lg={12}>
           <Box sx={{display: {xs: "none", lg: "initial"}}}>
             <Typography 
               variant="h2" 
-              align="left" 
+              align="center" 
               fontWeight={400}
-              fontSize={{xs: 26, sm: 27, md: 28, lg: 30, xl: 70}} 
+              fontSize={{xs: 26, sm: 27, md: 28, lg: 30, xl: 45}} 
               letterSpacing={{xs: .5, lg:1}}
               lineHeight={{xs:1.1}} 
               textTransform="none"
@@ -59,11 +59,12 @@ const Process = () => {
                 textShadow: "1px 1px 7px rgba(25,25,25,.75)",
               }}
             >
-              My<br/>Work<br/>Process
+              {/* My<br/>Work<br/>Process */}
+              My Work Process
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={12} lg={9.5} pl={{md:0, lg:2, xl: 4}}>
+        <Grid item xs={12} md={12} lg={12} pl={{md:0, lg:2, xl: 0}} mt={8}>
           <Box sx={{display: {xs: "none", md: "initial"}}}>
             <ProcessStepper processItems={processItems}/>
           </Box>

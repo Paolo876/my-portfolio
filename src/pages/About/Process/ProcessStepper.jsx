@@ -25,8 +25,8 @@ const ProcessStepper = ({ processItems }) => {
             px={{md: 1.5, lg:0}} 
             mt={{md: 2, lg:2, xl: 3}} 
             sx={{
-              textAlign: "justify", 
-              textJustify: "inter-word", 
+              // textAlign: "justify", 
+              // textJustify: "inter-word", 
               fontSize: {xs: 12.5, sm: 13, md: 13.5, lg:14, xl: 14},
               fontWeight: 300,
               opacity: .55,
