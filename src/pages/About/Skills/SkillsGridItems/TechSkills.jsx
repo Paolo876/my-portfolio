@@ -112,6 +112,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
                       textTransform: "uppercase",
                       letterSpacing: 1,
                       transition: "all 400ms ease-in-out",
+                      textShadow: "1px 1px 7px rgba(25,25,25,.75)",
                     }}
                   >{item.name}</Typography>
                 </Box>
