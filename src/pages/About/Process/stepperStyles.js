@@ -6,19 +6,20 @@ import executeIcon from "../../../assets/execute.svg";
 import StepConnector, { stepConnectorClasses } from '@mui/material/StepConnector';
 import SkillIconImageItem from "../../../components/SkillIconImageItem"
 
-export const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
+export const ColorlibConnector = styled(StepConnector)(() => ({
   [`&.${stepConnectorClasses.alternativeLabel}`]: {
     top: 25,
   },
   [`&.${stepConnectorClasses.active}`]: {
     [`& .${stepConnectorClasses.line}`]: {
-      backgroundColor: theme.palette.secondary.dark,
+      
+      backgroundColor: "rgba(100,100,100,.45)",
       opacity:1,
     },
   },
   [`&.${stepConnectorClasses.completed}`]: {
     [`& .${stepConnectorClasses.line}`]: {
-      backgroundColor: theme.palette.secondary.dark,
+      backgroundColor: "rgba(100,100,100,.45)",
       opacity:1,
     },
   },
@@ -28,7 +29,7 @@ export const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
     opacity:.5, 
     width: "108%",
     backgroundColor:
-      theme.palette.secondary.dark,
+      "rgba(100,100,100,.45)",
     borderRadius: 1,
   },
 }));
@@ -46,12 +47,12 @@ export const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) =>  ({
   transform: "scale(.9)",
   margin: "0 2px",
   ...(ownerState.active && {
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: "rgba(250,250,250,1)",
     filter: "brightness(1.1)",
     transform: "scale(1)"
   }),
   ...(ownerState.completed && {
-    backgroundColor: theme.palette.primary.main}),
+    backgroundColor: "rgba(250,250,250,1)"}),
 }));
 
 

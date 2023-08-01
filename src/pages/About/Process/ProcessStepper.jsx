@@ -5,14 +5,14 @@ import { ColorlibConnector, ColorlibStepIcon } from './stepperStyles'
 
 const ProcessStepper = ({ processItems }) => {
   return (
-    <Stepper alternativeLabel connector={<ColorlibConnector />} activeStep={3}>
+    <Stepper alternativeLabel connector={<ColorlibConnector />} activeStep={2}>
       {processItems.map((item, index) => <Step key={item.title} sx={{pl:{md: 0, lg:2, xl:6}}}>
         <StepLabel StepIconComponent={ColorlibStepIcon}>
           <Typography 
             variant="h2" 
             align="center" 
             fontWeight={400}
-            fontSize={{xs: 17, sm: 18, md: 19, lg: 20, xl: 21}} 
+            fontSize={{xs: 20, sm: 21, md: 22, lg: 23, xl: 23}} 
             letterSpacing={{xs: .5, xl:1}}
             lineHeight={{xs:1}} 
             textTransform="none"
