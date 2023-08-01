@@ -9,6 +9,7 @@ import Contact from "../Home/Contact/Contact"
 import { Stack } from '@mui/material'
 import Skills from './Skills/Skills';
 import Roadmap from './Roadmap/Roadmap';
+import Process from './Process/Process';
 
 
 const About = () => {
@@ -36,6 +37,7 @@ const About = () => {
       <Stack>
         <Introduction/>
         <Skills/>
+        <Process/>
         <Roadmap/>
         <Contact/>
       </Stack>

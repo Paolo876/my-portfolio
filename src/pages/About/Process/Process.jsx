@@ -24,7 +24,7 @@ const Process = () => {
     <Box 
       sx={{
         position: "relative", 
-        px: {xs:0, sm: 1, md: 1, lg: 2.25, xl: 3}, 
+        px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
         py: {xs:8, sm: 10, md: 11, lg: 12, xl: 15}
       }}
     >
@@ -33,20 +33,35 @@ const Process = () => {
         <Typography variant="h4" align="center" fontSize={{xs:25, sm: 28, md: 30}} letterSpacing={{xs:2, sm:3, md:3.5}} lineHeight={{xl:1.3}} color="primary.main">My Work Process</Typography>
         <Box sx={{background: "rgba(239,235,229,1)", height: "3px", width: "12px", mx: "auto", mt: {xs: 1.5, md:2}, mb:{xs: 4, sm: 4, md:7}, mixBlendMode: "difference", opacity: .7}}></Box>
       </Box>
-      <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", overflowX:"auto", overflowY: "hidden", px: {md: 0,lg:3}}}>
+
+      <Grid 
+        container 
+        sx={{
+          justifyContent: "center", 
+          alignItems: "flex-start", 
+          maxWidth: "1500px", 
+          mx: "auto", 
+          overflowX:"auto", 
+          overflowY: "hidden"
+        }}
+      >
         <Grid item xs={12} md={12} lg={2.5}>
           <Box sx={{display: {xs: "none", lg: "initial"}}}>
             <Typography 
-              variant="h4" 
+              variant="h2" 
               align="left" 
-              fontSize={{lg: 45, xl: 55}} 
-              letterSpacing={{xs:4, sm:6, md:1.5, lg:2, xl:5}} 
-              lineHeight={{lg:1.6, xl:1.15}} 
-              color="primary.main"
+              fontWeight={400}
+              fontSize={{xs: 26, sm: 27, md: 28, lg: 30, xl: 70}} 
+              letterSpacing={{xs: .5, xl:1}}
+              lineHeight={{xs:1}} 
+              textTransform="none"
+              sx={{
+                textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+              }}
             >
               My<br/>Work<br/>Process
             </Typography>
-            <Box sx={{background: "rgba(239,235,229,1)", height: "12px", width: "12px", mr: "auto", mt: {xs: 1.5, md:3.5}, ml: .2, mixBlendMode: "difference", opacity: .7}}></Box>
+            {/* <Box sx={{background: "rgba(239,235,229,1)", height: "12px", width: "12px", mr: "auto", mt: {xs: 1.5, md:3.5}, ml: .2, mixBlendMode: "difference", opacity: .7}}></Box> */}
           </Box>
         </Grid>
         <Grid item xs={12} md={12} lg={9.5} pl={{md:0, lg:2, xl: 4}}>
