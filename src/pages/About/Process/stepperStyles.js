@@ -11,10 +11,11 @@ export const ColorlibConnector = styled(StepConnector)(() => ({
     top: 25,
   },
   [`&.${stepConnectorClasses.active}`]: {
+    
     [`& .${stepConnectorClasses.line}`]: {
-      
       backgroundColor: "rgba(100,100,100,.45)",
       opacity:1,
+      
     },
   },
   [`&.${stepConnectorClasses.completed}`]: {
@@ -49,7 +50,8 @@ export const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) =>  ({
   ...(ownerState.active && {
     backgroundColor: "rgba(250,250,250,1)",
     filter: "brightness(1.1)",
-    transform: "scale(1)"
+    transform: "scale(1)",
+
   }),
   ...(ownerState.completed && {
     backgroundColor: "rgba(250,250,250,1)"}),

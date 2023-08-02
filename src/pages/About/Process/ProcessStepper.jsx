@@ -10,7 +10,7 @@ const ProcessStepper = ({ processItems }) => {
   useEffect(() => {
       const interval = setInterval(
         () => setActiveStep(prevState => {
-          if(prevState === 2) {
+          if(prevState === processItems.length - 1) {
             return 0
           } else {
             return prevState + 1
