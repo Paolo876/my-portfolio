@@ -59,12 +59,11 @@ const Process = () => {
                 textShadow: "1px 1px 7px rgba(25,25,25,.75)",
               }}
             >
-              {/* My<br/>Work<br/>Process */}
               My Work Process
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={12} lg={12} pl={{md:0, lg:2, xl: 0}} mt={8}>
+        <Grid item xs={12} md={12} lg={12} pl={{md:0, lg:2, xl: 0}} mt={{ xl: 10 }}>
           <Box sx={{display: {xs: "none", md: "initial"}}}>
             <ProcessStepper processItems={processItems}/>
           </Box>

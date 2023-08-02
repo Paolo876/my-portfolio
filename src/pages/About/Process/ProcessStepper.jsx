@@ -5,7 +5,7 @@ import { ColorlibConnector, ColorlibStepIcon } from './stepperStyles'
 
 const ProcessStepper = ({ processItems }) => {
   return (
-    <Stepper alternativeLabel connector={<ColorlibConnector />} activeStep={2}>
+    <Stepper alternativeLabel connector={<ColorlibConnector />} activeStep={1}>
       {processItems.map((item, index) => <Step key={item.title} sx={{pl:{md: 0, lg:2, xl:6}}}>
         <StepLabel StepIconComponent={ColorlibStepIcon}>
           <Typography 
