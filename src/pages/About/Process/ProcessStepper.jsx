@@ -1,43 +1,65 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import { Step, StepLabel, Stepper, Typography } from '@mui/material'
 import { ColorlibConnector, ColorlibStepIcon } from './stepperStyles'
 
 
 const ProcessStepper = ({ processItems }) => {
+  const [ activeStep, setActiveStep ] = useState(0);
+  const [ isHovered, setIsHovered ] = useState(false)
+
+  useEffect(() => {
+      const interval = setInterval(
+        () => setActiveStep(prevState => {
+          if(prevState === 2) {
+            return 0
+          } else {
+            return prevState + 1
+          }
+        }), 5000)
+      if(isHovered) clearInterval(interval) 
+      return () => clearInterval(interval)    
+    
+  }, [isHovered])
   return (
-    <Stepper alternativeLabel connector={<ColorlibConnector />} activeStep={1}>
-      {processItems.map((item, index) => <Step key={item.title} sx={{pl:{md: 0, lg:2, xl:6}}}>
-        <StepLabel StepIconComponent={ColorlibStepIcon}>
-          <Typography 
-            variant="h2" 
-            align="center" 
-            fontWeight={400}
-            fontSize={{xs: 20, sm: 21, md: 22, lg: 23, xl: 23}} 
-            letterSpacing={{xs: .5, xl:1}}
-            lineHeight={{xs:1}} 
-            textTransform="none"
-            sx={{
-              textShadow: "1px 1px 7px rgba(25,25,25,.75)",
-            }}
-          >{item.title}</Typography>
-          <Typography 
-            variant="body1" 
-            px={{md: 1.5, lg:0}} 
-            mt={{md: 2, lg:2, xl: 3}} 
-            sx={{
-              // textAlign: "justify", 
-              // textJustify: "inter-word", 
-              fontSize: {xs: 12.5, sm: 13, md: 13.5, lg:14, xl: 14},
-              fontWeight: 300,
-              opacity: .55,
-              letterSpacing: .3,
-              textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-            }}
-          >
-            {item.body}
-          </Typography>
-        </StepLabel>
-      </Step>)}
+    <Stepper alternativeLabel connector={<ColorlibConnector />} activeStep={activeStep}>
+      {processItems.map((item, index) => 
+        <Step 
+          key={item.title} 
+          onMouseOver={() => { setActiveStep(index); setIsHovered(true) }}
+          onMouseLeave={() => setIsHovered(false)}
+          sx={{
+            }} 
+        >
+          <StepLabel StepIconComponent={ColorlibStepIcon}>
+            <Typography 
+              variant="h2" 
+              align="center" 
+              fontWeight={400}
+              fontSize={{xs: 20, sm: 21, md: 22, lg: 23, xl: 23}} 
+              letterSpacing={{xs: .5, xl:1}}
+              lineHeight={{xs:1}} 
+              textTransform="none"
+              sx={{
+                textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+              }}
+            >{item.title}</Typography>
+            <Typography 
+              variant="body1" 
+              px={{md: 1.5, lg:0, xl: 5}} 
+              mt={{md: 2, lg:2, xl: 3}} 
+              sx={{
+                fontSize: {xs: 12.5, sm: 13, md: 13.5, lg:14, xl: 14},
+                fontWeight: 300,
+                opacity: .55,
+                letterSpacing: .3,
+                textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+              }}
+            >
+              {item.body}
+            </Typography>
+          </StepLabel>
+        </Step>
+      )}
     </Stepper>
   )
 }
