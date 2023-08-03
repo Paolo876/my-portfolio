@@ -7,11 +7,11 @@ import StepConnector, { stepConnectorClasses } from '@mui/material/StepConnector
 import SkillIconImageItem from "../../../components/SkillIconImageItem"
 
 export const ColorlibConnector = styled(StepConnector)(() => ({
+  
   [`&.${stepConnectorClasses.alternativeLabel}`]: {
     top: 25,
   },
   [`&.${stepConnectorClasses.active}`]: {
-    
     [`& .${stepConnectorClasses.line}`]: {
       backgroundColor: "rgba(100,100,100,.45)",
       opacity:1,
@@ -45,6 +45,7 @@ export const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) =>  ({
   borderRadius: '50%',
   justifyContent: 'center',
   alignItems: 'center',
+  transition: "all 200ms linear",
   transform: "scale(.9)",
   margin: "0 2px",
   ...(ownerState.active && {
