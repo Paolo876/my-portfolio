@@ -37,9 +37,11 @@ const ProcessStepper = ({ processItems }) => {
               fontWeight={400}
               lineHeight={{xs:1}} 
               textTransform="none"
+              mt={3}
               sx={{
-                transition: "all 200ms linear",
-                textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+                opacity: activeStep === index ? 1 : .75,
+                transition: "all 150ms linear",
+                textShadow: activeStep === index ? "1px 1px 7px rgba(125,125,125,.5)" : "1px 1px 7px rgba(25,25,25,.75)",
                 fontSize: {
                   xs: activeStep === index ? 20.5 : 20, 
                   sm: activeStep === index ? 21.5 : 21, 
@@ -52,13 +54,15 @@ const ProcessStepper = ({ processItems }) => {
             <Typography 
               variant="body1" 
               px={{md: 1.5, lg:0, xl: 5}} 
-              mt={{md: 2, lg:2, xl: 3}} 
+              mt={{ md: 2, lg:4 }} 
               sx={{
-                fontSize: {xs: 12.5, sm: 13, md: 13.5, lg:14, xl: 14},
+                transition: "all 400ms ease-in-out",
+                fontSize: { xs: 12.5, sm: 13, md: 13.5, lg:14 },
                 fontWeight: 300,
-                opacity: .55,
+                opacity: activeStep === index ? .7 : .45,
+                transform: activeStep === index ? "scale(1.015)" : "scale(1)",
                 letterSpacing: .3,
-                textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+                textShadow: activeStep === index ? "1px 1px 7px rgba(75,75,75,.5)" : "1px 1px 7px rgba(10,10,10,.75)",
               }}
             >
               {item.body}
