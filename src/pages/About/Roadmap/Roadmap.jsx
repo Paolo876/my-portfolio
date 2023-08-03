@@ -30,30 +30,39 @@ const descriptionTextStyles = {
 
 const Roadmap = () => {
   return (
-    <Box sx={{position: "relative"}}>
+    <Box 
+      sx={{
+        position: "relative",
+        px: {xs:2.5, sm: 3, md: 4, lg: 5.5, xl: 4.5}, 
+        py: {xs:6, sm: 6, md: 7, lg: 12, xl: 15}, 
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}
+    >
+      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(15,15,15,.45)", zIndex: -1}}></Box>
+
       <Grid container 
         sx={{
-          px: {xs:2.5, sm: 3, md: 4, lg: 5.5, xl: 4.5}, 
-          py: {xs:6, sm: 6, md: 7, lg: 12, xl: 15}, 
           justifyContent: "center", 
           alignItems: "flex-start", 
           maxWidth: "1500px", 
           mx: "auto",
         }}
       >        
-      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(200,200,200,.3)", mixBlendMode: "overlay", opacity: 1, zIndex: -1}}></Box>
         <Grid item xs={12}>
           <Box>
             <Typography 
-              variant="h4" 
-              fontSize={{xs: 25, sm: 27, md: 28, lg: 32, xl: 32}} 
-              letterSpacing={{xs:1.25, sm:1.5, md:1.5, lg:2, xl:3.5}} 
-              lineHeight={{lg:1.6, xl:1.2}} 
-              fontWeight={800}
+              variant="h2" 
+              align="left" 
+              fontWeight={400}
+              fontSize={{xs: 26, sm: 27, md: 28, lg: 30, xl: 30}} 
+              letterSpacing={{xs: .5, xl:1}}
+              lineHeight={{xs:1}} 
+              textTransform="none"
               sx={{
-                opacity: .95,
+                textShadow: "1px 1px 7px rgba(25,25,25,.75)",
               }}
-              color="primary.main"
             >My Development Roadmap</Typography>
             <Box sx={{background: "rgba(239,235,229,1)", height: {xs: 6, sm: 8, md: 8}, width: {xs: 6, sm: 8, md: 8}, mr: "auto", mt: {xs: 1.25, sm: 1.25, md:1.5}, mixBlendMode: "difference", opacity: .15}}></Box>
           </Box>        
