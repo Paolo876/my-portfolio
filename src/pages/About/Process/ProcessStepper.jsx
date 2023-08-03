@@ -35,12 +35,18 @@ const ProcessStepper = ({ processItems }) => {
               variant="h2" 
               align="center" 
               fontWeight={400}
-              fontSize={{xs: 20, sm: 21, md: 22, lg: 23, xl: 23}} 
-              letterSpacing={{xs: .5, xl:1}}
               lineHeight={{xs:1}} 
               textTransform="none"
               sx={{
+                transition: "all 200ms linear",
                 textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+                fontSize: {
+                  xs: activeStep === index ? 20.5 : 20, 
+                  sm: activeStep === index ? 21.5 : 21, 
+                  md: activeStep === index ? 22.5 : 22, 
+                  lg: activeStep === index ? 23.5 : 23, 
+                },
+                letterSpacing: activeStep === index ? 1 : .5
               }}
             >{item.title}</Typography>
             <Typography 

@@ -49,9 +49,9 @@ export const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) =>  ({
   transform: "scale(.9)",
   margin: "0 2px",
   ...(ownerState.active && {
-    backgroundColor: "rgba(250,250,250,1)",
+    backgroundColor: "#d19119",
     filter: "brightness(1.1)",
-    transform: "scale(1)",
+    transform: "scale(1.025)",
 
   }),
   ...(ownerState.completed && {
