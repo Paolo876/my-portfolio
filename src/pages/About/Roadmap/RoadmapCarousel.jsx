@@ -25,7 +25,7 @@ const roadmapItems = [
 
 const RoadmapCarousel = () => {
   return (
-    <Box sx={{py: 5, mt: 4}}>
+    <Box sx={{py: 5, mt: 6, px: {xl: 3}}}>
       <Carousel
         indicators={true}
         interval={8000}
