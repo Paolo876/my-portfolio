@@ -29,11 +29,6 @@ const Process = () => {
       }}
     >
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(15,15,15,.25)", zIndex: -1}}></Box>
-      <Box sx={{display: {xs: "initial", lg: "none"}}}>
-        <Typography variant="h4" align="center" fontSize={{xs:25, sm: 28, md: 30}} letterSpacing={{xs:2, sm:3, md:3.5}} lineHeight={{xl:1.3}} color="primary.main">My Work Process</Typography>
-        <Box sx={{background: "rgba(239,235,229,1)", height: "3px", width: "12px", mx: "auto", mt: {xs: 1.5, md:2}, mb:{xs: 4, sm: 4, md:7}, mixBlendMode: "difference", opacity: .7}}></Box>
-      </Box>
-
       <Grid 
         container 
         sx={{
@@ -46,7 +41,7 @@ const Process = () => {
         }}
       >
         <Grid item xs={12} md={12} lg={12}>
-          <Box sx={{display: {xs: "none", lg: "initial"}}}>
+          <Box>
             <Typography 
               variant="h2" 
               align="center" 
