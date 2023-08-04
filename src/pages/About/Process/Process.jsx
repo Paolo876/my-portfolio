@@ -41,7 +41,6 @@ const Process = () => {
         }}
       >
         <Grid item xs={12} md={12} lg={12}>
-          <Box>
             <Typography 
               variant="h2" 
               align="center" 
@@ -56,7 +55,6 @@ const Process = () => {
             >
               My Work Process
             </Typography>
-          </Box>
         </Grid>
         <Grid item xs={12} md={12} lg={12} pl={{md:0, lg:2, xl: 0}} mt={{ xl: 10 }}>
           <Box sx={{display: {xs: "none", md: "initial"}}}>
