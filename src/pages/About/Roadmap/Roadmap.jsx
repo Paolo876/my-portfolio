@@ -28,7 +28,7 @@ const Roadmap = () => {
         <Grid item xs={12} md={12} lg={12}>
             <Typography 
               variant="h2" 
-              align="left" 
+              align="center" 
               fontWeight={400}
               fontSize={{xs: 26, sm: 27, md: 28, lg: 30, xl: 40}} 
               letterSpacing={{xs: .5, lg:1}}

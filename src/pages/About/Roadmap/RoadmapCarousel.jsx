@@ -21,8 +21,11 @@ const roadmapItems = [
     title: "IV - The Present",
     description: "Present time, I still continue to learn more techologies online, further refine and improve my existing projects, and conceptualize new project ideas. I may lack enough work or professional experience but I am determined and always remain consistent with my progress hoping that one day the hard work will pay off."
   },
+];
 
-]
+const navigatorStyles = {
+
+}
 
 
 const RoadmapCarousel = () => {
@@ -42,15 +45,26 @@ const RoadmapCarousel = () => {
         width: "100%"
         }}
     >
-      <IconButton onClick={() => handleClick("prev")}><ArrowBackIosNewIcon fontSize="large"/></IconButton>
-      <Box sx={{width: "100%", px: 5}}>
+      <IconButton 
+        onClick={() => handleClick("prev")} 
+        disabled={currentIndex === 0} 
+        color="primary" 
+        sx={navigatorStyles}
+      >
+        <ArrowBackIosNewIcon fontSize="large"/>
+      </IconButton>
+      <Box 
+        sx={{
+          width: "100%", 
+          px: {xl: 10}
+        }}
+      >
         <Carousel
           indicators={true}
           interval={8000}
           duration={800} 
           navButtonsAlwaysInvisible={true}
           autoPlay={false}
-          // animation='slide'
           onChange={(i) => setCurrentIndex(i)}
           index={currentIndex}
         >
@@ -71,7 +85,7 @@ const RoadmapCarousel = () => {
                 {item.title}
               </Typography>
             </Grid>
-            <Grid item xs={9}>
+            <Grid item xs={9} mt={{xl: 1}}>
               <Typography
                 variant='body2'
                 sx={{
@@ -93,7 +107,14 @@ const RoadmapCarousel = () => {
           )}
         </Carousel>
       </Box>
-      <IconButton onClick={() => handleClick("next")}><ArrowForwardIosIcon fontSize="large"/></IconButton>
+      <IconButton 
+        onClick={() => handleClick("next")} 
+        disabled={currentIndex === roadmapItems.length - 1} 
+        color="primary"
+        sx={navigatorStyles}
+      >
+        <ArrowForwardIosIcon fontSize="large"/>
+      </IconButton>
     </Box>
   )
 }
