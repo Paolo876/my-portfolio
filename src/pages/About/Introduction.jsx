@@ -1,5 +1,6 @@
 import React from 'react'
-import { Box, Typography, Grid } from '@mui/material'
+import { Box, Typography, Grid, ButtonBase } from '@mui/material'
+import DownloadIcon from '@mui/icons-material/Download';
 
 
 const boxTextStyles = {
@@ -69,13 +70,39 @@ const Introduction = () => {
               I am ready to take my skills to the next level and I am confident that I have the necessary knowledge and skills to prove myself.
             </Typography>
           </Box>
+          <Box sx={{mt: {xl: 6}}}>
+          <ButtonBase 
+            color="inherit"
+            sx={{
+              boxShadow: 5,
+              border: 2, 
+              fontSize: { xs: ".9rem", sm: "1rem", md: "1rem", lg: "1rem" },
+              lineHeight: 1.4, 
+              borderColor: {xs: "primary.dark", sm:"rgba(100,100,100,.75)"},
+              px: {xs: 1, sm: 1.5, lg: 2},
+              py: 1,
+              fontWeight: 600,
+              letterSpacing: .5,
+              opacity: .75,
+              transition: "all 250ms ease-in-out",
+              "&:hover":{
+                opacity:1,
+                textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+                transform: "scale(1.02)",
+                borderColor: "primary.dark",
+              }
+            }}
+          >
+            Download My CV <DownloadIcon sx={{ml: 1.5}}/>
+          </ButtonBase>
+          </Box>
         </Grid>
 
-        <Grid item xs={12} md={6} lg={6.5}  order={{xs: 1, md:2}} sx={{display: "flex", justifyContent: "right"}}>
+        <Grid item xs={12} md={6} lg={6.5}  order={{xs: 1, md:2}} sx={{display: "flex", justifyContent: "right", alignitems: "center", height: "100%"}}>
           <Box 
             sx={{
-              border: 3, 
-              borderRadius: "50%", 
+              border: 1, 
+              // borderRadius: "50%", 
               height: {xs: 220, sm: 250, md:300}, 
               width: {xs: 220, sm: 250, md:300}, 
               display: "flex", 
@@ -83,7 +110,7 @@ const Introduction = () => {
               justifyContent: "center", 
               mixBlendMode: "difference", 
             }}>
-            <Typography >image-here</Typography>
+            <Typography >image</Typography>
           </Box>
         </Grid>
       </Grid>
