@@ -1,5 +1,5 @@
-import React from 'react'
-import { Grid, Typography, Box, ButtonBase, IconButton } from '@mui/material'
+import { useState } from 'react'
+import { Grid, Typography, Box, IconButton } from '@mui/material'
 import Carousel from 'react-material-ui-carousel'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -26,6 +26,12 @@ const roadmapItems = [
 
 
 const RoadmapCarousel = () => {
+  const [ currentIndex, setCurrentIndex ] = useState(0);
+
+  const handleClick = (action) => {
+    if(action === "prev" && currentIndex > 0) setCurrentIndex(prevState => prevState - 1)
+    if(action === "next" && currentIndex < roadmapItems.length - 1) setCurrentIndex(prevState => prevState + 1)
+  }
   return (
     <Box 
       sx={{
@@ -36,7 +42,7 @@ const RoadmapCarousel = () => {
         width: "100%"
         }}
     >
-      <IconButton><ArrowBackIosNewIcon/></IconButton>
+      <IconButton onClick={() => handleClick("prev")}><ArrowBackIosNewIcon fontSize="large"/></IconButton>
       <Box sx={{width: "100%", px: 5}}>
         <Carousel
           indicators={true}
@@ -44,6 +50,9 @@ const RoadmapCarousel = () => {
           duration={800} 
           navButtonsAlwaysInvisible={true}
           autoPlay={false}
+          // animation='slide'
+          onChange={(i) => setCurrentIndex(i)}
+          index={currentIndex}
         >
           {roadmapItems.map(item => <Grid container key={item} sx={{minHeight: {xl: 200}}}>
             <Grid item xs={3}>
@@ -84,7 +93,7 @@ const RoadmapCarousel = () => {
           )}
         </Carousel>
       </Box>
-      <ButtonBase><ArrowForwardIosIcon/></ButtonBase>
+      <IconButton onClick={() => handleClick("next")}><ArrowForwardIosIcon fontSize="large"/></IconButton>
     </Box>
   )
 }
