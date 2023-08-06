@@ -3,7 +3,6 @@ import DocumentHead from '../../components/DocumentHead'
 import Footer from '../../components/Footer'
 
 import { Stack, Box, Grid, Typography } from '@mui/material'
-import ContactContainer from './ContactContainer'
 import ContactForm from './ContactForm'
 import ContactDescription from './ContactDescription'
 
@@ -36,7 +35,7 @@ const Contact = () => {
           mx: "auto",
         }}
       >   
-        <Grid item xl={5.5}>
+        <Grid item xl={5.5} sx={{display: "flex", flexDirection: "column", height: "100%"}}>
           <ContactDescription/>
         </Grid>
         <Grid item xl={5}>
@@ -51,11 +50,7 @@ const Contact = () => {
           <Grid item xl={9} sx={{background: "rgba(50,50,50,.35)", height: "100vh", width: "100%", transform: "skewX(-7deg) translateX(150px)"}}></Grid>
         </Grid>
       </Box>
-      {/* <ContactContainer/>
-      <Box sx={{flex: 1, ml: "auto", opacity: .5}}>
-        <Footer/>
 
-      </Box> */}
     </Box>
   )
 }

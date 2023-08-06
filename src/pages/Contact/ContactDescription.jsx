@@ -63,8 +63,39 @@ const ContactDescription = () => {
           Please feel free to reach out to me using my contact informations provided or by submitting the inquiry form.
         </Typography>
       </Box>
-      <Box>
-        
+      <Box sx={{mt: "auto"}}>
+        <Box>
+          <Typography
+            variant="h2" 
+            align="left" 
+            fontWeight={400}
+            fontSize={{xs: 20, sm: 22, md: 23, lg: 24, xl: 30}} 
+            letterSpacing={{xs: .5, xl:1}}
+            lineHeight={{xs:1}} 
+            textTransform="none"
+            sx={{
+              textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+            }}
+          >
+            Paolo Bugarin
+          </Typography>
+          <Typography
+            variant="h2" 
+            align="left" 
+            fontWeight={300}
+            fontSize={{xs: 20, sm: 22, md: 23, lg: 24, xl: 22}} 
+            letterSpacing={{xs: .5, xl:1}}
+            lineHeight={{xs:1}} 
+            textTransform="none"
+            sx={{
+              mt: 1,
+              textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+              opacity: .6
+            }}
+          >
+            Los Angeles, CA
+          </Typography>
+        </Box>
       </Box>
     </>
 )
