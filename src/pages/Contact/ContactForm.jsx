@@ -32,14 +32,14 @@ const ContactForm = () => {
   return (
     <Box 
       sx={{
-        py: {xs: 1, sm:3,md:5}, 
+        py: {xs: 1, sm:3, md:4 }, 
         mb: {xs: 3, sm: 0}
       }} 
       align="center"
     >
       <Box 
         sx={{
-          p: {xs: 1.5, sm:2.5, md:3,lg: 4}, 
+          p: {xs: 1.5, sm:2.5, md:3, lg: 4}, 
           border: 2, 
           borderColor: "rgba(100,100,100,.75)",
           // minHeight: {md: "60vh"}, 
