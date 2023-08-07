@@ -32,12 +32,12 @@ const linkStyles = {
 const nameStyles = {
   textTransform: "none",
   fontWeight: 800,
-  fontSize: { xs:"5.6rem", sm: "8.5rem", md: "10.5rem", lg: "12rem", xl:"12rem" },
+  fontSize: { xs:"5.6rem", sm: "8.5rem", md: "10.5rem", lg: "10.5rem" },
   lineHeight: .9,
-  letterSpacing: -2,
+  letterSpacing: -2.5,
   userSelect: "none",
-  opacity: .9,
-  textShadow: "1px 1px 3px rgba(100,100,100,.5)",
+  opacity: .85,
+  textShadow: "1px 1px 3px rgba(200,200,200,.4)",
 }
 
 const subHeaderStyles = {
