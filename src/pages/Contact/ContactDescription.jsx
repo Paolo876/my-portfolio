@@ -87,7 +87,7 @@ const ContactDescription = () => {
               variant="h2" 
               align="left" 
               fontWeight={400}
-              fontSize={{xs: 20, sm: 22, md: 23, lg: 24, xl: 30}} 
+              fontSize={{xs: 20, sm: 22, md: 23, lg: 24, xl: 26}} 
               letterSpacing={{xs: .5, xl:1}}
               lineHeight={{xs:1}} 
               textTransform="none"
@@ -101,7 +101,7 @@ const ContactDescription = () => {
               variant="h2" 
               align="left" 
               fontWeight={300}
-              fontSize={{xs: 20, sm: 22, md: 23, lg: 24, xl: 22}} 
+              fontSize={{xs: 20, sm: 22, md: 23, lg: 24, xl: 18}} 
               letterSpacing={{xs: .5, xl:1}}
               lineHeight={{xs:1}} 
               textTransform="none"
@@ -118,12 +118,12 @@ const ContactDescription = () => {
         <Box sx={{display: "flex", justifyContent: "space-between", mt: {xl: 9}}}>
           <Box sx={{display: "flex", flexDirection: "column", gap: 1.5}}>
             <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={contactButtonStyles} disableRipple>
-              <MailOutlineIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 25}}}/>
-              <Typography sx={{fontSize: {xs:14, sm: 14, md: 15, lg: 18}, letterSpacing: 1}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
+              <MailOutlineIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 23}}}/>
+              <Typography sx={{fontSize: {xs:14, sm: 14, md: 15, lg: 17}, letterSpacing: 1}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
             </IconButton>
             <IconButton size="small" href="tel:3234817852" sx={contactButtonStyles} disableRipple>
-              <LocalPhoneIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 25}}} />
-              <Typography sx={{fontSize: {xs:14, sm: 14, md: 15, lg: 18}, letterSpacing: 1}} fontWeight={300}>(323) 481 - 7852</Typography>
+              <LocalPhoneIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 23}}} />
+              <Typography sx={{fontSize: {xs:14, sm: 14, md: 15, lg: 17}, letterSpacing: 1}} fontWeight={300}>(323) 481 - 7852</Typography>
             </IconButton> 
           </Box>
           <Box sx={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
@@ -131,7 +131,7 @@ const ContactDescription = () => {
               variant="h2" 
               align="left" 
               fontWeight={400}
-              fontSize={{xs: 14, sm: 15, md: 15, lg: 16, xl: 16}} 
+              fontSize={{xs: 14, sm: 15, md: 15, lg: 16.5}} 
               letterSpacing={{xs: .5, xl:1}}
               lineHeight={{xs:1}} 
               textTransform="none"

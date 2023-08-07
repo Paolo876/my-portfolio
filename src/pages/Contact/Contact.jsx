@@ -1,8 +1,7 @@
 import React from 'react'
 import DocumentHead from '../../components/DocumentHead'
-import Footer from '../../components/Footer'
 
-import { Stack, Box, Grid, Typography } from '@mui/material'
+import { Box, Grid } from '@mui/material'
 import ContactForm from './ContactForm'
 import ContactDescription from './ContactDescription'
 
@@ -13,7 +12,6 @@ const Contact = () => {
         position: "relative", 
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
         pt: {xs:8, sm: 12, md: 14, lg: 15, xl: 15}, 
-        // pb: {xs:12, sm: 13, md: 12, lg: 15}, 
         height: "100vh",
         width: "100%",
         display: "flex",
@@ -41,6 +39,7 @@ const Contact = () => {
         <Grid item xl={5}>
           <ContactForm/>
         </Grid>
+
       </Grid>
 
       {/* background */}
@@ -50,7 +49,6 @@ const Contact = () => {
           <Grid item xl={9} sx={{background: "rgba(50,50,50,.35)", height: "100vh", width: "100%", transform: "skewX(-7deg) translateX(150px)"}}></Grid>
         </Grid>
       </Box>
-
     </Box>
   )
 }
