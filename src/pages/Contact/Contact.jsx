@@ -1,7 +1,7 @@
 import React from 'react'
 import DocumentHead from '../../components/DocumentHead'
 
-import { Box, Grid } from '@mui/material'
+import { Box, Grid, Typography } from '@mui/material'
 import ContactForm from './ContactForm'
 import ContactDescription from './ContactDescription'
 
@@ -41,13 +41,23 @@ const Contact = () => {
         </Grid>
 
       </Grid>
-
       {/* background */}
       <Box sx={{position: "absolute", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1}}>
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", mx: "auto"}}>
           <Grid item xl={3}></Grid>
           <Grid item xl={9} sx={{background: "rgba(50,50,50,.35)", height: "100vh", width: "100%", transform: "skewX(-7deg) translateX(150px)"}}></Grid>
         </Grid>
+      </Box>
+
+      <Box sx={{position: "absolute", bottom: 5, right: 5, zIndex: 1}}>
+        <Typography
+          variant="body2"
+          sx={{
+            fontSize: {xs: 11, sm:11, md: 11.5, lg:13, xl: 14}, 
+            opacity: .5, 
+            mixBlendMode: "difference", 
+          }}
+        >© 2023 Paolo Bugarin, All rights reserved.</Typography>
       </Box>
     </Box>
   )
