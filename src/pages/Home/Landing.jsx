@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { Grid, Typography, Link, IconButton, Box } from '@mui/material'
+import { Grid, Typography, Link, IconButton, Box, Fade, Grow } from '@mui/material'
 import { Link as ReactLink } from 'react-router-dom';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import SocialLinks from '../../components/SocialLinks';
@@ -74,16 +74,28 @@ const Landing = () => {
       <Grid container sx={{maxWidth: "1500px", mx: "auto", height: {md: "fit-content", lg:"90%"}, my: "auto"}}>
         <Grid item xs={12} lg={8} sx={{display: "flex", flexDirection: "column", justifyContent: {lg:"space-between"}, pb: {xs: 4, sm:6}}}>
           <Box>
-            <Typography variant="h1" sx={nameStyles}>Paolo</Typography>
-            <Typography variant="h1" sx={nameStyles}>Bugarin</Typography>
+            <Fade appear={true} in={true} timeout={1100}  style={{ transitionDelay: "200ms" }}>
+              <Box><Typography variant="h1" sx={nameStyles}>Paolo</Typography></Box>
+            </Fade>
+            <Fade appear={true} in={true} timeout={1100}  style={{ transitionDelay: "600ms" }}>
+              <Box><Typography variant="h1" sx={nameStyles}>Bugarin</Typography></Box>
+            </Fade>
           </Box>
           <Box mt={{ xs: 4.5, sm: 5, md: 15, lg: 13, xl:15 }} ml={{sm:1.5}}>
-            <Typography variant="h5" sx={subHeaderStyles}>
-              <Box component="span" sx={subHeaderSymbolStyles}>{`<`}</Box> Full Stack Web Developer <Box component="span" sx={subHeaderSymbolStyles}>{`>`}</Box>
-            </Typography>
-            <Typography variant="h5" sx={subHeaderStyles} mt={1.5}>
-              <Box component="span" sx={subHeaderSymbolStyles}>{`<`}</Box> Los Angeles, CA <Box component="span" sx={subHeaderSymbolStyles}>{`>`}</Box>
-            </Typography>
+            <Fade appear={true} in={true} timeout={700}  style={{ transitionDelay: "1400ms" }}>
+              <Box>
+                <Typography variant="h5" sx={subHeaderStyles}>
+                  <Box component="span" sx={subHeaderSymbolStyles}>{`<`}</Box> Full Stack Web Developer <Box component="span" sx={subHeaderSymbolStyles}>{`>`}</Box>
+                </Typography>
+              </Box>
+            </Fade>
+            <Fade appear={true} in={true} timeout={700}  style={{ transitionDelay: "1600ms" }}>
+              <Box>
+                <Typography variant="h5" sx={subHeaderStyles} mt={1.5}>
+                  <Box component="span" sx={subHeaderSymbolStyles}>{`<`}</Box> Los Angeles, CA <Box component="span" sx={subHeaderSymbolStyles}>{`>`}</Box>
+                </Typography>
+              </Box>
+            </Fade>
           </Box>
           <Box sx={{width: "fit-content", display: {xs: "initial", lg: "none"}}} mt={{xs: 2, sm:9}} ml={{sm:1.5}}>
             <SocialLinks 
@@ -104,6 +116,11 @@ const Landing = () => {
           </Box>
         </Grid>
         <Grid item xs={12} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", py: {sm: 3}}}>
+        <Grow
+          in={true}
+          style={{ transitionDelay: "1900ms"  }}
+          timeout={500}
+        >
           <Box sx={{width: "fit-content", ml: "auto", display: {xs: "none", lg: "initial"}}}>
             <SocialLinks 
               flexDirection='column' 
@@ -121,6 +138,7 @@ const Landing = () => {
               }}
             />
           </Box>
+          </Grow>
           <Box align="right" sx={{width: "fit-content", ml: "auto"}}>
             <Link component={ReactLink} to="/projects" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Projects</Typography></Link>
             <Link component={ReactLink} to="/about" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>About</Typography></Link>
