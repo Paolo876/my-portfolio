@@ -2,7 +2,9 @@ import { useNavigate } from 'react-router-dom';
 import { Grid, Typography, Link, IconButton, Box, Fade, Grow } from '@mui/material'
 import { Link as ReactLink } from 'react-router-dom';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import SocialLinks from '../../components/SocialLinks';
+import SocialLinks from '../../../components/SocialLinks';
+import FirstName from './FirstName';
+
 
 const linkStyles = {
   fontSize: { xs: "1.3rem", sm: "1.75rem", md: "1.8rem", lg: "1.8rem", xl:"1.8rem" },
@@ -73,6 +75,8 @@ const Landing = () => {
     >
       <Grid container sx={{maxWidth: "1500px", mx: "auto", height: {md: "fit-content", lg:"90%"}, my: "auto"}}>
         <Grid item xs={12} lg={8} sx={{display: "flex", flexDirection: "column", justifyContent: {lg:"space-between"}, pb: {xs: 4, sm:6}}}>
+        <FirstName/>
+        {/* <img src={firstname}/> */}
           <Box>
             <Fade appear={true} in={true} timeout={1100}  style={{ transitionDelay: "200ms" }}>
               <Box><Typography variant="h1" sx={nameStyles}>Paolo</Typography></Box>
