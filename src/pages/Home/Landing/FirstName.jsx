@@ -1,5 +1,5 @@
 import React from 'react'
-import "./namestyles.scss"
+// import "./namestyles.scss"
 
 const FirstName = () => {
   
@@ -28,3 +28,5 @@ const FirstName = () => {
 }
 
 export default FirstName
+
+// https://www.youtube.com/watch?v=vJNVramny9k&ab_channel=developedbyed
