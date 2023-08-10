@@ -4,7 +4,7 @@ import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 
 const boxStyles = {
   width: "fit-content",
-  py: {sm: .75, md: .75, lg: 1, xl:1},
+  py: {sm: .75, md: .75, lg: .5, xl:.75},
   height: "100%",
   userSelect: "none",
   opacity: .75,  
@@ -47,15 +47,15 @@ const TechSkills = ({ skills, title, description, isMain }) => {
 
   return (
     <Grid container mb={{xs: 14, sm: 15, md: 16, lg: 18, xl: 20}} columnSpacing={{xl: 5}}>
-      <Grid item xs={11} sm={4.5} md={2.75} lg={3} xl={4} mb={{xs: 1.5, sm: 3, md: 0}}>
-        <Box mb={8}>
+      <Grid item xs={11} sm={4.5} md={2.75} lg={4} xl={4} mb={{xs: 1.5, sm: 3, md: 0}}>
+        <Box mb={{lg: 5, xl:8}}>
           <Typography 
             variant="h2" 
             align="left" 
             fontWeight={400}
             fontSize={{xs: 26, sm: 27, md: 28, lg: 30, xl: 30}} 
             letterSpacing={{xs: .5, xl:1}}
-            lineHeight={{xs:1}} 
+            lineHeight={{xs:1.25}} 
             textTransform="none"
             sx={{
               textShadow: "1px 1px 7px rgba(25,25,25,.75)",
@@ -69,7 +69,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
         </Box>}
       </Grid>
 
-      <Grid item xs={12} sm={7.5} md={9.25} lg={9} xl={8}>
+      <Grid item xs={12} sm={7.5} md={9.25} lg={8} xl={8}>
 
         <Grid container justifyContent={{xs: "right", md: "right"}}>
           {!isMain && 
@@ -81,7 +81,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
           }
           
           {skills.map((item, index) => 
-            <Grid item xs={2.4} sm={2.7} md={1.5} lg={1.5} key={item.name} align="center">
+            <Grid item xs={2.4} sm={2.7} md={1.5} lg={1.4} xl={1.5} key={item.name} align="center">
               <Box 
                 sx={{
                   my: {xs: 1.15, md:1.75}, 
@@ -91,10 +91,11 @@ const TechSkills = ({ skills, title, description, isMain }) => {
                 <Box 
                   sx={boxStyles} 
                   className={isMain && index === activeSkill ? "active" : ""} 
-                  onMouseOver={() => { setActiveSkill(index); setIsHovered(true) }} 
+                  onClick={() => { setActiveSkill(index); setIsHovered(true)}}
+                  onMouseOver={() => { setActiveSkill(index); setIsHovered(true)}} 
                   onMouseLeave={() => setIsHovered(false)}
                 >
-                  <Box height={{xs: 25, sm: 40, md:45, lg:50, xl: 50}} width="auto">
+                  <Box height={{xs: 25, sm: 40, md:45, lg:40, xl: 45}} width="auto">
                     <SkillIconImageItem 
                       src={item.monoUrl} 
                       duration={500} 
