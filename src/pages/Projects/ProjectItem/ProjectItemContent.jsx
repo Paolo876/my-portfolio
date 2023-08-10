@@ -23,7 +23,7 @@ const ProjectItemContent = ( { project }) => {
           align="left" 
           fontWeight={400}
           fontSize={{xs: 35, sm: 45, md: 60, lg: 65, xl: 70}} 
-          letterSpacing={{xs: .5, xL:1}}
+          letterSpacing={{xs: .5, xl:1}}
           lineHeight={{xs:1}} 
           textTransform="none"
           sx={{

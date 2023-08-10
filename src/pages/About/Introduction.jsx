@@ -40,14 +40,14 @@ const Introduction = () => {
           mx: "auto",
         }}
       >      
-        <Grid item md={6} lg={5.5} order={{xs: 2, md:1}} mt={{xs: 6, sm: 6, md: 0}}>
+        <Grid item md={6} xl={5.5} order={{xs: 2, md:1}} mt={{xs: 6, sm: 6, md: 0}}>
           <Box>
             <Typography 
               variant="h2" 
               align="left" 
               fontWeight={400}
-              fontSize={{xs: 35, sm: 45, md: 60, lg: 80, xl: 88}} 
-              letterSpacing={{xs: .5, xL:1}}
+              fontSize={{xs: 35, sm: 45, md: 75, lg: 82, xl: 88}} 
+              letterSpacing={{xs: .5, xl:1}}
               lineHeight={{xs:1}} 
               textTransform="none"
               sx={{
@@ -57,20 +57,27 @@ const Introduction = () => {
               About Me
             </Typography>
           </Box>
-          <Box mt={{xs: 3, sm: 4, md: 10, lg: 10, xl: 10}}>
+          <Box mt={{xs: 5, sm: 6, md: 7, lg: 7, xl: 10}}>
             <Typography variant="body1" sx={baseTextStyles}>          
               I am a <Box sx={boxTextStyles} component="span"> Full Stack Web Developer </Box> 
               based in <Box sx={boxTextStyles} component="span">Los Angeles, California. </Box> I started coding in 2019 and went back to college in 2020 for a degree in
               <Box sx={boxTextStyles} component="span"> Computer Information Systems </Box> major in Web Development and Software Development.
             </Typography>
-            <Typography variant="body1" sx={baseTextStyles} mt={3}>         
+            <Typography 
+              variant="body1" 
+              sx={baseTextStyles} 
+              mt={{lg: 2, xl:3}}>         
               I can design and develop a fully working website or web application from frontend to backend with amazing features including the use of APIs and database implementation.
             </Typography>
-            <Typography variant="body1" sx={{...baseTextStyles, opacity: .8, borderLeft: 2, pl: 1.5, borderColor: "primary.dark", lineHeight: 1.4}} mt={8}>
+            <Typography 
+              variant="body1" 
+              sx={{...baseTextStyles, opacity: .8, borderLeft: 2, pl: 1.5, borderColor: "primary.dark", lineHeight: 1.4}} 
+              mt={{lg:5, xl:8}}
+            >
               I am ready to take my skills to the next level and I am confident that I have the necessary knowledge and skills to prove myself.
             </Typography>
           </Box>
-          <Box sx={{mt: {xl: 6}}}>
+          <Box sx={{mt: {lg: 6}}}>
           <ButtonBase 
             color="inherit"
             sx={{
@@ -98,7 +105,7 @@ const Introduction = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} md={6} lg={6.5}  order={{xs: 1, md:2}} sx={{display: "flex", justifyContent: "right", alignitems: "center", height: "100%"}}>
+        <Grid item xs={12} md={6} xl={6.5}  order={{xs: 1, md:2}} sx={{display: "flex", justifyContent: "right", alignitems: "center", height: "100%"}}>
           <Box 
             sx={{
               border: 1, 

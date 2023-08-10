@@ -13,7 +13,7 @@ const ProjectFeatures = ({ coverImage, features, handleImageClick }) => {
           align="left" 
           fontWeight={400}
           fontSize={{xs: 35, sm: 45, md: 60, lg: 65, xl: 25}} 
-          letterSpacing={{xs: .5, xL:1}}
+          letterSpacing={{xs: .5, xl:1}}
           lineHeight={{xs:1}} 
           textTransform="none"
           sx={{
@@ -32,7 +32,7 @@ const ProjectFeatures = ({ coverImage, features, handleImageClick }) => {
               align="left" 
               fontWeight={300}
               fontSize={{xs: 35, sm: 45, md: 60, lg: 65, xl: 28}} 
-              letterSpacing={{xs: .5, xL:1}}
+              letterSpacing={{xs: .5, xl:1}}
               lineHeight={{xs:1}} 
               textTransform="none"
               sx={{

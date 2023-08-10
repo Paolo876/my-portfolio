@@ -37,7 +37,7 @@ const ContactDescription = () => {
           align="left" 
           fontWeight={400}
           fontSize={{xs: 35, sm: 45, md: 60, lg: 80, xl: 88}} 
-          letterSpacing={{xs: .5, xL:1}}
+          letterSpacing={{xs: .5, xl:1}}
           lineHeight={{xs:1}} 
           textTransform="none"
           sx={{
