@@ -32,7 +32,7 @@ const OtherSkills = () => {
   return (
     <Box sx={{mb: { xs: 3, sm: 8, md: 8, lg: 12, xl: 12}}}>
       <Grid container>
-        <Grid item xs={12} sm={4.5} md={2} lg={3} xl={4}>
+        <Grid item xs={12} sm={4.5} md={2} lg={4} xl={4}>
           <Box mb={{xs: 1.5, sm:3}} mt={1}>
             <Typography 
               variant="h2" 
@@ -51,9 +51,9 @@ const OtherSkills = () => {
             {/* <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", mt: {xs: 1, md:1, lg: 1.5}, ml: .5, mixBlendMode: "difference", opacity: .35}}></Box> */}
           </Box>
         </Grid>
-        <Grid item xs={12} sm={7.5} md={9.5}  lg={9} xl={8}>
+        <Grid item xs={12} sm={7.5} md={9.5}  lg={8} xl={8}>
           <Grid container sx={{justifyContent: {xs:"right", lg: "initial"}}} >
-            {otherSkillsList.map(item => <Grid item key={item.name} xs={2.4} sm={2.7} md={1.5} lg={1.5} align="center">
+            {otherSkillsList.map(item => <Grid item key={item.name} xs={2.4} sm={2.7} md={1.5} lg={1.5}  align="center">
               <Box
                 sx={{
                   my: {xs: 1.15, md:1.75}, 

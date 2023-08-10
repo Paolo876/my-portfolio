@@ -7,9 +7,9 @@ const Certifications = () => {
   const { certifications } = useRootRedux();
 
   return (
-    <Grid container sx={{mb: { xs: 4, sm: 8, md: 8, lg: 10, xl: 15}}} columnSpacing={{xl: 5}}>
+    <Grid container sx={{mb: { xs: 4, sm: 8, md: 10, lg: 10, xl: 15}}} columnSpacing={{xl: 5}}>
       <Grid item xs={12} sm={12} lg={3} xl={4} mt={{md: 3, lg: 0}}>
-        <Box mb={{xs: 2, lg:3}}>
+        <Box mb={{xs: 2, md: 4, lg:3}}>
           <Typography 
             variant="h2" 
             align="left" 
@@ -24,19 +24,18 @@ const Certifications = () => {
           >
             Certifications
           </Typography>
-          {/* <Box sx={{background: "rgba(239,235,229,1)", height: "2px", width: "16px", ml: {md:"auto"}, mt: {xs: 1, md:1, lg: 1.5}, mr: {xs: "auto", lg:.5}, mixBlendMode: "difference", opacity: .35}}></Box> */}
         </Box>
       </Grid>
-      <Grid item xs={12} sm={12} lg={9}  xl={8} px={{ md: 2, lg: 0}}>
+      <Grid item xs={12} sm={12} lg={9}  xl={8}>
         <Grid container pt={1.5} sx={{justifyContent: "center"}}>
-          {certifications.map(item => <Grid item key={item.name} xs={11} sm={6} md={4} pr={{sm: .75, md: 1.5, lg: 3}} pl={{sm: .75, md: 1.5, lg: 0}} pb={{xs: 1.25, md:3}}>
+          {certifications.map(item => <Grid item key={item.name} xs={11} sm={6} md={4} pr={{sm: .75, md: 1.25, lg: 2}} pl={{sm: .75, md: 1.25, lg: 0}} pb={{xs: 1.25, md:3}}>
             <ButtonBase 
               sx={{
                 boxShadow: 5,
                 border: 2, 
                 height: "100%", 
                 width: "100%",
-                fontSize: { xs: ".9rem", sm: "1rem", md: "1rem", lg: "1rem" },
+                // fontSize: { xs: ".9rem", sm: "1rem", md: "1rem", lg: "1rem" },
                 lineHeight: 1.4, 
                 borderColor: {xs: "primary.dark", sm:"rgba(100,100,100,.75)"},
                 px: {sm: .5, md: .75},
