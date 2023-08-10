@@ -71,13 +71,20 @@ const Introduction = () => {
             </Typography>
             <Typography 
               variant="body1" 
-              sx={{...baseTextStyles, opacity: .8, borderLeft: 2, pl: {xs: .75, md:1.5}, borderColor: "primary.dark", lineHeight: 1.4}} 
+              sx={{
+                ...baseTextStyles, 
+                opacity: .8, 
+                borderLeft: 2, 
+                pl: {xs: 1, md:1.5}, 
+                borderColor: "primary.dark", 
+                lineHeight: 1.4
+              }} 
               mt={{xs: 3, sm: 3.5, lg:5, xl:8}}
             >
               I am ready to take my skills to the next level and I am confident that I have the necessary knowledge and skills to prove myself.
             </Typography>
           </Box>
-          <Box sx={{mt: {xs: 4, sm: 4, md: 4, lg: 6}}}>
+          <Box sx={{mt: {xs: 5, lg: 6}}}>
           <ButtonBase 
             color="inherit"
             sx={{
@@ -109,7 +116,6 @@ const Introduction = () => {
           <Box 
             sx={{
               border: 1, 
-              // borderRadius: "50%", 
               height: {xs: 220, sm: 250, md:300}, 
               width: {xs: 220, sm: 250, md:300}, 
               display: "flex", 
