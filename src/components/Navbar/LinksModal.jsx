@@ -63,7 +63,7 @@ const LinksModal = ({ open, onClose}) => {
         <Box sx={styles} className="navbar-modal">
           <Container maxWidth="xl" sx={{height: "90vh"}}>
             <Stack sx={{height: "100%"}}>
-              <Box sx={{display: "flex", flexDirection: "row", px:{xs:0, sm:1.5, lg: 1.5, xl: 3 }, py:{xs:.65, sm:1.15, md: 1.75, xl: 2 }, alignItems: "center"}}>
+              <Box sx={{display: "flex", flexDirection: "row", px:{xs:0, lg: 1.5, xl: 3 }, py:{xs:.65, sm:1.15, md: 1.75, xl: 2 }, alignItems: "center"}}>
                 <Link onClick={() => handleClick("/")}>
                   <Typography fontSize={{xs: 14, sm: 15, md: 16}} variant="h3">PB</Typography>
                 </Link>

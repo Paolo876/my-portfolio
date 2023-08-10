@@ -10,7 +10,7 @@ const boxTextStyles = {
 
 
 const baseTextStyles = {
-  fontSize: {xs: 12.5, sm: 14.5, md: 15, lg:16, xl: 16},
+  fontSize: {xs: 13, sm: 14.5, md: 15, lg:16, xl: 16},
   fontWeight: 300,
   opacity: .55,
   letterSpacing: .4,
@@ -26,7 +26,7 @@ const Introduction = () => {
         position: "relative", 
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
         pt: {xs:8, sm: 12, md: 14, lg: 16, xl: 20}, 
-        pb: {xs:12, sm: 13, md: 12, lg: 15}, 
+        pb: {xs:10, sm: 13, md: 12, lg: 15}, 
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -40,13 +40,13 @@ const Introduction = () => {
           mx: "auto",
         }}
       >      
-        <Grid item xs={12} md={7} lg={6} xl={5.5} order={{xs: 2, md:1}} mt={{xs: 6, sm: 6, md: 0}}>
+        <Grid item xs={12} md={7} lg={6} xl={5.5} order={{xs: 2, md:1}} mt={{xs: 8, md: 0}}>
           <Box>
             <Typography 
               variant="h2" 
               align="left" 
               fontWeight={400}
-              fontSize={{xs: 35, sm: 45, md: 75, lg: 82, xl: 88}} 
+              fontSize={{xs: 50, sm: 60, md: 75, lg: 82, xl: 88}} 
               letterSpacing={{xs: .5, xl:1}}
               lineHeight={{xs:1}} 
               textTransform="none"
@@ -66,18 +66,18 @@ const Introduction = () => {
             <Typography 
               variant="body1" 
               sx={baseTextStyles} 
-              mt={{sm: 1.5, lg: 2, xl:3}}>         
+              mt={{xs: 1.25, sm: 1.5, lg: 2, xl:3}}>         
               I can design and develop a fully working website or web application from frontend to backend with amazing features including the use of APIs and database implementation.
             </Typography>
             <Typography 
               variant="body1" 
-              sx={{...baseTextStyles, opacity: .8, borderLeft: 2, pl: 1.5, borderColor: "primary.dark", lineHeight: 1.4}} 
-              mt={{sm: 3.5, lg:5, xl:8}}
+              sx={{...baseTextStyles, opacity: .8, borderLeft: 2, pl: {xs: .75, md:1.5}, borderColor: "primary.dark", lineHeight: 1.4}} 
+              mt={{xs: 3, sm: 3.5, lg:5, xl:8}}
             >
               I am ready to take my skills to the next level and I am confident that I have the necessary knowledge and skills to prove myself.
             </Typography>
           </Box>
-          <Box sx={{mt: {md: 4, lg: 6}}}>
+          <Box sx={{mt: {xs: 4, sm: 4, md: 4, lg: 6}}}>
           <ButtonBase 
             color="inherit"
             sx={{
