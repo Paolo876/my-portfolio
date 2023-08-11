@@ -75,7 +75,7 @@ const Landing = () => {
     >
       <Grid container sx={{maxWidth: "1500px", mx: "auto", height: {md: "fit-content", lg:"90%"}, my: "auto"}}>
         <Grid item xs={12} lg={8} sx={{display: "flex", flexDirection: "column", justifyContent: {lg:"space-between"}, pb: {xs: 4, sm:6}}}>
-        <FirstName/>
+        {/* <FirstName/> */}
         {/* <img src={firstname}/> */}
           <Box>
             <Fade appear={true} in={true} timeout={1100}  style={{ transitionDelay: "200ms" }}>
@@ -155,7 +155,7 @@ const Landing = () => {
         >
         <IconButton 
           size="large" 
-          onClick={() => navigate("/home")} 
+          onClick={() => navigate("/")} 
           color="primary" 
           sx={{
             transform: "rotate(90deg) scale(1.15)",
