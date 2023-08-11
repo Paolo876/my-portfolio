@@ -7,9 +7,9 @@ const Certifications = () => {
   const { certifications } = useRootRedux();
 
   return (
-    <Grid container sx={{mb: { xs: 4, sm: 8, md: 10, lg: 10, xl: 15}}} columnSpacing={{xl: 5}}>
-      <Grid item xs={12} sm={12} lg={3} xl={4} mt={{md: 3, lg: 0}}>
-        <Box mb={{xs: 2, md: 4, lg:3}}>
+    <Grid container sx={{mb: { xs: 4, sm: 10, md: 10, lg: 10, xl: 15}}} columnSpacing={{xl: 5}}>
+      <Grid item xs={12} sm={12} lg={3} xl={4}>
+        <Box mb={{xs: 2, sm: 4, md: 6, lg:3}}>
           <Typography 
             variant="h2" 
             align="left" 

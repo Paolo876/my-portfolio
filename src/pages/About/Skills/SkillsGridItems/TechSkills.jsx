@@ -30,7 +30,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
   const [ isHovered, setIsHovered ] = useState(false)
 
   useEffect(() => {
-    if(isMain){
+    // if(isMain){
       const interval = setInterval(
         () => setActiveSkill(prevState => {
           if(prevState === skills.length - 1) {
@@ -38,22 +38,22 @@ const TechSkills = ({ skills, title, description, isMain }) => {
           } else {
             return prevState + 1
           }
-        }), 2000)
+        }), isMain ? 3000 : 4500)
       if(isHovered) clearInterval(interval) 
       return () => clearInterval(interval)    
-    }
+    // }
   }, [isHovered])
 
 
   return (
     <Grid container mb={{xs: 11, sm: 12, md: 13, lg: 15, xl: 18}} columnSpacing={{xl: 5}}>
-      <Grid item xs={11} sm={4.5} md={5.5} lg={4} xl={4} mb={{xs: 1.5, sm: 3, md: 0}}>
-        <Box mb={{md: 5, lg: 5, xl:8}}>
+      <Grid item xs={11} sm={5} md={5.5} lg={4} xl={4} mb={{xs: 1.5, sm: 3, md: 0}}>
+        <Box mb={{sm: 5, md: 5, lg: 5, xl:8}}>
           <Typography 
             variant="h2" 
             align="left" 
             fontWeight={400}
-            fontSize={{xs: 26, sm: 27, md: 28, lg: 30, xl: 30}} 
+            fontSize={{xs: 26, sm: 28, md: 28, lg: 30, xl: 30}} 
             letterSpacing={{xs: .5, xl:1}}
             lineHeight={{xs:1.25}} 
             textTransform="none"
@@ -64,16 +64,16 @@ const TechSkills = ({ skills, title, description, isMain }) => {
             {title}
           </Typography>
         </Box>
-        {isMain && <Box pr={{sm: 0, md: 5, lg:0}} mb={{lg: 5}} sx={{borderLeft: 2, pl: 1.5, borderColor: "primary.dark"}}>
+        {isMain && <Box pr={{sm: 3, md: 5, lg:0}} mb={{lg: 5}} sx={{borderLeft: 2, pl: 1.5, borderColor: "primary.dark"}}>
           {description} 
         </Box>}
       </Grid>
 
-      <Grid item xs={12} sm={7.5} md={6.5} lg={8} xl={8}>
+      <Grid item xs={12} sm={7} md={6.5} lg={8} xl={8}>
 
         <Grid container justifyContent={{xs: "right", md: "left", lg: "right"}}>
           {!isMain && 
-            <Grid item xs={12} md={12} lg={6} pr={{md: 0, lg: 5, xl: 8}} mt={{sm: 1, md: 2}} mb={{xs: 1, sm: 3, md: 4, lg: 0}} > 
+            <Grid item xs={12} sm={11} md={12} lg={6} pr={{sm: 0, md: 0, lg: 5, xl: 8}} mt={{sm: 1, md: 2}} mb={{xs: 1, sm: 4, md: 4, lg: 0}} > 
               <Box sx={{borderLeft: 2, pl: 1.5, borderColor: "primary.dark"}}>
                 {description}
               </Box>
@@ -81,7 +81,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
           }
           
           {skills.map((item, index) => 
-            <Grid item xs={2.4} sm={2.7} md={2.4} lg={1.4} xl={1.5} key={item.name} align="center">
+            <Grid item xs={2.4} sm={2.9} md={2.4} lg={1.4} xl={1.5} key={item.name} align="center">
               <Box 
                 sx={{
                   my: {xs: 1.15, md:1.5, lg: 1.75}, 
@@ -90,12 +90,12 @@ const TechSkills = ({ skills, title, description, isMain }) => {
               >
                 <Box 
                   sx={boxStyles} 
-                  className={isMain && index === activeSkill ? "active" : ""} 
+                  className={index === activeSkill ? "active" : ""} 
                   onClick={() => { setActiveSkill(index); setIsHovered(true)}}
                   onMouseOver={() => { setActiveSkill(index); setIsHovered(true)}} 
                   onMouseLeave={() => setIsHovered(false)}
                 >
-                  <Box height={{xs: 25, sm: 40, md:38, lg:40, xl: 45}} width="auto">
+                  <Box height={{xs: 25, sm: 35, md:38, lg:40, xl: 45}} width="auto">
                     <SkillIconImageItem 
                       src={item.monoUrl} 
                       duration={500} 
@@ -107,9 +107,9 @@ const TechSkills = ({ skills, title, description, isMain }) => {
                     variant="body2" 
                     sx={{
                       opacity: .4,
-                      fontSize: {xs: 10, sm: 11, md: 11, lg: 11}, 
+                      fontSize: {xs: 10, sm: 10, md: 11, lg: 11}, 
                       fontWeight: 300, 
-                      mt: {xs: 1, sm:1.5, md: 2},
+                      mt: {xs: 1, sm:1.25, md: 2},
                       textTransform: "uppercase",
                       letterSpacing: 1,
                       transition: "all 400ms ease-in-out",
