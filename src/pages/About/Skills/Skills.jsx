@@ -6,7 +6,7 @@ import OtherSkills from './SkillsGridItems/OtherSkills'
 
 
 const baseTextStyles = {
-  fontSize: {xs: 12.5, sm: 14.5, md: 15, lg:15, xl: 15},
+  fontSize: {xs: 12, sm: 14.5, md: 15, lg:15, xl: 15},
   fontWeight: 300,
   opacity: .55,
   letterSpacing: .4,

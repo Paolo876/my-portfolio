@@ -61,7 +61,7 @@ const OtherSkills = () => {
                 }} 
               >
                 <Box sx={boxStyles}>
-                  <Box height={{xs: 25, sm: 35, md:38, lg:40, xl: 45}} width="auto">
+                  <Box height={{xs: 30, sm: 35, md:38, lg:40, xl: 45}} width="auto">
                     <SkillIconImageItem 
                       src={item.url} 
                       duration={800} 

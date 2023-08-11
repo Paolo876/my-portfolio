@@ -14,7 +14,7 @@ const Certifications = () => {
             variant="h2" 
             align="left" 
             fontWeight={400}
-            fontSize={{xs: 26, sm: 27, md: 28, lg: 30, xl: 30}} 
+            fontSize={{xs: 28, sm: 28, md: 28, lg: 30, xl: 30}} 
             letterSpacing={{xs: .5, xl:1}}
             lineHeight={{xs:1}} 
             textTransform="none"
@@ -35,7 +35,6 @@ const Certifications = () => {
                 border: 2, 
                 height: "100%", 
                 width: "100%",
-                // fontSize: { xs: ".9rem", sm: "1rem", md: "1rem", lg: "1rem" },
                 lineHeight: 1.4, 
                 borderColor: {xs: "primary.dark", sm:"rgba(100,100,100,.75)"},
                 px: {sm: .5, md: .75},

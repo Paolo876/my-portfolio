@@ -46,14 +46,14 @@ const TechSkills = ({ skills, title, description, isMain }) => {
 
 
   return (
-    <Grid container mb={{xs: 11, sm: 12, md: 13, lg: 15, xl: 18}} columnSpacing={{xl: 5}}>
-      <Grid item xs={11} sm={5} md={5.5} lg={4} xl={4} mb={{xs: 1.5, sm: 3, md: 0}}>
-        <Box mb={{sm: 5, md: 5, lg: 5, xl:8}}>
+    <Grid container mb={{xs: 9, sm: 12, md: 13, lg: 15, xl: 18}} columnSpacing={{xl: 5}}>
+      <Grid item xs={12} sm={5} md={5.5} lg={4} xl={4} mb={{xs: 1.5, sm: 3, md: 0}}>
+        <Box mb={{xs: 1, sm: 5, md: 5, lg: 5, xl:8}}>
           <Typography 
             variant="h2" 
             align="left" 
             fontWeight={400}
-            fontSize={{xs: 26, sm: 28, md: 28, lg: 30, xl: 30}} 
+            fontSize={{xs: 28, sm: 28, md: 28, lg: 30, xl: 30}} 
             letterSpacing={{xs: .5, xl:1}}
             lineHeight={{xs:1.25}} 
             textTransform="none"
@@ -64,7 +64,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
             {title}
           </Typography>
         </Box>
-        {isMain && <Box pr={{sm: 3, md: 5, lg:0}} mb={{lg: 5}} sx={{borderLeft: 2, pl: 1.5, borderColor: "primary.dark"}}>
+        {isMain && <Box pr={{sm: 3, md: 5, lg:0}} mb={{xs: 2, sm: 0, lg: 5}} mt={{xs:2, sm: 0}} sx={{borderLeft: 2, pl: {xs: 1, sm:1.5}, borderColor: "primary.dark"}}>
           {description} 
         </Box>}
       </Grid>
@@ -73,8 +73,8 @@ const TechSkills = ({ skills, title, description, isMain }) => {
 
         <Grid container justifyContent={{xs: "right", md: "left", lg: "right"}}>
           {!isMain && 
-            <Grid item xs={12} sm={11} md={12} lg={6} pr={{sm: 0, md: 0, lg: 5, xl: 8}} mt={{sm: 1, md: 2}} mb={{xs: 1, sm: 4, md: 4, lg: 0}} > 
-              <Box sx={{borderLeft: 2, pl: 1.5, borderColor: "primary.dark"}}>
+            <Grid item xs={12} sm={11} md={12} lg={6} pr={{sm: 0, md: 0, lg: 5, xl: 8}} mt={{sm: 1, md: 2}} mb={{xs: 3, sm: 4, md: 4, lg: 0}} > 
+              <Box sx={{borderLeft: 2, pl: {xs: 1, sm:1.5}, borderColor: "primary.dark"}}>
                 {description}
               </Box>
             </Grid>
@@ -95,7 +95,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
                   onMouseOver={() => { setActiveSkill(index); setIsHovered(true)}} 
                   onMouseLeave={() => setIsHovered(false)}
                 >
-                  <Box height={{xs: 25, sm: 35, md:38, lg:40, xl: 45}} width="auto">
+                  <Box height={{xs: 30, sm: 35, md:38, lg:40, xl: 45}} width="auto">
                     <SkillIconImageItem 
                       src={item.monoUrl} 
                       duration={500} 
