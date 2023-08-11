@@ -15,7 +15,7 @@ const ProcessStepper = ({ processItems }) => {
           } else {
             return prevState + 1
           }
-        }), 5000)
+        }), 6000)
       if(isHovered) clearInterval(interval) 
       return () => clearInterval(interval)    
     
@@ -53,11 +53,11 @@ const ProcessStepper = ({ processItems }) => {
             >{item.title}</Typography>
             <Typography 
               variant="body1" 
-              px={{md: 1.5, lg:0, xl: 5}} 
-              mt={{ md: 2, lg:4 }} 
+              px={{md: 1, lg:2.5, xl: 5}} 
+              mt={{ md: 2, lg:3, xl: 4 }} 
               sx={{
                 transition: "all 400ms ease-in-out",
-                fontSize: { xs: 12.5, sm: 13, md: 13.5, lg:14 },
+                fontSize: { xs: 11, sm: 12, md: 12.5, lg:13.5, xl: 14 },
                 fontWeight: 300,
                 opacity: activeStep === index ? .7 : .45,
                 transform: activeStep === index ? "scale(1.015)" : "scale(1)",

@@ -45,7 +45,7 @@ const Process = () => {
               variant="h2" 
               align="center" 
               fontWeight={400}
-              fontSize={{xs: 26, sm: 27, md: 28, lg: 30, xl: 45}} 
+              fontSize={{xs: 30, sm: 34, md: 36, lg: 38, xl: 45}} 
               letterSpacing={{xs: .5, lg:1}}
               lineHeight={{xs:1.1}} 
               textTransform="none"
@@ -56,7 +56,7 @@ const Process = () => {
               My Work Process
             </Typography>
         </Grid>
-        <Grid item xs={12} md={12} lg={12} pl={{md:0, lg:2, xl: 0}} mt={{ xl: 10 }}>
+        <Grid item xs={12} md={12} lg={12} mt={{ xs: 5, sm: 6, md: 7, lg: 8, xl: 10 }}>
           <Box sx={{display: {xs: "none", md: "initial"}}}>
             <ProcessStepper processItems={processItems}/>
           </Box>
