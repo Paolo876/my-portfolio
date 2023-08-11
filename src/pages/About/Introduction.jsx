@@ -10,7 +10,7 @@ const boxTextStyles = {
 
 
 const baseTextStyles = {
-  fontSize: {xs: 13, sm: 14.5, md: 15, lg:16, xl: 16},
+  fontSize: {xs: 11.5, sm: 14.5, md: 15, lg:16, xl: 16},
   fontWeight: 300,
   opacity: .55,
   letterSpacing: .4,
@@ -40,13 +40,13 @@ const Introduction = () => {
           mx: "auto",
         }}
       >      
-        <Grid item xs={12} md={7} lg={6} xl={5.5} order={{xs: 2, md:1}} mt={{xs: 8, md: 0}}>
+        <Grid item xs={12} md={7} lg={6} xl={5.5} order={{xs: 2, md:1}} mt={{xs: 6, sm: 8, md: 0}}>
           <Box>
             <Typography 
               variant="h2" 
               align="left" 
               fontWeight={400}
-              fontSize={{xs: 50, sm: 60, md: 75, lg: 82, xl: 88}} 
+              fontSize={{xs: 42, sm: 60, md: 75, lg: 82, xl: 88}} 
               letterSpacing={{xs: .5, xl:1}}
               lineHeight={{xs:1}} 
               textTransform="none"
@@ -57,7 +57,7 @@ const Introduction = () => {
               About Me
             </Typography>
           </Box>
-          <Box mt={{xs: 5, sm: 6, md: 7, lg: 7, xl: 10}} pr={{sm:3, md: 0}}>
+          <Box mt={{xs: 3, sm: 6, md: 7, lg: 7, xl: 10}} pr={{sm:3, md: 0}}>
             <Typography variant="body1" sx={baseTextStyles}>          
               I am a <Box sx={boxTextStyles} component="span"> Full Stack Web Developer </Box> 
               based in <Box sx={boxTextStyles} component="span">Los Angeles, California. </Box> I started coding in 2019 and went back to college in 2020 for a degree in
@@ -90,11 +90,11 @@ const Introduction = () => {
             sx={{
               boxShadow: 5,
               border: 2, 
-              fontSize: { xs: ".9rem", sm: "1rem", md: "1rem", lg: "1rem" },
+              fontSize: { xs: ".85rem", sm: "1rem", md: "1rem", lg: "1rem" },
               lineHeight: 1.4, 
-              borderColor: {xs: "primary.dark", sm:"rgba(100,100,100,.75)"},
-              px: {xs: 1, sm: 1.5, lg: 2},
-              py: 1,
+              borderColor: "rgba(100,100,100,.75)",
+              px: 2,
+              py: {xs: 1, sm: 1.25},
               fontWeight: 600,
               letterSpacing: .5,
               opacity: .75,
