@@ -28,7 +28,7 @@ const Certifications = () => {
       </Grid>
       <Grid item xs={12} sm={12} lg={9}  xl={8}>
         <Grid container pt={1.5} sx={{justifyContent: "center"}}>
-          {certifications.map(item => <Grid item key={item.name} xs={11} sm={6} md={4} pr={{sm: .75, md: 1.25, lg: 2}} pl={{sm: .75, md: 1.25, lg: 0}} pb={{xs: 1.25, md:3}}>
+          {certifications.map(item => <Grid item key={item.name} xs={11.5} sm={6} md={4} pr={{sm: .75, md: 1.25, lg: 2}} pl={{sm: .75, md: 1.25, lg: 0}} pb={{xs: 1.25, md:3}}>
             <ButtonBase 
               sx={{
                 boxShadow: 5,
@@ -36,8 +36,8 @@ const Certifications = () => {
                 height: "100%", 
                 width: "100%",
                 lineHeight: 1.4, 
-                borderColor: {xs: "primary.dark", sm:"rgba(100,100,100,.75)"},
-                px: {sm: .5, md: .75},
+                borderColor: "rgba(100,100,100,.75)",
+                px: {xs: .5, md: .75},
                 py: 1,
                 fontWeight: 600,
                 letterSpacing: .5,
@@ -71,7 +71,7 @@ const Certifications = () => {
                   variant="h2" 
                   align="left" 
                   fontWeight={500}
-                  fontSize={{xs: 15, sm: 16, md: 17, lg: 17.5, xl: 18}} 
+                  fontSize={{xs: 14, sm: 16, md: 17, lg: 17.5, xl: 18}} 
                   letterSpacing={{xs: .5, xl:1}}
                   lineHeight={{xs:1}} 
                   textTransform="none"
@@ -84,7 +84,7 @@ const Certifications = () => {
                 <Typography 
                   variant="body1" 
                   sx={{
-                    fontSize: {xs: 12, sm: 13, md: 13, lg:14, xl: 14.5},
+                    fontSize: {xs: 11, sm: 13, md: 13, lg:14, xl: 14.5},
                     fontWeight: 300,
                     opacity: .6,
                     letterSpacing: .2,

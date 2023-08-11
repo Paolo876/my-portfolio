@@ -13,12 +13,12 @@ const boxStyles = {
   fontFamily: "Manrope",
   "&:hover, &.active":{
     opacity:1,
-    transform: "scale(1.075)",
+    transform: "scale(1.025)",
   },
   "&:hover p, &.active p": {
     color: "primary.main",
     opacity:1,
-    letterSpacing: 1.1,
+    letterSpacing: {xs: .7, sm: 1.1},
     fontWeight: 600, 
     textShadow: "1px 1px 3px rgba(100,100,100,.5)",
   }
@@ -107,11 +107,11 @@ const TechSkills = ({ skills, title, description, isMain }) => {
                     variant="body2" 
                     sx={{
                       opacity: .4,
-                      fontSize: {xs: 10, sm: 10, md: 11, lg: 11}, 
+                      fontSize: {xs: 9, sm: 10, md: 11, lg: 11}, 
                       fontWeight: 300, 
                       mt: {xs: 1, sm:1.25, md: 2},
                       textTransform: "uppercase",
-                      letterSpacing: 1,
+                      letterSpacing: {xs: .5, sm: 1},
                       transition: "all 400ms ease-in-out",
                       textShadow: "1px 1px 7px rgba(25,25,25,.75)",
                     }}
