@@ -24,6 +24,7 @@ const roadmapItems = [
 ];
 
 const navigatorStyles = {
+  display: {xs: "none", sm: "initial"},
   transition: "all 300ms linear",
   backgroundColor: "transparent",
   "svg": {
@@ -67,14 +68,14 @@ const RoadmapCarousel = () => {
         onClick={() => handleClick("prev")} 
         disabled={currentIndex === 0} 
         color="primary" 
-        sx={currentIndex !== 0 ? navigatorStyles : {}}
+        sx={currentIndex !== 0 ? navigatorStyles : {display: {xs: "none", sm: "initial"}}}
       >
         <ArrowBackIosNewIcon fontSize="large"/>
       </IconButton>
       <Box 
         sx={{
           width: "100%", 
-          px: {sm: 3, md: 3, lg: 8, xl: 12}
+          px: {xs: 1, sm: 3, md: 3, lg: 8, xl: 12}
         }}
       >
         <Carousel
@@ -86,7 +87,7 @@ const RoadmapCarousel = () => {
           onChange={(i) => setCurrentIndex(i)}
           index={currentIndex}
         >
-          {roadmapItems.map(item => <Grid container key={item} sx={{minHeight: {sm: 210, md: 175, lg: 175, xl: 190}}}>
+          {roadmapItems.map(item => <Grid container key={item} sx={{minHeight: {xs: 210, sm: 210, md: 175, lg: 175, xl: 190}}}>
             <Grid item md={4} lg={3.5} xl={4}>
               <Typography
                 variant="h2" 
@@ -102,11 +103,11 @@ const RoadmapCarousel = () => {
                 {item.title}
               </Typography>
             </Grid>
-            <Grid item md={8} lg={8.5} xl={8} mt={{sm: 2, md: 1}}>
+            <Grid item md={8} lg={8.5} xl={8} mt={{xs: 2, sm: 2, md: 1}}>
               <Typography
                 variant='body2'
                 sx={{
-                  fontSize: {xs: 12, sm: 12.5, md: 13, lg:15, xl: 16},
+                  fontSize: {xs: 11, sm: 12.5, md: 13, lg:15, xl: 16},
                   fontWeight: 300,
                   opacity: .55,
                   letterSpacing: .4,
