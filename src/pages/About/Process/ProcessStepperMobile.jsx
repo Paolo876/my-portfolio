@@ -27,11 +27,10 @@ const ProcessStepperMobile = ({ processItems }) => {
         {processItems.map(item => <Box 
           key={item.title} 
           sx={{
-            px:2,
-            py:{xs:3, sm: 4},
-            mx:{xs:1, sm:2},
-            my:{xs:2, sm:1},
-            minHeight: {xs: 190, sm:200},
+            pt:{xs:3, sm: 4},
+            mx:{xs:2, sm:4},
+            my:{xs:1, sm:1},
+            minHeight: {xs: 160, sm:170},
           }}
         >
           <Typography 
@@ -43,7 +42,7 @@ const ProcessStepperMobile = ({ processItems }) => {
               opacity: 1,
               transition: "all 150ms linear",
               textShadow: "1px 1px 7px rgba(125,125,125,.5)",
-              fontSize: { xs: 20, sm: 23 },
+              fontSize: { xs: 21, sm: 23 },
               letterSpacing: 1
             }}
           >
@@ -52,12 +51,12 @@ const ProcessStepperMobile = ({ processItems }) => {
           <Typography 
             variant="body1" 
             align='center'
-            mt={{ sm: 2 }} 
+            mt={{ xs: 1.5, sm: 2 }} 
             sx={{
               transition: "all 400ms ease-in-out",
-              fontSize: { xs: 10, sm: 12.5 },
+              fontSize: { xs: 11.5, sm: 12.5 },
               fontWeight: 300,
-              opacity: .7,
+              opacity: .6,
               letterSpacing: .3,
               textShadow: "1px 1px 7px rgba(75,75,75,.5)",
             }}
