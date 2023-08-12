@@ -30,7 +30,7 @@ const Roadmap = () => {
               variant="h2" 
               align="center" 
               fontWeight={400}
-              fontSize={{xs: 26, sm: 27, md: 28, lg: 30, xl: 40}} 
+              fontSize={{xs: 30, sm: 32, md: 34, lg: 36, xl: 40}} 
               letterSpacing={{xs: .5, lg:1}}
               lineHeight={{xs:1.1}} 
               textTransform="none"

@@ -57,8 +57,7 @@ const RoadmapCarousel = () => {
   return (
     <Box 
       sx={{
-        py: 5, 
-        mt: 6, 
+        mt: {xs: 4, sm: 5, md: 5, lg: 6, xl:8}, 
         display: "flex",
         flexDirection: "row",
         width: "100%"
@@ -75,7 +74,7 @@ const RoadmapCarousel = () => {
       <Box 
         sx={{
           width: "100%", 
-          px: {xl: 12}
+          px: {sm: 3, md: 3, lg: 8, xl: 12}
         }}
       >
         <Carousel
@@ -87,13 +86,12 @@ const RoadmapCarousel = () => {
           onChange={(i) => setCurrentIndex(i)}
           index={currentIndex}
         >
-          {roadmapItems.map(item => <Grid container key={item} sx={{minHeight: {xl: 200}}}>
-            <Grid item xs={4}>
+          {roadmapItems.map(item => <Grid container key={item} sx={{minHeight: {sm: 210, md: 175, lg: 175, xl: 190}}}>
+            <Grid item md={4} lg={3.5} xl={4}>
               <Typography
                 variant="h2" 
-                align="left" 
                 fontWeight={400}
-                fontSize={{xs: 22, sm: 23, md: 24, lg: 25, xl: 25}} 
+                fontSize={{xs: 22, sm: 21, md: 23, lg: 24, xl: 25}} 
                 letterSpacing={{xs: .5, xl:1}}
                 lineHeight={{xs:1}} 
                 textTransform="none"
@@ -104,11 +102,11 @@ const RoadmapCarousel = () => {
                 {item.title}
               </Typography>
             </Grid>
-            <Grid item xs={8} mt={{xl: 1}}>
+            <Grid item md={8} lg={8.5} xl={8} mt={{sm: 2, md: 1}}>
               <Typography
                 variant='body2'
                 sx={{
-                  fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 16},
+                  fontSize: {xs: 12, sm: 12.5, md: 13, lg:15, xl: 16},
                   fontWeight: 300,
                   opacity: .55,
                   letterSpacing: .4,
@@ -116,7 +114,7 @@ const RoadmapCarousel = () => {
                   textShadow: "1px 1px 5px rgba(10,10,10,.75)",
                   borderLeft: 2,
                   borderColor: "primary.main",
-                  pl: 2,
+                  pl: {xs: 1, md: 1.25, lg: 2},
                 }}
               >
                 {item.description}
