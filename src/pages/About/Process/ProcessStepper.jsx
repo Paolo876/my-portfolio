@@ -57,7 +57,7 @@ const ProcessStepper = ({ processItems }) => {
               mt={{ md: 2, lg:3, xl: 4 }} 
               sx={{
                 transition: "all 400ms ease-in-out",
-                fontSize: { xs: 11, sm: 12, md: 12.5, lg:13.5, xl: 14 },
+                fontSize: { xs: 10, sm: 10.5, md: 11, lg:13, xl: 14 },
                 fontWeight: 300,
                 opacity: activeStep === index ? .7 : .45,
                 transform: activeStep === index ? "scale(1.015)" : "scale(1)",

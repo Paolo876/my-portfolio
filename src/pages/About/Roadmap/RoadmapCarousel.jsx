@@ -68,7 +68,7 @@ const RoadmapCarousel = () => {
         onClick={() => handleClick("prev")} 
         disabled={currentIndex === 0} 
         color="primary" 
-        sx={currentIndex !== 0 && navigatorStyles}
+        sx={currentIndex !== 0 ? navigatorStyles : {}}
       >
         <ArrowBackIosNewIcon fontSize="large"/>
       </IconButton>
