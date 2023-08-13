@@ -46,7 +46,7 @@ const Introduction = () => {
               variant="h2" 
               align="left" 
               fontWeight={400}
-              fontSize={{xs: 42, sm: 60, md: 75, lg: 82, xl: 88}} 
+              fontSize={{xs: 42, sm: 60, md: 75, lg: 75, xl: 88}} 
               letterSpacing={{xs: .5, xl:1}}
               lineHeight={{xs:1}} 
               textTransform="none"
