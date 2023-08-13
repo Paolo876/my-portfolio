@@ -17,7 +17,7 @@ const Contact = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        overflow: "hidden"
+        overflowX: "hidden"
       }}
     >      
       <DocumentHead
@@ -33,28 +33,31 @@ const Contact = () => {
           mx: "auto",
         }}
       >   
-        <Grid item lg={5.25} xl={5.5} sx={{display: "flex", flexDirection: "column", height: "100%"}}>
+        <Grid item md={12} lg={5.25} xl={5.5} sx={{display: "flex", flexDirection: "column", height: {lg:"100%"}}}>
           <ContactDescription/>
         </Grid>
-        <Grid item lg={6} xl={5}>
+        <Grid item md={12} lg={6} xl={5}>
           <ContactForm/>
         </Grid>
 
       </Grid>
+
       {/* background */}
-      <Box sx={{position: "absolute", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1}}>
+      <Box sx={{position: "fixed", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1}}>
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", mx: "auto"}}>
-          <Grid item lg={3}></Grid>
-          <Grid item lg={9} sx={{background: "rgba(50,50,50,.35)", height: "100vh", width: "100%", transform: "skewX(-7deg) translateX(150px)"}}></Grid>
+          <Grid item md={3}></Grid>
+          <Grid item md={9} sx={{background: "rgba(50,50,50,.25)", height: "100vh", width: "100%", transform: "skewX(-7deg) translateX(150px)"}}></Grid>
         </Grid>
       </Box>
 
-      <Box sx={{position: "absolute", bottom: 5, right: 5, zIndex: 1}}>
+
+      <Box>
         <Typography
           variant="body2"
+          align="right"
           sx={{
             fontSize: {xs: 11, sm:11, md: 11.5, lg:13, xl: 14}, 
-            opacity: .5, 
+            opacity: .55, 
             mixBlendMode: "difference", 
           }}
         >© 2023 Paolo Bugarin, All rights reserved.</Typography>
