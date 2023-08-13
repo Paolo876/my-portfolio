@@ -4,7 +4,7 @@ import { Box, ButtonBase, TextField } from '@mui/material'
 const inputStyles = {
   sx: {
     fontSize: { xs: 13, sm: 15, md:16 },
-    fontWeight: 400,
+    fontWeight: 500,
     letterSpacing: .25,
     textShadow: "1px 1px 5px rgba(10,10,10,.75)",
     "&:hover": {
@@ -42,7 +42,6 @@ const ContactForm = () => {
           p: {xs: 1.5, sm:2.5, md:3, lg: 4}, 
           border: 2, 
           borderColor: "rgba(100,100,100,.75)",
-          // minHeight: {md: "60vh"}, 
           display: "flex", 
           flexDirection: "column",
           boxShadow: 8,
@@ -53,11 +52,11 @@ const ContactForm = () => {
         onSubmit={handleSubmit}
       >
         <Box sx={{display: "flex", flexDirection: {xs: "column", sm: "row"}, gap: {xs: 0, sm: 3}, my: {xs: 1, md: 1.5, lg: 2}}}>
-          <TextField id="firstName" label="First Name" variant="standard" fullWidth type="text" InputProps={inputStyles} InputLabelProps={inputLabelStyles}/>
-          <TextField id="lastName" label="Last Name" variant="standard" fullWidth type="text" InputProps={inputStyles} InputLabelProps={inputLabelStyles}/>
+          <TextField id="firstName" label="First Name" variant="standard" fullWidth type="text" InputProps={inputStyles} InputLabelProps={inputLabelStyles} inputProps={{maxLength: 25}}/>
+          <TextField id="lastName" label="Last Name" variant="standard" fullWidth type="text" InputProps={inputStyles} InputLabelProps={inputLabelStyles} inputProps={{maxLength: 25}}/>
         </Box>
-        <TextField id="phone" label="Contact Number" variant="standard" fullWidth type="phone" sx={{my: {xs: 1, md: 1.5, lg: 2}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}/>
-        <TextField id="email" label="Email Address" variant="standard" fullWidth type="email" sx={{my: {xs: 1, md: 1.5, lg: 2}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}/>
+        <TextField id="phone" label="Contact Number" variant="standard" fullWidth type="phone" sx={{my: {xs: 1, md: 1.5, lg: 2}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}  inputProps={{maxLength: 15}}/>
+        <TextField id="email" label="Email Address" variant="standard" fullWidth type="email" sx={{my: {xs: 1, md: 1.5, lg: 2}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}  inputProps={{maxLength: 50}}/>
         <TextField
           id="message"
           label="Message"
@@ -67,6 +66,7 @@ const ContactForm = () => {
           sx={{my:{xs: 3, md:4}}}
           variant="outlined"
           InputProps={inputStyles} InputLabelProps={inputLabelStyles}
+          inputProps={{maxLength: 400}}
         />
         <Box my={{xs: 1, sm: 3, md: 4, }}>
           <ButtonBase 

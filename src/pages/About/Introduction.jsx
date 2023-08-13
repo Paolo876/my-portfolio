@@ -81,7 +81,7 @@ const Introduction = () => {
               }} 
               mt={{xs: 3, sm: 3.5, lg:5, xl:8}}
             >
-              I am ready to take my skills to the next level and I am confident that I have the necessary knowledge and skills to prove myself.
+              I am ready to take my skills to the next level and I am confident that I have the necessary knowledge and skills to prove my capabilities.
             </Typography>
           </Box>
           <Box sx={{mt: {xs: 5, lg: 6}}}>
