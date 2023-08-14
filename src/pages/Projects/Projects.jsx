@@ -300,7 +300,7 @@ const MainPage = ({ projects }) => {
         } else {
           return prevState + 1
         }
-      }), 5000)
+      }), 6000)
     if(isHovered) clearInterval(interval) 
     return () => clearInterval(interval)  
   }, [isHovered])
@@ -317,23 +317,23 @@ const MainPage = ({ projects }) => {
       }}
     >      
       <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
-        <Grid item xl={3.5}>
+        <Grid item lg={3.5}>
           <Introduction/>
         </Grid>
-        <Grid item xl={5} sx={{height: "100%", my: "auto"}}>
+        <Grid item lg={5} sx={{height: "100%", my: "auto"}}>
           <ProjectSelection projects={projects} setActiveProject={setActiveProject} setIsHovered={setIsHovered} activeProject={activeProject}/>
         </Grid>
-        <Grid item xl={3.5}></Grid>
+        <Grid item lg={3.5}></Grid>
       </Grid>
 
       {/* background  */}
-      <Box sx={{position: "fixed", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1}}>
+      <Box sx={{position: "fixed", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1, px: { xs:1.75, sm: 3, md: 4, lg: 5 }}}>
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
-          <Grid item xl={3}></Grid>
-          <Grid item xl={6} sx={{background: "rgba(50,50,50,.35)", height: "100vh", width: "100%", transform: "skewX(-7deg)"}}></Grid>
+          <Grid item lg={3}></Grid>
+          <Grid item lg={6} sx={{background: "rgba(50,50,50,.35)", height: "100vh", width: "100%", transform: "skewX(-7deg)"}}></Grid>
           <Grid 
             item 
-            xl={3} 
+            lg={3} 
             align="right" 
             sx={{
               height: "98vh", 
@@ -353,9 +353,9 @@ const MainPage = ({ projects }) => {
               <Typography 
                 variant="body2"
                 sx={{
-                  fontSize: {xs: 13, sm: 13.5, md: 14, lg:15, xl: 15.5},
+                  fontSize: {xs: 13, sm: 13.5, md: 14, lg:14, xl: 15.5},
                   fontWeight: 300,
-                  opacity: .75,
+                  opacity: .65,
                   letterSpacing: .3,
                   lineHeight: 1.4,
                   textShadow: "1px 1px 5px rgba(10,10,10,.75)",
