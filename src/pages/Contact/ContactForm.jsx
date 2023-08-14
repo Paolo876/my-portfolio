@@ -56,15 +56,15 @@ const ContactForm = () => {
           <TextField id="firstName" label="First Name" variant="standard" fullWidth type="text" InputProps={inputStyles} InputLabelProps={inputLabelStyles} inputProps={{maxLength: 25}}/>
           <TextField id="lastName" label="Last Name" variant="standard" fullWidth type="text" InputProps={inputStyles} InputLabelProps={inputLabelStyles} inputProps={{maxLength: 25}}/>
         </Box>
-        <TextField id="phone" label="Contact Number" variant="standard" fullWidth type="phone" sx={{my: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}  inputProps={{maxLength: 15}}/>
-        <TextField id="email" label="Email Address" variant="standard" fullWidth type="email" sx={{my: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}  inputProps={{maxLength: 50}}/>
+        <TextField id="phone" label="Contact Number" variant="standard" fullWidth type="phone" sx={{my: {xs: .7, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}  inputProps={{maxLength: 15}}/>
+        <TextField id="email" label="Email Address" variant="standard" fullWidth type="email" sx={{my: {xs: .7, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}  inputProps={{maxLength: 50}}/>
         <TextField
           id="message"
           label="Message"
           multiline
           fullWidth
           rows={6}
-          sx={{my:{xs: 3, sm: 4, md:4, lg: 5}}}
+          sx={{my:{xs: 3.5, sm: 4, md:4, lg: 5}}}
           variant="outlined"
           InputProps={inputStyles} InputLabelProps={inputLabelStyles}
           inputProps={{maxLength: 400}}

@@ -80,14 +80,14 @@ const ContactDescription = () => {
           Please feel free to reach out to me using my contact informations provided or by submitting the inquiry form.
         </Typography>
       </Box>
-      <Box sx={{mt: {xs: 5, sm: 8, md: 12, lg:"auto"}}}>
+      <Box sx={{mt: {xs: 6, sm: 8, md: 12, lg:"auto"}}}>
         <Box sx={{display: "flex", justifyContent: "space-between"}}>
           <Box>
             <Typography
               variant="h2" 
               align="left" 
               fontWeight={400}
-              fontSize={{xs: 22, sm: 24, md: 25, lg: 25, xl: 26}} 
+              fontSize={{xs: 20, sm: 24, md: 25, lg: 25, xl: 26}} 
               letterSpacing={{xs: .5, xl:1}}
               lineHeight={{xs:1}} 
               textTransform="none"
@@ -101,7 +101,7 @@ const ContactDescription = () => {
               variant="h2" 
               align="left" 
               fontWeight={300}
-              fontSize={{xs: 15, sm: 17, md: 18, lg: 18, xl: 18}} 
+              fontSize={{xs: 14, sm: 17, md: 18, lg: 18, xl: 18}} 
               letterSpacing={{xs: .5, xl:1}}
               lineHeight={{xs:1}} 
               textTransform="none"
@@ -115,7 +115,7 @@ const ContactDescription = () => {
             </Typography>
           </Box>
         </Box>
-        <Box sx={{display: "flex", justifyContent: "space-between", flexDirection: {xs: "column", sm: "row"}, mt: {xs: 4, sm: 5, md: 6, lg: 8, xl: 9}}} mb={4}>
+        <Box sx={{display: "flex", justifyContent: "space-between", flexDirection: {xs: "column", sm: "row"}, mt: {xs: 3, sm: 5, md: 6, lg: 8, xl: 9}}} mb={4}>
           <Box sx={{display: "flex", flexDirection: "column", gap: 1.5}}>
             <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={contactButtonStyles} disableRipple>
               <MailOutlineIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 22, xl: 23}}}/>
