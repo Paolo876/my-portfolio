@@ -10,7 +10,7 @@ const boxStyles = {
   py: {sm: .75, md: .75, lg: 1, xl:1},
   height: "100%",
   userSelect: "none",
-  opacity: .45,  
+  opacity: {xs: .8, md:.45},  
   background: "none",
   transition: "all 250ms ease-in-out",
   fontFamily: "Manrope",

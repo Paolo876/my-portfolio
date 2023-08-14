@@ -30,7 +30,7 @@ const Skills = ({ isVisible }) => {
           <Typography 
             variant="body1" 
             sx={{
-              fontSize: {xs: 11, sm: 13},
+              fontSize: {xs: 10.5, sm: 13},
               fontWeight: 300,
               opacity: .55,
               letterSpacing: .4,

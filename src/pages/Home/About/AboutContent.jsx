@@ -13,14 +13,14 @@ const AboutContent = ({ isVisible }) => {
 			<Grid item xs={12}>
 				<Grid container columnSpacing={{xs: 0, sm:3, md: 6, lg: 6, xl:12}}>
 					<Grid item xs={3.75} sm={3} sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
-						<Box sx={{height: {xs: 150, sm: 180, md: 240, lg: 280, xl: 300 }, width: {xs: 100, sm: 130, md: 190, lg: 230, xl: 250}, border: 1}}></Box>
+						<Box sx={{height: {xs: 125, sm: 180, md: 240, lg: 280, xl: 300 }, width: {xs: 90, sm: 130, md: 190, lg: 230, xl: 250}, border: 1}}></Box>
           </Grid>
 					<Grid item xs={8.25} sm={9} sx={{display: "flex", flexDirection: "column", justifyContent: {xs: "center", sm: "space-between"}}}>
 						<Box>
 							<Typography
 								variant="h2" 
-								fontWeight={400}
-								fontSize={{xs: 23, sm: 23.5, md: 26, lg: 32, xl: 36}} 
+								fontWeight={500}
+								fontSize={{xs: 18, sm: 23.5, md: 26, lg: 32, xl: 36}} 
 								letterSpacing={{xs: .15, sm: .5, lg: 1}}
 								lineHeight={1.4} 
 								textTransform="none"
@@ -78,7 +78,7 @@ const AboutContent = ({ isVisible }) => {
               <Typography
                 variant="body1" 
                 sx={{
-                  fontSize: {xs: 11, sm: 13, md: 14, lg:16, xl: 17},
+                  fontSize: {xs: 10.5, sm: 13, md: 14, lg:16, xl: 17},
                   fontWeight: 300,
                   opacity: .55,
                   letterSpacing: .4,
