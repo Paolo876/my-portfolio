@@ -33,14 +33,14 @@ const ContactForm = () => {
     <Box 
       sx={{
         pb: {xs: 1, sm:3, md:3, lg: 3, xl: 4 }, 
-        mb: {xs: 3, sm: 0},
-        px: {sm: 1, md: 3, lg: 0}
+        mb: {xs: 4, lg: 0},
+        px: {xs: .5, sm: 1, md: 3, lg: 0}
       }} 
       align="center"
     >
       <Box 
         sx={{
-          p: {xs: 1.5, sm:2.5, md:4, lg: 4}, 
+          p: {xs: 2, sm:2.5, md:4, lg: 4}, 
           border: 2, 
           borderColor: "rgba(100,100,100,.75)",
           display: "flex", 
@@ -69,17 +69,17 @@ const ContactForm = () => {
           InputProps={inputStyles} InputLabelProps={inputLabelStyles}
           inputProps={{maxLength: 400}}
         />
-        <Box my={{xs: 1, sm: 3, md: 4, }}>
+        <Box my={{xs: 2, sm: 3, md: 4, }}>
           <ButtonBase 
             type="submit" 
             color="inherit"
             sx={{
               boxShadow: 5,
               border: 2, 
-              fontSize: { xs: ".9rem", sm: "1rem", md: "1rem", lg: "1.1rem" },
+              fontSize: { xs: ".95rem", sm: "1rem", md: "1rem", lg: "1.1rem" },
               lineHeight: 1.4, 
               borderColor: "primary.dark",
-              px: {xs: 1.5, sm: 3, md: 3, lg: 4},
+              px: {xs: 3, sm: 4, md: 4, lg: 4},
               py: 1,
               fontWeight: 500,
               letterSpacing: 1.25,

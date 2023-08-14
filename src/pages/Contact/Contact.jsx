@@ -11,8 +11,8 @@ const Contact = () => {
       sx={{
         position: "relative", 
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
-        pt: {xs:8, sm: 12, md: 14, lg: 11, xl: 15}, 
-        height: "100vh",
+        pt: {xs:10, sm: 12, md: 14, lg: 11, xl: 15}, 
+        height: {lg:"100vh"},
         width: "100%",
         display: "flex",
         flexDirection: "column",
@@ -33,7 +33,7 @@ const Contact = () => {
           mx: "auto",
         }}
       >   
-        <Grid item xs={12} lg={5.25} xl={5.5} sx={{display: "flex", flexDirection: "column", height: {md: "auto", lg:"100%"}}} mb={{sm: 4, lg: 0}}>
+        <Grid item xs={12} lg={5.25} xl={5.5} sx={{display: "flex", flexDirection: "column", height: {md: "auto", lg:"100%"}}} mb={{xs: 1.5, sm: 4, lg: 0}}>
           <ContactDescription/>
         </Grid>
         <Grid item xs={12} lg={6} xl={5}>
