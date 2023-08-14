@@ -33,10 +33,10 @@ const Contact = () => {
           mx: "auto",
         }}
       >   
-        <Grid item md={12} lg={5.25} xl={5.5} sx={{display: "flex", flexDirection: "column", height: {lg:"100%"}}}>
+        <Grid item xs={12} lg={5.25} xl={5.5} sx={{display: "flex", flexDirection: "column", height: {md: "auto", lg:"100%"}}} mb={{sm: 4, lg: 0}}>
           <ContactDescription/>
         </Grid>
-        <Grid item md={12} lg={6} xl={5}>
+        <Grid item xs={12} lg={6} xl={5}>
           <ContactForm/>
         </Grid>
 
@@ -56,7 +56,7 @@ const Contact = () => {
           variant="body2"
           align="right"
           sx={{
-            fontSize: {xs: 11, sm:11, md: 11.5, lg:13, xl: 14}, 
+            fontSize: {xs: 11, sm:11, md: 13, lg:13, xl: 14}, 
             opacity: .55, 
             mixBlendMode: "difference", 
           }}
