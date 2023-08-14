@@ -45,8 +45,8 @@ const Contact = () => {
       {/* background */}
       <Box sx={{position: "fixed", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1}}>
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", mx: "auto"}}>
-          <Grid item md={3}></Grid>
-          <Grid item md={9} sx={{background: "rgba(50,50,50,.25)", height: "100vh", width: "100%", transform: "skewX(-7deg) translateX(150px)"}}></Grid>
+          <Grid item xs={2} md={3}></Grid>
+          <Grid item xs={10} md={9} sx={{background: "rgba(50,50,50,.25)", height: "100vh", width: "100%", transform: "skewX(-7deg) translateX(150px)"}}></Grid>
         </Grid>
       </Box>
 
@@ -56,7 +56,7 @@ const Contact = () => {
           variant="body2"
           align="right"
           sx={{
-            fontSize: {xs: 11, sm:11, md: 13, lg:13, xl: 14}, 
+            fontSize: {xs: 10.5, sm:11, md: 13, lg:13, xl: 14}, 
             opacity: .55, 
             mixBlendMode: "difference", 
           }}
