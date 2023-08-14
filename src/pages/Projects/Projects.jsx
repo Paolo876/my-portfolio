@@ -336,17 +336,16 @@ const MainPage = ({ projects }) => {
             lg={3} 
             align="right" 
             sx={{
-              height: "98vh", 
+              height: "95vh", 
               display: "flex", 
               flexDirection: "column",
               alignItems: "flex-end", 
               justifyContent: "flex-end", 
               zIndex: -2,
-              pb: {xs:10, sm: 11, md: 11, lg: 12, xl: 12},        
-
-              }}
-            >
-            <Box sx={{opacity: .75}}>
+              pb: {xs:10, sm: 11, md: 11, lg: 12, xl: 12},
+            }}
+          >
+            <Box sx={{opacity: .75, width: {lg: 250, xl: 280}, height: "auto"}}>
               <Image src={projects[activeProject].logo} duration={200}/>
             </Box>
             <Box sx={{mt: 5, borderRight: 2, borderColor: "primary.dark", pr: 1}}>
