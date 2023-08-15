@@ -20,7 +20,7 @@ const Introduction = () => {
           My <Box component="br" sx={{display: {xs: "none", lg: "initial"}}}></Box>Projects
         </Typography>
       </Grid>
-      <Grid item xs={12} sm={6.5} md={12} lg={9} xl={8.5} mt={{xs: 1.25, sm: 1.25, md:3, lg: 6}} ml={{sm:.25, md: .25}}>
+      <Grid item xs={12} sm={6.5} md={7.5} lg={9} xl={8.5} mt={{xs: 1.25, sm: 1.25, md:4, lg: 6}} ml={{sm:.25, md: .25}}>
         <Typography 
           variant="body1" 
           sx={{

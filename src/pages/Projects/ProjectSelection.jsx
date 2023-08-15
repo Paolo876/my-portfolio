@@ -21,15 +21,15 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
           width: "100%", 
           alignItems: "center", 
           display: "flex", 
-          justifyContent: "center",
+          justifyContent: {lg:"center"},
           textTransform: "none",
-          fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:25, xl: 30},
+          fontSize: {xs: 12.5, sm: 14.5, md: 28, lg:25, xl: 30},
           fontWeight: 300,
           textShadow: "1px 1px 5px rgba(10,10,10,.75)",
           transition: "all 450ms ease",
           opacity: .4,
           letterSpacing: .5,
-          my: {lg: .75, xl:1}, 
+          my: {md: .75, lg: .75, xl:1}, 
           position: "relative",
           "&::before": {
             content: '""',
@@ -38,8 +38,8 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
             width: 0,
             backgroundColor: "primary.main",
             bottom: 0,
-            left: "50%",
-            transform: "translateX(-50%)",
+            left: {lg:"50%"},
+            transform: {lg:"translateX(-50%)"},
             transition: "all 200ms ease"
           },
           "&:hover, &.active": {
@@ -51,7 +51,7 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
             mixBlendMode: "initial", 
             letterSpacing: 1,
             "&::before": {
-              width: 40,
+              width: {md: 20, lg:40},
               backgroundColor: "primary.main",
             }
           }

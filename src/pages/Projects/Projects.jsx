@@ -320,7 +320,7 @@ const MainPage = ({ projects }) => {
         <Grid item md={12} lg={3.5}>
           <Introduction/>
         </Grid>
-        <Grid item md={12} lg={5} sx={{height: "100%", my: "auto"}}>
+        <Grid item md={12} lg={5} sx={{height: "100%", my: "auto"}} pt={{md: 8, lg: 0}} pl={{md: 1, lg: 0}}>
           <ProjectSelection projects={projects} setActiveProject={setActiveProject} setIsHovered={setIsHovered} activeProject={activeProject}/>
         </Grid>
         <Grid item md={0} lg={3.5}></Grid>
@@ -329,10 +329,11 @@ const MainPage = ({ projects }) => {
       {/* background  */}
       <Box sx={{position: "fixed", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1, px: { xs:1.75, sm: 3, md: 4, lg: 5 }}}>
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
-          <Grid item lg={3}></Grid>
-          <Grid item lg={6} sx={{background: "rgba(50,50,50,.35)", height: "100vh", width: "100%", transform: "skewX(-7deg)"}}></Grid>
+          <Grid item md={0} lg={3}></Grid>
+          <Grid item md={9} lg={6} sx={{background: "rgba(50,50,50,.25)", height: "100vh", width: "100%", transform: {md:"skewX(-7deg) translateX(-100px)", lg:"skewX(-7deg)"}}}></Grid>
           <Grid 
             item 
+            md={3}
             lg={3} 
             align="right" 
             sx={{
