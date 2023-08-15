@@ -313,17 +313,17 @@ const MainPage = ({ projects }) => {
         width: "100%",
         position: "relative", 
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
-        pt: {xs:10, sm: 11, md: 11, lg: 12, xl: 12},  
+        pt: {xs:10, sm: 11, md: 13, lg: 13, xl: 15},  
       }}
     >      
       <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
-        <Grid item lg={3.5}>
+        <Grid item md={12} lg={3.5}>
           <Introduction/>
         </Grid>
-        <Grid item lg={5} sx={{height: "100%", my: "auto"}}>
+        <Grid item md={12} lg={5} sx={{height: "100%", my: "auto"}}>
           <ProjectSelection projects={projects} setActiveProject={setActiveProject} setIsHovered={setIsHovered} activeProject={activeProject}/>
         </Grid>
-        <Grid item lg={3.5}></Grid>
+        <Grid item md={0} lg={3.5}></Grid>
       </Grid>
 
       {/* background  */}
