@@ -4,12 +4,12 @@ const Introduction = () => {
 
   return (
     <Grid container sx={{pr: {md: 0, lg: 0, xl: 0}, }}>
-      <Grid item xs={12} sm={4.5} md={12} lg={12} xl={8.5}>
+      <Grid item xs={12} sm={12} md={12} lg={12} xl={8.5}>
         <Typography 
           variant="h2" 
           align="left" 
           fontWeight={400}
-          fontSize={{xs: 35, sm: 45, md: 55, lg: 55, xl: 65}} 
+          fontSize={{xs: 35, sm: 58, md: 60, lg: 55, xl: 65}} 
           letterSpacing={{xs: .5, lg:1}}
           lineHeight={{xs:1.1}} 
           textTransform="none"
@@ -20,11 +20,11 @@ const Introduction = () => {
           My <Box component="br" sx={{display: {xs: "none", lg: "initial"}}}></Box>Projects
         </Typography>
       </Grid>
-      <Grid item xs={12} sm={6.5} md={7.5} lg={9} xl={8.5} mt={{xs: 1.25, sm: 1.25, md:4, lg: 6}} ml={{sm:.25, md: .25}}>
+      <Grid item xs={12} sm={7.25} md={7.5} lg={9} xl={8.5} mt={{xs: 1.25, sm: 6, md:9, lg: 6}} ml={{sm:.25, md: .25}}>
         <Typography 
           variant="body1" 
           sx={{
-            fontSize: {xs: 11.5, sm: 14.5, md: 14, lg:14, xl: 15},
+            fontSize: {xs: 11.5, sm: 13, md: 14, lg:14, xl: 15},
             fontWeight: 300,
             opacity: .5,
             letterSpacing: .4,
