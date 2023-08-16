@@ -24,14 +24,14 @@ const Introduction = () => {
         <Typography 
           variant="body1" 
           sx={{
-            fontSize: {xs: 11.5, sm: 13, md: 14, lg:14, xl: 15},
+            fontSize: {xs: 10, sm: 13, md: 14, lg:14, xl: 15},
             fontWeight: 300,
             opacity: .5,
             letterSpacing: .4,
             textShadow: "1px 1px 5px rgba(10,10,10,.75)",
             borderLeft: 2,
             borderColor: {xs:"primary.main", lg: "transparent"},
-            pl: {xs: 1, lg: 0},
+            pl: {xs: .75, sm: 1, lg: 0},
             ml: {xs: .15, lg: 0},
           }}        
         >
