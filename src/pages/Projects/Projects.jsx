@@ -320,7 +320,7 @@ const MainPage = ({ projects }) => {
         <Grid item md={12} lg={3.5}>
           <Introduction/>
         </Grid>
-        <Grid item md={6} lg={5} sx={{height: "100%", my: "auto"}} pt={{xs: 4, sm: 6, md: 8, lg: 0}} pl={{md: 1, lg: 0}} mr={{xs: "auto", lg: "initial"}}>
+        <Grid item md={6} lg={5} sx={{height: "100%", my: "auto"}} pt={{xs: 3, sm: 6, md: 8, lg: 0}} pl={{md: 1, lg: 0}} mr={{xs: "auto", lg: "initial"}}>
           <ProjectSelection projects={projects} setActiveProject={setActiveProject} setIsHovered={setIsHovered} activeProject={activeProject}/>
         </Grid>
         <Grid item md={0} lg={3.5}></Grid>
@@ -332,7 +332,7 @@ const MainPage = ({ projects }) => {
           <Grid item xs={0} lg={3}></Grid>
           <Grid 
             item 
-            xs={8}
+            xs={8.5}
             sm={8} 
             md={9} 
             lg={6} 
@@ -357,29 +357,29 @@ const MainPage = ({ projects }) => {
             ></Grid>
           <Grid 
             item 
-            xs={4}
+            xs={3.5}
             sm={4}
             md={3}
             lg={3} 
             align="right" 
             sx={{
-              height: {xs: "88vh", lg:"95vh"}, 
+              height: {xs: "95vh", sm: "95vh", md: "95vh", lg:"95vh"}, 
               display: "flex", 
               flexDirection: "column",
               alignItems: "flex-end", 
               justifyContent: "flex-end", 
               zIndex: -2,
-              pb: {xs:10, sm: 11, md: 11, lg: 12, xl: 12},
+              pb: {xs:3, sm: 8, md: 8, lg: 12, xl: 12},
             }}
           >
-            <Box sx={{opacity: .75, width: {lg: 250, xl: 280}, height: "auto"}}>
+            <Box sx={{opacity: {xs: .4, sm:.75}, width: {xs: 160, sm: 225, md: 270, lg: 270, xl: 280}, height: "auto"}}>
               <Image src={projects[activeProject].logo} duration={200}/>
             </Box>
-            <Box sx={{mt: 5, borderRight: 2, borderColor: "primary.dark", pr: 1}}>
+            <Box sx={{mt: 5, borderRight: 2, borderColor: "primary.dark", pr: 1, display: {xs: "none", sm: "initial"}}}>
               <Typography 
                 variant="body2"
                 sx={{
-                  fontSize: {xs: 13, sm: 13.5, md: 14, lg:14, xl: 15.5},
+                  fontSize: {xs: 10, sm: 12, md: 13, lg:14, xl: 15.5},
                   fontWeight: 300,
                   opacity: .65,
                   letterSpacing: .3,

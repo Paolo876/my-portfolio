@@ -30,7 +30,7 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
           opacity: .4,
           letterSpacing: .5,
           my: {xs: .25, sm: .75, md: 2, lg: .5, xl:1.5}, 
-          py: {xs:.5, sm:1},
+          py: {xs:.25, sm:1},
           position: "relative",
           "&::before": {
             content: '""',
