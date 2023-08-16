@@ -320,7 +320,7 @@ const MainPage = ({ projects }) => {
         <Grid item md={12} lg={3.5}>
           <Introduction/>
         </Grid>
-        <Grid item md={6} lg={5} sx={{height: "100%", my: "auto"}} pt={{xs: 3, sm: 6, md: 8, lg: 0}} pl={{md: 1, lg: 0}} mr={{xs: "auto", lg: "initial"}}>
+        <Grid item md={6} lg={5} sx={{height: "100%", my: "auto"}} pt={{xs: 1.5, sm: 6, md: 8, lg: 0}} pl={{md: 1, lg: 0}} mr={{xs: "auto", lg: "initial"}}>
           <ProjectSelection projects={projects} setActiveProject={setActiveProject} setIsHovered={setIsHovered} activeProject={activeProject}/>
         </Grid>
         <Grid item md={0} lg={3.5}></Grid>
@@ -332,7 +332,7 @@ const MainPage = ({ projects }) => {
           <Grid item xs={0} lg={3}></Grid>
           <Grid 
             item 
-            xs={8.5}
+            xs={7}
             sm={8} 
             md={9} 
             lg={6} 
@@ -340,8 +340,9 @@ const MainPage = ({ projects }) => {
               background: "rgba(45,45,45,.2)", 
               height: "100vh", 
               width: "100%", 
-              transform: {xs:"skewX(-5deg) translateX(-50px)", sm:"skewX(-5deg) translateX(-50px)", md:"skewX(-7deg) translateX(-120px)", lg:"skewX(-7deg)"},
+              transform: {xs:"skewX(-5deg) translateX(-0px)", sm:"skewX(-5deg) translateX(-50px)", md:"skewX(-7deg) translateX(-120px)", lg:"skewX(-7deg)"},
               position: "relative",
+              mixBlendMode: "difference",
               "&:before": {
                 content: '""',
                 position: "absolute",
@@ -351,13 +352,13 @@ const MainPage = ({ projects }) => {
                 width: "100%",
                 background: "rgba(45,45,45,.2)", 
                 display: {md: "none"},
-                transform: {sm:"translateX(-100%)"},
+                transform: {xs:"translateX(-100%)"},
               }
             }}
             ></Grid>
           <Grid 
             item 
-            xs={3.5}
+            xs={5}
             sm={4}
             md={3}
             lg={3} 
@@ -369,19 +370,19 @@ const MainPage = ({ projects }) => {
               alignItems: "flex-end", 
               justifyContent: "flex-end", 
               zIndex: -2,
-              pb: {xs:3, sm: 8, md: 8, lg: 12, xl: 12},
+              pb: {xs:3.5, sm: 8, md: 8, lg: 12, xl: 12},
             }}
           >
-            <Box sx={{opacity: {xs: .4, sm:.75}, width: {xs: 160, sm: 225, md: 270, lg: 270, xl: 280}, height: "auto"}}>
+            <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 270, lg: 270, xl: 280}, height: "auto"}}>
               <Image src={projects[activeProject].logo} duration={200}/>
             </Box>
-            <Box sx={{mt: 5, borderRight: 2, borderColor: "primary.dark", pr: 1, display: {xs: "none", sm: "initial"}}}>
+            <Box sx={{mt: {xs:1.5, sm: 2.5, md:5}, borderRight: 2, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
               <Typography 
                 variant="body2"
                 sx={{
-                  fontSize: {xs: 10, sm: 12, md: 13, lg:14, xl: 15.5},
+                  fontSize: {xs: 9.5, sm: 12, md: 13, lg:14, xl: 15.5},
                   fontWeight: 300,
-                  opacity: .65,
+                  opacity: {xs: .5, sm:.65},
                   letterSpacing: .3,
                   lineHeight: 1.4,
                   textShadow: "1px 1px 5px rgba(10,10,10,.75)",

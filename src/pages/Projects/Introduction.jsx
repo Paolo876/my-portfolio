@@ -9,7 +9,7 @@ const Introduction = () => {
           variant="h2" 
           align="left" 
           fontWeight={400}
-          fontSize={{xs: 35, sm: 58, md: 60, lg: 55, xl: 65}} 
+          fontSize={{xs: 34, sm: 58, md: 60, lg: 55, xl: 65}} 
           letterSpacing={{xs: .5, lg:1}}
           lineHeight={{xs:1.1}} 
           textTransform="none"
@@ -20,7 +20,7 @@ const Introduction = () => {
           My <Box component="br" sx={{display: {xs: "none", lg: "initial"}}}></Box>Projects
         </Typography>
       </Grid>
-      <Grid item xs={12} sm={7.25} md={7.5} lg={9} xl={8.5} mt={{xs: 3, sm: 6, md:9, lg: 6}} ml={{sm:.25, md: .25}}>
+      <Grid item xs={12} sm={7.25} md={7.5} lg={9} xl={8.5} mt={{xs: 3.5, sm: 6, md:9, lg: 6}} ml={{sm:.25, md: .25}}>
         <Typography 
           variant="body1" 
           sx={{
