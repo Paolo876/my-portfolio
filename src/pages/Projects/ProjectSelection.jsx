@@ -9,7 +9,7 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
 
   return (
     <List>
-    {projects.map((item, index) => <ListItem key={item.name} >
+    {projects.map((item, index) => <ListItem key={item.name} sx={{px: {xs:1, sm: 1.5,}}}>
       <ListItemButton 
         className={index === activeProject ? "active" : ""}
         disableRipple
@@ -23,14 +23,14 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
           display: "flex", 
           justifyContent: {lg:"center"},
           textTransform: "none",
-          fontSize: {xs: 18, sm: 24, md: 28, lg:25, xl: 30},
+          fontSize: {xs: 16, sm: 24, md: 28, lg:25, xl: 30},
           fontWeight: 300,
           textShadow: "1px 1px 5px rgba(10,10,10,.75)",
           transition: "all 450ms ease",
           opacity: .4,
           letterSpacing: .5,
-          my: {xs: 0, m: .5, md: 1, lg: .5, xl:1.5}, 
-          py: {sm:1},
+          my: {xs: .25, sm: .75, md: 2, lg: .5, xl:1.5}, 
+          py: {xs:.5, sm:1},
           position: "relative",
           "&::before": {
             content: '""',
@@ -52,7 +52,7 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
             mixBlendMode: "initial", 
             letterSpacing: 1,
             "&::before": {
-              width: {sm: 20, lg:40},
+              width: {xs: 15, sm: 20, lg:40},
               backgroundColor: "primary.main",
             }
           }

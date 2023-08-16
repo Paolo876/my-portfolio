@@ -329,9 +329,10 @@ const MainPage = ({ projects }) => {
       {/* background  */}
       <Box sx={{position: "fixed", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1, px: { xs:1.75, sm: 3, md: 4, lg: 5 }}}>
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
-          <Grid item md={0} lg={3}></Grid>
+          <Grid item xs={0} lg={3}></Grid>
           <Grid 
             item 
+            xs={8}
             sm={8} 
             md={9} 
             lg={6} 
@@ -339,7 +340,7 @@ const MainPage = ({ projects }) => {
               background: "rgba(45,45,45,.2)", 
               height: "100vh", 
               width: "100%", 
-              transform: {sm:"skewX(-5deg) translateX(-50px)", md:"skewX(-7deg) translateX(-120px)", lg:"skewX(-7deg)"},
+              transform: {xs:"skewX(-5deg) translateX(-50px)", sm:"skewX(-5deg) translateX(-50px)", md:"skewX(-7deg) translateX(-120px)", lg:"skewX(-7deg)"},
               position: "relative",
               "&:before": {
                 content: '""',
@@ -356,6 +357,7 @@ const MainPage = ({ projects }) => {
             ></Grid>
           <Grid 
             item 
+            xs={4}
             sm={4}
             md={3}
             lg={3} 
