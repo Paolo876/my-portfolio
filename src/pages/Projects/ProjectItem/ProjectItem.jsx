@@ -26,6 +26,15 @@ const ProjectItem = ({ projects }) => {
       description="I am a full stack web developer based in Los Angeles, California"
       keyword="react, reactjs, redux, next, nextjs, node, nodejs, mern, express, expressjs, mongodb, sequelize, mysql, developer, fullstack developer, full stack developer, javascript"
     />
+    <Box
+      sx={{
+        height: "100vh",
+        width: "100%",
+        position: "relative", 
+        // px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
+        pt: {xs:8, sm: 11, md: 13, lg: 13, xl: 15},  
+      }}
+    > 
     <Grid 
       container 
       sx={{
@@ -38,11 +47,12 @@ const ProjectItem = ({ projects }) => {
         top: 0,
         left: "50%",
         transform:"translateX(-50%)",
-        px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
+        px: { xs:1.75, sm: 3, md: 4, lg: 5, xl: 0 }, 
+
         pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14}
       }}
     >
-      <Grid item xs={3}>
+      <Grid item xs={3} xl={2}>
         <List>
           {projects.map(item => <ListItem key={item.name} dense disablePadding disableGutters>
             <ListItemButton 
@@ -56,25 +66,28 @@ const ProjectItem = ({ projects }) => {
                 display: "flex", 
                 justifyContent: "left",
                 textTransform: "none",
-                fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 22},
+                fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 18},
                 fontWeight: 300,
                 textShadow: "1px 1px 5px rgba(10,10,10,.75)",
                 transition: "all 150ms ease",
                 opacity: .4, 
                 mixBlendMode: "difference",
-                my: 2, 
+                my: 1, 
                 position: "relative",
-                "&::before": {
-                  content: '""',
-                  position: "absolute",
-                  height: 3,
-                  width: 0,
-                  backgroundColor: "primary.main",
-                  bottom: "50%",
-                  left: -15,
-                  transform: "translateX(-50%)",
-                  transition: "all 200ms ease"
-                },
+                borderTop: 2,
+                borderBottom: 2,
+                borderColor: "transparent",
+                // "&::before": {
+                //   content: '""',
+                //   position: "absolute",
+                //   height: 3,
+                //   width: 0,
+                //   backgroundColor: "primary.main",
+                //   bottom: "50%",
+                //   left: -15,
+                //   transform: "translateX(-50%)",
+                //   transition: "all 200ms ease"
+                // },
                 "&:hover": {
                   opacity: .9,
                   fontWeight: 500,
@@ -84,13 +97,15 @@ const ProjectItem = ({ projects }) => {
                 "&.active": {
                   opacity: 1,
                   fontWeight: 600,
-                  fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 23},
+                  // fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 23},
                   transform: "scale(1.015)",
                   mixBlendMode: "initial",
-                  "&::before": {
-                    width: 13,
-                    backgroundColor: "primary.main",
-                  }
+                  borderTop: 2,
+                  borderBottom: 2,
+                  // "&::before": {
+                  //   width: 13,
+                  //   backgroundColor: "primary.main",
+                  // }
                 }
                 }}>
               {item.title}
@@ -99,7 +114,7 @@ const ProjectItem = ({ projects }) => {
         </List>
       </Grid>
 
-      <Grid item xs={9}></Grid>     
+      <Grid item xs={9} xl={10}></Grid>     
     </Grid>
 
     {/* content */}
@@ -123,13 +138,14 @@ const ProjectItem = ({ projects }) => {
     
 
       {/* background  */}
-      <Box sx={{position: "fixed", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1}}>
+      {/* <Box sx={{position: "fixed", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1}}>
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
           <Grid item xl={3}></Grid>
           <Grid item xl={6} sx={{background: "rgba(100,100,100, .15)", height: "100vh", width: "100%", transform: "skewX(-7deg) translateX(-100%)", boxShadow: 2}}></Grid>
           <Grid item xl={3} align="right" sx={{background: "", height: "75vh", display: "flex", alignItems: "flex-end", justifyContent: "flex-end", zIndex: -2}}>
           </Grid>
         </Grid>
+      </Box> */}
       </Box>
     </>
   )
