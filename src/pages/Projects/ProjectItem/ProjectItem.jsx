@@ -52,7 +52,7 @@ const ProjectItem = ({ projects }) => {
         pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14}
       }}
     >
-      <Grid item xs={3} xl={2}>
+      <Grid item xs={3} xl={2.5}>
         <List>
           {projects.map(item => <ListItem key={item.name} dense disablePadding disableGutters>
             <ListItemButton 
@@ -72,11 +72,15 @@ const ProjectItem = ({ projects }) => {
                 transition: "all 150ms ease",
                 opacity: .4, 
                 mixBlendMode: "difference",
-                my: 1, 
+                my: 1.5, 
                 position: "relative",
-                borderTop: 2,
-                borderBottom: 2,
-                borderColor: "transparent",
+                // borderTop: 2,
+                // borderBottom: 2,
+                borderLeft: 2,
+                borderColor: "rgba(100,100,100,.75)",
+                px: {xs: 1, md:1.5},
+                py: .1,
+
                 // "&::before": {
                 //   content: '""',
                 //   position: "absolute",
@@ -91,17 +95,22 @@ const ProjectItem = ({ projects }) => {
                 "&:hover": {
                   opacity: .9,
                   fontWeight: 500,
-                  transform: "scale(1.015)",
+                  transform: "scale(1.025)",
                   background: "none",
                 },
                 "&.active": {
                   opacity: 1,
                   fontWeight: 600,
                   // fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 23},
-                  transform: "scale(1.015)",
+                  // transform: "scale(1.015)",
+                  transform: "scale(1.04) translateX(5px)",
+                  textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+
+                  borderColor: "primary.main",
+                  // borderLeft: 3, 
                   mixBlendMode: "initial",
-                  borderTop: 2,
-                  borderBottom: 2,
+                  // borderTop: 2,
+                  // borderBottom: 2,
                   // "&::before": {
                   //   width: 13,
                   //   backgroundColor: "primary.main",
@@ -114,7 +123,7 @@ const ProjectItem = ({ projects }) => {
         </List>
       </Grid>
 
-      <Grid item xs={9} xl={10}></Grid>     
+      <Grid item xs={9} xl={9.5}></Grid>     
     </Grid>
 
     {/* content */}
