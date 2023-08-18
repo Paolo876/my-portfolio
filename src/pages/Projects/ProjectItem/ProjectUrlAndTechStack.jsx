@@ -84,33 +84,33 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
             <Box component="span">Git Repo</Box>
           </IconButton> 
         </Box>
-    </Grid>
-
-    <Grid item xl={6.5} align="right">    
-      <Grid container sx={{mt: {xl: 2.5}, justifyContent: "end"}}>
-        {projectTechnologies.map(item => <Grid item xs={2.4} sm={2.1} md={2.4} key={item.name} align="right">
-          <Tooltip 
-            title={<Typography variant="body1" fontSize={12} fontWeight={300} letterSpacing={.4} px={.25}>{item.name}</Typography>} 
-            arrow
-            placement="bottom"
-            enterDelay={500}
-            enterNextDelay={250}
-          >
-            <Box sx={skillIconStyles} variant="outlined">
-              <Box height={{xs: 25, sm: 40, md:45, lg:50, xl: 30}} width="auto">
-                <SkillIconImageItem 
-                  src={item.monoUrl} 
-                  duration={500} 
-                  objectFit='scale-down'
-                  sx={{filter: "invert(1) brightness(1.1)"}}
-                  />
-              </Box>
-            </Box>
-          </Tooltip>
-        </Grid>)}
       </Grid>
-    </Grid>
-  </Grid>  
+
+      <Grid item xl={6.5} align="right">    
+        <Grid container sx={{mt: {xl: 2.5}, justifyContent: "end"}}>
+          {projectTechnologies.map(item => <Grid item xs={2.4} sm={2.1} md={2.4} key={item.name} align="right">
+            <Tooltip 
+              title={<Typography variant="body1" fontSize={12} fontWeight={300} letterSpacing={.4} px={.25}>{item.name}</Typography>} 
+              arrow
+              placement="bottom"
+              enterDelay={500}
+              enterNextDelay={250}
+            >
+              <Box sx={skillIconStyles} variant="outlined">
+                <Box height={{xs: 25, sm: 40, md:45, lg:50, xl: 30}} width="auto">
+                  <SkillIconImageItem 
+                    src={item.monoUrl} 
+                    duration={500} 
+                    objectFit='scale-down'
+                    sx={{filter: "invert(1) brightness(1.1)"}}
+                    />
+                </Box>
+              </Box>
+            </Tooltip>
+          </Grid>)}
+        </Grid>
+      </Grid>
+    </Grid>  
   )
 }
 

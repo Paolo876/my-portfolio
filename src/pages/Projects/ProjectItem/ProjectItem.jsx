@@ -31,7 +31,6 @@ const ProjectItem = ({ projects }) => {
         height: "100vh",
         width: "100%",
         position: "relative", 
-        // px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
         pt: {xs:8, sm: 11, md: 13, lg: 13, xl: 15},  
       }}
     > 
@@ -109,17 +108,15 @@ const ProjectItem = ({ projects }) => {
     <Grid 
       container 
       sx={{
-        justifyContent: "center", 
+        justifyContent: "space-between", 
         alignItems: "flex-start", 
         maxWidth: "1500px", 
         mx: "auto", 
         maxHeight: "100vh", 
-        px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
-        pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14}
       }}
     >
-      <Grid item xs={3}></Grid>
-      <Grid item xs={9} sx={{pl: {lg: 5, xl: 10} }}>
+      <Grid item xs={3} xl={2.5}></Grid>
+      <Grid item xs={9} xl={9.15} >
         {project && <ProjectItemContent project={project}/>}
       </Grid>   
     </Grid>

@@ -22,7 +22,7 @@ const ProjectItemContent = ( { project }) => {
           variant="h2" 
           align="left" 
           fontWeight={400}
-          fontSize={{xs: 35, sm: 45, md: 60, lg: 65, xl: 70}} 
+          fontSize={{xs: 34, sm: 58, md: 60, lg: 55, xl: 65}} 
           letterSpacing={{xs: .5, xl:1}}
           lineHeight={{xs:1}} 
           textTransform="none"
@@ -35,13 +35,14 @@ const ProjectItemContent = ( { project }) => {
       </Grid>
 
       {/* description */}
-      <Grid item xs={12} sx={{mt: {xl: 6}}}>
+      <Grid item xs={12} xl={11} sx={{mt: {xl: 8}}}>
         <Typography 
           variant="body1" 
           sx={{
-            fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:15, xl: 17},
+            fontSize: {xs: 10, sm: 13, md: 14, lg:14, xl: 15},
             fontWeight: 300,
-            opacity: .55,
+            fontWeight: 300,
+            opacity: .5,
             letterSpacing: .25,
             textShadow: "1px 1px 5px rgba(10,10,10,.75)",
           }}        
@@ -51,7 +52,7 @@ const ProjectItemContent = ( { project }) => {
       </Grid>
 
       {/* url & tech stack */}
-      <Grid item xl={12} sx={{mt: {xl: 10}}}>
+      <Grid item xl={12} sx={{mt: {xl: 15}}}>
         <ProjectUrlAndTechStack technologies={project.technologies} url={project.url} githubUrl={project.githubUrl}/>
       </Grid>
 
