@@ -95,7 +95,7 @@ const ProjectItem = ({ projects }) => {
                 "&:hover": {
                   opacity: .9,
                   fontWeight: 500,
-                  transform: "scale(1.025)",
+                  transform: "scale(1.02) translateX(2px)",
                   background: "none",
                 },
                 "&.active": {
