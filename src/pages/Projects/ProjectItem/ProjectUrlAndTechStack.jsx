@@ -34,9 +34,9 @@ const urlButtonStyles = {
   py: .5,
   px: {xs: 1, lg:2},
   transition: "all 250ms ease-in-out",
-  letterSpacing: .5,
+  letterSpacing: .25,
   opacity: .7,
-  fontSize: {xs: 16, sm: 17, md: 18, lg: 20, xl: 21},
+  fontSize: {xs: 16, sm: 17, md: 18, lg: 19, xl: 19},
   fontWeight: 400,
   "&:hover":{
     opacity:1,
@@ -54,7 +54,7 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
 
   
   return (
-    <Grid container>
+    <Grid container sx={{justifyContent: "space-between"}}>
       <Grid item xs={12}>
         <Typography 
           variant="h4" 
@@ -71,22 +71,22 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
           Main Tech Stack
         </Typography>
       </Grid>
-      <Grid item xl={5.5} sx={{display: "flex", gap: 5, flexDirection: "column", mt: 4, }}>
+      <Grid item xl={5.5} sx={{display: "flex", gap: 3, flexDirection: "column", mt: 6, }}>
         <Box>
           <IconButton size="small" href={url} target='_blank'sx={urlButtonStyles} disableRipple>
-            <PublicIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 25}}} />
+            <PublicIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 23}}} />
             <Box component="span">Web Demo</Box>
           </IconButton> 
         </Box>
         <Box>
           <IconButton size="small" href={githubUrl} target='_blank' sx={urlButtonStyles} disableRipple>
-            <GitHubIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 25}}} />
+            <GitHubIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 23}}} />
             <Box component="span">Git Repo</Box>
           </IconButton> 
         </Box>
       </Grid>
 
-      <Grid item xl={6.5} align="right">    
+      <Grid item xl={5} align="right">    
         <Grid container sx={{mt: {xl: 2.5}, justifyContent: "end"}}>
           {projectTechnologies.map(item => <Grid item xs={2.4} sm={2.1} md={2.4} key={item.name} align="right">
             <Tooltip 

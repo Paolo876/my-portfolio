@@ -65,13 +65,14 @@ const ProjectItem = ({ projects }) => {
                 display: "flex", 
                 justifyContent: "left",
                 textTransform: "none",
-                fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 18},
+                fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 17},
                 fontWeight: 300,
                 textShadow: "1px 1px 5px rgba(10,10,10,.75)",
                 transition: "all 150ms ease",
                 opacity: .4, 
                 mixBlendMode: "difference",
-                my: 1.3, 
+                my: 1.1, 
+                letterSpacing: .25,
                 position: "relative",
                 borderLeft: 2,
                 borderColor: "rgba(100,100,100,.75)",
@@ -83,7 +84,7 @@ const ProjectItem = ({ projects }) => {
                   transform: "scale(1.02) translateX(2px)",
                   background: "none",
                   borderColor: "primary.dark",
-
+                  letterSpacing: .5,
                 },
                 "&.active": {
                   opacity: 1,
@@ -93,8 +94,10 @@ const ProjectItem = ({ projects }) => {
                   borderLeft: 3, 
                   borderColor: "primary.main",
                   mixBlendMode: "initial",
+                  letterSpacing: .5,
                 }
-                }}>
+              }}
+            >
               {item.title}
             </ListItemButton>
           </ListItem>)}

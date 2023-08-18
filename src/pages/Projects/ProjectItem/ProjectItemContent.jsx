@@ -5,7 +5,7 @@ import ProjectFeatures from './ProjectFeatures';
 import ProjectImages from './ProjectImages';
 import ImageModal from './ImageModal';
 import Footer from './Footer';
-
+import Image from 'mui-image';
 
 const ProjectItemContent = ( { project }) => {
   const [ showModal, setShowModal ] = useState({isVisible: false, imageName: null});
@@ -14,50 +14,67 @@ const ProjectItemContent = ( { project }) => {
     setShowModal({ isVisible: true, imageName })
   }
   
-
   return (
     <Grid container>
       <Grid item xs={12}>
-        <Typography 
-          variant="h2" 
-          align="left" 
-          fontWeight={400}
-          fontSize={{xs: 34, sm: 58, md: 60, lg: 55, xl: 65}} 
-          letterSpacing={{xs: .5, xl:1}}
-          lineHeight={{xs:1}} 
-          textTransform="none"
+        <Grid 
+        container
           sx={{
-            textShadow: "1px 1px 7px rgba(10,10,10,.75)",
+            justifyContent: "space-between", 
+            alignItems: "flex-start", 
           }}
         >
-          {project.title}
-        </Typography>
-      </Grid>
+          <Grid item xl={12}>
+            <Typography 
+              variant="h2" 
+              align="left" 
+              fontWeight={400}
+              fontSize={{xs: 34, sm: 58, md: 60, lg: 55, xl: 65}} 
+              letterSpacing={{xs: .5, xl:1}}
+              lineHeight={{xs:1}} 
+              textTransform="none"
+              sx={{
+                textShadow: "1px 1px 7px rgba(10,10,10,.75)",
+              }}
+            >
+              {project.title}
+            </Typography>
+          </Grid>
 
-      {/* description */}
-      <Grid item xs={12} xl={11} sx={{mt: {xl: 8}}}>
-        <Typography 
-          variant="body1" 
-          sx={{
-            fontSize: {xs: 10, sm: 13, md: 14, lg:14, xl: 15},
-            fontWeight: 300,
-            fontWeight: 300,
-            opacity: .5,
-            letterSpacing: .25,
-            textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-          }}        
-        >
-          {project.description}
-        </Typography>
+          <Grid item xl={5} sx={{mt: {xl: 6}}}>
+            <Typography 
+              variant="body1" 
+              sx={{
+                fontSize: {xs: 10, sm: 13, md: 14, lg:14, xl: 15},
+                fontWeight: 300,
+                fontWeight: 300,
+                opacity: .5,
+                letterSpacing: .25,
+                lineHeight: 1.4,
+                textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+                borderLeft: 2,
+                pl: 1.25,
+                borderColor: "primary.dark"
+              }}        
+            >
+              {project.description}
+            </Typography>
+          </Grid>
+          <Grid item xs={12} xl={3}>
+            <Box sx={{height: "auto", width: "auto", maxWidth: 300, maxHeight: 300, ml: "auto"}}>
+              <Image src={project.logo}/>
+            </Box>
+          </Grid>
+        </Grid>
       </Grid>
 
       {/* url & tech stack */}
-      <Grid item xl={12} sx={{mt: {xl: 15}}}>
+      <Grid item xl={12} sx={{mt: {xl: 30}}}>
         <ProjectUrlAndTechStack technologies={project.technologies} url={project.url} githubUrl={project.githubUrl}/>
       </Grid>
 
       {/* Features */}
-      <Grid item xl={12} sx={{mt: {xl: 16}}}>
+      <Grid item xl={12} sx={{mt: {xl: 28}}}>
         <ProjectFeatures coverImage={project.coverImage} features={project.features} handleImageClick={handleImageClick}/>
       </Grid>
 
