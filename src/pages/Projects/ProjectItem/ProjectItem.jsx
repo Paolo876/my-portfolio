@@ -72,49 +72,28 @@ const ProjectItem = ({ projects }) => {
                 transition: "all 150ms ease",
                 opacity: .4, 
                 mixBlendMode: "difference",
-                my: 1.5, 
+                my: 1.3, 
                 position: "relative",
-                // borderTop: 2,
-                // borderBottom: 2,
                 borderLeft: 2,
                 borderColor: "rgba(100,100,100,.75)",
                 px: {xs: 1, md:1.5},
                 py: .1,
-
-                // "&::before": {
-                //   content: '""',
-                //   position: "absolute",
-                //   height: 3,
-                //   width: 0,
-                //   backgroundColor: "primary.main",
-                //   bottom: "50%",
-                //   left: -15,
-                //   transform: "translateX(-50%)",
-                //   transition: "all 200ms ease"
-                // },
                 "&:hover": {
                   opacity: .9,
                   fontWeight: 500,
                   transform: "scale(1.02) translateX(2px)",
                   background: "none",
+                  borderColor: "primary.dark",
+
                 },
                 "&.active": {
                   opacity: 1,
                   fontWeight: 600,
-                  // fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 23},
-                  // transform: "scale(1.015)",
                   transform: "scale(1.04) translateX(5px)",
                   textShadow: "1px 1px 3px rgba(100,100,100,.75)",
-
+                  borderLeft: 3, 
                   borderColor: "primary.main",
-                  // borderLeft: 3, 
                   mixBlendMode: "initial",
-                  // borderTop: 2,
-                  // borderBottom: 2,
-                  // "&::before": {
-                  //   width: 13,
-                  //   backgroundColor: "primary.main",
-                  // }
                 }
                 }}>
               {item.title}
