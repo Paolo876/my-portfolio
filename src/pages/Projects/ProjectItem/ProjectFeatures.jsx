@@ -12,7 +12,7 @@ const ProjectFeatures = ({ coverImage, features, handleImageClick }) => {
           variant="h4" 
           align="left" 
           fontWeight={400}
-          fontSize={{xs: 35, sm: 45, md: 60, lg: 65, xl: 25}} 
+          fontSize={{xs: 21, sm: 22, md: 23, lg: 24, xl: 25}} 
           letterSpacing={{xs: .5, xl:1}}
           lineHeight={{xs:1}} 
           textTransform="none"
@@ -42,11 +42,11 @@ const ProjectFeatures = ({ coverImage, features, handleImageClick }) => {
               Features:
             </Typography> */}
             <Box component="ul" sx={{mt: 4}}>
-              {features.map(item => <Box component="li" ml={2.5} pb={1} key={item}>
+              {features.map(item => <Box component="li" ml={2.5} pb={{lg: .5, xl: 1}} key={item}>
                 <Typography 
                   variant="body1" 
                   sx={{
-                    fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:15, xl: 15},
+                    fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:14, xl: 15},
                     fontWeight: 300,
                     opacity: .5,
                     letterSpacing: .25,

@@ -41,7 +41,7 @@ const ProjectItemContent = ( { project }) => {
             </Typography>
           </Grid>
 
-          <Grid item lg={5} xl={5} sx={{mt: {lg: 6, xl: 6}}}>
+          <Grid item lg={7} xl={5} sx={{mt: {lg: 6, xl: 6}}}>
             <Typography 
               variant="body1" 
               sx={{
@@ -60,7 +60,7 @@ const ProjectItemContent = ( { project }) => {
               {project.description}
             </Typography>
           </Grid>
-          <Grid item xs={12} lg={3} xl={3}>
+          <Grid item xs={12} lg={4} xl={3}>
             <Box sx={{height: "auto", width: "auto", maxWidth: 300, maxHeight: 300, ml: "auto"}}>
               <Image src={project.logo} fit='cover'/>
             </Box>
@@ -69,23 +69,23 @@ const ProjectItemContent = ( { project }) => {
       </Grid>
 
       {/* url & tech stack */}
-      <Grid item xl={12} sx={{mt: {lg: 22, xl: 30}}}>
+      <Grid item lg={12} sx={{mt: {lg: 18, xl: 30}}}>
         <ProjectUrlAndTechStack technologies={project.technologies} url={project.url} githubUrl={project.githubUrl}/>
       </Grid>
 
       {/* Features */}
-      <Grid item xl={12} sx={{mt: {xl: 28}}}>
+      <Grid item lg={12} sx={{mt: {lg: 16, xl: 28}}}>
         <ProjectFeatures coverImage={project.coverImage} features={project.features} handleImageClick={handleImageClick}/>
       </Grid>
 
       {/* Images */}
-      <Grid item xl={12} sx={{mt: {xl: 10}}}>
+      <Grid item xl={12} sx={{mt: {lg: 8, xl: 10}}}>
         <ProjectImages images={project.images} handleImageClick={handleImageClick}/>
       </Grid>
 
 
       {/* Footer */}
-      <Grid item xl={12} sx={{mt: {xl: 20}}}>
+      <Grid item xl={12} sx={{mt: {lg: 18, xl: 20}}}>
         <Divider/>
         <Footer/>
       </Grid>
