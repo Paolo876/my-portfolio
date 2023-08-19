@@ -24,7 +24,7 @@ const ProjectItemContent = ( { project }) => {
             alignItems: "flex-start", 
           }}
         >
-          <Grid item xl={12}>
+          <Grid item xs={12}>
             <Typography 
               variant="h2" 
               align="left" 
@@ -41,7 +41,7 @@ const ProjectItemContent = ( { project }) => {
             </Typography>
           </Grid>
 
-          <Grid item xl={5} sx={{mt: {xl: 6}}}>
+          <Grid item lg={5} xl={5} sx={{mt: {lg: 6, xl: 6}}}>
             <Typography 
               variant="body1" 
               sx={{
@@ -60,16 +60,16 @@ const ProjectItemContent = ( { project }) => {
               {project.description}
             </Typography>
           </Grid>
-          <Grid item xs={12} xl={3}>
+          <Grid item xs={12} lg={3} xl={3}>
             <Box sx={{height: "auto", width: "auto", maxWidth: 300, maxHeight: 300, ml: "auto"}}>
-              <Image src={project.logo}/>
+              <Image src={project.logo} fit='cover'/>
             </Box>
           </Grid>
         </Grid>
       </Grid>
 
       {/* url & tech stack */}
-      <Grid item xl={12} sx={{mt: {xl: 30}}}>
+      <Grid item xl={12} sx={{mt: {lg: 22, xl: 30}}}>
         <ProjectUrlAndTechStack technologies={project.technologies} url={project.url} githubUrl={project.githubUrl}/>
       </Grid>
 

@@ -60,7 +60,7 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
           variant="h4" 
           align="right" 
           fontWeight={300}
-          fontSize={{xs: 35, sm: 45, md: 60, lg: 65, xl: 25}} 
+          fontSize={{xs: 35, sm: 45, md: 60, lg: 23, xl: 25}} 
           letterSpacing={{xs: .5, xl:1}}
           lineHeight={{xs:1}} 
           textTransform="none"

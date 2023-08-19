@@ -116,6 +116,7 @@ const ProjectItem = ({ projects }) => {
         maxWidth: "1500px", 
         mx: "auto", 
         maxHeight: "100vh", 
+        px: { xs:1.75, sm: 3, md: 4, lg: 5, xl: 0 }, 
       }}
     >
       <Grid item xs={3} xl={2.5}></Grid>

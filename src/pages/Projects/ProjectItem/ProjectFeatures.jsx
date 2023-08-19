@@ -48,7 +48,7 @@ const ProjectFeatures = ({ coverImage, features, handleImageClick }) => {
                   sx={{
                     fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:15, xl: 15},
                     fontWeight: 300,
-                    opacity: .55,
+                    opacity: .5,
                     letterSpacing: .25,
                     textShadow: "1px 1px 5px rgba(10,10,10,.75)",
                   }}        
