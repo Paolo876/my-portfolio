@@ -36,7 +36,7 @@ const urlButtonStyles = {
   transition: "all 250ms ease-in-out",
   letterSpacing: .25,
   opacity: .7,
-  fontSize: {xs: 16, sm: 17, md: 18, lg: 18, xl: 19},
+  fontSize: {xs: 15, sm: 16, md: 16.5, lg: 18, xl: 19},
   fontWeight: 400,
   "&:hover":{
     opacity:1,
@@ -60,7 +60,7 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
           variant="h4" 
           align="right" 
           fontWeight={300}
-          fontSize={{xs: 35, sm: 45, md: 60, lg: 24, xl: 25}} 
+          fontSize={{xs: 18, sm: 20, md: 21, lg: 24, xl: 25}} 
           letterSpacing={{xs: .5, xl:1}}
           lineHeight={{xs:1}} 
           textTransform="none"
@@ -71,7 +71,7 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
           Main Tech Stack
         </Typography>
       </Grid>
-      <Grid item lg={6} xl={5.5} sx={{display: "flex", gap: 3, flexDirection: "column", mt: {lg: 3, xl: 6}, }}>
+      <Grid item md={4} lg={6} xl={5.5} sx={{display: "flex", gap: {md: 2, lg:3}, flexDirection: "column", mt: {md: 1.5, lg: 3, xl: 6}, }}>
         <Box>
           <IconButton size="small" href={url} target='_blank'sx={urlButtonStyles} disableRipple>
             <PublicIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 23}}} />
@@ -86,8 +86,8 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
         </Box>
       </Grid>
 
-      <Grid item lg={5} xl={5} align="right">    
-        <Grid container sx={{mt: {lg: 2, xl: 2.5}, justifyContent: "end"}}>
+      <Grid item md={7} lg={5} xl={5} align="right">    
+        <Grid container sx={{mt: {md: 2, lg: 2, xl: 2.5}, justifyContent: "end"}}>
           {projectTechnologies.map(item => <Grid item xs={2.4} sm={2.1} md={2.4} key={item.name} align="right">
             <Tooltip 
               title={<Typography variant="body1" fontSize={12} fontWeight={300} letterSpacing={.4} px={.25}>{item.name}</Typography>} 
@@ -97,7 +97,7 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
               enterNextDelay={250}
             >
               <Box sx={skillIconStyles} variant="outlined">
-                <Box height={{xs: 25, sm: 40, md:45, lg:28, xl: 30}} width="auto">
+                <Box height={{xs: 20, sm: 24, md:26, lg:28, xl: 30}} width="auto">
                   <SkillIconImageItem 
                     src={item.monoUrl} 
                     duration={500} 

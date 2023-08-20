@@ -12,7 +12,7 @@ const ProjectFeatures = ({ coverImage, features, handleImageClick }) => {
           variant="h4" 
           align="left" 
           fontWeight={400}
-          fontSize={{xs: 21, sm: 22, md: 23, lg: 24, xl: 25}} 
+          fontSize={{xs: 18, sm: 20, md: 21, lg: 24, xl: 25}} 
           letterSpacing={{xs: .5, xl:1}}
           lineHeight={{xs:1}} 
           textTransform="none"

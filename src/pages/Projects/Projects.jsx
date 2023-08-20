@@ -169,7 +169,7 @@ const MOCK_PROJ_LIST = [
   },
   {
     name: "carlportfolio", 
-    title: "Carl Dimabuyu Portfolio",
+    title: "Carl Adriant Portfolio",
     briefDescription: "A web portfolio of an architect based in Doha, Qatar that I designed and developed.",
     description: "A web portfolio of an architect based in Doha, Qatar that I designed and developed.",
     technologies: [ "JavaScript", "React", "Firebase", "Material-UI", "Sass/Scss"],
@@ -210,7 +210,7 @@ const MOCK_PROJ_LIST = [
   },
   {
     name: "aynportfolio", 
-    title: "Ayn Laquindanum Portfolio",
+    title: "Ayn Nicoli Portfolio",
     briefDescription: "A web portfolio of a graphic artist/architect based in Philippines that I designed and developed.",
     description: "A web portfolio of a graphic artist/architect based in Philippines that I designed and developed.",
     technologies: [ "JavaScript", "React", "Firebase", "Material-UI", "Sass/Scss"],

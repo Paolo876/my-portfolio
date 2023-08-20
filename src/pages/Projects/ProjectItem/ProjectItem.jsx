@@ -51,7 +51,7 @@ const ProjectItem = ({ projects }) => {
         pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14}
       }}
     >
-      <Grid item xs={3} xl={2.5}>
+      <Grid item xs={3} lg={2.5}>
         <List>
           {projects.map(item => <ListItem key={item.name} dense disablePadding disableGutters>
             <ListItemButton 
@@ -65,13 +65,13 @@ const ProjectItem = ({ projects }) => {
                 display: "flex", 
                 justifyContent: "left",
                 textTransform: "none",
-                fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 17},
+                fontSize: {xs: 12.5, sm: 14.5, md: 14, lg:16, xl: 17},
                 fontWeight: 300,
                 textShadow: "1px 1px 5px rgba(10,10,10,.75)",
                 transition: "all 150ms ease",
                 opacity: .4, 
                 mixBlendMode: "difference",
-                my: 1.1, 
+                my: {md: .75, lg:1.1}, 
                 letterSpacing: .25,
                 position: "relative",
                 borderLeft: 2,
@@ -104,7 +104,7 @@ const ProjectItem = ({ projects }) => {
         </List>
       </Grid>
 
-      <Grid item xs={9} xl={9.5}></Grid>     
+      <Grid item xs={9} lg={9.5}></Grid>     
     </Grid>
 
     {/* content */}
