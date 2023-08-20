@@ -26,7 +26,7 @@ const ProjectFeatures = ({ coverImage, features, handleImageClick }) => {
 
       <Grid item xs={12}>
         <Grid container columnSpacing={{xl: 2.5}} >
-          <Grid item xs={6} pr={4}>
+          <Grid item md={6.5} lg={6} pr={{md: 2, lg:4}}>
             {/* <Typography 
               variant="h4" 
               align="left" 
@@ -42,11 +42,11 @@ const ProjectFeatures = ({ coverImage, features, handleImageClick }) => {
               Features:
             </Typography> */}
             <Box component="ul" sx={{mt: 4}}>
-              {features.map(item => <Box component="li" ml={2.5} pb={{lg: .5, xl: 1}} key={item}>
+              {features.map(item => <Box component="li" ml={2.5} pb={{md: .15, lg: .5, xl: 1}} key={item}>
                 <Typography 
                   variant="body1" 
                   sx={{
-                    fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:14, xl: 15},
+                    fontSize: {xs: 11, sm: 12, md: 12.5, lg:14, xl: 15},
                     fontWeight: 300,
                     opacity: .5,
                     letterSpacing: .25,
@@ -58,7 +58,7 @@ const ProjectFeatures = ({ coverImage, features, handleImageClick }) => {
               </Box>)}
             </Box>
           </Grid>
-          <Grid item xs={6} mt={2}>
+          <Grid item md={5.5} lg={6} mt={2}>
             <Box sx={{py: 1.5, px: 2.5, transition: "all 200ms linear", background: "rgba(0,0,0,0.75)", filter: "brightness(.95) contrast(.85)", "&:hover": {p: 0, filter: "none"}, overflow: "hidden", }}>
               <ButtonBase sx={{boxShadow: 20}} onClick={() => handleImageClick(coverImage.name)}>
                 <Image src={coverImage.url} duration={500}/>
