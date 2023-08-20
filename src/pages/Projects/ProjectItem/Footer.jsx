@@ -66,7 +66,7 @@ const Footer = () => {
           <Box mt={2}>
             <Typography 
               sx={{
-                fontSize: {xs: 11.5, sm: 12, md: 12.5, lg:13, xl: 13},
+                fontSize: {xs: 11.5, sm: 12, md: 12, lg:12, xl: 12},
                 fontWeight: 400,
                 opacity: .7,
                 letterSpacing: .3,
@@ -79,7 +79,7 @@ const Footer = () => {
           <Box mt={1}>
             <Typography 
               sx={{
-                fontSize: {xs: 11, sm: 11.5, md: 12, lg:12.5, xl: 12.5},
+                fontSize: {xs: 11, sm: 11.5, md: 11.5, lg:11.5, xl: 11.5},
                 fontWeight: 300,
                 opacity: .5,
                 letterSpacing: .3,
@@ -134,7 +134,7 @@ const Footer = () => {
             >Paolo Bugarin</Typography>
             <Typography
               sx={{
-                fontSize: { xs: 12, sm: 12, md: 13, lg:14, xl: 14 },
+                fontSize: { xs: 12, sm: 12, md: 13, lg:13.5, xl: 13.5 },
                 fontWeight: 200,
                 opacity: .7,
                 letterSpacing: 1,
