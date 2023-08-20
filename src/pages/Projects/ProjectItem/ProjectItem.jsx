@@ -37,6 +37,7 @@ const ProjectItem = ({ projects }) => {
     <Grid 
       container 
       sx={{
+        display: {xs: "none", md: "initial"},
         justifyContent: "center", 
         alignItems: "flex-start", 
         maxWidth: "1500px", 
@@ -47,11 +48,10 @@ const ProjectItem = ({ projects }) => {
         left: "50%",
         transform:"translateX(-50%)",
         px: { xs:1.75, sm: 3, md: 4, lg: 5, xl: 0 }, 
-
         pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14}
       }}
     >
-      <Grid item xs={3} lg={2.5}>
+      <Grid item xs={3} md={2.5}>
         <List>
           {projects.map(item => <ListItem key={item.name} dense disablePadding disableGutters>
             <ListItemButton 
@@ -104,7 +104,7 @@ const ProjectItem = ({ projects }) => {
         </List>
       </Grid>
 
-      <Grid item xs={9} lg={9.5}></Grid>     
+      <Grid item xs={9} md={9.5}></Grid>     
     </Grid>
 
     {/* content */}
@@ -119,22 +119,11 @@ const ProjectItem = ({ projects }) => {
         px: { xs:1.75, sm: 3, md: 4, lg: 5, xl: 0 }, 
       }}
     >
-      <Grid item xs={3} xl={2.5}></Grid>
-      <Grid item xs={9} xl={9.15} >
+      <Grid item xs={0} xl={2.5}></Grid>
+      <Grid item xs={12} md={9.5} xl={9.15} >
         {project && <ProjectItemContent project={project}/>}
       </Grid>   
     </Grid>
-    
-
-      {/* background  */}
-      {/* <Box sx={{position: "fixed", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1}}>
-        <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
-          <Grid item xl={3}></Grid>
-          <Grid item xl={6} sx={{background: "rgba(100,100,100, .15)", height: "100vh", width: "100%", transform: "skewX(-7deg) translateX(-100%)", boxShadow: 2}}></Grid>
-          <Grid item xl={3} align="right" sx={{background: "", height: "75vh", display: "flex", alignItems: "flex-end", justifyContent: "flex-end", zIndex: -2}}>
-          </Grid>
-        </Grid>
-      </Box> */}
       </Box>
     </>
   )

@@ -29,7 +29,7 @@ const ProjectItemContent = ( { project }) => {
               variant="h2" 
               align="left" 
               fontWeight={400}
-              fontSize={{xs: 42, sm: 46, md: 48, lg: 55, xl: 65}} 
+              fontSize={{xs: 42, sm: 44, md: 48, lg: 55, xl: 65}} 
               letterSpacing={{xs: .5, xl:1}}
               lineHeight={{xs:1}} 
               textTransform="none"
@@ -41,11 +41,11 @@ const ProjectItemContent = ( { project }) => {
             </Typography>
           </Grid>
 
-          <Grid item md={7.5} lg={7} xl={5} sx={{mt: {md: 5, lg: 6, xl: 6}}}>
+          <Grid item sm={7.15} md={7.5} lg={7} xl={5} sx={{mt: {xs: 4, sm: 5, md: 5, lg: 6, xl: 6}}}>
             <Typography 
               variant="body1" 
               sx={{
-                fontSize: {xs: 11, sm: 12, md: 12, lg:14, xl: 15},
+                fontSize: {xs: 10, sm: 11, md: 12, lg:14, xl: 15},
                 fontWeight: 300,
                 fontWeight: 300,
                 opacity: .5,
@@ -60,7 +60,7 @@ const ProjectItemContent = ( { project }) => {
               {project.description}
             </Typography>
           </Grid>
-          <Grid item xs={12} md={4} lg={4} xl={3}>
+          <Grid item xs={12} sm={4.25} md={4} lg={4} xl={3} pt={{sm: 3, md: 2, lg:1, xl: 2.5}}>
             <Box sx={{height: "auto", width: "auto", maxWidth: 300, maxHeight: 300, ml: "auto"}}>
               <Image src={project.logo} fit='cover'/>
             </Box>
@@ -69,23 +69,23 @@ const ProjectItemContent = ( { project }) => {
       </Grid>
 
       {/* url & tech stack */}
-      <Grid item md={12} sx={{mt: {md: 16, lg: 18, xl: 30}}}>
+      <Grid item md={12} sx={{mt: {sm: 14, md: 16, lg: 18, xl: 30}}}>
         <ProjectUrlAndTechStack technologies={project.technologies} url={project.url} githubUrl={project.githubUrl}/>
       </Grid>
 
       {/* Features */}
-      <Grid item md={12} sx={{mt: {md: 16, lg: 16, xl: 28}}}>
+      <Grid item md={12} sx={{mt: {sm: 14, md: 16, lg: 16, xl: 28}}}>
         <ProjectFeatures coverImage={project.coverImage} features={project.features} handleImageClick={handleImageClick}/>
       </Grid>
 
       {/* Images */}
-      <Grid item xl={12} sx={{mt: {md: 7, lg: 8, xl: 10}}}>
+      <Grid item xl={12} sx={{mt: {sm: 6, md: 7, lg: 8, xl: 10}}}>
         <ProjectImages images={project.images} handleImageClick={handleImageClick}/>
       </Grid>
 
 
       {/* Footer */}
-      <Grid item xl={12} sx={{mt: {md: 16, lg: 18, xl: 20}}}>
+      <Grid item xl={12} sx={{mt: {sm: 14, md: 16, lg: 18, xl: 20}}}>
         <Divider/>
         <Footer/>
       </Grid>
