@@ -47,7 +47,7 @@ const Footer = () => {
       }}
     >
       <Grid container sx={{justifyContent: "space-between"}}>
-        <Grid item xs={12} sm={6} md={6} lg={5} pr={{sm: 2, md: 4, xl: 4}}>
+        <Grid item xs={12} sm={6} md={7} lg={5} pr={{sm: 2, md: 4, xl: 4}}>
           <Box>
             <Typography 
               variant="h2" 
@@ -119,7 +119,7 @@ const Footer = () => {
           </Box>
         </Grid>
         
-        <Grid item xs={12} sm={6} md={4} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "left", height: "100%"}} mt={{xs: 4, sm: 0}}>
+        <Grid item xs={12} sm={6} md={5} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "left", height: "100%"}} mt={{xs: 4, sm: 0}}>
           <Box align="left">
             <Typography 
               variant="h2" 
@@ -159,8 +159,8 @@ const Footer = () => {
           </Box>
         </Grid>
         
-        <Grid item xs={12} sm={12} md={3} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%"}} mt={{xs:3, sm: 3, md: 0}}>
-          <Box sx={{width: "100%", height: "100%", display: "flex", justifyContent: {xs: "space-between", md:"right"}}}>
+        <Grid item xs={12} sm={12} lg={3} sx={{display: "flex", flexDirection: {xs: "row", lg:"column"}, justifyContent: "space-between", height: "100%"}} mt={{xs:3, sm: 3, md: 1.5, lg:0}}>
+          <Box sx={{width: "100%", height: "100%", display: "flex", justifyContent: {xs: "space-between", lg:"right"}}}>
             <Box mt={{md: 2,xl:4}} sx={{display: {xs: "none", sm:"initial", md: "none"}}}>
               <ButtonBase
                 onClick={() => navigate("/contact")}
@@ -192,16 +192,14 @@ const Footer = () => {
               color="inherit"
               sx={{
                 boxShadow: 6,
-                // border: 2, 
-                fontSize: { xs: ".9rem", sm: "1rem", md: "1rem", lg: "1rem" },
+                fontSize: { xs: ".9rem", sm: "1rem", md: ".9rem", lg: "1rem" },
                 lineHeight: 1.4, 
-                // borderColor: {xs: "primary.dark", sm:"rgba(100,100,100,.75)"},
                 backgroundColor: "rgba(130,130,130,.75)",
                 px: {xs: 1, sm: 1.5, lg: 2},
-                py: 1,
+                py: {xs: .7, lg:1},
                 fontWeight: 600,
                 letterSpacing: .5,
-                opacity: .85,
+                opacity: {xs: 1, lg:.85},
                 transition: "all 250ms ease-in-out",
                 fontFamily: "Manrope",
                 "&:hover":{
@@ -224,14 +222,14 @@ const Footer = () => {
               Download My CV <DownloadIcon sx={{ml: 1.5}}/>
             </ButtonBase>
           </Box>
-          <Box mt={{md:4}} sx={{width: "fit-content", display: {xs: "none", md: "initial"}}} ml="auto">
+          <Box mt={4} sx={{width: "fit-content", display: {xs: "none", md: "initial"}}} ml="auto">
             <SocialLinks 
               flexDirection='row' 
               color="inherit" 
               gap={.5}
               placement="bottom"
               additionalStyles={{
-                opacity: .65,
+                opacity: {md: .85, lg:.65},
                 transition: "all 150ms ease-in-out",
                 "&:hover": {
                   opacity: 1,
