@@ -79,7 +79,7 @@ const ProjectItemContent = ( { project }) => {
       </Grid>
 
       {/* Images */}
-      <Grid item xl={12} sx={{mt: {sm: 6, md: 7, lg: 8, xl: 10}}}>
+      <Grid item xl={12} sx={{mt: {sm: 5, md: 7, lg: 8, xl: 10}}}>
         <ProjectImages images={project.images} handleImageClick={handleImageClick}/>
       </Grid>
 

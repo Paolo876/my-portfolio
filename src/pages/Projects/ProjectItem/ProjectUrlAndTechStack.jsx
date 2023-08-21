@@ -71,7 +71,7 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
           Main Tech Stack
         </Typography>
       </Grid>
-      <Grid item sm={4} md={4} lg={6} xl={5.5} sx={{display: "flex", gap: {sm: 1.75, md: 2, lg:3}, flexDirection: "column", mt: {md: 1.5, lg: 3, xl: 6}, }}>
+      <Grid item sm={5.5} md={4} lg={6} xl={5.5} sx={{display: "flex", gap: {sm: 1.75, md: 2, lg:3}, flexDirection: "column", mt: {sm: 1.5, md: 1.5, lg: 3, xl: 6}, }}>
         <Box>
           <IconButton size="small" href={url} target='_blank' sx={urlButtonStyles} disableRipple>
             <PublicIcon color="primary" sx={{fontSize: { xs:20, sm: 22, md: 22, lg: 23}}} />
@@ -86,9 +86,9 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
         </Box>
       </Grid>
 
-      <Grid item sm={7} md={7} lg={5} xl={5} align="right">    
-        <Grid container sx={{mt: {xs: 1.25, sm: 1.5, md: 2, lg: 2, xl: 2.5}, justifyContent: "end"}}>
-          {projectTechnologies.map(item => <Grid item xs={2.4} sm={2.1} md={2.4} key={item.name} align="right">
+      <Grid item sm={6.5} md={7} lg={5} xl={5} align="right">    
+        <Grid container sx={{mt: {xs: 1.5, sm: 1.75, md: 2, lg: 2, xl: 2.5}, justifyContent: "end"}}>
+          {projectTechnologies.map(item => <Grid item xs={2.4} sm={2.4} md={2.4} key={item.name} align="right">
             <Tooltip 
               title={<Typography variant="body1" fontSize={12} fontWeight={300} letterSpacing={.4} px={.25}>{item.name}</Typography>} 
               arrow
