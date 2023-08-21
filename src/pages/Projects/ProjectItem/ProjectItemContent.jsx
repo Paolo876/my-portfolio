@@ -53,7 +53,7 @@ const ProjectItemContent = ( { project }) => {
                 lineHeight: 1.4,
                 textShadow: "1px 1px 5px rgba(10,10,10,.75)",
                 borderLeft: 2,
-                pl: 1.25,
+                pl: {xs: 1, md:1.25},
                 borderColor: "primary.dark"
               }}        
             >
@@ -69,12 +69,12 @@ const ProjectItemContent = ( { project }) => {
       </Grid>
 
       {/* url & tech stack */}
-      <Grid item md={12} sx={{mt: {sm: 14, md: 16, lg: 18, xl: 30}}}>
+      <Grid item sm={12} sx={{mt: {sm: 15, md: 16, lg: 18, xl: 30}}}>
         <ProjectUrlAndTechStack technologies={project.technologies} url={project.url} githubUrl={project.githubUrl}/>
       </Grid>
 
       {/* Features */}
-      <Grid item md={12} sx={{mt: {sm: 14, md: 16, lg: 16, xl: 28}}}>
+      <Grid item sm={12} sx={{mt: {sm: 12, md: 16, lg: 16, xl: 28}}}>
         <ProjectFeatures coverImage={project.coverImage} features={project.features} handleImageClick={handleImageClick}/>
       </Grid>
 
@@ -85,7 +85,7 @@ const ProjectItemContent = ( { project }) => {
 
 
       {/* Footer */}
-      <Grid item xl={12} sx={{mt: {sm: 14, md: 16, lg: 18, xl: 20}}}>
+      <Grid item xl={12} sx={{mt: {sm: 15, md: 16, lg: 18, xl: 20}}}>
         <Divider/>
         <Footer/>
       </Grid>

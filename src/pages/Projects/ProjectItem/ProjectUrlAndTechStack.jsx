@@ -36,7 +36,7 @@ const urlButtonStyles = {
   transition: "all 250ms ease-in-out",
   letterSpacing: .25,
   opacity: .7,
-  fontSize: {xs: 15, sm: 16, md: 16.5, lg: 18, xl: 19},
+  fontSize: {xs: 15, sm: 15.5, md: 16.5, lg: 18, xl: 19},
   fontWeight: 400,
   "&:hover":{
     opacity:1,
@@ -71,23 +71,23 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
           Main Tech Stack
         </Typography>
       </Grid>
-      <Grid item md={4} lg={6} xl={5.5} sx={{display: "flex", gap: {md: 2, lg:3}, flexDirection: "column", mt: {md: 1.5, lg: 3, xl: 6}, }}>
+      <Grid item sm={4} md={4} lg={6} xl={5.5} sx={{display: "flex", gap: {sm: 1.75, md: 2, lg:3}, flexDirection: "column", mt: {md: 1.5, lg: 3, xl: 6}, }}>
         <Box>
-          <IconButton size="small" href={url} target='_blank'sx={urlButtonStyles} disableRipple>
-            <PublicIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 23}}} />
+          <IconButton size="small" href={url} target='_blank' sx={urlButtonStyles} disableRipple>
+            <PublicIcon color="primary" sx={{fontSize: { xs:20, sm: 22, md: 22, lg: 23}}} />
             <Box component="span">Web Demo</Box>
           </IconButton> 
         </Box>
         <Box>
           <IconButton size="small" href={githubUrl} target='_blank' sx={urlButtonStyles} disableRipple>
-            <GitHubIcon color="primary" sx={{fontSize: { xs:20, sm: 23, md: 22, lg: 23}}} />
+            <GitHubIcon color="primary" sx={{fontSize: { xs:20, sm: 22, md: 22, lg: 23}}} />
             <Box component="span">Git Repo</Box>
           </IconButton> 
         </Box>
       </Grid>
 
-      <Grid item md={7} lg={5} xl={5} align="right">    
-        <Grid container sx={{mt: {md: 2, lg: 2, xl: 2.5}, justifyContent: "end"}}>
+      <Grid item sm={7} md={7} lg={5} xl={5} align="right">    
+        <Grid container sx={{mt: {xs: 1.25, sm: 1.5, md: 2, lg: 2, xl: 2.5}, justifyContent: "end"}}>
           {projectTechnologies.map(item => <Grid item xs={2.4} sm={2.1} md={2.4} key={item.name} align="right">
             <Tooltip 
               title={<Typography variant="body1" fontSize={12} fontWeight={300} letterSpacing={.4} px={.25}>{item.name}</Typography>} 
