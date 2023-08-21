@@ -41,7 +41,7 @@ const ProjectItemContent = ( { project }) => {
             </Typography>
           </Grid>
 
-          <Grid item sm={7.15} md={7.5} lg={7} xl={5} sx={{mt: {xs: 4, sm: 5, md: 5, lg: 6, xl: 6}}}>
+          <Grid item xs={12} sm={7.15} md={7.5} lg={7} xl={5} sx={{mt: {xs: 3, sm: 5, md: 5, lg: 6, xl: 6}}}>
             <Typography 
               variant="body1" 
               sx={{
@@ -60,7 +60,7 @@ const ProjectItemContent = ( { project }) => {
               {project.description}
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={4.25} md={4} lg={4} xl={3} pt={{sm: 3, md: 2, lg:1, xl: 2.5}}>
+          <Grid item xs={0} sm={4.25} md={4} lg={4} xl={3} pt={{sm: 3, md: 2, lg:1, xl: 2.5}} sx={{display: {xs: "none", sm: "initial"}}}>
             <Box sx={{height: "auto", width: "auto", maxWidth: 300, maxHeight: 300, ml: "auto"}}>
               <Image src={project.logo} fit='cover'/>
             </Box>
@@ -69,23 +69,23 @@ const ProjectItemContent = ( { project }) => {
       </Grid>
 
       {/* url & tech stack */}
-      <Grid item sm={12} sx={{mt: {sm: 15, md: 16, lg: 18, xl: 30}}}>
+      <Grid item sm={12} sx={{mt: {xs: 4, sm: 15, md: 16, lg: 18, xl: 30}}}>
         <ProjectUrlAndTechStack technologies={project.technologies} url={project.url} githubUrl={project.githubUrl}/>
       </Grid>
 
       {/* Features */}
-      <Grid item sm={12} sx={{mt: {sm: 12, md: 16, lg: 16, xl: 28}}}>
+      <Grid item sm={12} sx={{mt: {xs: 10, sm: 12, md: 16, lg: 16, xl: 28}}}>
         <ProjectFeatures coverImage={project.coverImage} features={project.features} handleImageClick={handleImageClick}/>
       </Grid>
 
       {/* Images */}
-      <Grid item xl={12} sx={{mt: {sm: 5, md: 7, lg: 8, xl: 10}}}>
+      <Grid item xl={12} sx={{mt: {xs: 5, sm: 5, md: 7, lg: 8, xl: 10}}}>
         <ProjectImages images={project.images} handleImageClick={handleImageClick}/>
       </Grid>
 
 
       {/* Footer */}
-      <Grid item xl={12} sx={{mt: {sm: 15, md: 16, lg: 18, xl: 20}}}>
+      <Grid item xl={12} sx={{mt: {xs: 12, sm: 13, md: 16, lg: 18, xl: 20}}}>
         <Divider/>
         <Footer/>
       </Grid>

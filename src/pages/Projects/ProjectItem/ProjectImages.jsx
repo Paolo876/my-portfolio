@@ -5,8 +5,8 @@ import Image from 'mui-image'
 
 const ProjectImages = ({ images, handleImageClick }) => {
   return (
-    <Grid container columnSpacing={{sm:2, md: 3, lg: 4, xl: 4}} rowSpacing={{sm: 4, md: 5, lg: 10, xl: 8}}>
-      {images.map(item => <Grid item sm={6} key={item.name}>
+    <Grid container columnSpacing={{sm:2, md: 3, lg: 4, xl: 4}} rowSpacing={{xs: 3, sm: 4, md: 5, lg: 10, xl: 8}}>
+      {images.map(item => <Grid item xs={11} sm={6} key={item.name} mx="auto">
         <Box 
           sx={{
             boxShadow: 5,
