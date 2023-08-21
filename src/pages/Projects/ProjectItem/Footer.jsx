@@ -11,11 +11,11 @@ const contactButtonStyles = {
   textAlign: "left",
   display: "flex", 
   alignItems: "center", 
-  gap: {xs: .75, sm: .75, lg: 1, xl: 1.5}, 
+  gap: {xs: .5, sm: .5, lg: 1, xl: 1.5}, 
   justifyContent: "left",
   borderLeft: 2, 
   borderColor: "rgba(100,100,100,.75)",
-  py: .5,
+  py: {xs: .15, sm: .25, md:.5},
   px: { xs: 1, xl:2 },
   transition: "all 250ms ease-in-out",
   letterSpacing: .4,
@@ -37,8 +37,8 @@ const Footer = () => {
     <Box 
       sx={{
         position: "relative", 
-        pt: {xs:3, sm: 4, md: 5, lg: 5, xl: 6}, 
-        pb: {xs:1.5, sm: 2, md: 2.5, lg: 3, xl: 4}, 
+        pt: {xs:3, sm: 3, md: 5, lg: 5, xl: 6}, 
+        pb: {xs:1, sm: 1, md: 2, lg: 2, xl: 3}, 
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -47,12 +47,12 @@ const Footer = () => {
       }}
     >
       <Grid container sx={{justifyContent: "space-between"}}>
-        <Grid item xs={12} sm={6} md={7} lg={5} pr={{sm: 2, md: 4, xl: 4}}>
+        <Grid item xs={12} sm={7} md={7} lg={5} pr={{sm: 2, md: 4, xl: 4}}>
           <Box>
             <Typography 
               variant="h2" 
               fontWeight={400}
-              fontSize={{xs: 17, sm: 18, md: 20, lg: 24, xl: 25}} 
+              fontSize={{xs: 16, sm: 17, md: 20, lg: 24, xl: 25}} 
               letterSpacing={.5}
               lineHeight={1.1} 
               textTransform="none"
@@ -66,7 +66,7 @@ const Footer = () => {
           <Box mt={2}>
             <Typography 
               sx={{
-                fontSize: {xs: 10.5, sm: 10.5, md: 11, lg:12, xl: 12},
+                fontSize: {xs: 9.5, sm: 10, md: 11, lg:12, xl: 12},
                 fontWeight: 400,
                 opacity: .7,
                 letterSpacing: .3,
@@ -79,7 +79,7 @@ const Footer = () => {
           <Box mt={1}>
             <Typography 
               sx={{
-                fontSize: {xs: 10, sm: 10, md: 10, lg:11.5, xl: 11.5},
+                fontSize: {xs: 9.5, sm: 10, md: 10, lg:11.5, xl: 11.5},
                 fontWeight: 300,
                 opacity: .5,
                 letterSpacing: .3,
@@ -90,7 +90,7 @@ const Footer = () => {
             </Typography>
           </Box>
           
-          <Box mt={{xs: 1.25, md: 2, xl:3}} sx={{display: {sm:"none", md: "flex"}}}>
+          <Box mt={{xs: 1.5, md: 2, xl:3}} sx={{display: {sm:"none", md: "flex"}}}>
             <ButtonBase
               onClick={() => navigate("/contact")}
               sx={{
@@ -119,12 +119,12 @@ const Footer = () => {
           </Box>
         </Grid>
         
-        <Grid item xs={12} sm={6} md={5} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "left", height: "100%"}} mt={{xs: 4, sm: 0}}>
+        <Grid item xs={12} sm={5} md={5} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "left", height: "100%"}} mt={{xs: 3.5, sm: 0}}>
           <Box align="left">
             <Typography 
               variant="h2" 
               fontWeight={400}
-              fontSize={{xs: 17, sm: 18, md: 20, lg: 24, xl: 25}} 
+              fontSize={{xs: 16, sm: 18, md: 20, lg: 24, xl: 25}} 
               letterSpacing={.5}
               lineHeight={1.1} 
               textTransform="none"
@@ -134,26 +134,26 @@ const Footer = () => {
             >Paolo Bugarin</Typography>
             <Typography
               sx={{
-                fontSize: { xs: 12, sm: 12, md: 12, lg:13.5, xl: 13.5 },
+                fontSize: { xs: 10.5, sm: 11, md: 12, lg:13.5, xl: 13.5 },
                 fontWeight: 200,
                 opacity: .7,
                 letterSpacing: 1,
                 textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-                mt: {xs: 1, sm:1.5},
+                mt: {xs: .7, sm:1.5},
               }}
             >Los Angeles, CA</Typography>
           </Box>
-          <Box mt={{xs: 1.5, sm: 3, md: 4, xl:4}}>
+          <Box mt={{xs: 1.5, sm: 1.5, md: 4, xl:4}}>
             <Box>
               <IconButton size="small" href="tel:3234817852" sx={contactButtonStyles} disableRipple>
-                <LocalPhoneIcon color="primary" sx={{fontSize: { xs:20, sm: 21, md: 22, lg: 23 }}} />
-                <Typography sx={{fontSize: {xs:12, sm: 13, md: 13, lg: 13.5, xl: 15}, letterSpacing: 1}} fontWeight={300}>(323) 481 - 7852</Typography>
+                <LocalPhoneIcon color="primary" sx={{fontSize: { xs:20, sm: 20, md: 22, lg: 23 }}} />
+                <Typography sx={{fontSize: {xs:12, sm: 12, md: 13, lg: 13.5, xl: 15}, letterSpacing: 1}} fontWeight={300}>(323) 481 - 7852</Typography>
               </IconButton> 
             </Box>
-            <Box mt={{xs:1, sm: 2}}>
+            <Box mt={{xs:1, sm: 1, md: 2}}>
               <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={contactButtonStyles} disableRipple>
-                <MailOutlineIcon color="primary" sx={{fontSize: { xs:20, sm: 21, md: 22, lg: 23 }}}/>
-                <Typography sx={{fontSize: {xs:12, sm: 13, md: 13, lg: 13.5, xl: 15}, letterSpacing: 1}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
+                <MailOutlineIcon color="primary" sx={{fontSize: { xs:20, sm: 20, md: 22, lg: 23 }}}/>
+                <Typography sx={{fontSize: {xs:12, sm: 12, md: 13, lg: 13.5, xl: 15}, letterSpacing: 1}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
               </IconButton>
             </Box>
           </Box>
@@ -166,12 +166,12 @@ const Footer = () => {
                 onClick={() => navigate("/contact")}
                 sx={{
                   borderLeft: 2, 
-                  fontSize: {xs:14, sm: 16, md: 17, lg: 18},                
+                  fontSize: {xs:13, sm: 14, md: 17, lg: 18},                
                   lineHeight: 1.4, 
                   color: "primary.main", 
                   borderColor: "rgba(100,100,100,.75)",
-                  px: 1.5,
-                  py: .25,
+                  px: 1,
+                  py: .15,
                   fontWeight: 600,
                   letterSpacing: .4,
                   opacity: .85,
@@ -192,14 +192,14 @@ const Footer = () => {
               color="inherit"
               sx={{
                 boxShadow: 6,
-                fontSize: { xs: ".9rem", sm: "1rem", md: ".9rem", lg: "1rem" },
+                fontSize: { xs: ".9rem", sm: ".9rem", md: ".9rem", lg: "1rem" },
                 lineHeight: 1.4, 
                 backgroundColor: "rgba(130,130,130,.75)",
-                px: {xs: 1, sm: 1.5, lg: 2},
+                px: {xs: 1, sm: 2},
                 py: {xs: .7, lg:1},
                 fontWeight: 600,
                 letterSpacing: .5,
-                opacity: {xs: 1, lg:.85},
+                opacity: {xs: .9, lg:.85},
                 transition: "all 250ms ease-in-out",
                 fontFamily: "Manrope",
                 "&:hover":{
@@ -212,7 +212,7 @@ const Footer = () => {
                 },
                 "svg": {
                   transition: "all 500ms ease-in-out",
-
+                  color: {xs: "primary.main", lg: "white"},
                 },
                 "&:hover svg": {
                   color: "primary.main",
@@ -246,7 +246,7 @@ const Footer = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={12} mt={2} sx={{display: {xs:"flex", md: "none"}, flexDirection: {xs: "column", sm:"row"}, justifyContent: "space-between", height: "100%", alignItems: "center"}}>
+        <Grid item xs={12} sm={12} mt={5} sx={{display: {xs:"flex", md: "none"}, flexDirection: {xs: "row", sm:"row"}, justifyContent: "space-between", height: "100%", alignItems: "center"}}>
           <Box mt={{md:4}} sx={{width: "fit-content", display: {xs: "initial", md: "none"}}} ml={{sm:"auto"}}>
             <SocialLinks 
               flexDirection='row' 
@@ -254,8 +254,10 @@ const Footer = () => {
               gap={.5}
               placement="bottom"
               additionalStyles={{
-                opacity: .65,
+                opacity: .8,
                 transition: "all 150ms ease-in-out",
+                p: .1, 
+                mr: 1.5,
                 "&:hover": {
                   opacity: 1,
                   transform: "scale(1.15)",
@@ -264,8 +266,8 @@ const Footer = () => {
               }}
             />
           </Box>
-          <Box sx={{width: "100%", display: {xs: "initial", md: "none"}}}>
-            <Typography sx={{fontSize: {xs: 11, sm:11, md: 11.5, lg:13, xl: 14}, opacity: .5, mixBlendMode: "difference", textAlign: {xs: "center", sm:"right"}}}>
+          <Box sx={{width: "100%", display: {xs: "initial", md: "none"}, mt: {xs: 2, sm: 0}}}>
+            <Typography sx={{fontSize: {xs: 9, sm:10, md: 11.5, lg:13, xl: 14}, opacity: .5, mixBlendMode: "difference", textAlign: {xs: "right", sm:"right"}}}>
               © 2023 Paolo Bugarin, All rights reserved.
             </Typography>
           </Box>
