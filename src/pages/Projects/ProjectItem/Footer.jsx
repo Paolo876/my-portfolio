@@ -90,7 +90,7 @@ const Footer = () => {
             </Typography>
           </Box>
           
-          <Box mt={{xs: 1.5, md: 2, xl:3}} sx={{display: {sm:"none", md: "flex"}}}>
+          <Box mt={{xs: 2.5, sm: 1.5, md: 2, xl:3}} sx={{display: {xs: "flex",sm:"none", md: "flex"}, justifyContent: "space-between"}}>
             <ButtonBase
               onClick={() => navigate("/contact")}
               sx={{
@@ -116,10 +116,44 @@ const Footer = () => {
             >
               Contact Page
             </ButtonBase>
+            <ButtonBase 
+              color="inherit"
+              sx={{
+                display: {xs: "flex", sm: "none"},
+                boxShadow: 6,
+                fontSize: { xs: ".8rem", sm: ".9rem", md: ".9rem", lg: "1rem" },
+                lineHeight: 1.4, 
+                backgroundColor: "rgba(130,130,130,.75)",
+                px: {xs: 1.5, sm: 2},
+                py: {xs: .8, lg:1},
+                fontWeight: 600,
+                letterSpacing: .5,
+                opacity: {xs: .9, lg:.85},
+                transition: "all 250ms ease-in-out",
+                fontFamily: "Manrope",
+                "&:hover":{
+                  opacity:1,
+                  textShadow: "1px 1px 3px rgba(10,10,10,.25)",
+                  transform: "scale(1.02)",
+                  letterSpacing: .6,
+                  boxShadow: 3,
+
+                },
+                "svg": {
+                  transition: "all 500ms ease-in-out",
+                  color: {xs: "primary.main", lg: "white"},
+                },
+                "&:hover svg": {
+                  color: "primary.main",
+                }
+              }}
+            >
+              Download My CV <DownloadIcon sx={{ml: 1}} fontSize='small'/>
+            </ButtonBase>
           </Box>
         </Grid>
         
-        <Grid item xs={12} sm={5} md={5} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "left", height: "100%"}} mt={{xs: 3.5, sm: 0}}>
+        <Grid item xs={12} sm={5} md={5} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "left", height: "100%"}} mt={{xs: 5, sm: 0}}>
           <Box align="left">
             <Typography 
               variant="h2" 
@@ -159,7 +193,7 @@ const Footer = () => {
           </Box>
         </Grid>
         
-        <Grid item xs={12} sm={12} lg={3} sx={{display: "flex", flexDirection: {xs: "row", lg:"column"}, justifyContent: "space-between", height: "100%"}} mt={{xs:3, sm: 3, md: 1.5, lg:0}}>
+        <Grid item xs={12} sm={12} lg={3} sx={{display: "flex", flexDirection: {xs: "row", lg:"column"}, justifyContent: "space-between", height: "100%"}} mt={{xs:0, sm: 3, md: 1.5, lg:0}}>
           <Box sx={{width: "100%", height: "100%", display: "flex", justifyContent: {xs: "space-between", lg:"right"}}}>
             <Box mt={{md: 2,xl:4}} sx={{display: {xs: "none", sm:"initial", md: "none"}}}>
               <ButtonBase
@@ -191,6 +225,7 @@ const Footer = () => {
             <ButtonBase 
               color="inherit"
               sx={{
+                display: {xs: "none", sm: "flex"},
                 boxShadow: 6,
                 fontSize: { xs: ".9rem", sm: ".9rem", md: ".9rem", lg: "1rem" },
                 lineHeight: 1.4, 
@@ -246,7 +281,7 @@ const Footer = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={12} mt={5} sx={{display: {xs:"flex", md: "none"}, flexDirection: {xs: "row", sm:"row"}, justifyContent: "space-between", height: "100%", alignItems: "center"}}>
+        <Grid item xs={12} sm={12} mt={{xs: 2.75,sm:5}} mb={1} sx={{display: {xs:"flex", md: "none"}, flexDirection: {xs: "row", sm:"row"}, justifyContent: "space-between", height: "100%", alignItems: "center"}}>
           <Box mt={{md:4}} sx={{width: "fit-content", display: {xs: "initial", md: "none"}}} ml={{sm:"auto"}}>
             <SocialLinks 
               flexDirection='row' 
@@ -266,7 +301,7 @@ const Footer = () => {
               }}
             />
           </Box>
-          <Box sx={{width: "100%", display: {xs: "initial", md: "none"}, mt: {xs: 2, sm: 0}}}>
+          <Box sx={{width: "100%", display: {xs: "flex", md: "none"}, mt: {xs: .5, sm: 0}, alignItems: "center", justifyContent: "right"}}>
             <Typography sx={{fontSize: {xs: 9, sm:10, md: 11.5, lg:13, xl: 14}, opacity: .5, mixBlendMode: "difference", textAlign: {xs: "right", sm:"right"}}}>
               © 2023 Paolo Bugarin, All rights reserved.
             </Typography>
