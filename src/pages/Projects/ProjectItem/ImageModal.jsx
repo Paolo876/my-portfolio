@@ -14,8 +14,6 @@ const containerStyles = {
   alignItems: "center", 
   flexDirection: "column",
   justifyContent: "space-between",
-  // pt: "10vh",
-  // transform: "translate"
   backdropFilter: "blur(2px) contrast(80%) brightness(50%)",
 }
 
@@ -33,10 +31,10 @@ const actionsContainer = {
 }
 
 const imageListItemStyles = {
-  height: 130, 
-  border: 2, 
-  borderColor: "transparent", 
-  p: .5, 
+  height: "auto", 
+  border: {xs: 1, md: 2}, 
+  borderColor: {xs: "transparent", md:"transparent"}, 
+  p: {xs: .25, sm: .25, md: .4, lg:.5}, 
   opacity: .65, 
   transition: "all 250ms ease",
   "&:hover": { 
@@ -101,12 +99,12 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
       </Box>
 
       {/* actions */}
-      <Box sx={{zIndex: 2, width: "100%", background: "rgba(70, 70, 70, .9)", boxShadow: 10, }}>
+      <Box sx={{zIndex: 2, width: "100%", backgroundColor: "rgba(100,100,100,.6)", boxShadow: 10, }}>
         <Box sx={actionsContainer}>
-          <IconButton color="primary" size="large" onClick={handlePrevItemClick}><ArrowBackIosNewIcon fontSize='large'/></IconButton>
-          <Box sx={{flex: 1, display: "flex", gap: 2, alignItems: "center", justifyContent: "center", overflowX: "auto"}} >
+          <IconButton color="primary" size="large" onClick={handlePrevItemClick}><ArrowBackIosNewIcon sx={{fontSize: {xs: 25, sm: 26, md: 30, lg: 32, xl: 35}}}/></IconButton>
+          <Box sx={{flex: 1, display: "flex", gap: {xs: .5, sm: 1.5, md:2}, alignItems: "center", justifyContent: "center", overflowX: "auto"}} >
             {/* images list here */}
-            {imagesList.map(item => <Box key={item.name} sx={{width: {xl: 160}, height: "auto", display: "inline-block"}}>
+            {imagesList.map(item => <Box key={item.name} sx={{width: {sm: 100, md: 150, lg: 160, xl: 160}, height: "auto", display: "inline-block"}}>
               <ButtonBase 
                 sx={imageListItemStyles} 
                 className={item.name === imageName ? "active" : ""}
@@ -116,7 +114,7 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
               </ButtonBase>
             </Box>)}
           </Box>
-          <IconButton color="primary" size="large" onClick={handleNextItemClick}><ArrowForwardIosIcon fontSize='large'/></IconButton>
+          <IconButton color="primary" size="large" onClick={handleNextItemClick}><ArrowForwardIosIcon sx={{fontSize: {xs: 25, sm: 26, md: 30, lg: 32, xl: 35}}}/></IconButton>
         </Box>
       </Box>
     </Box>
