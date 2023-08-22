@@ -76,21 +76,22 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
     <Box sx={containerStyles}>
       <Box sx={{zIndex: 2, height: "100vh", width: "100vw", position: "absolute"}} onClick={handleCloseClick}></Box>
 
-      <Box sx={{zIndex: 3, boxShadow:10, maxHeight: "70vh", maxWidth: "90vw", position: "relative", overflow: "hidden", my: "auto"}}>
+      <Box sx={{zIndex: 3, boxShadow:10, maxHeight: "70vh", maxWidth: {xs: "93vw", sm: "90vw"}, position: "relative", overflow: "hidden", my: "auto"}}>
         <Image src={image.url} duration={300} fit="scale-down"/>
-        {image.title && <Box sx={{position: "absolute", top: 0, left: -10, backgroundColor: "rgba(25, 25, 25, 0.75)", transform: "skewX(-7deg)", boxShadow: 10}}>
-          <Typography
-            variant="h5" 
+        {image.title && <Box sx={{position: "absolute", top: 0, left: -10, backgroundColor: "rgba(25,25,25,0.8)", transform: "skewX(-9deg)", boxShadow: 10}}>
+          <Typography 
+            variant="h4" 
             fontWeight={300}
-            letterSpacing={.5}
-            fontSize={{xs: 25, sm: 27, md: 28, lg: 29, xl: 30}} 
-            pl={3}
-            pr={5}
-            py={1.5}
+            fontSize={{xs: 16, sm: 18, md: 20, lg: 23, xl: 23}} 
+            letterSpacing={{xs: .5, xl:1}}
+            lineHeight={{xs:1}} 
+            textTransform="none"
+            pl={{xs: 2.5, md:3}}
+            pr={{xs: 3.75, sm: 4, md:5}}
+            py={{xs: 1.15, sm: 1.25, md:1.5}}
             sx={{
               textShadow: "1px 1px 7px rgba(10,10,10,.75)",
-              transform: "skewX(7deg)",
-              textTransform: "none",
+              transform: "skewX(9deg)",
             }}
           >
             {image.title}
