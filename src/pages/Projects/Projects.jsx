@@ -316,18 +316,23 @@ const MainPage = ({ projects }) => {
         pt: {xs:8, sm: 11, md: 13, lg: 13, xl: 15},  
       }}
     >      
-      <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
-        <Grid item md={12} lg={3.5}>
+      <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", height: "100%"}}>
+        <Grid item lg={6} sx={{height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", pb: 10}}>
+          <Introduction/>
+          <ProjectSelection projects={projects} setActiveProject={setActiveProject} setIsHovered={setIsHovered} activeProject={activeProject}/>
+        </Grid>
+        <Grid item lg={6}></Grid>
+        {/* <Grid item md={12} lg={3.5}>
           <Introduction/>
         </Grid>
         <Grid item md={6} lg={5} sx={{height: "100%", my: "auto"}} pt={{xs: 1.5, sm: 6, md: 8, lg: 0}} pl={{md: 1, lg: 0}} mr={{xs: "auto", lg: "initial"}}>
           <ProjectSelection projects={projects} setActiveProject={setActiveProject} setIsHovered={setIsHovered} activeProject={activeProject}/>
         </Grid>
-        <Grid item md={0} lg={3.5}></Grid>
+        <Grid item md={0} lg={3.5}></Grid> */}
       </Grid>
 
       {/* background  */}
-      <Box sx={{position: "fixed", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1, px: { xs:1.75, sm: 3, md: 4, lg: 5 }}}>
+      {/* <Box sx={{position: "fixed", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1, px: { xs:1.75, sm: 3, md: 4, lg: 5 }}}>
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
           <Grid item xs={0} lg={3}></Grid>
           <Grid 
@@ -391,7 +396,7 @@ const MainPage = ({ projects }) => {
             </Box>
           </Grid>
         </Grid>
-      </Box>
+      </Box> */}
     </Box>
   )
 }

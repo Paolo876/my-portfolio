@@ -76,7 +76,7 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
     <Box sx={containerStyles}>
       <Box sx={{zIndex: 2, height: "100vh", width: "100vw", position: "absolute"}} onClick={handleCloseClick}></Box>
 
-      <Box sx={{zIndex: 3, boxShadow:10, maxHeight: "70vh", maxWidth: {xs: "93vw", sm: "90vw"}, position: "relative", overflow: "hidden", my: "auto"}}>
+      <Box sx={{zIndex: 3, boxShadow:10, maxHeight: "70vh", maxWidth: {xs: "93vw", md: "91vw"}, position: "relative", overflow: "hidden", my: "auto"}}>
         <Image src={image.url} duration={300} fit="scale-down"/>
         {image.title && <Box sx={{position: "absolute", top: 0, left: -10, backgroundColor: "rgba(25,25,25,0.8)", transform: "skewX(-9deg)", boxShadow: 10}}>
           <Typography 
