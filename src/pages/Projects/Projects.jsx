@@ -337,7 +337,7 @@ const MainPage = ({ projects }) => {
             md={9} 
             lg={6} 
             sx={{
-              background: "rgba(45,45,45,.2)", 
+              background: "rgba(45,45,45,.1)", 
               height: "100vh", 
               width: "100%", 
               transform: {xs:"skewX(-5deg) translateX(-0px)", sm:"skewX(-5deg) translateX(-50px)", md:"skewX(-7deg) translateX(-120px)", lg:"skewX(-7deg)"},

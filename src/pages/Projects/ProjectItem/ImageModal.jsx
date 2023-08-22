@@ -14,7 +14,8 @@ const containerStyles = {
   alignItems: "center", 
   flexDirection: "column",
   justifyContent: "space-between",
-  pt: "10vh",
+  // pt: "10vh",
+  // transform: "translate"
   backdropFilter: "blur(2px) contrast(80%) brightness(50%)",
 }
 
@@ -77,7 +78,7 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
     <Box sx={containerStyles}>
       <Box sx={{zIndex: 2, height: "100vh", width: "100vw", position: "absolute"}} onClick={handleCloseClick}></Box>
 
-      <Box sx={{zIndex: 3, boxShadow:10, maxHeight: "70vh", position: "relative", overflow: "hidden"}}>
+      <Box sx={{zIndex: 3, boxShadow:10, maxHeight: "70vh", maxWidth: "90vw", position: "relative", overflow: "hidden", my: "auto"}}>
         <Image src={image.url} duration={300} fit="scale-down"/>
         {image.title && <Box sx={{position: "absolute", top: 0, left: -10, backgroundColor: "rgba(25, 25, 25, 0.75)", transform: "skewX(-7deg)", boxShadow: 10}}>
           <Typography
@@ -105,7 +106,7 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
           <IconButton color="primary" size="large" onClick={handlePrevItemClick}><ArrowBackIosNewIcon fontSize='large'/></IconButton>
           <Box sx={{flex: 1, display: "flex", gap: 2, alignItems: "center", justifyContent: "center", overflowX: "auto"}} >
             {/* images list here */}
-            {imagesList.map(item => <Box key={item.name} sx={{width: {xl: 180}, display: "inline-block"}}>
+            {imagesList.map(item => <Box key={item.name} sx={{width: {xl: 160}, height: "auto", display: "inline-block"}}>
               <ButtonBase 
                 sx={imageListItemStyles} 
                 className={item.name === imageName ? "active" : ""}
