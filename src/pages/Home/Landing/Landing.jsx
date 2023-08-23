@@ -167,7 +167,7 @@ const Landing = () => {
           }} 
           disableRipple
         >
-          <ArrowForwardIosIcon sx={{fontSize: {xs: 32, sm: 36, md: 38, lg: 40, xl: 40}}}/>
+          <ArrowForwardIosIcon sx={{fontSize: {xs: 28, sm: 35, md: 38, lg: 40, xl: 40}}}/>
           {/* <ArrowForwardIosIcon fontSize="large"/> */}
         </IconButton>
       </Box>

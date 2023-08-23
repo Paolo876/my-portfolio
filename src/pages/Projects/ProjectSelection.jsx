@@ -9,7 +9,7 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
 
   return (
     <List>
-    {projects.map((item, index) => <ListItem key={item.name} sx={{px: {xs:1, sm: 1.5,}, width: "fit-content"}}>
+    {projects.map((item, index) => <ListItem key={item.name} sx={{px: {xs:1, sm: 1.5,}, py: .5, my: 0, width: "fit-content"}}>
       <ListItemButton 
         className={index === activeProject ? "active" : ""}
         disableRipple
@@ -23,15 +23,20 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
           display: "flex", 
           justifyContent: {lg:"left"},
           textTransform: "none",
-          fontSize: {xs: 15, sm: 24, md: 28, lg:25, xl: 28},
+          fontSize: {xs: 15, sm: 24, md: 28, lg:25, xl: 30},
           fontWeight: 300,
           textShadow: "1px 1px 5px rgba(100,100,100,.25)",
           transition: "all 450ms ease",
           opacity: {xs: .6, sm:.4},
-          letterSpacing: {xs:.5, lg: 1},
-          my: {xs: .2, sm: .75, md: 2, lg: .5, xl:.0}, 
-          py: {xs:.2, sm:1, xl: .2},
+          letterSpacing: {xs:.5, lg: .75},
+          lineHeight: 1.1,
+          my: {xs: .2, sm: .75, md: 2, lg: .5, xl: .75}, 
+          py: {xs:.2, sm:1, xl: .1},
           position: "relative",
+          borderLeft: 2,
+          borderColor: "rgba(120,120,120,.85)",
+          pl: {xs: .75, sm: 1, lg: 1.75},
+
           // "&::before": {
           //   content: '""',
           //   position: "absolute",
@@ -45,12 +50,13 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
           // },
           "&:hover, &.active": {
             opacity: 1,
-            fontWeight: 500,
-            transform: "scale(1.015)",
-            textShadow: "1px 1px 5px rgba(100,100,100,.25)",
+            fontWeight: 400,
+            transform: "scale(1.025) translateX(2px)",
+            textShadow: "1px 1px 5px rgba(100,100,100,.5)",
             background: "none",
             mixBlendMode: "initial", 
-            letterSpacing: 1.25,
+            borderColor: "primary.main",
+            letterSpacing: 1,
             "&::before": {
               width: {xs: 15, sm: 20, lg:40},
               backgroundColor: "primary.main",
