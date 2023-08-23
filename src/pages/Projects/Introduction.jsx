@@ -14,19 +14,19 @@ const Introduction = () => {
           lineHeight={{xs:1.1}} 
           textTransform="none"
           sx={{
-            textShadow: "1px 1px 7px rgba(10,10,10,.75)",
+            textShadow: "1px 1px 7px rgba(50,50,50,.75)",
           }}
         >
           My <Box component="br" sx={{display: {xs: "none"}}}></Box>Projects
         </Typography>
       </Grid>
-      <Grid item xs={12} sm={7.25} md={7.5} lg={9} xl={10.5} mt={{xs: 3.5, sm: 6, md:9, lg: 8}} ml={{sm:.25, md: .25}}>
+      <Grid item xs={12} sm={7.25} md={7.5} lg={9} xl={10.5} mt={{xs: 3.5, sm: 6, md:9, lg: 6}} ml={{sm:.25, md: .25}}>
         <Typography 
           variant="body1" 
           sx={{
             fontSize: {xs: 10, sm: 13, md: 14, lg:14, xl: 15.5},
             fontWeight: 300,
-            opacity: .5,
+            opacity: .45,
             letterSpacing: .4,
             textShadow: "1px 1px 5px rgba(10,10,10,.75)",
             // borderLeft: 2,

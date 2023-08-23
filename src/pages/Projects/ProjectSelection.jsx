@@ -23,7 +23,7 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
           display: "flex", 
           justifyContent: {lg:"left"},
           textTransform: "none",
-          fontSize: {xs: 15, sm: 24, md: 28, lg:25, xl: 30},
+          fontSize: {xs: 15, sm: 24, md: 28, lg:28, xl: 29},
           fontWeight: 300,
           textShadow: "1px 1px 5px rgba(100,100,100,.25)",
           transition: "all 450ms ease",

@@ -51,7 +51,7 @@ const Introduction = () => {
               lineHeight={{xs:1}} 
               textTransform="none"
               sx={{
-                textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+                textShadow: "1px 1px 7px rgba(50,50,50,.75)",
               }}
             >
               About Me
