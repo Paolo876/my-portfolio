@@ -7,7 +7,7 @@ import FirstName from './FirstName';
 
 
 const linkStyles = {
-  fontSize: { xs: "1.3rem", sm: "1.75rem", md: "1.8rem", lg: "1.8rem", xl:"1.8rem" },
+  fontSize: { xs: "1.2rem", sm: "1.5rem", md: "1.55rem", lg: "1.6rem", xl:"1.6rem" },
   my: { xs:2.5, sm: 3.5, md: 4, lg: 4 },
   borderRight: 2, 
   borderColor: "primary.dark",
@@ -17,7 +17,7 @@ const linkStyles = {
   fontWeight: 500,
   textAlign: "right",
   textTransform: "none",
-  letterSpacing: .5,
+  letterSpacing: {xs: .351, sm:.5},
   width: "fit-content",
   opacity: .75,
   transition: "all 200ms ease-in-out",
@@ -25,7 +25,7 @@ const linkStyles = {
   "&:hover":{
     opacity:1,
     textShadow: "1px 1px 3px rgba(100,100,100,.75)",
-    transform: "scale(1.05)",
+    transform: "scale(1.025) translateX(-2px)",
     borderColor: "primary.main",
     letterSpacing: 1,
   }
@@ -64,7 +64,7 @@ const Landing = () => {
   return (
     <Box
       sx={{
-        height: {xs: "95vh", md:"96vh"}, 
+        height: {xs: "93vh", md:"96vh"}, 
         position: "relative", 
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
         pt: { xs:8, sm: 12, md: 13, lg: 15, xl: 15 },
@@ -119,7 +119,7 @@ const Landing = () => {
             />
           </Box>
         </Grid>
-        <Grid item xs={12} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", py: {sm: 3}}}>
+        <Grid item xs={12} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", pb: {sm: 3}, pt: {xs:2, sm: 3}}}>
         <Grow
           in={true}
           style={{ transitionDelay: "1900ms"  }}
@@ -158,16 +158,17 @@ const Landing = () => {
           onClick={() => navigate("/")} 
           color="primary" 
           sx={{
-            transform: "rotate(90deg) scale(1.15)",
+            transform: "rotate(90deg) scale(1)",
             transition: "all 200ms ease-in-out",
             "&:hover" : {
-              transform: "rotate(90deg) scale(1.25) translateX(.1em)",
+              transform: "rotate(90deg) scale(1.1) translateX(.1em)",
               filter: "brightness(1.15)"
             },
           }} 
           disableRipple
         >
-          <ArrowForwardIosIcon fontSize="large"/>
+          <ArrowForwardIosIcon sx={{fontSize: {xs: 32, sm: 36, md: 38, lg: 40, xl: 40}}}/>
+          {/* <ArrowForwardIosIcon fontSize="large"/> */}
         </IconButton>
       </Box>
     </Box>
