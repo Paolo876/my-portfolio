@@ -20,7 +20,7 @@ const Introduction = () => {
           My <Box component="br" sx={{display: {xs: "none"}}}></Box>Projects
         </Typography>
       </Grid>
-      <Grid item xs={12} sm={7.25} md={7.5} lg={9} xl={9.25} mt={{xs: 3.5, sm: 6, md:9, lg: 6}} ml={{sm:.25, md: .25}}>
+      <Grid item xs={12} sm={7.25} md={7.5} lg={9} xl={9.25} mt={{xs: 3.5, sm: 6, md:9, lg: 7}} ml={{sm:.25, md: .25}}>
         <Typography 
           variant="body1" 
           sx={{
@@ -34,7 +34,7 @@ const Introduction = () => {
           }}        
         >
           Listed are <Box fontWeight={400} display='inline' component="span">my published projects</Box> that I still continue to develop and improve over time. 
-          <br/>Please feel free to check out the web demo or git repository of my projects, and message me for any remarks or suggestions.
+          Please feel free to check out the web demo or git repository of my projects, and message me for any remarks or suggestions.
         </Typography>
       </Grid>
     </Grid>

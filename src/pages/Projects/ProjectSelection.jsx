@@ -9,7 +9,7 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
 
   return (
     <List>
-    {projects.map((item, index) => <ListItem key={item.name} sx={{px: {xs:1, sm: 1.5,}, py: .5, my: 0, width: "fit-content"}}>
+    {projects.map((item, index) => <ListItem key={item.name} sx={{px: 0, py: .5, my: 0, mx:0, width: "fit-content"}}>
       <ListItemButton 
         className={index === activeProject ? "active" : ""}
         disableRipple
@@ -23,15 +23,17 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
           display: "flex", 
           justifyContent: {lg:"left"},
           textTransform: "none",
-          fontSize: {xs: 15, sm: 24, md: 28, lg:28, xl: 29},
+          fontSize: {xs: 15, sm: 24, md: 28, lg:28, xl: 28},
           fontWeight: 300,
           textShadow: "1px 1px 5px rgba(100,100,100,.25)",
           transition: "all 450ms ease",
-          opacity: {xs: .6, sm:.4},
+          opacity: .6,
           letterSpacing: {xs:.5, lg: .75},
           lineHeight: 1.1,
           my: {xs: .2, sm: .75, md: 2, lg: .5, xl: .75}, 
           py: {xs:.2, sm:1, xl: .1},
+          mx: 0,
+          px:0,
           position: "relative",
           borderLeft: 2,
           borderColor: "rgba(120,120,120,.85)",
@@ -51,10 +53,9 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
           "&:hover, &.active": {
             opacity: 1,
             fontWeight: 400,
-            transform: "scale(1.025) translateX(2px)",
+            transform: "scale(1.04) translateX(2px)",
             textShadow: "1px 1px 5px rgba(100,100,100,.5)",
             background: "none",
-            mixBlendMode: "initial", 
             borderColor: "primary.main",
             letterSpacing: 1,
             "&::before": {

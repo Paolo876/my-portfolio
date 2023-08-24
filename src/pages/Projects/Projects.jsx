@@ -341,6 +341,7 @@ const MainPage = ({ projects }) => {
             sm={8} 
             md={9} 
             lg={5} 
+            xl={7}
             sx={{
               background: "rgba(40,40,40,.1)", 
               height: "100vh", 
@@ -361,7 +362,7 @@ const MainPage = ({ projects }) => {
               }
             }}
             ></Grid>
-          <Grid item xs={0} lg={4}></Grid>
+          <Grid item xs={0} lg={4} xl={2}></Grid>
 
           <Grid 
             item 
@@ -369,13 +370,14 @@ const MainPage = ({ projects }) => {
             sm={4}
             md={3}
             lg={3} 
+            xl={3}
             align="right" 
             sx={{
               height: {xs: "95vh", sm: "95vh", md: "95vh", lg:"95vh"}, 
               display: "flex", 
               flexDirection: "column",
               alignItems: "flex-end", 
-              justifyContent: "flex-end", 
+              justifyContent: "center", 
               zIndex: -2,
               pb: {xs:3.5, sm: 8, md: 8, lg: 12, xl: 12},
             }}
