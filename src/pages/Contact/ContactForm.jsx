@@ -6,6 +6,7 @@ const inputStyles = {
     fontSize: { xs: 13, sm: 14.5, md: 15, lg: 15, xl:16 },
     fontWeight: 500,
     letterSpacing: .25,
+    lineHeight: 1.25, 
     textShadow: "1px 1px 5px rgba(10,10,10,.75)",
     "&:hover": {
       textShadow: "1px 1px 3px rgba(100,100,100,.75)",
@@ -40,7 +41,7 @@ const ContactForm = () => {
     >
       <Box 
         sx={{
-          p: {xs: 2, sm:2.5, md:4, lg: 4}, 
+          p: {xs: 3.25, sm:4, md:5, lg: 4}, 
           border: 2, 
           borderColor: "rgba(100,100,100,.75)",
           display: "flex", 
@@ -53,11 +54,11 @@ const ContactForm = () => {
         onSubmit={handleSubmit}
       >
         <Box sx={{display: "flex", flexDirection: {xs: "column", sm: "row"}, gap: {xs: 0, sm: 3}, my: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}}>
-          <TextField id="firstName" label="First Name" variant="standard" fullWidth type="text" InputProps={inputStyles} InputLabelProps={inputLabelStyles} inputProps={{maxLength: 25}}/>
-          <TextField id="lastName" label="Last Name" variant="standard" fullWidth type="text" InputProps={inputStyles} InputLabelProps={inputLabelStyles} inputProps={{maxLength: 25}}/>
+          <TextField id="firstName" label="First Name" variant="standard" fullWidth type="text" InputProps={inputStyles} InputLabelProps={inputLabelStyles} inputProps={{maxLength: 25}} sx={{mt: {xs: 0, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} />
+          <TextField id="lastName" label="Last Name" variant="standard" fullWidth type="text" InputProps={inputStyles} InputLabelProps={inputLabelStyles} inputProps={{maxLength: 25}} sx={{mt: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} />
         </Box>
-        <TextField id="phone" label="Contact Number" variant="standard" fullWidth type="phone" sx={{my: {xs: .7, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}  inputProps={{maxLength: 15}}/>
-        <TextField id="email" label="Email Address" variant="standard" fullWidth type="email" sx={{my: {xs: .7, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}  inputProps={{maxLength: 50}}/>
+        <TextField id="phone" label="Contact Number" variant="standard" fullWidth type="phone" sx={{my: {xs: 0, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}  inputProps={{maxLength: 15}}/>
+        <TextField id="email" label="Email Address" variant="standard" fullWidth type="email" sx={{my: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}  inputProps={{maxLength: 50}}/>
         <TextField
           id="message"
           label="Message"
