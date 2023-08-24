@@ -12,7 +12,7 @@ const Navbar = () => {
   // const isNavbarHidden = Boolean(location.pathname === "/" && window.pageYOffset < 500)
   const [ currentOffset, setCurrentOffset ] = useState(window.pageYOffset);
   const [ isScrolledDown, setIsScrolledDown ] = useState("top");
-  const [ showModal, setShowModal ] = useState(false);
+  const [ showModal, setShowModal ] = useState(true);
 
   window.onscroll = () => {
     if(window.pageYOffset < 50) {

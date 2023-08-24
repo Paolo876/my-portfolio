@@ -78,10 +78,10 @@
 
 .navbar-modal {
     .link-items {
-        text-align: center;
+        // text-align: center;
         a{
             z-index: 0;
-            opacity:.85;
+            opacity:.75;
             transition: all 0.3s;
 
             p {
@@ -89,8 +89,10 @@
                 position: relative;
             }
             &.active {
+                opacity: 1;
                 p {
                     font-weight: 500;
+                    transform: scale(1.025) translateX(-5px);
                     &::before, &::after{
                         opacity: .75;
                         position: absolute;
@@ -104,8 +106,8 @@
                         left: -.9em;
                     }
                     &::after{
-                        content: '/>';
-                        right: -1.45em;
+                        content: '>';
+                        right: -1em;
                     }
     
                 }
