@@ -15,7 +15,7 @@ const styles = {
 
 const linkStyles = {
   fontSize: { xs: "1.35rem", sm: "1.8rem"},
-  my: { xs:1.5, sm: 2.75 },
+  my: 3,
   ml: 2.5,
   fontWeight: 400,
   textAlign: "right",
@@ -67,11 +67,11 @@ const LinksModal = ({ open, onClose}) => {
                   <Typography fontSize={{xs: 14, sm: 15, md: 16}} variant="h3">PB</Typography>
                 </Link>
                 <IconButton sx={{display: {md:"none"}, ml: "auto", opacity: .75}} size="small" color="primary" onClick={onClose}>
-                  <PanoramaFishEyeIcon sx={{fontSize: 35}}/>
+                  <PanoramaFishEyeIcon sx={{fontSize: 35, filter: "drop-shadow(1px 1px 3px rgba(209,145,25,.35))"}}/>
                 </IconButton>
               </Box>
-              <Box sx={{mt: 8, mr: 2}} className="link-items" align="right">
-                <Link onClick={() => handleClick("/")} className={location.pathname === "/home" ? "active" : ""} draggable={false}><Typography sx={linkStyles}>Home</Typography></Link>
+              <Box sx={{mt: 5, mr: 2}} className="link-items" align="right">
+                <Link onClick={() => handleClick("/")} className={location.pathname === "/" ? "active" : ""} draggable={false}><Typography sx={linkStyles}>Home</Typography></Link>
                 <Link onClick={() => handleClick("/projects")} className={location.pathname === "/projects" ? "active" : ""} draggable={false} ><Typography sx={linkStyles}>Projects</Typography></Link>
                 <Link onClick={() => handleClick("/about")} className={location.pathname === "/about" ? "active" : ""} draggable={false} ><Typography sx={linkStyles}>About</Typography></Link>
                 <Link onClick={() => handleClick("/contact")} className={location.pathname === "/contact" ? "active" : ""} draggable={false} ><Typography sx={linkStyles}>Contact</Typography></Link>

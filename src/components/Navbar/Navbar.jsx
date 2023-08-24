@@ -80,37 +80,10 @@ const Navbar = () => {
           }} 
         >
           <IconButton sx={{display: {md:"none"}, ml: "auto", opacity: .75}} size="small" color="primary" onClick={() => setShowModal(true)} disableFocusRipple disableRipple disableTouchRipple>
-            <MenuIcon sx={{fontSize: 35}}/>
+            <MenuIcon sx={{fontSize: 35, filter: "drop-shadow(1px 1px 3px rgba(200,200,200,.15))"}}/>
           </IconButton>
         </Grid>
       </Grid>
-
-      {/* <Container maxWidth="xl">
-        <Box 
-          sx={{
-            display: "flex", 
-            flexDirection: "row", 
-            px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
-            py:{xs:.5, sm:1.15, md: 1.75, xl: 2 }, 
-            alignItems: "center", 
-          }}
-        >
-          <Link component={ReactLink} to="/">
-            <Typography fontSize={{xs: 14, sm: 15, md: 16}} variant="h3">PB</Typography>
-          </Link>
-
-            <Box sx={{ml: {xs:0, md:"auto"}, display:{xs: "none", md: "flex"}, flexDirection: "row", gap: {md:4, lg: 5,xl: 7.5}}} className="link-items">
-              <Link component={NavLink} to="/" draggable={false}><Typography fontSize={{md: 15, lg: 16,xl: 17}}>Home</Typography></Link>
-              <Link component={NavLink} to="/projects" draggable={false}><Typography fontSize={{md: 15, lg: 16,xl: 17}}>Projects</Typography></Link>
-              <Link component={NavLink} to="/about" draggable={false}><Typography fontSize={{md: 15, lg: 16,xl: 17}}>About</Typography></Link>
-              <Link component={NavLink} to="/contact" draggable={false}><Typography fontSize={{md: 15, lg: 16, xl: 17}}>Contact</Typography></Link>
-            </Box>
-            <IconButton sx={{display: {md:"none"}, ml: "auto", opacity: .75}} size="small" color="primary" onClick={() => setShowModal(true)} disableFocusRipple disableRipple disableTouchRipple>
-              <MenuIcon sx={{fontSize: 35}}/>
-            </IconButton>
-
-        </Box>
-      </Container> */}
       <LinksModal open={showModal} onClose={() => setShowModal(false)}/>
     </AppBar>
   )
