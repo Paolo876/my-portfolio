@@ -115,8 +115,8 @@ const ContactDescription = () => {
             </Typography>
           </Box>
         </Box>
-        <Box sx={{display: "flex", justifyContent: "space-between", flexDirection: {xs: "column", sm: "row"}, mt: {xs: 2, sm: 5, md: 6, lg: 8, xl: 9}}} mb={4}>
-          <Box sx={{display: "flex", flexDirection: "column", gap: 1.5}}>
+        <Box sx={{display: "flex", justifyContent: "space-between", flexDirection: {xs: "column", sm: "row"}, mt: {xs: 1.4, sm: 5, md: 6, lg: 8, xl: 8}}} mb={4}>
+          <Box sx={{display: "flex", flexDirection: "column", gap: {xs:1, sm: 1.5}}}>
             <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={contactButtonStyles} disableRipple>
               <MailOutlineIcon color="primary" sx={{fontSize: { xs:17, sm: 23, md: 22, lg: 22, xl: 23}}}/>
               <Typography sx={{fontSize: {xs:11.5, sm: 14, md: 15.5, lg: 15.5, xl: 17}, letterSpacing: 1}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
@@ -126,19 +126,19 @@ const ContactDescription = () => {
               <Typography sx={{fontSize: {xs:11.5, sm: 14, md: 15.5, lg: 15.5, xl: 17}, letterSpacing: 1}} fontWeight={300}>(323) 481 - 7852</Typography>
             </IconButton> 
           </Box>
-          <Box sx={{display: "flex", flexDirection: {xs:"row", sm: "column"}, alignItems: {xs:"center", sm: "flex-start"}, justifyContent: "space-between", mt: {xs: 1.25, sm: 0}}}>
+          <Box sx={{display: "flex", flexDirection: {xs:"row", sm: "column"}, alignItems: {xs:"center", sm: "flex-start"}, justifyContent: "space-between", mt: {xs: 1, sm: 0}}}>
             <Typography
               variant="h2" 
               align="left" 
               fontWeight={400}
-              fontSize={{xs:12, sm: 14, md: 15.5, lg: 15.5, xl: 17}} 
+              fontSize={{xs:10.5, sm: 14, md: 15.5, lg: 15.5, xl: 17}} 
               letterSpacing={{sm: .5, xl:1}}
               lineHeight={{xs:1}} 
               textTransform="none"
               mr={{xs: 2, sm: 0}}
               sx={{
                 textShadow: "1px 1px 7px rgba(25,25,25,.75)",
-                opacity: .75
+                opacity: .5,
               }}
             >
               Social:

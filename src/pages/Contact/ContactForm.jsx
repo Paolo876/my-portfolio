@@ -3,9 +3,9 @@ import { Box, ButtonBase, TextField } from '@mui/material'
 
 const inputStyles = {
   sx: {
-    fontSize: { xs: 13, sm: 14.5, md: 15, lg: 15, xl:16 },
+    fontSize: { xs: 11, sm: 14.5, md: 15, lg: 15, xl:15 },
     fontWeight: 500,
-    letterSpacing: .25,
+    letterSpacing: .1,
     lineHeight: 1.25, 
     textShadow: "1px 1px 5px rgba(10,10,10,.75)",
     "&:hover": {
@@ -16,7 +16,7 @@ const inputStyles = {
 
 const inputLabelStyles = {
   sx: {
-    fontSize: { xs: 13, sm: 15, md: 15, lg: 15, xl:16 },
+    fontSize: { xs: 11.5, sm: 15, md: 15, lg: 15, xl:15 },
     fontWeight: 200,
     opacity: .75,
     letterSpacing: .75,
@@ -33,7 +33,7 @@ const ContactForm = () => {
   return (
     <Box 
       sx={{
-        pb: {xs: 1, sm:3, md:3, lg: 3, xl: 4 }, 
+        pb: {xs: 1, sm:3, md:3, lg: 0, xl: 0 }, 
         mb: {xs: 4, lg: 0},
         px: {xs: .5, sm: 1, md: 3, lg: 0}
       }} 
@@ -41,13 +41,13 @@ const ContactForm = () => {
     >
       <Box 
         sx={{
-          p: {xs: 3.25, sm:4, md:5, lg: 4}, 
+          p: {xs: 3, sm:4, md:5, lg: 4}, 
           border: 2, 
           borderColor: "rgba(100,100,100,.75)",
           display: "flex", 
           flexDirection: "column",
           boxShadow: 8,
-          backgroundColor: "rgba(45,45,45,.25)"
+          backgroundColor: "rgba(45,45,45,.45)"
         }} 
         component="form" 
         autoComplete="off" 
@@ -77,11 +77,11 @@ const ContactForm = () => {
             sx={{
               boxShadow: 5,
               border: 2, 
-              fontSize: { xs: ".95rem", sm: "1rem", md: "1rem", lg: "1.1rem" },
+              fontSize: { xs: ".85rem", sm: "1rem", md: "1rem", lg: "1.1rem" },
               lineHeight: 1.4, 
               borderColor: "primary.dark",
-              px: {xs: 3, sm: 4, md: 4, lg: 4},
-              py: 1,
+              px: {xs: 4, sm: 4, md: 4, lg: 4},
+              py: {xs: .75, sm:1},
               fontWeight: 500,
               letterSpacing: 1.25,
               opacity: .75,
