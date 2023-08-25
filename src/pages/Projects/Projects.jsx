@@ -317,7 +317,7 @@ const MainPage = ({ projects }) => {
       }}
     >      
       <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", height: "100%"}}>
-        <Grid item lg={6} sx={{height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", pb: 10}}>
+        <Grid item lg={6} sx={{height: "100%", display: "flex", flexDirection: "column", justifyContent:{md: "space-between"}, pb: 10}}>
           <Introduction/>
           <ProjectSelection projects={projects} setActiveProject={setActiveProject} setIsHovered={setIsHovered} activeProject={activeProject}/>
         </Grid>

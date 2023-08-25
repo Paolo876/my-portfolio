@@ -20,11 +20,11 @@ const Introduction = () => {
           My <Box component="br" sx={{display: {xs: "none"}}}></Box>Projects
         </Typography>
       </Grid>
-      <Grid item xs={12} sm={7.25} md={7.5} lg={9} xl={9.25} mt={{xs: 3.5, sm: 6, md:9, lg: 7}} ml={{sm:.25, md: .25}}>
+      <Grid item xs={12} sm={7.25} md={7.5} lg={9} xl={9.25} mt={{xs: 3.5, sm: 6, md:7, lg: 7}} ml={{sm:.25, md: .25}}>
         <Typography 
           variant="body1" 
           sx={{
-            fontSize: {xs: 11.5, sm: 14.5, md: 15, lg:16, xl: 16},
+            fontSize: {xs: 10, sm: 12.5, md: 14, lg:14.5, xl: 14.5},
             fontWeight: 300,
             opacity: .45,
             letterSpacing: .4,

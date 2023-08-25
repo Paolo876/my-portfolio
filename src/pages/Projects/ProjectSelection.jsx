@@ -8,7 +8,7 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
 
 
   return (
-    <List>
+    <List sx={{mt: {xs: 5, sm: 10, md: 0}}}>
     {projects.map((item, index) => <ListItem key={item.name} sx={{px: 0, py: .5, my: 0, mx:0, width: "fit-content"}}>
       <ListItemButton 
         className={index === activeProject ? "active" : ""}
