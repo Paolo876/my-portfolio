@@ -377,7 +377,7 @@ const MainPage = ({ projects }) => {
               display: "flex", 
               flexDirection: "column",
               alignItems: "flex-end", 
-              justifyContent: "center", 
+              justifyContent: {xs: "flex-end", md:"center"}, 
               zIndex: -2,
               pb: {xs:3.5, sm: 8, md: 8, lg: 12, xl: 12},
             }}
