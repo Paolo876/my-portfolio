@@ -340,7 +340,7 @@ const MainPage = ({ projects }) => {
             xs={7}
             sm={8} 
             md={9} 
-            lg={5} 
+            lg={7} 
             xl={7}
             sx={{
               background: "rgba(40,40,40,.1)", 
@@ -362,7 +362,7 @@ const MainPage = ({ projects }) => {
               }
             }}
             ></Grid>
-          <Grid item xs={0} lg={4} xl={2}></Grid>
+          <Grid item xs={0} lg={2} xl={2}></Grid>
 
           <Grid 
             item 
