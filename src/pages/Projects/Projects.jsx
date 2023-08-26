@@ -313,7 +313,7 @@ const MainPage = ({ projects }) => {
         width: "100%",
         position: "relative", 
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
-        pt: {xs:8, sm: 12, md: 14, lg: 16, xl: 18}, 
+        pt: {xs:8, sm: 12, md: 14, lg: 14, xl: 18}, 
       }}
     >      
       <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", height: "100%"}}>
