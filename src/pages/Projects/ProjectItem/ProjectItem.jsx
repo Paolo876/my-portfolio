@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { Grid, Box, ListItem, ListItemButton, List } from '@mui/material';
 import DocumentHead from '../../../components/DocumentHead'
 import ProjectItemContent from './ProjectItemContent';
+import MobileNavigation from './MobileNavigation';
 
 
 const ProjectItem = ({ projects }) => {
@@ -119,6 +120,9 @@ const ProjectItem = ({ projects }) => {
         px: { xs:1.75, sm: 3, md: 4, lg: 5, xl: 0 }, 
       }}
     >
+      <Grid item xs={12} sx={{display: {lg: "none"}}}>
+        <MobileNavigation/>
+      </Grid>
       <Grid item xs={0} xl={2.5}></Grid>
       <Grid item xs={12} md={9.5} xl={9.15} >
         {project && <ProjectItemContent project={project}/>}
