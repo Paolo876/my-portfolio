@@ -6,10 +6,10 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
 const textStyles = {
-  fontSize: {xs: 11, sm: 11, md: 12, lg:14, xl: 15},
-  fontWeight: 500,
-  // opacity: .8,
-  letterSpacing: .15,
+  fontSize: {xs: 11.5, sm: 12, md: 12.5, lg:13},
+  fontWeight: 800,
+  opacity: .85,
+  letterSpacing: .25,
   lineHeight: 1.4,
   textShadow: "1px 1px 5px rgba(100,100,100,.25)",
   px: {xs: .5, sm: .75, md:1},
