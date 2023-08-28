@@ -8,17 +8,16 @@ import MobileNavigation from './MobileNavigation';
 
 const ProjectItem = ({ projects }) => {
   const { id } = useParams();
-
   const [ project, setProject ] = useState(projects.find(item => item.name === id))
   const navigate = useNavigate();
   
   useEffect(() => {
-    if(!project){
+    const proj = projects.find(item => item.name === id);
+    if(!proj){
        navigate('/projects')
     } else {
       setProject(projects.find(item => item.name === id))
     }
-
   }, [id])
 
   return (
@@ -121,8 +120,8 @@ const ProjectItem = ({ projects }) => {
         px: { xs:1.75, sm: 3, md: 4, lg: 5, xl: 0 }, 
       }}
     >
-      <Grid item xs={12} sx={{display: {md: "none"}, mb: {xs:2, sm: 4}}}>
-        <MobileNavigation projects={projects} currentProjectName={project.name}/>
+      <Grid item xs={12} sx={{display: {md: "none"}, mb: {xs:5, sm: 6}}}>
+        {project && <MobileNavigation projects={projects} currentProjectName={project.name}/>}
       </Grid>
       <Grid item xs={0} xl={2.5}></Grid>
       <Grid item xs={12} md={9.5} xl={9.15} >

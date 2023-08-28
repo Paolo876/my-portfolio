@@ -47,7 +47,6 @@ const ProjectItemContent = ( { project }) => {
               sx={{
                 fontSize: {xs: 9.5, sm: 11, md: 12, lg:14, xl: 15},
                 fontWeight: 300,
-                fontWeight: 300,
                 opacity: .5,
                 letterSpacing: .25,
                 lineHeight: 1.4,

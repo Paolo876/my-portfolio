@@ -5,11 +5,24 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
+const textStyles = {
+  fontSize: {xs: 11, sm: 11, md: 12, lg:14, xl: 15},
+  fontWeight: 500,
+  // opacity: .8,
+  letterSpacing: .15,
+  lineHeight: 1.4,
+  textShadow: "1px 1px 5px rgba(100,100,100,.25)",
+  px: {xs: .5, sm: .75, md:1},
+  color: "primary.dark",
+}
+
 const MobileNavigation = ({ projects, currentProjectName }) => {
   const navigate = useNavigate();
   const currentProjectIdx = projects.findIndex(item => item.name === currentProjectName)
+  const prevProject = projects[currentProjectIdx - 1]
+  const nextProject = projects[currentProjectIdx + 1]
 
-  console.log(currentProjectIdx)
+
   return (
     <Box
       sx={{
@@ -19,17 +32,40 @@ const MobileNavigation = ({ projects, currentProjectName }) => {
       }}
     >
       <Box>
-        <IconButton size="small" sx={{p:0, opacity: currentProjectIdx === 0 ? .25 : 1}} disableRipple disabled={currentProjectIdx === 0} onClick={() => console.log("prev")}>
+        <IconButton 
+          size="small" 
+          sx={{
+            p:0, 
+            opacity: currentProjectIdx <= 0 ? .25 : 1,
+          }}
+          disableRipple 
+          disabled={currentProjectIdx <= 0} 
+          onClick={() => navigate(`/projects/${prevProject.name}`)}
+        >
           <ArrowBackIosNewIcon sx={{fontSize: {xs: 13, filter: "drop-shadow(1px 1px 3px rgba(209,145,25,.25))"}}} color="primary"/>
+          {prevProject && 
+            <Typography variant="body2" sx={textStyles}>
+              {prevProject.title}
+            </Typography>
+          }
         </IconButton>
       </Box>
       <Box>
-        <Typography>
-          moby
-        </Typography>
-      </Box>
-      <Box>
-        <IconButton size="small" sx={{p:0, opacity: currentProjectIdx === projects.length - 1 ? .25 : 1}} disableRipple disabled={currentProjectIdx === projects.length - 1} onClick={() => console.log("next")}>
+        <IconButton 
+          size="small" 
+          sx={{
+            p:0, 
+            opacity: currentProjectIdx >= projects.length -1 ? .25 : 1,
+          }}
+          disableRipple 
+          disabled={currentProjectIdx >= projects.length -1} 
+          onClick={() => navigate(`/projects/${nextProject.name}`)}
+        >
+          {nextProject && 
+            <Typography variant="body2" sx={textStyles}>
+              {nextProject.title}
+            </Typography>
+          }
           <ArrowForwardIosIcon sx={{fontSize: {xs: 13, filter: "drop-shadow(1px 1px 3px rgba(209,145,25,.25))"}}} color="primary"/>
         </IconButton>
       </Box>
