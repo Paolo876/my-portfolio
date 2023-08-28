@@ -42,7 +42,7 @@ const MobileNavigation = ({ projects, currentProjectName }) => {
           disabled={currentProjectIdx <= 0} 
           onClick={() => navigate(`/projects/${prevProject.name}`)}
         >
-          <ArrowBackIosNewIcon sx={{fontSize: {xs: 13, filter: "drop-shadow(1px 1px 3px rgba(209,145,25,.25))"}}} color="primary"/>
+          <ArrowBackIosNewIcon sx={{fontSize: {xs: 11, sm: 12, md: 13}, filter: "drop-shadow(1px 1px 3px rgba(209,145,25,.25))"}} color="primary"/>
           {prevProject && 
             <Typography variant="body2" sx={textStyles}>
               {prevProject.title}
@@ -66,7 +66,7 @@ const MobileNavigation = ({ projects, currentProjectName }) => {
               {nextProject.title}
             </Typography>
           }
-          <ArrowForwardIosIcon sx={{fontSize: {xs: 13, filter: "drop-shadow(1px 1px 3px rgba(209,145,25,.25))"}}} color="primary"/>
+          <ArrowForwardIosIcon sx={{fontSize: {xs: 11, sm: 12, md: 13}, filter: "drop-shadow(1px 1px 3px rgba(209,145,25,.25))"}} color="primary"/>
         </IconButton>
       </Box>
     </Box>
