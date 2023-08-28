@@ -19,7 +19,9 @@ const MobileNavigation = ({}) => {
         </IconButton>
       </Box>
       <Box>
-        
+        <Typography>
+          moby
+        </Typography>
       </Box>
       <Box>
         <IconButton size="small" sx={{p:0}} disableRipple>

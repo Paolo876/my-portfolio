@@ -20,6 +20,8 @@ const ProjectItem = ({ projects }) => {
     }
 
   }, [id])
+  const projIndex = projects.findIndex(item => item.name === id)
+  console.log(projIndex)
   return (
     <>
     <DocumentHead
@@ -32,7 +34,7 @@ const ProjectItem = ({ projects }) => {
         height: "100vh",
         width: "100%",
         position: "relative", 
-        pt: {xs:8, sm: 11, md: 13, lg: 13, xl: 15},  
+        pt: {xs:7.5, sm: 10.5, md: 13, lg: 13, xl: 15},  
       }}
     > 
     <Grid 
@@ -120,7 +122,7 @@ const ProjectItem = ({ projects }) => {
         px: { xs:1.75, sm: 3, md: 4, lg: 5, xl: 0 }, 
       }}
     >
-      <Grid item xs={12} sx={{display: {lg: "none"}}}>
+      <Grid item xs={12} sx={{display: {md: "none"}, mb: {xs:2, sm: 4}}}>
         <MobileNavigation/>
       </Grid>
       <Grid item xs={0} xl={2.5}></Grid>
