@@ -4,15 +4,20 @@ import { Grid, Box, ListItem, ListItemButton, List } from '@mui/material';
 import DocumentHead from '../../../components/DocumentHead'
 import ProjectItemContent from './ProjectItemContent';
 import MobileNavigation from './MobileNavigation';
+import { useSwipeable } from 'react-swipeable';
 
 
 const ProjectItem = ({ projects }) => {
   const { id } = useParams();
   const [ project, setProject ] = useState(projects.find(item => item.name === id))
   const navigate = useNavigate();
-  
+  const currentProjectIdx = projects.findIndex(item => item.name === project.name)
+
+
   useEffect(() => {
     const proj = projects.find(item => item.name === id);
+    window.scrollTo(0, 0);
+
     if(!proj){
        navigate('/projects')
     } else {
@@ -20,7 +25,25 @@ const ProjectItem = ({ projects }) => {
     }
   }, [id])
 
-  
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => handleSwipe("left"),
+    onSwipedRight: () => handleSwipe("right"),
+    swipeDuration: 500,
+    preventScrollOnSwipe: true,
+    delta: 10, 
+  });
+
+
+  const handleSwipe = (direction) => {
+      if(direction === "left" && currentProjectIdx < projects.length - 1) {
+        navigate(`/projects/${projects[currentProjectIdx + 1].name}`)
+      }
+      else if (direction === "right" && currentProjectIdx > 0) {
+        navigate(`/projects/${projects[currentProjectIdx -1].name}`)
+      }
+
+  }
   return (
     <>
     <DocumentHead
@@ -35,6 +58,7 @@ const ProjectItem = ({ projects }) => {
         position: "relative", 
         pt: {xs:7.5, sm: 10.5, md: 13, lg: 13, xl: 15},  
       }}
+      {...handlers}
     > 
     <Grid 
       container 
