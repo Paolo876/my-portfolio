@@ -29,7 +29,7 @@ const MobileNavigation = ({ projects, currentProjectName }) => {
         </Typography>
       </Box>
       <Box>
-        <IconButton size="small" sx={{p:0, opacity: currentProjectIdx === 0 ? .25 : 1}} disableRipple disabled={currentProjectIdx === projects.length - 1} onClick={() => console.log("next")}>
+        <IconButton size="small" sx={{p:0, opacity: currentProjectIdx === projects.length - 1 ? .25 : 1}} disableRipple disabled={currentProjectIdx === projects.length - 1} onClick={() => console.log("next")}>
           <ArrowForwardIosIcon sx={{fontSize: {xs: 13, filter: "drop-shadow(1px 1px 3px rgba(209,145,25,.25))"}}} color="primary"/>
         </IconButton>
       </Box>

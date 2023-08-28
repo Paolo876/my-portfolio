@@ -45,7 +45,7 @@ const ProjectItemContent = ( { project }) => {
             <Typography 
               variant="body1" 
               sx={{
-                fontSize: {xs: 10, sm: 11, md: 12, lg:14, xl: 15},
+                fontSize: {xs: 9.5, sm: 11, md: 12, lg:14, xl: 15},
                 fontWeight: 300,
                 fontWeight: 300,
                 opacity: .5,
@@ -53,8 +53,8 @@ const ProjectItemContent = ( { project }) => {
                 lineHeight: 1.4,
                 textShadow: "1px 1px 5px rgba(10,10,10,.75)",
                 borderLeft: 2,
-                pl: {xs: 1, md:1.25},
-                borderColor: "primary.dark"
+                pl: {sm: 1, md:1.25},
+                borderColor: {xs: "transparent", sm:"primary.dark"}
               }}        
             >
               {project.description}
