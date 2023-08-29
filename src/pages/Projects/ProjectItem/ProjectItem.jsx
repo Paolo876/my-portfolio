@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import { Grid, Box, ListItem, ListItemButton, List, Fade } from '@mui/material';
 import DocumentHead from '../../../components/DocumentHead'
 import ProjectItemContent from './ProjectItemContent';
@@ -9,6 +9,7 @@ import { useSwipeable } from 'react-swipeable';
 
 const ProjectItem = ({ projects }) => {
   const { id } = useParams();
+  const { pathname } = useLocation();
   const [ project, setProject ] = useState(projects.find(item => item.name === id))
   const [ isShown, setIsShown ] = useState(true);
   const navigate = useNavigate();
@@ -28,11 +29,13 @@ const ProjectItem = ({ projects }) => {
   }, [id])
 
 
-  const handleProjectChange = (link) => {
-    setIsShown(false)
-    setTimeout(() => {
-      navigate(link)
-    }, 200)
+  const handleProjectChange = link => {
+    if(link !== pathname) {
+      setIsShown(false)
+      setTimeout(() => {
+        navigate(link)
+      }, 300)
+    }
   }
 
   const handlers = useSwipeable({
@@ -86,7 +89,7 @@ const ProjectItem = ({ projects }) => {
         pt: {xs:10, sm: 11, md: 11, lg: 13, xl: 14}
       }}
     >
-      <Grid item xs={3} md={2.5}>
+      <Grid item xs={3} md={3} lg={2.5}>
         <List>
           {projects.map(item => <ListItem key={item.name} dense disablePadding disableGutters>
             <ListItemButton 
@@ -101,7 +104,7 @@ const ProjectItem = ({ projects }) => {
                 display: "flex", 
                 justifyContent: "left",
                 textTransform: "none",
-                fontSize: {xs: 12.5, sm: 14.5, md: 14, lg:16, xl: 17},
+                fontSize: {xs: 12.5, sm: 13.5, md: 13.5, lg:16, xl: 17},
                 fontWeight: 300,
                 textShadow: "1px 1px 5px rgba(10,10,10,.75)",
                 transition: "all 150ms ease",
@@ -159,8 +162,8 @@ const ProjectItem = ({ projects }) => {
         {project && <MobileNavigation projects={projects} currentProjectName={project.name} handleProjectChange={handleProjectChange}/>}
       </Grid>
       <Grid item xs={0} xl={2.5}></Grid>
-      <Grid item xs={12} md={9.5} xl={9.15}>
-        <Fade in={isShown} timeout={600} unmountOnExit>
+      <Grid item xs={12} md={9.25} lg={9.5} xl={9.15}>
+        <Fade in={isShown} timeout={550} unmountOnExit>
           <Box>
             {project && <ProjectItemContent project={project} isShown={isShown}/>}
           </Box>

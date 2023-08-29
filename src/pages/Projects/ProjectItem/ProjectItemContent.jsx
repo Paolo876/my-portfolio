@@ -25,7 +25,7 @@ const ProjectItemContent = ( { project, isShown }) => {
           }}
         >
           <Grid item xs={12}>
-          <Fade appear={true} in={true} timeout={500} style={{ transitionDelay: "800ms" }}>
+          <Fade appear={isShown} in={isShown} timeout={500} style={{ transitionDelay: "1800ms" }}>
 
             <Typography 
               variant="h2" 
