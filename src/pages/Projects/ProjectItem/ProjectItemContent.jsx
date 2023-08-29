@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Typography, Grid, Modal, Box, Divider } from '@mui/material'
+import { Typography, Grid, Modal, Box, Divider, Fade } from '@mui/material'
 import ProjectUrlAndTechStack from './ProjectUrlAndTechStack';
 import ProjectFeatures from './ProjectFeatures';
 import ProjectImages from './ProjectImages';
@@ -25,6 +25,8 @@ const ProjectItemContent = ( { project }) => {
           }}
         >
           <Grid item xs={12}>
+          <Fade appear={true} in={true} timeout={{enter: 350, exit: 350}}>
+
             <Typography 
               variant="h2" 
               align="left" 
@@ -39,6 +41,7 @@ const ProjectItemContent = ( { project }) => {
             >
               {project.title}
             </Typography>
+            </Fade>
           </Grid>
 
           <Grid item xs={12} sm={7.15} md={7.5} lg={7} xl={5} sx={{mt: {xs: 3, sm: 5, md: 5, lg: 6, xl: 6}}}>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Grid, Box, ListItem, ListItemButton, List } from '@mui/material';
+import { Grid, Box, ListItem, ListItemButton, List, Fade } from '@mui/material';
 import DocumentHead from '../../../components/DocumentHead'
 import ProjectItemContent from './ProjectItemContent';
 import MobileNavigation from './MobileNavigation';
@@ -10,6 +10,7 @@ import { useSwipeable } from 'react-swipeable';
 const ProjectItem = ({ projects }) => {
   const { id } = useParams();
   const [ project, setProject ] = useState(projects.find(item => item.name === id))
+  const [ isShown, setIsShown ] = useState(true);
   const navigate = useNavigate();
   const currentProjectIdx = projects.findIndex(item => item.name === project.name)
 
@@ -22,10 +23,21 @@ const ProjectItem = ({ projects }) => {
        navigate('/projects')
     } else {
       setProject(projects.find(item => item.name === id))
+      setIsShown(true)
+
+      // return () => console.log("un")
     }
+
+    
   }, [id])
 
 
+  const handleProjectChange = (link) => {
+    setIsShown(false)
+    setTimeout(() => {
+      navigate(link)
+    }, 200)
+  }
   const handlers = useSwipeable({
     onSwipedLeft: () => handleSwipe("left"),
     onSwipedRight: () => handleSwipe("right"),
@@ -84,7 +96,8 @@ const ProjectItem = ({ projects }) => {
               className={id === item.name ? "active" : ""}
               disableRipple
               disableGutters
-              onClick={() => navigate(`/projects/${item.name}`)}
+              onClick={() => handleProjectChange(`/projects/${item.name}`)}
+              // onClick={() => setIsShown(prevState => !prevState)}
               sx={{
                 width: "100%", 
                 alignItems: "flex-start", 
@@ -149,8 +162,12 @@ const ProjectItem = ({ projects }) => {
         {project && <MobileNavigation projects={projects} currentProjectName={project.name}/>}
       </Grid>
       <Grid item xs={0} xl={2.5}></Grid>
-      <Grid item xs={12} md={9.5} xl={9.15} >
-        {project && <ProjectItemContent project={project} />}
+      <Grid item xs={12} md={9.5} xl={9.15}>
+        <Fade in={isShown} timeout={600}>
+          <Box>
+            {project && <ProjectItemContent project={project} />}
+          </Box>
+        </Fade>
       </Grid>   
     </Grid>
       </Box>
