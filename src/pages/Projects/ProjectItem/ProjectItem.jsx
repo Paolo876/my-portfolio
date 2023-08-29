@@ -24,11 +24,7 @@ const ProjectItem = ({ projects }) => {
     } else {
       setProject(projects.find(item => item.name === id))
       setIsShown(true)
-
-      // return () => console.log("un")
     }
-
-    
   }, [id])
 
 
@@ -38,6 +34,7 @@ const ProjectItem = ({ projects }) => {
       navigate(link)
     }, 200)
   }
+
   const handlers = useSwipeable({
     onSwipedLeft: () => handleSwipe("left"),
     onSwipedRight: () => handleSwipe("right"),
@@ -46,16 +43,16 @@ const ProjectItem = ({ projects }) => {
     delta: 10, 
   });
 
-
   const handleSwipe = (direction) => {
       if(direction === "left" && currentProjectIdx < projects.length - 1) {
-        navigate(`/projects/${projects[currentProjectIdx + 1].name}`)
+        handleProjectChange(`/projects/${projects[currentProjectIdx + 1].name}`)
       }
       else if (direction === "right" && currentProjectIdx > 0) {
-        navigate(`/projects/${projects[currentProjectIdx -1].name}`)
+        handleProjectChange(`/projects/${projects[currentProjectIdx -1].name}`)
       }
-
   }
+
+
   return (
     <>
     <DocumentHead
@@ -159,7 +156,7 @@ const ProjectItem = ({ projects }) => {
       }}
     >
       <Grid item xs={12} sx={{display: {md: "none"}, mb: {xs:5, sm: 6}}}>
-        {project && <MobileNavigation projects={projects} currentProjectName={project.name}/>}
+        {project && <MobileNavigation projects={projects} currentProjectName={project.name} handleProjectChange={handleProjectChange}/>}
       </Grid>
       <Grid item xs={0} xl={2.5}></Grid>
       <Grid item xs={12} md={9.5} xl={9.15}>

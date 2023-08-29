@@ -16,7 +16,7 @@ const textStyles = {
   color: "primary.dark",
 }
 
-const MobileNavigation = ({ projects, currentProjectName }) => {
+const MobileNavigation = ({ projects, currentProjectName, handleProjectChange }) => {
   const navigate = useNavigate();
   const currentProjectIdx = projects.findIndex(item => item.name === currentProjectName)
   const prevProject = projects[currentProjectIdx - 1]
@@ -40,7 +40,7 @@ const MobileNavigation = ({ projects, currentProjectName }) => {
           }}
           disableRipple 
           disabled={currentProjectIdx <= 0} 
-          onClick={() => navigate(`/projects/${prevProject.name}`)}
+          onClick={() => handleProjectChange(`/projects/${prevProject.name}`)}
         >
           <ArrowBackIosNewIcon sx={{fontSize: {xs: 11, sm: 12, md: 13}, filter: "drop-shadow(1px 1px 3px rgba(209,145,25,.25))"}} color="primary"/>
           {prevProject && 
@@ -59,7 +59,7 @@ const MobileNavigation = ({ projects, currentProjectName }) => {
           }}
           disableRipple 
           disabled={currentProjectIdx >= projects.length -1} 
-          onClick={() => navigate(`/projects/${nextProject.name}`)}
+          onClick={() => handleProjectChange(`/projects/${nextProject.name}`)}
         >
           {nextProject && 
             <Typography variant="body2" sx={textStyles}>
