@@ -163,9 +163,9 @@ const ProjectItem = ({ projects }) => {
       </Grid>
       <Grid item xs={0} xl={2.5}></Grid>
       <Grid item xs={12} md={9.5} xl={9.15}>
-        <Fade in={isShown} timeout={600}>
+        <Fade in={isShown} timeout={600} unmountOnExit>
           <Box>
-            {project && <ProjectItemContent project={project} />}
+            {project && <ProjectItemContent project={project} isShown={isShown}/>}
           </Box>
         </Fade>
       </Grid>   

@@ -7,7 +7,7 @@ import ImageModal from './ImageModal';
 import Footer from './Footer';
 import Image from 'mui-image';
 
-const ProjectItemContent = ( { project }) => {
+const ProjectItemContent = ( { project, isShown }) => {
   const [ showModal, setShowModal ] = useState({isVisible: false, imageName: null});
 
   const handleImageClick = (imageName) => {
@@ -25,7 +25,7 @@ const ProjectItemContent = ( { project }) => {
           }}
         >
           <Grid item xs={12}>
-          <Fade appear={true} in={true} timeout={{enter: 350, exit: 350}}>
+          <Fade appear={true} in={true} timeout={500} style={{ transitionDelay: "800ms" }}>
 
             <Typography 
               variant="h2" 
