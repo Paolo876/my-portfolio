@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import DocumentHead from '../../components/DocumentHead'
-import { Grid, Box, Typography } from '@mui/material'
+import { Grid, Box, Typography, Fade } from '@mui/material'
 import Introduction from './Introduction'
 import { Route, Routes } from 'react-router-dom'
 import Image from 'mui-image'
@@ -401,71 +401,6 @@ const MainPage = ({ projects }) => {
           </Grid>
         </Grid>
       </Box>
-      {/* <Box sx={{position: "fixed", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1, px: { xs:1.75, sm: 3, md: 4, lg: 5 }}}>
-        <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
-          <Grid item xs={0} lg={3}></Grid>
-          <Grid 
-            item 
-            xs={7}
-            sm={8} 
-            md={9} 
-            lg={6} 
-            sx={{
-              background: "rgba(45,45,45,.1)", 
-              height: "100vh", 
-              width: "100%", 
-              transform: {xs:"skewX(-5deg) translateX(-0px)", sm:"skewX(-5deg) translateX(-50px)", md:"skewX(-7deg) translateX(-120px)", lg:"skewX(-7deg)"},
-              position: "relative",
-              mixBlendMode: "difference",
-              "&:before": {
-                content: '""',
-                position: "absolute",
-                top: 0,
-                left:0,
-                height: "100%",
-                width: "100%",
-                background: "rgba(45,45,45,.2)", 
-                display: {md: "none"},
-                transform: {xs:"translateX(-100%)"},
-              }
-            }}
-            ></Grid>
-          <Grid 
-            item 
-            xs={5}
-            sm={4}
-            md={3}
-            lg={3} 
-            align="right" 
-            sx={{
-              height: {xs: "95vh", sm: "95vh", md: "95vh", lg:"95vh"}, 
-              display: "flex", 
-              flexDirection: "column",
-              alignItems: "flex-end", 
-              justifyContent: "flex-end", 
-              zIndex: -2,
-              pb: {xs:3.5, sm: 8, md: 8, lg: 12, xl: 12},
-            }}
-          >
-            <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 270, lg: 270, xl: 280}, height: "auto"}}>
-              <Image src={projects[activeProject].logo} duration={200}/>
-            </Box>
-            <Box sx={{mt: {xs:1.5, sm: 2.5, md:5}, borderRight: 2, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
-              <Typography 
-                variant="body2"
-                sx={{
-                  fontSize: {xs: 9.5, sm: 12, md: 13, lg:14, xl: 15.5},
-                  fontWeight: 300,
-                  opacity: {xs: .5, sm:.65},
-                  letterSpacing: .3,
-                  lineHeight: 1.4,
-                  textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-                }} 
-              >{projects[activeProject].briefDescription}</Typography>
-            </Box>
-          </Grid>
-        </Grid>
-      </Box> */}
     </Box>
   )
 }
