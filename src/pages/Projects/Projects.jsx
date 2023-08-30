@@ -380,6 +380,7 @@ const MainPage = ({ projects }) => {
               justifyContent: {xs: "flex-end", lg:"center"}, 
               zIndex: -2,
               pb: {xs:3.5, sm: 8, md: 8, lg: 12, xl: 12},
+              transition: "all 1s ease"
             }}
           >
             <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 270, lg: 270, xl: 280}, height: "auto"}}>

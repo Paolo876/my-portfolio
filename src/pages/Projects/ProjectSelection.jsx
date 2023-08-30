@@ -1,15 +1,31 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import { List, ListItem, ListItemButton } from '@mui/material';
+import { List, ListItem, ListItemButton, Fade } from '@mui/material';
+import { keyframes } from '@mui/system';
 
+
+const slideIn = keyframes`
+  0% {
+    transform: translateX(-2.5em) scale(.8);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(0)  scale(1);
+    opacity: .75;
+
+  }
+  100% {
+    opacity: 1;
+  }
+`
 
 const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProject }) => {
   const navigate = useNavigate();
 
-
   return (
+
     <List sx={{mt: {xs: 5, sm: 10, md: 10}}}>
-    {projects.map((item, index) => <ListItem key={item.name} sx={{px: 0, py: .5, my: 0, mx:0, width: "fit-content"}}>
+    {projects.map((item, index) => <ListItem key={item.name} sx={{px: 0, py: .5, my: 0, mx:0, width: "fit-content", animation: `${slideIn} 800ms forwards ease ${(index * 150) + 800}ms`, opacity: 0}}>
       <ListItemButton 
         className={index === activeProject ? "active" : ""}
         disableRipple
@@ -38,18 +54,6 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
           borderLeft: 2,
           borderColor: "rgba(120,120,120,.85)",
           pl: {xs: .75, sm: 1, lg: 1.75},
-
-          // "&::before": {
-          //   content: '""',
-          //   position: "absolute",
-          //   height: 3,
-          //   width: 0,
-          //   backgroundColor: "primary.main",
-          //   bottom: 0,
-          //   left: {lg:"50%"},
-          //   transform: {lg:"translateX(-50%)"},
-          //   transition: "all 200ms ease"
-          // },
           "&:hover, &.active": {
             opacity: 1,
             fontWeight: 400,
