@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import DocumentHead from '../../components/DocumentHead'
 import { Grid, Box, Typography, Fade } from '@mui/material'
@@ -291,10 +291,11 @@ const Projects = () => {
 const MainPage = ({ projects }) => {
   const [ activeProject, setActiveProject ] = useState(0);
   const [ isHovered, setIsHovered ] = useState(false)
-
+  const ref = useRef(activeProject)
   useEffect(() => {
     const interval = setInterval(
       () => setActiveProject(prevState => {
+        ref.current = prevState
         if(prevState === projects.length - 1) {
           return 0
         } else {
@@ -305,7 +306,7 @@ const MainPage = ({ projects }) => {
     return () => clearInterval(interval)  
   }, [isHovered])
 
-
+  console.log(ref.current, activeProject)
   return (
     <Box
       sx={{
@@ -322,13 +323,6 @@ const MainPage = ({ projects }) => {
           <ProjectSelection projects={projects} setActiveProject={setActiveProject} setIsHovered={setIsHovered} activeProject={activeProject}/>
         </Grid>
         <Grid item lg={6}></Grid>
-        {/* <Grid item md={12} lg={3.5}>
-          <Introduction/>
-        </Grid>
-        <Grid item md={6} lg={5} sx={{height: "100%", my: "auto"}} pt={{xs: 1.5, sm: 6, md: 8, lg: 0}} pl={{md: 1, lg: 0}} mr={{xs: "auto", lg: "initial"}}>
-          <ProjectSelection projects={projects} setActiveProject={setActiveProject} setIsHovered={setIsHovered} activeProject={activeProject}/>
-        </Grid>
-        <Grid item md={0} lg={3.5}></Grid> */}
       </Grid>
 
       {/* background  */}
@@ -380,25 +374,28 @@ const MainPage = ({ projects }) => {
               justifyContent: {xs: "flex-end", lg:"center"}, 
               zIndex: -2,
               pb: {xs:3.5, sm: 8, md: 8, lg: 12, xl: 12},
-              transition: "all 1s ease"
             }}
           >
-            <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 270, lg: 270, xl: 280}, height: "auto"}}>
-              <Image src={projects[activeProject].logo} duration={200}/>
-            </Box>
-            <Box sx={{mt: {xs:1.5, sm: 2.5, md:5}, borderRight: 2, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
-              <Typography 
-                variant="body2"
-                sx={{
-                  fontSize: {xs: 9.5, sm: 12, md: 13, lg:14, xl: 15.5},
-                  fontWeight: 300,
-                  opacity: {xs: .5, sm:.65},
-                  letterSpacing: .3,
-                  lineHeight: 1.4,
-                  textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-                }} 
-              >{projects[activeProject].briefDescription}</Typography>
-            </Box>
+            <Fade appear={true} in={true} timeout={1000}  style={{ transitionDelay: "2000ms" }}>
+              <Box>
+                <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 270, lg: 270, xl: 280}, height: "auto", transition: "all 1s ease"}}>
+                  <Image src={projects[activeProject].logo} duration={200}/>
+                </Box>
+                <Box sx={{mt: {xs:1.5, sm: 2.5, md:5}, borderRight: 2, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
+                  <Typography 
+                    variant="body2"
+                    sx={{
+                      fontSize: {xs: 9.5, sm: 12, md: 13, lg:14, xl: 15.5},
+                      fontWeight: 300,
+                      opacity: {xs: .5, sm:.65},
+                      letterSpacing: .3,
+                      lineHeight: 1.4,
+                      textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+                    }} 
+                  >{projects[activeProject].briefDescription}</Typography>
+                </Box>
+              </Box>
+            </Fade>
           </Grid>
         </Grid>
       </Box>
