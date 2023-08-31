@@ -56,12 +56,12 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
           pl: {xs: .75, sm: 1, lg: 1.75},
           "&:hover, &.active": {
             opacity: 1,
-            fontWeight: 400,
-            transform: "scale(1.04) translateX(2px)",
+            fontWeight: 500,
+            transform: "scale(1.05) translateX(2px)",
             textShadow: "1px 1px 5px rgba(100,100,100,.5)",
             background: "none",
             borderColor: "primary.main",
-            letterSpacing: 1,
+            letterSpacing: 1.5,
             "&::before": {
               width: {xs: 15, sm: 20, lg:40},
               backgroundColor: "primary.main",

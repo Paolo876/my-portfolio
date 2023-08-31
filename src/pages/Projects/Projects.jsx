@@ -1,17 +1,20 @@
 import { useState, useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import DocumentHead from '../../components/DocumentHead'
-import { Grid, Box, Typography, Fade } from '@mui/material'
+import { Grid, Box, Typography, Fade, Button } from '@mui/material'
 import Introduction from './Introduction'
 import { Route, Routes } from 'react-router-dom'
 import Image from 'mui-image'
 import ProjectSelection from './ProjectSelection'
 import ProjectItem from './ProjectItem/ProjectItem'
+import { keyframes } from '@mui/system';
+
 
 const MOCK_PROJ_IMG = {
   url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_banner.png?alt=media&token=4f2813bc-7201-4b53-abeb-48a4de04e297",
   name: "test_title"
 }
+
 const MOCK_PROJ_LIST = [
   {
     name: "moby", 
@@ -249,6 +252,21 @@ const MOCK_PROJ_LIST = [
   },
 ]
 
+const slideIn = keyframes`
+  0% {
+    transform: translateX(5em);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(0);
+    opacity: .75;
+
+  }
+  100% {
+    opacity: 1;
+  }
+`
+
 
 const Projects = () => {
   const [ projects, setProjects ] = useState(MOCK_PROJ_LIST);
@@ -306,7 +324,6 @@ const MainPage = ({ projects }) => {
     return () => clearInterval(interval)  
   }, [isHovered])
 
-  console.log(ref.current, activeProject)
   return (
     <Box
       sx={{
@@ -374,28 +391,28 @@ const MainPage = ({ projects }) => {
               justifyContent: {xs: "flex-end", lg:"center"}, 
               zIndex: -2,
               pb: {xs:3.5, sm: 8, md: 8, lg: 12, xl: 12},
+              animation: `${slideIn} 900ms forwards ease 1200ms`,
+              opacity: 0,
             }}
           >
-            <Fade appear={true} in={true} timeout={1000}  style={{ transitionDelay: "2000ms" }}>
-              <Box>
-                <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 270, lg: 270, xl: 280}, height: "auto", transition: "all 1s ease"}}>
-                  <Image src={projects[activeProject].logo} duration={200}/>
-                </Box>
-                <Box sx={{mt: {xs:1.5, sm: 2.5, md:5}, borderRight: 2, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
-                  <Typography 
-                    variant="body2"
-                    sx={{
-                      fontSize: {xs: 9.5, sm: 12, md: 13, lg:14, xl: 15.5},
-                      fontWeight: 300,
-                      opacity: {xs: .5, sm:.65},
-                      letterSpacing: .3,
-                      lineHeight: 1.4,
-                      textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-                    }} 
-                  >{projects[activeProject].briefDescription}</Typography>
-                </Box>
+            <Box>
+              <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 270, lg: 270, xl: 280}, height: "auto", transition: "all 1s ease"}}>
+                <Image src={projects[activeProject].logo} duration={200}/>
               </Box>
-            </Fade>
+              <Box sx={{mt: {xs:1.5, sm: 2.5, md:5}, borderRight: 2, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
+                <Typography 
+                  variant="body2"
+                  sx={{
+                    fontSize: {xs: 9.5, sm: 12, md: 13, lg:14, xl: 14.5},
+                    fontWeight: 300,
+                    opacity: {xs: .5, sm:.6},
+                    letterSpacing: .3,
+                    lineHeight: 1.4,
+                    textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+                  }} 
+                >{projects[activeProject].briefDescription}</Typography>
+              </Box>
+            </Box>
           </Grid>
         </Grid>
       </Box>
