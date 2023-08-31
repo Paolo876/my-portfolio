@@ -160,10 +160,10 @@ const ProjectItem = ({ projects }) => {
         {project && <MobileNavigation projects={projects} currentProjectName={project.name} handleProjectChange={handleProjectChange}/>}
       </Grid>
       <Grid item xs={0} xl={2.5}></Grid>
-      <Grid item xs={12} md={9.25} lg={9.5} xl={9.15}>
+      <Grid item xs={12} md={9.25} lg={9.5} xl={9.15} sx={{minHeight: "110vh"}}>
         <Fade in={isShown} timeout={550} unmountOnExit>
           <Box>
-            {project && <ProjectItemContent project={project} isShown={isShown}/>}
+            {isShown && project && <ProjectItemContent project={project} isShown={isShown}/>}
           </Box>
         </Fade>
       </Grid>   
