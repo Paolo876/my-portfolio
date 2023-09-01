@@ -20,6 +20,7 @@ const slideDown = keyframes`
   }
 `
 
+
 const ProjectItemContent = ( { project, isShown }) => {
   const [ showModal, setShowModal ] = useState({isVisible: false, imageName: null});
 
@@ -38,7 +39,7 @@ const ProjectItemContent = ( { project, isShown }) => {
           }}
         >
           <Grid item xs={12}>
-            <Fade appear={true} in={true} timeout={1000}  style={{ transitionDelay: "250ms" }}>
+            <Fade appear={true} in={true} timeout={1100}  style={{ transitionDelay: "250ms" }}>
               <Box>
                 <Typography 
                   variant="h2" 
@@ -76,7 +77,7 @@ const ProjectItemContent = ( { project, isShown }) => {
                     <Typography 
                       variant="body1" 
                       sx={{
-                        fontSize: {xs: 9.5, sm: 11, md: 12, lg:14, xl: 15},
+                        fontSize: {xs: 9.5, sm: 11, md: 12, lg:14, xl: 14.5},
                         fontWeight: 300,
                         opacity: .5,
                         letterSpacing: .25,
