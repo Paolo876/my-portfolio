@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Box, Typography, ButtonBase } from '@mui/material'
+import { Grid, Box, Typography, ButtonBase, Fade } from '@mui/material'
 import Image from 'mui-image'
 
 
@@ -8,30 +8,13 @@ const ProjectFeatures = ({ coverImage, features, handleImageClick }) => {
   return (
     <Grid container>
       <Grid item xs={12}>
-        <Typography 
-          variant="h4" 
-          align="left" 
-          fontWeight={400}
-          fontSize={{xs: 18, sm: 20, md: 21, lg: 24, xl: 25}} 
-          letterSpacing={{xs: .5, xl:1}}
-          lineHeight={{xs:1}} 
-          textTransform="none"
-          sx={{
-            textShadow: "1px 1px 7px rgba(10,10,10,.75)",
-          }}
-        >
-          Features
-        </Typography>
-      </Grid>
-
-      <Grid item xs={12}>
-        <Grid container columnSpacing={{xl: 2.5}} >
-          <Grid item sm={12} md={6.5} lg={6} pr={{md: 2, lg:4}}>
-            {/* <Typography 
+        <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "3000ms" }}>
+          <Box>
+            <Typography 
               variant="h4" 
               align="left" 
-              fontWeight={300}
-              fontSize={{xs: 35, sm: 45, md: 60, lg: 65, xl: 28}} 
+              fontWeight={400}
+              fontSize={{xs: 18, sm: 20, md: 21, lg: 24, xl: 25}} 
               letterSpacing={{xs: .5, xl:1}}
               lineHeight={{xs:1}} 
               textTransform="none"
@@ -39,8 +22,15 @@ const ProjectFeatures = ({ coverImage, features, handleImageClick }) => {
                 textShadow: "1px 1px 7px rgba(10,10,10,.75)",
               }}
             >
-              Features:
-            </Typography> */}
+              Features
+            </Typography>
+          </Box>
+        </Fade>
+      </Grid>
+
+      <Grid item xs={12}>
+        <Grid container columnSpacing={{xl: 2.5}} >
+          <Grid item sm={12} md={6.5} lg={6} pr={{md: 2, lg:4}}>
             <Box component="ul" sx={{mt: {xs: 1.25, sm: 1.75, md:4}}}>
               {features.map(item => <Box component="li" ml={2.5} pb={{xs: .1, md: .15, lg: .5, xl: 1}} key={item}>
                 <Typography 
