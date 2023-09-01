@@ -1,11 +1,24 @@
 import { useState } from 'react'
 import { Typography, Grid, Modal, Box, Divider, Fade } from '@mui/material'
+import { keyframes } from '@mui/system';
 import ProjectUrlAndTechStack from './ProjectUrlAndTechStack';
 import ProjectFeatures from './ProjectFeatures';
 import ProjectImages from './ProjectImages';
 import ImageModal from './ImageModal';
 import Footer from './Footer';
 import Image from 'mui-image';
+
+
+const slideDown = keyframes`
+  0% {
+    transform: translateY(-2em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: .75;
+  }
+`
 
 const ProjectItemContent = ( { project, isShown }) => {
   const [ showModal, setShowModal ] = useState({isVisible: false, imageName: null});
@@ -46,29 +59,40 @@ const ProjectItemContent = ( { project, isShown }) => {
           </Grid>
 
           <Grid item xs={12} sm={7.15} md={7.5} lg={7} xl={5} sx={{mt: {xs: 3, sm: 5, md: 5, lg: 6, xl: 6}}}>
-            <Fade appear={true} in={true} timeout={700}  style={{ transitionDelay: "500ms" }}>
-              <Box>
-                <Typography 
-                  variant="body1" 
+              <Box sx={{position: "relative"}}>
+                <Box 
                   sx={{
-                    fontSize: {xs: 9.5, sm: 11, md: 12, lg:14, xl: 15},
-                    fontWeight: 300,
-                    opacity: .5,
-                    letterSpacing: .25,
-                    lineHeight: 1.4,
-                    textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-                    borderLeft: 2,
-                    pl: {sm: 1, md:1.25},
-                    borderColor: {xs: "transparent", sm:"primary.dark"}
-                  }}        
-                >
-                  {project.description}
-                </Typography>
+                    height: "100%", 
+                    width: 2, 
+                    backgroundColor: {xs: "transparent", sm:"primary.dark"}, 
+                    position: "absolute", 
+                    left: 0, top: 0,
+                    opacity: 0,
+                    animation: `${slideDown} 800ms ease forwards 500ms`,
+                  }}
+                ></Box>
+                <Fade appear={true} in={true} timeout={700}  style={{ transitionDelay: "1200ms" }}>
+                  <Box>
+                    <Typography 
+                      variant="body1" 
+                      sx={{
+                        fontSize: {xs: 9.5, sm: 11, md: 12, lg:14, xl: 15},
+                        fontWeight: 300,
+                        opacity: .5,
+                        letterSpacing: .25,
+                        lineHeight: 1.4,
+                        textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+                        pl: {sm: 1, md:1.25, lg: 1.5},
+                      }}        
+                    >{project.description}
+                    </Typography>
+                  </Box>
+                </Fade>
+
               </Box>
-            </Fade>
           </Grid>
           <Grid item xs={0} sm={4.25} md={4} lg={4} xl={3} pt={{sm: 3, md: 2, lg:1, xl: 2.5}} sx={{display: {xs: "none", sm: "initial"}}}>
-            <Fade appear={true} in={true} timeout={800}  style={{ transitionDelay: "650ms" }}>
+            <Fade appear={true} in={true} timeout={1000}  style={{ transitionDelay: "1600ms" }}>
               <Box sx={{height: "auto", width: "auto", maxWidth: 300, maxHeight: 300, ml: "auto"}}>
                 <Image src={project.logo} fit='cover' duration={0}/>
               </Box>

@@ -7,7 +7,6 @@ import { Route, Routes } from 'react-router-dom'
 import Image from 'mui-image'
 import ProjectSelection from './ProjectSelection'
 import ProjectItem from './ProjectItem/ProjectItem'
-import { keyframes } from '@mui/system';
 
 
 const MOCK_PROJ_IMG = {
@@ -251,21 +250,6 @@ const MOCK_PROJ_LIST = [
     }
   },
 ]
-
-const slideIn = keyframes`
-  0% {
-    transform: translateX(5em);
-    opacity: 0;
-  }
-  60% {
-    transform: translateX(0);
-    opacity: .75;
-
-  }
-  100% {
-    opacity: 1;
-  }
-`
 
 
 const Projects = () => {
