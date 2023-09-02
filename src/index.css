@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   border: 0;
-  /* scroll-behavior: smooth; */
 }
 
 body {
@@ -13,27 +12,27 @@ body {
 }
 
 .noise-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   background: url("./assets/noise.png");
-  opacity: 0.1;
+  opacity: 0.05;
   z-index: -1;
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgba(120, 120, 120, 0.75);
+  background-color: rgb(0, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.705);
-  border-radius: 8px;
-  border: 3px solid transparent;
+  background-color: rgb(200, 200, 200);
+  border-radius: 5px;
+  border-right: 1px solid transparent;
   background-clip: content-box;
 }/*# sourceMappingURL=index.css.map */
