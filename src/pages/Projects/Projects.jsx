@@ -321,7 +321,7 @@ const MainPage = ({ projects }) => {
   return (
     <Box
       sx={{
-        height: "100vh",
+        height: {xs: "92vh", md:"96vh", lg: "100vh"}, 
         width: "100%",
         position: "relative", 
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
