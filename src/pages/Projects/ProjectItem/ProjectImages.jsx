@@ -1,12 +1,13 @@
 import React from 'react'
-import { Grid, Box, Typography, ButtonBase } from '@mui/material'
+import { Grid, Box, Typography, ButtonBase, Fade } from '@mui/material'
 import Image from 'mui-image'
 
 
 const ProjectImages = ({ images, handleImageClick }) => {
   return (
     <Grid container columnSpacing={{sm:2, md: 3, lg: 4, xl: 4}} rowSpacing={{xs: 3, sm: 4, md: 5, lg: 10, xl: 8}}>
-      {images.map(item => <Grid item xs={11} sm={6} key={item.name} mx="auto">
+      {images.map((item, index) => <Grid item xs={11} sm={6} key={item.name} mx="auto">
+      <Fade appear={true} in={true} timeout={900}  style={{ transitionDelay: `${(index * 300) + 3000}ms` }}>
         <Box 
           sx={{
             boxShadow: 5,
@@ -53,9 +54,9 @@ const ProjectImages = ({ images, handleImageClick }) => {
                   >{item.title}</Typography>
               </Box>
             </Box>
-
           </ButtonBase>
         </Box>
+        </Fade>
       </Grid>)}
     </Grid>
   )

@@ -54,7 +54,6 @@ const ProjectFeatures = ({ coverImage, features, handleImageClick }) => {
           </Grid>
           <Grid item xs={11} sm={12} md={5.5} lg={6} mt={{xs: 4, sm: 4, md: 2}} mx="auto">
           <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "2500ms" }}>
-
               <Box 
                 sx={{
                   // py: {lg:1.5}, 
