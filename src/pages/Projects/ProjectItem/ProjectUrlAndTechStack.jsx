@@ -109,28 +109,28 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
       <Grid item xs={12} sm={6.5} md={7} lg={5} xl={5} align="right" order={{xs: 3, sm: 3}}>    
         <Grid container sx={{mt: {xs: 1.5, sm: 1.75, md: 2, lg: 2, xl: 2.5}, justifyContent: "end"}}>
           {projectTechnologies.map((item, index) => <Grid item xs={2.4} sm={2.4} md={2.4} key={item.name} align="right">
-            <Tooltip 
-              title={<Typography variant="body1" fontSize={12} fontWeight={300} letterSpacing={.4} px={.25}>{item.name}</Typography>} 
-              arrow
-              placement="bottom"
-              enterDelay={500}
-              enterNextDelay={250}
-            >
               <Fade appear={true} in={true} timeout={1100}  style={{ transitionDelay: `${(index * 150) + 2800}ms` }}>
                 <Box>
-                  <Box sx={skillIconStyles} variant="outlined">
-                    <Box height={{xs: 20, sm: 24, md:26, lg:28, xl: 30}} width="auto">
-                      <SkillIconImageItem 
-                        src={item.monoUrl} 
-                        duration={500} 
-                        objectFit='scale-down'
-                        sx={{filter: "invert(1) brightness(1.1)"}}
+                  <Tooltip 
+                    title={<Typography variant="body1" fontSize={12} fontWeight={300} letterSpacing={.4} px={.25}>{item.name}</Typography>} 
+                    arrow
+                    placement="bottom"
+                    enterDelay={500}
+                    enterNextDelay={250}
+                  >
+                    <Box sx={skillIconStyles} variant="outlined">
+                      <Box height={{xs: 20, sm: 24, md:26, lg:28, xl: 30}} width="auto">
+                        <SkillIconImageItem 
+                          src={item.monoUrl} 
+                          duration={500} 
+                          objectFit='scale-down'
+                          sx={{filter: "invert(1) brightness(1.1)"}}
                         />
+                      </Box>
                     </Box>
-                  </Box>
+                  </Tooltip>
                 </Box>
               </Fade>
-            </Tooltip>
           </Grid>)}
         </Grid>
       </Grid>
