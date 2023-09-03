@@ -46,7 +46,7 @@ const contactButtonStyles = {
 const ContactDescription = () => {
   return (
     <>
-      <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "300ms" }}>
+      <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "200ms" }}>
         <Box>
           <Typography 
             variant="h2" 
@@ -65,7 +65,7 @@ const ContactDescription = () => {
         </Box>
       </Fade>
       <Box sx={{mt: {xs: 2.5, sm: 4, md: 6, lg: 8, xl: 10}, pl: {lg: .5}}}>
-        <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 650ms`}}>
+        <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 450ms`}}>
           <Typography
             variant="body1"
             sx={{
@@ -81,7 +81,7 @@ const ContactDescription = () => {
             Let me show you my capabilities and what I can offer.
           </Typography>
         </Box>
-        <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 950ms`}}>
+        <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 750ms`}}>
           <Typography 
             variant="body1"
             sx={{
@@ -103,7 +103,7 @@ const ContactDescription = () => {
       </Box>
       <Box sx={{mt: {xs: 6, sm: 8, md: 9, lg:"auto"}}}>
         <Box sx={{display: "flex", justifyContent: "space-between", flexDirection: "column"}}>
-          <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "300ms" }}>
+          <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "950ms" }}>
             <Box>
               <Typography
                 variant="h2" 
@@ -115,60 +115,74 @@ const ContactDescription = () => {
                 textTransform="none"
                 sx={{
                   textShadow: "1px 1px 7px rgba(25,25,25,.75)",
-                  opacity: .7
+                  opacity: .8
                 }}
               >
                 Paolo Bugarin
               </Typography>
             </Box>
           </Fade>
+          <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "1150ms" }}>
             <Box>
-            <Typography
-              variant="h2" 
-              align="left" 
-              fontWeight={300}
-              fontSize={{xs: 10.5, sm: 17, md: 18, lg: 18, xl: 18}} 
-              letterSpacing={{sm: .5, xl:1}}
-              lineHeight={{xs:1}} 
-              textTransform="none"
-              sx={{
-                mt: 1,
-                textShadow: "1px 1px 7px rgba(25,25,25,.75)",
-                opacity: .45
-              }}
-            >
-              Los Angeles, CA
-            </Typography>
-          </Box>
+              <Typography
+                variant="h2" 
+                align="left" 
+                fontWeight={300}
+                fontSize={{xs: 10.5, sm: 17, md: 18, lg: 18, xl: 18}} 
+                letterSpacing={{sm: .5, xl:1}}
+                lineHeight={{xs:1}} 
+                textTransform="none"
+                sx={{
+                  mt: 1,
+                  textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+                  opacity: .45
+                }}
+              >
+                Los Angeles, CA
+              </Typography>
+            </Box>
+          </Fade>
         </Box>
         <Box sx={{display: "flex", justifyContent: "space-between", flexDirection: {xs: "column", sm: "row"}, mt: {xs: 1.4, sm: 5, md: 6, lg: 8, xl: 8}}} mb={4}>
           <Box sx={{display: "flex", flexDirection: "column", gap: {xs:1, sm: 1.5}}}>
-            <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={contactButtonStyles} disableRipple>
-              <MailOutlineIcon color="primary" sx={{fontSize: { xs:17, sm: 23, md: 22, lg: 22, xl: 23}}}/>
-              <Typography sx={{fontSize: {xs:11.5, sm: 14, md: 15.5, lg: 15.5, xl: 17}, letterSpacing: 1}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
-            </IconButton>
-            <IconButton size="small" href="tel:3234817852" sx={contactButtonStyles} disableRipple>
-              <LocalPhoneIcon color="primary" sx={{fontSize: { xs:17, sm: 23, md: 22, lg: 22, xl: 23}}} />
-              <Typography sx={{fontSize: {xs:11.5, sm: 14, md: 15.5, lg: 15.5, xl: 17}, letterSpacing: 1}} fontWeight={300}>(323) 481 - 7852</Typography>
-            </IconButton> 
+            <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "1400ms" }}>
+              <Box>
+                <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={contactButtonStyles} disableRipple>
+                  <MailOutlineIcon color="primary" sx={{fontSize: { xs:17, sm: 23, md: 22, lg: 22, xl: 23}}}/>
+                  <Typography sx={{fontSize: {xs:11.5, sm: 14, md: 15.5, lg: 15.5, xl: 17}, letterSpacing: 1}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
+                </IconButton>
+              </Box>
+            </Fade>
+            <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "1500ms" }}>
+              <Box>
+                <IconButton size="small" href="tel:3234817852" sx={contactButtonStyles} disableRipple>
+                  <LocalPhoneIcon color="primary" sx={{fontSize: { xs:17, sm: 23, md: 22, lg: 22, xl: 23}}} />
+                  <Typography sx={{fontSize: {xs:11.5, sm: 14, md: 15.5, lg: 15.5, xl: 17}, letterSpacing: 1}} fontWeight={300}>(323) 481 - 7852</Typography>
+                </IconButton> 
+              </Box>
+            </Fade>
           </Box>
           <Box sx={{display: "flex", flexDirection: {xs:"row", sm: "column"}, alignItems: {xs:"center", sm: "flex-start"}, justifyContent: "space-between", mt: {xs: 1, sm: 0}}}>
-            <Typography
-              variant="h2" 
-              align="left" 
-              fontWeight={400}
-              fontSize={{xs:10.5, sm: 14, md: 15.5, lg: 15.5, xl: 17}} 
-              letterSpacing={{sm: .5, xl:1}}
-              lineHeight={{xs:1}} 
-              textTransform="none"
-              mr={{xs: 2, sm: 0}}
-              sx={{
-                textShadow: "1px 1px 7px rgba(25,25,25,.75)",
-                opacity: .5,
-              }}
-            >
-              Social:
-            </Typography>
+            <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "1450ms" }}>
+              <Box>
+                <Typography
+                  variant="h2" 
+                  align="left" 
+                  fontWeight={400}
+                  fontSize={{xs:10.5, sm: 14, md: 15.5, lg: 15.5, xl: 17}} 
+                  letterSpacing={{sm: .5, xl:1}}
+                  lineHeight={{xs:1}} 
+                  textTransform="none"
+                  mr={{xs: 2, sm: 0}}
+                  sx={{
+                    textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+                    opacity: .5,
+                  }}
+                >
+                  Social:
+                </Typography>
+              </Box>
+            </Fade>
             <SocialLinks 
                 flexDirection='row' 
                 color="inherit" 
