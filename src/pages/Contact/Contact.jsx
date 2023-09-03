@@ -11,7 +11,7 @@ const Contact = () => {
       sx={{
         position: "relative", 
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
-        pt: {xs:10, sm: 12, md: 14, lg: 11, xl: 15}, 
+        pt: {xs:10, sm: 12, md: 13, lg: 10, xl: 10}, 
         height: {lg:"100vh"},
         width: "100%",
         display: "flex",

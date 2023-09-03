@@ -52,12 +52,12 @@ const ContactDescription = () => {
             variant="h2" 
             align="left" 
             fontWeight={400}
-            fontSize={{xs: 35, sm: 45, md: 65, lg: 72, xl: 88}} 
+            fontSize={{xs: 35, sm: 52, md: 68, lg: 72, xl: 88}} 
             letterSpacing={{xs: .5, xl:1}}
             lineHeight={{xs:1}} 
             textTransform="none"
             sx={{
-              textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+              textShadow: "1px 1px 7px rgba(80,80,80,.2)",
             }}
           >
             Let's Talk
