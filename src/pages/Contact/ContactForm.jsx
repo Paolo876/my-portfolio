@@ -1,5 +1,7 @@
 import React from 'react'
 import { Box, ButtonBase, TextField } from '@mui/material'
+import { keyframes } from '@mui/system';
+
 
 const inputStyles = {
   sx: {
@@ -24,8 +26,23 @@ const inputLabelStyles = {
   }
 }
 
-const ContactForm = () => {
 
+const slideLeft = keyframes`
+  0% {
+    transform: translateX(2.25em);
+    opacity: 0;
+  }
+  80% {
+    opacity: .7;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: .75;
+  }
+`;
+
+
+const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,7 +52,9 @@ const ContactForm = () => {
       sx={{
         pb: {xs: 1, sm:3, md:3, lg: 0, xl: 0 }, 
         mb: {xs: 4, lg: 0},
-        px: {xs: .5, sm: 1, md: 3, lg: 0}
+        px: {xs: .5, sm: 1, md: 3, lg: 0},
+        opacity: 0, 
+        animation: `${slideLeft} 1100ms ease forwards 1250ms`,
       }} 
       align="center"
     >

@@ -183,21 +183,25 @@ const ContactDescription = () => {
                 </Typography>
               </Box>
             </Fade>
-            <SocialLinks 
-                flexDirection='row' 
-                color="inherit" 
-                gap={1}
-                placement="bottom"
-                additionalStyles={{
-                  opacity: {lg:.85},
-                  transition: "all 200ms ease-in-out",
-                  "&:hover": {
-                    opacity: 1,
-                    transform: "scale(1.15)",
-                    color: "primary.light",
-                  }
-                }}
-              />
+            <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "1600ms" }}>
+              <Box>
+                <SocialLinks 
+                  flexDirection='row' 
+                  color="inherit" 
+                  gap={1}
+                  placement="bottom"
+                  additionalStyles={{
+                    opacity: {lg:.85},
+                    transition: "all 200ms ease-in-out",
+                    "&:hover": {
+                      opacity: 1,
+                      transform: "scale(1.15)",
+                      color: "primary.light",
+                    }
+                  }}
+                />
+              </Box>
+            </Fade>
           </Box>
         </Box>
       </Box>
