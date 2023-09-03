@@ -1,9 +1,25 @@
 import React from 'react'
-import { Box, Stack, Typography, ButtonBase, Grid, IconButton } from '@mui/material'
-import PlaceIcon from '@mui/icons-material/Place';
+import { Box, Typography, IconButton, Fade } from '@mui/material'
 import SocialLinks from '../../components/SocialLinks';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import { keyframes } from '@mui/system';
+
+
+const slideRight = keyframes`
+  0% {
+    transform: translateX(-2.25em);
+    opacity: 0;
+  }
+  80% {
+    opacity: .7;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: .75;
+  }
+`;
+
 
 const contactButtonStyles = {
   width: "fit-content", 
@@ -30,73 +46,83 @@ const contactButtonStyles = {
 const ContactDescription = () => {
   return (
     <>
-      <Box>
-        <Typography 
-          variant="h2" 
-          align="left" 
-          fontWeight={400}
-          fontSize={{xs: 35, sm: 45, md: 65, lg: 72, xl: 88}} 
-          letterSpacing={{xs: .5, xl:1}}
-          lineHeight={{xs:1}} 
-          textTransform="none"
-          sx={{
-            textShadow: "1px 1px 7px rgba(25,25,25,.75)",
-          }}
-        >
-          Let's Talk
-        </Typography>
-      </Box>
+      <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "300ms" }}>
+        <Box>
+          <Typography 
+            variant="h2" 
+            align="left" 
+            fontWeight={400}
+            fontSize={{xs: 35, sm: 45, md: 65, lg: 72, xl: 88}} 
+            letterSpacing={{xs: .5, xl:1}}
+            lineHeight={{xs:1}} 
+            textTransform="none"
+            sx={{
+              textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+            }}
+          >
+            Let's Talk
+          </Typography>
+        </Box>
+      </Fade>
       <Box sx={{mt: {xs: 2.5, sm: 4, md: 6, lg: 8, xl: 10}, pl: {lg: .5}}}>
-        <Typography
-          variant="body1"
-          sx={{
-            fontSize: {xs: 10, sm: 14.5, md: 15, lg:15, xl: 16},
-            fontWeight: 300,
-            opacity: .75,
-            letterSpacing: .4,
-            lineHeight: 1.4,
-            textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-          }}
-        >
-          I am excited to take a leap forward and further hone my knowledge and skills with the right company.
-          Let me show you my capabilities and what I can offer.
-        </Typography>
-        <Typography 
-          variant="body1"
-          sx={{
-            mt: {xs: 1, sm:2, md:3},
-            fontSize: {xs: 10, sm: 14.5, md: 15, lg:15, xl: 16},
-            fontWeight: 300,
-            opacity: .6,
-            letterSpacing: .4,
-            lineHeight: 1.4,
-            textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-            borderLeft: 2,
-            borderColor: "primary.main",
-            pl: {xs: .5, sm:1.25},
-          }}
-        >
-          Please feel free to reach out to me using my contact informations provided or by submitting the inquiry form.
-        </Typography>
+        <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 650ms`}}>
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: {xs: 10, sm: 14.5, md: 15, lg:15, xl: 16},
+              fontWeight: 300,
+              opacity: .75,
+              letterSpacing: .4,
+              lineHeight: 1.4,
+              textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+            }}
+          >
+            I am excited to take a leap forward and further hone my knowledge and skills with the right company.
+            Let me show you my capabilities and what I can offer.
+          </Typography>
+        </Box>
+        <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 950ms`}}>
+          <Typography 
+            variant="body1"
+            sx={{
+              mt: {xs: 1, sm:2, md:3},
+              fontSize: {xs: 10, sm: 14.5, md: 15, lg:15, xl: 16},
+              fontWeight: 300,
+              opacity: .6,
+              letterSpacing: .4,
+              lineHeight: 1.4,
+              textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+              borderLeft: 2,
+              borderColor: "primary.main",
+              pl: {xs: .5, sm:1.25},
+            }}
+          >
+            Please feel free to reach out to me using my contact informations provided or by submitting the inquiry form.
+          </Typography>
+        </Box>
       </Box>
       <Box sx={{mt: {xs: 6, sm: 8, md: 9, lg:"auto"}}}>
-        <Box sx={{display: "flex", justifyContent: "space-between"}}>
-          <Box>
-            <Typography
-              variant="h2" 
-              align="left" 
-              fontWeight={400}
-              fontSize={{xs: 17, sm: 24, md: 25, lg: 25, xl: 26}} 
-              letterSpacing={{sm: .5, xl:1}}
-              lineHeight={{xs:1}} 
-              textTransform="none"
-              sx={{
-                textShadow: "1px 1px 7px rgba(25,25,25,.75)",
-                opacity: .7
-              }}
-            >
-              Paolo Bugarin
-            </Typography>
+        <Box sx={{display: "flex", justifyContent: "space-between", flexDirection: "column"}}>
+          <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "300ms" }}>
+            <Box>
+              <Typography
+                variant="h2" 
+                align="left" 
+                fontWeight={400}
+                fontSize={{xs: 17, sm: 24, md: 25, lg: 25, xl: 26}} 
+                letterSpacing={{sm: .5, xl:1}}
+                lineHeight={{xs:1}} 
+                textTransform="none"
+                sx={{
+                  textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+                  opacity: .7
+                }}
+              >
+                Paolo Bugarin
+              </Typography>
+            </Box>
+          </Fade>
+            <Box>
             <Typography
               variant="h2" 
               align="left" 
