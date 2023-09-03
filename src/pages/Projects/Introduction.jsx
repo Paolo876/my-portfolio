@@ -5,7 +5,7 @@ const Introduction = () => {
   return (
     <Grid container sx={{pr: {md: 0, lg: 0, xl: 0}, }}>
       <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-        <Fade appear={true} in={true} timeout={800}  style={{ transitionDelay: "250ms" }}>
+        <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "500ms" }}>
           <Box>
             <Typography 
               variant="h2" 
@@ -25,7 +25,7 @@ const Introduction = () => {
         </Fade>
       </Grid>
       <Grid item xs={12} sm={7.25} md={7.25} lg={11} xl={9.25} mt={{xs: 3.5, sm: 4, md:5, lg: 5, xl: 7}} ml={{sm:.25, md: .25}}>
-        <Fade appear={true} in={true} timeout={1000}  style={{ transitionDelay: "500ms" }}>
+        <Fade appear={true} in={true} timeout={900}  style={{ transitionDelay: "750ms" }}>
           <Box>
             <Typography 
               variant="body1" 

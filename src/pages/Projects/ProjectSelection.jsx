@@ -25,7 +25,7 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
   return (
 
     <List sx={{mt: {xs: 5, sm: 10, md: 10}}}>
-    {projects.map((item, index) => <ListItem key={item.name} sx={{px: 0, py: .5, my: 0, mx:0, width: "fit-content", animation: `${slideIn} 800ms forwards ease ${(index * 80) + 800}ms`, opacity: 0}}>
+    {projects.map((item, index) => <ListItem key={item.name} sx={{px: 0, py: .5, my: 0, mx:0, width: "fit-content", animation: `${slideIn} 800ms forwards ease ${(index * 100) + 1200}ms`, opacity: 0}}>
       <ListItemButton 
         className={index === activeProject ? "active" : ""}
         disableRipple

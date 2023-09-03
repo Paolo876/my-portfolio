@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import DocumentHead from '../../components/DocumentHead'
-import { Grid, Box, Typography, Fade, Button } from '@mui/material'
+import { Grid, Box, Typography, Fade, Slide } from '@mui/material'
 import Introduction from './Introduction'
 import { Route, Routes } from 'react-router-dom'
 import Image from 'mui-image'
@@ -340,6 +340,7 @@ const MainPage = ({ projects }) => {
       <Box sx={{position: "fixed", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1, px: { xs:1.75, sm: 3, md: 4, lg: 5 }}}>
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
           <Grid item xs={0} lg={0}></Grid>
+          <Slide in={true} timeout={900} direction="left">
           <Grid 
             item 
             xs={7}
@@ -347,28 +348,31 @@ const MainPage = ({ projects }) => {
             md={9} 
             lg={7} 
             xl={7}
-            sx={{
-              background: "rgba(40,40,40,.1)", 
-              height: "100vh", 
-              width: "100%", 
-              transform: {xs:"skewX(-5deg) translateX(-0px)", sm:"skewX(-5deg) translateX(-50px)", md:"skewX(-7deg) translateX(-120px)", lg:"skewX(-7deg)"},
-              position: "relative",
-              mixBlendMode: "difference",
-              "&:before": {
-                content: '""',
-                position: "absolute",
-                top: 0,
-                left:0,
-                height: "100%",
-                width: "100%",
-                background: "rgba(40,40,40,.1)", 
-                transform: {xs:"translateX(-100%)"},
-                transition: "all 500ms ease",
-              }
-            }}
-            ></Grid>
+            >
+              <Box            
+                sx={{
+                  background: "rgba(40,40,40,.1)", 
+                  height: "100vh", 
+                  width: "100%", 
+                  transform: {xs:"skewX(-5deg) translateX(-0px)", sm:"skewX(-5deg) translateX(-50px)", md:"skewX(-7deg) translateX(-120px)", lg:"skewX(-7deg)"},
+                  position: "relative",
+                  mixBlendMode: "difference",
+                  "&:before": {
+                    content: '""',
+                    position: "absolute",
+                    top: 0,
+                    left:0,
+                    height: "100%",
+                    width: "200%",
+                    background: "rgba(40,40,40,.1)", 
+                    transform: {xs:"translateX(-100%)"},
+                    transition: "all 500ms ease",
+                  }
+                }}></Box>
+            </Grid>
+            </Slide>
           <Grid item xs={0} lg={2} xl={2}></Grid>
-          <Fade in={true} timeout={800} style={{ transitionDelay: "1800ms" }}>
+          <Fade in={true} timeout={800} style={{ transitionDelay: "2400ms" }}>
             <Grid 
               item 
               xs={5}
