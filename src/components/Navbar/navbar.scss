@@ -25,28 +25,56 @@
                 font-weight: 400;
                 text-shadow: 1px 1px 3px rgba(100,100,100,.75);
             }
-            &.active {
-                opacity: 1;
-                p {
-                    font-weight: 500;
-                    // &::before{
-                    //     position: absolute;
-                    //     content: '';
-                    //     bottom: -5px;
-                    //     width: 60%;
-                    //     left: 50%;
-                    //     transform: translateX(-50%);
-                    //     height: 2px;
-                    //     background: rgba(100, 100, 100, 0.75);
-                    // }
-                }
-            }
-
             &:hover{
                 opacity: 1;
-                transform: scale(1.05);
-
+                transform: scale(1.045);
             }
+            &.active {
+                opacity: 1;
+
+                p {
+                    font-weight: 600;
+                    text-shadow: 1px 1px 3px #d1911952;
+                    &::before{
+                        position: absolute;
+                        content: '';
+                        bottom: -5px;
+                        width: 60%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        height: 2px;
+                        // color: #d19119;
+                    }
+                }
+                &:hover {
+                    transform: none;
+
+                    &::before, &::after{
+                        content: none;
+                    }
+                }
+                // &::before, &::after{
+                //     position: absolute;
+                //     opacity: 1;
+                //     font-size: "inherit";
+                //     font-weight: 800;
+                //     top: 0;
+                //     transition: all 0.15s ease-in;
+                // }
+                // &::before{
+                //     content: '<';
+                //     left: -1.1em;
+                //     transform: translateX(10px);
+                //     color:#d19119;
+                // }
+                // &::after{
+                //     content: '/>';
+                //     right: -1.3em;
+                //     transform: translateX(-10px);
+                //     color:#d19119;
+                // }
+            }
+
             &::before, &::after{
                 position: absolute;
                 opacity: 0;
@@ -70,7 +98,6 @@
             &:hover::before, &:hover::after{
                 opacity: .8;
                 transform: translateX(0px);
-
             }
         }
     }
