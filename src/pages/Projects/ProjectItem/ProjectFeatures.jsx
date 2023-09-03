@@ -33,8 +33,8 @@ const ProjectFeatures = ({ coverImage, features, handleImageClick }) => {
           <Grid item sm={12} md={6.5} lg={6} pr={{md: 2, lg:4}}>
             <Box component="ul" sx={{mt: {xs: 1.25, sm: 1.75, md:4}}}>
               {features.map((item, index) => 
-                <Fade appear={true} in={true} timeout={900}  style={{ transitionDelay: `${(index * 200) + 3000}ms` }}>
-                  <Box component="li" ml={2.5} pb={{xs: .1, md: .15, lg: .5, xl: 1}} key={item}>
+                <Fade appear={true} in={true} timeout={900}  style={{ transitionDelay: `${(index * 200) + 3000}ms` }} key={item}>
+                  <Box component="li" ml={2.5} pb={{xs: .1, md: .15, lg: .5, xl: 1}}>
                     <Typography 
                       variant="body1" 
                       sx={{
@@ -56,8 +56,6 @@ const ProjectFeatures = ({ coverImage, features, handleImageClick }) => {
           <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "2500ms" }}>
               <Box 
                 sx={{
-                  // py: {lg:1.5}, 
-                  // px: {lg: 2.5}, 
                   transition: "all 200ms linear", 
                   background: "rgba(0,0,0,0.75)", 
                   filter: "brightness(.95) contrast(.85)", 
