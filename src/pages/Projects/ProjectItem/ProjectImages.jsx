@@ -5,17 +5,17 @@ import "aos/dist/aos.css";
 import { useInView } from 'react-intersection-observer';
 
 const ProjectImages = ({ images, handleImageClick }) => {
+
   const { ref, inView } = useInView({
     threshold: 0,
     rootMargin: "50% 0px -20% 0px",
     delay: 250,
   });
-console.log(inView)
 
   return (
-    <Grid container columnSpacing={{sm:2, md: 3, lg: 4, xl: 4}} rowSpacing={{xs: 3, sm: 4, md: 5, lg: 10, xl: 8}} ref={ref} sx={{minHeight: "20em"}}>
+    <Grid container columnSpacing={{sm:2, md: 3, lg: 4, xl: 4}} rowSpacing={{xs: 3, sm: 4, md: 5, lg: 10, xl: 8}} ref={ref}>
       {inView && images.map((item, index) => <Grid item xs={11} sm={6} key={item.name} mx="auto">
-        <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: `${(index * 250)}ms` }}>
+        <Fade appear={true} in={true} timeout={1100}  style={{ transitionDelay: `${(index * 250)}ms` }}>
           <Box 
             sx={{
               boxShadow: 5,

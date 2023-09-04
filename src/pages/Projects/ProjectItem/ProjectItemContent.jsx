@@ -113,7 +113,7 @@ const ProjectItemContent = ( { project, isShown }) => {
       </Grid>
 
       {/* Images */}
-      <Grid item xl={12} sx={{mt: {xs: 5, sm: 5, md: 7, lg: 8, xl: 10}}}>
+      <Grid item xl={12} sx={{mt: {xs: 5, sm: 5, md: 7, lg: 8, xl: 10}, minHeight: "20em"}}>
         <ProjectImages images={project.images} handleImageClick={handleImageClick}/>
       </Grid>
 

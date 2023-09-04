@@ -67,7 +67,7 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
 
   
   return (
-    <Grid container sx={{justifyContent: "space-between"}}>
+    <Grid container sx={{justifyContent: "space-between",}}>
       <Grid item xs={12} order={{xs: 2, sm: 1}} mt={{xs: 12, sm: 0}}>
         <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "1100ms" }}>
           <Box>
