@@ -11,7 +11,7 @@ import Image from 'mui-image';
 
 const slideDown = keyframes`
   0% {
-    transform: translateY(-2em);
+    transform: translateY(-1.75em);
     opacity: 0;
   }
   100% {
@@ -39,7 +39,7 @@ const ProjectItemContent = ( { project, isShown }) => {
           }}
         >
           <Grid item xs={12}>
-            <Fade appear={true} in={true} timeout={1100}  style={{ transitionDelay: "250ms" }}>
+            <Fade appear={true} in={true} timeout={1100}  style={{ transitionDelay: "150ms" }}>
               <Box>
                 <Typography 
                   variant="h2" 
@@ -65,14 +65,14 @@ const ProjectItemContent = ( { project, isShown }) => {
                   sx={{
                     height: "100%", 
                     width: 2, 
-                    backgroundColor: {xs: "transparent", sm:"primary.dark"}, 
+                    backgroundColor: {xs: "primary.dark", sm:"primary.dark"}, 
                     position: "absolute", 
                     left: 0, top: 0,
                     opacity: 0,
-                    animation: `${slideDown} 800ms ease forwards 500ms`,
+                    animation: `${slideDown} 500ms ease forwards 250ms`,
                   }}
                 ></Box>
-                <Fade appear={true} in={true} timeout={700}  style={{ transitionDelay: "1200ms" }}>
+                <Fade appear={true} in={true} timeout={700}  style={{ transitionDelay: "800ms" }}>
                   <Box>
                     <Typography 
                       variant="body1" 
@@ -83,7 +83,7 @@ const ProjectItemContent = ( { project, isShown }) => {
                         letterSpacing: .25,
                         lineHeight: 1.4,
                         textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-                        pl: {sm: 1, md:1.25, lg: 1.5},
+                        pl: {xs: .85, sm: 1, md:1.25, lg: 1.5},
                       }}        
                     >{project.description}
                     </Typography>

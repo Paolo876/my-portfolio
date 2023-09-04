@@ -69,7 +69,7 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
   return (
     <Grid container sx={{justifyContent: "space-between"}}>
       <Grid item xs={12} order={{xs: 2, sm: 1}} mt={{xs: 12, sm: 0}}>
-        <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "2500ms" }}>
+        <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "1100ms" }}>
           <Box>
             <Typography 
               variant="h4" 
@@ -92,13 +92,13 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
         sx={{display: "flex", gap: {xs: 1.15, sm: 1.75, md: 2, lg:3}, flexDirection: "column", mt: {sm: 1.5, md: 1.5, lg: 3, xl: 6}}}
         order={{xs: 1, sm: 1}}
       >
-        <Box sx={{opacity:0, animation: `${slideRight} 800ms ease forwards 2000ms`}}>
+        <Box sx={{opacity:0, animation: `${slideRight} 800ms ease forwards 1100ms`}}>
           <IconButton size="small" href={url} target='_blank' sx={urlButtonStyles} disableRipple>
             <PublicIcon color="primary" sx={{fontSize: { xs:19, sm: 22, md: 22, lg: 23}}} />
             <Box component="span">Web Demo</Box>
           </IconButton> 
         </Box>
-        <Box sx={{opacity:0, animation: `${slideRight} 800ms ease forwards 2300ms`}}>
+        <Box sx={{opacity:0, animation: `${slideRight} 800ms ease forwards 1300ms`}}>
           <IconButton size="small" href={githubUrl} target='_blank' sx={urlButtonStyles} disableRipple>
             <GitHubIcon color="primary" sx={{fontSize: { xs:19, sm: 22, md: 22, lg: 23}}} />
             <Box component="span">Git Repo</Box>
@@ -109,7 +109,7 @@ const ProjectUrlAndTechStack = ({ technologies, url, githubUrl }) => {
       <Grid item xs={12} sm={6.5} md={7} lg={5} xl={5} align="right" order={{xs: 3, sm: 3}}>    
         <Grid container sx={{mt: {xs: 1.5, sm: 1.75, md: 2, lg: 2, xl: 2.5}, justifyContent: "end"}}>
           {projectTechnologies.map((item, index) => <Grid item xs={2.4} sm={2.4} md={2.4} key={item.name} align="right">
-              <Fade appear={true} in={true} timeout={1100}  style={{ transitionDelay: `${(index * 150) + 3000}ms` }}>
+              <Fade appear={true} in={true} timeout={1100}  style={{ transitionDelay: `${(index * 150) + 1800}ms` }}>
                 <Box>
                   <Tooltip 
                     title={<Typography variant="body1" fontSize={12} fontWeight={300} letterSpacing={.4} px={.25}>{item.name}</Typography>} 
