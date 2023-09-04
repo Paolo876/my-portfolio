@@ -10,6 +10,7 @@ const ProjectImages = ({ images, handleImageClick }) => {
     threshold: 0,
     rootMargin: "50% 0px -20% 0px",
     delay: 250,
+    triggerOnce: true
   });
 
   return (
