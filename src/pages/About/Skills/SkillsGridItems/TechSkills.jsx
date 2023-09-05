@@ -27,26 +27,13 @@ const boxStyles = {
   }
 }
 
-
-const slideDown = keyframes`
-  0% {
-    transform: translateY(-1.75em);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: .75;
-  }
-`
-
-
 const TechSkills = ({ skills, title, description, isMain }) => {
   const [ activeSkill, setActiveSkill ] = useState(0);
   const [ isHovered, setIsHovered ] = useState(false)
 
   const { ref, inView } = useInView({
     threshold: 0,
-    rootMargin: "0% 0px -15% 0px",
+    rootMargin: "0% 0px -30% 0px",
     delay: 400,
     triggerOnce: true
   });
@@ -97,15 +84,11 @@ const TechSkills = ({ skills, title, description, isMain }) => {
             backgroundColor: {xs: "primary.dark", sm:"primary.dark"}, 
             position: "absolute", 
             left: 0, top: 0,
-            opacity: 0,
-            animation: inView ? `${slideDown} 400ms ease forwards 400ms` : "",
+            // opacity: 0,
+            // animation: inView ? `${slideDown} 400ms ease forwards 400ms` : "",
           }}
         ></Box>
-        <Fade appear={inView} in={inView} timeout={600}  style={{ transitionDelay: "700ms" }}>
-          <Box>
-            {description} 
-          </Box>
-        </Fade>
+          {description} 
         </Box>}
       </Grid>
 
@@ -122,15 +105,15 @@ const TechSkills = ({ skills, title, description, isMain }) => {
                     backgroundColor: {xs: "primary.dark", sm:"primary.dark"}, 
                     position: "absolute", 
                     left: 0, top: 0,
-                    opacity: 0,
-                    animation: inView ? `${slideDown} 500ms ease forwards 250ms` : "",
+                    // opacity: 0,
+                    // animation: inView ? `${slideDown} 500ms ease forwards 250ms` : "",
                   }}
                 ></Box>
-                <Fade appear={inView} in={inView} timeout={600}  style={{ transitionDelay: "1000ms" }}>
-                  <Box>
+                {/* <Fade appear={inView} in={inView} timeout={600}  style={{ transitionDelay: "1000ms" }}>
+                  <Box> */}
                     {description} 
-                  </Box>
-                </Fade>
+                  {/* </Box> */}
+                {/* </Fade> */}
               </Box>
             </Grid>
           }
