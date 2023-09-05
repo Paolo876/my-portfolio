@@ -33,8 +33,7 @@ const ProcessStepper = ({ processItems }) => {
   return (
     <Stepper alternativeLabel connector={<ColorlibConnector />} activeStep={activeStep} ref={ref}>
       {processItems.map((item, index) => 
-        <Fade appear={inView} in={inView} timeout={1200}  style={{ transitionDelay: `${(index * 250) + 500}ms` }} key={item.name} >
-
+        <Fade appear={inView} in={inView} timeout={1200}  style={{ transitionDelay: `${(index * 250) + 500}ms` }} key={item.title} >
         <Step 
           key={item.title} 
           onMouseOver={() => { setActiveStep(index); setIsHovered(true) }}
