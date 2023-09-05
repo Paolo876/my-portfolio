@@ -3,7 +3,6 @@ import TechSkills from './SkillsGridItems/TechSkills'
 import useRootRedux from '../../../hooks/useRootRedux'
 import Certifications from './SkillsGridItems/Certifications'
 import OtherSkills from './SkillsGridItems/OtherSkills'
-import { useInView } from 'react-intersection-observer';
 
 
 const baseTextStyles = {
@@ -21,12 +20,6 @@ const Skills = () => {
   const webDevSkillsList = skillsList.filter(item => ["frontend", "backend", "styling"].includes(item.type))
   const softwareDevSkillsList = skillsList.filter(item => ["programming"].includes(item.type))
 
-  const { ref, inView } = useInView({
-    threshold: 0,
-    rootMargin: "50% 0px -20% 0px",
-    delay: 250,
-    triggerOnce: true
-  });
 
   return (
     <Box

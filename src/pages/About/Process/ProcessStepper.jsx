@@ -1,13 +1,22 @@
 import { useState, useEffect } from 'react'
-import { Step, StepLabel, Stepper, Typography } from '@mui/material'
+import { Step, StepLabel, Stepper, Typography, Fade } from '@mui/material'
 import { ColorlibConnector, ColorlibStepIcon } from './stepperStyles'
+import { useInView } from 'react-intersection-observer';
 
 
 const ProcessStepper = ({ processItems }) => {
   const [ activeStep, setActiveStep ] = useState(0);
   const [ isHovered, setIsHovered ] = useState(false)
+  
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: "0% 0px -30% 0px",
+    delay: 250,
+    triggerOnce: true
+  });
 
   useEffect(() => {
+    if(inView){
       const interval = setInterval(
         () => setActiveStep(prevState => {
           if(prevState === processItems.length - 1) {
@@ -18,11 +27,14 @@ const ProcessStepper = ({ processItems }) => {
         }), 6000)
       if(isHovered) clearInterval(interval) 
       return () => clearInterval(interval)    
-    
-  }, [isHovered])
+    }
+  }, [isHovered, inView])
+  
   return (
-    <Stepper alternativeLabel connector={<ColorlibConnector />} activeStep={activeStep}>
+    <Stepper alternativeLabel connector={<ColorlibConnector />} activeStep={activeStep} ref={ref}>
       {processItems.map((item, index) => 
+        <Fade appear={inView} in={inView} timeout={1200}  style={{ transitionDelay: `${(index * 250) + 500}ms` }} key={item.name} >
+
         <Step 
           key={item.title} 
           onMouseOver={() => { setActiveStep(index); setIsHovered(true) }}
@@ -69,6 +81,7 @@ const ProcessStepper = ({ processItems }) => {
             </Typography>
           </StepLabel>
         </Step>
+        </Fade>
       )}
     </Stepper>
   )

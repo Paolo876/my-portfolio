@@ -33,8 +33,8 @@ const TechSkills = ({ skills, title, description, isMain }) => {
 
   const { ref, inView } = useInView({
     threshold: 0,
-    rootMargin: "0% 0px -30% 0px",
-    delay: 400,
+    rootMargin: "0% 0px -40% 0px",
+    delay: 250,
     triggerOnce: true
   });
 
