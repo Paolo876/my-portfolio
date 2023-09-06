@@ -1,9 +1,18 @@
 import React from 'react'
-import { Grid, Box, Typography } from '@mui/material'
+import { Grid, Box, Typography, Fade } from '@mui/material'
 import RoadmapCarousel from './RoadmapCarousel'
+import { useInView } from 'react-intersection-observer';
 
 
 const Roadmap = () => {
+
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: "0% 0px -30% 0px",
+    delay: 250,
+    triggerOnce: true
+  });
+
 
   return (
     <Box 
@@ -24,25 +33,34 @@ const Roadmap = () => {
           overflowX:"auto", 
           overflowY: "hidden"
         }}
+        ref={ref}
       >
         <Grid item xs={12} md={12} lg={12}>
-            <Typography 
-              variant="h2" 
-              align="center" 
-              fontWeight={400}
-              fontSize={{xs: 30, sm: 32, md: 34, lg: 36, xl: 40}} 
-              letterSpacing={{xs: .5, lg:1}}
-              lineHeight={{xs:1.1}} 
-              textTransform="none"
-              sx={{
-                textShadow: "1px 1px 7px rgba(25,25,25,.75)",
-              }}
-            >
-              My Development Roadmap
-            </Typography>
+          <Fade appear={inView} in={inView} timeout={500}  style={{ transitionDelay: "100ms" }}>
+            <Box>
+              <Typography 
+                variant="h2" 
+                align="center" 
+                fontWeight={400}
+                fontSize={{xs: 30, sm: 32, md: 34, lg: 36, xl: 40}} 
+                letterSpacing={{xs: .5, lg:1}}
+                lineHeight={{xs:1.1}} 
+                textTransform="none"
+                sx={{
+                  textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+                }}
+              >
+                My Development Roadmap
+              </Typography>
+            </Box>
+          </Fade>
         </Grid>
         <Grid item xs={12}>
-          <RoadmapCarousel/>
+          <Fade appear={inView} in={inView} timeout={500}  style={{ transitionDelay: "400ms" }}>
+            <Box>
+              <RoadmapCarousel/>
+            </Box>
+          </Fade>
         </Grid>
       </Grid>
     </Box>

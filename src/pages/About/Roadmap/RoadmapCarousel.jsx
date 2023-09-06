@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Grid, Typography, Box, IconButton } from '@mui/material'
+import { Grid, Typography, Box, IconButton, Fade } from '@mui/material'
 import Carousel from 'react-material-ui-carousel'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -81,45 +81,53 @@ const RoadmapCarousel = () => {
         <Carousel
           indicators={true}
           interval={8000}
-          duration={800} 
+          duration={500} 
           navButtonsAlwaysInvisible={true}
           autoPlay={false}
           onChange={(i) => setCurrentIndex(i)}
           index={currentIndex}
         >
-          {roadmapItems.map(item => <Grid container key={item} sx={{minHeight: {xs: 210, sm: 210, md: 175, lg: 175, xl: 190}}}>
+          {roadmapItems.map((item, index) => <Grid container key={item} sx={{minHeight: {xs: 200, sm: 200, md: 175, lg: 175, xl: 190}}}>
             <Grid item md={4} lg={3.5} xl={4}>
-              <Typography
-                variant="h2" 
-                fontWeight={400}
-                fontSize={{xs: 22, sm: 21, md: 23, lg: 24, xl: 25}} 
-                letterSpacing={{xs: .5, xl:1}}
-                lineHeight={{xs:1}} 
-                textTransform="none"
-                sx={{
-                  textShadow: "1px 1px 7px rgba(25,25,25,.75)",
-                }}
-              >
-                {item.title}
-              </Typography>
+              <Fade appear={index === currentIndex} in={index === currentIndex} timeout={800}  style={{ transitionDelay: "100ms" }}>
+                <Box>
+                  <Typography
+                    variant="h2" 
+                    fontWeight={400}
+                    fontSize={{xs: 22, sm: 21, md: 23, lg: 24, xl: 25}} 
+                    letterSpacing={{xs: .5, xl:1}}
+                    lineHeight={{xs:1}} 
+                    textTransform="none"
+                    sx={{
+                      textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+                    }}
+                  >
+                    {item.title}
+                  </Typography>
+                </Box>
+              </Fade>
             </Grid>
             <Grid item md={8} lg={8.5} xl={8} mt={{xs: 2, sm: 2, md: 1}}>
-              <Typography
-                variant='body2'
-                sx={{
-                  fontSize: {xs: 11, sm: 12.5, md: 13, lg:15, xl: 16},
-                  fontWeight: 300,
-                  opacity: .55,
-                  letterSpacing: .4,
-                  lineHeight: 1.4,
-                  textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-                  borderLeft: 2,
-                  borderColor: "primary.main",
-                  pl: {xs: 1, md: 1.25, lg: 2},
-                }}
-              >
-                {item.description}
-              </Typography>
+              <Fade appear={index === currentIndex} in={index === currentIndex} timeout={800}  style={{ transitionDelay: "600ms" }}>
+                <Box>
+                  <Typography
+                    variant='body2'
+                    sx={{
+                      fontSize: {xs: 10, sm: 11, md: 12.5, lg:13, xl: 14},
+                      fontWeight: 300,
+                      opacity: .55,
+                      letterSpacing: .4,
+                      lineHeight: 1.4,
+                      textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+                      borderLeft: 2,
+                      borderColor: "primary.main",
+                      pl: {xs: 1, md: 1.25, lg: 2},
+                    }}
+                  >
+                    {item.description}
+                  </Typography>
+                </Box>
+              </Fade>
             </Grid>
           </Grid>
           )}
