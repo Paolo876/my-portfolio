@@ -55,7 +55,7 @@ const Contact = () => {
           <Typography 
             variant="h2" 
             fontWeight={500}
-            fontSize={{xs: 21, sm: 21, md: 24, lg: 26, xl: 30}} 
+            fontSize={{xs: 20, sm: 20.5, md: 21, lg: 22, xl: 22.5}} 
             letterSpacing={.5}
             lineHeight={1.1} 
             textTransform="none"
@@ -69,7 +69,7 @@ const Contact = () => {
         <Box mt={2}>
           <Typography 
             sx={{
-              fontSize: {xs: 10, sm: 11, md: 12.5, lg:13, xl: 14.5},
+              fontSize: {xs: 9, sm: 9.5, md: 10, lg:11, xl: 12},
               fontWeight: 400,
               opacity: .7,
               letterSpacing: .3,
@@ -82,9 +82,9 @@ const Contact = () => {
         <Box mt={1}>
           <Typography 
             sx={{
-              fontSize: {xs: 9.5, sm: 10.5, md: 12, lg:12.5, xl: 13},
+              fontSize: {xs: 9, sm: 9.5, md: 10, lg:11, xl: 12},
               fontWeight: 300,
-              opacity: .5,
+              opacity: .55,
               letterSpacing: .3,
               textShadow: "1px 1px 5px rgba(10,10,10,.75)",
             }}
@@ -98,7 +98,7 @@ const Contact = () => {
             onClick={() => navigate("/contact")}
             sx={{
               borderLeft: 2, 
-              fontSize: { xs: ".9rem", sm: "1rem", md: "1.1rem", lg: "1.2rem", xl:"1.3rem" },
+              fontSize: { xs: ".9rem", sm: "1rem", md: "1.05rem", lg: "1.1rem", xl:"1.1rem" },
               lineHeight: 1.4, 
               color: "primary.main", 
               borderColor: "rgba(100,100,100,.75)",
@@ -127,7 +127,7 @@ const Contact = () => {
           <Typography 
             variant="h2" 
             fontWeight={400}
-            fontSize={{xs: 19, sm: 21, md: 24, lg: 26, xl: 30}} 
+            fontSize={{xs: 20, sm: 20.5, md: 21, lg: 22, xl: 22.5}} 
             letterSpacing={.5}
             lineHeight={1.1} 
             textTransform="none"
@@ -137,7 +137,7 @@ const Contact = () => {
           >Paolo Bugarin</Typography>
           <Typography
             sx={{
-              fontSize: { xs: 11, sm: 12.5, md: 14, lg:15, xl: 16 },
+              fontSize: {xs: 9, sm: 9.5, md: 10, lg:11, xl: 12},
               fontWeight: 200,
               opacity: .7,
               letterSpacing: 1,
@@ -146,17 +146,17 @@ const Contact = () => {
             }}
           >Los Angeles, CA</Typography>
         </Box>
-        <Box mt={{xs: 1.5, sm: 3, md: 4, xl:4}}>
+        <Box mt={{xs: 1.5, sm: 3, md: 3.5, xl:3.5}}>
           <Box>
             <IconButton size="small" href="tel:3234817852" sx={contactButtonStyles} disableRipple>
-              <LocalPhoneIcon color="primary" sx={{fontSize: { xs:19, sm: 21, md: 22, lg: 25}}} />
-              <Typography sx={{fontSize: {xs:12, sm: 13, md: 15, lg: 18}, letterSpacing: 1}} fontWeight={300}>(323) 481 - 7852</Typography>
+              <LocalPhoneIcon color="primary" sx={{fontSize: { xs:18, sm: 19, md: 20.5, lg: 21}}} />
+              <Typography sx={{fontSize: {xs:11, sm: 12, md: 13, lg: 13.5, xl: 14}, letterSpacing: .5}} fontWeight={400}>(323) 481 - 7852</Typography>
             </IconButton> 
           </Box>
           <Box mt={{xs:1.25, sm: 2}}>
             <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={contactButtonStyles} disableRipple>
-              <MailOutlineIcon color="primary" sx={{fontSize: { xs:19, sm: 21, md: 22, lg: 25}}}/>
-              <Typography sx={{fontSize: {xs:12, sm: 13, md: 15, lg: 18}, letterSpacing: 1}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
+              <MailOutlineIcon color="primary" sx={{fontSize: { xs:18, sm: 19, md: 20.5, lg: 21}}}/>
+              <Typography sx={{fontSize: {xs:11, sm: 12, md: 13, lg: 13.5, xl: 14}, letterSpacing: .5}} fontWeight={400}>paolopaolobugarin@gmail.com</Typography>
             </IconButton>
           </Box>
         </Box>
@@ -169,7 +169,7 @@ const Contact = () => {
               onClick={() => navigate("/contact")}
               sx={{
                 borderLeft: 2, 
-                fontSize: { xs: "1rem", sm: "1rem"},
+                fontSize: { xs: ".9rem", sm: "1rem"},
                 lineHeight: 1.2, 
                 color: "primary.main", 
                 borderColor: "rgba(100,100,100,.75)",
@@ -234,7 +234,7 @@ const Contact = () => {
           />
         </Box>
         <Box sx={{width: "100%", display: {xs: "none", md: "initial"}}} mt={{md: 3, lg: 4.25, xl:5}}>
-          <Typography sx={{fontSize: {xs: 11, sm:11, md: 11.5, lg:13, xl: 14}, opacity: .5, mixBlendMode: "difference", textAlign: "right"}}>
+          <Typography sx={{fontSize: {xs: 11, sm:11, md: 11.5, lg:12, xl: 12.5}, opacity: .35, mixBlendMode: "difference", textAlign: "right"}}>
             © 2023 Paolo Bugarin, All rights reserved.
           </Typography>
         </Box>
@@ -259,7 +259,7 @@ const Contact = () => {
           />
         </Box>
         <Box sx={{width: "100%", display: {xs: "initial", md: "none"}}}>
-          <Typography sx={{fontSize: {xs: 11, sm:11, md: 11.5, lg:13, xl: 14}, opacity: .5, mixBlendMode: "difference", textAlign: {xs: "center", sm:"right"}}}>
+          <Typography sx={{fontSize: {xs: 11, sm:11, md: 11.5, lg:12, xl: 12.5}, opacity: .5, mixBlendMode: "difference", textAlign: {xs: "center", sm:"right"}}}>
             © 2023 Paolo Bugarin, All rights reserved.
           </Typography>
         </Box>
