@@ -1,13 +1,37 @@
 import React from 'react'
-import { Grid, Box, Typography } from '@mui/material'
+import { Grid, Box, Typography, Fade } from '@mui/material'
+import { useInView } from 'react-intersection-observer';
+import { keyframes } from '@mui/system';
+
+
+const slideRight = keyframes`
+  0% {
+    transform: translateX(-2em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
 
 const SubIntroduction = () => {
+    
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: "0% 0px -35% 0px",
+    delay: 250,
+    triggerOnce: true
+  });
+
+
   return (
     <Box
       sx={{
         position: "relative", 
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
-        pt: {xs:8, sm: 12, md: 14, lg: 30}, 
+        pt: 6, 
         pb: {xs:6, sm: 6, md: 8, lg: 8},       
         display: "flex",
         flexDirection: "column",
@@ -21,7 +45,7 @@ const SubIntroduction = () => {
         }}
       >
         <Grid item xs={12} mt="auto">
-          <Box align="right">
+          <Box align="right" ref={ref} sx={{opacity: 0, animation: inView ? `${slideRight} 1100ms ease forwards 300ms` : "none"}}>
             <Typography 
               variant="h6" 
               sx={{

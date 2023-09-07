@@ -1,5 +1,4 @@
-import { useNavigate } from 'react-router-dom';
-import { Grid, Typography, Link, IconButton, Box, Fade, Grow } from '@mui/material'
+import { Grid, Typography, Link, IconButton, Box, Fade } from '@mui/material'
 import { Link as ReactLink } from 'react-router-dom';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import SocialLinks from '../../../components/SocialLinks';
@@ -70,9 +69,18 @@ const slideRight = keyframes`
   }
 `;
 
+const buttonAnimation = keyframes`
+0% {
+  transform: translateY(-.7em);
+}
+100% {
+  transform: translateX(0) scale(1.025);
+}
+`;
 
-const Landing = () => {
-  const navigate = useNavigate();
+
+const Landing = ({ subIntroRef }) => {
+
 
   return (
     <Box
@@ -99,14 +107,14 @@ const Landing = () => {
             </Fade>
           </Box>
           <Box mt={{ xs: 4.5, sm: 5, md: 15, lg: 13, xl:15 }} ml={{sm:1.5}}>
-            <Fade appear={true} in={true} timeout={700}  style={{ transitionDelay: "1400ms" }}>
+            <Fade appear={true} in={true} timeout={800}  style={{ transitionDelay: "1400ms" }}>
               <Box>
                 <Typography variant="h5" sx={subHeaderStyles}>
                   <Box component="span" sx={subHeaderSymbolStyles}>{`<`}</Box> Full Stack Web Developer <Box component="span" sx={subHeaderSymbolStyles}>{`>`}</Box>
                 </Typography>
               </Box>
             </Fade>
-            <Fade appear={true} in={true} timeout={700}  style={{ transitionDelay: "1600ms" }}>
+            <Fade appear={true} in={true} timeout={800}  style={{ transitionDelay: "1650ms" }}>
               <Box>
                 <Typography variant="h5" sx={subHeaderStyles} mt={1.5}>
                   <Box component="span" sx={subHeaderSymbolStyles}>{`<`}</Box> Los Angeles, CA <Box component="span" sx={subHeaderSymbolStyles}>{`>`}</Box>
@@ -157,38 +165,45 @@ const Landing = () => {
           </Box>
           </Fade>
           <Box align="right" sx={{width: "fit-content", ml: "auto"}}>
-            <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 1250ms`}}>
+            <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 1450ms`}}>
               <Link component={ReactLink} to="/projects" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Projects</Typography></Link>
             </Box>
-            <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 1450ms`}}>
+            <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 1650ms`}}>
               <Link component={ReactLink} to="/about" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>About</Typography></Link>
             </Box>
-            <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 1650ms`}}>
+            <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 1850ms`}}>
               <Link component={ReactLink} to="/contact" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Contact</Typography></Link>
             </Box>
           </Box>
         </Grid>
       </Grid>
-      <Box 
-        sx={{width: "100%", display: "flex", alignItems: "center", justifyContent: "center"}}
-        >
-        <IconButton 
-          size="large" 
-          onClick={() => navigate("/")} 
-          color="primary" 
-          sx={{
-            transform: "rotate(90deg) scale(1)",
-            transition: "all 200ms ease-in-out",
-            "&:hover" : {
-              transform: "rotate(90deg) scale(1.1) translateX(.1em)",
-              filter: "brightness(1.15)"
-            },
-          }} 
-          disableRipple
-        >
-          <ArrowForwardIosIcon sx={{fontSize: {xs: 28, sm: 35, md: 38, lg: 40, xl: 40}}}/>
-        </IconButton>
-      </Box>
+      <Fade appear={true} in={true} timeout={700}  style={{ transitionDelay: "3200ms" }}>
+        <Box>
+          <Box 
+            sx={{width: "100%", display: "flex", alignItems: "center", justifyContent: "center", animation: `${buttonAnimation} 1000ms linear infinite alternate`}}
+            >
+            <IconButton 
+              size="large" 
+              onClick={() => subIntroRef.current.scrollIntoView({behavior:"smooth", block: "start", inline:"nearest"})} 
+              color="primary" 
+              sx={{
+                transform: "rotate(90deg) scale(1)",
+                transition: "all 450ms ease-in-out",
+                opacity: .85,
+                "&:hover" : {
+                  transform: "rotate(90deg) scale(1.1) translateX(.1em)",
+                  filter: "brightness(1.15)",
+                  opacity: 1,
+                },
+              }} 
+              disableRipple
+            >
+              <ArrowForwardIosIcon sx={{fontSize: {xs: 28, sm: 35, md: 38, lg: 40, xl: 40}}}/>
+            </IconButton>
+          </Box>
+
+        </Box>
+      </Fade>
     </Box>
   )
 }
