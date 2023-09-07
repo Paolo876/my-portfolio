@@ -234,7 +234,7 @@ const Contact = () => {
           />
         </Box>
         <Box sx={{width: "100%", display: {xs: "none", md: "initial"}}} mt={{md: 3, lg: 4.25, xl:5}}>
-          <Typography sx={{fontSize: {xs: 11, sm:11, md: 11.5, lg:12, xl: 12.5}, opacity: .35, mixBlendMode: "difference", textAlign: "right"}}>
+          <Typography sx={{fontSize: {xs: 9, sm:10, md: 11, lg:12, xl: 12.5}, opacity: .35, mixBlendMode: "difference", textAlign: "right"}}>
             © 2023 Paolo Bugarin, All rights reserved.
           </Typography>
         </Box>
@@ -259,7 +259,7 @@ const Contact = () => {
           />
         </Box>
         <Box sx={{width: "100%", display: {xs: "initial", md: "none"}}}>
-          <Typography sx={{fontSize: {xs: 11, sm:11, md: 11.5, lg:12, xl: 12.5}, opacity: .5, mixBlendMode: "difference", textAlign: {xs: "center", sm:"right"}}}>
+          <Typography sx={{fontSize: {xs: 9, sm:10, md: 11, lg:12, xl: 12.5}, opacity: .35, mixBlendMode: "difference", textAlign: {xs: "center", sm:"right"}}}>
             © 2023 Paolo Bugarin, All rights reserved.
           </Typography>
         </Box>
