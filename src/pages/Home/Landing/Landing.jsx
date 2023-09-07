@@ -4,6 +4,7 @@ import { Link as ReactLink } from 'react-router-dom';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import SocialLinks from '../../../components/SocialLinks';
 import FirstName from './FirstName';
+import { keyframes } from '@mui/system';
 
 
 const linkStyles = {
@@ -56,6 +57,18 @@ const subHeaderSymbolStyles = {
   opacity: .5,
   fontWeight: 600,
 }
+
+
+const slideRight = keyframes`
+  0% {
+    transform: translateX(-3em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
 
 
 const Landing = () => {
@@ -120,7 +133,7 @@ const Landing = () => {
           </Box>
         </Grid>
         <Grid item xs={12} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", pb: {sm: 3}, pt: {xs:2, sm: 3}}}>
-        <Grow
+        <Fade
           in={true}
           style={{ transitionDelay: "1900ms"  }}
           timeout={500}
@@ -142,11 +155,17 @@ const Landing = () => {
               }}
             />
           </Box>
-          </Grow>
+          </Fade>
           <Box align="right" sx={{width: "fit-content", ml: "auto"}}>
-            <Link component={ReactLink} to="/projects" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Projects</Typography></Link>
-            <Link component={ReactLink} to="/about" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>About</Typography></Link>
-            <Link component={ReactLink} to="/contact" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Contact</Typography></Link>
+            <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 1250ms`}}>
+              <Link component={ReactLink} to="/projects" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Projects</Typography></Link>
+            </Box>
+            <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 1450ms`}}>
+              <Link component={ReactLink} to="/about" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>About</Typography></Link>
+            </Box>
+            <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 1650ms`}}>
+              <Link component={ReactLink} to="/contact" draggable={false} sx={{position: "relative"}}><Typography sx={linkStyles}>Contact</Typography></Link>
+            </Box>
           </Box>
         </Grid>
       </Grid>
@@ -168,7 +187,6 @@ const Landing = () => {
           disableRipple
         >
           <ArrowForwardIosIcon sx={{fontSize: {xs: 28, sm: 35, md: 38, lg: 40, xl: 40}}}/>
-          {/* <ArrowForwardIosIcon fontSize="large"/> */}
         </IconButton>
       </Box>
     </Box>
