@@ -6,6 +6,18 @@ import { useInView } from 'react-intersection-observer';
 import { keyframes } from '@mui/system';
 
 
+
+const slideLeft = keyframes`
+  0% {
+    transform: translateX(1.5em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
 const Projects = () => {
   const navigate = useNavigate();
     
@@ -68,32 +80,34 @@ const Projects = () => {
             </Box>
           </Fade>
         </Grid>        
-        <Grid item xs={12} mt={{xs: 26, sm: 40, md: 4, lg: 6, xl:10}} >
-          <ButtonBase
-            onClick={() => navigate("/projects")}
-            sx={{
-              borderLeft: 2, 
-              fontSize: { xs: "1.2rem", sm: "1.35rem", md: "1.35rem", lg: "1.4rem", xl:"1.4rem" },
-              lineHeight: 1.4, 
-              color: "white", 
-              borderColor: "primary.dark",
-              px: 1.5,
-              py: .25,
-              fontWeight: 600,
-              letterSpacing: .4,
-              opacity: .85,
-              transition: "all 200ms ease-in-out",
-              fontFamily: "Manrope",
-              textShadow: "1px 1px 3px rgba(100,100,100,.75)",
-              "&:hover":{
-                opacity:1,
-                transform: "scale(1.02)",
-                borderColor: "primary.main",
-              }
-            }}
-          >
-          Explore My Projects
-          </ButtonBase>
+        <Grid item xs={12} mt={{xs: 26, sm: 40, md: 4, lg: 6, xl:10}} sx={{overflow: "hidden"}}>
+          <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 750ms` : "none"}}>
+            <ButtonBase
+              onClick={() => navigate("/projects")}
+              sx={{
+                borderLeft: 2, 
+                fontSize: { xs: "1.2rem", sm: "1.35rem", md: "1.35rem", lg: "1.4rem", xl:"1.4rem" },
+                lineHeight: 1.4, 
+                color: "white", 
+                borderColor: "primary.dark",
+                px: 1.5,
+                py: .25,
+                fontWeight: 600,
+                letterSpacing: .4,
+                opacity: .85,
+                transition: "all 200ms ease-in-out",
+                fontFamily: "Manrope",
+                textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+                "&:hover":{
+                  opacity:1,
+                  transform: "scale(1.02)",
+                  borderColor: "primary.main",
+                }
+              }}
+            >
+              Explore My Projects
+            </ButtonBase>
+          </Box>
         </Grid>
         <ProjectsShowcase/>
       </Grid>
