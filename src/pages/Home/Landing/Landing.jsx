@@ -122,6 +122,8 @@ const Landing = ({ subIntroRef }) => {
               </Box>
             </Fade>
           </Box>
+          <Fade appear={true} in={true} timeout={800}  style={{ transitionDelay: "2100ms" }}>
+
           <Box sx={{width: "fit-content", display: {xs: "initial", lg: "none"}}} mt={{xs: 2, sm:9}} ml={{sm:1.5}}>
             <SocialLinks 
               flexDirection='row' 
@@ -139,6 +141,7 @@ const Landing = ({ subIntroRef }) => {
               }}
             />
           </Box>
+          </Fade>
         </Grid>
         <Grid item xs={12} lg={4} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", pb: {sm: 3}, pt: {xs:2, sm: 3}}}>
         <Fade

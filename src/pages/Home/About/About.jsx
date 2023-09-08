@@ -1,9 +1,31 @@
 import { useState } from 'react'
-import { Box, Typography, ButtonBase } from '@mui/material'
+import { Box, Typography, ButtonBase, Fade } from '@mui/material'
 import AboutContent from './AboutContent';
+import { useInView } from 'react-intersection-observer';
+import { keyframes } from '@mui/system';
+
+
+
+const enterAnimation = keyframes`
+  0% {
+    transform: translateX(1.5em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
 
 const About = () => {
   const [ showContent, setShowContent ] = useState(false);
+    
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: "0% 0px -35% 0px",
+    delay: 250,
+    triggerOnce: true
+  });
 
 
   return (
@@ -46,21 +68,26 @@ const About = () => {
               borderColor: "primary.main",
             }
         }}
+        ref={ref}
       >
-        <Box 
-          sx={{
-            opacity: .6,
-            transition: "all 500ms ease-in-out",
-            letterSpacing: 3,
-            textShadow: "1px 1px 7px rgba(10,10,10,.5)",
-            borderBottom: 2,
-            pb: .5,
-            borderColor: "primary.dark",
-          }}
-          className="content"
-        >
-          <Typography variant="h2" textTransform="none" fontWeight={200} fontSize={{xs: 40, sm: 50, md: 55, lg:60}}>Who Am I?</Typography>
-        </Box>
+        <Fade appear={inView} in={inView} timeout={1100}  style={{ transitionDelay: "300ms" }}>
+          <Box>
+            <Box 
+              sx={{
+                opacity: .6,
+                transition: "all 500ms ease-in-out",
+                letterSpacing: 3,
+                textShadow: "1px 1px 7px rgba(10,10,10,.5)",
+                borderBottom: 2,
+                pb: .5,
+                borderColor: "primary.dark",
+              }}
+              className="content"
+            >
+              <Typography variant="h2" textTransform="none" fontWeight={200} fontSize={{xs: 40, sm: 50, md: 55, lg:60}}>Who Am I?</Typography>
+            </Box>
+          </Box>
+        </Fade>
       </ButtonBase>}
       <Box sx={{opacity: showContent ? 1 : 0}}>
         <AboutContent isVisible={showContent}/>
