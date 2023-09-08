@@ -6,7 +6,6 @@ import { useInView } from 'react-intersection-observer';
 import { keyframes } from '@mui/system';
 
 
-
 const slideLeft = keyframes`
   0% {
     transform: translateX(1.5em);
@@ -17,6 +16,7 @@ const slideLeft = keyframes`
     opacity: 1;
   }
 `;
+
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -62,7 +62,7 @@ const Projects = () => {
               </Typography>
             </Box>
           </Fade>
-          <Fade appear={inView} in={inView} timeout={1100}  style={{ transitionDelay: "550ms" }}>
+          <Fade appear={inView} in={inView} timeout={1100}  style={{ transitionDelay: "600ms" }}>
             <Box mt={{xs: 2, sm:2, md: 2, lg: 3, xl: 3}} ml={{md: .5}}>
               <Typography 
                 variant="body1" 
@@ -81,7 +81,7 @@ const Projects = () => {
           </Fade>
         </Grid>        
         <Grid item xs={12} mt={{xs: 26, sm: 40, md: 4, lg: 6, xl:10}} sx={{overflow: "hidden"}}>
-          <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 750ms` : "none"}}>
+          <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 850ms` : "none"}}>
             <ButtonBase
               onClick={() => navigate("/projects")}
               sx={{

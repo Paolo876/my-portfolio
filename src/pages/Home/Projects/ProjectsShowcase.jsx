@@ -1,5 +1,6 @@
 import React from 'react'
-import { Box, Grid, Fade } from '@mui/material'
+import { Box, Grid } from '@mui/material'
+import { useInView } from 'react-intersection-observer';
 import { keyframes } from '@mui/system';
 
 
@@ -10,7 +11,27 @@ const previewBoxStyles = {
   transform: "skewX(-7deg)",
 }
 
+const slideLeft = keyframes`
+  0% {
+    transform: translateX(3em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+
 const ProjectsShowcase = () => {
+    
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: "0% 0px -35% 0px",
+    delay: 250,
+    triggerOnce: true
+  });
+
 
   return (
 
@@ -28,10 +49,16 @@ const ProjectsShowcase = () => {
         justifyContent: "center",
       }}
     >
-      <Grid container gap={{xs: 1.5, sm: 3, md: 4, lg: 5, xl:7}}>
-        <Grid item sx={previewBoxStyles}></Grid>
-        <Grid item sx={previewBoxStyles}></Grid>
-        <Grid item sx={previewBoxStyles}></Grid>
+      <Grid container gap={{xs: 1.5, sm: 3, md: 4, lg: 5, xl:7}} ref={ref}>
+        <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 1100ms` : "none"}}>
+          <Grid item sx={previewBoxStyles}></Grid>
+        </Box>
+        <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 1350ms` : "none"}}>
+          <Grid item sx={previewBoxStyles}></Grid>
+        </Box>
+        <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 1600ms` : "none"}}>
+          <Grid item sx={previewBoxStyles}></Grid>
+        </Box>
       </Grid>
     </Box>
   )
