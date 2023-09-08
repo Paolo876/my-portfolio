@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Box, Typography, Fade } from '@mui/material'
+import { Grid, Box, Typography } from '@mui/material'
 import { useInView } from 'react-intersection-observer';
 import { keyframes } from '@mui/system';
 
@@ -45,7 +45,7 @@ const SubIntroduction = () => {
         }}
       >
         <Grid item xs={12} mt="auto">
-          <Box align="right" ref={ref} sx={{opacity: 0, animation: inView ? `${slideRight} 1100ms ease forwards 300ms` : "none"}}>
+          <Box align="right" ref={ref} sx={{opacity: 0, animation: inView ? `${slideRight} 1100ms ease forwards 150ms` : "none"}}>
             <Typography 
               variant="h6" 
               sx={{

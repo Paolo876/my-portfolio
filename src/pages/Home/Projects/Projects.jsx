@@ -1,11 +1,21 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Grid, Box, Typography, ButtonBase } from '@mui/material'
+import { Grid, Box, Typography, ButtonBase, Fade } from '@mui/material'
 import ProjectsShowcase from './ProjectsShowcase'
+import { useInView } from 'react-intersection-observer';
+import { keyframes } from '@mui/system';
 
 
 const Projects = () => {
   const navigate = useNavigate();
+    
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: "0% 0px -35% 0px",
+    delay: 250,
+    triggerOnce: true
+  });
+
 
   return (
     <Box 
@@ -20,40 +30,43 @@ const Projects = () => {
       }}
     >
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(255,255,255,1)", mixBlendMode: "overlay", opacity: .2, zIndex: -1}}></Box>
-      <Grid container sx={{maxWidth: "1500px", height: "100%", mx: "auto", overflowX:"auto", overflowY: "hidden"}}>
+      <Grid container sx={{maxWidth: "1500px", height: "100%", mx: "auto", overflowX:"auto", overflowY: "hidden"}} ref={ref}>
         <Grid item xs={12} sm={10.5} md={3.75} lg={3.5} xl={3}>
-          <Box>
-            <Typography 
-              variant="h2" 
-              align="left" 
-              fontWeight={400}
-              fontSize={{xs: 35, sm: 45, md: 60, lg: 80, xl: 88}} 
-              letterSpacing={{xs: .5, xl:1}}
-              lineHeight={{xs:1}} 
-              textTransform="none"
-              sx={{
-                textShadow: "1px 1px 7px rgba(10,10,10,.75)",
-              }}
-            >
-              My <Box component="br" sx={{display: {xs: "none", md: "initial"}}}></Box>Projects
-            </Typography>
-            <Box sx={{background: "rgba(239,235,229,1)", height: 5, width: 5, mr: "auto", mt: { xs: 1.5, md:2, lg: 2.5 }, ml: {md: .75}, opacity: 1, boxShadow: 3, display: {xs: "none", md: "initial"}}}></Box>
-          </Box>
-          <Box mt={{xs: 2, sm:2, md: 2, lg: 3, xl: 3}} ml={{md: .5}}>
-            <Typography 
-              variant="body1" 
-              sx={{
-                fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 16},
-                fontWeight: 300,
-                opacity: .55,
-                letterSpacing: .3,
-                textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-              }}
-            >
-              I mainly develop my projects using ReactJS or NextJS for the frontend, ExpressJS and NodeJS for the backend, MongoDB or MySQL for db implementations. I use different libraries on my works to
-              increase development efficiency and easier scalability.
-            </Typography>
-          </Box>
+          <Fade appear={inView} in={inView} timeout={1100}  style={{ transitionDelay: "300ms" }}>
+            <Box>
+              <Typography 
+                variant="h2" 
+                align="left" 
+                fontWeight={400}
+                fontSize={{xs: 35, sm: 45, md: 60, lg: 80, xl: 88}} 
+                letterSpacing={{xs: .5, xl:1}}
+                lineHeight={{xs:1}} 
+                textTransform="none"
+                sx={{
+                  textShadow: "1px 1px 7px rgba(10,10,10,.75)",
+                }}
+              >
+                My <Box component="br" sx={{display: {xs: "none", md: "initial"}}}></Box>Projects
+              </Typography>
+            </Box>
+          </Fade>
+          <Fade appear={inView} in={inView} timeout={1100}  style={{ transitionDelay: "550ms" }}>
+            <Box mt={{xs: 2, sm:2, md: 2, lg: 3, xl: 3}} ml={{md: .5}}>
+              <Typography 
+                variant="body1" 
+                sx={{
+                  fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 16},
+                  fontWeight: 300,
+                  opacity: .55,
+                  letterSpacing: .3,
+                  textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+                }}
+              >
+                I mainly develop my projects using ReactJS or NextJS for the frontend, ExpressJS and NodeJS for the backend, MongoDB or MySQL for db implementations. I use different libraries on my works to
+                increase development efficiency and easier scalability.
+              </Typography>
+            </Box>
+          </Fade>
         </Grid>        
         <Grid item xs={12} mt={{xs: 26, sm: 40, md: 4, lg: 6, xl:10}} >
           <ButtonBase
