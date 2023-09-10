@@ -2,22 +2,7 @@ import { useState } from 'react'
 import { Box, Typography, ButtonBase, Fade } from '@mui/material'
 import AboutContent from './AboutContent';
 import { useInView } from 'react-intersection-observer';
-import { keyframes } from '@mui/system';
 
-
-
-const enterAnimation = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    background: rgba(0,0,0,.25);
-    transform: scale(1.015);
-    letterSpacing: 4.5;
-    borderColor: "primary.main";
-  }
-`;
 
 const About = () => {
   const [ showContent, setShowContent ] = useState(false);
@@ -26,10 +11,13 @@ const About = () => {
     threshold: 0,
     rootMargin: "0% 0px -35% 0px",
     delay: 250,
-    triggerOnce: true
+    // triggerOnce: true
   });
 
 
+  const handleClick = () => {
+    setShowContent(true)
+  }
   return (
     <Box 
       sx={{
@@ -50,7 +38,7 @@ const About = () => {
       {!showContent && <ButtonBase 
         align="center" 
         disableRipple
-        onClick={() => setShowContent(true)}
+        onClick={handleClick}
         sx={{
           position: "absolute", 
           top: 0, 
@@ -64,10 +52,12 @@ const About = () => {
           transition: "all 800ms ease-in-out",
 
           background: inView ? "rgba(0,0,0,.25)" : "none",
-          transition: "all 800ms ease-in-out",
-          "&:hover .content": {
-              letterSpacing: 4.5,
-              borderColor: "primary.main",
+          ".content": {
+              "&:hover ": {
+                transform: "scale(1.025)",
+                letterSpacing: 4.5,
+                borderColor: "primary.main",
+              }
             }
         }}
         ref={ref}
@@ -81,7 +71,7 @@ const About = () => {
                 textShadow: "1px 1px 7px rgba(10,10,10,.5)",
                 borderBottom: 2,
                 pb: .5,
-                letterSpacing: 3,
+                letterSpacing: inView ? 3 : 2,
                 borderColor: "primary.dark",
                 transform: inView ? "scale(1.015)" : "scale(1)",
 
