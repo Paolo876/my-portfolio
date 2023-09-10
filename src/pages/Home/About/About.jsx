@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer';
 
 const About = () => {
   const [ showContent, setShowContent ] = useState(false);
+  const [ isUnmounted, setIsUnmounted ] = useState(false)
     
   const { ref, inView } = useInView({
     threshold: 0,
@@ -16,7 +17,8 @@ const About = () => {
 
 
   const handleClick = () => {
-    setShowContent(true)
+    setIsUnmounted(true)
+    setTimeout(() => setShowContent(true), 1000)
   }
   return (
     <Box 
@@ -35,54 +37,57 @@ const About = () => {
     >
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(0,0,0,.1)", zIndex: -1}}></Box>
 
-      {!showContent && <ButtonBase 
-        align="center" 
-        disableRipple
-        onClick={handleClick}
-        sx={{
-          position: "absolute", 
-          top: 0, 
-          left: 0, 
-          height: "100%", 
-          width: "100%",
-          zIndex: 5,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          transition: "all 800ms ease-in-out",
+      {!showContent && <Fade appear={inView} in={inView} timeout={1100}  style={{ transitionDelay: "300ms" }}>
+        <ButtonBase 
+          align="center" 
+          disableRipple
+          onClick={handleClick}
+          sx={{
+            position: "absolute", 
+            top: 0, 
+            left: 0, 
+            height: "100%", 
+            width: "100%",
+            zIndex: 5,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            transition: "all 800ms ease-in-out",
 
-          background: inView ? "rgba(0,0,0,.25)" : "none",
-          ".content": {
-              "&:hover ": {
-                transform: "scale(1.025)",
-                letterSpacing: 4.5,
-                borderColor: "primary.main",
+            background: inView ? "rgba(0,0,0,.25)" : "none",
+            ".content": {
+                "&:hover ": {
+                  transform: "scale(1.025)",
+                  letterSpacing: 4.5,
+                  borderColor: "primary.main",
+                }
               }
-            }
-        }}
-        ref={ref}
-      >
-        <Fade appear={inView} in={inView} timeout={1100}  style={{ transitionDelay: "300ms" }}>
-          <Box>
-            <Box 
-              sx={{
-                opacity: .6,
-                transition: "all 500ms ease-in-out",
-                textShadow: "1px 1px 7px rgba(10,10,10,.5)",
-                borderBottom: 2,
-                pb: .5,
-                letterSpacing: inView ? 3 : 2,
-                borderColor: "primary.dark",
-                transform: inView ? "scale(1.015)" : "scale(1)",
+          }}
+          ref={ref}
+        >
+          <Fade appear={!isUnmounted} in={!isUnmounted} timeout={850} >
+            <Box>
+              <Box 
+                sx={{
+                  opacity: .6,
+                  transition: "all 500ms ease-in-out",
+                  textShadow: "1px 1px 7px rgba(10,10,10,.5)",
+                  borderBottom: 2,
+                  pb: .5,
+                  letterSpacing: inView ? 3 : 2,
+                  borderColor: "primary.dark",
+                  transform: inView ? "scale(1.015)" : "scale(1)",
 
-              }}
-              className="content"
-            >
-              <Typography variant="h2" textTransform="none" fontWeight={200} fontSize={{xs: 40, sm: 50, md: 55, lg:60}}>Who Am I?</Typography>
+                }}
+                className="content"
+              >
+                <Typography variant="h2" textTransform="none" fontWeight={200} fontSize={{xs: 40, sm: 50, md: 55, lg:60}}>Who Am I?</Typography>
+              </Box>
             </Box>
-          </Box>
-        </Fade>
-      </ButtonBase>}
+          </Fade>
+        </ButtonBase>
+      </Fade>
+      }
       <Box sx={{opacity: showContent ? 1 : 0}}>
         <AboutContent isVisible={showContent}/>
       </Box>
