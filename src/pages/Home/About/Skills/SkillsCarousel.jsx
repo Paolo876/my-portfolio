@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import Carousel from 'react-material-ui-carousel'
-import { Typography, Box, Grid, Tooltip } from '@mui/material'
+import { Typography, Box, Grid, Tooltip, Fade } from '@mui/material'
 import useRootRedux from '../../../../hooks/useRootRedux'
 import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 
@@ -31,7 +31,7 @@ const chunkArray = (arr, chunkSize) => {
 }
 
 
-const SkillsCarousel = () => {
+const SkillsCarousel = ({ isVisible }) => {
   const { skillsList } = useRootRedux();
   const [ skills, setSkills ] = useState([]);
 
@@ -48,28 +48,30 @@ const SkillsCarousel = () => {
         duration={800} 
         navButtonsAlwaysInvisible={true}
       >
-        {skills.map((item, index) => <Grid container key={index}>
-        {item.map(_item => 
-            <Grid item xs={2.4} sm={2.1} md={2.4} key={_item.name} align="left" my={1.75}>
-              <Tooltip 
-                title={<Typography variant="body1" fontSize={12} fontWeight={300} letterSpacing={.4} px={.25}>{_item.name}</Typography>} 
-                arrow
-                placement="right"
-                enterDelay={500}
-                enterNextDelay={250}
-              >
-                <Box sx={boxStyles}>
-                  <Box height={{xs: 25, sm: 40, md:45, lg:50, xl: 50}} width="auto">
-                    <SkillIconImageItem 
-                      src={_item.monoUrl} 
-                      duration={500} 
-                      objectFit='scale-down'
-                      sx={{filter: "invert(1) brightness(1.1)"}}
-                      />
+        {skills.map((item, index) => <Grid container key={index} pr={{md:2}}>
+          {item.map((_item, _index) => 
+            <Fade appear={isVisible} in={isVisible} timeout={600}  style={{ transitionDelay: `${(_index * 200) + 1100}ms` }} key={_item.name}>
+              <Grid item xs={2.4} sm={2.1} md={2.4} align="left" my={1.75}>
+                <Tooltip 
+                  title={<Typography variant="body1" fontSize={12} fontWeight={300} letterSpacing={.4} px={.25}>{_item.name}</Typography>} 
+                  arrow
+                  placement="right"
+                  enterDelay={500}
+                  enterNextDelay={250}
+                >
+                  <Box sx={boxStyles}>
+                    <Box height={{xs: 25, sm: 40, md:45, lg:50, xl: 50}} width="auto">
+                      <SkillIconImageItem 
+                        src={_item.monoUrl} 
+                        duration={500} 
+                        objectFit='scale-down'
+                        sx={{filter: "invert(1) brightness(1.1)"}}
+                        />
+                    </Box>
                   </Box>
-                </Box>
-              </Tooltip>
-            </Grid>
+                </Tooltip>
+              </Grid>
+            </Fade>
           )}
         </Grid>)}
       </Carousel>

@@ -17,6 +17,18 @@ const slideLeft = keyframes`
 `;
 
 
+const slideRight = keyframes`
+  0% {
+    transform: translateX(-1.5em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+
 const AboutContent = ({ isVisible }) => {
   const navigate = useNavigate();
 
@@ -27,7 +39,6 @@ const AboutContent = ({ isVisible }) => {
 				<Grid container columnSpacing={{xs: 0, sm:3, md: 6, lg: 6, xl:12}}>
 					<Grid item xs={3.75} sm={3} sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
             <Fade appear={isVisible} in={isVisible} timeout={1100}  style={{ transitionDelay: "1150ms" }}>
-
 						  <Box sx={{height: {xs: 125, sm: 180, md: 240, lg: 280, xl: 300 }, width: {xs: 90, sm: 130, md: 190, lg: 230, xl: 250}, border: 1}}></Box>
             </Fade>
           </Grid>
@@ -71,7 +82,7 @@ const AboutContent = ({ isVisible }) => {
                 </Typography>
               </Box>
             </Fade>
-            <Box sx={{opacity: 0, animation: isVisible ? `${slideLeft} 1100ms ease forwards 850ms` : "none"}}>
+            <Box sx={{opacity: 0, animation: isVisible ? `${slideLeft} 1100ms ease forwards 1150ms` : "none"}}>
               <Box mb={{lg: 1.5}} sx={{display: {xs: "none", md: "initial"}}}>
                 <ButtonBase
                   onClick={() => navigate("/about")}
@@ -120,7 +131,7 @@ const AboutContent = ({ isVisible }) => {
                 </Typography>
               </Box>
             </Fade>
-            <Box sx={{opacity: 0, animation: isVisible ? `${slideLeft} 1100ms ease forwards 850ms` : "none"}}>
+            <Box sx={{opacity: 0, animation: isVisible ? `${slideLeft} 1100ms ease forwards 1150ms` : "none"}}>
               <Box mt={{xs: 2, sm: 0}}>
                 <ButtonBase
                   onClick={() => navigate("/about")}
@@ -156,33 +167,34 @@ const AboutContent = ({ isVisible }) => {
 				<Skills isVisible={isVisible}/>
 			</Grid>
       <Grid item xs={12} mt={{xs: 1.5, sm:3}} sx={{display: {xs: "initial", md: "none"}}}>
-        <Box>
-          <ButtonBase
-            onClick={() => navigate("/about")}
-
-            sx={{
-              borderLeft: 2, 
-              fontSize: { xs: "1rem", sm: "1.2rem" },
-              lineHeight: 1.4, 
-              color: "white", 
-              borderColor: "primary.dark",
-              px: 1.5,
-              py: .25,
-              fontWeight: 600,
-              letterSpacing: .4,
-              opacity: .85,
-              transition: "all 250ms ease-in-out",
-              fontFamily: "Manrope",
-              "&:hover":{
-                opacity:1,
-                textShadow: "1px 1px 3px rgba(100,100,100,.75)",
-                transform: "scale(1.02)",
-                borderColor: "primary.main",
-              }
-            }}
-          >
-            See All My Skills
-          </ButtonBase>
+        <Box sx={{opacity: 0, animation: isVisible ? `${slideRight} 1100ms ease forwards 2150ms` : "none"}}>
+          <Box>
+            <ButtonBase
+              onClick={() => navigate("/about")}
+              sx={{
+                borderLeft: 2, 
+                fontSize: { xs: "1rem", sm: "1.2rem" },
+                lineHeight: 1.4, 
+                color: "white", 
+                borderColor: "primary.dark",
+                px: 1.5,
+                py: .25,
+                fontWeight: 600,
+                letterSpacing: .4,
+                opacity: .85,
+                transition: "all 250ms ease-in-out",
+                fontFamily: "Manrope",
+                "&:hover":{
+                  opacity:1,
+                  textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+                  transform: "scale(1.02)",
+                  borderColor: "primary.main",
+                }
+              }}
+            >
+              See All My Skills
+            </ButtonBase>
+          </Box>
         </Box>
       </Grid>
 		</Grid>
