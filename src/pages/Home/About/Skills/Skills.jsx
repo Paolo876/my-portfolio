@@ -1,8 +1,20 @@
 import React from 'react'
 import SkillsDescription from './SkillsDescription';
 import SkillsCarousel from './SkillsCarousel';
+import { Grid, Box, Typography, Divider, Fade } from '@mui/material'
+import { keyframes } from '@mui/system';
 
-import { Grid, Box, Typography, Divider } from '@mui/material'
+
+const slideLeft = keyframes`
+  0% {
+    transform: translateX(1.5em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
 
 
 const Skills = ({ isVisible }) => {

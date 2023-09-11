@@ -26,7 +26,10 @@ const AboutContent = ({ isVisible }) => {
 			<Grid item xs={12}>
 				<Grid container columnSpacing={{xs: 0, sm:3, md: 6, lg: 6, xl:12}}>
 					<Grid item xs={3.75} sm={3} sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
-						<Box sx={{height: {xs: 125, sm: 180, md: 240, lg: 280, xl: 300 }, width: {xs: 90, sm: 130, md: 190, lg: 230, xl: 250}, border: 1}}></Box>
+            <Fade appear={isVisible} in={isVisible} timeout={1100}  style={{ transitionDelay: "1150ms" }}>
+
+						  <Box sx={{height: {xs: 125, sm: 180, md: 240, lg: 280, xl: 300 }, width: {xs: 90, sm: 130, md: 190, lg: 230, xl: 250}, border: 1}}></Box>
+            </Fade>
           </Grid>
 					<Grid item xs={8.25} sm={9} sx={{display: "flex", flexDirection: "column", justifyContent: {xs: "center", sm: "space-between"}}}>
             <Fade appear={isVisible} in={isVisible} timeout={1100}  style={{ transitionDelay: "300ms" }}>
@@ -117,7 +120,7 @@ const AboutContent = ({ isVisible }) => {
                 </Typography>
               </Box>
             </Fade>
-            <Box sx={{opacity: 0, animation: `${slideLeft} 1100ms ease forwards 750ms`}}>
+            <Box sx={{opacity: 0, animation: isVisible ? `${slideLeft} 1100ms ease forwards 850ms` : "none"}}>
               <Box mt={{xs: 2, sm: 0}}>
                 <ButtonBase
                   onClick={() => navigate("/about")}
