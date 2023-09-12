@@ -43,7 +43,7 @@ const Navbar = () => {
         container
         sx={{
           position: "relative", 
-          py:{xs:.5, sm:1.15, md: 1.75, xl: 1 },
+          py:{xs:.5, sm:1.15, md: 1.75, xl: 1.25 },
           maxWidth: "1500px",
           mx: "auto",
           // overflow: "hidden",
@@ -53,8 +53,8 @@ const Navbar = () => {
         <Grid item xs={1} sx={{display: "flex", alignitems: "center"}}>
           <Link component={ReactLink} to="/">
             {/* <Typography fontSize={{xs: 14, sm: 15, md: 16}} variant="h3">PB</Typography> */}
-            <Box sx={{}}>
-              <Image src={logo} height={45} width="auto"/>
+            <Box sx={{height: 42, width: "auto", my: "auto"}}>
+              <Image src={logo} fit='scale-down'/>
             </Box>
           </Link>
         </Grid>
