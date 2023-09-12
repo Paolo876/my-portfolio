@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { NavLink, Link as ReactLink } from 'react-router-dom';
-import { Typography, AppBar, Container, Box, Link, IconButton, Grid } from '@mui/material'
+import { Typography, AppBar, Box, Link, IconButton, Grid } from '@mui/material'
+import Image from 'mui-image';
+import logo from "../../assets/logo.svg";
 import MenuIcon from '@mui/icons-material/Menu';
 
 import "./navbar.scss";
@@ -41,7 +43,7 @@ const Navbar = () => {
         container
         sx={{
           position: "relative", 
-          py:{xs:.5, sm:1.15, md: 1.75, xl: 2 },
+          py:{xs:.5, sm:1.15, md: 1.75, xl: 1 },
           maxWidth: "1500px",
           mx: "auto",
           // overflow: "hidden",
@@ -50,7 +52,10 @@ const Navbar = () => {
       >
         <Grid item xs={1} sx={{display: "flex", alignitems: "center"}}>
           <Link component={ReactLink} to="/">
-            <Typography fontSize={{xs: 14, sm: 15, md: 16}} variant="h3">PB</Typography>
+            {/* <Typography fontSize={{xs: 14, sm: 15, md: 16}} variant="h3">PB</Typography> */}
+            <Box sx={{}}>
+              <Image src={logo} height={45} width="auto"/>
+            </Box>
           </Link>
         </Grid>
         <Grid 
@@ -61,6 +66,7 @@ const Navbar = () => {
             display:{xs: "none", md: "flex"}, 
             flexDirection: "row", 
             justifyContent: "right",
+            alignItems: "center",
             gap: {md:4, lg: 5,xl: 7.5},
           }} 
           className="link-items"
