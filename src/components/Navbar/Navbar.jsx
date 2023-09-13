@@ -36,21 +36,20 @@ const Navbar = () => {
       sx={{
         minHeight: 0,
         px: { xs:1.75, sm: 3, md: 4, lg: 5}, 
-
       }}
     >
       <Grid 
         container
         sx={{
           position: "relative", 
-          py:{xs:.5, sm:1.15, md: 1.75, xl: 1.25 },
+          py:{xs:1, sm:1, md: 1, xl: 1 },
           maxWidth: "1500px",
           mx: "auto",
         }}
       >
         <Grid item xs={1} sx={{display: "flex", alignitems: "center"}}>
           <Link component={ReactLink} to="/">
-            <Box sx={{height: 45, width: "auto", my: "auto", ml: .5, opacity: .8, transition: "800ms all ease", transform: "scale(.95)","&:hover": {opacity: 1, transform: "scale(1)"}}}>
+            <Box sx={{width: {xs: 45, sm: 48, md:50}, my: {md:.25}, ml: .5, opacity: .6, transition: "800ms all ease", transform: "scale(.95)","&:hover": {opacity: 1, transform: "scale(1)"}}}>
               <Image src={logo} fit='scale-down'/>
             </Box>
           </Link>
