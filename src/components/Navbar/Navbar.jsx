@@ -46,14 +46,11 @@ const Navbar = () => {
           py:{xs:.5, sm:1.15, md: 1.75, xl: 1.25 },
           maxWidth: "1500px",
           mx: "auto",
-          // overflow: "hidden",
-          opacity: isScrolledDown === "top" && location.pathname === "/" ? 0 : 1,
         }}
       >
         <Grid item xs={1} sx={{display: "flex", alignitems: "center"}}>
           <Link component={ReactLink} to="/">
-            {/* <Typography fontSize={{xs: 14, sm: 15, md: 16}} variant="h3">PB</Typography> */}
-            <Box sx={{height: 42, width: "auto", my: "auto"}}>
+            <Box sx={{height: 45, width: "auto", my: "auto", ml: .5, opacity: .8, transition: "800ms all ease", transform: "scale(.95)","&:hover": {opacity: 1, transform: "scale(1)"}}}>
               <Image src={logo} fit='scale-down'/>
             </Box>
           </Link>
@@ -68,6 +65,7 @@ const Navbar = () => {
             justifyContent: "right",
             alignItems: "center",
             gap: {md:4, lg: 5,xl: 7.5},
+            opacity: isScrolledDown === "top" && location.pathname === "/" ? 0 : 1,
           }} 
           className="link-items"
         >
