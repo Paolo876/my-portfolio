@@ -49,7 +49,7 @@ const Navbar = () => {
       >
         <Grid item xs={1} sx={{display: "flex", alignitems: "center"}}>
           <Link component={ReactLink} to="/">
-            <Box sx={{width: {xs: 45, sm: 48, md:50}, my: {md:.25}, ml: .5, opacity: .6, transition: "800ms all ease", transform: "scale(.95)","&:hover": {opacity: 1, transform: "scale(1)"}}}>
+            <Box sx={{width: {xs: 42, sm: 45, md:50}, my: {md:.25}, ml: .5, opacity: .6, transition: "800ms all ease", transform: "scale(.95)","&:hover": {opacity: 1, transform: "scale(1)"}}}>
               <Image src={logo} fit='scale-down'/>
             </Box>
           </Link>
