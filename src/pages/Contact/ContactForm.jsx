@@ -66,7 +66,7 @@ const ContactForm = () => {
           display: "flex", 
           flexDirection: "column",
           boxShadow: 8,
-          backgroundColor: "rgba(45,45,45,.45)"
+          backgroundColor: "rgba(45,45,45,.3)"
         }} 
         component="form" 
         autoComplete="off" 
