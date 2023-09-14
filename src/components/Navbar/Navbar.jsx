@@ -8,6 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 import "./navbar.scss";
 import LinksModal from './LinksModal';
+import Logo from '../Logo';
 
 const Navbar = () => {
   const location = useLocation();
@@ -49,8 +50,9 @@ const Navbar = () => {
       >
         <Grid item xs={1} sx={{display: "flex", alignitems: "center"}}>
           <Link component={ReactLink} to="/">
-            <Box sx={{width: {xs: 42, sm: 45, md:50}, my: {md:.25}, ml: .5, opacity: .6, transition: "800ms all ease", transform: "scale(.95)","&:hover": {opacity: 1, transform: "scale(1)"}}}>
+            <Box sx={{width: {xs: 42, sm: 45, md:50}, my: {md:.25}, ml: .5, opacity: .6, transition: "600ms all ease 150ms", transform: "scale(.95)","&:hover": {opacity: 1, transform: "scale(1)"}}}>
               <Image src={logo} fit='scale-down'/>
+              {/* <Logo/> */}
             </Box>
           </Link>
         </Grid>
