@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import DocumentHead from '../../components/DocumentHead'
-import { Grid, Box, Typography, Fade, Slide } from '@mui/material'
+import { Grid, Box, Typography, Fade, Slide, Button } from '@mui/material'
 import Introduction from './Introduction'
 import { Route, Routes } from 'react-router-dom'
 import Image from 'mui-image'
@@ -310,7 +310,7 @@ const MainPage = ({ projects }) => {
           setIsMounted(true)
       }, 500)
 
-    }, 6000)
+    }, 5000)
 
     if(isHovered) clearInterval(interval);
     return () => clearInterval(interval); 
@@ -333,7 +333,43 @@ const MainPage = ({ projects }) => {
           <Introduction/>
           <ProjectSelection projects={projects} setActiveProject={setActiveProject} setIsHovered={setIsHovered} activeProject={activeProject}/>
         </Grid>
-        <Grid item lg={6}></Grid>
+        <Grid lg={2.5}></Grid>
+        <Grid              
+          item 
+          lg={3.5} 
+          align="right" 
+          sx={{
+            // height: {xs: "95vh", sm: "95vh", md: "95vh", lg:"95vh"}, 
+            height: "100%",
+            display: {xs: "none", lg: "flex"}, 
+            flexDirection: "column",
+            alignItems: "flex-end", 
+            justifyContent: {xs: "flex-end", lg:"center"}, 
+            zIndex: -2,
+            pb: {xs:3.5, sm: 8, md: 8, lg: 12, xl: 12},
+          }}
+        >
+        <Fade in={isMounted} timeout={500} unmountOnExit>
+          <Box>
+            <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 270, lg: 270, xl: 280}, height: "auto", transition: "all 1s ease"}}>
+              <Image src={projects[activeProject].logo} duration={250}/>
+            </Box>
+            <Box sx={{mt: {xs:1.5, sm: 2.5, md:5}, borderRight: 2, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
+              <Typography 
+                variant="body2"
+                sx={{
+                  fontSize: {xs: 9.5, sm: 12, md: 13, lg:14, xl: 14.5},
+                  fontWeight: 300,
+                  opacity: {xs: .5, sm:.6},
+                  letterSpacing: .3,
+                  lineHeight: 1.4,
+                  textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+                }} 
+              >{projects[activeProject].briefDescription}</Typography>
+            </Box>
+          </Box>
+        </Fade>
+        </Grid>
       </Grid>
 
       {/* background  */}
@@ -383,7 +419,7 @@ const MainPage = ({ projects }) => {
               align="right" 
               sx={{
                 height: {xs: "95vh", sm: "95vh", md: "95vh", lg:"95vh"}, 
-                display: "flex", 
+                display: {xs:"flex", lg: "none"}, 
                 flexDirection: "column",
                 alignItems: "flex-end", 
                 justifyContent: {xs: "flex-end", lg:"center"}, 
