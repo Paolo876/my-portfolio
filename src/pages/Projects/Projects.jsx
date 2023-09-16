@@ -340,7 +340,6 @@ const MainPage = ({ projects }) => {
             lg={3.25} 
             align="right" 
             sx={{
-              // height: {xs: "95vh", sm: "95vh", md: "95vh", lg:"95vh"}, 
               height: "100%",
               display: {xs: "none", lg: "flex"}, 
               flexDirection: "column",
@@ -370,7 +369,7 @@ const MainPage = ({ projects }) => {
                   }} 
                 >{projects[activeProject].briefDescription}</Typography>
               </Box>
-              <Button>asdasdsadas</Button>
+              <Button>Read more about {projects[activeProject].title} here</Button>
             </Box>
           </Fade>
           </Grid>
