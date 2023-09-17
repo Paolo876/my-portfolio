@@ -70,40 +70,48 @@ const MOCK_PROJ_LIST = [
   {
     name: "luna", 
     title: "Luna",
-    briefDescription: "Luna is a beautiful browser homepage alternative that allows the user to customize the UI to their preference with many options and features.",
-    description: "Luna is a personalizable browser homepage alternative inspired by the google chrome extension 'Momentum'. It features a beautiful UI that can be customized by the user through a variety of options.",
+    briefDescription: "Luna is a beautiful browser homepage that allows the user to customize the UI to their preference with many options and features.",
+    description: "Luna is a personalizable browser homepage inspired by the google chrome extension 'Momentum'. It features a beautiful UI that can be customized by the user through a variety of options.",
     technologies: [ "JavaScript", "React", "Redux", "Firebase", "Material-UI", "Sass/Scss"],
     type: "personal",
     images: [
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_1.webp?alt=media&token=42025a57-7ae5-4ac1-8806-7f3885dd6d8e",
-      name: "luna_1.webp"
+      name: "luna_1.webp",
+      title: "Main Page",
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_2.webp?alt=media&token=5aa23eaf-7312-45a0-9f30-0930c7b690e5",
-      name: "luna_2.webp"
+      name: "luna_2.webp",
+      title: "Settings List",
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_3.webp?alt=media&token=e9645459-01d3-4855-ae45-75e6fa3f7a18",
-      name: "luna_3.webp"
+      name: "luna_3.webp",
+      title: "Editor Mode",
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_4.webp?alt=media&token=fb69e6dc-0049-4dd3-aa03-01990576fba5",
-      name: "luna_4.webp"
+      name: "luna_4.webp",
+      title: "Background Selection",
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_5.webp?alt=media&token=3d4cd222-cb9f-409e-8d69-e02eaa94f3cf",
-      name: "luna_5.webp"
+      name: "luna_5.webp",
+      title: "Background Adjustments",
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_6.webp?alt=media&token=b10b51e0-24fc-42d2-a361-7568fa3fc153",
-      name: "luna_6.webp"
+      name: "luna_6.webp",
+      title: "Component Configurations",
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_7.webp?alt=media&token=2f974a92-f1f6-4be1-b1af-88ef8c579338",
-      name: "luna_7.webp"
+      name: "luna_7.webp",
+      title: "Interface Configurations",
       }, 
-    ],    coverImage: {
+    ],    
+    coverImage: {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_banner.png?alt=media&token=aca8d0cd-9b7f-40bd-b425-a04e391bc26b",
       name: "luna_banner.png"
     },
