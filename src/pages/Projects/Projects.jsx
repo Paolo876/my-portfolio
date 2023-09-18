@@ -28,7 +28,8 @@ const MOCK_PROJ_LIST = [
       "Share posts for everyone or friends to see",
       "Like and comment on public/friends' posts",
       "Add/Remove friends",
-      "Realtime Database System(chat, friend status updates, notifications)", 
+      "Realtime Database System(chat, friend status updates, notifications)",
+      "Secured sessions with httpOnly cookie implementation",
       "Optimize images for faster loading (Imagekit.io)",
       "Encrypt sensitive data (bcryptJS)",
       "Deployed on Vercel(Client) and Railway(Server and MySQL Database)",
@@ -39,22 +40,27 @@ const MOCK_PROJ_LIST = [
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_1.webp?alt=media&token=5b04da84-3fb6-4a64-9696-6888062acd40",
       name: "moby_1.webp",
-      title: "Welcome/Login Page"
+      title: "Login/Sign Up Page",
+      description: "This serves as the initial or welcome page when no user is logged in."
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_2.webp?alt=media&token=fcf0ea56-8abd-4ea5-91bb-3ef31c74e4ca",
       name: "moby_2.webp",
-      title: "Home Page"
+      title: "Home Page",
+      description: "Shows public and friends' posts along with an action bar to change user's status and show connected friends."
+
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_3.webp?alt=media&token=2f0dbef8-bf61-4782-af68-e0b25d77192f",
       name: "moby_3.webp",
-      title: "Profile Page"
+      title: "Profile Page",
+      description: "Shows user's published posts, information, and bio."
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_4.webp?alt=media&token=4ed6a274-b170-47a3-9ccb-49e20ea79a6f",
       name: "moby_4.webp",
-      title: "Settings Page"
+      title: "Settings Page",
+      description: "Change and update your profile information."
       }, 
     ],
     coverImage: {
