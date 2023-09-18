@@ -38,30 +38,55 @@ const MOCK_PROJ_LIST = [
     githubUrl: "https://github.com/Paolo876/moby-social-media-client",
     images: [
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_1.webp?alt=media&token=5b04da84-3fb6-4a64-9696-6888062acd40",
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_1.webp?alt=media&token=b54e850b-8777-40fc-bebb-d5984a542758",
       name: "moby_1.webp",
       title: "Login/Sign Up Page",
       description: "This serves as the initial or welcome page when no user is logged in."
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_2.webp?alt=media&token=fcf0ea56-8abd-4ea5-91bb-3ef31c74e4ca",
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_2.webp?alt=media&token=645331f1-5c52-4c63-9aae-40af27505fb8",
       name: "moby_2.webp",
       title: "Home Page",
       description: "Shows public and friends' posts along with an action bar to change user's status and show connected friends."
 
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_3.webp?alt=media&token=2f0dbef8-bf61-4782-af68-e0b25d77192f",
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_3.webp?alt=media&token=9d5801d1-a38e-4713-83c7-5666dec1b5c3",
       name: "moby_3.webp",
       title: "Profile Page",
       description: "Shows user's published posts, information, and bio."
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_4.webp?alt=media&token=4ed6a274-b170-47a3-9ccb-49e20ea79a6f",
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_4.webp?alt=media&token=0f7a5ffd-61d9-4574-bfdd-2aa4713f5019",
       name: "moby_4.webp",
+      title: "Messages & ChatRoom Page",
+      description: "Create chat rooms and start chatting with users and friends."
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_6.webp?alt=media&token=e2bd1223-688c-4c27-ba44-f27492a0c33a",
+      name: "moby_6.webp",
+      title: "Create page",
+      description: "Create and Publish your own posts."
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_5.webp?alt=media&token=acb0481e-7d78-4d83-8e50-1b23275d86da",
+      name: "moby_5.webp",
+      title: "Private Post Notice",
+      description: "A Private Post can only be interacted by a user friends with the author."
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_7.webp?alt=media&token=7dc939ac-c548-4684-95d7-1bcfc0c0c7bf",
+      name: "moby_7.webp",
+      title: "Search Page",
+      description: "Search for users and posts."
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_8.webp?alt=media&token=709bce2e-528d-4f36-b19a-dc08ded3ab72",
+      name: "moby_8.webp",
       title: "Settings Page",
       description: "Change and update your profile information."
       }, 
+
     ],
     coverImage: {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_banner.png?alt=media&token=4f2813bc-7201-4b53-abeb-48a4de04e297",
