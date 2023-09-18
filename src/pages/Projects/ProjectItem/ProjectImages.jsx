@@ -12,7 +12,7 @@ const ProjectImages = ({ images, handleImageClick }) => {
     delay: 250,
     triggerOnce: true
   });
-
+  console.log(images)
   return (
     <Grid container columnSpacing={{sm:2, md: 3, lg: 4, xl: 4}} rowSpacing={{xs: 3, sm: 4, md: 5, lg: 10, xl: 8}} ref={ref}>
       {inView && images.map((item, index) => <Grid item xs={11} sm={6} key={item.name} mx="auto">
@@ -20,8 +20,8 @@ const ProjectImages = ({ images, handleImageClick }) => {
           <Box 
             sx={{
               boxShadow: 5,
-              transition: "all 200ms linear", 
-              background: "rgba(0,0,0,0.75)", 
+              transition: "all 250ms linear", 
+              // background: "rgba(0,0,0,0.75)", 
               filter: "brightness(.9) contrast(.85)", 
               overflow: "hidden", 
               "&:hover": {
@@ -29,38 +29,55 @@ const ProjectImages = ({ images, handleImageClick }) => {
                 filter: "none"
               },
               "&:hover .title-overlay": {
-                transform: "skewX(7deg) translateY(50px)", 
+                transform: "skewX(-5deg) translateX(-60%)", 
               }
             }}
           >
-            <ButtonBase onClick={() => handleImageClick(item.name)} sx={{position: "relative"}}>
+            <ButtonBase onClick={() => handleImageClick(item.name)} sx={{ position: "relative", border: 1, p: .5, borderColor: "rgba(255,255,255,.1)", overflow: "hidden" }}>
               <Image src={item.url} duration={800}/>
               <Box 
                 sx={{
                   position: "absolute", 
-                  bottom:0, 
-                  left:-2, 
-                  pl: 2, 
+                  top:0, 
+                  left: "-60%", 
+                  pl: "60%", 
                   pr: 3, 
                   py: .85, 
-                  transition: "all 100ms linear", 
-                  backgroundColor: "rgba(0,0,0,0.75)", 
-                  transform: "skewX(7deg)", 
+                  height: "100%",
+                  width: "100%",
+                  transition: "all 250ms linear", 
+                  backgroundColor: "rgba(0,0,0,.9)", 
+                  transform: "skewX(-5deg)", 
                   boxShadow: 10, 
-                  opacity: .9
+                  opacity: .95,
                 }}
                 className="title-overlay"
               >
-                <Box sx={{position : "absolute", height: "100%", width: 2, backgroundColor: "primary.dark", transform: "skewX(-7deg)", left: 1}}></Box>
-                <Box sx={{transform: "skewX(-7deg)"}}>
+                {/* <Box sx={{position : "absolute", height: "100%", width: 2, backgroundColor: "primary.dark", transform: "skewX(5deg)", left: 1}}></Box> */}
+                <Box sx={{transform: "skewX(5deg)"}} align="left">
                   <Typography 
-                    variant="body2" 
-                    fontWeight={400}
-                    letterSpacing={.5}
+                    variant="body1" 
+                    fontWeight={600}
+                    letterSpacing={-.1}
                     sx={{
                       textShadow: "1px 1px 3px rgba(100,100,100,.05)",
+                      fontSize: {xs: 16},
                     }}
                     >{item.title}</Typography>
+                  <Typography 
+                    variant="body2" 
+                    fontWeight={300}
+                    // letterSpacing={.25}
+                    sx={{
+                      mt: 1,
+                      textShadow: "1px 1px 3px rgba(100,100,100,.25)",
+                      fontSize: {xs: 12},
+                      borderLeft: 2,
+                      pl: .5,
+                      borderColor: "primary.dark",
+                      lineHeight: 1.3,
+                    }}
+                    >{item.description}</Typography>
                 </Box>
               </Box>
             </ButtonBase>

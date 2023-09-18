@@ -25,14 +25,13 @@ const MOCK_PROJ_LIST = [
     features: [
       "Create and personalize your own profile",
       "Edit, crop, resize, and upload images", 
-      "Share posts for everyone or friends to see",
-      "Like and comment on public/friends' posts",
+      "Create, comment, and like posts for everyone or friends to see",
       "Add/Remove friends",
       "Realtime Database System(chat, friend status updates, notifications)",
       "Secured sessions with httpOnly cookie implementation",
       "Optimize images for faster loading (Imagekit.io)",
       "Encrypt sensitive data (bcryptJS)",
-      "Deployed on Vercel(Client) and Railway(Server and MySQL Database)",
+      // "Deployed on Vercel(Client) and Railway(Server and MySQL Database)",
     ],
     url: "https://moby.paolobugarin.com/",
     githubUrl: "https://github.com/Paolo876/moby-social-media-client",
@@ -59,7 +58,7 @@ const MOCK_PROJ_LIST = [
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_4.webp?alt=media&token=0f7a5ffd-61d9-4574-bfdd-2aa4713f5019",
       name: "moby_4.webp",
-      title: "Messages & ChatRoom Page",
+      title: "Messages Page",
       description: "Create chat rooms and start chatting with users and friends."
       }, 
       {
