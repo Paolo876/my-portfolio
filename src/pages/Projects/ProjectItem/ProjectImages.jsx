@@ -33,7 +33,7 @@ const ProjectImages = ({ images, handleImageClick }) => {
               }
             }}
           >
-            <ButtonBase onClick={() => handleImageClick(item.name)} sx={{ position: "relative", border: 1, p: .5, borderColor: "rgba(255,255,255,.1)", overflow: "hidden" }}>
+            <ButtonBase onClick={() => handleImageClick(item.name)} sx={{ position: "relative", border: 1, p: .25, borderColor: "rgba(200,200,200,.1)", overflow: "hidden" }}>
               <Image src={item.url} duration={800}/>
               <Box 
                 sx={{
@@ -45,11 +45,10 @@ const ProjectImages = ({ images, handleImageClick }) => {
                   py: .85, 
                   height: "100%",
                   width: "100%",
-                  transition: "all 250ms linear", 
-                  backgroundColor: "rgba(0,0,0,.9)", 
+                  transition: "all 250ms linear 100ms", 
+                  backgroundColor: "rgba(10,10,10,.95)", 
                   transform: "skewX(-5deg)", 
-                  boxShadow: 10, 
-                  opacity: .95,
+                  boxShadow: 20, 
                 }}
                 className="title-overlay"
               >
@@ -60,8 +59,8 @@ const ProjectImages = ({ images, handleImageClick }) => {
                     fontWeight={600}
                     letterSpacing={-.1}
                     sx={{
-                      textShadow: "1px 1px 3px rgba(100,100,100,.05)",
-                      fontSize: {xs: 16},
+                      textShadow: "1px 1px 3px rgba(100,100,100,.5)",
+                      fontSize: {xs: 18},
                     }}
                     >{item.title}</Typography>
                   <Typography 
@@ -69,13 +68,13 @@ const ProjectImages = ({ images, handleImageClick }) => {
                     fontWeight={300}
                     // letterSpacing={.25}
                     sx={{
-                      mt: 1,
-                      textShadow: "1px 1px 3px rgba(100,100,100,.25)",
-                      fontSize: {xs: 12},
+                      mt: 1.5,
+                      textShadow: "1px 1px 3px rgba(100,100,100,.35)",
+                      fontSize: {xs: 12.5, lg: 12},
                       borderLeft: 2,
                       pl: .5,
                       borderColor: "primary.dark",
-                      lineHeight: 1.3,
+                      lineHeight: 1.25,
                     }}
                     >{item.description}</Typography>
                 </Box>
