@@ -14,7 +14,7 @@ const ProjectImages = ({ images, handleImageClick }) => {
   });
   console.log(images)
   return (
-    <Grid container columnSpacing={{sm:2, md: 3, lg: 4, xl: 4}} rowSpacing={{xs: 3, sm: 4, md: 5, lg: 10, xl: 8}} ref={ref}>
+    <Grid container columnSpacing={{sm:2, md: 3, lg: 4, xl: 4}} rowSpacing={{xs: 6, sm: 7, md: 8, lg: 10, xl: 12}} ref={ref}>
       {inView && images.map((item, index) => <Grid item xs={11} sm={6} key={item.name} mx="auto">
         <Fade appear={true} in={true} timeout={1100}  style={{ transitionDelay: `${(index * 250)}ms` }}>
           <Box 
@@ -30,6 +30,7 @@ const ProjectImages = ({ images, handleImageClick }) => {
               },
               "&:hover .title-overlay": {
                 transform: "skewX(-5deg) translateX(-60%)", 
+                opacity: 0
               }
             }}
           >
@@ -39,42 +40,42 @@ const ProjectImages = ({ images, handleImageClick }) => {
                 sx={{
                   position: "absolute", 
                   top:0, 
-                  left: "-60%", 
-                  pl: "60%", 
-                  pr: 3, 
-                  py: .85, 
-                  height: "100%",
-                  width: "100%",
-                  transition: "all 250ms linear 100ms", 
-                  backgroundColor: "rgba(10,10,10,.95)", 
+                  left: {xs: "0%", lg: "-60%", xl:"-63%"}, 
+                  pl: {xs: 1, lg: "60%", xl: "63%"}, 
+                  pr: 2, 
+                  py: {xs: .65, lg: 2, xl: 2.5}, 
+                  height: {xs: "fit-content", lg: "100%"},
+                  width: {xs: "fit-content", lg: "100%"},
+                  transition: "all 300ms linear 150ms", 
+                  backgroundColor: "rgba(8,8,8,.95)", 
                   transform: "skewX(-5deg)", 
                   boxShadow: 20, 
                 }}
                 className="title-overlay"
               >
-                {/* <Box sx={{position : "absolute", height: "100%", width: 2, backgroundColor: "primary.dark", transform: "skewX(5deg)", left: 1}}></Box> */}
                 <Box sx={{transform: "skewX(5deg)"}} align="left">
                   <Typography 
                     variant="body1" 
                     fontWeight={600}
-                    letterSpacing={-.1}
+                    letterSpacing={.1}
                     sx={{
                       textShadow: "1px 1px 3px rgba(100,100,100,.5)",
-                      fontSize: {xs: 18},
+                      fontSize: {xs: 14, sm: 15, md: 16, lg: 17, xl: 19},
                     }}
                     >{item.title}</Typography>
                   <Typography 
                     variant="body2" 
                     fontWeight={300}
-                    // letterSpacing={.25}
                     sx={{
-                      mt: 1.5,
+                      mt: 2,
                       textShadow: "1px 1px 3px rgba(100,100,100,.35)",
-                      fontSize: {xs: 12.5, lg: 12},
-                      borderLeft: 2,
+                      fontSize: {xs: 12.5, lg: 11.5, xl: 12},
+                      borderLeft: 1,
                       pl: .5,
                       borderColor: "primary.dark",
-                      lineHeight: 1.25,
+                      lineHeight: 1.3,
+                      opacity: .65,
+                      display: {xs: "none", lg: "inline-block"}
                     }}
                     >{item.description}</Typography>
                 </Box>
