@@ -48,21 +48,22 @@ const ProjectImages = ({ images, handleImageClick }) => {
                   width: {xs: "fit-content", lg: "100%"},
                   transition: "all 300ms linear 150ms", 
                   backgroundColor: "rgba(8,8,8,.95)", 
-                  transform: "skewX(-5deg)", 
+                  transform: {xs: "skewX(-7deg)", lg:"skewX(-5deg)"}, 
                   boxShadow: 20, 
                 }}
                 className="title-overlay"
               >
-                <Box sx={{transform: "skewX(5deg)"}} align="left">
+                <Box sx={{transform: {xs: "skewX(7deg)", lg:"skewX(5deg)"}}} align="left">
                   <Typography 
                     variant="body1" 
                     fontWeight={600}
                     letterSpacing={.1}
                     sx={{
                       textShadow: "1px 1px 3px rgba(100,100,100,.5)",
-                      fontSize: {xs: 14, sm: 15, md: 16, lg: 17, xl: 19},
+                      fontSize: {xs: 13, sm: 15, md: 16, lg: 17, xl: 19},
                     }}
                     >{item.title}</Typography>
+                  <Box sx={{height: "1px", width: "100%", backgroundColor: "primary.dark", transform: "translateX(-35%)", mt: {xs: .35, lg:.75}, opacity: .6}}></Box>
                   <Typography 
                     variant="body2" 
                     fontWeight={300}
@@ -70,9 +71,9 @@ const ProjectImages = ({ images, handleImageClick }) => {
                       mt: 2,
                       textShadow: "1px 1px 3px rgba(100,100,100,.35)",
                       fontSize: {xs: 12.5, lg: 11.5, xl: 12},
-                      borderLeft: 1,
-                      pl: .5,
-                      borderColor: "primary.dark",
+                      // borderLeft: 1,
+                      // pl: .5,
+                      // borderColor: "primary.dark",
                       lineHeight: 1.3,
                       opacity: .65,
                       display: {xs: "none", lg: "inline-block"}
