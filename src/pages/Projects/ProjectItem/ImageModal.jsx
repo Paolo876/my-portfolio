@@ -3,6 +3,7 @@ import { Box, ButtonBase, IconButton, Typography,  } from '@mui/material';
 import Image from 'mui-image';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { keyframes } from '@mui/system';
 
 
 const containerStyles = {
@@ -44,6 +45,17 @@ const imageListItemStyles = {
 }
 
 
+const slideDown = keyframes`
+  0% {
+    transform: translateY(-2em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
 const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
   const image = imagesList.find(item => item.name === imageName)
   
@@ -77,19 +89,15 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
       <Box sx={{zIndex: 2, height: "100vh", width: "100vw", position: "absolute"}} onClick={handleCloseClick}></Box>
 
       <Box sx={{zIndex: 3, boxShadow:10, maxHeight: "65vh", maxWidth: {xs: "93vw", md: "90vw"}, position: "relative", my: "auto", display: "flex", flexDirection: "column"}}>
-        <Image src={image.url} duration={300} fit="cover"/>
-        {image.title && <Box sx={{backgroundColor: "rgba(200,200,200,.75)", width: "100%"}}>
-          <Box>
+        <Image src={image.url} duration={300} fit="cover" sx={{zIndex: 2,}}/>
+        {image.title && <Box sx={{backgroundColor: "rgba(75,75,75,.75)", width: "100%", opacity: 0, animation: `${slideDown} 800ms ease forwards 250ms`, zIndes: 1}}>
+          <Box sx={{px: 2, py: .75, border: 1, m:.5, borderRadius: 1, borderColor: "rgba(200,200,200,.25)"}}>
             <Typography 
               variant="h4" 
               fontWeight={500}
-              fontSize={{xs: 16, sm: 18, md: 20, lg: 23, xl: 23}} 
-              letterSpacing={{xs: .5, xl:1}}
-              lineHeight={{xs:1}} 
+              fontSize={{xs: 16, sm: 18, md: 20, lg: 21, xl: 22}} 
+              letterSpacing={.15}
               textTransform="none"
-              // pl={{xs: 2.5, md:3}}
-              // pr={{xs: 3.75, sm: 4, md:5}}
-              // py={{xs: 1.15, sm: 1.25, md:1.5}}
               sx={{
                 textShadow: "1px 1px 7px rgba(10,10,10,.25)",
               }}
@@ -98,10 +106,11 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
             </Typography>
             <Typography
               variant="body2"
-              // pl={{xs: 2.5, md:3}}
-              // pr={{xs: 3.75, sm: 4, md:5}}
+              pt={1}
+              fontSize={{xs: 11, sm: 12, md: 13, lg: 14, xl: 15}} 
               sx={{
-                textShadow: "1px 1px 7px rgba(10,10,10,.75)",
+                textShadow: "1px 1px 7px rgba(10,10,10,.25)",
+                opacity: .65
               }}
             >
               {image.description}
