@@ -12,7 +12,7 @@ const ProjectImages = ({ images, handleImageClick }) => {
     delay: 250,
     triggerOnce: true
   });
-  console.log(images)
+
   return (
     <Grid container columnSpacing={{sm:2, md: 3, lg: 4, xl: 4}} rowSpacing={{xs: 6, sm: 7, md: 8, lg: 10, xl: 12}} ref={ref}>
       {inView && images.map((item, index) => <Grid item xs={11} sm={6} key={item.name} mx="auto">
