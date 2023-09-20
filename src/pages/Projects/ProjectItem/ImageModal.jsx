@@ -88,14 +88,14 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
     <Box sx={containerStyles}>
       <Box sx={{zIndex: 2, height: "100vh", width: "100vw", position: "absolute"}} onClick={handleCloseClick}></Box>
 
-      <Box sx={{zIndex: 3, boxShadow:10, maxHeight: "65vh", maxWidth: {xs: "93vw", md: "90vw"}, position: "relative", my: "auto", display: "flex", flexDirection: "column"}}>
+      <Box sx={{zIndex: 3, boxShadow:10, maxHeight: "65vh", maxWidth: {xs: "95vw", md: "90vw"}, position: "relative", my: "auto", display: "flex", flexDirection: "column"}}>
         <Image src={image.url} duration={300} fit="cover" sx={{zIndex: 2,}}/>
         {image.title && <Box sx={{backgroundColor: "rgba(75,75,75,.75)", width: "100%", opacity: 0, animation: `${slideDown} 800ms ease forwards 250ms`, zIndes: 1}}>
-          <Box sx={{px: 2, py: .75, border: 1, m:.5, borderRadius: 1, borderColor: "rgba(200,200,200,.25)"}}>
+          <Box sx={{px: {xs: 1, md:2}, py: .75, border: 1, m:{xs: .25, md:.5}, borderRadius: 1, borderColor: "rgba(200,200,200,.25)"}}>
             <Typography 
               variant="h4" 
               fontWeight={500}
-              fontSize={{xs: 16, sm: 18, md: 20, lg: 21, xl: 22}} 
+              fontSize={{xs: 13, sm: 18, md: 20, lg: 21, xl: 22}} 
               letterSpacing={.15}
               textTransform="none"
               sx={{
@@ -106,8 +106,8 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
             </Typography>
             <Typography
               variant="body2"
-              pt={1}
-              fontSize={{xs: 11, sm: 12, md: 13, lg: 14, xl: 15}} 
+              pt={.5}
+              fontSize={{xs: 9.5, sm: 11, md: 13, lg: 14, xl: 14}} 
               sx={{
                 textShadow: "1px 1px 7px rgba(10,10,10,.25)",
                 opacity: .65
