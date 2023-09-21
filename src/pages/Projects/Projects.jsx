@@ -109,36 +109,44 @@ const MOCK_PROJ_LIST = [
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_1.webp?alt=media&token=42025a57-7ae5-4ac1-8806-7f3885dd6d8e",
       name: "luna_1.webp",
       title: "Main Page",
+      description: "Default layout of the app. Components can be hidden or re-arranged freely."
+
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_2.webp?alt=media&token=5aa23eaf-7312-45a0-9f30-0930c7b690e5",
       name: "luna_2.webp",
-      title: "Settings List",
+      title: "General Settings",
+      description: "Change User Information and UI preferences."
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_3.webp?alt=media&token=e9645459-01d3-4855-ae45-75e6fa3f7a18",
       name: "luna_3.webp",
       title: "Editor Mode",
+      description: "Enter this mode to rearrange components."
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_4.webp?alt=media&token=fb69e6dc-0049-4dd3-aa03-01990576fba5",
       name: "luna_4.webp",
       title: "Background Selection",
+      description: "Select from preset backgrounds or fetch random backgrounds from unsplash.com"
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_5.webp?alt=media&token=3d4cd222-cb9f-409e-8d69-e02eaa94f3cf",
       name: "luna_5.webp",
       title: "Background Adjustments",
+      description: "Adjust the background's brightness, contrast, and saturation."
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_6.webp?alt=media&token=b10b51e0-24fc-42d2-a361-7568fa3fc153",
       name: "luna_6.webp",
       title: "Component Configurations",
+      description: "Enable/disable the component and modify each component's appearance."
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_7.webp?alt=media&token=2f974a92-f1f6-4be1-b1af-88ef8c579338",
       name: "luna_7.webp",
       title: "Interface Configurations",
+      description: "Modify the base UI's appearance."
       }, 
     ],    
     coverImage: {
@@ -146,7 +154,14 @@ const MOCK_PROJ_LIST = [
       name: "luna_banner.png"
     },
     features: [
-      ""
+      "Interactive and Customizable UI",
+      "Display's accurate weather information (if enabled) with Openweathermap api",
+      "Generates motivational quotes with Quotable API by Luke Peavey",
+      "Fetches beautiful backgrounds on random or default (unsplash api)",
+      "",
+      "Adjust and modify background filter settings",
+      "Customize each UI components",
+      "Configurations are saved on local storage"
     ],
     url: "http://luna.paolobugarin.com",
     githubUrl: "https://github.com/Paolo876/luna2.0",
