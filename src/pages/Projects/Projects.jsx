@@ -179,10 +179,82 @@ const MOCK_PROJ_LIST = [
     type: "personal",
     images: [
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_1.webp?alt=media&token=42025a57-7ae5-4ac1-8806-7f3885dd6d8e",
-      name: "luna_1.webp",
-      title: "Main Page",
-      description: "Default layout of the app. Components can be hidden or re-arranged freely."
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop%2Fmern_1.webp?alt=media&token=a10195d3-041f-4a72-9ab9-2ab82c81776b",
+      name: "mern_1.webp",
+      title: "Home Page",
+      description: "",
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop%2Fmern_2.webp?alt=media&token=a4a6e3f4-2811-438b-9313-cdf32ca277e6",
+      name: "mern_2.webp",
+      title: "Product Page",
+      description: "",
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop%2Fmern_3.webp?alt=media&token=94fea08a-2bd9-4f3d-ae10-4e966fe3b417",
+      name: "mern_3.webp",
+      title: "Product Options",
+      description: "",
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop%2Fmern_4.webp?alt=media&token=d532912f-4c1f-4059-a71d-03a8514035a5",
+      name: "mern_4.webp",
+      title: "Sign In Page",
+      description: "",
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop%2Fmern_5.webp?alt=media&token=71be01d7-94d3-4886-82d5-26044c8af343",
+      name: "mern_5.webp",
+      title: "Register Page",
+      description: "",
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop%2Fmern_6.webp?alt=media&token=895d0824-449a-4984-ad34-9d3a850f72e6",
+      name: "mern_6.webp",
+      title: "Cart Page",
+      description: "",
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop%2Fmern_8.webp?alt=media&token=752996b4-bac0-4f54-82ff-8a5c98a919c4",
+      name: "mern_8.webp",
+      title: "Shipping Page",
+      description: "",
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop%2Fmern_7.webp?alt=media&token=7c70e616-2851-4fc9-ac8d-f6ee25c53a7e",
+      name: "mern_7.webp",
+      title: "Shipping Validation Form",
+      description: "",
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop%2Fmern_9.webp?alt=media&token=906ae760-bb48-4ba0-ad4c-70a9fe32640b",
+      name: "mern_9.webp",
+      title: "Place Order Page",
+      description: "",
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop%2Fmern_10.webp?alt=media&token=48796ff3-6834-4c10-8aea-378b4be65e2e",
+      name: "mern_10.webp",
+      title: "Order Confirmation Page",
+      description: "",
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop%2Fmern_11.webp?alt=media&token=6916cd2d-2471-482b-a0dd-aacec39a04ba",
+      name: "mern_11.webp",
+      title: "Users List Page [ADMIN]",
+      description: "",
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop%2Fmern_12.webp?alt=media&token=12188adc-047a-4b52-ade6-f55dc68a2fda",
+      name: "mern_12.webp",
+      title: "Products List Page [ADMIN]",
+      description: "",
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop%2Fmern_13.webp?alt=media&token=960de9f4-3a08-4805-bdd2-5594e5d8a6d2",
+      name: "mern_13.webp",
+      title: "Orders List Page [ADMIN]",
+      description: "",
       }, 
     ],
     coverImage: {
