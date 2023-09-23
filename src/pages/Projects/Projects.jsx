@@ -158,7 +158,6 @@ const MOCK_PROJ_LIST = [
       "Display's accurate weather information (if enabled) with Openweathermap api",
       "Generates motivational quotes with Quotable API by Luke Peavey",
       "Fetches beautiful backgrounds on random or default (unsplash api)",
-      "",
       "Adjust and modify background filter settings",
       "Customize each UI components",
       "Configurations are saved on local storage"
@@ -178,7 +177,14 @@ const MOCK_PROJ_LIST = [
     description: "MernShop is an e-commerce web application demo inspired by TraversyMedia's ReactJS Udemy Course. It showcases the system and functionalities of an e-commerce application with extra security and validation features.",
     technologies: [ "JavaScript", "React", "Redux", "NodeJs", "ExpressJs", "MongoDB", "Bootstrap"],
     type: "personal",
-    images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
+    images: [
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_1.webp?alt=media&token=42025a57-7ae5-4ac1-8806-7f3885dd6d8e",
+      name: "luna_1.webp",
+      title: "Main Page",
+      description: "Default layout of the app. Components can be hidden or re-arranged freely."
+      }, 
+    ],
     coverImage: {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop_banner.png?alt=media&token=f000fecf-4cd1-48a1-959c-845809e8fcbb",
       name: "mernshop_banner.png"
