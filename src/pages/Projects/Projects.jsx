@@ -182,7 +182,7 @@ const MOCK_PROJ_LIST = [
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop%2Fmern_1.webp?alt=media&token=a10195d3-041f-4a72-9ab9-2ab82c81776b",
       name: "mern_1.webp",
       title: "Home Page",
-      description: "",
+      description: "The home page shows a carousel of featured products on the header and the list of latest products for sale.",
       }, 
       {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop%2Fmern_2.webp?alt=media&token=a4a6e3f4-2811-438b-9313-cdf32ca277e6",
