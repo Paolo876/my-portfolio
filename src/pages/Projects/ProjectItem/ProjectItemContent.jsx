@@ -46,7 +46,7 @@ const ProjectItemContent = ( { project, isShown }) => {
                   align="left" 
                   fontWeight={400}
                   fontSize={{xs: 42, sm: 44, md: 48, lg: 55, xl: 65}} 
-                  letterSpacing={{xs: .5, xl:1}}
+                  letterSpacing={.1}
                   lineHeight={{xs:1}} 
                   textTransform="none"
                   sx={{
@@ -59,13 +59,13 @@ const ProjectItemContent = ( { project, isShown }) => {
             </Fade>
           </Grid>
 
-          <Grid item xs={12} sm={7.15} md={7.5} lg={7} xl={5} sx={{mt: {xs: 3, sm: 5, md: 5, lg: 6, xl: 6}}}>
+          <Grid item xs={12} sm={7.15} md={7.5} lg={7} xl={6} sx={{mt: {xs: 3, sm: 5, md: 5, lg: 6, xl: 6}}}>
               <Box sx={{position: "relative"}}>
                 <Box 
                   sx={{
                     height: "100%", 
-                    width: 2, 
-                    backgroundColor: {xs: "primary.dark", sm:"primary.dark"}, 
+                    // width: 2, 
+                    // backgroundColor: {xs: "primary.dark", sm:"primary.dark"}, 
                     position: "absolute", 
                     left: 0, top: 0,
                     opacity: 0,
@@ -77,13 +77,13 @@ const ProjectItemContent = ( { project, isShown }) => {
                     <Typography 
                       variant="body1" 
                       sx={{
-                        fontSize: {xs: 9.5, sm: 11, md: 12, lg:14, xl: 14.5},
-                        fontWeight: 300,
+                        fontSize: {xs: 10, sm: 11, md: 12, lg:14, xl: 14.5},
+                        fontWeight: 200,
                         opacity: .5,
-                        letterSpacing: .25,
-                        lineHeight: 1.4,
+                        letterSpacing: {xs: .75, sm: 1, md: 1.2, lg: 1.25, xl:1.3},
+                        lineHeight: 1.7,
                         textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-                        pl: {xs: .85, sm: 1, md:1.25, lg: 1.5},
+                        // pl: {xs: .85, sm: 1, md:1.25, lg: 1.5},
                       }}        
                     >{project.description}
                     </Typography>

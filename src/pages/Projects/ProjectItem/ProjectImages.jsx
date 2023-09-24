@@ -66,16 +66,14 @@ const ProjectImages = ({ images, handleImageClick }) => {
                   <Box sx={{height: "1px", width: "100%", backgroundColor: "primary.dark", transform: "translateX(-35%)", mt: {xs: .35, lg:.75}, opacity: .6}}></Box>
                   <Typography 
                     variant="body2" 
-                    fontWeight={300}
+                    fontWeight={200}
                     sx={{
                       mt: 2,
-                      textShadow: "1px 1px 3px rgba(100,100,100,.35)",
-                      fontSize: {xs: 12.5, lg: 11.5, xl: 12},
-                      // borderLeft: 1,
-                      // pl: .5,
-                      // borderColor: "primary.dark",
-                      lineHeight: 1.3,
-                      opacity: .65,
+                      textShadow: "1px 1px 3px rgba(150,150,150,.35)",
+                      fontSize: {xs: 12.5, lg: 11.5, xl: 12.5},
+                      letterSpacing: .75,
+                      lineHeight: 1.6,
+                      opacity: .6,
                       display: {xs: "none", lg: "inline-block"}
                     }}
                     >{item.description}</Typography>
