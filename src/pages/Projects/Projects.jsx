@@ -480,9 +480,6 @@ const MainPage = ({ projects }) => {
               alignItems: "flex-end", 
               justifyContent: {xs: "flex-end", lg:"center"}, 
               pb: {xs:3.5, sm: 8, md: 8, lg: 12, xl: 12},
-              "&:hover": {
-                // display: "none"
-              }
             }}
           >
           <Fade in={isMounted} timeout={500} unmountOnExit>
@@ -490,16 +487,16 @@ const MainPage = ({ projects }) => {
               <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 270, lg: 270, xl: 280}, height: "auto", transition: "all 1s ease"}}>
                 <Image src={projects[activeProject].logo} duration={250}/>
               </Box>
-              <Box sx={{mt: {xs:1.5, sm: 2.5, md:5}, borderRight: 2, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
+              <Box sx={{mt: {xs:1.5, sm: 2.5, md:5}, borderRight: 1, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
                 <Typography 
                   variant="body2"
                   sx={{
-                    fontSize: {xs: 9.5, sm: 12, md: 13, lg:14, xl: 14.5},
-                    fontWeight: 300,
-                    opacity: {xs: .5, sm:.6},
-                    letterSpacing: .3,
-                    lineHeight: 1.4,
-                    textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+                    fontSize: {md: 13, lg:14, xl: 14.5},
+                    fontWeight: 100,
+                    opacity: .5,
+                    letterSpacing: .5,
+                    lineHeight: 1.45,
+                    textShadow: "1px 1px 5px rgba(150,150,150,.75)",
                   }} 
                 >{projects[activeProject].briefDescription}</Typography>
               </Box>
@@ -574,12 +571,12 @@ const MainPage = ({ projects }) => {
                     <Typography 
                       variant="body2"
                       sx={{
-                        fontSize: {xs: 9.5, sm: 12, md: 13, lg:14, xl: 14.5},
-                        fontWeight: 300,
-                        opacity: {xs: .5, sm:.6},
-                        letterSpacing: .3,
-                        lineHeight: 1.4,
-                        textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+                        fontSize: {xs: 10, sm: 12, md: 13, lg:14, xl: 14.5},
+                        fontWeight: 200,
+                        opacity: .5,
+                        letterSpacing: .5,
+                        lineHeight: 1.45,
+                        textShadow: "1px 1px 5px rgba(150,150,150,.75)",
                       }} 
                     >{projects[activeProject].briefDescription}</Typography>
                   </Box>

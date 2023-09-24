@@ -12,7 +12,7 @@ const Introduction = () => {
               align="left" 
               fontWeight={400}
               fontSize={{xs: 42, sm: 60, md: 68, lg: 70, xl: 80}} 
-              letterSpacing={.5}
+              letterSpacing={-.1}
               lineHeight={{xs:1.1}} 
               textTransform="none"
               sx={{
@@ -31,15 +31,15 @@ const Introduction = () => {
               variant="body1" 
               sx={{
                 fontSize: {xs: 10, sm: 12.5, md: 13.5, lg:14, xl: 14.5},
-                fontWeight: 300,
-                opacity: .45,
-                letterSpacing: .25,
-                lineHeight: 1.4,
+                fontWeight: 200,
+                opacity: .5,
+                letterSpacing: 1.22,
+                lineHeight: 1.5,
                 textShadow: "1px 1px 5px rgba(10,10,10,.75)",
                 ml: .1,
               }}        
             >
-              Listed are <Box fontWeight={400} display='inline' component="span">my published projects</Box> that I still continue to develop and improve over time. 
+              Listed are <Box fontWeight={300} display='inline' component="span">my published projects</Box> that I still continue to develop and improve over time. 
               Please feel free to check out the web demo or git repository of my projects, and message me for any remarks or suggestions.
             </Typography>
           </Box>
