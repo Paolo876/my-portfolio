@@ -4,6 +4,7 @@ import Image from 'mui-image';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { keyframes } from '@mui/system';
+import { useSwipeable } from 'react-swipeable';
 
 
 const containerStyles = {
@@ -83,13 +84,25 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
     }
   }
 
-  console.log(image)
+
+  const handlers = useSwipeable({
+    onSwipedLeft: handleNextItemClick,
+    onSwipedRight: handlePrevItemClick,
+    swipeDuration: 500,
+    preventScrollOnSwipe: true,
+    delta: 10, 
+  });
+
+
   return (
     <Box sx={containerStyles}>
       <Box sx={{zIndex: 2, height: "100vh", width: "100vw", position: "absolute"}} onClick={handleCloseClick}></Box>
 
-      <Box sx={{zIndex: 3, boxShadow:10, maxHeight: "65vh", maxWidth: {xs: "95vw", md: "90vw"}, position: "relative", my: "auto", display: "flex", flexDirection: "column"}}>
-        <Image src={image.url} duration={300} fit="cover" sx={{zIndex: 2,}}/>
+      <Box sx={{zIndex: 3, boxShadow:10, maxHeight: "65vh", maxWidth: {xs: "95vw", md: "90vw"}, position: "relative", my: "auto", display: "flex", flexDirection: "column"}} {...handlers}>
+        <Box sx={{position: "absolute", zIndex: 5, left: 5, top: "50%", transform: "translateY(-50%)", backgroundColor: "rgba(50,50,50,.15)"}}>
+          <IconButton color="primary" sx={{}}><ArrowBackIosNewIcon sx={{fontSize: {xl: 40}}}/></IconButton>
+        </Box>
+        <Image src={image.url} duration={300} fit="cover" sx={{zIndex: 2}}/>
         {image.title && <Box sx={{backgroundColor: "rgba(75,75,75,.75)", width: "100%", opacity: 0, animation: `${slideDown} 800ms ease forwards 250ms`, zIndes: 1}}>
           <Box sx={{px: {xs: 1, md:2}, py: .75, border: 1, m:{xs: .25, md:.5}, borderRadius: 1, borderColor: "rgba(200,200,200,.25)"}}>
             <Typography 
