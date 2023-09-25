@@ -88,10 +88,10 @@ const MOCK_PROJ_LIST = [
 
     ],
     coverImage: {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_banner.png?alt=media&token=4f2813bc-7201-4b53-abeb-48a4de04e297",
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_banner.png?alt=media&token=41f3debd-ed18-43a0-b583-dc56bbb63840",
       name: "moby_banner.png"
     },
-    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_logo_white.png?alt=media&token=5d2083ea-340c-4479-be33-0938373ea91a",
+    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_logo_white.png?alt=media&token=50332a5e-72ab-488b-b05d-bedfc9bed076",
     palette: {
       primary: "#237b72",
       secondary: "#2e779d",
@@ -106,51 +106,51 @@ const MOCK_PROJ_LIST = [
     type: "personal",
     images: [
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_1.webp?alt=media&token=42025a57-7ae5-4ac1-8806-7f3885dd6d8e",
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna%2Fluna_1.webp?alt=media&token=a360e44f-54e0-4f8b-b6c4-6a447385be57",
       name: "luna_1.webp",
       title: "Main Page",
       description: "Default layout of the app. Components can be hidden or re-arranged freely."
 
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_2.webp?alt=media&token=5aa23eaf-7312-45a0-9f30-0930c7b690e5",
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna%2Fluna_2.webp?alt=media&token=29d23271-0f27-4f1f-a9db-1503652ab62e",
       name: "luna_2.webp",
       title: "General Settings",
       description: "Change User Information and UI preferences."
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_3.webp?alt=media&token=e9645459-01d3-4855-ae45-75e6fa3f7a18",
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna%2Fluna_3.webp?alt=media&token=1aae850a-4144-420a-b159-a8c49b28bddb",
       name: "luna_3.webp",
       title: "Editor Mode",
       description: "Enter this mode to rearrange components."
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_4.webp?alt=media&token=fb69e6dc-0049-4dd3-aa03-01990576fba5",
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna%2Fluna_4.webp?alt=media&token=5fbade94-08e2-4ade-82f0-f2105bf3c9ae",
       name: "luna_4.webp",
       title: "Background Selection",
       description: "Select from preset backgrounds or fetch random backgrounds from unsplash.com"
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_5.webp?alt=media&token=3d4cd222-cb9f-409e-8d69-e02eaa94f3cf",
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna%2Fluna_5.webp?alt=media&token=c8843892-142c-4e18-8e8d-36d99c2aaee0",
       name: "luna_5.webp",
       title: "Background Adjustments",
       description: "Adjust the background's brightness, contrast, and saturation."
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_6.webp?alt=media&token=b10b51e0-24fc-42d2-a361-7568fa3fc153",
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna%2Fluna_6.webp?alt=media&token=c4f40f6d-36b1-4493-b024-93fd12ce378e",
       name: "luna_6.webp",
       title: "Component Configurations",
       description: "Enable/disable the component and modify each component's appearance."
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_7.webp?alt=media&token=2f974a92-f1f6-4be1-b1af-88ef8c579338",
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna%2Fluna_7.webp?alt=media&token=b68c35db-8609-49aa-bce7-b4f8683b769e",
       name: "luna_7.webp",
       title: "Interface Configurations",
       description: "Modify the base UI's appearance."
       }, 
     ],    
     coverImage: {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_banner.png?alt=media&token=aca8d0cd-9b7f-40bd-b425-a04e391bc26b",
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna%2Fluna_banner.png?alt=media&token=d4769399-437b-4730-bd3a-ff12724afdf7",
       name: "luna_banner.png"
     },
     features: [
@@ -164,7 +164,7 @@ const MOCK_PROJ_LIST = [
     ],
     url: "http://luna.paolobugarin.com",
     githubUrl: "https://github.com/Paolo876/luna2.0",
-    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna_banner.png?alt=media&token=aca8d0cd-9b7f-40bd-b425-a04e391bc26b",
+    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fluna%2Flogo.png?alt=media&token=4668b273-2ab8-41e3-a809-ff04871f3ce4",
     palette: {
       primary: "#237b72",
       secondary: "#2e779d",
@@ -258,9 +258,10 @@ const MOCK_PROJ_LIST = [
       }, 
     ],
     coverImage: {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop_banner.png?alt=media&token=f000fecf-4cd1-48a1-959c-845809e8fcbb",
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop%2Fmernshop_banner.png?alt=media&token=9addd379-0c63-4748-8c0e-c6c69ffba955",
       name: "mernshop_banner.png"
     },
+    logo:"https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmernshop%2Fmernshop_logo.png?alt=media&token=1e35d42c-0221-4be7-aecf-47360d244094",
     features: [
       "Created using the MERN stack with redux state management.",
       "Implements account authentication/validation using Google API (Oauth2.0)",
@@ -271,7 +272,6 @@ const MOCK_PROJ_LIST = [
     ],
     url: "https://mernshop.paolobugarin.com/",
     githubUrl: "https://github.com/Paolo876/mern-ecommerce-traversy",
-    logo: "",
     palette: {
       primary: "#237b72",
       secondary: "#2e779d",
