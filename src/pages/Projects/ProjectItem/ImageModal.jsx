@@ -98,9 +98,53 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
     <Box sx={containerStyles}>
       <Box sx={{zIndex: 2, height: "100vh", width: "100vw", position: "absolute"}} onClick={handleCloseClick}></Box>
 
-      <Box sx={{zIndex: 3, boxShadow:10, maxHeight: "65vh", maxWidth: {xs: "95vw", md: "90vw"}, position: "relative", my: "auto", display: "flex", flexDirection: "column"}} {...handlers}>
-        <Box sx={{position: "absolute", zIndex: 5, left: 5, top: "50%", transform: "translateY(-50%)", backgroundColor: "rgba(50,50,50,.15)"}}>
-          <IconButton color="primary" sx={{}}><ArrowBackIosNewIcon sx={{fontSize: {xl: 40}}}/></IconButton>
+      <Box 
+        sx={{
+          zIndex: 3, 
+          boxShadow:10, 
+          maxHeight: "65vh", 
+          maxWidth: {xs: "95vw", md: "90vw"}, 
+          position: "relative", 
+          my: "auto", 
+          display: "flex", 
+          flexDirection: "column",
+          "&:hover .actions": {
+            opacity: 1, 
+          }
+        }} 
+        {...handlers}
+      >
+        <Box 
+          sx={{
+            position: "absolute",
+            zIndex: 5, 
+            left: 5, 
+            top: "50%", 
+            transform: "translateY(-50%)", 
+            backgroundColor: "rgba(5,5,5,.1)", 
+            transition: "all 350ms ease", 
+            opacity: 0,
+            display: {xs: "none", md: "initial"}
+          }} 
+          className="actions"
+        >
+          <IconButton color="primary" onClick={handlePrevItemClick}><ArrowBackIosNewIcon sx={{fontSize: {md: 38, lg: 40, xl: 45}}}/></IconButton>
+        </Box>
+        <Box 
+          sx={{
+            position: "absolute", 
+            zIndex: 5, 
+            right: 5, 
+            top: "50%", 
+            transform: "translateY(-50%)", 
+            backgroundColor: "rgba(5,5,5,.1)", 
+            transition: "all 350ms ease", 
+            opacity: 0,
+            display: {xs: "none", md: "initial"}
+          }} 
+          className="actions"
+        >
+          <IconButton color="primary" onClick={handleNextItemClick}><ArrowForwardIosIcon sx={{fontSize: {md: 38, lg: 40, xl: 45}}}/></IconButton>
         </Box>
         <Image src={image.url} duration={300} fit="cover" sx={{zIndex: 2}}/>
         {image.title && <Box sx={{backgroundColor: "rgba(75,75,75,.75)", width: "100%", opacity: 0, animation: `${slideDown} 800ms ease forwards 250ms`, zIndes: 1}}>
