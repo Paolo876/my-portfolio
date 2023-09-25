@@ -93,10 +93,18 @@ const ImageModal = ({ imageName, imagesList, handleClose, setShowModal }) => {
     delta: 10, 
   });
 
+  const handlersBackdrop = useSwipeable({
+    onSwipedLeft: handleNextItemClick,
+    onSwipedRight: handlePrevItemClick,
+    swipeDuration: 500,
+    preventScrollOnSwipe: true,
+    delta: 10, 
+  });
+
 
   return (
     <Box sx={containerStyles}>
-      <Box sx={{zIndex: 2, height: "100vh", width: "100vw", position: "absolute"}} onClick={handleCloseClick}></Box>
+      <Box sx={{zIndex: 2, height: "100vh", width: "100vw", position: "absolute"}} onClick={handleCloseClick} {...handlersBackdrop}></Box>
 
       <Box 
         sx={{
