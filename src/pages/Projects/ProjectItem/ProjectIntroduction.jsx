@@ -46,13 +46,11 @@ const ProjectIntroduction = ({ title, description, logo }) => {
         </Fade>
       </Grid>
 
-      <Grid item xs={12} sm={7.15} md={7.5} lg={7} xl={6} sx={{mt: {xs: 3, sm: 5, md: 5, lg: 6, xl: 6}}}>
+      <Grid item xs={12} sm={7.15} md={7.5} lg={7} xl={6} sx={{mt: {xs: 5, sm: 7, md: 8, lg: 9, xl: 10}}}>
           <Box sx={{position: "relative"}}>
             <Box 
               sx={{
                 height: "100%", 
-                // width: 2, 
-                // backgroundColor: {xs: "primary.dark", sm:"primary.dark"}, 
                 position: "absolute", 
                 left: 0, top: 0,
                 opacity: 0,
