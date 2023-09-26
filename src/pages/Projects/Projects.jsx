@@ -18,7 +18,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "moby", 
     title: "Moby",
-    briefDescription: "Moby is a social media web app that incorporates the essential features of a modern social media platform.",
+    briefDescription: "A social media web app that incorporates the essential features of a modern social media platform.",
     description: "Moby is a social media web app that incorporates the essential features of a modern social media application. Create an account, set-up your profile, edit and upload your photo, publish posts, add friends, chat and connect with people, and more through moby.",
     technologies: [ "JavaScript", "React", "Redux", "Socket.io", "NodeJs", "ExpressJs", "Sequelize", "MySQL", "Material-UI", "Sass/Scss"],
     type: "personal",
@@ -100,7 +100,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "luna", 
     title: "Luna",
-    briefDescription: "Luna is a beautiful browser homepage that allows the user to customize the UI to their preference with many options and features.",
+    briefDescription: "A beautiful browser homepage alternative that allows the user to customize the UI to their preference with many options and features.",
     description: "Luna is a personalizable browser homepage inspired by the google chrome extension 'Momentum'. It features a beautiful UI that can be customized by the user through a variety of options.",
     technologies: [ "JavaScript", "React", "Redux", "Firebase", "Material-UI", "Sass/Scss"],
     type: "personal",
@@ -173,8 +173,8 @@ const MOCK_PROJ_LIST = [
   {
     name: "mernshop", 
     title: "MernShop",
-    briefDescription: "MernShop is an e-commerce web app demo inspired from TraversyMedia's ReactJS Udemy Course.",
-    description: "MernShop is an e-commerce web application demo inspired by TraversyMedia's ReactJS Udemy Course. It showcases the system and functionalities of an e-commerce application with extra security and validation features.",
+    briefDescription: "A fully working e-commerce web application mockup inspired by TraversyMedia.",
+    description: "MernShop is an e-commerce web application mockup inspired by TraversyMedia's ReactJS Udemy Course. It showcases the system and functionalities of an e-commerce application with extra security and validation features.",
     technologies: [ "JavaScript", "React", "Redux", "NodeJs", "ExpressJs", "MongoDB", "Bootstrap"],
     type: "personal",
     images: [
@@ -280,7 +280,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "downtownsuitsdirect", 
     title: "Downtown Suits Direct",
-    briefDescription: "Downtown Suits Direct is a men's suit and tailor shop located in Pico Rivera, California.",
+    briefDescription: "A men's suit and tailor shop located in Pico Rivera, California.",
     description: "Downtown Suits Direct is a men's suit and tailor shop located in Pico Rivera, California. It is a commissioned project that I designed and developed using React and Firebase.",
     technologies: [ "JavaScript", "React","Firebase", "Material-UI", "Sass/Scss"],
     type: "commissioned",
@@ -369,7 +369,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "cimt", 
     title: "C.I.M.T.",
-    briefDescription: "CERT Incident Management Tool (CIMT) is a software solution to manage available resources to various emergency incidents that is occurring or may occur.",
+    briefDescription: "A software solution to manage available resources to various emergency incidents that is occurring or may occur in PCC.",
     description: "CERT Incident Management Tool is the finals project of my Server-side Development class in Pasadena City College. This app is a software solution to manage available resources and their assignments to various emergency incidents that is occurring or may occur. It is developed using React, Node, Express, Sequelize, and MySql stack.",
     technologies: [ "JavaScript", "React", "Redux", "NodeJs", "ExpressJs", "MySQL", "Sequelize"],
     type: "school",
