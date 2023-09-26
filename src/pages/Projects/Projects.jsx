@@ -485,8 +485,8 @@ const MainPage = ({ projects }) => {
           >
           <Fade in={isMounted} timeout={500} unmountOnExit>
             <Box>
-              <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 270, lg: 270, xl: 280}, height: "auto", transition: "all 1s ease"}}>
-                <Image src={projects[activeProject].logo} duration={250}/>
+              <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 250, lg: 250, xl: 250}, height: {xs: 150, sm: 225, md: 250, lg: 250, xl: 250}, transition: "all 1s ease"}}>
+                <Image src={projects[activeProject].logo} duration={250} fit="scale-down"/>
               </Box>
               <Box sx={{mt: {xs:1.5, sm: 2.5, md:5}, borderRight: 1, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
                 <Typography 
@@ -565,7 +565,7 @@ const MainPage = ({ projects }) => {
             >
               <Fade in={isMounted} timeout={500} unmountOnExit>
                 <Box>
-                  <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 270, lg: 270, xl: 280}, height: "auto", transition: "all 1s ease"}}>
+                  <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 270, lg: 270, xl: 270}, height: "auto", transition: "all 1s ease"}}>
                     <Image src={projects[activeProject].logo} duration={250}/>
                   </Box>
                   <Box sx={{mt: {xs:1.5, sm: 2.5, md:5}, borderRight: 2, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
