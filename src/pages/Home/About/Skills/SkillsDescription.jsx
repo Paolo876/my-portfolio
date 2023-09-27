@@ -22,13 +22,12 @@ const SkillsDescription = ({ isVisible }) => {
   return (
     <Stack pl={{xs: 3, sm: 3, md: 2, lg: 3.5, xl: 5}}>
       <Fade appear={isVisible} in={isVisible} timeout={1100}  style={{ transitionDelay: "1300ms" }}>
-        <Box mb={{md: 2, lg: 3, xl: 4}}>
+        <Box mb={{md: 5, lg: 6, xl: 8}}>
           <Typography 
             variant="h2" 
-            fontWeight={400}
+            fontWeight={500}
             fontSize={{md: 30, lg: 35, xl: 40}} 
             letterSpacing={.5}
-            lineHeight={{lg:1.6, xl:1.1}} 
             textTransform="none"
             align="right"
             sx={{
@@ -46,7 +45,7 @@ const SkillsDescription = ({ isVisible }) => {
             sx={{
               textAlign: { xs: "justify", md:"right" }, 
               textJustify: "inter-word", 
-              fontSize: {xs: 13, sm: 14, md: 14, lg:16, xl: 16.5},
+              fontSize: {xs: 12, sm: 13, md: 14, lg:16, xl: 16},
               opacity: .5,
               letterSpacing: 1.25,
               lineHeight: 1.6,

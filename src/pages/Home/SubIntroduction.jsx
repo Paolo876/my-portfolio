@@ -50,11 +50,11 @@ const SubIntroduction = () => {
               variant="h6" 
               sx={{
                 fontWeight: 200, 
-                fontSize: {xs: 12.5, sm: 19, md: 22, lg:23, xl: 25}, 
+                fontSize: {xs: 14, sm: 19, md: 22, lg:23, xl: 25}, 
                 lineHeight: 1.4, 
                 opacity: .85,
                 textTransform: "none",
-                letterSpacing: 1,
+                letterSpacing: {xs: .15, sm: .75, md: 1},
                 textShadow: "1px 1px 3px rgba(100,100,100,.25)",
               }}
             >

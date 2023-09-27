@@ -47,16 +47,16 @@ const AboutContent = ({ isVisible }) => {
               <Box>
                 <Typography
                   variant="h2" 
-                  fontWeight={600}
-                  fontSize={{xs: 18, sm: 23.5, md: 26, lg: 32, xl: 36}} 
+                  fontWeight={700}
+                  fontSize={{xs: 18, sm: 23.5, md: 26, lg: 32, xl: 35}} 
                   letterSpacing={{xs: -.05, sm: -.1,}}
-                  lineHeight={1.4} 
+                  lineHeight={1.45} 
                   textTransform="none"
                   sx={{
                     textShadow: "1px 1px 7px rgba(10,10,10,.75)",
                   }}
                 >
-                  <Box component="span" fontSize={{xs: 25.5, sm: 30.5, md: 33, lg: 39, xl: 45}}>I am Paolo Bugarin</Box>, 
+                  <Box component="span" fontSize={{xs: 25.5, sm: 30.5, md: 33, lg: 39, xl: 42}} sx={{letterSpacing: .75}}>I am Paolo Bugarin</Box>, 
                   <br/>
                   <Box component="span" fontWeight={500} sx={{opacity: .75}}>
                     a Web Developer based in <Box component="br" sx={{display: {xs:"none", sm: "initial", md: "none"}}}></Box>Los Angeles, California.
@@ -65,7 +65,7 @@ const AboutContent = ({ isVisible }) => {
               </Box>
             </Fade>
             <Fade appear={isVisible} in={isVisible} timeout={1100}  style={{ transitionDelay: "550ms" }}>
-              <Box pb={{md: 1.5, lg:3}} pt={{sm:2, md: 0}} sx={{maxWidth: "100%", display: {xs: "none", sm: "initial"}}}>
+              <Box pb={{md: 1.5, lg:3}} pt={{sm:2, lg: 4}} sx={{maxWidth: "100%", display: {xs: "none", sm: "initial"}}}>
                 <Typography
                   variant="body1" 
                   sx={{
@@ -119,7 +119,7 @@ const AboutContent = ({ isVisible }) => {
                 <Typography
                   variant="body1" 
                   sx={{
-                    fontSize: {xs: 10.5, sm: 13, md: 14, lg:16, xl: 17},
+                    fontSize: {xs: 10.5, sm: 13, md: 14, lg:16, xl: 16},
                     fontWeight: 300,
                     opacity: .55,
                     letterSpacing: .4,
