@@ -21,7 +21,7 @@ const Skills = ({ isVisible }) => {
 
   return (
     <Grid container sx={{justifyContent: {xs:"center", md: "space-between"}, alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
-      <Grid item xs={8} mt={{xs: 5, sm:6}} mb={{xs: 3, sm:4}} sx={{display: {xs: "initial", md: "none"}}}><Divider/></Grid>
+      <Grid item xs={8} mt={{xs: 10, sm:12}} mb={{xs: 3, sm:4}} sx={{display: {xs: "initial", md: "none"}}}><Divider/></Grid>
       <Grid item xs={12} sx={{display: {xs: "initial", md: "none"}}}>
         <Fade appear={isVisible} in={isVisible} timeout={1100}  style={{ transitionDelay: "1300ms" }}>
           <Box mb={1.5}>
@@ -46,9 +46,10 @@ const Skills = ({ isVisible }) => {
               variant="body1" 
               sx={{
                 fontSize: {xs: 10.5, sm: 13},
-                fontWeight: 300,
-                opacity: .55,
-                letterSpacing: .4,
+                fontWeight: 100,
+                opacity: .5,
+                letterSpacing: 1.25,
+                lineHeight: 1.6,
                 textShadow: "1px 1px 5px rgba(10,10,10,.75)",
               }}
             >

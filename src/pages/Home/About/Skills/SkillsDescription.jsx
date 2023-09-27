@@ -47,9 +47,10 @@ const SkillsDescription = ({ isVisible }) => {
               textAlign: { xs: "justify", md:"right" }, 
               textJustify: "inter-word", 
               fontSize: {xs: 13, sm: 14, md: 14, lg:16, xl: 16.5},
-              fontWeight: 300,
-              opacity: .55,
-              letterSpacing: .4,
+              opacity: .5,
+              letterSpacing: 1.25,
+              lineHeight: 1.6,
+              fontWeight: 100,
               textShadow: "1px 1px 5px rgba(10,10,10,.75)",
             }}
           >
