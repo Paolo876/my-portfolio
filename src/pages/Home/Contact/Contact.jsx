@@ -39,7 +39,7 @@ const Contact = () => {
     sx={{
       position: "relative", 
       px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
-      pt: {xs:6, sm: 6, md: 7, lg: 7, xl: 8}, 
+      pt: {xs:12, sm: 13, md: 14, lg: 15, xl: 15}, 
       pb: {xs:1.5, sm: 2, md: 2.5, lg: 3, xl: 4}, 
       display: "flex",
       flexDirection: "column",

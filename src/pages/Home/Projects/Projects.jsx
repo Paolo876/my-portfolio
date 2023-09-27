@@ -50,8 +50,8 @@ const Projects = () => {
                 variant="h2" 
                 align="left" 
                 fontWeight={400}
-                fontSize={{xs: 35, sm: 45, md: 60, lg: 80, xl: 88}} 
-                letterSpacing={{xs: .5, xl:1}}
+                fontSize={{xs: 35, sm: 45, md: 60, lg: 80, xl: 80}} 
+                letterSpacing={-.1}
                 lineHeight={{xs:1}} 
                 textTransform="none"
                 sx={{
@@ -63,24 +63,25 @@ const Projects = () => {
             </Box>
           </Fade>
           <Fade appear={inView} in={inView} timeout={1100}  style={{ transitionDelay: "600ms" }}>
-            <Box mt={{xs: 2, sm:2, md: 2, lg: 3, xl: 3}} ml={{md: .5}}>
+            <Box mt={{xs: 5, sm:6, md: 7, lg: 8, xl: 8}} ml={{md: .5}}>
               <Typography 
                 variant="body1" 
                 sx={{
-                  fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:16, xl: 16},
-                  fontWeight: 300,
-                  opacity: .55,
-                  letterSpacing: .3,
-                  textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+                  fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:15, xl: 15},
+                  fontWeight: 100,
+                  opacity: .5,
+                  letterSpacing: 1.25,
+                  lineHeight: 1.6,
+                  textShadow: "1px 1px 5px rgba(50,50,50,.5)",
                 }}
               >
-                I mainly develop my projects using ReactJS or NextJS for the frontend, ExpressJS and NodeJS for the backend, MongoDB or MySQL for db implementations. I use different libraries on my works to
+                I mainly develop my projects using ReactJS or NextJS for the frontend, ExpressJS and NodeJS for the backend, and MongoDB or MySQL for db implementations. I use different libraries on my projects to
                 increase development efficiency and easier scalability.
               </Typography>
             </Box>
           </Fade>
         </Grid>        
-        <Grid item xs={12} mt={{xs: 26, sm: 40, md: 4, lg: 6, xl:10}} sx={{overflow: "hidden"}}>
+        <Grid item xs={12} mt={{xs: 30, sm: 40, md: 4, lg: 6, xl:10}} sx={{overflow: "hidden"}}>
           <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 850ms` : "none"}}>
             <ButtonBase
               onClick={() => navigate("/projects")}

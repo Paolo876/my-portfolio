@@ -49,18 +49,18 @@ const SubIntroduction = () => {
             <Typography 
               variant="h6" 
               sx={{
-                fontWeight: 300, 
+                fontWeight: 200, 
                 fontSize: {xs: 12.5, sm: 19, md: 22, lg:23, xl: 25}, 
                 lineHeight: 1.4, 
-                opacity: .9,
+                opacity: .85,
                 textTransform: "none",
-                letterSpacing: {xs: .05, sm:.15},
+                letterSpacing: 1,
                 textShadow: "1px 1px 3px rgba(100,100,100,.25)",
               }}
             >
               I design and develop websites from a 
-              <Box component="span" fontWeight={500}> simple static page </Box> to a<br/>
-              <Box component="span" fontWeight={500}> complex dynamic web application</Box>.
+              <Box component="span" fontWeight={400}> simple static page </Box> to a<br/>
+              <Box component="span" fontWeight={400}> complex dynamic web application</Box>.
             </Typography>
           </Box>
         </Grid>

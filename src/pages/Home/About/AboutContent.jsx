@@ -49,8 +49,8 @@ const AboutContent = ({ isVisible }) => {
                   variant="h2" 
                   fontWeight={600}
                   fontSize={{xs: 18, sm: 23.5, md: 26, lg: 32, xl: 36}} 
-                  letterSpacing={{xs: -.05, sm: -.1, lg: -.2}}
-                  lineHeight={1.3} 
+                  letterSpacing={{xs: -.05, sm: -.1,}}
+                  lineHeight={1.4} 
                   textTransform="none"
                   sx={{
                     textShadow: "1px 1px 7px rgba(10,10,10,.75)",
@@ -58,8 +58,8 @@ const AboutContent = ({ isVisible }) => {
                 >
                   <Box component="span" fontSize={{xs: 25.5, sm: 30.5, md: 33, lg: 39, xl: 45}}>I am Paolo Bugarin</Box>, 
                   <br/>
-                  <Box component="span" fontWeight={500} sx={{opacity: .85}}>
-                    a Full Stack Web Developer based in <Box component="br" sx={{display: {xs:"none", sm: "initial", md: "none"}}}></Box>Los Angeles, California.
+                  <Box component="span" fontWeight={500} sx={{opacity: .75}}>
+                    a Web Developer based in <Box component="br" sx={{display: {xs:"none", sm: "initial", md: "none"}}}></Box>Los Angeles, California.
                   </Box>
                 </Typography>
               </Box>
@@ -69,10 +69,11 @@ const AboutContent = ({ isVisible }) => {
                 <Typography
                   variant="body1" 
                   sx={{
-                    fontSize: {xs: 12, sm: 13, md: 14, lg:16, xl: 17},
-                    fontWeight: 300,
-                    opacity: .55,
-                    letterSpacing: .4,
+                    fontSize: {xs: 12, sm: 13, md: 14, lg:16, xl: 16},
+                    fontWeight: 100,
+                    opacity: .5,
+                    letterSpacing: 1.25,
+                    lineHeight: 1.6,
                     textShadow: "1px 1px 5px rgba(10,10,10,.75)",
                     pr: {xl: 2}
                   }}
