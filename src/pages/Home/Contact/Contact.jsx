@@ -69,10 +69,10 @@ const Contact = () => {
         <Box mt={2}>
           <Typography 
             sx={{
-              fontSize: {xs: 9, sm: 9.5, md: 10, lg:11, xl: 12},
-              fontWeight: 400,
+              fontSize: {xs: 9, sm: 9.5, md: 10.5, lg:12, xl: 13},
+              fontWeight: 300,
               opacity: .7,
-              letterSpacing: .3,
+              letterSpacing: .5,
               textShadow: "1px 1px 5px rgba(10,10,10,.75)",
             }}
           >
@@ -82,10 +82,10 @@ const Contact = () => {
         <Box mt={1}>
           <Typography 
             sx={{
-              fontSize: {xs: 9, sm: 9.5, md: 10, lg:11, xl: 12},
-              fontWeight: 300,
+              fontSize: {xs: 9, sm: 9.5, md: 10, lg:11.5, xl: 12.5},
+              fontWeight: 100,
               opacity: .55,
-              letterSpacing: .3,
+              letterSpacing: .5,
               textShadow: "1px 1px 5px rgba(10,10,10,.75)",
             }}
           >
@@ -137,10 +137,10 @@ const Contact = () => {
           >Paolo Bugarin</Typography>
           <Typography
             sx={{
-              fontSize: {xs: 9, sm: 9.5, md: 10, lg:11, xl: 12},
-              fontWeight: 200,
-              opacity: .7,
-              letterSpacing: 1,
+              fontSize: {xs: 9, sm: 9.5, md: 10.5, lg:12, xl: 13},
+              fontWeight: 100,
+              opacity: .65,
+              letterSpacing: 1.25,
               textShadow: "1px 1px 5px rgba(10,10,10,.75)",
               mt: {xs: .75, sm:1.5},
             }}
