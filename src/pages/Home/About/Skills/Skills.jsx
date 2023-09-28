@@ -24,7 +24,7 @@ const Skills = ({ isVisible }) => {
       <Grid item xs={8} mt={{xs: 8, sm:12}} mb={{xs: 8, sm:12}} sx={{display: {xs: "initial", md: "none"}}}><Divider/></Grid>
       <Grid item xs={12} sx={{display: {xs: "initial", md: "none"}}}>
         <Fade appear={isVisible} in={isVisible} timeout={1100}  style={{ transitionDelay: "1300ms" }}>
-          <Box mb={1.5}>
+          <Box mb={4}>
             <Typography 
               variant="h2" 
               fontWeight={400}
