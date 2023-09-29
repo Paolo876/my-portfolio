@@ -26,7 +26,28 @@ const ProjectIntroduction = ({ title, description, logo }) => {
       }}
     >
       <Grid item xs={12}>
-        <Fade appear={true} in={true} timeout={1100}  style={{ transitionDelay: "150ms" }}>
+        {/* <Fade appear={true} in={true} timeout={1100}  style={{ transitionDelay: "150ms" }}>
+          <Box>
+            <Typography 
+              variant="h2" 
+              align="left" 
+              fontWeight={400}
+              fontSize={{xs: 42, sm: 44, md: 48, lg: 55, xl: 65}} 
+              letterSpacing={.1}
+              lineHeight={{xs:1}} 
+              textTransform="none"
+              sx={{
+                textShadow: "1px 1px 7px rgba(10,10,10,.75)",
+              }}
+            >
+              {title}
+            </Typography>
+          </Box>
+        </Fade> */}
+      </Grid>
+
+      <Grid item xs={12} sm={7.15} md={7.5} lg={7} xl={6} sx={{}}>
+      <Fade appear={true} in={true} timeout={1100}  style={{ transitionDelay: "150ms" }}>
           <Box>
             <Typography 
               variant="h2" 
@@ -44,10 +65,7 @@ const ProjectIntroduction = ({ title, description, logo }) => {
             </Typography>
           </Box>
         </Fade>
-      </Grid>
-
-      <Grid item xs={12} sm={7.15} md={7.5} lg={7} xl={6} sx={{mt: {xs: 5, sm: 7, md: 8, lg: 9, xl: 10}}}>
-          <Box sx={{position: "relative"}}>
+          <Box sx={{position: "relative", mt: {xs: 5, sm: 7, md: 8, lg: 9, xl: 10}}}>
             <Box 
               sx={{
                 height: "100%", 
@@ -74,10 +92,12 @@ const ProjectIntroduction = ({ title, description, logo }) => {
                 </Typography>
               </Box>
             </Fade>
-
           </Box>
+          
       </Grid>
-      <Grid item xs={0} sm={4.25} md={4} lg={4} xl={3} pt={{sm: 3, md: 2, lg:1, xl: 2.5}} sx={{display: {xs: "none", sm: "initial"}}}>
+      <Grid item xs={0} sm={4.25} md={4} lg={4} xl={3} 
+        // pt={{sm: 3, md: 2, lg:1, xl: 2.5}} 
+        sx={{display: {xs: "none", sm: "initial"}}}>
         <Fade appear={true} in={true} timeout={1000}  style={{ transitionDelay: "1600ms" }}>
           <Box sx={{height: "auto", width: "auto", maxWidth: 300, maxHeight: 300, ml: "auto"}}>
             <Image src={logo} fit='cover' duration={0}/>

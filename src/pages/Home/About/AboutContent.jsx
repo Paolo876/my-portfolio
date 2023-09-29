@@ -113,7 +113,7 @@ const AboutContent = ({ isVisible }) => {
               </Box>
             </Box>
 					</Grid>
-          <Grid item xs={12} sx={{display: {xs: "initial", md: "none"}}} mt={{xs: 1.5, sm:4}}>
+          <Grid item xs={12} sx={{display: {xs: "initial", md: "none"}}} mt={{xs: 5, sm:6}}>
             <Fade appear={isVisible} in={isVisible} timeout={1100}  style={{ transitionDelay: "550ms" }}>
               <Box pb={{md: 1.5, lg:3}} pt={{sm:2, md: 0}} sx={{maxWidth: "100%", display: {xs: "initial", sm: "none"}}}>
                 <Typography
@@ -133,7 +133,7 @@ const AboutContent = ({ isVisible }) => {
               </Box>
             </Fade>
             <Box sx={{opacity: 0, animation: isVisible ? `${slideLeft} 1100ms ease forwards 1150ms` : "none"}}>
-              <Box mt={{xs: 2, sm: 0}}>
+              <Box mt={{xs: 4, sm: 4, md: 2,}}>
                 <ButtonBase
                   onClick={() => navigate("/about")}
                   sx={{
@@ -167,7 +167,7 @@ const AboutContent = ({ isVisible }) => {
 			<Grid item xs={12} mt={{md: 18, lg: 18, xl: 20}}>
 				<Skills isVisible={isVisible}/>
 			</Grid>
-      <Grid item xs={12} mt={{xs: 1.5, sm:3}} sx={{display: {xs: "initial", md: "none"}}}>
+      <Grid item xs={12} mt={{xs: 5, sm:6}} sx={{display: {xs: "initial", md: "none"}}}>
         <Box sx={{opacity: 0, animation: isVisible ? `${slideRight} 1100ms ease forwards 2150ms` : "none"}}>
           <Box>
             <ButtonBase

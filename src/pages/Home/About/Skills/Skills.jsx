@@ -24,7 +24,7 @@ const Skills = ({ isVisible }) => {
       <Grid item xs={8} mt={{xs: 8, sm:12}} mb={{xs: 8, sm:12}} sx={{display: {xs: "initial", md: "none"}}}><Divider/></Grid>
       <Grid item xs={12} sx={{display: {xs: "initial", md: "none"}}}>
         <Fade appear={isVisible} in={isVisible} timeout={1100}  style={{ transitionDelay: "1300ms" }}>
-          <Box mb={4}>
+          <Box mb={5}>
             <Typography 
               variant="h2" 
               fontWeight={400}
@@ -60,7 +60,7 @@ const Skills = ({ isVisible }) => {
         </Fade>
       </Grid>
 
-      <Grid item xs={12} md={7} lg={7} mt={{xs: 1.5, md: 0}}>
+      <Grid item xs={12} md={7} lg={7} mt={{xs: 4, md: 0}}>
         {isVisible && <SkillsCarousel isVisible={isVisible}/>}
       </Grid>
       <Grid item md={5} lg={5} sx={{display: {xs: "none", md: "initial"}}}>
