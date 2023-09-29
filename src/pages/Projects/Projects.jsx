@@ -91,7 +91,7 @@ const MOCK_PROJ_LIST = [
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_banner.png?alt=media&token=41f3debd-ed18-43a0-b583-dc56bbb63840",
       name: "moby_banner.png"
     },
-    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_logo_white.png?alt=media&token=50332a5e-72ab-488b-b05d-bedfc9bed076",
+    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_logo.png?alt=media&token=f3fcf54f-9817-47dd-993e-aa0be137ea4f&_gl=1*2d6gke*_ga*MTA2ODgwODE2MS4xNjcxNDE1MTQ5*_ga_CW55HF8NVT*MTY5NTk2OTkzMy41MC4xLjE2OTU5NzA0NTguNDQuMC4w",
     palette: {
       primary: "#237b72",
       secondary: "#2e779d",
@@ -485,7 +485,7 @@ const MainPage = ({ projects }) => {
           >
           <Fade in={isMounted} timeout={500} unmountOnExit>
             <Box>
-              <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 250, lg: 250, xl: 250}, height: {xs: 150, sm: 225, md: 250, lg: 250, xl: 250}, transition: "all 1s ease"}}>
+              <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 225, lg: 225, xl: 225}, height: {xs: 150, sm: 225, md: 225, lg: 225, xl: 225}, transition: "all 1s ease"}}>
                 <Image src={projects[activeProject].logo} duration={250} fit="scale-down"/>
               </Box>
               <Box sx={{mt: {xs:1.5, sm: 2.5, md:5}, borderRight: 1, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
@@ -565,10 +565,10 @@ const MainPage = ({ projects }) => {
             >
               <Fade in={isMounted} timeout={500} unmountOnExit>
                 <Box>
-                  <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 270, lg: 270, xl: 270}, height: "auto", transition: "all 1s ease"}}>
+                  <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 200, md: 270, lg: 270, xl: 250}, height: "auto", transition: "all 1s ease"}}>
                     <Image src={projects[activeProject].logo} duration={250}/>
                   </Box>
-                  <Box sx={{mt: {xs:1.5, sm: 2.5, md:5}, borderRight: 2, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
+                  <Box sx={{mt: {xs:2, sm: 5}, borderRight: 2, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
                     <Typography 
                       variant="body2"
                       sx={{
