@@ -7,7 +7,7 @@ import { Route, Routes } from 'react-router-dom'
 import Image from 'mui-image'
 import ProjectSelection from './ProjectSelection'
 import ProjectItem from './ProjectItem/ProjectItem'
-
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const MOCK_PROJ_IMG = {
   url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_banner.png?alt=media&token=4f2813bc-7201-4b53-abeb-48a4de04e297",
@@ -501,7 +501,9 @@ const MainPage = ({ projects }) => {
                   }} 
                 >{projects[activeProject].briefDescription}</Typography>
               </Box>
-              <Button>Read more about {projects[activeProject].title} here</Button>
+              <Box sx={{mt: 2}}>
+                <Button>Read more about {projects[activeProject].title} here <ArrowForwardIosIcon/></Button>
+              </Box>
             </Box>
           </Fade>
           </Grid>
