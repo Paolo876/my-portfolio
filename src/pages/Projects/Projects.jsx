@@ -281,10 +281,41 @@ const MOCK_PROJ_LIST = [
     name: "downtownsuitsdirect", 
     title: "Downtown Suits Direct",
     briefDescription: "A men's suit and tailor shop located in Pico Rivera, California.",
-    description: "Downtown Suits Direct is a men's suit and tailor shop located in Pico Rivera, California. It is a commissioned project that I designed and developed using React and Firebase.",
+    description: "Downtown Suits Direct is a men's suit and tailor shop located in Pico Rivera, California. It is an ongoing commissioned project that I am still currently designing and developing.",
     technologies: [ "JavaScript", "React","Firebase", "Material-UI", "Sass/Scss"],
     type: "commissioned",
-    images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
+    images: [
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fdowntownsuits%2Fdsd_1.webp?alt=media&token=fc2a475a-39bc-4265-9baf-efe1a41c452c&_gl=1*5tqi1k*_ga*MTA2ODgwODE2MS4xNjcxNDE1MTQ5*_ga_CW55HF8NVT*MTY5NjQ4Nzg0Ni41MS4xLjE2OTY0ODk3MDEuNjAuMC4w",
+      name: "dsd_1.webp",
+      title: "Home Page [Landing]",
+      description: "Shows contact information, store address, and store hours"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fdowntownsuits%2Fdsd_2.webp?alt=media&token=635d3376-dea5-4df7-99e0-336a935db30f&_gl=1*vtnw5m*_ga*MTA2ODgwODE2MS4xNjcxNDE1MTQ5*_ga_CW55HF8NVT*MTY5NjQ4Nzg0Ni41MS4xLjE2OTY0OTA5NDEuNjAuMC4w",
+      name: "dsd_2.webp",
+      title: "Home Page [Gallery]",
+      description: "Shows gallery images and click redirects to gallery page"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fdowntownsuits%2Fdsd_3.webp?alt=media&token=bf1b3668-dafb-4762-bd3d-a10c62e05308&_gl=1*u2t2js*_ga*MTA2ODgwODE2MS4xNjcxNDE1MTQ5*_ga_CW55HF8NVT*MTY5NjQ4Nzg0Ni41MS4xLjE2OTY0OTEwMzcuNjAuMC4w",
+      name: "dsd_3.webp",
+      title: "Home Page [Yelp Reviews]",
+      description: "Lists client testimonies using Yelp Api"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fdowntownsuits%2Fdsd_4.webp?alt=media&token=85781f86-da35-4592-9f51-c4fb179677dd&_gl=1*wptqbf*_ga*MTA2ODgwODE2MS4xNjcxNDE1MTQ5*_ga_CW55HF8NVT*MTY5NjQ4Nzg0Ni41MS4xLjE2OTY0OTExMjIuNjAuMC4w",
+      name: "dsd_4.webp",
+      title: "Gallery Page",
+      description: "Shows a list of store images"
+      }, 
+      {
+      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fdowntownsuits%2Fdsd_5.webp?alt=media&token=1398f743-5afc-4de3-a74d-37e7e2da554f&_gl=1*trd0ny*_ga*MTA2ODgwODE2MS4xNjcxNDE1MTQ5*_ga_CW55HF8NVT*MTY5NjQ4Nzg0Ni41MS4xLjE2OTY0OTExODAuMi4wLjA.",
+      name: "dsd_5.webp",
+      title: "Contact Page",
+      description: "Shows contact informations and an Inquiry form that submits directly to owner's email"
+      }, 
+    ], 
     coverImage: {
       url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fdsd_banner.png?alt=media&token=ac912112-24cd-442e-9489-ef300abfb0d0",
       name: "dsd_banner.png",
@@ -293,11 +324,11 @@ const MOCK_PROJ_LIST = [
       "aos animations applied on components",
       "Implemented Yelp api to display customer reviews and feedbacks",
       "Image optimization using Imagekit.io api",
-      "Inquiry form forwards data to client's email using EmailJS api"
+      "Inquiry form forwards data to client's email using EmailJS api",
     ],
     url: "https://downtownsuitsdirectla.web.app/",
     githubUrl: "https://github.com/Paolo876/downtownsuitsdirect",
-    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_logo_white.png?alt=media&token=5d2083ea-340c-4479-be33-0938373ea91a",
+    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fdowntownsuits%2Fdsd_logo.png?alt=media&token=7681c7f5-b2f5-4a63-a25b-0c7c3d08f4eb&_gl=1*fsj8ok*_ga*MTA2ODgwODE2MS4xNjcxNDE1MTQ5*_ga_CW55HF8NVT*MTY5NjQ4Nzg0Ni41MS4xLjE2OTY0ODk2MTguNjAuMC4w",
     palette: {
       primary: "#237b72",
       secondary: "#2e779d",
