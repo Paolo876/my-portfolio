@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { rootInitialState } from "../initialStates";
+import { getImageKeys } from "./rootReducers";
+
 
 const rootSlice = createSlice({
     name: "root",
@@ -10,6 +12,9 @@ const rootSlice = createSlice({
             state.otherSkillsList = payload.otherSkills;
             state.certifications = payload.certifications;
         }
+    },
+    extraReducers: builder => {
+
     }
 });
 

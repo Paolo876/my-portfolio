@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { functions } from '../firebase/config';
+import { functions } from '../../firebase/config';
 import { httpsCallable } from 'firebase/functions';
 
 
