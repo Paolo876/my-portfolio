@@ -8,6 +8,7 @@ import Image from 'mui-image'
 import ProjectSelection from './ProjectSelection'
 import ProjectItem from './ProjectItem/ProjectItem'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { IKImage } from 'imagekitio-react';
 
 const MOCK_PROJ_IMG = {
   url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_banner.png?alt=media&token=4f2813bc-7201-4b53-abeb-48a4de04e297",
@@ -31,67 +32,66 @@ const MOCK_PROJ_LIST = [
       "Secured sessions with httpOnly cookie implementation",
       "Optimize images for faster loading (Imagekit.io)",
       "Encrypt sensitive data (bcryptJS)",
-      // "Deployed on Vercel(Client) and Railway(Server and MySQL Database)",
     ],
     url: "https://moby.paolobugarin.com/",
     githubUrl: "https://github.com/Paolo876/moby-social-media-client",
     images: [
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_1.webp?alt=media&token=b54e850b-8777-40fc-bebb-d5984a542758",
-      name: "moby_1.webp",
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/moby/moby_1_YJYz-af4eJ.webp?updatedAt=1696574760052",
+      name: "moby_1_YJYz-af4eJ.webp",
       title: "Login/Sign Up Page",
       description: "This serves as the initial or welcome page when no user is logged in."
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_2.webp?alt=media&token=645331f1-5c52-4c63-9aae-40af27505fb8",
-      name: "moby_2.webp",
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/moby/moby_2_vjfC-i8Do.webp?updatedAt=1696574759917",
+      name: "moby_2_vjfC-i8Do.webp",
       title: "Home Page",
       description: "Shows public and friends' posts along with an action bar to change user's status and show connected friends."
 
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_3.webp?alt=media&token=9d5801d1-a38e-4713-83c7-5666dec1b5c3",
-      name: "moby_3.webp",
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/moby/moby_3_LLaE9FP68s.webp?updatedAt=1696574759649",
+      name: "moby_3_LLaE9FP68s.webp",
       title: "Profile Page",
       description: "Shows user's published posts, information, and bio."
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_4.webp?alt=media&token=0f7a5ffd-61d9-4574-bfdd-2aa4713f5019",
-      name: "moby_4.webp",
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/moby/moby_4_dusWQoqCFv.webp?updatedAt=1696574759920",
+      name: "moby_4_dusWQoqCFv.webp",
       title: "Messages Page",
       description: "Create chat rooms and start chatting with users and friends."
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_6.webp?alt=media&token=e2bd1223-688c-4c27-ba44-f27492a0c33a",
-      name: "moby_6.webp",
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/moby/moby_6_TznwRZE6S.webp?updatedAt=1696574759536",
+      name: "moby_6_TznwRZE6S.webp",
       title: "Create page",
       description: "Create and Publish your own posts."
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_5.webp?alt=media&token=acb0481e-7d78-4d83-8e50-1b23275d86da",
-      name: "moby_5.webp",
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/moby/moby_5_m3wyvf48_f.webp?updatedAt=1696574759639",
+      name: "moby_5_m3wyvf48_f.webp",
       title: "Private Post Notice",
       description: "A Private Post can only be interacted by a user friends with the author."
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_7.webp?alt=media&token=7dc939ac-c548-4684-95d7-1bcfc0c0c7bf",
-      name: "moby_7.webp",
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/moby/moby_7_OzP6pU5gUU.webp?updatedAt=1696574759921",
+      name: "moby_7_OzP6pU5gUU.webp",
       title: "Search Page",
       description: "Search for users and posts."
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_8.webp?alt=media&token=709bce2e-528d-4f36-b19a-dc08ded3ab72",
-      name: "moby_8.webp",
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/moby/moby_8_chCEO4mDBm.webp?updatedAt=1696574759931",
+      name: "moby_8_chCEO4mDBm.webp",
       title: "Settings Page",
       description: "Change and update your profile information."
       }, 
 
     ],
     coverImage: {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_banner.png?alt=media&token=41f3debd-ed18-43a0-b583-dc56bbb63840",
-      name: "moby_banner.png"
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/moby/moby_banner_vS3t8AO5ge.png?updatedAt=1696574760048",
+      name: "moby_banner_vS3t8AO5ge.png"
     },
-    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby%2Fmoby_logo.png?alt=media&token=f3fcf54f-9817-47dd-993e-aa0be137ea4f&_gl=1*2d6gke*_ga*MTA2ODgwODE2MS4xNjcxNDE1MTQ5*_ga_CW55HF8NVT*MTY5NTk2OTkzMy41MC4xLjE2OTU5NzA0NTguNDQuMC4w",
+    logo: "https://ik.imagekit.io/q5892cimh/my-portfolio/moby/moby_logo_white_zb-aKEbfW.png?updatedAt=1696574760835",
     palette: {
       primary: "#237b72",
       secondary: "#2e779d",
