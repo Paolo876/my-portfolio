@@ -15,12 +15,13 @@ import Contact from "./pages/Contact/Contact";
 
 
 function App() {
-  const { skillsList, setData } = useRootRedux();
+  const { skillsList, setData, getImageKeys } = useRootRedux();
   const { getDocumentFromCollection } = useFirestoreActions();
 
   useEffect(() => {
     if(skillsList.length === 0){
       getDocumentFromCollection('user', 'information').then(data => setData(data))
+      getImageKeys()
     }
   }, [])
 
