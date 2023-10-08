@@ -14,7 +14,21 @@ const rootSlice = createSlice({
         }
     },
     extraReducers: builder => {
-
+        builder
+        //getImageKeys
+        .addCase(getImageKeys.pending, ( state ) => {
+            state.isLoading = true;
+            state.error = null;
+        })
+        .addCase(getImageKeys.fulfilled, ( state, { payload }) => {
+            state.isLoading = false;
+            state.imageKeys = payload;
+            state.error = null;
+        })
+        .addCase(getImageKeys.rejected, ( state , { payload }) => {
+            state.isLoading = false;
+            state.error = payload.message;
+        })
     }
 });
 

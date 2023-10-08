@@ -6,6 +6,7 @@ export const rootInitialState = {
     cvUrl: "",
     isLoading: false,
     error: null,
+    imageKeys: null,
 }
 
 
