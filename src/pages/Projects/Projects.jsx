@@ -295,39 +295,39 @@ const MOCK_PROJ_LIST = [
     type: "commissioned",
     images: [
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fdowntownsuits%2Fdsd_1.webp?alt=media&token=fc2a475a-39bc-4265-9baf-efe1a41c452c&_gl=1*5tqi1k*_ga*MTA2ODgwODE2MS4xNjcxNDE1MTQ5*_ga_CW55HF8NVT*MTY5NjQ4Nzg0Ni41MS4xLjE2OTY0ODk3MDEuNjAuMC4w",
-      name: "dsd_1.webp",
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_1_NReV9xPSG.webp?updatedAt=1696574840863",
+      name: "dsd_1_NReV9xPSG.webp",
       title: "Home Page [Landing]",
       description: "Shows contact information, store address, and store hours"
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fdowntownsuits%2Fdsd_2.webp?alt=media&token=635d3376-dea5-4df7-99e0-336a935db30f&_gl=1*vtnw5m*_ga*MTA2ODgwODE2MS4xNjcxNDE1MTQ5*_ga_CW55HF8NVT*MTY5NjQ4Nzg0Ni41MS4xLjE2OTY0OTA5NDEuNjAuMC4w",
-      name: "dsd_2.webp",
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_2_C7YO23QRGb.webp?updatedAt=1696574841699",
+      name: "dsd_2_C7YO23QRGb.webp",
       title: "Home Page [Gallery]",
       description: "Shows gallery images and click redirects to gallery page"
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fdowntownsuits%2Fdsd_3.webp?alt=media&token=bf1b3668-dafb-4762-bd3d-a10c62e05308&_gl=1*u2t2js*_ga*MTA2ODgwODE2MS4xNjcxNDE1MTQ5*_ga_CW55HF8NVT*MTY5NjQ4Nzg0Ni41MS4xLjE2OTY0OTEwMzcuNjAuMC4w",
-      name: "dsd_3.webp",
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_3_H-yV9jBiq.webp?updatedAt=1696574841255",
+      name: "dsd_3_H-yV9jBiq.webp",
       title: "Home Page [Yelp Reviews]",
       description: "Lists client testimonies using Yelp Api"
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fdowntownsuits%2Fdsd_4.webp?alt=media&token=85781f86-da35-4592-9f51-c4fb179677dd&_gl=1*wptqbf*_ga*MTA2ODgwODE2MS4xNjcxNDE1MTQ5*_ga_CW55HF8NVT*MTY5NjQ4Nzg0Ni41MS4xLjE2OTY0OTExMjIuNjAuMC4w",
-      name: "dsd_4.webp",
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_4_6oq8k35kOG.webp?updatedAt=1696574840744",
+      name: "dsd_4_6oq8k35kOG.webp",
       title: "Gallery Page",
       description: "Shows a list of store images"
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fdowntownsuits%2Fdsd_5.webp?alt=media&token=1398f743-5afc-4de3-a74d-37e7e2da554f&_gl=1*trd0ny*_ga*MTA2ODgwODE2MS4xNjcxNDE1MTQ5*_ga_CW55HF8NVT*MTY5NjQ4Nzg0Ni41MS4xLjE2OTY0OTExODAuMi4wLjA.",
-      name: "dsd_5.webp",
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_5_eXZUhIiK5u.webp?updatedAt=1696574841104",
+      name: "dsd_5_eXZUhIiK5u.webp",
       title: "Contact Page",
       description: "Shows contact informations and an Inquiry form that submits directly to owner's email"
       }, 
     ], 
     coverImage: {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fdsd_banner.png?alt=media&token=ac912112-24cd-442e-9489-ef300abfb0d0",
-      name: "dsd_banner.png",
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_banner_KnjX9wWbKf.png?updatedAt=1696574841100",
+      name: "dsd_banner_KnjX9wWbKf.png",
     },
     features: [
       "aos animations applied on components",
@@ -337,7 +337,10 @@ const MOCK_PROJ_LIST = [
     ],
     url: "https://downtownsuitsdirectla.web.app/",
     githubUrl: "https://github.com/Paolo876/downtownsuitsdirect",
-    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fdowntownsuits%2Fdsd_logo.png?alt=media&token=7681c7f5-b2f5-4a63-a25b-0c7c3d08f4eb&_gl=1*fsj8ok*_ga*MTA2ODgwODE2MS4xNjcxNDE1MTQ5*_ga_CW55HF8NVT*MTY5NjQ4Nzg0Ni41MS4xLjE2OTY0ODk2MTguNjAuMC4w",
+    logo: {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_logo_N3TpgC4kC.png?updatedAt=1696574840537",
+      name: "dsd_logo_N3TpgC4kC.png"
+    },
     palette: {
       primary: "#237b72",
       secondary: "#2e779d",
@@ -353,33 +356,47 @@ const MOCK_PROJ_LIST = [
     type: "commissioned",
     images: [
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fcarl_1.webp?alt=media&token=23c18278-e0fb-4b49-bdd8-79ebb0075099",
-      name: "carl_1.webp"
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/carl/carl_1_HQL2DQrue.webp?updatedAt=1696574859837",
+      name: "carl_1_HQL2DQrue.webp",
+      title: "Home Page [Landing]",
+      description: "A minimalist landing page that shows the web navigations and the social link buttons of the client"
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fcarl_2.webp?alt=media&token=3bd54ca5-770f-4e55-a5c1-4142d83932ea",
-      name: "carl_2.webp"
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/carl/carl_2_KF3xx2LLe.webp?updatedAt=1696574860443",
+      name: "carl_2_KF3xx2LLe.webp",
+      title: "Home Page [About]",
+      description: "A brief description of the client with buttons redirecting to the about page and contact page"
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fcarl_3.webp?alt=media&token=771a7033-e8fb-47f8-be00-ee098671190c",
-      name: "carl_3.webp"
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/carl/carl_3_fHmmrKvxLs.webp?updatedAt=1696574860452",
+      name: "carl_3_fHmmrKvxLs.webp",
+      title: "Projects Page",
+      description: "Shows a list of projects of the client including the softwares and technologies he used"
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fcarl_4.webp?alt=media&token=2e059571-68e5-4eb2-8963-c0d15b6baa4d",
-      name: "carl_4.webp"
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/carl/carl_4_V22zxdpHHU.webp?updatedAt=1696574860154",
+      name: "carl_4_V22zxdpHHU.webp",
+      title: "About Page",
+      description: "Shows the whole description and information of the client"
       }, 
       {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fcarl_5.webp?alt=media&token=5d72b68a-0a12-4810-9029-8d12c989d2fb",
-      name: "carl_5.webp"
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/carl/carl_5_7-WWgtHhd.webp?updatedAt=1696574859882",
+      name: "carl_5_7-WWgtHhd.webp",
+      title: "Contact Page",
+      description: "Shows contact informations and an Inquiry form that submits directly to owner's email"
       }, 
-    ],    coverImage: {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fcarl_banner.png?alt=media&token=06a4d3db-9648-4dff-af53-8dbcc0ad0312",
-      name: "carl_banner.png"
+    ],    
+    coverImage: {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/carl/carl_banner_swt7NBvqiF.png?updatedAt=1696574860030",
+      name: "carl_banner_swt7NBvqiF.png"
     },
     features: [],
     url: "http://www.google.com",
     githubUrl: "http://www.google.com",
-    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_logo_white.png?alt=media&token=5d2083ea-340c-4479-be33-0938373ea91a",
+    logo: {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/carl/ADOBO_-_signature_-_logo_-_white_zo4ZUstyF.png?updatedAt=1696810590578",
+      name: "ADOBO_-_signature_-_logo_-_white_zo4ZUstyF.png"
+    },
     palette: {
       primary: "#237b72",
       secondary: "#2e779d",
