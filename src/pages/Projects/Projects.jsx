@@ -1,14 +1,19 @@
 import { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
-import DocumentHead from '../../components/DocumentHead'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import { Grid, Box, Typography, Fade, Slide, Button } from '@mui/material'
-import Introduction from './Introduction'
-import { Route, Routes } from 'react-router-dom'
 import Image from 'mui-image'
-import ProjectSelection from './ProjectSelection'
-import ProjectItem from './ProjectItem/ProjectItem'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { IKImage } from 'imagekitio-react';
+
+//components
+import DocumentHead from '../../components/DocumentHead'
+import Introduction from './Introduction'
+import ProjectSelection from './ProjectSelection'
+import ProjectItem from './ProjectItem/ProjectItem'
+
+//hooks
+import useRootRedux from '../../hooks/useRootRedux';
+
 
 const MOCK_PROJ_IMG = {
   url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_banner.png?alt=media&token=4f2813bc-7201-4b53-abeb-48a4de04e297",
@@ -350,7 +355,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "carlportfolio", 
     title: "Carl Adriant Portfolio",
-    briefDescription: "A web portfolio of an architect based in Doha, Qatar that I designed and developed.",
+    briefDescription: "A web portfolio of an architect based in Doha, Qatar",
     description: "A web portfolio of an architect based in Doha, Qatar that I designed and developed. This includes an admin page for the owner using firebase authentication that only authorizes content editing through his email logged in on admin page.",
     technologies: [ "JavaScript", "React", "Firebase", "Material-UI", "Sass/Scss"],
     type: "commissioned",
@@ -424,7 +429,7 @@ const MOCK_PROJ_LIST = [
       "animate-on-screen animations applied on components",
       "Image optimization using Imagekit.io api",
       "Inquiry form forwards data to client's email using EmailJS api",
-      "Admin powers to edit/update content (only allowed through owner's email logged in)"
+      "Admin powers to add/edit/update/delete content (only allowed through owner's email logged in)"
     ],
     url: "https://carl-dimabuyu.web.app/",
     githubUrl: "https://github.com/Paolo876/carl_portfolio",
@@ -440,19 +445,46 @@ const MOCK_PROJ_LIST = [
   {
     name: "aynportfolio", 
     title: "Ayn Nicoli Portfolio",
-    briefDescription: "A web portfolio of a graphic artist/architect based in Philippines that I designed and developed.",
-    description: "A web portfolio of a graphic artist/architect based in Philippines that I designed and developed.",
+    briefDescription: "A web portfolio of a graphic artist/architect based in Philippines",
+    description: "A simple web portfolio of a graphic artist/architect based in Philippines that I designed and developed to showcase her works.",
     technologies: [ "JavaScript", "React", "Firebase", "Material-UI", "Sass/Scss"],
     type: "commissioned",
-    images: [MOCK_PROJ_IMG, MOCK_PROJ_IMG, MOCK_PROJ_IMG],
+    images: [
+      {
+        url: "https://ik.imagekit.io/q5892cimh/my-portfolio/ayn/ayn_1_YNLejevk0.webp?updatedAt=1696574881712",
+        name: "ayn_1_YNLejevk0.webp",
+        title: "Home Page [Architectural Designs]",
+        description: "Shows the list of architectural design works and renders of the client"  
+      },
+      {
+        url: "https://ik.imagekit.io/q5892cimh/my-portfolio/ayn/ayn_2_nupzigId5u.webp?updatedAt=1696574882052",
+        name: "ayn_2_nupzigId5u.webp",
+        title: "Home Page [Graphic Designs]",
+        description: "Shows the list of graphic design works and renders of the client"  
+      },
+      {
+        url: "https://ik.imagekit.io/q5892cimh/my-portfolio/ayn/ayn_4_dDH4AoDed.webp?updatedAt=1696574882000",
+        name: "ayn_4_dDH4AoDed.webp",
+        title: "Contact Page",
+        description: "Shows contact informations and an Inquiry form that submits directly to owner's email"
+      },
+    ],
     coverImage: {
-      url: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fayn_banner.png?alt=media&token=26cb8b13-e460-41ce-aa8d-ba0502bde917",
-      name: "ayn_banner.png"
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/ayn/ayn_banner_yxWgcENhs.png?updatedAt=1696574881492",
+      name: "ayn_banner_yxWgcENhs.png"
     },
-    features: [],
-    url: "http://www.google.com",
-    githubUrl: "http://www.google.com",
-    logo: "https://firebasestorage.googleapis.com/v0/b/my-portfolio-dd37c.appspot.com/o/project-images%2Fmoby_logo_white.png?alt=media&token=5d2083ea-340c-4479-be33-0938373ea91a",
+    features: [
+      "animate-on-screen animations applied on components",
+      "Image optimization using Imagekit.io api",
+      "Inquiry form forwards data to client's email using EmailJS api",
+      "Admin powers to add/edit/update/delete content (only allowed through owner's email logged in)"
+    ],
+    url: "https://aynsl-portfolio.web.app/",
+    githubUrl: "https://github.com/Paolo876/ayn-nicoli-portfolio",
+    logo: {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/ayn/ayn-logo-500-grey_a0uWdgEkE.png?updatedAt=1696828761035",
+      name: "ayn-logo-500-grey_a0uWdgEkE.png"
+    },
     palette: {
       primary: "#237b72",
       secondary: "#2e779d",
@@ -461,7 +493,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "cimt", 
     title: "C.I.M.T.",
-    briefDescription: "A software solution to manage available resources to various emergency incidents that is occurring or may occur in PCC.",
+    briefDescription: "A software solution to manage available resources to various emergency incidents that is occurring or may occur in PCC. (My Finals Project from my Server-side Development Class in PCC)",
     description: "CERT Incident Management Tool is the finals project of my Server-side Development class in Pasadena City College. This app is a software solution to manage available resources and their assignments to various emergency incidents that is occurring or may occur. It is developed using React, Node, Express, Sequelize, and MySql stack.",
     technologies: [ "JavaScript", "React", "Redux", "NodeJs", "ExpressJs", "MySQL", "Sequelize"],
     type: "school",
@@ -522,6 +554,8 @@ const MainPage = ({ projects }) => {
   const [ activeProject, setActiveProject ] = useState(0);
   const [ isHovered, setIsHovered ] = useState(false);
   const [ isMounted, setIsMounted ] = useState(true);
+  const { imageKeys } = useRootRedux();
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -577,8 +611,15 @@ const MainPage = ({ projects }) => {
           >
           <Fade in={isMounted} timeout={500} unmountOnExit>
             <Box>
-              <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 225, lg: 225, xl: 225}, height: {xs: 150, sm: 225, md: 225, lg: 225, xl: 225}, transition: "all 1s ease"}}>
-                <Image src={projects[activeProject].logo.url} duration={250} fit="scale-down" alt={projects[activeProject].logo.name}/>
+              <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 225, lg: 225, xl: 240}, height: {xs: 150, sm: 225, md: 225, lg: 225, xl: 190}, transition: "all 1s ease"}}>
+                <IKImage 
+                  urlEndpoint={imageKeys.urlEndpoint} 
+                  src={projects[activeProject].logo.url}
+                  alt={projects[activeProject].logo.name} 
+                  height="auto"
+                  width="auto"
+                  style={{objectFit: "scale-down", height: "100%", width: "100%"}}
+                />
               </Box>
               <Box sx={{mt: {xs:1.5, sm: 2.5, md:5}, borderRight: 1, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
                 <Typography 
@@ -660,7 +701,14 @@ const MainPage = ({ projects }) => {
               <Fade in={isMounted} timeout={500} unmountOnExit>
                 <Box>
                   <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 200, md: 270, lg: 270, xl: 250}, height: "auto", transition: "all 1s ease"}}>
-                    <Image src={projects[activeProject].logo.url} duration={250} alt={projects[activeProject].logo.name}/>
+                    <IKImage 
+                      urlEndpoint={imageKeys.urlEndpoint} 
+                      src={projects[activeProject].logo.url}
+                      alt={projects[activeProject].logo.name} 
+                      height="auto"
+                      width="auto"
+                      style={{objectFit: "scale-down", height: "100%", width: "100%"}}
+                    />                  
                   </Box>
                   <Box sx={{mt: {xs:2, sm: 5}, borderRight: 2, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
                     <Typography 

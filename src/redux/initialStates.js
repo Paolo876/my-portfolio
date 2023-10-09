@@ -4,7 +4,7 @@ export const rootInitialState = {
     contactInformations: [],
     certifications: [],
     cvUrl: "",
-    isLoading: false,
+    isLoading: true,
     error: null,
     imageKeys: null,
 }

@@ -17,7 +17,7 @@ import Contact from "./pages/Contact/Contact";
 
 
 function App() {
-  const { setData, getImageKeys } = useRootRedux();
+  const { setData, getImageKeys, isLoading } = useRootRedux();
   const { getDocumentFromCollection } = useFirestoreActions();
 
   //run on init
@@ -34,12 +34,15 @@ function App() {
     <div className="App">
       <div className="noise-overlay"></div>
       <Navbar/>
-      <Routes>
-        <Route element={<Home/>} path="/"/>
-        <Route element={<Projects/>} path="/projects/*"/>
-        <Route element={<About/>} path="/about"/>
-        <Route element={<Contact/>} path="/contact"/>
-      </Routes>
+
+      {!isLoading && <div>
+        <Routes>
+          <Route element={<Home/>} path="/"/>
+          <Route element={<Projects/>} path="/projects/*"/>
+          <Route element={<About/>} path="/about"/>
+          <Route element={<Contact/>} path="/contact"/>
+        </Routes>
+      </div>}
     </div>
   );
 }
