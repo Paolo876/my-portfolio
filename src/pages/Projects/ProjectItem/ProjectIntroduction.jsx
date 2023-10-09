@@ -105,7 +105,7 @@ const ProjectIntroduction = ({ title, description, logo }) => {
         sx={{display: {xs: "none", sm: "initial"}}}>
         <Fade appear={true} in={true} timeout={1000}  style={{ transitionDelay: "1600ms" }}>
           <Box sx={{height: "auto", width: "auto", maxWidth: 300, maxHeight: 300, ml: "auto"}}>
-            <Image src={logo} fit='cover' duration={0}/>
+            <Image src={logo.url} fit='cover' duration={0} alt={logo.name}/>
           </Box>
         </Fade>
       </Grid>
