@@ -184,7 +184,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "mernshop", 
     title: "MernShop",
-    briefDescription: "A fully working e-commerce web application mockup inspired by TraversyMedia.",
+    briefDescription: "A mockup e-commerce web application with authentication and validation features.",
     description: "MernShop is an e-commerce web application mockup inspired by TraversyMedia's ReactJS Udemy Course. It showcases the system and functionalities of an e-commerce application with extra security and validation features.",
     technologies: [ "JavaScript", "React", "Redux", "NodeJs", "ExpressJs", "MongoDB", "Bootstrap"],
     type: "personal",
@@ -294,7 +294,7 @@ const MOCK_PROJ_LIST = [
   {
     name: "downtownsuitsdirect", 
     title: "Downtown Suits Direct",
-    briefDescription: "A men's suit and tailor shop located in Pico Rivera, California.",
+    briefDescription: "A website for a men's suit and tailor shop located in Pico Rivera, California.",
     description: "Downtown Suits Direct is a men's suit and tailor shop located in Pico Rivera, California. It is an ongoing commissioned project that I am still currently designing and developing.",
     technologies: [ "JavaScript", "React","Firebase", "Material-UI", "Sass/Scss"],
     type: "commissioned",
