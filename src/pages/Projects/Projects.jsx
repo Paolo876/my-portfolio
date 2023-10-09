@@ -330,7 +330,7 @@ const MOCK_PROJ_LIST = [
       name: "dsd_banner_KnjX9wWbKf.png",
     },
     features: [
-      "aos animations applied on components",
+      "animate-on-screen animations applied on components",
       "Implemented Yelp api to display customer reviews and feedbacks",
       "Image optimization using Imagekit.io api",
       "Inquiry form forwards data to client's email using EmailJS api",
@@ -351,7 +351,7 @@ const MOCK_PROJ_LIST = [
     name: "carlportfolio", 
     title: "Carl Adriant Portfolio",
     briefDescription: "A web portfolio of an architect based in Doha, Qatar that I designed and developed.",
-    description: "A web portfolio of an architect based in Doha, Qatar that I designed and developed.",
+    description: "A web portfolio of an architect based in Doha, Qatar that I designed and developed. This includes an admin page for the owner using firebase authentication that only authorizes content editing through his email logged in on admin page.",
     technologies: [ "JavaScript", "React", "Firebase", "Material-UI", "Sass/Scss"],
     type: "commissioned",
     images: [
@@ -385,14 +385,49 @@ const MOCK_PROJ_LIST = [
       title: "Contact Page",
       description: "Shows contact informations and an Inquiry form that submits directly to owner's email"
       }, 
+      {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/carl/carl_6_eEMLktmXx.webp?updatedAt=1696816280678",
+      name: "carl_6_eEMLktmXx.webp",
+      title: "Login Page [Admin]",
+      description: "Allows the client to login with his email to edit/update his projects, about page contents, and contact informations"
+      }, 
+      {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/carl/carl_7_4-gchFjXuj.webp?updatedAt=1696816280984",
+      name: "carl_7_4-gchFjXuj.webp",
+      title: "New Project Page [Admin]",
+      description: "Allows the client to create a new project album and upload images"
+      }, 
+      {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/carl/carl_8_elf_K3XLXi.webp?updatedAt=1696816280792",
+      name: "carl_8_elf_K3XLXi.webp",
+      title: "Manage Projects Page [Admin]",
+      description: "Allows the client to edit, upload more images, delete images, and delete a project album"
+      }, 
+      {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/carl/carl_9_Kh5Ie-qcY.webp?updatedAt=1696816280977",
+      name: "carl_9_Kh5Ie-qcY.webp",
+      title: "Projects Reorder Modal [Admin]",
+      description: "Allows the client to reorder his projects by click and drag"
+      }, 
+      {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/carl/carl_10_5MlqRo8SCA.webp?updatedAt=1696816281036",
+      name: "carl_10_5MlqRo8SCA.webp",
+      title: "Update Resume Page [Admin]",
+      description: "Allows the client to update his resume and other informations"
+      }, 
     ],    
     coverImage: {
       url: "https://ik.imagekit.io/q5892cimh/my-portfolio/carl/carl_banner_swt7NBvqiF.png?updatedAt=1696574860030",
       name: "carl_banner_swt7NBvqiF.png"
     },
-    features: [],
-    url: "http://www.google.com",
-    githubUrl: "http://www.google.com",
+    features: [
+      "animate-on-screen animations applied on components",
+      "Image optimization using Imagekit.io api",
+      "Inquiry form forwards data to client's email using EmailJS api",
+      "Admin powers to edit/update content (only allowed through owner's email logged in)"
+    ],
+    url: "https://carl-dimabuyu.web.app/",
+    githubUrl: "https://github.com/Paolo876/carl_portfolio",
     logo: {
       url: "https://ik.imagekit.io/q5892cimh/my-portfolio/carl/ADOBO_-_signature_-_logo_-_white_zo4ZUstyF.png?updatedAt=1696810590578",
       name: "ADOBO_-_signature_-_logo_-_white_zo4ZUstyF.png"
