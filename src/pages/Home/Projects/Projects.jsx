@@ -67,11 +67,11 @@ const Projects = () => {
               <Typography 
                 variant="body1" 
                 sx={{
-                  fontSize: {xs: 12.5, sm: 14.5, md: 14.5, lg:15, xl: 15},
+                  fontSize: {xs: 12.5, sm: 14, md: 14, lg:14.5, xl: 14.5},
                   fontWeight: 100,
                   opacity: .5,
                   letterSpacing: 1.25,
-                  lineHeight: 1.6,
+                  lineHeight: 1.8,
                   textShadow: "1px 1px 5px rgba(50,50,50,.5)",
                 }}
               >
