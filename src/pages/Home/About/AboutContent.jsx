@@ -78,8 +78,8 @@ const AboutContent = ({ isVisible }) => {
                     pr: {xl: 2}
                   }}
                 >
-                  I studied Computer Information Systems major in Web Development and Software Development at Pasadena City College. 
-                  A big part of my knowledge is also gained from self-studying through online courses, tutorials, and participating in different coding groups.
+                  I studied Computer Information Systems major in Web Development and Software Development. 
+                  A big part of my knowledge is also gained from self-studying through various online courses, tutorials, and participating in different coding groups.
                 </Typography>
               </Box>
             </Fade>
@@ -127,8 +127,8 @@ const AboutContent = ({ isVisible }) => {
                     pr: {xl: 2}
                   }}
                 >
-                  I studied Computer Information Systems major in Web Development and Software Development at Pasadena City College. 
-                  A big part of my knowledge is also gained from self-studying through online courses, tutorials, and participating in different coding groups.
+                  I studied Computer Information Systems major in Web Development and Software Development. 
+                  A big part of my knowledge is also gained from self-studying through various online courses, tutorials, and participating in different coding groups.
                 </Typography>
               </Box>
             </Fade>
