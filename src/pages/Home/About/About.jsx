@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 
 
 const About = () => {
-  const [ showContent, setShowContent ] = useState(false);
+  const [ showContent, setShowContent ] = useState(true);
   const [ isUnmounted, setIsUnmounted ] = useState(false)
     
   const { ref, inView } = useInView({

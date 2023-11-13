@@ -22,7 +22,7 @@ const SkillsDescription = ({ isVisible }) => {
   return (
     <Stack pl={{xs: 3, sm: 3, md: 2, lg: 3.5, xl: 5}}>
       <Fade appear={isVisible} in={isVisible} timeout={1100}  style={{ transitionDelay: "1300ms" }}>
-        <Box mb={{md: 5, lg: 6, xl: 8}}>
+        <Box mb={{md: 5, lg: 6, xl: 6}}>
           <Typography 
             variant="h2" 
             fontWeight={500}
@@ -48,13 +48,14 @@ const SkillsDescription = ({ isVisible }) => {
               fontSize: {xs: 12, sm: 13, md: 14, lg:16, xl: 16},
               opacity: .5,
               letterSpacing: 1.25,
-              lineHeight: 1.6,
+              lineHeight: 1.8,
               fontWeight: 100,
               textShadow: "1px 1px 5px rgba(10,10,10,.75)",
             }}
           >
-            My skillset is heavily focused on designing and developing web based applications. 
-            However, I do have ample knowledge in software development, database management, and other related technologies.
+            {/* My skillset is heavily focused on designing and developing web based applications. 
+            However, I do have ample knowledge in software development, database management, and other related technologies. */}
+            Although my skillset is heavily focused on designing and developing web based applications, I also have ample knowledge in software development, database management, and other related technologies.
           </Typography>
         </Box>
       </Fade>

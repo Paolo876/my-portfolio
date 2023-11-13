@@ -69,11 +69,11 @@ const AboutContent = ({ isVisible }) => {
                 <Typography
                   variant="body1" 
                   sx={{
-                    fontSize: {xs: 12, sm: 13, md: 14, lg:16, xl: 16},
+                    fontSize: {xs: 12, sm: 13, md: 14, lg:15.5, xl: 15.5},
                     fontWeight: 100,
                     opacity: .5,
                     letterSpacing: 1.25,
-                    lineHeight: 1.6,
+                    lineHeight: 1.8,
                     textShadow: "1px 1px 5px rgba(10,10,10,.75)",
                     pr: {xl: 2}
                   }}
@@ -124,6 +124,7 @@ const AboutContent = ({ isVisible }) => {
                     opacity: .55,
                     letterSpacing: .4,
                     textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+                    // lineHeight: 1.8,
                     pr: {xl: 2}
                   }}
                 >
