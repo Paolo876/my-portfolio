@@ -292,6 +292,67 @@ const MOCK_PROJ_LIST = [
     }
   },
   {
+    name: "markandgaea", 
+    title: "Mark and Gaea Wedding",
+    briefDescription: "A website for a men's suit and tailor shop located in Pico Rivera, California.",
+    description: "Downtown Suits Direct is a men's suit and tailor shop located in Pico Rivera, California. It is an ongoing commissioned project that I am still currently designing and developing.",
+    technologies: [ "JavaScript", "React","Firebase", "Material-UI", "Sass/Scss"],
+    type: "commissioned",
+    images: [
+      {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_1_NReV9xPSG.webp?updatedAt=1696574840863",
+      name: "dsd_1_NReV9xPSG.webp",
+      title: "Home Page [Landing]",
+      description: "Shows contact information, store address, and store hours"
+      }, 
+      {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_2_C7YO23QRGb.webp?updatedAt=1696574841699",
+      name: "dsd_2_C7YO23QRGb.webp",
+      title: "Home Page [Gallery]",
+      description: "Shows gallery images and click redirects to gallery page"
+      }, 
+      {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_3_H-yV9jBiq.webp?updatedAt=1696574841255",
+      name: "dsd_3_H-yV9jBiq.webp",
+      title: "Home Page [Yelp Reviews]",
+      description: "Lists client testimonies using Yelp Api"
+      }, 
+      {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_4_6oq8k35kOG.webp?updatedAt=1696574840744",
+      name: "dsd_4_6oq8k35kOG.webp",
+      title: "Gallery Page",
+      description: "Shows a list of store images"
+      }, 
+      {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_5_eXZUhIiK5u.webp?updatedAt=1696574841104",
+      name: "dsd_5_eXZUhIiK5u.webp",
+      title: "Contact Page",
+      description: "Shows contact informations and an Inquiry form that submits directly to owner's email"
+      }, 
+    ], 
+    coverImage: {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_banner_KnjX9wWbKf.png?updatedAt=1696574841100",
+      name: "dsd_banner_KnjX9wWbKf.png",
+    },
+    features: [
+      "animate-on-screen animations applied on components",
+      "Implemented Yelp api to display customer reviews and feedbacks",
+      "Image optimization using Imagekit.io api",
+      "Inquiry form forwards data to client's email using EmailJS api",
+    ],
+    url: "https://downtownsuitsdirectla.web.app/",
+    githubUrl: "https://github.com/Paolo876/downtownsuitsdirect",
+    logo: {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_logo_N3TpgC4kC.png?updatedAt=1696574840537",
+      name: "dsd_logo_N3TpgC4kC.png"
+    },
+    palette: {
+      primary: "#237b72",
+      secondary: "#2e779d",
+    }
+
+  },
+  {
     name: "downtownsuitsdirect", 
     title: "Downtown Suits Direct",
     briefDescription: "A website for a men's suit and tailor shop located in Pico Rivera, California.",
