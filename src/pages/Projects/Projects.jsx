@@ -296,55 +296,73 @@ const MOCK_PROJ_LIST = [
     title: "Mark and Gaea Wedding",
     briefDescription: "A RSVP website for a wedding back in December 2023.",
     description: "This is a commissioned project that I designed and developed for a wedding's RSVP back in December 2023. It features on-scroll animations and a minimalist design. Submitted forms are stored on a database and an admin page is included for the client to manage their guests.",
-    technologies: [ "JavaScript", "React","Firebase", "Material-UI", "Sass/Scss"],
+    technologies: [ "JavaScript", "React", "Redux", "Firebase", "Material-UI", "Sass/Scss"],
     type: "commissioned",
     images: [
       {
-      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_1_NReV9xPSG.webp?updatedAt=1696574840863",
-      name: "dsd_1_NReV9xPSG.webp",
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/markandgaea/mandg_1_cqK8BqFQp.webp?updatedAt=1705465698030",
+      name: "mandg_1_cqK8BqFQp.webp",
       title: "Home Page [Landing]",
-      description: "Shows contact information, store address, and store hours"
+      description: "Shows the main navigation and welcome image banner"
       }, 
       {
-      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_2_C7YO23QRGb.webp?updatedAt=1696574841699",
-      name: "dsd_2_C7YO23QRGb.webp",
-      title: "Home Page [Gallery]",
-      description: "Shows gallery images and click redirects to gallery page"
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/markandgaea/mandg_2_nwuj6adYbH.webp?updatedAt=1705465699040",
+      name: "mandg_2_nwuj6adYbH.webp",
+      title: "Home Page [Details]",
+      description: "Shows details, date, and time of the wedding"
       }, 
       {
-      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_3_H-yV9jBiq.webp?updatedAt=1696574841255",
-      name: "dsd_3_H-yV9jBiq.webp",
-      title: "Home Page [Yelp Reviews]",
-      description: "Lists client testimonies using Yelp Api"
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/markandgaea/mandg_3_OgFTDkXNX.webp?updatedAt=1705465698508",
+      name: "mandg_3_OgFTDkXNX.webp",
+      title: "Home Page [Details]",
+      description: "Shows dress code required for the wedding"
       }, 
       {
-      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_4_6oq8k35kOG.webp?updatedAt=1696574840744",
-      name: "dsd_4_6oq8k35kOG.webp",
-      title: "Gallery Page",
-      description: "Shows a list of store images"
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/markandgaea/mandg_4_rW6N3vebIg.webp?updatedAt=1705465699045",
+      name: "mandg_4_rW6N3vebIg.webp",
+      title: "Home Page [Map]",
+      description: "The address and map of the wedding venue. A button to navigate to the venue is included"
       }, 
       {
-      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_5_eXZUhIiK5u.webp?updatedAt=1696574841104",
-      name: "dsd_5_eXZUhIiK5u.webp",
-      title: "Contact Page",
-      description: "Shows contact informations and an Inquiry form that submits directly to owner's email"
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/markandgaea/mandg_5_s2l8OVGy_D.webp?updatedAt=1705465698156",
+      name: "mandg_5_s2l8OVGy_D.webp",
+      title: "Home Page [RSVP Form]",
+      description: "The form to be submitted by the invited guest to confirm their RSVP."
+      }, 
+      {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/markandgaea/mandg_6_sMgid1Q7F6.webp?updatedAt=1705465698966",
+      name: "mandg_6_sMgid1Q7F6.webp",
+      title: "Home Page [RSVP Submission]",
+      description: "The notification that shows when submission was successful."
+      }, 
+      {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/markandgaea/mandg_7_jK_jb-oqu6.webp?updatedAt=1705465699063",
+      name: "mandg_7_jK_jb-oqu6.webp",
+      title: "Admin Page [Login]",
+      description: "The login page for admin. The client is created an account and can be logged in through their gmail"
+      }, 
+      {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/markandgaea/mandg_8_Q5geRHzqG.webp?updatedAt=1705465698828",
+      name: "mandg_8_Q5geRHzqG.webp",
+      title: "Admin Page [Guests List]",
+      description: "The list of guests that submitted their RSVP is listed and can be managed, edited, or deleted by the admin."
       }, 
     ], 
     coverImage: {
-      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_banner_KnjX9wWbKf.png?updatedAt=1696574841100",
-      name: "dsd_banner_KnjX9wWbKf.png",
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/markandgaea/markandgaea_banner_L6vlF6oFS.png?updatedAt=1705466012798",
+      name: "markandgaea_banner_L6vlF6oFS.png",
     },
     features: [
       "animate-on-screen animations applied on components",
-      "Implemented Yelp api to display customer reviews and feedbacks",
       "Image optimization using Imagekit.io api",
-      "Inquiry form forwards data to client's email using EmailJS api",
+      "Submitted RSVP forms are stored on database",
+      "Authorized admins can login through their gmail (Oauth2.0)",
     ],
-    url: "https://downtownsuitsdirectla.web.app/",
-    githubUrl: "https://github.com/Paolo876/downtownsuitsdirect",
+    url: "https://markandgaea.com/",
+    githubUrl: "https://github.com/Paolo876/mark-and-gaea",
     logo: {
-      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/dsd/dsd_logo_N3TpgC4kC.png?updatedAt=1696574840537",
-      name: "dsd_logo_N3TpgC4kC.png"
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/markandgaea/logo_wbaCh4Lwz.png?updatedAt=1705465836928",
+      name: "logo_wbaCh4Lwz.png"
     },
     palette: {
       primary: "#237b72",
