@@ -7,45 +7,45 @@ import { keyframes } from '@mui/system';
 
 
 const linkStyles = {
-  fontSize: { xs: "1.2rem", sm: "1.5rem", md: "1.55rem", lg: "1.6rem", xl:"1.6rem" },
-  my: { xs:2.5, sm: 3.5, md: 4, lg: 4 },
+  fontSize: { xs: "1.2rem", sm: "1.4rem", md: "1.45rem", lg: "1.5rem" },
+  my: { xs:2.5, sm: 3.5, md: 4, lg: 3 },
   borderRight: 2, 
   borderColor: "primary.dark",
   width: "fit-content",
-  pr: 2,
+  pr: 2.5,
   lineHeight: 1,
   fontWeight: 500,
   textAlign: "right",
-  textTransform: "none",
-  letterSpacing: {xs: .351, sm:.5},
+  // textTransform: "none",
+  letterSpacing: {xs: .351, sm:.5, md: 3},
   width: "fit-content",
-  opacity: .75,
+  opacity: .8,
   transition: "all 200ms ease-in-out",
   fontFamily: "Manrope",
   "&:hover":{
     opacity:1,
-    textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+    textShadow: "1px 1px 3px rgba(100,100,100,.85)",
     transform: "scale(1.025) translateX(-2px)",
     borderColor: "primary.main",
-    letterSpacing: 1,
+    letterSpacing: {xs: .5, sm: .8, md: 3.2},
   }
 }
 
 const nameStyles = {
   textTransform: "none",
   fontWeight: 800,
-  fontSize: { xs:"5.6rem", sm: "8.5rem", md: "10.5rem", lg: "10.5rem" },
-  lineHeight: .9,
+  fontSize: { xs:"5.6rem", sm: "8.5rem", md: "10.5rem", lg: "10.5rem", xl: "11rem" },
+  lineHeight: .85,
   letterSpacing: -2.5,
   userSelect: "none",
-  opacity: .85,
+  opacity: .9,
   textShadow: "1px 1px 3px rgba(200,200,200,.4)",
 }
 
 const subHeaderStyles = {
   fontWeight: 200, 
-  fontSize: { xs: "1rem", sm: "1.5rem", md: "1.7rem", lg: "1.6rem", xl:"1.6rem" },
-  opacity: .55, 
+  fontSize: { xs: "1rem", sm: "1.45rem", md: "1.65rem", lg: "1.45rem", xl:"1.5rem" },
+  opacity: .5, 
   mixBlendMode: "difference", 
   letterSpacing: .5,
   textTransform: "none",
@@ -53,7 +53,7 @@ const subHeaderStyles = {
 }
 
 const subHeaderSymbolStyles = {
-  opacity: .5,
+  opacity: .45,
   fontWeight: 600,
 }
 
