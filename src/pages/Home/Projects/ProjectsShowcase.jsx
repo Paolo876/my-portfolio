@@ -41,7 +41,7 @@ const ProjectsShowcase = () => {
         position: "absolute",
         top: 0,
         right: {xs: 0, md: "initial"},
-        transform: {xs: "translateX(2em)", md: "translateX(23em)", lg: "translateX(29em)", xl: "translateX(38em)"},
+        transform: {xs: "translateX(2em)", md: "translateX(23em)", lg: "translateX(29em)", xl: "translateX(40em)"},
         pt: {xs:18, sm: 15, md: 11, lg: 14, xl: 18},
         pb: {xs:0, sm: 0, md: 11, lg: 14, xl: 18},
         display: "flex",

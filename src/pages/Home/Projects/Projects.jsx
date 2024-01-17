@@ -43,7 +43,7 @@ const Projects = () => {
     >
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(255,255,255,1)", mixBlendMode: "overlay", opacity: .2, zIndex: -1}}></Box>
       <Grid container sx={{maxWidth: "1500px", height: "100%", mx: "auto", overflowX:"auto", overflowY: "hidden"}} ref={ref}>
-        <Grid item xs={12} sm={10.5} md={3.75} lg={3.5} xl={3}>
+        <Grid item xs={12} sm={10.5} md={3.75} lg={3.5} xl={4.25}>
           <Fade appear={inView} in={inView} timeout={1100}  style={{ transitionDelay: "300ms" }}>
             <Box>
               <Typography 
@@ -67,11 +67,11 @@ const Projects = () => {
               <Typography 
                 variant="body1" 
                 sx={{
-                  fontSize: {xs: 12.5, sm: 14, md: 14, lg:14.5, xl: 14.5},
+                  fontSize: {xs: 12.5, sm: 14, md: 14, lg:15},
                   fontWeight: 100,
-                  opacity: .5,
-                  letterSpacing: 1.25,
-                  lineHeight: 1.8,
+                  opacity: .6,
+                  letterSpacing: 1.3,
+                  lineHeight: 2,
                   textShadow: "1px 1px 5px rgba(50,50,50,.5)",
                 }}
               >

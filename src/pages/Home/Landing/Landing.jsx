@@ -7,8 +7,8 @@ import { keyframes } from '@mui/system';
 
 
 const linkStyles = {
-  fontSize: { xs: "1.2rem", sm: "1.4rem", md: "1.45rem", lg: "1.5rem" },
-  my: { xs:2.5, sm: 3.5, md: 4, lg: 3 },
+  fontSize: { xs: "1.1rem", sm: "1.3rem", md: "1.4rem", lg: "1.5rem" },
+  my: { xs:3, sm: 3, md: 3, lg: 3 },
   borderRight: 2, 
   borderColor: "primary.dark",
   width: "fit-content",
@@ -17,7 +17,7 @@ const linkStyles = {
   fontWeight: 500,
   textAlign: "right",
   // textTransform: "none",
-  letterSpacing: {xs: .351, sm:.5, md: 3},
+  letterSpacing: {xs: 2.5, sm:3, md: 3},
   width: "fit-content",
   opacity: .8,
   transition: "all 200ms ease-in-out",
