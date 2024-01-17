@@ -294,8 +294,8 @@ const MOCK_PROJ_LIST = [
   {
     name: "markandgaea", 
     title: "Mark and Gaea Wedding",
-    briefDescription: "A website for a men's suit and tailor shop located in Pico Rivera, California.",
-    description: "Downtown Suits Direct is a men's suit and tailor shop located in Pico Rivera, California. It is an ongoing commissioned project that I am still currently designing and developing.",
+    briefDescription: "A RSVP website for a wedding back in December 2023.",
+    description: "This is a commissioned project that I designed and developed for a wedding's RSVP back in December 2023. It features on-scroll animations and a minimalist design. Submitted forms are stored on a database and an admin page is included for the client to manage their guests.",
     technologies: [ "JavaScript", "React","Firebase", "Material-UI", "Sass/Scss"],
     type: "commissioned",
     images: [
