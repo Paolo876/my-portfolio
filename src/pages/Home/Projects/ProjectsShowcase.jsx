@@ -5,8 +5,8 @@ import { keyframes } from '@mui/system';
 
 
 const previewBoxStyles = {
-  height: {xs: 155, sm: 230, md: 290, lg: 360, xl:410}, 
-  width: {xs: 110, sm: 180, md: 240, lg: 310, xl: 360}, 
+  height: {xs: 155, sm: 230, md: 320, lg: 360, xl:410}, 
+  width: {xs: 110, sm: 180, md: 270, lg: 310, xl: 360}, 
   border: 1, 
   transform: "skewX(-7deg)",
 }
@@ -41,8 +41,8 @@ const ProjectsShowcase = () => {
         position: "absolute",
         top: 0,
         right: {xs: 0, md: "initial"},
-        transform: {xs: "translateX(2em)", md: "translateX(23em)", lg: "translateX(29em)", xl: "translateX(40em)"},
-        pt: {xs:18, sm: 15, md: 11, lg: 14, xl: 18},
+        transform: {xs: "translateX(2em)", md: "translateX(10em)", lg: "translateX(29em)", xl: "translateX(40em)"},
+        pt: {xs:18, sm: 15, md: 18, lg: 14, xl: 18},
         pb: {xs:0, sm: 0, md: 11, lg: 14, xl: 18},
         display: "flex",
         flexDirection: "column",

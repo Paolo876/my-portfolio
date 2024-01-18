@@ -34,7 +34,7 @@ const Projects = () => {
       sx={{
         position: "relative", 
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
-        py: {xs:5, sm: 6, md: 8, lg: 12, xl: 18},
+        py: {xs:5, sm: 6, md: 10, lg: 14, xl: 25},
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -43,7 +43,7 @@ const Projects = () => {
     >
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(255,255,255,1)", mixBlendMode: "overlay", opacity: .2, zIndex: -1}}></Box>
       <Grid container sx={{maxWidth: "1500px", height: "100%", mx: "auto", overflowX:"auto", overflowY: "hidden"}} ref={ref}>
-        <Grid item xs={12} sm={10.5} md={3.75} lg={3.5} xl={4.25}>
+        <Grid item xs={12} sm={10.5} md={11} lg={3.5} xl={4.25}>
           <Fade appear={inView} in={inView} timeout={1100}  style={{ transitionDelay: "300ms" }}>
             <Box>
               <Typography 
@@ -58,20 +58,20 @@ const Projects = () => {
                   textShadow: "1px 1px 7px rgba(10,10,10,.75)",
                 }}
               >
-                My <Box component="br" sx={{display: {xs: "none", md: "initial"}}}></Box>Projects
+                My <Box component="br" sx={{display: {xs: "none", lg: "initial"}}}></Box>Projects
               </Typography>
             </Box>
           </Fade>
           <Fade appear={inView} in={inView} timeout={1100}  style={{ transitionDelay: "600ms" }}>
-            <Box mt={{xs: 5, sm:6, md: 7, lg: 8, xl: 8}} ml={{md: .5}}>
+            <Box mt={{ xs: 5, sm:6 }} ml={{md: .5}}>
               <Typography 
                 variant="body1" 
                 sx={{
-                  fontSize: {xs: 12.5, sm: 14, md: 14, lg:15},
+                  fontSize: {xs: 12, sm: 13, md: 14, lg:14},
                   fontWeight: 100,
                   opacity: .6,
-                  letterSpacing: 1.3,
-                  lineHeight: 2,
+                  letterSpacing: {xs: 1, md: 1.3},
+                  lineHeight: {xs: 1.5, md: 2},
                   textShadow: "1px 1px 5px rgba(50,50,50,.5)",
                 }}
               >
@@ -81,7 +81,7 @@ const Projects = () => {
             </Box>
           </Fade>
         </Grid>        
-        <Grid item xs={12} mt={{xs: 30, sm: 40, md: 4, lg: 6, xl:10}} sx={{overflow: "hidden"}}>
+        <Grid item xs={12} mt={{xs: 30, sm: 40, md: 60, lg: 10, xl:12}} sx={{overflow: "hidden"}}>
           <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 850ms` : "none"}}>
             <ButtonBase
               onClick={() => navigate("/projects")}
