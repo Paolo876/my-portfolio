@@ -98,6 +98,7 @@ const Projects = () => {
                 opacity: .85,
                 transition: "all 200ms ease-in-out",
                 fontFamily: "Manrope",
+                textTransform: "uppercase",
                 textShadow: "1px 1px 3px rgba(100,100,100,.75)",
                 "&:hover":{
                   opacity:1,
