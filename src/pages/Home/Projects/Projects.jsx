@@ -34,7 +34,7 @@ const Projects = () => {
       sx={{
         position: "relative", 
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
-        py: {xs:5, sm: 6, md: 10, lg: 14, xl: 25},
+        py: {xs:8, sm: 10, md: 12, lg: 16, xl: 20},
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -50,7 +50,7 @@ const Projects = () => {
                 variant="h2" 
                 align="left" 
                 fontWeight={400}
-                fontSize={{xs: 35, sm: 45, md: 60, lg: 80, xl: 80}} 
+                fontSize={{xs: 45, sm: 50, md: 60, lg: 80, xl: 80}} 
                 letterSpacing={-.1}
                 lineHeight={{xs:1}} 
                 textTransform="none"
@@ -87,15 +87,15 @@ const Projects = () => {
               onClick={() => navigate("/projects")}
               sx={{
                 borderLeft: 2, 
-                fontSize: { xs: "1.2rem", sm: "1.35rem", md: "1.35rem", lg: "1.4rem", xl:"1.4rem" },
+                fontSize: { xs: "1rem", sm: "1.3rem", md: "1.35rem", lg: "1.4rem" },
                 lineHeight: 1.4, 
                 color: "white", 
                 borderColor: "primary.dark",
                 px: 1.5,
                 py: .25,
                 fontWeight: 600,
-                letterSpacing: .4,
-                opacity: .85,
+                letterSpacing: {xs: 2.25, sm:3},
+                opacity: .75,
                 transition: "all 200ms ease-in-out",
                 fontFamily: "Manrope",
                 textTransform: "uppercase",
