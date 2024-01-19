@@ -36,10 +36,10 @@ const AboutContent = ({ isVisible }) => {
   return (
     <Grid container sx={{maxWidth: "1500px", mx: "auto", height: "90%"}}>
 			<Grid item xs={12}>
-				<Grid container columnSpacing={{xs: 0, sm:3, md: 6, lg: 6, xl:12}}>
+				<Grid container columnSpacing={{xs: 0, sm:3, md: 6, lg: 6, xl:8}}>
 					<Grid item xs={3.75} sm={3} sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
             <Fade appear={isVisible} in={isVisible} timeout={1100}  style={{ transitionDelay: "1150ms" }}>
-						  <Box sx={{height: {xs: 125, sm: 180, md: 240, lg: 280, xl: 300 }, width: {xs: 90, sm: 130, md: 190, lg: 230, xl: 250}, border: 1}}></Box>
+						  <Box sx={{height: {xs: 145, sm: 200, md: 260, lg: 300, xl: 320 }, width: {xs: 90, sm: 130, md: 190, lg: 230, xl: 250}, border: 1}}></Box>
             </Fade>
           </Grid>
 					<Grid item xs={8.25} sm={9} sx={{display: "flex", flexDirection: "column", justifyContent: {xs: "center", sm: "space-between"}}}>
@@ -50,32 +50,33 @@ const AboutContent = ({ isVisible }) => {
                   fontWeight={700}
                   fontSize={{xs: 18, sm: 23.5, md: 26, lg: 32, xl: 35}} 
                   letterSpacing={{xs: -.05, sm: -.1,}}
-                  lineHeight={1.45} 
+                  lineHeight={1.3} 
                   textTransform="none"
                   sx={{
                     textShadow: "1px 1px 7px rgba(10,10,10,.75)",
                   }}
                 >
-                  <Box component="span" fontSize={{xs: 25.5, sm: 30.5, md: 33, lg: 39, xl: 42}} sx={{letterSpacing: .75}}>I am Paolo Bugarin</Box>, 
+                  <Box component="span" fontSize={{xs: 15.5, sm: 20.5, md: 23, lg: 29, xl: 40}} sx={{letterSpacing: .75, fontWeight: 300, opacity: .65, pr: 1}}>I am </Box>
+                  <Box component="span" fontSize={{xs: 25.5, sm: 30.5, md: 33, lg: 39, xl: 50}} sx={{letterSpacing: .75}}> Paolo Bugarin</Box>, 
                   <br/>
-                  <Box component="span" fontWeight={500} sx={{opacity: .75}}>
+                  <Box component="span" fontWeight={200} sx={{opacity: .65}}>
                     a Web Developer based in <Box component="br" sx={{display: {xs:"none", sm: "initial", md: "none"}}}></Box>Los Angeles, California.
                   </Box>
                 </Typography>
               </Box>
             </Fade>
             <Fade appear={isVisible} in={isVisible} timeout={1100}  style={{ transitionDelay: "550ms" }}>
-              <Box pb={{md: 1.5, lg:3}} pt={{sm:2, lg: 4}} sx={{maxWidth: "100%", display: {xs: "none", sm: "initial"}}}>
+              <Box mb={{md: 1.5, lg: "auto"}} pt={3} sx={{maxWidth: "100%", display: {xs: "none", sm: "initial"}}}>
                 <Typography
                   variant="body1" 
                   sx={{
                     fontSize: {xs: 12, sm: 13, md: 14, lg:15.5, xl: 15.5},
                     fontWeight: 100,
-                    opacity: .5,
-                    letterSpacing: 1.25,
-                    lineHeight: 1.8,
-                    textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-                    pr: {xl: 2}
+                    opacity: .6,
+                    letterSpacing: {xs: 1, md: 1.3},
+                    lineHeight: {xs: 1.5, md: 2},
+                    textShadow: "1px 1px 5px rgba(50,50,50,.5)",
+                    // pr: {xl: 2}
                   }}
                 >
                   I studied Computer Information Systems major in Web Development and Software Development. 
@@ -89,20 +90,21 @@ const AboutContent = ({ isVisible }) => {
                   onClick={() => navigate("/about")}
                   sx={{
                     borderLeft: 2, 
-                    fontSize: { xs: "1.25rem", sm: "1.3rem", md: "1.3rem", lg: "1.4rem", xl:"1.4rem" },
+                    fontSize: { xs: "1rem", sm: "1.1rem", md: "1.2rem", lg: "1.25rem" },
                     lineHeight: 1.4, 
                     color: "white", 
                     borderColor: "primary.dark",
                     px: 1.5,
                     py: .25,
                     fontWeight: 600,
-                    letterSpacing: .4,
-                    opacity: .85,
-                    transition: "all 250ms ease-in-out",
+                    letterSpacing: {xs: 2.25, sm:3},
+                    opacity: .75,
+                    transition: "all 200ms ease-in-out",
                     fontFamily: "Manrope",
+                    textTransform: "uppercase",
+                    textShadow: "1px 1px 3px rgba(100,100,100,.75)",
                     "&:hover":{
                       opacity:1,
-                      textShadow: "1px 1px 3px rgba(100,100,100,.75)",
                       transform: "scale(1.02)",
                       borderColor: "primary.main",
                     }
