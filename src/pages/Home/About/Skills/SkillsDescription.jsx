@@ -22,12 +22,12 @@ const SkillsDescription = ({ isVisible }) => {
   return (
     <Stack pl={{xs: 3, sm: 3, md: 2, lg: 3.5, xl: 5}}>
       <Fade appear={isVisible} in={isVisible} timeout={1100}  style={{ transitionDelay: "1300ms" }}>
-        <Box mb={{md: 5, lg: 6, xl: 6}}>
+        <Box mb={{md: 4}}>
           <Typography 
             variant="h2" 
-            fontWeight={500}
-            fontSize={{md: 30, lg: 35, xl: 40}} 
-            letterSpacing={.5}
+            fontWeight={400}
+            fontSize={{md: 35, lg: 40, xl: 46}} 
+            letterSpacing={.75}
             textTransform="none"
             align="right"
             sx={{
@@ -39,7 +39,7 @@ const SkillsDescription = ({ isVisible }) => {
         </Box>
       </Fade>
       <Fade appear={isVisible} in={isVisible} timeout={1100}  style={{ transitionDelay: "1550ms" }}>
-        <Box ml="auto" sx={{ maxWidth: "100%" }} mb={{md: 3, lg: 5, xl:7}}>
+        <Box ml="auto" sx={{ maxWidth: "100%" }} mb={{md: 5, lg: 8}}>
           <Typography 
             variant="body1" 
             sx={{
@@ -53,9 +53,9 @@ const SkillsDescription = ({ isVisible }) => {
               textShadow: "1px 1px 5px rgba(10,10,10,.75)",
             }}
           >
-            {/* My skillset is heavily focused on designing and developing web based applications. 
-            However, I do have ample knowledge in software development, database management, and other related technologies. */}
-            Although my skillset is heavily focused on designing and developing web based applications, I also have ample knowledge in software development, database management, and other related technologies.
+            My skillset is heavily focused on web based applications. 
+            However, I do have ample knowledge in software development, database management, and other related technologies.
+            {/* Although my skillset is heavily focused on designing and developing web based applications, I also have ample knowledge in software development, database management, and other related technologies. */}
           </Typography>
         </Box>
       </Fade>
@@ -65,20 +65,21 @@ const SkillsDescription = ({ isVisible }) => {
             onClick={() => navigate("/about")}
             sx={{
               borderRight: 2, 
-              fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.2rem", lg: "1.35rem", xl:"1.35rem" },
+              fontSize: { xs: "1rem", sm: "1.3rem" },
               lineHeight: 1.4, 
               color: "white", 
               borderColor: "primary.dark",
               px: 1.5,
               py: .25,
               fontWeight: 600,
-              letterSpacing: .4,
-              opacity: .85,
-              transition: "all 250ms ease-in-out",
+              letterSpacing: {xs: 2.25, sm:3},
+              opacity: .75,
+              transition: "all 200ms ease-in-out",
               fontFamily: "Manrope",
+              textTransform: "uppercase",
+              textShadow: "1px 1px 3px rgba(100,100,100,.75)",
               "&:hover":{
                 opacity:1,
-                textShadow: "1px 1px 3px rgba(100,100,100,.75)",
                 transform: "scale(1.02)",
                 borderColor: "primary.main",
               }

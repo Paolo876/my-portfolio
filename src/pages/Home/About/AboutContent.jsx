@@ -177,20 +177,21 @@ const AboutContent = ({ isVisible }) => {
               onClick={() => navigate("/about")}
               sx={{
                 borderLeft: 2, 
-                fontSize: { xs: "1rem", sm: "1.2rem" },
+                fontSize: { xs: "1rem", sm: "1.3rem" },
                 lineHeight: 1.4, 
                 color: "white", 
                 borderColor: "primary.dark",
                 px: 1.5,
                 py: .25,
                 fontWeight: 600,
-                letterSpacing: .4,
-                opacity: .85,
-                transition: "all 250ms ease-in-out",
+                letterSpacing: {xs: 2.25, sm:3},
+                opacity: .75,
+                transition: "all 200ms ease-in-out",
                 fontFamily: "Manrope",
+                textTransform: "uppercase",
+                textShadow: "1px 1px 3px rgba(100,100,100,.75)",
                 "&:hover":{
                   opacity:1,
-                  textShadow: "1px 1px 3px rgba(100,100,100,.75)",
                   transform: "scale(1.02)",
                   borderColor: "primary.main",
                 }
