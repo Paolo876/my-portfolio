@@ -48,7 +48,7 @@ const AboutContent = ({ isVisible }) => {
                 <Typography
                   variant="h2" 
                   fontWeight={700}
-                  fontSize={{xs: 18, sm: 23.5, md: 26, lg: 32, xl: 35}} 
+                  fontSize={{xs: 18, sm: 23.5, md: 26, lg: 34, xl: 35}} 
                   letterSpacing={{xs: -.05, sm: -.1,}}
                   lineHeight={1.3} 
                   textTransform="none"
@@ -56,8 +56,8 @@ const AboutContent = ({ isVisible }) => {
                     textShadow: "1px 1px 7px rgba(10,10,10,.75)",
                   }}
                 >
-                  <Box component="span" fontSize={{xs: 15.5, sm: 20.5, md: 23, lg: 29, xl: 40}} sx={{letterSpacing: .75, fontWeight: 300, opacity: .65, pr: 1}}>I am </Box>
-                  <Box component="span" fontSize={{xs: 25.5, sm: 30.5, md: 33, lg: 39, xl: 50}} sx={{letterSpacing: .75}}> Paolo Bugarin</Box>, 
+                  <Box component="span" fontSize={{xs: 15.5, sm: 20.5, md: 23, lg: 35, xl: 40}} sx={{letterSpacing: .75, fontWeight: 300, opacity: .65, pr: 1}}>I am </Box>
+                  <Box component="span" fontSize={{xs: 25.5, sm: 33, md: 33, lg: 45, xl: 50}} sx={{letterSpacing: .75}}> Paolo Bugarin</Box>, 
                   <br/>
                   <Box component="span" fontWeight={200} sx={{opacity: .65}}>
                     a Web Developer based in <Box component="br" sx={{display: {xs:"none", sm: "initial", md: "none"}}}></Box>Los Angeles, California.
@@ -141,20 +141,21 @@ const AboutContent = ({ isVisible }) => {
                   onClick={() => navigate("/about")}
                   sx={{
                     borderLeft: 2, 
-                    fontSize: { xs: "1rem", sm: "1.2rem", md: "1.3rem", lg: "1.4rem", xl:"1.4rem" },
+                    fontSize: { xs: "1rem", sm: "1.2rem" },
                     lineHeight: 1.4, 
                     color: "white", 
                     borderColor: "primary.dark",
                     px: 1.5,
                     py: .25,
                     fontWeight: 600,
-                    letterSpacing: .4,
-                    opacity: .85,
-                    transition: "all 250ms ease-in-out",
+                    letterSpacing: {xs: 2.25, sm:3},
+                    opacity: .75,
+                    transition: "all 200ms ease-in-out",
                     fontFamily: "Manrope",
+                    textTransform: "uppercase",
+                    textShadow: "1px 1px 3px rgba(100,100,100,.75)",
                     "&:hover":{
                       opacity:1,
-                      textShadow: "1px 1px 3px rgba(100,100,100,.75)",
                       transform: "scale(1.02)",
                       borderColor: "primary.main",
                     }
@@ -177,7 +178,7 @@ const AboutContent = ({ isVisible }) => {
               onClick={() => navigate("/about")}
               sx={{
                 borderLeft: 2, 
-                fontSize: { xs: "1rem", sm: "1.3rem" },
+                fontSize: { xs: "1rem", sm: "1.2rem" },
                 lineHeight: 1.4, 
                 color: "white", 
                 borderColor: "primary.dark",

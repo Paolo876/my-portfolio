@@ -5,17 +5,6 @@ import { Grid, Box, Typography, Divider, Fade } from '@mui/material'
 import { keyframes } from '@mui/system';
 
 
-const slideLeft = keyframes`
-  0% {
-    transform: translateX(1.5em);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`;
-
 
 const Skills = ({ isVisible }) => {
 
@@ -28,9 +17,8 @@ const Skills = ({ isVisible }) => {
             <Typography 
               variant="h2" 
               fontWeight={400}
-              fontSize={{xs: 25, sm: 30}} 
-              letterSpacing={.5}
-              lineHeight={{lg:1.6, xl:1.1}} 
+              fontSize={{xs: 25, sm: 35}} 
+              letterSpacing={.75}
               textTransform="none"
               sx={{
                 textShadow: "1px 1px 7px rgba(10,10,10,.75)",
@@ -60,7 +48,7 @@ const Skills = ({ isVisible }) => {
         </Fade>
       </Grid>
 
-      <Grid item xs={12} md={7} lg={7} mt={{xs: 4, md: 0}}>
+      <Grid item xs={12} md={7} lg={7} mt={{xs: 4, md: 6}}>
         {isVisible && <SkillsCarousel isVisible={isVisible}/>}
       </Grid>
       <Grid item md={5} lg={5} sx={{display: {xs: "none", md: "initial"}}}>

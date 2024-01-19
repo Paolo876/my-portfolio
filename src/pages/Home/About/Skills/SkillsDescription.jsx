@@ -20,13 +20,13 @@ const SkillsDescription = ({ isVisible }) => {
   const navigate = useNavigate();
 
   return (
-    <Stack pl={{xs: 3, sm: 3, md: 2, lg: 3.5, xl: 5}}>
+    <Stack pl={{xs: 3, sm: 3, md: 2, lg: 2.5, xl: 3.25}}>
       <Fade appear={isVisible} in={isVisible} timeout={1100}  style={{ transitionDelay: "1300ms" }}>
         <Box mb={{md: 4}}>
           <Typography 
             variant="h2" 
             fontWeight={400}
-            fontSize={{md: 35, lg: 40, xl: 46}} 
+            fontSize={{md: 36, lg: 40, xl: 46}} 
             letterSpacing={.75}
             textTransform="none"
             align="right"
@@ -39,7 +39,7 @@ const SkillsDescription = ({ isVisible }) => {
         </Box>
       </Fade>
       <Fade appear={isVisible} in={isVisible} timeout={1100}  style={{ transitionDelay: "1550ms" }}>
-        <Box ml="auto" sx={{ maxWidth: "100%" }} mb={{md: 5, lg: 8}}>
+        <Box ml="auto" sx={{ maxWidth: "100%" }} mb={{md: 6, lg: 10}}>
           <Typography 
             variant="body1" 
             sx={{
