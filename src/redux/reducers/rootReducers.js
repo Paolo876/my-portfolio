@@ -9,8 +9,9 @@ import { httpsCallable } from 'firebase/functions';
  */
 export const getImageKeys = createAsyncThunk( 'root/getImageKeys', async ( payload, { rejectWithValue }) => {
     try {
-        const { data } = await httpsCallable(functions, "getImagekitKeys")()
-        return data;
+        // let { data } = await httpsCallable(functions, "getImagekitKeys")()
+        // const data = {}
+        return ;
     } catch (err){
         return rejectWithValue(err.response.data)
     }
