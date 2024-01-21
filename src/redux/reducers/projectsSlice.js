@@ -25,7 +25,7 @@ const projectsSlice = createSlice({
         })
         .addCase(getProjects.rejected, ( state , { payload }) => {
             state.isLoading = false;
-            // state.error = payload.message;
+            state.error = payload.message;
         })
     }
 });

@@ -1,6 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { useDocument } from "../../hooks/useDocuments"
-import { doc, onSnapshot, getDoc  } from "firebase/firestore";
+import { doc, getDoc  } from "firebase/firestore";
 import { db } from "../../firebase/config";
 
 
@@ -10,7 +9,7 @@ import { db } from "../../firebase/config";
 export const getProjects = createAsyncThunk( 'projects/getProjects', async ( payload, { rejectWithValue }) => {
     const docRef = doc(db, "user", "projects");
     const docSnap = await getDoc(docRef);
-    
+
     let projects;
     if (docSnap.exists()) {
         projects = docSnap.data();
