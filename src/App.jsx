@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar/Navbar";
 //hooks
 import useFirestoreActions from "./hooks/useFirestoreActions";
 import useRootRedux from "./hooks/useRootRedux";
+import useProjectsRedux from "./hooks/useProjectsRedux";
 
 //pages
 import Home from "./pages/Home/Home";
@@ -18,11 +19,13 @@ import Contact from "./pages/Contact/Contact";
 
 function App() {
   const { setData, getImageKeys, isLoading } = useRootRedux();
+  const { getProjects } = useProjectsRedux();
   const { getDocumentFromCollection } = useFirestoreActions();
 
   //run on init
   useEffect(() => {
     getImageKeys()
+    getProjects()
     getDocumentFromCollection('user', 'information').then(data => setData(data))
     // if(skillsList.length === 0){
     //   getDocumentFromCollection('user', 'information').then(data => setData(data))
