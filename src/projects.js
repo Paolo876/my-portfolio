@@ -155,8 +155,8 @@ const projects = [
       name: "logo_epmTMXFbK.png"
     },
     palette: {
-      primary: "#237b72",
-      secondary: "#2e779d",
+      primary: "#050505",
+      secondary: "#454ea1",
     }
   },
   {
@@ -265,8 +265,8 @@ const projects = [
     url: "https://mernshop.paolobugarin.com/",
     githubUrl: "https://github.com/Paolo876/mern-ecommerce-traversy",
     palette: {
-      primary: "#237b72",
-      secondary: "#2e779d",
+      secondary: "#93C54B",
+      primary: "#3E3F3A",
     }
   },
   {
@@ -343,8 +343,8 @@ const projects = [
       name: "logo_wbaCh4Lwz.png"
     },
     palette: {
-      primary: "#237b72",
-      secondary: "#2e779d",
+      primary: "#f1e9e7",
+      secondary: "#455e58",
     }
 
   },
@@ -404,8 +404,8 @@ const projects = [
       name: "dsd_logo_N3TpgC4kC.png"
     },
     palette: {
-      primary: "#237b72",
-      secondary: "#2e779d",
+      primary: "#1c1c1c",
+      secondary: "#ededed",
     }
 
   },
@@ -495,8 +495,8 @@ const projects = [
       name: "ADOBO_-_signature_-_logo_-_white_zo4ZUstyF.png"
     },
     palette: {
-      primary: "#237b72",
-      secondary: "#2e779d",
+      primary: "rgb(3, 107, 145)",
+      secondary: "#F9F6EE",
     }
   },
   {
@@ -543,8 +543,8 @@ const projects = [
       name: "ayn-logo-500-grey_a0uWdgEkE.png"
     },
     palette: {
-      primary: "#237b72",
-      secondary: "#2e779d",
+      secondary: "#547f5e",
+      primary: "#f4f1eb",
     }
   },
   // {
