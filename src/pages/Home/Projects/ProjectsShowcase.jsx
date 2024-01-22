@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Box, Grid } from '@mui/material'
 import { useInView } from 'react-intersection-observer';
 import { keyframes } from '@mui/system';
 import Image from 'mui-image';
 import useProjectsRedux from "../../../hooks/useProjectsRedux"
-
+import generateRandomNumbers from '../../../utils/generateRandomNumbers';
 
 const previewBoxStyles = {
   height: {xs: 155, sm: 230, md: 320, lg: 360, xl:410}, 
@@ -35,7 +35,17 @@ const ProjectsShowcase = () => {
     triggerOnce: true
   });
 
-  console.log(projectsList)
+  
+  useEffect(() => {
+    if(projectsList.length !== 0 ) {
+      console.log(generateProjectPreviews())
+    }
+  }, [projectsList])
+
+  
+  const generateProjectPreviews = () => {
+    return generateRandomNumbers(projectsList.length, 3)
+  }
   return (
     <Box 
       sx={{
