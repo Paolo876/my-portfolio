@@ -2,6 +2,8 @@ import React from 'react'
 import { Box, Grid } from '@mui/material'
 import { useInView } from 'react-intersection-observer';
 import { keyframes } from '@mui/system';
+import Image from 'mui-image';
+import useProjectsRedux from "../../../hooks/useProjectsRedux"
 
 
 const previewBoxStyles = {
@@ -24,7 +26,8 @@ const slideLeft = keyframes`
 
 
 const ProjectsShowcase = () => {
-    
+  const { projectsList } = useProjectsRedux();
+
   const { ref, inView } = useInView({
     threshold: 0,
     rootMargin: "0% 0px -35% 0px",
@@ -32,9 +35,8 @@ const ProjectsShowcase = () => {
     triggerOnce: true
   });
 
-
+  console.log(projectsList)
   return (
-
     <Box 
       sx={{
         height: "100%",
