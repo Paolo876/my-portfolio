@@ -344,7 +344,12 @@ const projects = [
     },
     palette: {
       primary: "#f1e9e7",
-      secondary: "#455e58",
+      secondary: "#455e58",     
+    },
+    isLightMode: true,
+    secondaryLogo: {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/markandgaea/logo_wsUsTn9x1.png?updatedAt=1705995883961",
+      name: "logo_wsUsTn9x1.png",
     }
 
   },
@@ -545,6 +550,11 @@ const projects = [
     palette: {
       secondary: "#547f5e",
       primary: "#f4f1eb",
+    },
+    isLightMode: true,
+    secondaryLogo: {
+      url: "https://ik.imagekit.io/q5892cimh/my-portfolio/ayn/ayn-logo-500_rgYrBqJRn.png?updatedAt=1696828761308",
+      name: "ayn-logo-500_rgYrBqJRn.png",
     }
   },
   // {

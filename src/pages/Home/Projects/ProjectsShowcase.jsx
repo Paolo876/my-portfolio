@@ -75,11 +75,11 @@ const ProjectsShowcase = () => {
                 justifyContent: "center",
                 flexDirection: "column",
                 height: "100%",
-                background: projectsList[0].palette.primary,
+                background: projectsList[5].palette.primary,
                 overflow: "hidden",
                 opacity: .85,
-                px: 4,
-                py: 3
+                px: {xs: 1, sm: 2, md: 3, lg: 4},
+                py: {xs: 1.5, sm: 2, md: 3}
               }}
             >
               <Box
@@ -87,7 +87,7 @@ const ProjectsShowcase = () => {
                   transform: "skewX(1deg)",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center",
+                  justifyContent: {xs: "space-between", sm:"center"},
                   flexDirection: "column",
                   height: "100%",
                 }}
@@ -95,11 +95,14 @@ const ProjectsShowcase = () => {
                 <Box
                   sx={{
                     mb: {lg: 4},
-                    p: 3,
+                    p: {xs: 1, sm: 2, md:3},
+                    maxHeight: "55%",
+                    maxWidth: "80%",
                   }}
                 >
                   <Image
-                    src={projectsList[0].logo.url}
+                    src={projectsList[5].isLightMode ? projectsList[5].secondaryLogo.url : projectsList[5].logo.url}
+                    alt={projectsList[5].isLightMode ? projectsList[5].secondaryLogo.name : projectsList[5].logo.name}
                     fit="scale-down"
                   />
                 </Box>
@@ -107,12 +110,14 @@ const ProjectsShowcase = () => {
                   <Typography 
                     variant="h6" 
                     sx={{
-                      letterSpacing: 3,
-                      mb: .5,
-                      mixBlendMode: "difference"
+                      letterSpacing: {xs: 1, sm: 1.5, md:2.5},
+                      lineHeight: 1.1,
+                      mb: 1,
+                      color: projectsList[5].isLightMode ? "black" : "white",
+                      fontSize: {xs: ".8rem", sm: "1rem", md: "1.15rem", lg:"1.25rem"}
                     }}
                   >
-                    {projectsList[0].title}
+                    {projectsList[5].title}
                   </Typography>
                   <Typography 
                     variant="body2" 
@@ -122,12 +127,12 @@ const ProjectsShowcase = () => {
                       opacity: .8,
                       letterSpacing: {xs: 1, md: 1.3},
                       lineHeight: {xs: 1.05, md: 1.25},
-                      textShadow: "1px 1px 3px rgba(30,30,30,.5)",
-                      // transform: "skewX(3deg)",
-
+                      textShadow: projectsList[5].isLightMode ? "1px 1px 2px rgba(10,10,10,.2)" : "1px 1px 3px rgba(30,30,30,.5)",
+                      color: projectsList[5].isLightMode ? "black" : "white",
+                      display: {xs: "none", sm: "block"}
                     }}
                   >
-                    {projectsList[0].briefDescription}
+                    {projectsList[5].briefDescription}
                   </Typography>
                 </Box>
               </Box>
