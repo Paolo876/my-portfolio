@@ -36,20 +36,30 @@ const ProjectsShowcase = () => {
     // triggerOnce: true
   });
 
+  const [ previewProjects, setPreviewProjects ] = useState([]);
+
   //set interval on mount
   useEffect(() => {
     if(projectsList.length !== 0 && inView ) {
-      const interval = setInterval(() => {
-        console.log(generateProjectPreviews())
-      }, 5000)
-      return () => clearInterval(interval)
+
+      setPreviewProjects(generateProjectPreviews())
+
+      // const interval = setInterval(() => {
+      //   setPreviewProjects(generateProjectPreviews())
+      // }, 5000)
+
+      //unmount function
+      // return () => clearInterval(interval)
     }
   }, [projectsList, inView])
 
 
   const generateProjectPreviews = () => {
-    return generateRandomNumbers(projectsList.length, 3)
+    const arr = generateRandomNumbers(projectsList.length, 3);
+    return arr.map(item => projectsList[item]) 
   }
+
+  console.log(previewProjects)
   return (
     <Box 
       sx={{
@@ -66,89 +76,89 @@ const ProjectsShowcase = () => {
       }}
     >
       <Grid container gap={{xs: 1.5, sm: 3, md: 4, lg: 5, xl:7}} ref={ref} >
-        {projectsList.length !== 0 && <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 1100ms` : "none"}}>
-          <Grid item sx={previewBoxStyles}>
-            <Box 
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "column",
-                height: "100%",
-                background: projectsList[5].palette.primary,
-                overflow: "hidden",
-                opacity: .85,
-                px: {xs: 1, sm: 2, md: 3, lg: 4},
-                py: {xs: 1.5, sm: 2, md: 3}
-              }}
-            >
-              <Box
+        {previewProjects.length !== 0 && previewProjects.map(item => 
+          <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 1100ms` : "none"}} key={item.title}>
+            <Grid item sx={previewBoxStyles}>
+              <Box 
                 sx={{
-                  transform: "skewX(1deg)",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: {xs: "space-between", sm:"center"},
+                  justifyContent: "center",
                   flexDirection: "column",
                   height: "100%",
+                  background: item.palette.primary,
+                  overflow: "hidden",
+                  opacity: .85,
+                  px: {xs: 1, sm: 2, md: 3, lg: 4},
+                  py: {xs: 1.5, sm: 2, md: 3}
                 }}
               >
                 <Box
                   sx={{
-                    mb: {lg: 4},
-                    p: {xs: 1, sm: 2, md:3},
-                    maxHeight: "55%",
-                    maxWidth: "80%",
+                    transform: "skewX(1deg)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: {xs: "space-between", sm:"center"},
+                    flexDirection: "column",
+                    height: "100%",
                   }}
                 >
-                  <Image
-                    src={projectsList[5].isLightMode ? projectsList[5].secondaryLogo.url : projectsList[5].logo.url}
-                    alt={projectsList[5].isLightMode ? projectsList[5].secondaryLogo.name : projectsList[5].logo.name}
-                    fit="scale-down"
-                  />
-                </Box>
-                <Box>
-                  <Typography 
-                    variant="h6" 
+                  <Box
                     sx={{
-                      letterSpacing: {xs: 1, sm: 1.5, md:2.5},
-                      lineHeight: 1.1,
-                      mb: 1,
-                      color: projectsList[5].isLightMode ? "black" : "white",
-                      fontSize: {xs: ".8rem", sm: "1rem", md: "1.15rem", lg:"1.25rem"}
+                      mb: {lg: 4},
+                      p: {xs: 1, sm: 2, md:3},
+                      maxHeight: "55%",
+                      maxWidth: "80%",
                     }}
                   >
-                    {projectsList[5].title}
-                  </Typography>
-                  <Typography 
-                    variant="body2" 
-                    sx={{
-                      fontSize: {xs: 10, sm: 11, md: 12, lg:12},
-                      fontWeight: 100,
-                      opacity: .8,
-                      letterSpacing: {xs: 1, md: 1.3},
-                      lineHeight: {xs: 1.05, md: 1.25},
-                      textShadow: projectsList[5].isLightMode ? "1px 1px 2px rgba(10,10,10,.2)" : "1px 1px 3px rgba(30,30,30,.5)",
-                      color: projectsList[5].isLightMode ? "black" : "white",
-                      display: {xs: "none", sm: "block"}
-                    }}
-                  >
-                    {projectsList[5].briefDescription}
-                  </Typography>
+                    <Image
+                      src={item.isLightMode ? item.secondaryLogo.url : item.logo.url}
+                      alt={item.isLightMode ? item.secondaryLogo.name : item.logo.name}
+                      fit="scale-down"
+                    />
+                  </Box>
+                  <Box>
+                    <Typography 
+                      variant="h6" 
+                      sx={{
+                        letterSpacing: {xs: 1, sm: 1.5, md:2.5},
+                        lineHeight: 1.1,
+                        mb: 1,
+                        color: item.isLightMode ? "black" : "white",
+                        fontSize: {xs: ".8rem", sm: "1rem", md: "1.15rem", lg:"1.25rem"}
+                      }}
+                    >
+                      {item.title}
+                    </Typography>
+                    <Typography 
+                      variant="body2" 
+                      sx={{
+                        fontSize: {xs: 10, sm: 11, md: 12, lg:12},
+                        fontWeight: 100,
+                        opacity: .8,
+                        letterSpacing: {xs: 1, md: 1.3},
+                        lineHeight: {xs: 1.05, md: 1.25},
+                        textShadow: item.isLightMode ? "1px 1px 2px rgba(10,10,10,.2)" : "1px 1px 3px rgba(30,30,30,.5)",
+                        color: item.isLightMode ? "black" : "white",
+                        display: {xs: "none", sm: "block"}
+                      }}
+                    >
+                      {item.briefDescription}
+                    </Typography>
+                  </Box>
                 </Box>
               </Box>
-            </Box>
-          </Grid>
-        </Box>
-
-        }
+            </Grid>
+          </Box>
+        )}
 
 
-        <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 1350ms` : "none"}}>
+        {/* <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 1350ms` : "none"}}>
           <Grid item sx={previewBoxStyles}></Grid>
         </Box>
         <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 1600ms` : "none"}}>
           <Grid item sx={previewBoxStyles}></Grid>
-        </Box>
+        </Box> */}
       </Grid>
     </Box>
   )
