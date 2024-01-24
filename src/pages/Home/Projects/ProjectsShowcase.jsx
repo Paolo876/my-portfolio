@@ -26,7 +26,7 @@ const slideLeft = keyframes`
 `;
 
 
-const ProjectsShowcase = () => {
+const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
   const { projectsList } = useProjectsRedux();
 
   const { ref, inView } = useInView({
@@ -50,6 +50,7 @@ const ProjectsShowcase = () => {
 
       //unmount function
       // return () => clearInterval(interval)
+      return () => setPreviewProjects([])
     }
   }, [projectsList, inView])
 
@@ -59,7 +60,6 @@ const ProjectsShowcase = () => {
     return arr.map(item => projectsList[item]) 
   }
 
-  console.log(previewProjects)
   return (
     <Box 
       sx={{
@@ -152,13 +152,30 @@ const ProjectsShowcase = () => {
           </Box>
         )}
 
+        {/* hover button */}
+        <Box
+          onMouseOver={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          sx={{
+            height: "100%",
+            width: "100%",
+            position: "absolute",
+            top: 0,
+            right: {xs: 0, md: "initial"},
+            pt: {xs:18, sm: 15, md: 18, lg: 14, xl: 18},
+            pb: {xs:0, sm: 0, md: 11, lg: 14, xl: 18},
+          }}
+        >
+          <Box
+            sx={{
+              background: "blue",
+              height: "100%",
+              width: "100%",
+            }}
+          >
 
-        {/* <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 1350ms` : "none"}}>
-          <Grid item sx={previewBoxStyles}></Grid>
+          </Box>
         </Box>
-        <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 1600ms` : "none"}}>
-          <Grid item sx={previewBoxStyles}></Grid>
-        </Box> */}
       </Grid>
     </Box>
   )
