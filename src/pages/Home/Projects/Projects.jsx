@@ -17,6 +17,17 @@ const slideLeft = keyframes`
   }
 `;
 
+const slideRight = keyframes`
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1.5em);
+    opacity: 0;
+  }
+`;
+
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -84,7 +95,7 @@ const Projects = () => {
           </Fade>
         </Grid>        
         <Grid item xs={12} mt={{xs: 30, sm: 40, md: 60, lg: 10, xl:12}} sx={{overflow: "hidden"}}>
-          <Box sx={{opacity: 0, animation: inView && !isHovered ? `${slideLeft} 1100ms ease forwards 850ms` : `${slideLeft} 1100ms ease forwards 850ms reverse`}}>
+          <Box sx={{opacity: 0, animation: inView && !isHovered ? `${slideLeft} 1000ms ease forwards 400ms` : `${slideRight} 800ms ease forwards`}}>
             <ButtonBase
               onClick={() => navigate("/projects")}
               sx={{

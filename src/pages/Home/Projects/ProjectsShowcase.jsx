@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Box, Grid, Typography } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
+import { Box, Grid, Typography, ButtonBase } from '@mui/material'
 import { useInView } from 'react-intersection-observer';
 import { keyframes } from '@mui/system';
 import Image from 'mui-image';
@@ -28,6 +29,7 @@ const slideLeft = keyframes`
 
 const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
   const { projectsList } = useProjectsRedux();
+  const navigate = useNavigate();
 
   const { ref, inView } = useInView({
     threshold: 0,
@@ -173,7 +175,32 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
               width: "100%",
             }}
           >
-
+            <ButtonBase
+              onClick={() => navigate("/projects")}
+              sx={{
+                borderLeft: 2, 
+                fontSize: { xs: "1rem", sm: "1.3rem", md: "1.35rem", lg: "1.4rem" },
+                lineHeight: 1.4, 
+                color: "white", 
+                borderColor: "primary.dark",
+                px: 1.5,
+                py: .25,
+                fontWeight: 600,
+                letterSpacing: {xs: 2.25, sm:3},
+                opacity: .75,
+                transition: "all 200ms ease-in-out",
+                fontFamily: "Manrope",
+                textTransform: "uppercase",
+                textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+                "&:hover":{
+                  opacity:1,
+                  transform: "scale(1.02)",
+                  borderColor: "primary.main",
+                }
+              }}
+            >
+              Explore My Projects
+            </ButtonBase>
           </Box>
         </Box>
       </Grid>
