@@ -94,13 +94,13 @@ const Projects = () => {
             </Box>
           </Fade>
         </Grid>        
-        <Grid item xs={12} mt={{xs: 30, sm: 40, md: 60, lg: 10, xl:12}} sx={{overflow: "hidden"}}>
+        <Grid item xs={12} mt={{xs: 30, sm: 55, md: 65, lg: 10, xl:12}} sx={{overflow: "hidden"}}>
           <Box sx={{opacity: 0, animation: inView && !isHovered ? `${slideLeft} 1000ms ease forwards 400ms` : `${slideRight} 800ms ease forwards`}}>
             <ButtonBase
               onClick={() => navigate("/projects")}
               sx={{
                 borderLeft: 2, 
-                fontSize: { xs: "1rem", sm: "1.3rem", md: "1.35rem", lg: "1.4rem" },
+                fontSize: { xs: "1rem", sm: "1.3rem", md: "1.4rem", lg: "1.4rem" },
                 lineHeight: 1.4, 
                 color: "white", 
                 borderColor: "primary.dark",
@@ -113,6 +113,7 @@ const Projects = () => {
                 fontFamily: "Manrope",
                 textTransform: "uppercase",
                 textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+                zIndex: 10,
                 "&:hover":{
                   opacity:1,
                   transform: "scale(1.02)",

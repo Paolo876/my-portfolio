@@ -10,8 +10,8 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
 const previewBoxStyles = {
-  height: {xs: 155, sm: 230, md: 320, lg: 360, xl:410}, 
-  width: {xs: 110, sm: 180, md: 270, lg: 310, xl: 360}, 
+  height: {xs: 165, sm: 300, md: 350, lg: 360, xl:410}, 
+  width: {xs: 130, sm: 260, md: 300, lg: 310, xl: 360}, 
   borderColor: "rgba(250,250,250,.4)",
   boxShadow: 'rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px',
   transform: "skewX(-7deg)",
@@ -79,19 +79,21 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
       sx={{
         height: "100%",
         position: "absolute",
-        width: {xs: "100%", md: "auto"},
+        width: {xs: "150%", md: "110%", lg: "auto"},
         top: 0,
+        left: {xs: 0, md: "initial"},
         right: {xs: 0, md: "initial"},
         transform: {xs: "translateX(2em)", md: "translateX(10em)", lg: "translateX(29em)", xl: "translateX(40em)"},
-        pt: {xs:18, sm: 15, md: 18, lg: 14, xl: 18},
+        pt: {xs:18, sm: 5, md: 18, lg: 14, xl: 18},
         pb: {xs:0, sm: 0, md: 11, lg: 14, xl: 18},
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
+        zIndex: {xs: -1, lg: 1},
       }}
       ref={ref}
     >
-      <Grid container gap={{xs: 1.5, sm: 3, md: 4, lg: 5, xl:7}}>
+      <Grid container gap={{xs: 2.5, sm: 4, md: 4, lg: 5, xl:7}}>
         {previewProjects.length !== 0 && previewProjects.map(item => 
           <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 1100ms` : "none"}} key={item.title}>
             <Grid item sx={previewBoxStyles}>
@@ -123,10 +125,11 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
                 >
                   <Box
                     sx={{
-                      mb: {lg: 4},
+                      mb: {xs: 1.5, sm: 3, md: 3, lg: 4},
                       p: {xs: 1, sm: 2, md:3},
                       maxHeight: "55%",
                       maxWidth: "80%",
+                      textAlign: "left"
                     }}
                   >
                     <Image
@@ -160,6 +163,7 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
                         color: item.isLightMode ? "black" : "white",
                         display: {xs: "none", sm: "block"}
                       }}
+                      align="left"
                     >
                       {item.briefDescription}
                     </Typography>
@@ -193,7 +197,6 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              zIndex: 10,
               backdropFilter: isHovered ?"blur(5px)" : "",
               transition: "backdrop-filter 200ms ease"
 
