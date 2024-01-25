@@ -6,6 +6,8 @@ import { keyframes } from '@mui/system';
 import Image from 'mui-image';
 import useProjectsRedux from "../../../hooks/useProjectsRedux"
 import generateRandomNumbers from '../../../utils/generateRandomNumbers';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
 
 const previewBoxStyles = {
   height: {xs: 155, sm: 230, md: 320, lg: 360, xl:410}, 
@@ -77,7 +79,7 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
         justifyContent: "center",
       }}
     >
-      <Grid container gap={{xs: 1.5, sm: 3, md: 4, lg: 5, xl:7}} ref={ref} >
+      <Grid container gap={{xs: 1.5, sm: 3, md: 4, lg: 5, xl:7}} ref={ref}>
         {previewProjects.length !== 0 && previewProjects.map(item => 
           <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 1100ms` : "none"}} key={item.title}>
             <Grid item sx={previewBoxStyles}>
@@ -92,7 +94,9 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
                   overflow: "hidden",
                   opacity: .85,
                   px: {xs: 1, sm: 2, md: 3, lg: 4},
-                  py: {xs: 1.5, sm: 2, md: 3}
+                  py: {xs: 1.5, sm: 2, md: 3},
+                  opacity: isHovered ? .25 : 1,
+                  transition: "opacity .5s ease"
                 }}
               >
                 <Box
@@ -162,44 +166,52 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
             height: "100%",
             width: "100%",
             position: "absolute",
+            transform: "skewX(-7deg)",
             top: 0,
-            right: {xs: 0, md: "initial"},
+            right: {xs: 0, md: 20},
             pt: {xs:18, sm: 15, md: 18, lg: 14, xl: 18},
             pb: {xs:0, sm: 0, md: 11, lg: 14, xl: 18},
+            backdropFilter: "blur(5px)"
           }}
         >
           <Box
             sx={{
-              background: "blue",
+              // background: "blue",
               height: "100%",
               width: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              zIndex: 10,
             }}
           >
             <ButtonBase
               onClick={() => navigate("/projects")}
               sx={{
-                borderLeft: 2, 
-                fontSize: { xs: "1rem", sm: "1.3rem", md: "1.35rem", lg: "1.4rem" },
+                border: 2, 
+                fontSize: { xs: "1.3rem", sm: "1.6rem", md: "1.65rem", lg: "1.75rem" },
                 lineHeight: 1.4, 
                 color: "white", 
-                borderColor: "primary.dark",
-                px: 1.5,
-                py: .25,
+                borderColor: "rgba(255,255,255,.5)",
+                px: 2.75,
+                py: .85,
                 fontWeight: 600,
                 letterSpacing: {xs: 2.25, sm:3},
-                opacity: .75,
-                transition: "all 200ms ease-in-out",
+                // opacity: .75,
+                transition: "transform 200ms ease-in-out, border 200ms ease-in-out",
                 fontFamily: "Manrope",
                 textTransform: "uppercase",
                 textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+                display: "flex",
+                gap: 1.25,
                 "&:hover":{
                   opacity:1,
                   transform: "scale(1.02)",
-                  borderColor: "primary.main",
+                  borderColor: "rgba(255,255,255,1)",
                 }
               }}
             >
-              Explore My Projects
+              Explore My Projects <ArrowForwardIosIcon style={{align: "center", fontSize: "inherit", padding: "1px 0"}} color="primary"/>
             </ButtonBase>
           </Box>
         </Box>
