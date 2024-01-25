@@ -28,6 +28,17 @@ const slideLeft = keyframes`
   }
 `;
 
+const slideRight = keyframes`
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(1.5em);
+    opacity: 1;
+  }
+`;
+
 
 const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
   const { projectsList } = useProjectsRedux();
@@ -80,7 +91,7 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
       }}
     >
       <Grid container gap={{xs: 1.5, sm: 3, md: 4, lg: 5, xl:7}} ref={ref}>
-        {previewProjects.length !== 0 && previewProjects.map(item => 
+        {inView && previewProjects.length !== 0 && previewProjects.map(item => 
           <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 1100ms` : "none"}} key={item.title}>
             <Grid item sx={previewBoxStyles}>
               <Box 
@@ -96,7 +107,7 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
                   px: {xs: 1, sm: 2, md: 3, lg: 4},
                   py: {xs: 1.5, sm: 2, md: 3},
                   opacity: isHovered ? .25 : 1,
-                  transition: "opacity .5s ease"
+                  transition: "opacity 1s ease"
                 }}
               >
                 <Box
@@ -159,9 +170,7 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
         )}
 
         {/* hover button */}
-        <Box
-          onMouseOver={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+        {inView && <Box
           sx={{
             height: "100%",
             width: "100%",
@@ -171,33 +180,36 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
             right: {xs: 0, md: 20},
             pt: {xs:18, sm: 15, md: 18, lg: 14, xl: 18},
             pb: {xs:0, sm: 0, md: 11, lg: 14, xl: 18},
-            backdropFilter: "blur(5px)"
           }}
         >
           <Box
+            onMouseOver={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
             sx={{
-              // background: "blue",
               height: "100%",
               width: "100%",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               zIndex: 10,
+              backdropFilter: isHovered ?"blur(5px)" : "",
+              transition: "backdrop-filter 200ms ease"
+
             }}
           >
+          {isHovered && <Box sx={{ opacity:0, animation: inView ? `${slideRight} 800ms ease forwards 0ms` : "none",}}>
             <ButtonBase
               onClick={() => navigate("/projects")}
               sx={{
                 border: 2, 
-                fontSize: { xs: "1.3rem", sm: "1.6rem", md: "1.65rem", lg: "1.75rem" },
+                fontSize: { xs: "1.1rem", sm: "1.6rem", md: "1.65rem", lg: "1.8rem" },
                 lineHeight: 1.4, 
                 color: "white", 
                 borderColor: "rgba(255,255,255,.5)",
-                px: 2.75,
+                px: {xs: 2, sm:3, md:3.5},
                 py: .85,
                 fontWeight: 600,
                 letterSpacing: {xs: 2.25, sm:3},
-                // opacity: .75,
                 transition: "transform 200ms ease-in-out, border 200ms ease-in-out",
                 fontFamily: "Manrope",
                 textTransform: "uppercase",
@@ -213,8 +225,9 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
             >
               Explore My Projects <ArrowForwardIosIcon style={{align: "center", fontSize: "inherit", padding: "1px 0"}} color="primary"/>
             </ButtonBase>
+          </Box>}
           </Box>
-        </Box>
+        </Box>}
       </Grid>
     </Box>
   )
