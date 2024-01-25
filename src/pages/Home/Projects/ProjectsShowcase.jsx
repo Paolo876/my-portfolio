@@ -43,7 +43,6 @@ const slideRight = keyframes`
 const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
   const { projectsList } = useProjectsRedux();
   const navigate = useNavigate();
-
   const { ref, inView } = useInView({
     threshold: 0,
     rootMargin: "0% 0px -35% 0px",
@@ -80,6 +79,7 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
       sx={{
         height: "100%",
         position: "absolute",
+        width: {xs: "100%", md: "auto"},
         top: 0,
         right: {xs: 0, md: "initial"},
         transform: {xs: "translateX(2em)", md: "translateX(10em)", lg: "translateX(29em)", xl: "translateX(40em)"},
@@ -89,9 +89,10 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
         flexDirection: "column",
         justifyContent: "center",
       }}
+      ref={ref}
     >
-      <Grid container gap={{xs: 1.5, sm: 3, md: 4, lg: 5, xl:7}} ref={ref}>
-        {inView && previewProjects.length !== 0 && previewProjects.map(item => 
+      <Grid container gap={{xs: 1.5, sm: 3, md: 4, lg: 5, xl:7}}>
+        {previewProjects.length !== 0 && previewProjects.map(item => 
           <Box sx={{opacity: 0, animation: inView ? `${slideLeft} 1100ms ease forwards 1100ms` : "none"}} key={item.title}>
             <Grid item sx={previewBoxStyles}>
               <Box 
@@ -180,6 +181,7 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
             right: {xs: 0, md: 20},
             pt: {xs:18, sm: 15, md: 18, lg: 14, xl: 18},
             pb: {xs:0, sm: 0, md: 11, lg: 14, xl: 18},
+            display: {xs: "none", lg: "initial"}
           }}
         >
           <Box
