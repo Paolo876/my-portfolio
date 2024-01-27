@@ -88,7 +88,9 @@ const Projects = () => {
                   textShadow: "1px 1px 5px rgba(50,50,50,.5)",
                 }}
               >
-                I mainly develop my projects using ReactJS or NextJS for the frontend, ExpressJS and NodeJS for the backend, and MongoDB or MySQL for db implementations. I use different libraries on my projects to
+                {/* I mainly develop my projects using ReactJS or NextJS for the frontend, ExpressJS and NodeJS for the backend, and MongoDB or MySQL for db implementations. I use different libraries on my projects to
+                increase development efficiency and easier scalability. */}
+                I mostly use ReactJS and utilize different full stack combinations to build my projects. I also implement various libraries on my projects to
                 increase development efficiency and easier scalability.
               </Typography>
             </Box>
