@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 
 
 const About = () => {
-  const [ showContent, setShowContent ] = useState(true);
+  const [ showContent, setShowContent ] = useState(false);
   const [ isUnmounted, setIsUnmounted ] = useState(false)
     
   const { ref, inView } = useInView({
@@ -53,16 +53,17 @@ const About = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            // background: inView ? "rgba(0,0,0,.25)" : "none",
+            background: inView ? "radial-gradient(rgba(30,30,30,.1) 0, rgba(0,0,0,.25) 45%)" : "none",
             transition: "all 800ms ease-in-out",
-
-            background: inView ? "rgba(0,0,0,.25)" : "none",
             ".content": {
-                "&:hover ": {
-                  transform: "scale(1.025)",
-                  letterSpacing: 4.5,
-                  borderColor: "primary.main",
-                }
+              "&:hover ": {
+                transform: "scale(1.025) skewX(-4deg)",
+                letterSpacing: 4.5,
               }
+            },
+            "&:hover": {
+            }
           }}
           ref={ref}
         >
@@ -70,19 +71,28 @@ const About = () => {
             <Box>
               <Box 
                 sx={{
-                  opacity: .6,
-                  transition: "all 500ms ease-in-out",
-                  textShadow: "1px 1px 7px rgba(10,10,10,.5)",
-                  borderBottom: 2,
-                  pb: .5,
-                  letterSpacing: inView ? 3 : 2,
-                  borderColor: "primary.dark",
-                  transform: inView ? "scale(1.015)" : "scale(1)",
-
+                border: 3, 
+                transform: "skewX(-4deg)",
+                fontSize: { xs: "1.1rem", sm: "1.6rem", md: "1.65rem", lg: "1.8rem" },
+                lineHeight: 1.4, 
+                color: "white", 
+                borderColor: "rgba(255,255,255,.35)",
+                px: {xs: 2.5, sm:3.5, md:4, lg: 5},
+                py: {xs:.85, sm: 1, md: 1.5, },
+                fontWeight: 600,
+                transition: "transform 200ms ease-in-out, border 200ms ease-in-out",
+                fontFamily: "Manrope",
+                textTransform: "uppercase",
+                textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+                "&:hover":{
+                  opacity:1,
+                  transform: "scale(1.02) skewX(-4deg)",
+                  borderColor: "rgba(255,255,255,1)",
+                }
                 }}
                 className="content"
               >
-                <Typography variant="h2" textTransform="none" fontWeight={200} fontSize={{xs: 40, sm: 50, md: 55, lg:60}}>Who Am I?</Typography>
+                <Typography variant="h2" fontWeight={200} fontSize={{xs: 40, sm: 50, md: 55, lg:60}} sx={{letterSpacing: {xs: 2.5, sm: 3, md: 4}}}>Who Am I?</Typography>
               </Box>
             </Box>
           </Fade>
