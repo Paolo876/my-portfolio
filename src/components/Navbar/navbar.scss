@@ -20,6 +20,7 @@
             position: relative;
             z-index: 0;
             opacity:.75;
+            transform: skewX(-5deg);
             transition: all 0.2s;
             p {
                 font-weight: 400;
@@ -27,11 +28,10 @@
             }
             &:hover{
                 opacity: 1;
-                transform: scale(1.045);
+                transform: scale(1.05) skewX(-5deg);
             }
             &.active {
                 opacity: 1;
-
                 p {
                     font-weight: 600;
                     text-shadow: 1px 1px 3px #d1911952;
@@ -47,7 +47,7 @@
                     }
                 }
                 &:hover {
-                    transform: none;
+                    transform: scale(1) skewX(-5deg);
 
                     &::before, &::after{
                         content: none;
@@ -106,6 +106,8 @@
 .navbar-modal {
     .link-items {
         // text-align: center;
+        width: fit-content;
+        margin-left: auto;
         a{
             z-index: 0;
             opacity:.75;
@@ -114,12 +116,15 @@
             p {
                 font-weight: 400;
                 position: relative;
+                transform: skewX(-5deg);
+                text-transform: uppercase;
+                letter-spacing: 3px;
             }
             &.active {
                 opacity: 1;
                 p {
-                    font-weight: 500;
-                    transform: scale(1.025) translateX(-5px);
+                    font-weight: 600;
+                    transform: scale(1.05) translateX(-5px) skewX(-5deg);
                     &::before, &::after{
                         opacity: .75;
                         position: absolute;

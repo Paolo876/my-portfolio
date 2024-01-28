@@ -12,21 +12,21 @@ import logo from "../../assets/logo.svg";
 const styles = {
   height: "100%",
   width: "100%",
-  backdropFilter: "blur(3px) contrast(38%) brightness(20%)",
+  backdropFilter: "blur(3px) contrast(10%) brightness(12%)",
   border: 0,
   position: "relative",
 }
 
 const linkStyles = {
-  fontSize: { xs: "1.35rem", sm: "1.8rem"},
-  my: 3,
+  fontSize: { xs: "1.25rem", sm: "1.7rem"},
+  my: 3.25,
   ml: 2.5,
   fontWeight: 400,
   textAlign: "right",
   textTransform: "none",
   letterSpacing: .8,
   width: "fit-content",
-  opacity: .8,
+  opacity: .85,
   textShadow: "1px 1px 3px rgba(100,100,100,.5)",
   // mixBlendMode: "difference",
   transition: "all 200ms linear",
@@ -34,7 +34,7 @@ const linkStyles = {
 
 const nameStyles = {
   mixBlendMode: "difference", 
-  opacity: .1,
+  opacity: .05,
   textShadow: "1px 1px 3px rgba(100,100,100,.75)",
   textTransform: "none",
   fontWeight: 800,
@@ -64,7 +64,7 @@ const LinksModal = ({ open, onClose}) => {
 
   const handleClick = (url) => {
     onClose();
-    navigate(url)
+    if(url) navigate(url)
   }
 
   useEffect(() => {
@@ -77,7 +77,7 @@ const LinksModal = ({ open, onClose}) => {
       <Fade in={open} timeout={{enter: 350, exit: 350}}>
         <Box sx={styles} className="navbar-modal">
           <Container maxWidth="xl" sx={{height: "90vh"}}>
-            <Stack sx={{height: "100%"}}>
+            <Stack sx={{height: "100%"}} onClick={() => handleClick()}>
               <Box sx={{display: "flex", flexDirection: "row", px:{xs:0, lg: 1.5, xl: 3 }, py:{xs:.65, sm:1.15, md: 1.75, xl: 2 }, alignItems: "center"}}>
                 <Link onClick={() => handleClick("/")}>
                 <Box sx={{height: 45, width: "auto", my: "auto", ml: .5, opacity: .8, transition: "800ms all ease", transform: "scale(.95)","&:hover": {opacity: 1, transform: "scale(1)"}}}>
@@ -119,11 +119,12 @@ const LinksModal = ({ open, onClose}) => {
                   <SocialLinks 
                     flexDirection='row' 
                     color="inherit" 
-                    gap={{xs: .75, sm: 1}}
+                    gap={{xs: .85, sm: 1}}
                     placement="left"
                     additionalStyles={{
-                      opacity: .65,
+                      opacity: .75,
                       transition: "all 150ms ease-in-out",
+                      transform: "scale(1.1)",
                       "&:hover": {
                         opacity: 1,
                         transform: "scale(1.15)",
