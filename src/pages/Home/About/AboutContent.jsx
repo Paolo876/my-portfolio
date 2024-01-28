@@ -39,7 +39,13 @@ const AboutContent = ({ isVisible }) => {
 				<Grid container columnSpacing={{xs: 0, sm:3, md: 6, lg: 6, xl:8}}>
 					<Grid item xs={3.75} sm={3} sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
             <Fade appear={isVisible} in={isVisible} timeout={1100}  style={{ transitionDelay: "1150ms" }}>
-						  <Box sx={{height: {xs: 145, sm: 200, md: 260, lg: 300, xl: 320 }, width: {xs: 90, sm: 130, md: 190, lg: 230, xl: 250}, border: 1}}></Box>
+						  <Box 
+                sx={{
+                  height: {xs: 145, sm: 200, md: 260, lg: 300, xl: 320 }, 
+                  width: {xs: 90, sm: 130, md: 190, lg: 230, xl: 250}, 
+                  border: 1,
+                  transform: "skewX(0deg)"
+                }}></Box>
             </Fade>
           </Grid>
 					<Grid item xs={8.25} sm={9} sx={{display: "flex", flexDirection: "column", justifyContent: {xs: "center", sm: "space-between"}}}>
@@ -56,10 +62,11 @@ const AboutContent = ({ isVisible }) => {
                     textShadow: "1px 1px 7px rgba(10,10,10,.75)",
                   }}
                 >
-                  <Box component="span" fontSize={{xs: 15.5, sm: 20.5, md: 23, lg: 35, xl: 40}} sx={{letterSpacing: .75, fontWeight: 300, opacity: .65, pr: 1}}>I am </Box>
-                  <Box component="span" fontSize={{xs: 25.5, sm: 33, md: 33, lg: 45, xl: 50}} sx={{letterSpacing: .75}}> Paolo Bugarin</Box>, 
+                  <Box component="span" fontSize={{xs: 15.5, sm: 20.5, md: 23, lg: 35, xl: 40}} sx={{letterSpacing: .75, fontWeight: 300, opacity: .75, pr: 1}}>I am </Box>
+                  <Box component="span" fontSize={{xs: 25.5, sm: 33, md: 33, lg: 45, xl: 50}} sx={{letterSpacing: .75}}> Paolo Bugarin</Box>
+                  <Box component="span" fontWeight={200} sx={{opacity: .75}}>,</Box>
                   <br/>
-                  <Box component="span" fontWeight={200} sx={{opacity: .65}}>
+                  <Box component="span" fontWeight={200} sx={{opacity: .75}}>
                     a Web Developer based in <Box component="br" sx={{display: {xs:"none", sm: "initial", md: "none"}}}></Box>Los Angeles, California.
                   </Box>
                 </Typography>

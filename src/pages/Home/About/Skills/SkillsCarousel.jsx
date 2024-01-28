@@ -56,8 +56,8 @@ const SkillsCarousel = ({ isVisible }) => {
                   title={<Typography variant="body1" fontSize={12} fontWeight={300} letterSpacing={.4} px={.25}>{_item.name}</Typography>} 
                   arrow
                   placement="right"
-                  enterDelay={500}
-                  enterNextDelay={250}
+                  enterDelay={50}
+                  enterNextDelay={150}
                 >
                   <Box sx={boxStyles}>
                     <Box height={{xs: 25, sm: 40, md:45, lg:50, xl: 55}} width="auto">
