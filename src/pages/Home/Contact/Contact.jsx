@@ -55,8 +55,8 @@ const Contact = () => {
           <Typography 
             variant="h2" 
             fontWeight={500}
-            fontSize={{xs: 20, sm: 20.5, md: 21, lg: 22, xl: 22.5}} 
-            letterSpacing={.5}
+            fontSize={{xs: 23, sm: 24, md: 25, lg: 26}} 
+            letterSpacing={.75}
             lineHeight={1.1} 
             textTransform="none"
             sx={{
@@ -72,7 +72,7 @@ const Contact = () => {
               fontSize: {xs: 9, sm: 9.5, md: 10.5, lg:12, xl: 13},
               fontWeight: 300,
               opacity: .7,
-              letterSpacing: .5,
+              letterSpacing: .75,
               textShadow: "1px 1px 5px rgba(10,10,10,.75)",
             }}
           >
@@ -84,8 +84,8 @@ const Contact = () => {
             sx={{
               fontSize: {xs: 9, sm: 9.5, md: 10, lg:11.5, xl: 12.5},
               fontWeight: 100,
-              opacity: .55,
-              letterSpacing: .5,
+              opacity: .6,
+              letterSpacing: .75,
               textShadow: "1px 1px 5px rgba(10,10,10,.75)",
             }}
           >
@@ -93,27 +93,28 @@ const Contact = () => {
           </Typography>
         </Box>
         
-        <Box mt={{xs: 1.25, md: 2, xl:3}} sx={{display: {sm:"none", md: "flex"}}}>
+        <Box mt={{xs: 1.5, md: 3, lg:3}} sx={{display: {sm:"none", md: "flex"}}}>
           <ButtonBase
             onClick={() => navigate("/contact")}
             sx={{
               borderLeft: 2, 
-              fontSize: { xs: ".9rem", sm: "1rem", md: "1.05rem", lg: "1.1rem", xl:"1.1rem" },
+              fontSize: { xs: ".75rem", md: ".85rem", lg: ".87rem"},
               lineHeight: 1.4, 
               color: "primary.main", 
               borderColor: "rgba(100,100,100,.75)",
-              px: {xs: 1, md:1.5},
-              py: .25,
+              px: {xs: 1, md:1.25},
+              py: .1,
               fontWeight: 600,
-              letterSpacing: .4,
-              opacity: .85,
+              letterSpacing: {xs: 1.25, sm:1.75, lg: 1.75},
+              opacity: {xs: .95, lg:.85},
               transition: "all 250ms ease-in-out",
               fontFamily: "Manrope",
+              textTransform: "uppercase",
               "&:hover":{
                 opacity:1,
                 textShadow: "1px 1px 3px rgba(100,100,100,.75)",
-                transform: "scale(1.02)",
-                borderColor: "primary.main",
+                transform: "scale(1.01)",
+                borderColor: "rgba(150,150,150,1)",
               }
             }}
           >
@@ -162,30 +163,25 @@ const Contact = () => {
         </Box>
       </Grid>
       
-      <Grid item xs={12} sm={12} md={3} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%"}} mt={{xs:3, sm: 3, md: 0}}>
+      <Grid item xs={12} sm={12} md={3} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%"}} mt={{xs: 4, md: 0}}>
         <Box sx={{width: "100%", height: "100%", display: "flex", justifyContent: {xs: "space-between", md:"right"}}}>
-          <Box mt={{md: 2,xl:4}} sx={{display: {xs: "none", sm:"initial", md: "none"}}}>
+          <Box sx={{display: {xs: "none", sm:"initial", md: "none"}}}>
             <ButtonBase
               onClick={() => navigate("/contact")}
               sx={{
                 borderLeft: 2, 
-                fontSize: { xs: ".9rem", sm: "1rem"},
+                fontSize: ".85rem",
                 lineHeight: 1.2, 
                 color: "primary.main", 
-                borderColor: "rgba(100,100,100,.75)",
+                borderColor: "rgba(175,175,175,.75)",
                 px: 1.5,
                 py: .25,
                 fontWeight: 600,
-                letterSpacing: .4,
-                opacity: .85,
+                letterSpacing: 1.5,
+                opacity: .95,
                 transition: "all 250ms ease-in-out",
+                textTransform: "uppercase",
                 fontFamily: "Manrope",
-                "&:hover":{
-                  opacity:1,
-                  textShadow: "1px 1px 3px rgba(100,100,100,.75)",
-                  transform: "scale(1.02)",
-                  borderColor: "primary.main",
-                }
               }}
             >
               Contact Page
@@ -196,24 +192,26 @@ const Contact = () => {
             sx={{
               boxShadow: 5,
               border: 2, 
-              fontSize: { xs: ".85rem", sm: ".9rem", md: "1rem", lg: "1rem" },
+              fontSize: { xs: ".8rem", sm: ".85rem", md: ".9rem", lg: ".95rem" },
               lineHeight: 1, 
               borderColor: "rgba(100,100,100,.75)",
-              px: {xs: 1.5, sm: 1.25, lg: 2},
-              py: {xs: .8, md:1},
+              px: {xs: 1.8, sm: 2, md: 2.2, lg: 2.75},
+              py: {xs: 1.15, sm: 1.15, md:1.15, lg: 1.25},
               fontWeight: 600,
-              letterSpacing: .5,
-              opacity: .75,
+              letterSpacing: {xs:1.75, lg: 1.75},
+              opacity: {xs: .9, lg:.75},
               transition: "all 250ms ease-in-out",
+              textTransform: "uppercase",
+              transform: {sm:"skewX(-3deg)"},
               "&:hover":{
                 opacity:1,
                 textShadow: "1px 1px 3px rgba(100,100,100,.75)",
-                transform: "scale(1.02)",
+                transform: {sm:"scale(1.02) skewX(-3deg)"},
                 borderColor: "primary.dark",
               }
             }}
           >
-            Download My CV <DownloadIcon sx={{ml: 1.5}}/>
+            Download My CV <DownloadIcon sx={{ml: 1.5}} style={{fontSize: "inherit"}}/>
           </ButtonBase>
         </Box>
         <Box mt={{md:4}} sx={{width: "fit-content", display: {xs: "none", md: "initial"}}} ml="auto">

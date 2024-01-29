@@ -227,7 +227,7 @@ const MainPage = ({ projects }) => {
               xl={3}
               align="right" 
               sx={{
-                height: {xs: "98vh", sm: "94vh", md: "90vh", lg:"95vh"}, 
+                height: {xs: "93vh", sm: "94vh", md: "90vh", lg:"95vh"}, 
                 display: {xs:"flex", lg: "none"}, 
                 flexDirection: "column",
                 alignItems: "flex-end", 
