@@ -76,7 +76,7 @@ const MainPage = ({ projects }) => {
         pt: {xs:9, sm: 12, md: 14, lg: 14, xl: 16}, 
       }}
     >      
-      <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", height: "100%", overflow: "hidden"}}>
+      <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", height: "100%"}}>
         <Grid 
           item 
           lg={6} 
