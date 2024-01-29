@@ -57,7 +57,7 @@ const ProjectItemContent = ({ project, nextProjectName, nextProjectTitle }) => {
       </Grid>
 
       {/* Next Project Btn */}
-        {nextProjectTitle !== "" && <Grid item xs={12} sx={{mt: {xs: 10, sm: 12, md: 14, lg: 16, xl: 18}}}>
+        {nextProjectTitle !== "" && <Grid item xs={12} sx={{mt: {xs: 14, sm: 15, md: 16, lg: 17, xl: 18}}}>
           <ButtonBase 
             onClick={() => navigate(`/projects/${nextProjectName}`)}
             sx={{
@@ -66,11 +66,11 @@ const ProjectItemContent = ({ project, nextProjectName, nextProjectTitle }) => {
               mx: "auto", 
               px: 2, 
               py: 1.5,
-              opacity: .75,
+              opacity: .8,
               transform: "skewX(-5deg)",
               transition: "all 250ms ease",
               "&:hover": {
-                opacity: .95,
+                opacity: .98,
                 transform: "scale(1.01) skewX(-5deg)",
                 background: "none",
                 borderColor: "primary.dark",
@@ -84,11 +84,11 @@ const ProjectItemContent = ({ project, nextProjectName, nextProjectTitle }) => {
               // mixBlendMode: "difference",
               color: "primary.main",
               // color: "rgba(255,255,255,.7)",
-              letterSpacing: .85,
+              letterSpacing: .95,
             }}>
-              <Box component="span">Next Project: </Box>{nextProjectTitle}
+              <Box component="span" sx={{ fontSize: {xs: 11, sm: 12, md: 12, lg:13.5}, fontWeight: 300, letterSpacing: .8}}>Next Project: </Box>{nextProjectTitle}
             </Typography>
-            <Box sx={{animation: `${buttonAnimation} 1000ms linear infinite alternate`, mt: 1}}>
+            <Box sx={{animation: `${buttonAnimation} 1000ms linear infinite alternate`, mt: 1.25}}>
               <ArrowForwardIosIcon color="primary" />
             </Box>
           </ButtonBase>
@@ -96,7 +96,7 @@ const ProjectItemContent = ({ project, nextProjectName, nextProjectTitle }) => {
 
 
       {/* Footer */}
-      <Grid item xs={12} sx={{mt: {xs: 12, sm: 13, md: 16, lg: 18, xl: 18}}}>
+      <Grid item xs={12} sx={{mt: {xs: 10, sm: 12, md: 14, lg: 16, xl: 16}}}>
         <Divider/>
         <Footer/>
       </Grid>

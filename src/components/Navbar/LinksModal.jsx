@@ -18,8 +18,8 @@ const styles = {
 }
 
 const linkStyles = {
-  fontSize: { xs: "1.25rem", sm: "1.7rem"},
-  my: 3.25,
+  fontSize: { xs: "1.05rem", sm: "1.45rem"},
+  my: {xs: 2.5, sm:3.25},
   ml: 2.5,
   fontWeight: 400,
   textAlign: "right",
