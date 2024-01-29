@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Route, Routes, useLocation } from 'react-router-dom'
-import { Grid, Box, Typography, Fade, Slide, Button } from '@mui/material'
+import { Route, Routes, useNavigate } from 'react-router-dom'
+import { Grid, Box, Typography, Fade, Slide, Button, ButtonBase } from '@mui/material'
 import Image from 'mui-image'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { IKImage } from 'imagekitio-react';
@@ -41,6 +41,7 @@ const MainPage = ({ projects }) => {
   const [ isHovered, setIsHovered ] = useState(false);
   const [ isMounted, setIsMounted ] = useState(true);
   const { imageKeys } = useRootRedux();
+  const navigate = useNavigate();
 
 
   useEffect(() => {
@@ -75,14 +76,16 @@ const MainPage = ({ projects }) => {
         pt: {xs:8, sm: 12, md: 14, lg: 14, xl: 16}, 
       }}
     >      
-      <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", height: "100%"}}>
+      <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", height: "100%", overflow: "hidden"}}>
         <Grid item lg={6} sx={{height: "100%", display: "flex", flexDirection: "column", justifyContent:{lg: "space-between"}, pb: {xs: 5, sm: 10}}}>
           <Introduction/>
           <ProjectSelection projects={projects} setActiveProject={setActiveProject} setIsHovered={setIsHovered} activeProject={activeProject}/>
         </Grid>
         <Grid item lg={2.75}></Grid>
         <Fade in={true} timeout={800} style={{ transitionDelay: "2400ms" }}>
-          <Grid              
+          <Grid
+            onMouseOver={() => setIsHovered(true)}        
+            onMouseLeave={() => setIsHovered(false)}        
             item 
             lg={3.25} 
             align="right" 
@@ -92,36 +95,74 @@ const MainPage = ({ projects }) => {
               flexDirection: "column",
               alignItems: "flex-end", 
               justifyContent: {xs: "flex-end", lg:"center"}, 
-              pb: {xs:3.5, sm: 8, md: 8, lg: 12, xl: 12},
+              pb: 10,
+              px: 1,
             }}
           >
           <Fade in={isMounted} timeout={500} unmountOnExit>
-            <Box>
-              <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 225, md: 225, lg: 225, xl: 240}, height: {xs: 150, sm: 225, md: 225, lg: 225, xl: 190}, transition: "all 1s ease"}}>
+            <Box 
+              sx={{
+                display: {xs: "none", lg: "flex"}, 
+                flexDirection: "column",
+                alignItems: "flex-end", 
+                justifyContent: {xs: "flex-end", lg:"center"},      
+              }}
+            >
+              <Box 
+                sx={{
+                  opacity: .7, 
+                  transition: "all 1s ease",
+                  maxHeight: "45%",
+                  maxWidth: "50%"
+                }}>
                 <Image 
-                  // urlEndpoint={imageKeys.urlEndpoint} 
                   src={projects[activeProject].logo.url}
                   alt={projects[activeProject].logo.name} 
-                  height="auto"
-                  width="auto"
-                  style={{objectFit: "scale-down", height: "100%", width: "100%"}}
+                  fit="scale-down"
                 />
               </Box>
-              <Box sx={{mt: {xs:1.5, sm: 2.5, md:5}, borderRight: 1, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
+              <Box sx={{mt: 4, borderRight: 1, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: 1}}>
                 <Typography 
                   variant="body2"
                   sx={{
-                    fontSize: {md: 13, lg:14, xl: 14.5},
+                    fontSize: {lg:14},
                     fontWeight: 100,
-                    opacity: .5,
+                    opacity: .75,
                     letterSpacing: .5,
-                    lineHeight: 1.45,
+                    lineHeight: 2,
                     textShadow: "1px 1px 5px rgba(150,150,150,.75)",
+                    transform: "skewX(-7deg)"
                   }} 
                 >{projects[activeProject].briefDescription}</Typography>
               </Box>
-              <Box sx={{mt: 2}}>
-                <Button>Read more about {projects[activeProject].title} here <ArrowForwardIosIcon/></Button>
+              <Box sx={{mt: 8}}>
+                <ButtonBase 
+                  onClick={() => navigate(`${projects[activeProject].name}`)}
+                  sx={{                
+                    // border: 2, 
+                    fontSize: { lg: "1rem" },
+                    lineHeight: 1.4, 
+                    color: "white", 
+                    transform: "skewX(-7deg)",
+                    py: .85,
+                    fontWeight: 600,
+                    letterSpacing: 2.2,
+                    transition: "transform 200ms ease-in-out, border 200ms ease-in-out",
+                    fontFamily: "Manrope",
+                    textTransform: "uppercase",
+                    textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+                    display: "flex",
+                    gap: 1.25,
+                    opacity:.75,
+                    "&:hover":{
+                      opacity:1,
+                      transform: "scale(1.02) skewX(-7deg)",
+                      // borderColor: "primary.main",
+                    }}
+                  }
+                >
+                  Read more <ArrowForwardIosIcon style={{fontSize: "inherit",}} color="primary"/>
+                </ButtonBase>
               </Box>
             </Box>
           </Fade>
