@@ -1,5 +1,9 @@
 import { useState } from 'react'
-import { Grid, Modal, Box, Divider } from '@mui/material'
+import { Grid, Modal, Box, Divider, Typography, ButtonBase } from '@mui/material'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { keyframes } from '@mui/system';
+
+//components
 import ProjectUrlAndTechStack from './ProjectUrlAndTechStack';
 import ProjectFeatures from './ProjectFeatures';
 import ProjectImages from './ProjectImages';
@@ -9,7 +13,17 @@ import ProjectIntroduction from './ProjectIntroduction';
 
 
 
-const ProjectItemContent = ( { project, isShown }) => {
+const buttonAnimation = keyframes`
+0% {
+  transform: translateY(-.25em) rotate(90deg);
+}
+100% {
+  transform: translateX(0) scale(1.015) rotate(90deg);
+}
+`;
+
+
+const ProjectItemContent = ({ project, projectsLength, currentProjectIdx, nextProjectTitle }) => {
   const [ showModal, setShowModal ] = useState({isVisible: false, imageName: null});
 
   const handleImageClick = (imageName) => {
@@ -25,12 +39,12 @@ const ProjectItemContent = ( { project, isShown }) => {
       </Grid>
 
       {/* url & tech stack */}
-      <Grid item xs={12} sx={{mt: {xs: 4, sm: 15, md: 16, lg: 18, xl: 30}}}>
+      <Grid item xs={12} sx={{mt: {xs: 4, sm: 15, md: 16, lg: 18, xl: 20}}}>
         <ProjectUrlAndTechStack technologies={project.technologies} url={project.url} githubUrl={project.githubUrl}/>
       </Grid>
 
       {/* Features */}
-      <Grid item xs={12} sx={{mt: {xs: 10, sm: 12, md: 16, lg: 16, xl: 28}}}>
+      <Grid item xs={12} sx={{mt: {xs: 10, sm: 12, md: 16, lg: 16, xl: 22}}}>
         <ProjectFeatures coverImage={project.coverImage} features={project.features} handleImageClick={handleImageClick}/>
       </Grid>
 
@@ -39,9 +53,19 @@ const ProjectItemContent = ( { project, isShown }) => {
         <ProjectImages images={project.images} handleImageClick={handleImageClick}/>
       </Grid>
 
+      {/* Next Project Btn */}
+{nextProjectTitle !== "" && <Grid item xs={12} sx={{mt: {xs: 10, sm: 12, md: 14, lg: 16, xl: 18}}}>
+        <ButtonBase sx={{display: "flex", flexDirection: "column", mx: "auto"}}>
+          <Typography>{nextProjectTitle}</Typography>
+          <Box sx={{animation: `${buttonAnimation} 1000ms linear infinite alternate`}}>
+            <ArrowForwardIosIcon color="primary" />
+          </Box>
+        </ButtonBase>
+      </Grid>}
+
 
       {/* Footer */}
-      <Grid item xs={12} sx={{mt: {xs: 12, sm: 13, md: 16, lg: 18, xl: 20}}}>
+      <Grid item xs={12} sx={{mt: {xs: 12, sm: 13, md: 16, lg: 18, xl: 18}}}>
         <Divider/>
         <Footer/>
       </Grid>

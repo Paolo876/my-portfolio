@@ -31,19 +31,23 @@ const urlButtonStyles = {
   gap: {xs: .75, sm: .75, lg: 1.5}, 
   justifyContent: "left",
   borderLeft: 2, 
-  borderColor: "rgba(100,100,100,.75)",
+  borderColor: "rgba(175,175,175,.75)",
   py: {xs: .25, md: .5},
   px: {xs: 1, lg:2},
   transition: "all 250ms ease-in-out",
-  letterSpacing: .25,
-  opacity: .7,
-  fontSize: {xs: 13.5, sm: 15.5, md: 16.5, lg: 18, xl: 19},
-  fontWeight: 400,
+  letterSpacing: {xs: 1.2, sm: 1.5, md: 1.75, lg: 2.5},
+  opacity: { xs: .9, lg:.85 },
+  fontSize: {xs: 13.5, sm: 15.5, md: 16.5, lg: 17},
+  fontWeight: 600,
+  textTransform: "uppercase",
+  transform: "skewX(-6deg)",
   "&:hover":{
     opacity:1,
     textShadow: "1px 1px 3px rgba(100,100,100,.75)",
-    transform: "scale(1.025)",
-    borderColor: "primary.main",
+    transform: "scale(1.025) skewX(-6deg) translateX(3px)",
+    borderColor: "primary.dark",
+    letterSpacing: {xs: 1.5, sm: 1.75, md: 2, lg: 2.75},
+
   }
 }
 

@@ -55,7 +55,7 @@ const ProjectIntroduction = ({ title, description, logo }) => {
                   variant="h2" 
                   align="left" 
                   fontWeight={400}
-                  fontSize={{xs: 42, sm: 44, md: 48, lg: 55, xl: 65}} 
+                  fontSize={{xs: 42, sm: 44, md: 48, lg: 55, xl: 60}} 
                   letterSpacing={.1}
                   lineHeight={{xs:1}} 
                   textTransform="none"
@@ -68,8 +68,8 @@ const ProjectIntroduction = ({ title, description, logo }) => {
               </Box>
             </Fade>
           </Grid>
-          <Grid item xl={9}>
-            <Box sx={{position: "relative", mt: {xs: 5, sm: 7, md: 8, lg: 9, xl: 10}}}>
+          <Grid item xl={10}>
+            <Box sx={{position: "relative", mt: {xs: 5, sm: 7, md: 8, lg: 8}}}>
               <Box 
                 sx={{
                   height: "100%", 
@@ -84,13 +84,12 @@ const ProjectIntroduction = ({ title, description, logo }) => {
                   <Typography 
                     variant="body1" 
                     sx={{
-                      fontSize: {xs: 10, sm: 11, md: 12, lg:14, xl: 14.5},
+                      fontSize: {xs: 10, sm: 11, md: 12, lg:14},
                       fontWeight: 200,
-                      opacity: .5,
+                      opacity: .65,
                       letterSpacing: {xs: .75, sm: 1, md: 1.2, lg: 1.25, xl:1.3},
                       lineHeight: 1.7,
                       textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-                      // pl: {xs: .85, sm: 1, md:1.25, lg: 1.5},
                     }}        
                   >{description}
                   </Typography>
@@ -100,12 +99,10 @@ const ProjectIntroduction = ({ title, description, logo }) => {
           </Grid>
         </Grid>         
       </Grid>
-      <Grid item xs={0} sm={4.25} md={4} lg={4} xl={2.5} 
-        // pt={{sm: 3, md: 2, lg:1, xl: 2.5}} 
-        sx={{display: {xs: "none", sm: "initial"}}}>
+      <Grid item xs={0} sm={4.25} md={4} lg={4} xl={2.5} sx={{display: {xs: "none", sm: "flex"}, opacity: .85}}>
         <Fade appear={true} in={true} timeout={1000}  style={{ transitionDelay: "1600ms" }}>
-          <Box sx={{height: "auto", width: "auto", maxWidth: 300, maxHeight: 300, ml: "auto"}}>
-            <Image src={logo.url} fit='cover' duration={0} alt={logo.name}/>
+          <Box sx={{height: "auto", width: "auto", maxWidth: 250, maxHeight: 300, ml: "auto"}}>
+            <Image src={logo.url} fit='scale-down' duration={0} alt={logo.name}/>
           </Box>
         </Fade>
       </Grid>

@@ -104,7 +104,7 @@ const ProjectItem = ({ projects }) => {
                 display: "flex", 
                 justifyContent: "left",
                 textTransform: "none",
-                fontSize: {xs: 12.5, sm: 13.5, md: 13.5, lg:16, xl: 17},
+                fontSize: {xs: 12.5, sm: 13.5, md: 13.5, lg:16, xl: 16},
                 fontWeight: 300,
                 textShadow: "1px 1px 5px rgba(10,10,10,.75)",
                 transition: "all 250ms ease",
@@ -117,16 +117,17 @@ const ProjectItem = ({ projects }) => {
                 borderColor: "rgba(100,100,100,.75)",
                 px: {xs: 1, md:1.5},
                 py: .1,
+                transform: "skewX(-3deg)",
                 "&:hover": {
                   opacity: .9,
-                  transform: "scale(1.01)",
+                  transform: "scale(1.01) skewX(-3deg)",
                   background: "none",
                   borderColor: "primary.dark",
                 },
                 "&.active": {
                   opacity: 1,
                   fontWeight: 600,
-                  transform: "scale(1.025) translateX(5px)",
+                  transform: "scale(1.025) translateX(5px) skewX(-3deg)",
                   textShadow: "1px 1px 3px rgba(100,100,100,.75)",
                   borderLeft: 3, 
                   borderColor: "primary.main",
@@ -163,7 +164,12 @@ const ProjectItem = ({ projects }) => {
       <Grid item xs={12} md={9.25} lg={9.5} xl={9.15} sx={{minHeight: "110vh"}}>
         <Fade in={isShown} timeout={550} unmountOnExit>
           <Box>
-            {isShown && project && <ProjectItemContent project={project} isShown={isShown}/>}
+            {isShown && project && <ProjectItemContent 
+              project={project} 
+              projectsLength={projects.length} 
+              currentProjectIdx={currentProjectIdx}
+              nextProjectTitle={currentProjectIdx < projects.length - 1 ? projects[currentProjectIdx + 1].title : ""}
+            />}
           </Box>
         </Fade>
       </Grid>   
