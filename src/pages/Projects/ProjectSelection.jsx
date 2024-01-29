@@ -24,8 +24,8 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
 
   return (
 
-    <List sx={{mt: {xs: 4, sm: 10, md: 10}}}>
-    {projects.map((item, index) => <ListItem key={item.name} sx={{px: 0, py: .5, my: 0, mx:0, width: "fit-content", animation: `${slideIn} 800ms forwards ease ${(index * 100) + 1200}ms`, opacity: 0}}>
+    <List sx={{mt: {xs: 4, sm: 10, md: 10}, pb: 5}}>
+    {projects.map((item, index) => <ListItem key={item.name} sx={{px: 0, py: {xs: .5, sm:.75}, my: 0, mx:0, width: "fit-content", animation: `${slideIn} 800ms forwards ease ${(index * 100) + 1200}ms`, opacity: 0}}>
       <ListItemButton 
         className={index === activeProject ? "active" : ""}
         disableRipple
@@ -39,12 +39,12 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
           display: "flex", 
           justifyContent: {lg:"left"},
           textTransform: "none",
-          fontSize: {xs: 20, sm: 24, md: 25.5, lg:25.5, xl: 28},
+          fontSize: {xs: 20, sm: 25, md: 25.5, lg:25.5, xl: 27},
           fontWeight: 300,
           textShadow: "1px 1px 5px rgba(100,100,100,.25)",
           transition: "all 450ms ease",
-          opacity: .6,
-          letterSpacing: {xs:.5, lg: .75},
+          opacity: .75,
+          letterSpacing: {xs:.5, sm: 1.15},
           lineHeight: 1.1,
           my: {xs: .5, sm: .75, md: 1.5, lg: .5, xl: .75}, 
           py: {xs:.1, sm:.1},
@@ -61,7 +61,7 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
             textShadow: "1px 1px 5px rgba(100,100,100,.5)",
             background: "none",
             borderColor: "primary.main",
-            letterSpacing: 1.5,
+            letterSpacing: 1.25,
             "&::before": {
               width: {xs: 15, sm: 20, lg:40},
               backgroundColor: "primary.main",

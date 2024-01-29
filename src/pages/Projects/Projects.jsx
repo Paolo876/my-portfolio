@@ -17,7 +17,6 @@ import useRootRedux from '../../hooks/useRootRedux';
 import useProjectsRedux from '../../hooks/useProjectsRedux';
 
 const Projects = () => {
-  // const [ projects, setProjects ] = useState(MOCK_PROJ_LIST);
   const { projectsList, isLoading, error } = useProjectsRedux();
   return (
     <>
@@ -58,7 +57,7 @@ const MainPage = ({ projects }) => {
           setIsMounted(true)
       }, 500)
 
-    }, 5000)
+    }, 5500)
 
     if(isHovered) clearInterval(interval);
     return () => clearInterval(interval); 
@@ -73,15 +72,15 @@ const MainPage = ({ projects }) => {
         width: "100%",
         position: "relative", 
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
-        pt: {xs:8, sm: 12, md: 14, lg: 14, xl: 18}, 
+        pt: {xs:8, sm: 12, md: 14, lg: 14, xl: 16}, 
       }}
     >      
       <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", height: "100%"}}>
-        <Grid item lg={6} sx={{height: "100%", display: "flex", flexDirection: "column", justifyContent:{lg: "space-between"}, pb: 10}}>
+        <Grid item lg={6} sx={{height: "100%", display: "flex", flexDirection: "column", justifyContent:{lg: "space-between"}, pb: {xs: 5, sm: 10}}}>
           <Introduction/>
           <ProjectSelection projects={projects} setActiveProject={setActiveProject} setIsHovered={setIsHovered} activeProject={activeProject}/>
         </Grid>
-        <Grid lg={2.75}></Grid>
+        <Grid item lg={2.75}></Grid>
         <Fade in={true} timeout={800} style={{ transitionDelay: "2400ms" }}>
           <Grid              
             item 

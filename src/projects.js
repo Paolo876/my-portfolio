@@ -86,7 +86,7 @@ const projects = [
   {
     name: "luna", 
     title: "Luna",
-    briefDescription: "A beautiful browser homepage alternative that allows the user to customize the UI to their preference with many options and features.",
+    briefDescription: "A beautiful browser homepage alternative that allows the user to customize the UI to their preference.",
     description: "Luna is a personalizable browser homepage inspired by the google chrome extension 'Momentum'. It features a beautiful UI that can be customized by the user through a variety of options.",
     technologies: [ "JavaScript", "React", "Redux", "Firebase", "Material-UI", "Sass/Scss"],
     type: "personal",
@@ -271,8 +271,8 @@ const projects = [
   },
   {
     name: "markandgaea", 
-    title: "Mark and Gaea Wedding",
-    briefDescription: "A RSVP website for a wedding back in December 2023.",
+    title: "Mark & Gaea Wedding",
+    briefDescription: "A wedding RSVP website with an admin page to manage guests.",
     description: "This is a commissioned project that I designed and developed for a wedding's RSVP back in December 2023. It features on-scroll animations and a minimalist design. Submitted forms are stored on a database and an admin page is included for the client to manage their guests.",
     technologies: [ "JavaScript", "React", "Redux", "Firebase", "Material-UI", "Sass/Scss"],
     type: "commissioned",
