@@ -73,11 +73,24 @@ const MainPage = ({ projects }) => {
         width: "100%",
         position: "relative", 
         px: { xs:1.75, sm: 3, md: 4, lg: 5 }, 
-        pt: {xs:8, sm: 12, md: 14, lg: 14, xl: 16}, 
+        pt: {xs:9, sm: 12, md: 14, lg: 14, xl: 16}, 
       }}
     >      
       <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", height: "100%", overflow: "hidden"}}>
-        <Grid item lg={6} sx={{height: "100%", display: "flex", flexDirection: "column", justifyContent:{lg: "space-between"}, pb: {xs: 5, sm: 10}, pl: .5}}>
+        <Grid 
+          item 
+          lg={6} 
+          sx={{
+            height: {lg:"100%"}, 
+            display: "flex", 
+            flexDirection: "column", 
+            justifyContent:{lg: "space-between"}, 
+            pb: {xs: 5, sm: 10}, 
+            pl: .5, 
+            width: "fit-content",
+            zIndex: 1
+          }}
+        >
           <Introduction/>
           <ProjectSelection projects={projects} setActiveProject={setActiveProject} setIsHovered={setIsHovered} activeProject={activeProject}/>
         </Grid>
@@ -169,7 +182,7 @@ const MainPage = ({ projects }) => {
       </Grid>
 
       {/* background  */}
-      <Box sx={{position: "fixed", height: "100%", width: "100%", top: 0, left: 0, zIndex: -1, px: { xs:1.75, sm: 3, md: 4, lg: 5 }}}>
+      <Box sx={{position: "fixed", height: "100%", width: "100%", top: 0, left: 0, zIndex: {lg: -1}, px: { xs:1.75, sm: 3, md: 4, lg: 5 }}}>
         <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto"}}>
           <Grid item xs={0} lg={0}></Grid>
           <Slide in={true} timeout={900} direction="left">
@@ -177,7 +190,7 @@ const MainPage = ({ projects }) => {
             item 
             xs={7}
             sm={8} 
-            md={9} 
+            md={8.5} 
             lg={7} 
             xl={7}
             >
@@ -209,18 +222,18 @@ const MainPage = ({ projects }) => {
               item 
               xs={5}
               sm={4}
-              md={3}
+              md={3.5}
               lg={3} 
               xl={3}
               align="right" 
               sx={{
-                height: {xs: "95vh", sm: "95vh", md: "95vh", lg:"95vh"}, 
+                height: {xs: "98vh", sm: "94vh", md: "90vh", lg:"95vh"}, 
                 display: {xs:"flex", lg: "none"}, 
                 flexDirection: "column",
                 alignItems: "flex-end", 
                 justifyContent: {xs: "flex-end", lg:"center"}, 
-                zIndex: -2,
-                pb: {xs:3.5, sm: 8, md: 8, lg: 12, xl: 12},
+                zIndex: {lg:-2},
+                pb: {xs:3, sm: 8, md: 8, lg: 12, xl: 12},
               }}
             >
               <Fade in={isMounted} timeout={500} unmountOnExit>
@@ -233,34 +246,56 @@ const MainPage = ({ projects }) => {
                 }}>
                   <Box 
                     sx={{
-                      opacity: {xs: .6, sm:.75}, 
-                      width: {xs: 150, sm: 200, md: 270, lg: 270, xl: 250}, 
+                      opacity: {xs: .15, sm:.75}, 
                       height: "auto", 
+                      maxHeight: {xs: "100%", sm: "40%", md: "50%"},
+                      maxWidth: {xs: "100%", sm:"80%"},
                       transition: "all 1s ease"
                     }}
                   >
                     <Image 
-                      // urlEndpoint={imageKeys.urlEndpoint} 
                       src={projects[activeProject].logo.url}
                       alt={projects[activeProject].logo.name} 
-                      height="auto"
-                      width="auto"
-                      style={{objectFit: "scale-down", height: "100%", width: "100%"}}
                       fit="scale-down"
                     />                  
                   </Box>
-                  <Box sx={{mt: {xs:2, sm: 5}, borderRight: 2, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
+                  <Box sx={{mt: {xs:2, sm: 3, md: 5}, borderRight: 2, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}, display: {xs: "none", sm: "block"}}}>
                     <Typography 
                       variant="body2"
                       sx={{
-                        fontSize: {xs: 10, sm: 12, md: 13, lg:14, xl: 14.5},
-                        fontWeight: 200,
-                        opacity: .5,
+                        fontSize: {xs: 10, sm: 12, md: 14},
+                        fontWeight: 100,
+                        opacity: .75,
                         letterSpacing: .5,
-                        lineHeight: 1.45,
+                        lineHeight: {xs: 1.5, sm: 1.5, md: 1.8},
+                        textShadow: "1px 1px 5px rgba(150,150,150,.75)",
+                        transform: "skewX(-7deg)",
                         textShadow: "1px 1px 5px rgba(150,150,150,.75)",
                       }} 
                     >{projects[activeProject].briefDescription}</Typography>
+                  </Box>
+                  <Box sx={{mt: {sm: 7, md:9}, display: {xs: "none", sm: "block"}}}>
+                    <ButtonBase 
+                      onClick={() => navigate(`${projects[activeProject].name}`)}
+                      sx={{                
+                        fontSize: { md: "1.1rem" },
+                        lineHeight: 1.4, 
+                        color: "white", 
+                        transform: "skewX(-7deg)",
+                        py: .85,
+                        fontWeight: 600,
+                        letterSpacing: 2.2,
+                        transition: "transform 200ms ease-in-out, border 200ms ease-in-out",
+                        fontFamily: "Manrope",
+                        textTransform: "uppercase",
+                        textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+                        display: "flex",
+                        gap: 1.25,
+                        opacity: 1,
+                      }}
+                    >
+                      Read more <ArrowForwardIosIcon style={{fontSize: "inherit",}} color="primary"/>
+                    </ButtonBase>
                   </Box>
                 </Box>
               </Fade>
