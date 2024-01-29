@@ -54,10 +54,11 @@ const ProjectSelection = ({ projects, setActiveProject, setIsHovered, activeProj
           borderLeft: 2,
           borderColor: "rgba(120,120,120,.85)",
           pl: {xs: .75, sm: 1, lg: 1.75},
+          transform: "skewX(-3deg)",
           "&:hover, &.active": {
             opacity: 1,
             fontWeight: 500,
-            transform: "scale(1.05) translateX(2px)",
+            transform: "scale(1.02) translateX(2px) skewX(-3deg)",
             textShadow: "1px 1px 5px rgba(100,100,100,.5)",
             background: "none",
             borderColor: "primary.main",

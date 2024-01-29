@@ -77,7 +77,7 @@ const MainPage = ({ projects }) => {
       }}
     >      
       <Grid container sx={{justifyContent: "center", alignItems: "flex-start", maxWidth: "1500px", mx: "auto", height: "100%", overflow: "hidden"}}>
-        <Grid item lg={6} sx={{height: "100%", display: "flex", flexDirection: "column", justifyContent:{lg: "space-between"}, pb: {xs: 5, sm: 10}}}>
+        <Grid item lg={6} sx={{height: "100%", display: "flex", flexDirection: "column", justifyContent:{lg: "space-between"}, pb: {xs: 5, sm: 10}, pl: .5}}>
           <Introduction/>
           <ProjectSelection projects={projects} setActiveProject={setActiveProject} setIsHovered={setIsHovered} activeProject={activeProject}/>
         </Grid>
@@ -139,7 +139,6 @@ const MainPage = ({ projects }) => {
                 <ButtonBase 
                   onClick={() => navigate(`${projects[activeProject].name}`)}
                   sx={{                
-                    // border: 2, 
                     fontSize: { lg: "1rem" },
                     lineHeight: 1.4, 
                     color: "white", 
@@ -157,7 +156,6 @@ const MainPage = ({ projects }) => {
                     "&:hover":{
                       opacity:1,
                       transform: "scale(1.02) skewX(-7deg)",
-                      // borderColor: "primary.main",
                     }}
                   }
                 >
@@ -226,8 +224,21 @@ const MainPage = ({ projects }) => {
               }}
             >
               <Fade in={isMounted} timeout={500} unmountOnExit>
-                <Box>
-                  <Box sx={{opacity: {xs: .6, sm:.75}, width: {xs: 150, sm: 200, md: 270, lg: 270, xl: 250}, height: "auto", transition: "all 1s ease"}}>
+                <Box sx={{
+                  display: "flex", 
+                  flexDirection: "column",
+                  alignItems: "flex-end", 
+                  justifyContent: "flex-end", 
+
+                }}>
+                  <Box 
+                    sx={{
+                      opacity: {xs: .6, sm:.75}, 
+                      width: {xs: 150, sm: 200, md: 270, lg: 270, xl: 250}, 
+                      height: "auto", 
+                      transition: "all 1s ease"
+                    }}
+                  >
                     <Image 
                       // urlEndpoint={imageKeys.urlEndpoint} 
                       src={projects[activeProject].logo.url}
@@ -235,6 +246,7 @@ const MainPage = ({ projects }) => {
                       height="auto"
                       width="auto"
                       style={{objectFit: "scale-down", height: "100%", width: "100%"}}
+                      fit="scale-down"
                     />                  
                   </Box>
                   <Box sx={{mt: {xs:2, sm: 5}, borderRight: 2, borderColor: {xs: "transparent", sm:"primary.dark"}, pr: {sm:1}}}>
