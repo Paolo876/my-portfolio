@@ -166,8 +166,7 @@ const ProjectItem = ({ projects }) => {
           <Box>
             {isShown && project && <ProjectItemContent 
               project={project} 
-              projectsLength={projects.length} 
-              currentProjectIdx={currentProjectIdx}
+              nextProjectName={currentProjectIdx < projects.length - 1 ? projects[currentProjectIdx + 1].name : ""}
               nextProjectTitle={currentProjectIdx < projects.length - 1 ? projects[currentProjectIdx + 1].title : ""}
             />}
           </Box>

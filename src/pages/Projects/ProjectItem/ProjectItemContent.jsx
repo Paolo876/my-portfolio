@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { Grid, Modal, Box, Divider, Typography, ButtonBase } from '@mui/material'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { keyframes } from '@mui/system';
@@ -23,8 +24,10 @@ const buttonAnimation = keyframes`
 `;
 
 
-const ProjectItemContent = ({ project, projectsLength, currentProjectIdx, nextProjectTitle }) => {
+const ProjectItemContent = ({ project, nextProjectName, nextProjectTitle }) => {
   const [ showModal, setShowModal ] = useState({isVisible: false, imageName: null});
+  const navigate = useNavigate();
+
 
   const handleImageClick = (imageName) => {
     setShowModal({ isVisible: true, imageName })
@@ -54,14 +57,42 @@ const ProjectItemContent = ({ project, projectsLength, currentProjectIdx, nextPr
       </Grid>
 
       {/* Next Project Btn */}
-{nextProjectTitle !== "" && <Grid item xs={12} sx={{mt: {xs: 10, sm: 12, md: 14, lg: 16, xl: 18}}}>
-        <ButtonBase sx={{display: "flex", flexDirection: "column", mx: "auto"}}>
-          <Typography>{nextProjectTitle}</Typography>
-          <Box sx={{animation: `${buttonAnimation} 1000ms linear infinite alternate`}}>
-            <ArrowForwardIosIcon color="primary" />
-          </Box>
-        </ButtonBase>
-      </Grid>}
+        {nextProjectTitle !== "" && <Grid item xs={12} sx={{mt: {xs: 10, sm: 12, md: 14, lg: 16, xl: 18}}}>
+          <ButtonBase 
+            onClick={() => navigate(`/projects/${nextProjectName}`)}
+            sx={{
+              display: "flex", 
+              flexDirection: "column", 
+              mx: "auto", 
+              px: 2, 
+              py: 1.5,
+              opacity: .75,
+              transform: "skewX(-5deg)",
+              transition: "all 250ms ease",
+              "&:hover": {
+                opacity: .95,
+                transform: "scale(1.01) skewX(-5deg)",
+                background: "none",
+                borderColor: "primary.dark",
+              },
+            }}
+          >
+            <Typography sx={{
+              fontSize: {xs: 12.5, sm: 13.5, md: 13.5, lg:15},
+              fontWeight: 500,
+              textShadow: "1px 1px 5px rgba(10,10,10,.85)",
+              // mixBlendMode: "difference",
+              color: "primary.main",
+              // color: "rgba(255,255,255,.7)",
+              letterSpacing: .85,
+            }}>
+              <Box component="span">Next Project: </Box>{nextProjectTitle}
+            </Typography>
+            <Box sx={{animation: `${buttonAnimation} 1000ms linear infinite alternate`, mt: 1}}>
+              <ArrowForwardIosIcon color="primary" />
+            </Box>
+          </ButtonBase>
+        </Grid>}
 
 
       {/* Footer */}
