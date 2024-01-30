@@ -28,18 +28,12 @@ const slideLeft = keyframes`
 `;
 
 
-const boxTextStyles = {
-  fontWeight: 300,
-  display: "inline",
-};
-
-
 const baseTextStyles = {
   fontSize: {xs: 11.5, sm: 14, md: 14.5, lg:15, xl: 15},
   fontWeight: 300,
   opacity: .6,
-  letterSpacing: .4,
-  lineHeight: 1.4,
+  letterSpacing: {xs: .4, md: .5},
+  lineHeight: {xs:1.4, sm: 1.5, md: 1.6},
   textShadow: "1px 1px 5px rgba(10,10,10,.75)",
 }
 
@@ -65,7 +59,7 @@ const Introduction = () => {
           mx: "auto",
         }}
       >      
-        <Grid item xs={12} md={7} lg={6} xl={5.5} order={{xs: 2, md:1}} mt={{xs: 6, sm: 8, md: 0}}>
+        <Grid item xs={12} md={7} lg={6} xl={6} order={{xs: 2, md:1}} mt={{xs: 6, sm: 8, md: 0}}>
           <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "200ms" }}>
             <Box>
               <Typography 
@@ -87,38 +81,37 @@ const Introduction = () => {
           <Box mt={{xs: 3, sm: 6, md: 7, lg: 7, xl: 10}} pr={{sm:3, md: 0}}>
             <Box sx={{opacity: 0, animation: `${slideRight} 800ms ease forwards 450ms`}}>
               <Typography variant="body1" sx={baseTextStyles}>          
-                I am a <Box sx={boxTextStyles} component="span"> Full Stack Web Developer </Box> 
-                based in <Box sx={boxTextStyles} component="span">Los Angeles, California. </Box> I started coding in 2019 and went back to college in 2020 for a degree in
-                <Box sx={boxTextStyles} component="span"> Computer Information Systems </Box> major in Web Development and Software Development.
+                I am a Full Stack Web Developer based in Los Angeles, California. 
+                I can design and develop a fully working website or web application from frontend to backend along with different libraries and technologies.
               </Typography>
             </Box>
-            <Box sx={{opacity: 0, animation: `${slideRight} 800ms ease forwards 650ms`}}>
+            <Box sx={{opacity: 0, animation: `${slideRight} 800ms ease forwards 650ms`}} mt={{xs: 1.25, sm: 1.5, lg: 2}}>
               <Typography 
                 variant="body1" 
                 sx={baseTextStyles} 
-                mt={{xs: 1.25, sm: 1.5, lg: 2, xl:3}}>         
-                I can design and develop a fully working website or web application from frontend to backend with amazing features including the use of APIs and database implementation.
+              >         
+                I started coding in 2019 and went back to college in 2020 for a degree in Computer Information Systems major in Web Development and Software Development.
               </Typography>
             </Box>
-            <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 950ms`}}>
+            <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 950ms`}} mt={{xs: 3, sm: 3.5, lg:5}}>
               <Typography 
                 variant="body1" 
                 sx={{
                   ...baseTextStyles, 
-                  opacity: .85, 
-                  borderLeft: 2, 
-                  pl: {xs: 1, md:1.5}, 
+                  opacity: .8, 
+                  borderLeft: 1, 
+                  pl: {xs: 1, md:1.25}, 
                   borderColor: "primary.dark", 
-                  lineHeight: 1.4
+                  letterSpacing: {xs: .4, md: .5},
+                  lineHeight: {xs:1.4, sm: 1.5, md: 1.6},
                 }} 
-                mt={{xs: 3, sm: 3.5, lg:5, xl:8}}
               >
                 I am ready to take my skills to the next level and I am confident that I have the necessary knowledge and skills to prove my capabilities.
               </Typography>
             </Box>
           </Box>
           <Fade appear={true} in={true} timeout={900}  style={{ transitionDelay: "1300ms" }}>
-            <Box sx={{mt: {xs: 5, lg: 6, xl: 8}}}>
+            <Box sx={{mt: {xs: 5, lg: 8, xl: 10}}}>
               <ButtonBase 
                 color="inherit"
                 sx={{
@@ -126,17 +119,20 @@ const Introduction = () => {
                   border: 2, 
                   fontSize: { xs: ".85rem", sm: "1rem", md: "1rem", lg: "1rem" },
                   lineHeight: 1.4, 
-                  borderColor: "rgba(100,100,100,.75)",
-                  px: 2,
-                  py: {xs: 1, sm: 1.25},
+                  borderColor: "rgba(150,150,150,.75)",
+                  px: {xs: 2, sm: 2.25, md: 2.5, lg: 3},
+                  py: {xs: 1, sm: 1.25, md: 1.5, lg: 1.6},
                   fontWeight: 600,
-                  letterSpacing: .5,
-                  opacity: .75,
+                  letterSpacing: {xs:1.75, md: 2, lg: 2.25},
+                  opacity: {xs: .95, lg: .85},
                   transition: "all 250ms ease-in-out",
+                  textTransform: "uppercase",
+                  // transform: "skewX(-3deg)",
+
                   "&:hover":{
                     opacity:1,
                     textShadow: "1px 1px 3px rgba(100,100,100,.75)",
-                    transform: "scale(1.02)",
+                    transform: "scale(1.01)",
                     borderColor: "primary.dark",
                   }
                 }}
@@ -147,7 +143,7 @@ const Introduction = () => {
           </Fade>
         </Grid>
 
-        <Grid item xs={12} md={5} lg={6} xl={6.5}  order={{xs: 1, md:2}} sx={{display: "flex", justifyContent: "right", alignitems: "center", height: "100%"}}>
+        <Grid item xs={12} md={5} lg={6} xl={6}  order={{xs: 1, md:2}} sx={{display: "flex", justifyContent: "right", alignitems: "center", height: "100%"}}>
           <Box 
             sx={{
               border: 1, 

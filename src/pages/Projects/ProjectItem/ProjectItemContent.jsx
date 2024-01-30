@@ -66,12 +66,12 @@ const ProjectItemContent = ({ project, nextProjectName, nextProjectTitle }) => {
               mx: "auto", 
               px: 2, 
               py: 1.5,
-              opacity: .8,
+              opacity: .85,
               transform: "skewX(-5deg)",
               transition: "all 250ms ease",
               "&:hover": {
                 opacity: .98,
-                transform: "scale(1.01) skewX(-5deg)",
+                transform: "scale(1.02) skewX(-5deg)",
                 background: "none",
                 borderColor: "primary.dark",
               },
@@ -81,9 +81,7 @@ const ProjectItemContent = ({ project, nextProjectName, nextProjectTitle }) => {
               fontSize: {xs: 12.5, sm: 13.5, md: 13.5, lg:15},
               fontWeight: 500,
               textShadow: "1px 1px 5px rgba(10,10,10,.85)",
-              // mixBlendMode: "difference",
               color: "primary.main",
-              // color: "rgba(255,255,255,.7)",
               letterSpacing: .95,
             }}>
               <Box component="span" sx={{ fontSize: {xs: 11, sm: 12, md: 12, lg:13.5}, fontWeight: 300, letterSpacing: .8}}>Next Project: </Box>{nextProjectTitle}
