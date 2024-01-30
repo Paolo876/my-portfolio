@@ -48,8 +48,8 @@ const Skills = () => {
             skills={webDevSkillsList} 
             title="Web Development" 
             description={<Typography sx={baseTextStyles}>
-              My projects are mainly built using ReactJS or NextJS on the Client-Side, ExpressJS and NodeJS on the Server-Side, and MongoDB or MySQL for database implementations
-              along with related libraries and frameworks.
+              My projects are mainly built using ReactJS on the Client-Side, ExpressJS and NodeJS on the Server-Side, and MongoDB or MySQL for database implementations
+              along with related libraries.
             </Typography>}
             isMain={true}
           />}

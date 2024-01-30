@@ -53,13 +53,13 @@ const ProcessStepper = ({ processItems }) => {
                 opacity: activeStep === index ? 1 : .75,
                 transition: "all 150ms linear",
                 textShadow: activeStep === index ? "1px 1px 7px rgba(125,125,125,.5)" : "1px 1px 7px rgba(25,25,25,.75)",
+                textTransform: "uppercase",
+                fontWeight: 500,
                 fontSize: {
-                  xs: activeStep === index ? 20.5 : 20, 
-                  sm: activeStep === index ? 21.5 : 21, 
-                  md: activeStep === index ? 22.5 : 22, 
-                  lg: activeStep === index ? 23.5 : 23, 
+                  md: activeStep === index ? 16.5 : 15, 
+                  lg: activeStep === index ? 19.5 : 18, 
                 },
-                letterSpacing: activeStep === index ? 1 : .5
+                letterSpacing: activeStep === index ? .75 : .5
               }}
             >{item.title}</Typography>
             <Typography 
@@ -68,11 +68,12 @@ const ProcessStepper = ({ processItems }) => {
               mt={{ md: 2, lg:3, xl: 4 }} 
               sx={{
                 transition: "all 400ms ease-in-out",
-                fontSize: { xs: 10, sm: 10.5, md: 11, lg:13, xl: 14 },
+                fontSize: { md: 11, lg:13, xl: 14 },
                 fontWeight: 300,
                 opacity: activeStep === index ? .7 : .45,
                 transform: activeStep === index ? "scale(1.015)" : "scale(1)",
-                letterSpacing: .3,
+                letterSpacing: .4,
+                lineHeight: 1.7,
                 textShadow: activeStep === index ? "1px 1px 7px rgba(75,75,75,.5)" : "1px 1px 7px rgba(10,10,10,.75)",
               }}
             >

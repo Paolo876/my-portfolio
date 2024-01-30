@@ -8,15 +8,17 @@ import { useInView } from 'react-intersection-observer';
 const processItems = [
   {
     title: "Conceptualization",
-    body: "This is the initial phase of my work where I define the main purpose and functions of the project. I create a draft of the UI/UX and the necessary diagrams for the project.",
+    // body: "This is the initial phase of my work where I define the main purpose and functions of the project. I create a draft of the UI/UX and the necessary diagrams for the project.",
+    body: "A project starts with an idea. The idea then, turns into a draft where I figure the purpose and utility of the project including the initial UI/UX that I want to achieve. "
   },
   {
     title: "Planning",
-    body: "This is the process of refining the initial drafts and having a clear vision of the outcome. I write the initial pseudo-codes, list the needed libraries and frameworks, and other preparations before I start coding",
+    body: "This phase refines my concept to have a clear vision of the outcome. I start with writing pseudo-codes, list down the needed libraries or APIs, and create a diagram for the database model."
+    // body: "This is the process of refining the initial drafts and having a clear vision of the outcome. I write the initial pseudo-codes, list the needed libraries and frameworks, and other preparations before I start coding",
   },
   {
     title: "Development",
-    body: "When the foundations have been set, it's time to start building. I always try to make sure that I follow my plan and stick to my concept. This way, the result will be just as I envisioned.",
+    body: "When the foundations are set, construction begins. I always try to make sure that I follow my plan and stick to my concept. This way, the result will be just as I envisioned.",
   },
 
 ]
@@ -38,7 +40,7 @@ const Process = () => {
         py: {xs:8, sm: 10, md: 11, lg: 12, xl: 15}
       }}
     >
-      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(15,15,15,.25)", zIndex: -1}}></Box>
+      <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(25,25,25,.25)", zIndex: -1}}></Box>
       <Grid 
         container 
         sx={{

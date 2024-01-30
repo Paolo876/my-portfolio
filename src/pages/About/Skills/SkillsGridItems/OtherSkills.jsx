@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 
 const boxStyles = {
   width: "fit-content",
-  py: {sm: .75, md: .75, lg: 1, xl:1},
+  p: {sm: .75, md: .75, lg: 1, xl:1},
   height: "100%",
   userSelect: "none",
   opacity: .75,  
@@ -15,7 +15,7 @@ const boxStyles = {
   fontFamily: "Manrope",
   "&:hover, &.active":{
     opacity:1,
-    transform: "scale(1.025)",
+    transform: "scale(1.01)",
   },
   "&:hover p, &.active p": {
     color: "primary.main",
