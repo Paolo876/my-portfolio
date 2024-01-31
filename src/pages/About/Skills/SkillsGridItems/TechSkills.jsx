@@ -120,7 +120,7 @@ const TechSkills = ({ skills, title, description, isMain }) => {
           
           {skills.map((item, index) => 
             <Fade appear={inView} in={inView} timeout={600}  style={{ transitionDelay: `${(index * 170) + 600}ms` }} key={item.name} >
-              <Grid item xs={2.4} sm={2.9} md={2.4} lg={1.4} xl={1.5} align="center">
+              <Grid item xs={3} sm={2.9} md={2.4} lg={1.4} xl={1.5} align="center">
                 <Box 
                   sx={{
                     my: {xs: 1.15, md:1.5, lg: 1.75}, 

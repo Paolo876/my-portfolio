@@ -39,8 +39,6 @@ export const ColorlibConnector = styled(StepConnector)(() => ({
 export const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) =>  ({
   backgroundColor: theme.palette.mode === 'dark' ? theme.palette.grey[700] : '#ccc',
   zIndex: 1,
-  // width: 55,
-  // height: 55,
   display: 'flex',
   borderRadius: '50%',
   justifyContent: 'center',
@@ -60,7 +58,7 @@ export const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) =>  ({
 
 
 const boxItemStyles = {
-  p:1.5, 
+  p:{xs: 1.3, sm:1.4, md: 1.5}, 
   height: {xs: 45, sm: 50, md: 52, lg:55}, 
   width: {xs: 45, sm: 50, md: 52, lg:55},
 }
