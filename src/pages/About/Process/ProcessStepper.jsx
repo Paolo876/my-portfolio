@@ -56,10 +56,10 @@ const ProcessStepper = ({ processItems }) => {
                 textTransform: "uppercase",
                 fontWeight: 500,
                 fontSize: {
-                  md: activeStep === index ? 16.5 : 15, 
-                  lg: activeStep === index ? 19.5 : 18, 
+                  md: activeStep === index ? 15 : 14.5, 
+                  lg: activeStep === index ? 17.5 : 17, 
                 },
-                letterSpacing: activeStep === index ? .75 : .5
+                letterSpacing: activeStep === index ? 2.5 : 2
               }}
             >{item.title}</Typography>
             <Typography 
