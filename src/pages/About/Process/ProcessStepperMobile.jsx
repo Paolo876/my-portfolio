@@ -50,14 +50,15 @@ const ProcessStepperMobile = ({ processItems }) => {
               <Typography 
                 variant="h2" 
                 align="center" 
-                fontWeight={400}
-                textTransform="none"
+                fontWeight={500}
                 sx={{
                   opacity: 1,
                   transition: "all 150ms linear",
                   textShadow: "1px 1px 7px rgba(125,125,125,.5)",
-                  fontSize: { xs: 21, sm: 23 },
-                  letterSpacing: 1
+                  fontSize: { xs: 13.5, sm: 14 },
+                  letterSpacing: 2.5,
+                  textTransform: "uppercase",
+
                 }}
               >
                 {item.title}
@@ -69,13 +70,14 @@ const ProcessStepperMobile = ({ processItems }) => {
               <Typography 
                 variant="body1" 
                 align='center'
-                mt={{ xs: 1.5, sm: 2 }} 
+                mt={{ xs: 3, sm: 4 }} 
                 sx={{
                   transition: "all 400ms ease-in-out",
-                  fontSize: { xs: 11.5, sm: 12.5 },
+                  fontSize: { xs: 11, sm: 12.5 },
                   fontWeight: 300,
                   opacity: .6,
-                  letterSpacing: .3,
+                  letterSpacing: .4,
+                  lineHeight: 1.7,
                   textShadow: "1px 1px 7px rgba(75,75,75,.5)",
                 }}
               >

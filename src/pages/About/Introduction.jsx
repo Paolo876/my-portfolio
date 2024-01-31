@@ -31,7 +31,7 @@ const slideLeft = keyframes`
 const baseTextStyles = {
   fontSize: {xs: 11.5, sm: 14, md: 14.5, lg:15, xl: 15},
   fontWeight: 300,
-  opacity: .6,
+  opacity: .75,
   letterSpacing: {xs: .4, md: .5},
   lineHeight: {xs:1.4, sm: 1.5, md: 1.6},
   textShadow: "1px 1px 5px rgba(10,10,10,.75)",
@@ -98,7 +98,7 @@ const Introduction = () => {
                 variant="body1" 
                 sx={{
                   ...baseTextStyles, 
-                  opacity: .8, 
+                  opacity: .9, 
                   borderLeft: 1, 
                   pl: {xs: 1, md:1.25}, 
                   borderColor: "primary.dark", 
@@ -106,7 +106,7 @@ const Introduction = () => {
                   lineHeight: {xs:1.4, sm: 1.5, md: 1.6},
                 }} 
               >
-                I am ready to take my skills to the next level and I am confident that I have the necessary knowledge and skills to prove my capabilities.
+                I am ready to take my skills to the test and I am confident that I have the necessary knowledge to prove my capabilities.
               </Typography>
             </Box>
           </Box>

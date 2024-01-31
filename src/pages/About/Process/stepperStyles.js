@@ -39,8 +39,8 @@ export const ColorlibConnector = styled(StepConnector)(() => ({
 export const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) =>  ({
   backgroundColor: theme.palette.mode === 'dark' ? theme.palette.grey[700] : '#ccc',
   zIndex: 1,
-  width: 55,
-  height: 55,
+  // width: 55,
+  // height: 55,
   display: 'flex',
   borderRadius: '50%',
   justifyContent: 'center',
@@ -59,13 +59,19 @@ export const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) =>  ({
 }));
 
 
+const boxItemStyles = {
+  p:1.5, 
+  height: {xs: 45, sm: 50, md: 52, lg:55}, 
+  width: {xs: 45, sm: 50, md: 52, lg:55},
+}
+
 export const ColorlibStepIcon = (props) => {
   const { active, completed, className } = props;
 
   const icons = {
-    1: <Box sx={{p:1.25}}><SkillIconImageItem src={conceptIcon} objectFit='scale-down'/></Box>,
-    2: <Box sx={{p:1.5}}><SkillIconImageItem src={planningIcon} objectFit='scale-down'/></Box>,
-    3: <Box sx={{p:1.25}}><SkillIconImageItem src={executeIcon} objectFit='scale-down'/></Box>,
+    1: <Box sx={boxItemStyles}><SkillIconImageItem src={conceptIcon} objectFit='scale-down'/></Box>,
+    2: <Box sx={boxItemStyles}><SkillIconImageItem src={planningIcon} objectFit='scale-down'/></Box>,
+    3: <Box sx={boxItemStyles}><SkillIconImageItem src={executeIcon} objectFit='scale-down'/></Box>,
   };
 
   return (

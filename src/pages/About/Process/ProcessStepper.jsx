@@ -45,9 +45,7 @@ const ProcessStepper = ({ processItems }) => {
             <Typography 
               variant="h2" 
               align="center" 
-              fontWeight={400}
               lineHeight={{xs:1}} 
-              textTransform="none"
               mt={3}
               sx={{
                 opacity: activeStep === index ? 1 : .75,
