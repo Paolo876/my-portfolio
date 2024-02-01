@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { Typography, Box, Grid, Fade } from '@mui/material'
 import SkillIconImageItem from '../../../../components/SkillIconImageItem'
 import { useInView } from 'react-intersection-observer';
-import { keyframes } from '@mui/system';
 
 
 const boxStyles = {
@@ -84,8 +83,6 @@ const TechSkills = ({ skills, title, description, isMain }) => {
             backgroundColor: {xs: "primary.dark", sm:"primary.dark"}, 
             position: "absolute", 
             left: 0, top: 0,
-            // opacity: 0,
-            // animation: inView ? `${slideDown} 400ms ease forwards 400ms` : "",
           }}
         ></Box>
           {description} 
@@ -105,15 +102,9 @@ const TechSkills = ({ skills, title, description, isMain }) => {
                     backgroundColor: {xs: "primary.dark", sm:"primary.dark"}, 
                     position: "absolute", 
                     left: 0, top: 0,
-                    // opacity: 0,
-                    // animation: inView ? `${slideDown} 500ms ease forwards 250ms` : "",
                   }}
                 ></Box>
-                {/* <Fade appear={inView} in={inView} timeout={600}  style={{ transitionDelay: "1000ms" }}>
-                  <Box> */}
                     {description} 
-                  {/* </Box> */}
-                {/* </Fade> */}
               </Box>
             </Grid>
           }

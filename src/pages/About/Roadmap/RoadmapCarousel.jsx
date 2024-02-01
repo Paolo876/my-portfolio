@@ -6,20 +6,21 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const roadmapItems = [
   {
-    title: "I - The Beginning",
-    description: "Before my development journey started, I used to study Architecture back in Philippines where I learned about effective design methods and strategies that I continue to incorporate throughout my projects. In 2019, I started an online course called The Web Development Bootcamp by Colt Steele where I learned about the fundamentals. After completing the 47-hour course, it caught my interest and gave me the motivation to enroll back to College in 2020 for a degree in Computer Information Systems Major in Software Development and Web Development."
+    title: "I",
+    description: "Before my development journey started, I studied Architecture back in Philippines for four years and implement the design knowledge I gained there throughout my projects. In 2019, I took an online course in Udemy where I learned about the fundamentals of coding. After completing the 47-hour course, it caught my interest and gave me the motivation to enroll back to College in 2020 for a degree in Computer Information Systems Major in Software Development and Web Development."
   },
   {
-    title: "II - The Challenges",
-    description: "While being a part-time college student, I was also self-studying through multiple online courses and youtube tutorials, all while being full-time employed at an office job. As challenging as it was, the experience was worth it for the knowledge I gained."
+    title: "II",
+    description: "While being a part-time college student, I was also self-studying through multiple online courses and youtube tutorials, all while working at an office job full-time. As challenging as it was, the effort was worth the knowledge I gained."
   },
   {
-    title: "III - The Process",
-    description: "In college, I was able to learn the foundations, how to think like a developer, analyze logic and algorithms, and experienced working with a team. I focused more on Web Development than Software Development as it seems more engaging to me. I then started learning ReactJS along with related tech stack and developed most of my projects using it. In 2022, I started working as a freelance developer on the side, building commissioned projects to improve my skills and build network."
+    title: "III",
+    description: "In college, I was able to learn the foundations, how to think like a developer, analyze logic and algorithms, and experienced working with a team. I focused more on Web Development than Software Development as it seems more engaging to me. I then started learning ReactJS along with related tech stack and built most of my projects using it. In 2022, I started working as a freelance developer on the side, building commissioned projects to improve my skills and build network."
   },
   {
-    title: "IV - The Present",
-    description: "Present time, I still continue to learn more techologies online, further refine and improve my existing projects, and conceptualize new project ideas. I may lack enough work or professional experience but I am determined and always remain consistent with my progress hoping that one day the hard work will pay off."
+    title: "IV",
+    // description: "Present time, I still continue to learn more techologies online, further refine and improve my existing projects, and conceptualize new project ideas. I may lack enough work or professional experience but I am determined and always remain consistent with my progress hoping that one day the hard work will pay off."
+    description: "Present time, I still continue to learn more techologies online, further refine and improve my existing projects, and conceptualize new project ideas."
   },
 ];
 
@@ -87,7 +88,10 @@ const RoadmapCarousel = () => {
           onChange={(i) => setCurrentIndex(i)}
           index={currentIndex}
         >
-          {roadmapItems.map((item, index) => <Grid container key={item} sx={{minHeight: {xs: 200, sm: 200, md: 175, lg: 175, xl: 190}}}>
+          {roadmapItems.map((item, index) => <Box>
+            
+          </Box>)}
+          {/* {roadmapItems.map((item, index) => <Grid container key={item} sx={{minHeight: {xs: 200, sm: 200, md: 175, lg: 175, xl: 190}}}>
             <Grid item md={4} lg={3.5} xl={4}>
               <Fade appear={index === currentIndex} in={index === currentIndex} timeout={800}  style={{ transitionDelay: "100ms" }}>
                 <Box>
@@ -130,7 +134,7 @@ const RoadmapCarousel = () => {
               </Fade>
             </Grid>
           </Grid>
-          )}
+          )} */}
         </Carousel>
       </Box>
       <IconButton 
