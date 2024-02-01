@@ -69,35 +69,17 @@ const ContactDescription = () => {
           <Typography
             variant="body1"
             sx={{
-              fontSize: {xs: 10, sm: 14.5, md: 15, lg:15, xl: 16},
+              fontSize: {xs: 10, sm: 14, md: 14, lg:14.5, xl: 15},
               fontWeight: 300,
-              opacity: .75,
-              letterSpacing: .4,
-              lineHeight: 1.4,
+              opacity: .7,
+              letterSpacing:{xs: .4, sm:.6},
+              transform: "skewX(-3deg)",
+              lineHeight: 1.7,
               textShadow: "1px 1px 5px rgba(10,10,10,.75)",
             }}
           >
             I am excited to take a leap forward and further hone my knowledge and skills with the right company.
-            Let me show you my capabilities and what I can offer.
-          </Typography>
-        </Box>
-        <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 750ms`}}>
-          <Typography 
-            variant="body1"
-            sx={{
-              mt: {xs: 1, sm:2, md:3},
-              fontSize: {xs: 10, sm: 14.5, md: 15, lg:15, xl: 16},
-              fontWeight: 300,
-              opacity: .6,
-              letterSpacing: .4,
-              lineHeight: 1.4,
-              textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-              borderLeft: 2,
-              borderColor: "primary.main",
-              pl: {xs: .5, sm:1.25},
-            }}
-          >
-            Please feel free to reach out to me using my contact informations provided or by submitting the inquiry form.
+            {/* Let me show you my capabilities and what I can offer. */}
           </Typography>
         </Box>
       </Box>

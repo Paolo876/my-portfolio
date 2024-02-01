@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, ButtonBase, TextField } from '@mui/material'
+import { Box, ButtonBase, TextField, Typography } from '@mui/material'
 import { keyframes } from '@mui/system';
 
 
@@ -72,6 +72,24 @@ const ContactForm = () => {
         autoComplete="off" 
         onSubmit={handleSubmit}
       >
+      <Box>
+        <Typography 
+          variant="body1"
+          sx={{
+            mt: {xs: 1, sm:2, md:3},
+            fontSize: {xs: 10, sm: 14.5, md: 15, lg:15, xl: 14.5},
+            fontWeight: 300,
+            opacity: .95,
+            transform: "skewX(-5deg)",
+            letterSpacing: .5,
+            lineHeight: 1.6,
+            textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+            textAlign: "left"
+          }}
+        >
+          Please feel free to reach out to me using my contact informations provided or by submitting this form.
+        </Typography>
+      </Box>
         <Box sx={{display: "flex", flexDirection: {xs: "column", sm: "row"}, gap: {xs: 0, sm: 3}, my: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}}>
           <TextField id="firstName" label="First Name" variant="standard" fullWidth type="text" InputProps={inputStyles} InputLabelProps={inputLabelStyles} inputProps={{maxLength: 25}} sx={{mt: {xs: 0, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} />
           <TextField id="lastName" label="Last Name" variant="standard" fullWidth type="text" InputProps={inputStyles} InputLabelProps={inputLabelStyles} inputProps={{maxLength: 25}} sx={{mt: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} />
@@ -99,18 +117,19 @@ const ContactForm = () => {
               fontSize: { xs: ".85rem", sm: "1rem", md: "1rem", lg: "1.1rem" },
               lineHeight: 1.4, 
               borderColor: "primary.dark",
-              px: {xs: 4, sm: 4, md: 4, lg: 4},
-              py: {xs: .75, sm:1},
+              px: {xs: 4, sm: 4, md: 4, lg: 6},
+              py: {xs: .75, sm:1, md: 1.5, },
               fontWeight: 500,
-              letterSpacing: 1.25,
-              opacity: .75,
+              letterSpacing: {xs: 1.5, sm: 2, md: 3},
+              opacity: {xs: .95, lg:.85},
               transition: "all 250ms ease-in-out",
+              textTransform: "uppercase",
               "&:hover":{
                 opacity:1,
                 textShadow: "1px 1px 3px rgba(100,100,100,.75)",
                 transform: "scale(1.02)",
                 borderColor: "primary.main",
-                letterSpacing: 1.5,
+                letterSpacing: {xs: 2, sm: 2.5, md: 3.5},
               }
             }}
           >

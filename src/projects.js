@@ -15,6 +15,7 @@ const projects = [
       "Secured sessions with httpOnly cookie implementation",
       "Optimize images for faster loading (Imagekit.io)",
       "Encrypt sensitive data (bcryptJS)",
+      "Mobile Responsive UI",
     ],
     url: "https://moby.paolobugarin.com/",
     githubUrl: "https://github.com/Paolo876/moby-social-media-client",
@@ -260,7 +261,9 @@ const projects = [
       "Allows account creation or sign in with Google Login Api",
       "Validates entered address using USPS Address Validation API",
       "Checkout and pay with debit/credit card securely through PayPal API",
-      "Included Admin feature for adding/editing products, viewing list of users, and managing list of orders."
+      "Included Admin feature for adding/editing products, viewing list of users, and managing list of orders.",
+      "Mobile Responsive UI",
+
     ],
     url: "https://mernshop.paolobugarin.com/",
     githubUrl: "https://github.com/Paolo876/mern-ecommerce-traversy",
@@ -335,6 +338,8 @@ const projects = [
       "Image optimization using Imagekit.io api",
       "Submitted RSVP forms are stored on database",
       "Authorized admins can login through their gmail (Oauth2.0)",
+      "Mobile Responsive UI",
+
     ],
     url: "https://markandgaea.com/",
     githubUrl: "https://github.com/Paolo876/mark-and-gaea",
@@ -401,6 +406,8 @@ const projects = [
       "Implemented Yelp api to display customer reviews and feedbacks",
       "Image optimization using Imagekit.io api",
       "Inquiry form forwards data to client's email using EmailJS api",
+      "Mobile Responsive UI",
+
     ],
     url: "https://downtownsuitsdirectla.web.app/",
     githubUrl: "https://github.com/Paolo876/downtownsuitsdirect",
@@ -539,7 +546,9 @@ const projects = [
       "animate-on-screen animations applied on components",
       "Image optimization using Imagekit.io api",
       "Inquiry form forwards data to client's email using EmailJS api",
-      "Admin powers to add/edit/update/delete content (only allowed through owner's email logged in)"
+      "Admin powers to add/edit/update/delete content (only allowed through owner's email logged in)",
+      "Mobile Responsive UI",
+
     ],
     url: "https://aynsl-portfolio.web.app/",
     githubUrl: "https://github.com/Paolo876/ayn-nicoli-portfolio",
