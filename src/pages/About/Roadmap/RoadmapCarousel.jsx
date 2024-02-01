@@ -7,20 +7,25 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 const roadmapItems = [
   {
     title: "I",
-    description: "Before my development journey started, I studied Architecture back in Philippines for four years and implement the design knowledge I gained there throughout my projects. In 2019, I took an online course in Udemy where I learned about the fundamentals of coding. After completing the 47-hour course, it caught my interest and gave me the motivation to enroll back to College in 2020 for a degree in Computer Information Systems Major in Software Development and Web Development."
+    description: "Before my development journey started, I studied Architecture back in Philippines for four years and implement the design knowledge I gained there throughout my projects. In 2019, I took an online course in Udemy where I learned about the fundamentals of coding."
   },
   {
     title: "II",
-    description: "While being a part-time college student, I was also self-studying through multiple online courses and youtube tutorials, all while working at an office job full-time. As challenging as it was, the effort was worth the knowledge I gained."
+    description: "After completing the 47-hour course, it caught my interest and gave me the motivation to enroll back to College in 2020 for a degree in Computer Information Systems Major in Software Development and Web Development."
   },
   {
     title: "III",
-    description: "In college, I was able to learn the foundations, how to think like a developer, analyze logic and algorithms, and experienced working with a team. I focused more on Web Development than Software Development as it seems more engaging to me. I then started learning ReactJS along with related tech stack and built most of my projects using it. In 2022, I started working as a freelance developer on the side, building commissioned projects to improve my skills and build network."
+    description: "While being a part-time college student, I was also self-studying through multiple online courses and youtube tutorials, all while working at an office job full-time. As challenging as it was, the effort was worth the knowledge I gained."
   },
   {
     title: "IV",
+    // description: "In college, I was able to learn the foundations, how to think like a developer, analyze logic and algorithms, and experienced working with a team. I focused more on Web Development than Software Development as it seems more engaging to me. I then started learning ReactJS along with related tech stack and built most of my projects using it. In 2022, I started working as a freelance developer on the side, building commissioned projects to improve my skills and build network."
+    description: "In college, I was able to learn the grasp of being a developer, analyze logic and algorithms, and working with a team. I focused more on Web Development as it's more engaging to me. I then started learning ReactJS along with related tech stack and built most of my projects using it."
+  },
+  {
+    title: "V",
     // description: "Present time, I still continue to learn more techologies online, further refine and improve my existing projects, and conceptualize new project ideas. I may lack enough work or professional experience but I am determined and always remain consistent with my progress hoping that one day the hard work will pay off."
-    description: "Present time, I still continue to learn more techologies online, further refine and improve my existing projects, and conceptualize new project ideas."
+    description: "In 2022, I started accepting commissioned projects to take my skills to the test and build my network. Present time, I still continue to learn more techologies online, further refine and improve my existing projects, and conceptualize new project ideas."
   },
 ];
 
@@ -71,7 +76,7 @@ const RoadmapCarousel = () => {
         color="primary" 
         sx={currentIndex !== 0 ? navigatorStyles : {display: {xs: "none", sm: "initial"}}}
       >
-        <ArrowBackIosNewIcon fontSize="large"/>
+        <ArrowBackIosNewIcon fontSize="medium"/>
       </IconButton>
       <Box 
         sx={{
@@ -88,53 +93,54 @@ const RoadmapCarousel = () => {
           onChange={(i) => setCurrentIndex(i)}
           index={currentIndex}
         >
-          {roadmapItems.map((item, index) => <Box>
-            
-          </Box>)}
-          {/* {roadmapItems.map((item, index) => <Grid container key={item} sx={{minHeight: {xs: 200, sm: 200, md: 175, lg: 175, xl: 190}}}>
-            <Grid item md={4} lg={3.5} xl={4}>
-              <Fade appear={index === currentIndex} in={index === currentIndex} timeout={800}  style={{ transitionDelay: "100ms" }}>
+          {roadmapItems.map(item => <Grid container key={item.title}>
+            <Grid item sm={11} md={10} lg={11} xl={10}  mx="auto">
+              <Box 
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  pt: 4,
+                  pb: {xs: 4, sm: 5, md: 6, lg: 8},
+                  minHeight: {xs: 210, sm: 230, md: 180, lg: 230, xl: 190},
+                  textAlign: "center",
+                }}
+                >
                 <Box>
                   <Typography
                     variant="h2" 
                     fontWeight={400}
-                    fontSize={{xs: 22, sm: 21, md: 23, lg: 24, xl: 25}} 
+                    fontSize={{xs: 22, sm: 24, md: 26, lg: 28, xl: 30}} 
                     letterSpacing={{xs: .5, xl:1}}
+                    fontFamily="Noto Sans Lao"
                     lineHeight={{xs:1}} 
                     textTransform="none"
                     sx={{
                       textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+                      transform: "skewX(-3deg)"
                     }}
-                  >
-                    {item.title}
-                  </Typography>
+                  >{item.title}</Typography>
                 </Box>
-              </Fade>
-            </Grid>
-            <Grid item md={8} lg={8.5} xl={8} mt={{xs: 2, sm: 2, md: 1}}>
-              <Fade appear={index === currentIndex} in={index === currentIndex} timeout={800}  style={{ transitionDelay: "600ms" }}>
-                <Box>
+                <Box mt={{xs: 3, sm: 5, md: 6, lg: 6}}>
                   <Typography
-                    variant='body2'
+                    variant="body1"
                     sx={{
-                      fontSize: {xs: 10, sm: 11, md: 12.5, lg:13, xl: 14},
+                      transition: "all 400ms ease-in-out",
+                      fontSize: { xs: 10.5, sm: 12, md: 12, lg:14, xl: 14.5 },
                       fontWeight: 300,
-                      opacity: .55,
-                      letterSpacing: .4,
-                      lineHeight: 1.4,
-                      textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-                      borderLeft: 2,
-                      borderColor: "primary.main",
-                      pl: {xs: 1, md: 1.25, lg: 2},
+                      opacity: .65,
+                      letterSpacing: .5,
+                      lineHeight: 1.7,
+                      textShadow: "1px 1px 7px rgba(75,75,75,.5)",
+                      transform: "skewX(-3deg)"
+
                     }}
-                  >
-                    {item.description}
-                  </Typography>
+                  >{item.description}</Typography>
                 </Box>
-              </Fade>
+              </Box>
             </Grid>
-          </Grid>
-          )} */}
+          </Grid>)}
         </Carousel>
       </Box>
       <IconButton 
@@ -143,7 +149,7 @@ const RoadmapCarousel = () => {
         color="primary"
         sx={navigatorStyles}
       >
-        <ArrowForwardIosIcon fontSize="large"/>
+        <ArrowForwardIosIcon fontSize="medium"/>
       </IconButton>
     </Box>
   )
