@@ -147,7 +147,7 @@ const projects = [
       "Fetches beautiful backgrounds on random or default (unsplash api)",
       "Adjust and modify background filter settings",
       "Customize each UI components",
-      "Configurations are saved on local storage"
+      "Configurations are saved on local storage",
     ],
     url: "http://luna.paolobugarin.com",
     githubUrl: "https://github.com/Paolo876/luna2.0",

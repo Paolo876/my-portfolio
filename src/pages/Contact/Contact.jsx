@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import DocumentHead from '../../components/DocumentHead'
 
 import { Box, Grid, Typography } from '@mui/material'
@@ -6,6 +6,7 @@ import ContactForm from './ContactForm'
 import ContactDescription from './ContactDescription'
 
 const Contact = () => {
+  const [ success, setSuccess ] = useState(false);
   return (
     <Box
       sx={{
@@ -37,7 +38,7 @@ const Contact = () => {
           <ContactDescription/>
         </Grid>
         <Grid item xs={12} lg={6} xl={5}>
-          <ContactForm/>
+          {!success && <ContactForm setSuccess={setSuccess} success={success}/>}
         </Grid>
         <Box mt={{xl: 5}}>
         <Typography

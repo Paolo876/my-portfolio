@@ -37,7 +37,7 @@ const slideLeft = keyframes`
   }
   100% {
     transform: translateX(0);
-    opacity: .75;
+    opacity: .9;
   }
 `;
 
@@ -62,7 +62,7 @@ const ContactForm = () => {
         sx={{
           p: {xs: 3, sm:4, md:5, lg: 4}, 
           border: 2, 
-          borderColor: "rgba(100,100,100,.75)",
+          borderColor: "rgba(200,200,200,.75)",
           display: "flex", 
           flexDirection: "column",
           boxShadow: 8,

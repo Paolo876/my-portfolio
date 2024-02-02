@@ -64,7 +64,7 @@ const ContactDescription = () => {
           </Typography>
         </Box>
       </Fade>
-      <Box sx={{mt: {xs: 2.5, sm: 4, md: 6, lg: 8, xl: 10}, pl: {lg: .5}}}>
+      <Box sx={{mt: {xs: 2.5, sm: 4, md: 6, lg: 8, xl: 8}, pl: {lg: .5}}}>
         <Box sx={{opacity: 0, animation: `${slideRight} 900ms ease forwards 450ms`}}>
           <Typography
             variant="body1"
