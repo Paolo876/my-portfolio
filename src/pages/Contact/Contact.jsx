@@ -7,7 +7,7 @@ import ContactDescription from './ContactDescription'
 import FormSuccess from './FormSuccess'
 
 const Contact = () => {
-  const [ success, setSuccess ] = useState(false);
+  const [ success, setSuccess ] = useState(true);
   return (
     <Box
       sx={{
