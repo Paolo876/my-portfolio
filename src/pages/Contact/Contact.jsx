@@ -4,6 +4,7 @@ import DocumentHead from '../../components/DocumentHead'
 import { Box, Grid, Typography } from '@mui/material'
 import ContactForm from './ContactForm'
 import ContactDescription from './ContactDescription'
+import FormSuccess from './FormSuccess'
 
 const Contact = () => {
   const [ success, setSuccess ] = useState(false);
@@ -32,6 +33,7 @@ const Contact = () => {
           alignItems: "flex-start", 
           maxWidth: "1500px", 
           mx: "auto",
+          height: "80%"
         }}
       >   
         <Grid item xs={12} lg={5.25} xl={5.5} sx={{display: "flex", flexDirection: "column", height: {md: "auto", lg:"100%"}}} mb={{xs: 1.5, sm: 4, lg: 0}}>
@@ -39,6 +41,7 @@ const Contact = () => {
         </Grid>
         <Grid item xs={12} lg={6} xl={5}>
           {!success && <ContactForm setSuccess={setSuccess} success={success}/>}
+          {success && <FormSuccess/>}
         </Grid>
         <Box mt={{xl: 5}}>
         <Typography
