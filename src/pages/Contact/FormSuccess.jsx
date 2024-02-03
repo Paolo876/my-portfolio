@@ -11,10 +11,11 @@ const iconAnimation = keyframes`
 85% {
   opacity: .7;
   transform: scale(3);
+  filter: brightness(125%);
 }
 100% {
   transform: scale(1);
-  opacity: .9;
+  opacity: 1;
 }
 `;
 
@@ -35,21 +36,21 @@ const FormSuccess = () => {
           <Box>
             <Typography sx={{
               fontWeight: 600,
-              fontSize: { xs: 16, sm: 17, md: 18, lg: 19, xl: 25 },
+              fontSize: { xs: 20, sm: 22, md: 23, lg: 24, xl: 25 },
               letterSpacing: 1,
             }}>Your form has been submitted!</Typography>
           </Box>
         </Fade>
-        <Box my={{lg: 6, opacity: 0, animation: `${iconAnimation} 1000ms ease forwards`}}>
+        <Box my={{xs: 3, sm: 4, md: 5, lg: 6}} sx={{opacity: 0, animation: `${iconAnimation} 1000ms ease forwards`}}>
           <DoneOutlineIcon color="primary" fontSize="large"/>
         </Box>
-        <Fade appear={true} in={true} timeout={900}  style={{ transitionDelay: "1500ms" }}>
+        <Fade appear={true} in={true} timeout={900}  style={{ transitionDelay: "1600ms" }}>
           <Box mt={{lg: 2}}>
             <Typography
               variant="body1"
               sx={{
                 mt: {xs: 1, sm:2, md:3},
-                fontSize: {xs: 10, sm: 14.5, md: 15, lg:15, xl: 15.5},
+                fontSize: {xs: 13, sm: 14.5, md: 15, lg:15, xl: 15.5},
                 fontWeight: 300,
                 opacity: .75,
                 transform: "skewX(-5deg)",

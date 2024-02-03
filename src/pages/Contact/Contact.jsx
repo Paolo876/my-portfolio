@@ -49,7 +49,7 @@ const Contact = () => {
           align="right"
           sx={{
             fontSize: {xs: 10.5, sm:11, md: 11, lg:12, xl: 12}, 
-            opacity: .5, 
+            opacity: success ? 0 : .5, 
             mixBlendMode: "difference", 
           }}
         >© 2023 Paolo Bugarin, All rights reserved.</Typography>
