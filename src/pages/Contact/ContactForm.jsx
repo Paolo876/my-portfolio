@@ -1,5 +1,5 @@
-import React from 'react'
-import { Box, ButtonBase, TextField, Typography } from '@mui/material'
+import { useState } from 'react'
+import { Box, ButtonBase, TextField, Typography, Alert } from '@mui/material'
 import { keyframes } from '@mui/system';
 
 
@@ -42,10 +42,16 @@ const slideLeft = keyframes`
 `;
 
 
-const ContactForm = () => {
+const ContactForm = ({ success, setSuccess }) => {
+  const [ firstName, setFirstName ] = useState("");
+  const [ number, setNumber ] = useState("");
+  const [ email, setEmail ] = useState("");
+  const [ message, setMessage ] = useState("");
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setSuccess(true)
   }
   return (
     <Box 
