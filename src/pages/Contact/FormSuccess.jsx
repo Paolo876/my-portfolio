@@ -19,21 +19,21 @@ const FormSuccess = () => {
         <Box>
           <Typography sx={{
             fontWeight: 600,
-            fontSize: { xs: 16, sm: 17, md: 18, lg: 19, xl: 20 },
+            fontSize: { xs: 16, sm: 17, md: 18, lg: 19, xl: 25 },
             letterSpacing: 1,
-          }}>Form submitted!</Typography>
+          }}>Your form has been submitted!</Typography>
         </Box>
-        <Box my={{lg: 3}}>
-          <DoneOutlineIcon color="success" fontSize="large"/>
+        <Box my={{lg: 6, border: 1, }}>
+          <DoneOutlineIcon color="primary" fontSize="large"/>
         </Box>
-        <Box>
+        <Box mt={{lg: 2}}>
           <Typography
             variant="body1"
             sx={{
               mt: {xs: 1, sm:2, md:3},
-              fontSize: {xs: 10, sm: 14.5, md: 15, lg:15, xl: 14.5},
+              fontSize: {xs: 10, sm: 14.5, md: 15, lg:15, xl: 15.5},
               fontWeight: 300,
-              opacity: .95,
+              opacity: .75,
               transform: "skewX(-5deg)",
               letterSpacing: .5,
               lineHeight: 1.6,
