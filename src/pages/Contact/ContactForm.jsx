@@ -44,11 +44,15 @@ const slideLeft = keyframes`
 
 const ContactForm = ({ success, setSuccess }) => {
   const [ firstName, setFirstName ] = useState("");
+  const [ lastName, setLastName ] = useState("");
   const [ number, setNumber ] = useState("");
   const [ email, setEmail ] = useState("");
   const [ message, setMessage ] = useState("");
 
 
+  const validateInput = (type) => {
+    
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
     setSuccess(true)
@@ -97,22 +101,84 @@ const ContactForm = ({ success, setSuccess }) => {
         </Typography>
       </Box>
         <Box sx={{display: "flex", flexDirection: {xs: "column", sm: "row"}, gap: {xs: 0, sm: 3}, my: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}}>
-          <TextField id="firstName" label="First Name" variant="standard" fullWidth type="text" InputProps={inputStyles} InputLabelProps={inputLabelStyles} inputProps={{maxLength: 25}} sx={{mt: {xs: 0, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} />
-          <TextField id="lastName" label="Last Name" variant="standard" fullWidth type="text" InputProps={inputStyles} InputLabelProps={inputLabelStyles} inputProps={{maxLength: 25}} sx={{mt: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} />
+          <TextField 
+            id="firstName" 
+            label="First Name" 
+            variant="standard" 
+            fullWidth 
+            type="text" 
+            InputProps={inputStyles} 
+            InputLabelProps={inputLabelStyles} 
+            inputProps={{maxLength: 25}} 
+            sx={{mt: {xs: 0, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} 
+            onChange={e => setFirstName(e.target.value)}
+            value={firstName}
+          />
+          <TextField 
+            id="lastName" 
+            label="Last Name" 
+            variant="standard" 
+            fullWidth 
+            type="text" 
+            InputProps={inputStyles} 
+            InputLabelProps={inputLabelStyles} 
+            inputProps={{maxLength: 25}} 
+            sx={{mt: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}}
+            onChange={e => setLastName(e.target.value)}
+            value={lastName}
+          />
         </Box>
-        <TextField id="phone" label="Contact Number" variant="standard" fullWidth type="phone" sx={{my: {xs: 0, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}  inputProps={{maxLength: 15}}/>
-        <TextField id="email" label="Email Address" variant="standard" fullWidth type="email" sx={{my: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} InputProps={inputStyles} InputLabelProps={inputLabelStyles}  inputProps={{maxLength: 50}}/>
-        <TextField
-          id="message"
-          label="Message"
-          multiline
-          fullWidth
-          rows={6}
-          sx={{my:{xs: 3.5, sm: 4, md:4, lg: 5}}}
-          variant="outlined"
-          InputProps={inputStyles} InputLabelProps={inputLabelStyles}
-          inputProps={{maxLength: 400}}
+        <TextField 
+          id="phone" 
+          label="Contact Number" 
+          variant="standard" 
+          fullWidth 
+          type="phone" 
+          sx={{my: {xs: 0, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} 
+          InputProps={inputStyles} 
+          InputLabelProps={inputLabelStyles}
+          inputProps={{maxLength: 15}}
+          onChange={e => setNumber(e.target.value)}
+          value={number}
         />
+        <TextField 
+          id="email" 
+          label="Email Address" 
+          variant="standard" 
+          fullWidth 
+          type="email" 
+          sx={{my: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} 
+          InputProps={inputStyles} 
+          InputLabelProps={inputLabelStyles}
+          inputProps={{maxLength: 50}}
+          onChange={e => setEmail(e.target.value)}
+          value={email}
+        />
+        <Box sx={{position: "relative", my:{xs: 3.5, sm: 4, md:4, lg: 5}}}>
+          <TextField
+            id="message"
+            label="Message"
+            multiline
+            fullWidth
+            rows={6}
+            sx={{}}
+            variant="outlined"
+            InputProps={inputStyles} InputLabelProps={inputLabelStyles}
+            inputProps={{maxLength: 300}}
+            onChange={e => setMessage(e.target.value)}
+            value={message}
+          />
+          {message.length !== 0 && <Box sx={{position: "absolute", bottom: 0, right: 5}}>
+            <Typography 
+              sx={{
+                fontSize: {xs: 9.5, sm: 10, md: 11, lg:12, xl: 12},
+                opacity: .6,
+                transform: "skewX(-5deg)"
+              }}
+            >{message.length}/300</Typography>
+          </Box>}
+        </Box>
+
         <Box my={{xs: 2, sm: 3, md: 4, }}>
           <ButtonBase 
             type="submit" 
