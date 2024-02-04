@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, ButtonBase, TextField, Typography, Alert } from '@mui/material'
+import { Box, ButtonBase, TextField, Typography, Alert, Button } from '@mui/material'
 import { keyframes } from '@mui/system';
 
 
@@ -48,7 +48,7 @@ const ContactForm = ({ success, setSuccess }) => {
   const [ number, setNumber ] = useState("");
   const [ email, setEmail ] = useState("");
   const [ message, setMessage ] = useState("");
-
+  const [ error, setError ] = useState(false);
 
   const validateInput = (type) => {
     
@@ -180,7 +180,7 @@ const ContactForm = ({ success, setSuccess }) => {
         </Box>
 
         <Box my={{xs: 2, sm: 3, md: 4, }}>
-          <ButtonBase 
+          <Button 
             type="submit" 
             color="inherit"
             sx={{
@@ -204,9 +204,10 @@ const ContactForm = ({ success, setSuccess }) => {
                 letterSpacing: {xs: 2, sm: 2.5, md: 3.5},
               }
             }}
+            disabled={error}
           >
             Submit
-          </ButtonBase>
+          </Button>
         </Box>
       </Box>
     </Box>
