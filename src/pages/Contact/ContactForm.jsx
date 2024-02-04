@@ -48,11 +48,33 @@ const ContactForm = ({ success, setSuccess }) => {
   const [ number, setNumber ] = useState("");
   const [ email, setEmail ] = useState("");
   const [ message, setMessage ] = useState("");
-  const [ error, setError ] = useState(false);
+  const [ error, setError ] = useState({state: false, type: null, message: ""});
 
   const validateInput = (type) => {
-    
+    if(type === "firstName"){
+      if(firstName.trim().length === 0) {
+        setError({state: true, type, message: "Please enter a valid input."})
+      }
+      else if(firstName.match(/[^A-Za-z 0-9]/g)) {
+        setError({state: true, type, message: "Please remove any special characters in the name input."})
+      } else {
+        setError({state: false, type: null, message: ""})
+      }
+    }
+    if(type === "lastName"){
+      if(lastName.trim().length === 0) {
+        setError({state: true, type, message: "Please enter a valid input."})
+      }
+      else if(lastName.match(/[^A-Za-z 0-9]/g)) {
+        setError({state: true, type, message: "Please remove any special characters in the name input."})
+      } else {
+        setError({state: false, type: null, message: ""})
+      }
+    }
+
   }
+
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     setSuccess(true)
@@ -82,25 +104,28 @@ const ContactForm = ({ success, setSuccess }) => {
         autoComplete="off" 
         onSubmit={handleSubmit}
       >
-      <Box>
-        <Typography 
-          variant="body1"
-          sx={{
-            mt: {xs: 1, sm:2, md:3},
-            fontSize: {xs: 10, sm: 14.5, md: 15, lg:15, xl: 14.5},
-            fontWeight: 300,
-            opacity: .95,
-            transform: "skewX(-5deg)",
-            letterSpacing: .5,
-            lineHeight: 1.6,
-            textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-            textAlign: "left"
-          }}
-        >
-          Please feel free to reach out to me using my contact informations provided or by submitting this form.
-        </Typography>
-      </Box>
-        <Box sx={{display: "flex", flexDirection: {xs: "column", sm: "row"}, gap: {xs: 0, sm: 3}, my: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}}>
+        <Box mb={{xs: 1.5, sm: 1.75, md: 2, lg: 2}}>
+          <Typography 
+            variant="body1"
+            sx={{
+              mt: {xs: 1, sm:2, md:3},
+              fontSize: {xs: 10, sm: 14.5, md: 15, lg:15, xl: 14.5},
+              fontWeight: 300,
+              opacity: .95,
+              transform: "skewX(-5deg)",
+              letterSpacing: .5,
+              lineHeight: 1.6,
+              textShadow: "1px 1px 5px rgba(10,10,10,.75)",
+              textAlign: "left"
+            }}
+          >
+            Please feel free to reach out to me using my contact informations provided or by submitting this form.
+          </Typography>
+        </Box>
+        <Box mt={{xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}>
+          <Alert severity='error'>{error.message}</Alert>
+        </Box>
+        <Box sx={{display: "flex", flexDirection: {xs: "column", sm: "row"}, gap: {xs: 0, sm: 3}, mb: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5}}}>
           <TextField 
             id="firstName" 
             label="First Name" 
@@ -110,9 +135,11 @@ const ContactForm = ({ success, setSuccess }) => {
             InputProps={inputStyles} 
             InputLabelProps={inputLabelStyles} 
             inputProps={{maxLength: 25}} 
-            sx={{mt: {xs: 0, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} 
+            // sx={{mt: {xs: 0, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} 
             onChange={e => setFirstName(e.target.value)}
             value={firstName}
+            onBlur={() => validateInput("firstName")}
+            error={error.state === true && error.type === "firstName"}
           />
           <TextField 
             id="lastName" 
@@ -123,9 +150,11 @@ const ContactForm = ({ success, setSuccess }) => {
             InputProps={inputStyles} 
             InputLabelProps={inputLabelStyles} 
             inputProps={{maxLength: 25}} 
-            sx={{mt: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}}
+            // sx={{mt: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}}
             onChange={e => setLastName(e.target.value)}
             value={lastName}
+            onBlur={() => validateInput("lastName")}
+            error={error.state === true && error.type === "lastName"}
           />
         </Box>
         <TextField 
@@ -204,7 +233,7 @@ const ContactForm = ({ success, setSuccess }) => {
                 letterSpacing: {xs: 2, sm: 2.5, md: 3.5},
               }
             }}
-            disabled={error}
+            disabled={error.state}
           >
             Submit
           </Button>
