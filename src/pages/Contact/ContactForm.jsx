@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Box, ButtonBase, TextField, Typography, Alert, Button } from '@mui/material'
 import { keyframes } from '@mui/system';
+import TextInput from './FormInputs/TextInput';
 
 
 const inputStyles = {
@@ -74,10 +75,10 @@ const ContactForm = ({ success, setSuccess }) => {
 
   }
 
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSuccess(true)
+    console.log(firstName)
   }
   return (
     <Box 
@@ -122,24 +123,11 @@ const ContactForm = ({ success, setSuccess }) => {
             Please feel free to reach out to me using my contact informations provided or by submitting this form.
           </Typography>
         </Box>
-        <Box mt={{xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}>
-          <Alert severity='error'>{error.message}</Alert>
-        </Box>
         <Box sx={{display: "flex", flexDirection: {xs: "column", sm: "row"}, gap: {xs: 0, sm: 3}, mb: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5}}}>
-          <TextField 
+          <TextInput
             id="firstName" 
-            label="First Name" 
-            variant="standard" 
-            fullWidth 
-            type="text" 
-            InputProps={inputStyles} 
-            InputLabelProps={inputLabelStyles} 
-            inputProps={{maxLength: 25}} 
-            // sx={{mt: {xs: 0, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} 
-            onChange={e => setFirstName(e.target.value)}
-            value={firstName}
-            onBlur={() => validateInput("firstName")}
-            error={error.state === true && error.type === "firstName"}
+            label="First Name"
+            setValue={value => setFirstName(value)}
           />
           <TextField 
             id="lastName" 
@@ -150,11 +138,11 @@ const ContactForm = ({ success, setSuccess }) => {
             InputProps={inputStyles} 
             InputLabelProps={inputLabelStyles} 
             inputProps={{maxLength: 25}} 
-            // sx={{mt: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}}
             onChange={e => setLastName(e.target.value)}
             value={lastName}
             onBlur={() => validateInput("lastName")}
             error={error.state === true && error.type === "lastName"}
+            helperText={error.state === true && error.type === "lastName" && error.message}
           />
         </Box>
         <TextField 
