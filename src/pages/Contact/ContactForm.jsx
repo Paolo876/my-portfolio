@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, ButtonBase, TextField, Typography, Alert, Button } from '@mui/material'
+import { Box, TextField, Typography, Button } from '@mui/material'
 import { keyframes } from '@mui/system';
 import TextInput from './FormInputs/TextInput';
 
@@ -50,30 +50,6 @@ const ContactForm = ({ success, setSuccess }) => {
   const [ email, setEmail ] = useState("");
   const [ message, setMessage ] = useState("");
   const [ error, setError ] = useState({state: false, type: null, message: ""});
-
-  const validateInput = (type) => {
-    if(type === "firstName"){
-      if(firstName.trim().length === 0) {
-        setError({state: true, type, message: "Please enter a valid input."})
-      }
-      else if(firstName.match(/[^A-Za-z 0-9]/g)) {
-        setError({state: true, type, message: "Please remove any special characters in the name input."})
-      } else {
-        setError({state: false, type: null, message: ""})
-      }
-    }
-    if(type === "lastName"){
-      if(lastName.trim().length === 0) {
-        setError({state: true, type, message: "Please enter a valid input."})
-      }
-      else if(lastName.match(/[^A-Za-z 0-9]/g)) {
-        setError({state: true, type, message: "Please remove any special characters in the name input."})
-      } else {
-        setError({state: false, type: null, message: ""})
-      }
-    }
-
-  }
 
 
   const handleSubmit = (e) => {
@@ -132,16 +108,16 @@ const ContactForm = ({ success, setSuccess }) => {
           <TextInput
             id="lastName" 
             label="Last Name"
-            setValue={value => setFirstName(value)}
+            setValue={value => setLastName(value)}
           />
-
         </Box>
         <TextField 
           id="phone" 
           label="Contact Number" 
           variant="standard" 
           fullWidth 
-          type="phone" 
+          type="tel" 
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
           sx={{my: {xs: 0, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} 
           InputProps={inputStyles} 
           InputLabelProps={inputLabelStyles}
