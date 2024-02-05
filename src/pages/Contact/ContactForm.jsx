@@ -129,21 +129,12 @@ const ContactForm = ({ success, setSuccess }) => {
             label="First Name"
             setValue={value => setFirstName(value)}
           />
-          <TextField 
+          <TextInput
             id="lastName" 
-            label="Last Name" 
-            variant="standard" 
-            fullWidth 
-            type="text" 
-            InputProps={inputStyles} 
-            InputLabelProps={inputLabelStyles} 
-            inputProps={{maxLength: 25}} 
-            onChange={e => setLastName(e.target.value)}
-            value={lastName}
-            onBlur={() => validateInput("lastName")}
-            error={error.state === true && error.type === "lastName"}
-            helperText={error.state === true && error.type === "lastName" && error.message}
+            label="Last Name"
+            setValue={value => setFirstName(value)}
           />
+
         </Box>
         <TextField 
           id="phone" 

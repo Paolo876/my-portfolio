@@ -30,13 +30,12 @@ const TextInput = ({ id, label, setValue}) => {
 
   const handleSubmit = () => {
     if(input.trim().length === 0) {
-      setError({state: true, message: "Please enter a valid input."})
+      setError({state: true, message: "Input must not be left blank."})
       setValue("")
     } else if(input.match(/[^A-Za-z 0-9]/g)) {
       setError({state: true, message: "Input must not contain any special characters."})
       setValue("")
     } else {
-      // submit state
       setValue(input)
     }
   }
