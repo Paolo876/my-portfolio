@@ -54,6 +54,7 @@ const PhoneInput = ({ id, label, setValue }) => {
       size='small'
       variant="standard"
       defaultCountry='US'
+      disableDropdown
       forceCallingCode
       focusOnSelectCountry 
       preferredCountries={['US', 'CA']}
