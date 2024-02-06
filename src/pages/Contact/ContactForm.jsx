@@ -115,6 +115,8 @@ const ContactForm = ({ success, setSuccess }) => {
         <PhoneInput
           id="phone"
           label="Contact Number"
+          setValue={value => setNumber(value)}
+
         />
         {/* <TextField 
           id="phone" 

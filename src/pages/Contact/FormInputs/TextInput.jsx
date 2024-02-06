@@ -37,6 +37,7 @@ const TextInput = ({ id, label, setValue }) => {
       setValue("")
     } else {
       setValue(input)
+      setError({state: false, message: ""})
     }
   }
 
