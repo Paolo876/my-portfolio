@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Box, TextField, Typography, Button } from '@mui/material'
 import { keyframes } from '@mui/system';
 import TextInput from './FormInputs/TextInput';
+import PhoneInput from './FormInputs/PhoneInput';
 
 
 const inputStyles = {
@@ -111,7 +112,11 @@ const ContactForm = ({ success, setSuccess }) => {
             setValue={value => setLastName(value)}
           />
         </Box>
-        <TextField 
+        <PhoneInput
+          id="phone"
+          label="Contact Number"
+        />
+        {/* <TextField 
           id="phone" 
           label="Contact Number" 
           variant="standard" 
@@ -124,7 +129,7 @@ const ContactForm = ({ success, setSuccess }) => {
           inputProps={{maxLength: 15}}
           onChange={e => setNumber(e.target.value)}
           value={number}
-        />
+        /> */}
         <TextField 
           id="email" 
           label="Email Address" 

@@ -24,13 +24,13 @@ const inputLabelStyles = {
   }
 }
 
-const TextInput = ({ id, label, setValue}) => {
+const TextInput = ({ id, label, setValue }) => {
   const [ input, setInput ] = useState("");
   const [ error, setError ] = useState({state: false, message: ""})
 
   const handleSubmit = () => {
     if(input.trim().length === 0) {
-      setError({state: true, message: "Input must not be left blank."})
+      setError({state: true, message: "Input required."})
       setValue("")
     } else if(input.match(/[^A-Za-z 0-9]/g)) {
       setError({state: true, message: "Input must not contain any special characters."})
