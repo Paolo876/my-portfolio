@@ -4,6 +4,7 @@ import { keyframes } from '@mui/system';
 import TextInput from './FormInputs/TextInput';
 import PhoneInput from './FormInputs/PhoneInput';
 import EmailInput from './FormInputs/EmailInput';
+import MessageInput from './FormInputs/MessageInput';
 
 
 const inputStyles = {
@@ -124,44 +125,12 @@ const ContactForm = ({ success, setSuccess }) => {
           label="Email Address" 
           setValue={value => setNumber(value)}
         />
-        {/* <TextField 
-          id="email" 
-          label="Email Address" 
-          variant="standard" 
-          fullWidth 
-          type="email" 
-          sx={{my: {xs: 1, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} 
-          InputProps={inputStyles} 
-          InputLabelProps={inputLabelStyles}
-          inputProps={{maxLength: 50}}
-          onChange={e => setEmail(e.target.value)}
-          value={email}
-        /> */}
-        <Box sx={{position: "relative", my:{xs: 3.5, sm: 4, md:4, lg: 5}}}>
-          <TextField
-            id="message"
-            label="Message"
-            multiline
-            fullWidth
-            rows={6}
-            sx={{}}
-            variant="outlined"
-            InputProps={inputStyles} InputLabelProps={inputLabelStyles}
-            inputProps={{maxLength: 300}}
-            onChange={e => setMessage(e.target.value)}
-            value={message}
-          />
-          {message.length !== 0 && <Box sx={{position: "absolute", bottom: 0, right: 5}}>
-            <Typography 
-              sx={{
-                fontSize: {xs: 9.5, sm: 10, md: 11, lg:12, xl: 12},
-                opacity: .6,
-                transform: "skewX(-5deg)"
-              }}
-            >{message.length}/300</Typography>
-          </Box>}
-        </Box>
-
+        <MessageInput
+          id="message"
+          label="Message"
+          setValue={value => setMessage(value)}
+          maxLength={300}
+        />
         <Box my={{xs: 2, sm: 3, md: 4, }}>
           <Button 
             type="submit" 
