@@ -33,7 +33,7 @@ const EmailInput = ({ id, label, setValue }) => {
     if(input.trim().length === 0) {
       setError({state: true, message: "Input required."})
       setValue("")
-    } else if(input.match(/[^A-Za-z 0-9]/g)) {
+    } else if(!input.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
       setError({state: true, message: "Please enter a valid email address."})
       setValue("")
     } else {

@@ -3,6 +3,7 @@ import { Box, TextField, Typography, Button } from '@mui/material'
 import { keyframes } from '@mui/system';
 import TextInput from './FormInputs/TextInput';
 import PhoneInput from './FormInputs/PhoneInput';
+import EmailInput from './FormInputs/EmailInput';
 
 
 const inputStyles = {
@@ -118,21 +119,12 @@ const ContactForm = ({ success, setSuccess }) => {
           setValue={value => setNumber(value)}
 
         />
+        <EmailInput
+          id="email" 
+          label="Email Address" 
+          setValue={value => setNumber(value)}
+        />
         {/* <TextField 
-          id="phone" 
-          label="Contact Number" 
-          variant="standard" 
-          fullWidth 
-          type="tel" 
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-          sx={{my: {xs: 0, sm: 1.5, md: 1.75, lg: 1.5, xl: 2}}} 
-          InputProps={inputStyles} 
-          InputLabelProps={inputLabelStyles}
-          inputProps={{maxLength: 15}}
-          onChange={e => setNumber(e.target.value)}
-          value={number}
-        /> */}
-        <TextField 
           id="email" 
           label="Email Address" 
           variant="standard" 
@@ -144,7 +136,7 @@ const ContactForm = ({ success, setSuccess }) => {
           inputProps={{maxLength: 50}}
           onChange={e => setEmail(e.target.value)}
           value={email}
-        />
+        /> */}
         <Box sx={{position: "relative", my:{xs: 3.5, sm: 4, md:4, lg: 5}}}>
           <TextField
             id="message"
