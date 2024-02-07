@@ -67,8 +67,8 @@ const ContactForm = ({ success, setSuccess }) => {
             variant="body1"
             sx={{
               mt: {xs: 1, sm:2, md:3},
-              fontSize: {xs: 10, sm: 14.5, md: 15, lg:15, xl: 14.5},
-              fontWeight: 300,
+              fontSize: {xs: 10, sm: 13, md: 13.5, lg:14},
+              fontWeight: 400,
               opacity: .95,
               transform: "skewX(-5deg)",
               letterSpacing: .5,

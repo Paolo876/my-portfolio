@@ -10,7 +10,7 @@ const inputStyles = {
     textShadow: "1px 1px 5px rgba(10,10,10,.75)",
     "&:hover": {
       textShadow: "1px 1px 3px rgba(100,100,100,.75)",
-    }
+    },
   }
 }
 

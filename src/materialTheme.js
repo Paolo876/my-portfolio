@@ -5,14 +5,17 @@ export const theme = createTheme({
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          // width: "100vw",
-          // height: "100vh",
-          // maxHeight: "-webkit-fill-available",
           position: "relative",
           background: 'rgb(35,33,33)',
-          // background     : `radial-gradient(circle, rgba(46,45,45,1) 0%, rgba(38,37,37,1) 90%)`,
-          // background     : `radial-gradient(circle, rgba(40,39,39,1) 0%, rgba(38,37,37,1) 100%)`,
           background     : `radial-gradient(circle, rgba(16,15,15,1) 0%, rgba(15,14,14,1) 180%)`,
+        },
+      },
+    },
+    MuiFormHelperText: {
+      styleOverrides: {
+        root: {
+          fontSize: 10,
+          transform: "skewX(-3deg)",
         },
       },
     },
@@ -140,9 +143,6 @@ export const theme = createTheme({
     body2: {
       fontWeight: 300,
       letterSpacing: .3,
-    },
-    button: {
-      // fontFamily: 'Noto Sans Lao',
     },
   },
 });
