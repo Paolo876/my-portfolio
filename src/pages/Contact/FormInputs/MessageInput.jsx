@@ -47,7 +47,7 @@ const MessageInput = ({ id, label, setValue, maxLength }) => {
         inputProps={{maxLength}}
         onChange={e => setInput(e.target.value)}
         value={input}
-        onBlur={() => console.log(input)}
+        onBlur={() => handleSubmit()}
       />
       {input.length !== 0 && <Box sx={{position: "absolute", bottom: 0, right: 5}}>
         <Typography 

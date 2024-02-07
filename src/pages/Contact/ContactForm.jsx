@@ -1,34 +1,10 @@
 import { useState } from 'react'
-import { Box, TextField, Typography, Button } from '@mui/material'
+import { Box, Typography, Button } from '@mui/material'
 import { keyframes } from '@mui/system';
 import TextInput from './FormInputs/TextInput';
 import PhoneInput from './FormInputs/PhoneInput';
 import EmailInput from './FormInputs/EmailInput';
 import MessageInput from './FormInputs/MessageInput';
-
-
-const inputStyles = {
-  sx: {
-    fontSize: { xs: 11, sm: 14.5, md: 15, lg: 15, xl:15 },
-    fontWeight: 500,
-    letterSpacing: .1,
-    lineHeight: 1.25, 
-    textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-    "&:hover": {
-      textShadow: "1px 1px 3px rgba(100,100,100,.75)",
-    }
-  }
-}
-
-const inputLabelStyles = {
-  sx: {
-    fontSize: { xs: 11.5, sm: 15, md: 15, lg: 15, xl:15 },
-    fontWeight: 200,
-    opacity: .75,
-    letterSpacing: .75,
-    textShadow: "1px 1px 5px rgba(10,10,10,.75)",
-  }
-}
 
 
 const slideLeft = keyframes`
@@ -52,13 +28,15 @@ const ContactForm = ({ success, setSuccess }) => {
   const [ number, setNumber ] = useState("");
   const [ email, setEmail ] = useState("");
   const [ message, setMessage ] = useState("");
-  const [ error, setError ] = useState({state: false, type: null, message: ""});
 
+  const isSubmitDisabled = firstName.trim().length === 0 || lastName.trim().length === 0 || number.trim().length === 0 || email.trim().length === 0;
 
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(firstName)
   }
+
   return (
     <Box 
       sx={{
@@ -123,7 +101,7 @@ const ContactForm = ({ success, setSuccess }) => {
         <EmailInput
           id="email" 
           label="Email Address" 
-          setValue={value => setNumber(value)}
+          setValue={value => setEmail(value)}
         />
         <MessageInput
           id="message"
@@ -140,13 +118,14 @@ const ContactForm = ({ success, setSuccess }) => {
               border: 2, 
               fontSize: { xs: ".85rem", sm: "1rem", md: "1rem", lg: "1.1rem" },
               lineHeight: 1.4, 
-              borderColor: "primary.dark",
-              px: {xs: 4, sm: 4, md: 4, lg: 6},
+              borderColor: isSubmitDisabled ? "primary.dark" : "primary.light",
+              px: {xs: 4, sm: 4, md: 4, lg: 5},
               py: {xs: .75, sm:1, md: 1.5, },
               fontWeight: 500,
-              letterSpacing: {xs: 1.5, sm: 2, md: 3},
-              opacity: {xs: .95, lg:.85},
+              letterSpacing: {xs: 1.5, sm: 2, md: 3.25, lg: 3.75 },
+              opacity: isSubmitDisabled ? .7 : .95,
               transition: "all 250ms ease-in-out",
+              transform: isSubmitDisabled ? "scale(.95)" : "scale(1)",
               textTransform: "uppercase",
               "&:hover":{
                 opacity:1,
@@ -156,7 +135,7 @@ const ContactForm = ({ success, setSuccess }) => {
                 letterSpacing: {xs: 2, sm: 2.5, md: 3.5},
               }
             }}
-            disabled={error.state}
+            disabled={isSubmitDisabled}
           >
             Submit
           </Button>
