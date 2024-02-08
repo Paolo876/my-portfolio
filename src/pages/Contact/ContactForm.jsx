@@ -22,7 +22,7 @@ const slideLeft = keyframes`
 `;
 
 
-const ContactForm = ({ success, setSuccess }) => {
+const ContactForm = ({ success, setSuccess,  }) => {
   const [ firstName, setFirstName ] = useState("");
   const [ lastName, setLastName ] = useState("");
   const [ number, setNumber ] = useState("");
@@ -32,15 +32,19 @@ const ContactForm = ({ success, setSuccess }) => {
   const isSubmitDisabled = firstName.trim().length === 0 || lastName.trim().length === 0 || number.trim().length === 0 || email.trim().length === 0;
 
   
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(firstName, lastName, number, email, message)
+    // upload to db
+    
+    // notify email
+    setSuccess(true)
   }
 
   return (
     <Box 
       sx={{
-        pb: {xs: 1, sm:3, md:3, lg: 0, xl: 0 }, 
+        pb: {xs: 1, sm:3, md:3, lg: 0}, 
         mb: {xs: 4, lg: 0},
         px: {xs: .5, sm: 1, md: 3, lg: 0},
         opacity: 0, 

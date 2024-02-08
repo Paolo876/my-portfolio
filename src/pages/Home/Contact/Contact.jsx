@@ -155,9 +155,9 @@ const Contact = () => {
             </IconButton> 
           </Box>
           <Box mt={{xs:1.25, sm: 2}}>
-            <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={contactButtonStyles} disableRipple>
+            <IconButton size="small" target="_blank" href="mailto: paolo_bugarin@outlook.com" sx={contactButtonStyles} disableRipple>
               <MailOutlineIcon color="primary" sx={{fontSize: { xs:18, sm: 19, md: 20.5, lg: 21}}}/>
-              <Typography sx={{fontSize: {xs:11, sm: 12, md: 13, lg: 13.5, xl: 14}, letterSpacing: .5}} fontWeight={400}>paolopaolobugarin@gmail.com</Typography>
+              <Typography sx={{fontSize: {xs:11, sm: 12, md: 13, lg: 13.5, xl: 14}, letterSpacing: .5}} fontWeight={400}>paolo_bugarin@outlook.com</Typography>
             </IconButton>
           </Box>
         </Box>

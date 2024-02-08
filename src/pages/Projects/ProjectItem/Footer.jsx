@@ -185,9 +185,9 @@ const Footer = () => {
               </IconButton> 
             </Box>
             <Box mt={{xs:1, sm: 1, md: 2}}>
-              <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={contactButtonStyles} disableRipple>
+              <IconButton size="small" target="_blank" href="mailto: paolo_bugarin@outlook.com" sx={contactButtonStyles} disableRipple>
                 <MailOutlineIcon color="primary" sx={{fontSize: { xs:20, sm: 20, md: 22, lg: 23 }}}/>
-                <Typography sx={{fontSize: {xs:12, sm: 12, md: 13, lg: 13.5, xl: 15}, letterSpacing: 1}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
+                <Typography sx={{fontSize: {xs:12, sm: 12, md: 13, lg: 13.5, xl: 15}, letterSpacing: 1}} fontWeight={300}>paolo_bugarin@outlook.com</Typography>
               </IconButton>
             </Box>
           </Box>

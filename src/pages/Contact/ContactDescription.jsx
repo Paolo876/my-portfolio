@@ -129,9 +129,9 @@ const ContactDescription = () => {
           <Box sx={{display: "flex", flexDirection: "column", gap: {xs:1, sm: 1.5}}}>
             <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "1400ms" }}>
               <Box>
-                <IconButton size="small" target="_blank" href="mailto: paolopaolobugarin@gmail.com" sx={contactButtonStyles} disableRipple>
+                <IconButton size="small" target="_blank" href="mailto: paolo_bugarin@outlook.com" sx={contactButtonStyles} disableRipple>
                   <MailOutlineIcon color="primary" sx={{fontSize: { xs:17, sm: 23, md: 22, lg: 22, xl: 23}}}/>
-                  <Typography sx={{fontSize: {xs:11.5, sm: 14, md: 15.5, lg: 15.5, xl: 17}, letterSpacing: 1}} fontWeight={300}>paolopaolobugarin@gmail.com</Typography>
+                  <Typography sx={{fontSize: {xs:11.5, sm: 14, md: 15.5, lg: 15.5, xl: 17}, letterSpacing: 1}} fontWeight={300}>paolo_bugarin@outlook.com</Typography>
                 </IconButton>
               </Box>
             </Fade>
