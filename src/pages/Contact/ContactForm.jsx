@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import { Box, Typography, Button } from '@mui/material'
 import { keyframes } from '@mui/system';
+import { useFirestore } from '../../hooks/useFirestore';
+
+// components
 import TextInput from './FormInputs/TextInput';
 import PhoneInput from './FormInputs/PhoneInput';
 import EmailInput from './FormInputs/EmailInput';
@@ -36,7 +39,7 @@ const ContactForm = ({ success, setSuccess,  }) => {
     e.preventDefault();
     console.log(firstName, lastName, number, email, message)
     // upload to db
-    
+
     // notify email
     setSuccess(true)
   }

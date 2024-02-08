@@ -30,7 +30,9 @@ const FormSuccess = () => {
         justifyContent: "center",
         height: "100%",
         p: {xs: 3, sm:4, md:5, lg: 4}, 
-        my: {xs: 6, lg: 6}
+        my: {xs: 6, lg: 6},
+        backgroundColor: "secondary.dark",
+        borderRadius: 5
       }}>
         <Fade appear={true} in={true} timeout={900}  style={{ transitionDelay: "1200ms" }}>
           <Box>
