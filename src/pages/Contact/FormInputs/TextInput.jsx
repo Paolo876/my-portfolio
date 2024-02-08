@@ -48,7 +48,7 @@ const TextInput = ({ id, label, setValue }) => {
       type="text" 
       InputProps={inputStyles} 
       InputLabelProps={inputLabelStyles} 
-      inputProps={{maxLength: 25}} 
+      inputProps={{maxLength: 40}} 
       id={id}
       label={label}
       value={input}

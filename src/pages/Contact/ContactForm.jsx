@@ -34,7 +34,7 @@ const ContactForm = ({ success, setSuccess }) => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(firstName)
+    console.log(firstName, lastName, number, email, message)
   }
 
   return (

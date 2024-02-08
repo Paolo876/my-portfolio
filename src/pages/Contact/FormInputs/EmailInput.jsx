@@ -50,7 +50,7 @@ const EmailInput = ({ id, label, setValue }) => {
       type="text" 
       InputProps={inputStyles} 
       InputLabelProps={inputLabelStyles} 
-      inputProps={{maxLength: 25}} 
+      inputProps={{maxLength: 80}} 
       id={id}
       label={label}
       value={input}
