@@ -48,7 +48,6 @@ export const useFirestore = (_collection) => {
       const createdAt = timestamp.fromDate(new Date())
       let addedDocument;
       if(docName === null && docRef === null) {
-        // console.log("A")
         addedDocument = await setDoc(doc(db, _collection), {..._doc, createdAt})
       } else if(docName !== null && docRef === null) {
         addedDocument = await setDoc(doc(db, _collection, docName), {..._doc, createdAt})

@@ -26,6 +26,9 @@ const slideLeft = keyframes`
 
 
 const ContactForm = ({ success, setSuccess,  }) => {
+  const { addDocument } = useFirestore("inquiries");
+
+  // form states
   const [ firstName, setFirstName ] = useState("");
   const [ lastName, setLastName ] = useState("");
   const [ number, setNumber ] = useState("");
@@ -34,13 +37,12 @@ const ContactForm = ({ success, setSuccess,  }) => {
 
   const isSubmitDisabled = firstName.trim().length === 0 || lastName.trim().length === 0 || number.trim().length === 0 || email.trim().length === 0;
 
-  
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(firstName, lastName, number, email, message)
     // upload to db
-
+    await addDocument({firstName, lastName, number, email, message}, `${lastName}_${firstName}`)
     // notify email
+
     setSuccess(true)
   }
 
