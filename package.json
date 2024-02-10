@@ -18,7 +18,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "firebase": "^9.19.1",
-    "firebase-functions": "^4.2.1",
+    "firebase-functions": "^4.7.0",
     "imagekitio-react": "^2.0.0",
     "mui-image": "^1.0.7",
     "mui-tel-input": "^5.0.0",
