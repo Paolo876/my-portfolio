@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Grid, Box, Typography, ButtonBase, Fade } from '@mui/material'
 import Skills from './Skills/Skills';
 import { keyframes } from '@mui/system';
+import Image from 'mui-image';
 
 
 const slideLeft = keyframes`
@@ -43,9 +44,9 @@ const AboutContent = ({ isVisible }) => {
                 sx={{
                   height: {xs: 145, sm: 200, md: 260, lg: 300, xl: 320 }, 
                   width: {xs: 90, sm: 130, md: 190, lg: 230, xl: 250}, 
-                  border: 1,
-                  transform: "skewX(0deg)"
-                }}></Box>
+                  // border: 1,
+                  transform: "skewX(-3deg)"
+                }}><Image src="https://ik.imagekit.io/q5892cimh/my-portfolio/logo_svg_wql_byiOC.svg?updatedAt=1707795881400" fit='contain' alt="logo"/></Box>
             </Fade>
           </Grid>
 					<Grid item xs={8.25} sm={9} sx={{display: "flex", flexDirection: "column", justifyContent: {xs: "center", sm: "space-between"}}}>
