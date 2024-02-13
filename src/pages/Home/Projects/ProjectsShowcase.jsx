@@ -3,10 +3,11 @@ import { useNavigate } from 'react-router-dom'
 import { Box, Grid, Typography, ButtonBase } from '@mui/material'
 import { useInView } from 'react-intersection-observer';
 import { keyframes } from '@mui/system';
+import { useSwipeable } from 'react-swipeable';
 import Image from 'mui-image';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import useProjectsRedux from "../../../hooks/useProjectsRedux"
 import generateRandomNumbers from '../../../utils/generateRandomNumbers';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
 const previewBoxStyles = {
@@ -47,7 +48,6 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
     threshold: 0,
     rootMargin: "0% 0px -35% 0px",
     delay: 250,
-    // triggerOnce: true
   });
 
   const [ previewProjects, setPreviewProjects ] = useState([]);
@@ -55,15 +55,7 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
   //set interval on mount
   useEffect(() => {
     if(projectsList.length !== 0 && inView ) {
-
       setPreviewProjects(generateProjectPreviews())
-
-      // const interval = setInterval(() => {
-      //   setPreviewProjects(generateProjectPreviews())
-      // }, 5000)
-
-      //unmount function
-      // return () => clearInterval(interval)
       return () => setPreviewProjects([])
     }
   }, [projectsList, inView])
@@ -74,22 +66,31 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
     return arr.map(item => projectsList[item]) 
   }
 
+  const handlers = useSwipeable({
+    onSwipedLeft: (eventData) => setIsHovered(true),
+    onSwipedRight: (eventData) => setIsHovered(true),
+    // ...config,
+  });
+
+
+
   return (
     <Box 
       sx={{
-        height: "100%",
+        height: {lg: "100%"},
         position: "absolute",
         width: {xs: "150%", md: "110%", lg: "auto"},
         top: 0,
         left: {xs: 0, md: "initial"},
         right: {xs: 0, md: "initial"},
         transform: {xs: "translateX(2em)", md: "translateX(10em)", lg: "translateX(29em)", xl: "translateX(40em)"},
-        pt: {xs:18, sm: 5, md: 18, lg: 14, xl: 18},
-        pb: {xs:0, sm: 0, md: 11, lg: 14, xl: 18},
+        pt: {xs:32, sm: 36, md: 40, lg: 14, xl: 18},
+        mb: {xs:0, sm: 0, md: 11, lg: 14, xl: 18},
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        zIndex: {xs: -1, lg: 1},
+        // zIndex: {xs: -1, lg: 1},
+        // background: "rgba(200,200,200,.5)",
       }}
       ref={ref}
     >
@@ -178,19 +179,21 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
         {inView && <Box
           sx={{
             height: "100%",
-            width: "100%",
+            width: {xs: "150%", md: "110%", lg: "auto"},
             position: "absolute",
             transform: "skewX(-7deg)",
             top: 0,
             right: {xs: 0, md: 20},
-            pt: {xs:18, sm: 15, md: 18, lg: 14, xl: 18},
-            pb: {xs:0, sm: 0, md: 11, lg: 14, xl: 18},
-            display: {xs: "none", lg: "initial"}
+            pt: {xs:32, sm: 36, md: 40, lg: 14, xl: 18},
+            mb: {xs:0, sm: 0, md: 11, lg: 14, xl: 18},
+            // display: {xs: "none", lg: "initial"}
           }}
         >
           <Box
             onMouseOver={() => setIsHovered(true)}
+            onClick={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            {...handlers}
             sx={{
               height: "100%",
               width: "100%",
