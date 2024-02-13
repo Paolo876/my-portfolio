@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, Typography, Grid, ButtonBase, Fade } from '@mui/material'
 import DownloadIcon from '@mui/icons-material/Download';
 import { keyframes } from '@mui/system';
+import Image from 'mui-image';
 
 
 const slideRight = keyframes`
@@ -143,20 +144,21 @@ const Introduction = () => {
           </Fade>
         </Grid>
 
-        <Grid item xs={12} md={5} lg={6} xl={6}  order={{xs: 1, md:2}} sx={{display: "flex", justifyContent: "right", alignitems: "center", height: "100%"}}>
+        <Grid item xs={12} md={5} lg={6} xl={6}  order={{xs: 1, md:2}} sx={{display: "flex", justifyContent: {xs: "center", md:"right"}, alignitems: "center", height: "100%"}}>
           <Box 
             sx={{
-              border: 1, 
-              height: {xs: 220, sm: 250, md:300}, 
-              width: {xs: 220, sm: 250, md:300}, 
+              mt: {md: 5},
+              height: {xs: 160, sm: 250, md:300, lg: 320}, 
+              width: {xs: 160, sm: 250, md:300, lg: 320}, 
               display: "flex", 
               alignItems: "center", 
               justifyContent: "center", 
               mixBlendMode: "difference", 
               opacity: 0, 
+              transform: "skewX(-3deg)",
               animation: `${slideLeft} 900ms ease forwards 1250ms`,
             }}>
-            <Typography >image</Typography>
+            <Image src="https://ik.imagekit.io/q5892cimh/my-portfolio/logo_svg_wql_byiOC.svg?updatedAt=1707795881400" fit='contain'/>
           </Box>
         </Grid>
       </Grid>
