@@ -54,6 +54,20 @@ const Projects = () => {
         overflow: "hidden",
       }}
     >
+      {/* backdrop */}
+      {isHovered && <Box
+          sx={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            height: "100vh",
+            width: "100vw",
+            // zIndex: 2,
+            display: {xs: "initial", lg: "none"},
+            // background: "blue"
+          }}
+          onTouchStart={() => setIsHovered(false)}
+        ></Box>}
       <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", width: "100%", background: "rgba(255,255,255,1)", mixBlendMode: "overlay", opacity: .2, zIndex: -1}}></Box>
       <Grid container sx={{maxWidth: "1500px", height: "100%", mx: "auto", overflowX:"auto", overflowY: "hidden"}} ref={ref}>
         <Grid item xs={12} sm={10.5} md={11} lg={3.5} xl={4.25}>
@@ -88,8 +102,6 @@ const Projects = () => {
                   textShadow: "1px 1px 5px rgba(50,50,50,.5)",
                 }}
               >
-                {/* I mainly develop my projects using ReactJS or NextJS for the frontend, ExpressJS and NodeJS for the backend, and MongoDB or MySQL for db implementations. I use different libraries on my projects to
-                increase development efficiency and easier scalability. */}
                 I mainly use ReactJS and utilize different full stack combinations to build my projects. I also implement various libraries on my projects to
                 increase development efficiency and easier scalability.
               </Typography>

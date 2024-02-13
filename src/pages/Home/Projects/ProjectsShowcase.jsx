@@ -67,11 +67,9 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
   }
 
   const handlers = useSwipeable({
-    onSwipedLeft: (eventData) => setIsHovered(true),
-    onSwipedRight: (eventData) => setIsHovered(true),
-    // ...config,
+    onSwipedLeft: () => setIsHovered(true),
+    onSwipedRight: () => setIsHovered(true),
   });
-
 
 
   return (
@@ -85,12 +83,11 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
         right: {xs: 0, md: "initial"},
         transform: {xs: "translateX(2em)", md: "translateX(10em)", lg: "translateX(29em)", xl: "translateX(40em)"},
         pt: {xs:32, sm: 36, md: 40, lg: 14, xl: 18},
-        mb: {xs:0, sm: 0, md: 11, lg: 14, xl: 18},
+        mb: {xs:0, sm: 0, md: 11, lg: 0},
+        pb: {lg: 14, xl: 18},
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        // zIndex: {xs: -1, lg: 1},
-        // background: "rgba(200,200,200,.5)",
       }}
       ref={ref}
     >
@@ -179,18 +176,22 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
         {inView && <Box
           sx={{
             height: "100%",
-            width: {xs: "150%", md: "110%", lg: "auto"},
+            width: {xs: "145%", sm: "125%", md: "115%", lg: "100%"},
             position: "absolute",
             transform: "skewX(-7deg)",
             top: 0,
             right: {xs: 0, md: 20},
             pt: {xs:32, sm: 36, md: 40, lg: 14, xl: 18},
-            mb: {xs:0, sm: 0, md: 11, lg: 14, xl: 18},
-            // display: {xs: "none", lg: "initial"}
+            mb: {xs:0, sm: 0, md: 11, lg: 0},
+            pb: {lg: 14, xl: 18},
+            // background: 'red',
+            zIndex: 10
           }}
         >
+
           <Box
             onMouseOver={() => setIsHovered(true)}
+            // onMouseOver={() => setIsHovered(true)}
             onClick={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             {...handlers}
@@ -201,8 +202,7 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
               alignItems: "center",
               justifyContent: "center",
               backdropFilter: isHovered ?"blur(5px)" : "",
-              transition: "backdrop-filter 200ms ease"
-
+              transition: "backdrop-filter 200ms ease",
             }}
           >
           {isHovered && <Box sx={{ opacity:0, animation: inView ? `${slideRight} 800ms ease forwards 0ms` : "none",}}>
@@ -210,19 +210,20 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
               onClick={() => navigate("/projects")}
               sx={{
                 border: 2, 
-                fontSize: { xs: "1.1rem", sm: "1.6rem", md: "1.65rem", lg: "1.8rem" },
+                fontSize: { xs: "1.1rem", sm: "1.7rem", md: "1.75rem", lg: "1.8rem" },
                 lineHeight: 1.4, 
                 color: "white", 
                 borderColor: "rgba(255,255,255,.5)",
-                px: {xs: 2, sm:3, md:3.5},
-                py: .85,
+                px: {xs: 2.75, sm:3.25, md:3.5},
+                py: {xs:.85, sm: 1, md: 1.25},
                 fontWeight: 600,
-                letterSpacing: {xs: 2.25, sm:3},
+                letterSpacing: {xs: 2.5, sm:3},
                 transition: "transform 200ms ease-in-out, border 200ms ease-in-out",
                 fontFamily: "Manrope",
                 textTransform: "uppercase",
                 textShadow: "1px 1px 3px rgba(100,100,100,.75)",
                 display: "flex",
+                zIndex: 20,
                 gap: 1.25,
                 "&:hover":{
                   opacity:1,
@@ -237,6 +238,7 @@ const ProjectsShowcase = ({ isHovered, setIsHovered}) => {
           </Box>
         </Box>}
       </Grid>
+      
     </Box>
   )
 }
