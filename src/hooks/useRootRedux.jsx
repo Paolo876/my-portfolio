@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { rootActions } from '../redux/reducers/rootSlice';
-import { getImageKeys } from '../redux/reducers/rootReducers';
+import { getImageKeys, getEmailJSKeys } from '../redux/reducers/rootReducers';
 
 const useRootRedux = () => {
   const dispatch = useDispatch();
@@ -11,6 +11,7 @@ const useRootRedux = () => {
       ...rootRedux,
       setData: (data) => dispatch(rootActions.setData(data)),
       getImageKeys: () => dispatch(getImageKeys()),
+      getEmailJSKeys: () => dispatch(getEmailJSKeys()),
     }
   } else {
     throw Error('Error accessing root reducer.');

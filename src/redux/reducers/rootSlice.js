@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { rootInitialState } from "../initialStates";
-import { getImageKeys } from "./rootReducers";
+import { getImageKeys, getEmailJSKeys } from "./rootReducers";
 
 
 const rootSlice = createSlice({
@@ -26,6 +26,20 @@ const rootSlice = createSlice({
             state.error = null;
         })
         .addCase(getImageKeys.rejected, ( state , { payload }) => {
+            state.isLoading = false;
+            state.error = payload.message;
+        })
+        //getEmailJSKeys
+        .addCase(getEmailJSKeys.pending, ( state ) => {
+            state.isLoading = true;
+            state.error = null;
+        })
+        .addCase(getEmailJSKeys.fulfilled, ( state, { payload }) => {
+            state.isLoading = false;
+            state.emailJSKeys = payload;
+            state.error = null;
+        })
+        .addCase(getEmailJSKeys.rejected, ( state , { payload }) => {
             state.isLoading = false;
             state.error = payload.message;
         })

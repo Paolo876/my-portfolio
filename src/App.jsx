@@ -18,7 +18,7 @@ import Contact from "./pages/Contact/Contact";
 
 
 function App() {
-  const { setData, getImageKeys, isLoading } = useRootRedux();
+  const { setData, getImageKeys, isLoading, getEmailJSKeys } = useRootRedux();
   const { getProjects } = useProjectsRedux();
   const { getDocumentFromCollection } = useFirestoreActions();
 
@@ -26,10 +26,8 @@ function App() {
   useEffect(() => {
     getImageKeys()
     getProjects()
+    getEmailJSKeys()
     getDocumentFromCollection('user', 'information').then(data => setData(data))
-    // if(skillsList.length === 0){
-    //   getDocumentFromCollection('user', 'information').then(data => setData(data))
-    // }
   }, [])
 
   
