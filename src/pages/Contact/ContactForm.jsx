@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { Box, Typography, Button } from '@mui/material'
 import { keyframes } from '@mui/system';
 import { useFirestore } from '../../hooks/useFirestore';
+import useRootRedux from "../../hooks/useRootRedux";
+import emailjs from '@emailjs/browser';
 
 // components
 import TextInput from './FormInputs/TextInput';
@@ -25,25 +27,37 @@ const slideLeft = keyframes`
 `;
 
 
-const ContactForm = ({ success, setSuccess,  }) => {
+const ContactForm = ({ setSuccess }) => {
   const { addDocument } = useFirestore("inquiries");
-
+  const { emailJSKeys } = useRootRedux();
   // form states
   const [ firstName, setFirstName ] = useState("");
   const [ lastName, setLastName ] = useState("");
   const [ number, setNumber ] = useState("");
   const [ email, setEmail ] = useState("");
   const [ message, setMessage ] = useState("");
-
+  
+  const [ isLoading, setIsLoading ] = useState(false);
+  const [ error, setError ] = useState(false);
   const isSubmitDisabled = firstName.trim().length === 0 || lastName.trim().length === 0 || number.trim().length === 0 || email.trim().length === 0;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // upload to db
-    await addDocument({firstName, lastName, number, email, message}, `${lastName}_${firstName}`)
-    // notify email
-
-    setSuccess(true)
+    setIsLoading(true)
+    try {
+      // upload to db
+      await addDocument({firstName, lastName, number, email, message}, `${lastName}_${firstName}`)
+      // notify email
+      await emailjs
+        .send(emailJSKeys.serviceID, emailJSKeys.templateID, { firstName, lastName, number, email, message }, {
+          publicKey: emailJSKeys.publicKey,
+        })
+      setIsLoading(false)
+      setSuccess(true)
+    } catch(err) {
+      setIsLoading(false)
+      setError(err.message)
+    }
   }
 
   return (

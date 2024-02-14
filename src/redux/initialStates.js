@@ -7,6 +7,7 @@ export const rootInitialState = {
     isLoading: true,
     error: null,
     imageKeys: null,
+    emailJSKeys: null,
 }
 
 
