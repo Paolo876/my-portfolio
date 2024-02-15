@@ -38,7 +38,7 @@ const ContactForm = ({ setSuccess }) => {
   const [ email, setEmail ] = useState("");
   const [ message, setMessage ] = useState("");
   
-  const [ isLoading, setIsLoading ] = useState(true);
+  const [ isLoading, setIsLoading ] = useState(false);
   const [ error, setError ] = useState(false);
   
   const isSubmitDisabled = firstName.trim().length === 0 || lastName.trim().length === 0 || number.trim().length === 0 || email.trim().length === 0;
@@ -128,29 +128,33 @@ const ContactForm = ({ setSuccess }) => {
             id="firstName" 
             label="First Name"
             setValue={value => setFirstName(value)}
+            disabled={isLoading}
           />
           <TextInput
             id="lastName" 
             label="Last Name"
             setValue={value => setLastName(value)}
+            disabled={isLoading}
           />
         </Box>
         <PhoneInput
           id="phone"
           label="Contact Number"
           setValue={value => setNumber(value)}
-
+          disabled={isLoading}
         />
         <EmailInput
           id="email" 
           label="Email Address" 
           setValue={value => setEmail(value)}
+          disabled={isLoading}
         />
         <MessageInput
           id="message"
           label="Message"
           setValue={value => setMessage(value)}
           maxLength={300}
+          disabled={isLoading}
         />
         <Box my={{xs: 2, sm: 3, md: 4, }}>
           <Button 

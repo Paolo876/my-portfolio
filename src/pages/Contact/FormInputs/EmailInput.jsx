@@ -25,7 +25,7 @@ const inputLabelStyles = {
 }
 
 
-const EmailInput = ({ id, label, setValue }) => {
+const EmailInput = ({ id, label, setValue, disabled=false }) => {
   const [ input, setInput ] = useState("");
   const [ error, setError ] = useState({state: false, message: ""})
 
@@ -58,6 +58,7 @@ const EmailInput = ({ id, label, setValue }) => {
       onBlur={() => handleSubmit()}
       error={error.state}
       helperText={error.state && error.message}
+      disabled={disabled}
     />
   )
 }

@@ -26,7 +26,7 @@ const inputLabelStyles = {
 }
 
 
-const PhoneInput = ({ id, label, setValue }) => {
+const PhoneInput = ({ id, label, setValue, disabled=false }) => {
   const [ input, setInput ] = useState("");
   const [ error, setError ] = useState({state: false, message: ""})
 
@@ -66,6 +66,7 @@ const PhoneInput = ({ id, label, setValue }) => {
       onBlur={() => handleSubmit()}
       error={error.state}
       helperText={error.state && error.message}
+      disabled={disabled}
     />
   )
 }

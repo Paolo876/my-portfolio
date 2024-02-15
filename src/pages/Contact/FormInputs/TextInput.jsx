@@ -24,7 +24,7 @@ const inputLabelStyles = {
   }
 }
 
-const TextInput = ({ id, label, setValue }) => {
+const TextInput = ({ id, label, setValue, disabled=false }) => {
   const [ input, setInput ] = useState("");
   const [ error, setError ] = useState({state: false, message: ""})
 
@@ -56,6 +56,7 @@ const TextInput = ({ id, label, setValue }) => {
       onBlur={() => handleSubmit()}
       error={error.state}
       helperText={error.state && error.message}
+      disabled={disabled}
     />
   )
 }

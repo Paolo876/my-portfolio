@@ -25,7 +25,7 @@ const inputLabelStyles = {
 }
 
 
-const MessageInput = ({ id, label, setValue, maxLength }) => {
+const MessageInput = ({ id, label, setValue, maxLength, disabled=false }) => {
   const [ input, setInput ] = useState("")
 
   const handleSubmit = () => {
@@ -48,6 +48,7 @@ const MessageInput = ({ id, label, setValue, maxLength }) => {
         onChange={e => setInput(e.target.value)}
         value={input}
         onBlur={() => handleSubmit()}
+        disabled={disabled}
       />
       {input.length !== 0 && <Box sx={{position: "absolute", bottom: 0, right: 5}}>
         <Typography 
