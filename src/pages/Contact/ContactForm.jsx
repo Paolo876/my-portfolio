@@ -39,6 +39,7 @@ const ContactForm = ({ setSuccess }) => {
   
   const [ isLoading, setIsLoading ] = useState(false);
   const [ error, setError ] = useState(false);
+  
   const isSubmitDisabled = firstName.trim().length === 0 || lastName.trim().length === 0 || number.trim().length === 0 || email.trim().length === 0;
 
   const handleSubmit = async (e) => {
