@@ -10,6 +10,7 @@ import TextInput from './FormInputs/TextInput';
 import PhoneInput from './FormInputs/PhoneInput';
 import EmailInput from './FormInputs/EmailInput';
 import MessageInput from './FormInputs/MessageInput';
+import LoadingIcon from '../../components/LoadingIcon';
 
 
 const slideLeft = keyframes`
@@ -37,7 +38,7 @@ const ContactForm = ({ setSuccess }) => {
   const [ email, setEmail ] = useState("");
   const [ message, setMessage ] = useState("");
   
-  const [ isLoading, setIsLoading ] = useState(false);
+  const [ isLoading, setIsLoading ] = useState(true);
   const [ error, setError ] = useState(false);
   
   const isSubmitDisabled = firstName.trim().length === 0 || lastName.trim().length === 0 || number.trim().length === 0 || email.trim().length === 0;
@@ -69,9 +70,26 @@ const ContactForm = ({ setSuccess }) => {
         px: {xs: .5, sm: 1, md: 3, lg: 0},
         opacity: 0, 
         animation: `${slideLeft} 1100ms ease forwards 1250ms`,
+        position: "relative",
       }} 
       align="center"
     >
+      {/* loading */}
+      {isLoading && <Box 
+        sx={{
+          position: "absolute",
+          height: "100%",
+          width: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          zIndex: 5,
+          backdropFilter: "blur(15px) brightness(10%)"
+        }}
+      >
+        <LoadingIcon message="Submitting Data..."/>
+      </Box>}
+      
       <Box 
         sx={{
           p: {xs: 3, sm:4, md:5, lg: 4}, 
@@ -80,7 +98,8 @@ const ContactForm = ({ setSuccess }) => {
           display: "flex", 
           flexDirection: "column",
           boxShadow: 8,
-          backgroundColor: "rgba(45,45,45,.3)"
+          backgroundColor: "rgba(45,45,45,.3)",
+          opacity: isLoading ? .2 : 1,
         }} 
         component="form" 
         autoComplete="off" 
