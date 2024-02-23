@@ -5,6 +5,7 @@ import SocialLinks from '../../../components/SocialLinks';
 import DownloadIcon from '@mui/icons-material/Download';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import useRootRedux from "../../../hooks/useRootRedux";
 
 
 const contactButtonStyles = {
@@ -32,7 +33,7 @@ const contactButtonStyles = {
 
 const Contact = () => {
   const navigate = useNavigate();
-
+  const { resumeUrl } = useRootRedux();
 
   return (
     <Box 
@@ -188,6 +189,8 @@ const Contact = () => {
             </ButtonBase>
           </Box>
           <ButtonBase 
+            href={resumeUrl}
+            target="_blank"
             color="inherit"
             sx={{
               boxShadow: 5,

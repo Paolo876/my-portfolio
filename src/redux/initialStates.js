@@ -8,6 +8,7 @@ export const rootInitialState = {
     error: null,
     imageKeys: null,
     emailJSKeys: null,
+    resumeUrl: null,
 }
 
 

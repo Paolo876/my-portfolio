@@ -11,6 +11,7 @@ const rootSlice = createSlice({
             state.skillsList = payload.skills;
             state.otherSkillsList = payload.otherSkills;
             state.certifications = payload.certifications;
+            state.resumeUrl = payload.resumeUrl;
         }
     },
     extraReducers: builder => {
