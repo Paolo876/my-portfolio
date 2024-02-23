@@ -3,7 +3,7 @@ import { Box, Typography, Grid, ButtonBase, Fade } from '@mui/material'
 import DownloadIcon from '@mui/icons-material/Download';
 import { keyframes } from '@mui/system';
 import Image from 'mui-image';
-
+import useRootRedux from '../../hooks/useRootRedux';
 
 const slideRight = keyframes`
   0% {
@@ -40,6 +40,9 @@ const baseTextStyles = {
 
 
 const Introduction = () => {
+  const { resumeUrl } = useRootRedux();
+
+  
   return (
     <Box
       sx={{
@@ -115,6 +118,8 @@ const Introduction = () => {
             <Box sx={{mt: {xs: 5, lg: 8, xl: 10}}}>
               <ButtonBase 
                 color="inherit"
+                href={resumeUrl}
+                target="_blank"
                 sx={{
                   boxShadow: 5,
                   border: 2, 
@@ -128,8 +133,6 @@ const Introduction = () => {
                   opacity: {xs: .95, lg: .85},
                   transition: "all 250ms ease-in-out",
                   textTransform: "uppercase",
-                  // transform: "skewX(-3deg)",
-
                   "&:hover":{
                     opacity:1,
                     textShadow: "1px 1px 3px rgba(100,100,100,.75)",

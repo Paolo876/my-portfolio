@@ -35,6 +35,7 @@ const Contact = () => {
   const navigate = useNavigate();
   const { resumeUrl } = useRootRedux();
 
+  
   return (
     <Box 
     sx={{
