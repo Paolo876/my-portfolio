@@ -5,6 +5,8 @@ import SocialLinks from '../../../components/SocialLinks';
 import DownloadIcon from '@mui/icons-material/Download';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import useRootRedux from '../../../hooks/useRootRedux';
+
 
 const contactButtonStyles = {
   width: "fit-content", 
@@ -31,6 +33,7 @@ const contactButtonStyles = {
 
 const Footer = () => {
   const navigate = useNavigate();
+  const { resumeUrl } = useRootRedux();
 
 
   return (
@@ -117,38 +120,33 @@ const Footer = () => {
               Contact Page
             </ButtonBase>
             <ButtonBase 
+              href={resumeUrl}
+              target="_blank"
               color="inherit"
               sx={{
-                display: {xs: "flex", sm: "none"},
-                boxShadow: 6,
-                fontSize: { xs: ".8rem", sm: ".9rem", md: ".9rem", lg: "1rem" },
-                lineHeight: 1.4, 
-                backgroundColor: "rgba(130,130,130,.75)",
-                px: {xs: 1.5, sm: 2},
-                py: {xs: .8, lg:1},
+                boxShadow: 5,
+                border: 2, 
+                fontSize: { xs: ".75rem"},
+                lineHeight: 1, 
+                borderColor: "rgba(100,100,100,.75)",
+                display: {xs: "block", sm: "none"},
+                px: {xs: 1.5, sm: 2, md: 2.2, lg: 2.75},
+                py: {xs: 1, sm: 1.15, md:1.15, lg: 1.25},
                 fontWeight: 600,
-                letterSpacing: .5,
-                opacity: {xs: .9, lg:.85},
+                letterSpacing: 1.25,
+                opacity: 1,
                 transition: "all 250ms ease-in-out",
-                fontFamily: "Manrope",
+                textTransform: "uppercase",
+                transform: {sm:"skewX(-3deg)"},
                 "&:hover":{
                   opacity:1,
-                  textShadow: "1px 1px 3px rgba(10,10,10,.25)",
-                  transform: "scale(1.02)",
-                  letterSpacing: .6,
-                  boxShadow: 3,
-
-                },
-                "svg": {
-                  transition: "all 500ms ease-in-out",
-                  color: {xs: "primary.main", lg: "white"},
-                },
-                "&:hover svg": {
-                  color: "primary.main",
+                  textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+                  transform: {sm:"scale(1.02) skewX(-3deg)"},
+                  borderColor: "primary.dark",
                 }
               }}
             >
-              Download My CV <DownloadIcon sx={{ml: 1}} fontSize='small'/>
+              Download My CV <DownloadIcon sx={{ml: 1.5}} style={{fontSize: "inherit"}}/>
             </ButtonBase>
           </Box>
         </Grid>
@@ -223,38 +221,33 @@ const Footer = () => {
               </ButtonBase>
             </Box>
             <ButtonBase 
+              href={resumeUrl}
+              target="_blank"
               color="inherit"
               sx={{
-                display: {xs: "none", sm: "flex"},
-                boxShadow: 6,
-                fontSize: { xs: ".9rem", sm: ".9rem", md: ".9rem", lg: "1rem" },
-                lineHeight: 1.4, 
-                backgroundColor: "rgba(130,130,130,.75)",
-                px: {xs: 1, sm: 2},
-                py: {xs: .7, lg:1},
+                boxShadow: 5,
+                border: 2, 
+                fontSize: { xs: ".8rem", sm: ".85rem", md: ".9rem", lg: ".95rem" },
+                display: { xs: "none",sm: "block" },
+                lineHeight: 1, 
+                borderColor: "rgba(100,100,100,.75)",
+                px: {xs: 1.8, sm: 2, md: 2.2, lg: 2.75},
+                py: {xs: 1.15, sm: 1.15, md:1.15, lg: 1.25},
                 fontWeight: 600,
-                letterSpacing: .5,
-                opacity: {xs: .9, lg:.85},
+                letterSpacing: {xs:1.75, lg: 1.75},
+                opacity: {xs: .9, lg:.75},
                 transition: "all 250ms ease-in-out",
-                fontFamily: "Manrope",
+                textTransform: "uppercase",
+                transform: {sm:"skewX(-3deg)"},
                 "&:hover":{
                   opacity:1,
-                  textShadow: "1px 1px 3px rgba(10,10,10,.25)",
-                  transform: "scale(1.02)",
-                  letterSpacing: .6,
-                  boxShadow: 3,
-
-                },
-                "svg": {
-                  transition: "all 500ms ease-in-out",
-                  color: {xs: "primary.main", lg: "white"},
-                },
-                "&:hover svg": {
-                  color: "primary.main",
+                  textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+                  transform: {sm:"scale(1.02) skewX(-3deg)"},
+                  borderColor: "primary.dark",
                 }
               }}
             >
-              Download My CV <DownloadIcon sx={{ml: 1.5}}/>
+              Download My CV <DownloadIcon sx={{ml: 1.5}} style={{fontSize: "inherit"}}/>
             </ButtonBase>
           </Box>
           <Box mt={4} sx={{width: "fit-content", display: {xs: "none", md: "initial"}}} ml="auto">
