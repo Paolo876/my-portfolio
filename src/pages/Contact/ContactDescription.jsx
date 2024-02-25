@@ -1,9 +1,11 @@
 import React from 'react'
-import { Box, Typography, IconButton, Fade } from '@mui/material'
+import { Box, Typography, IconButton, Fade, ButtonBase } from '@mui/material'
 import SocialLinks from '../../components/SocialLinks';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { keyframes } from '@mui/system';
+import useRootRedux from '../../hooks/useRootRedux';
+import DownloadIcon from '@mui/icons-material/Download';
 
 
 const slideRight = keyframes`
@@ -44,6 +46,9 @@ const contactButtonStyles = {
 }
 
 const ContactDescription = () => {
+  const { resumeUrl } = useRootRedux();
+
+
   return (
     <>
       <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "200ms" }}>
@@ -84,46 +89,81 @@ const ContactDescription = () => {
         </Box>
       </Box>
       <Box sx={{mt: {xs: 6, sm: 8, md: 9, lg:"auto"}}}>
-        <Box sx={{display: "flex", justifyContent: "space-between", flexDirection: "column"}}>
-          <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "950ms" }}>
-            <Box>
-              <Typography
-                variant="h2" 
-                align="left" 
-                fontWeight={400}
-                fontSize={{xs: 17, sm: 24, md: 25, lg: 25, xl: 26}} 
-                letterSpacing={{sm: .5, xl:1}}
-                lineHeight={{xs:1}} 
-                textTransform="none"
-                sx={{
-                  textShadow: "1px 1px 7px rgba(25,25,25,.75)",
-                  opacity: .8
-                }}
-              >
-                Paolo Bugarin
-              </Typography>
-            </Box>
-          </Fade>
-          <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "1150ms" }}>
-            <Box>
-              <Typography
-                variant="h2" 
-                align="left" 
-                fontWeight={300}
-                fontSize={{xs: 10.5, sm: 17, md: 18, lg: 18, xl: 18}} 
-                letterSpacing={{sm: .5, xl:1}}
-                lineHeight={{xs:1}} 
-                textTransform="none"
-                sx={{
-                  mt: 1,
-                  textShadow: "1px 1px 7px rgba(25,25,25,.75)",
-                  opacity: .45
-                }}
-              >
-                Los Angeles, CA
-              </Typography>
-            </Box>
-          </Fade>
+        <Box sx={{display: "flex", justifyContent: "space-between", flexDirection: {sm:"row"}}}>
+          <Box sx={{display: "flex", justifyContent: "space-between", flexDirection: "column"}}>
+            <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "950ms" }}>
+              <Box>
+                <Typography
+                  variant="h2" 
+                  align="left" 
+                  fontWeight={400}
+                  fontSize={{xs: 17, sm: 24, md: 25, lg: 25, xl: 26}} 
+                  letterSpacing={{sm: .5, xl:1}}
+                  lineHeight={{xs:1}} 
+                  textTransform="none"
+                  sx={{
+                    textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+                    opacity: .8
+                  }}
+                >
+                  Paolo Bugarin
+                </Typography>
+              </Box>
+            </Fade>
+            <Fade appear={true} in={true} timeout={1200}  style={{ transitionDelay: "1150ms" }}>
+              <Box>
+                <Typography
+                  variant="h2" 
+                  align="left" 
+                  fontWeight={300}
+                  fontSize={{xs: 10.5, sm: 17, md: 18, lg: 18, xl: 18}} 
+                  letterSpacing={{sm: .5, xl:1}}
+                  lineHeight={{xs:1}} 
+                  textTransform="none"
+                  sx={{
+                    mt: 1,
+                    textShadow: "1px 1px 7px rgba(25,25,25,.75)",
+                    opacity: .45
+                  }}
+                >
+                  Los Angeles, CA
+                </Typography>
+              </Box>
+            </Fade>
+          </Box>
+          <Box sx={{display: "flex", justifyContent: "space-between", flexDirection: "column"}}>
+            <Fade appear={true} in={true} timeout={1400}  style={{ transitionDelay: "950ms" }}>
+              <Box>
+                <ButtonBase 
+                  color="inherit"
+                  href={resumeUrl}
+                  target="_blank"
+                  sx={{
+                    boxShadow: 5,
+                    border: 2, 
+                    fontSize: { xs: ".75rem", sm: ".88rem", md: ".9rem", lg: ".95rem" },
+                    lineHeight: 1.4, 
+                    borderColor: "rgba(150,150,150,.75)",
+                    px: {xs: 1.25, sm: 2.25, md: 2.5, lg: 2.5},
+                    py: {xs: 1, sm: 1.1, md: 1.15, lg: 1.25},
+                    fontWeight: 600,
+                    letterSpacing: {xs:1.75, md: 2, lg: 2.25},
+                    opacity: {xs: .95, lg: .85},
+                    transition: "all 250ms ease-in-out",
+                    textTransform: "uppercase",
+                    "&:hover":{
+                      opacity:1,
+                      textShadow: "1px 1px 3px rgba(100,100,100,.75)",
+                      transform: "scale(1.01)",
+                      borderColor: "primary.dark",
+                    }
+                  }}
+                >
+                  Download My CV <DownloadIcon sx={{ml: {xs: 1.25, sm:1.5}}} style={{fontSize: "inherit"}}/>
+                </ButtonBase>
+              </Box>
+            </Fade>
+          </Box>
         </Box>
         <Box sx={{display: "flex", justifyContent: "space-between", flexDirection: {xs: "column", sm: "row"}, mt: {xs: 1.4, sm: 5, md: 6, lg: 8, xl: 8}}} mb={4}>
           <Box sx={{display: "flex", flexDirection: "column", gap: {xs:1, sm: 1.5}}}>
