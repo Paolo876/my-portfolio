@@ -17,7 +17,7 @@ const projects = [
       "Encrypt sensitive data (bcryptJS)",
       "Mobile Responsive UI",
     ],
-    url: "https://moby.paolobugarin.com/",
+    url: "https://moby.paolobugarin.dev/",
     githubUrl: "https://github.com/Paolo876/moby-social-media-client",
     images: [
       {
@@ -149,7 +149,7 @@ const projects = [
       "Customize each UI components",
       "Configurations are saved on local storage",
     ],
-    url: "http://luna.paolobugarin.com",
+    url: "http://luna.paolobugarin.dev",
     githubUrl: "https://github.com/Paolo876/luna2.0",
     logo: {
       url:"https://ik.imagekit.io/q5892cimh/my-portfolio/luna/logo_epmTMXFbK.png?updatedAt=1696574792593",
@@ -265,7 +265,7 @@ const projects = [
       "Mobile Responsive UI",
 
     ],
-    url: "https://mernshop.paolobugarin.com/",
+    url: "https://mernshop.paolobugarin.dev/",
     githubUrl: "https://github.com/Paolo876/mern-ecommerce-traversy",
     palette: {
       secondary: "#93C54B",
@@ -341,7 +341,7 @@ const projects = [
       "Mobile Responsive UI",
 
     ],
-    url: "https://markandgaea.com/",
+    url: "https://markandgaea.web.app/",
     githubUrl: "https://github.com/Paolo876/mark-and-gaea",
     logo: {
       url: "https://ik.imagekit.io/q5892cimh/my-portfolio/markandgaea/logo_wbaCh4Lwz.png?updatedAt=1705465836928",
